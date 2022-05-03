@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_predefined_roles_packaged_with_snapcenter.html 
+keywords:  
+summary: 為了簡化vCenter Server RBAC的使用、SnapCenter VMware vCenter外掛程式提供一組預先定義的角色、讓使用者能夠執行SnapCenter 各項功能。此外、也有唯讀角色可讓使用者檢視SnapCenter 不含執行任何工作的資訊。 
+---
+= VMware SnapCenter vSphere隨附於VMware vSphere的VMware vCenter外掛程式的預先定義角色
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+為了簡化vCenter Server RBAC的使用、SnapCenter VMware vCenter外掛程式提供一組預先定義的角色、讓使用者能夠執行SnapCenter 各項功能。此外、也有唯讀角色可讓使用者檢視SnapCenter 不含執行任何工作的資訊。
+
+預先定義的角色具有必要的SnapCenter專屬權限和原生vCenter Server權限、可確保工作正確完成。此外、這些角色設定為擁有所有受支援版本vCenter Server所需的權限。
+
+身為管理員、您可以將這些角色指派給適當的使用者。
+
+每次重新啟動vCenter Web用戶端服務或修改安裝時、VMware vCenter外掛程式會將這些角色恢復為預設值（初始權限集）SnapCenter 。如果您升級SnapCenter VMware的VMware版外掛程式、預先定義的角色會自動升級、以搭配該版外掛程式使用。
+
+您可以按一下「*功能表>管理>角色*」、在vCenter GUI中查看預先定義的角色、如下表所示。
+
+|===
+| 角色 | 說明 
+
+
+| 選擇控制閥管理員 | 提供執行SnapCenter 所有VMware vSphere工作所需的所有原生vCenter Server和SnapCenter專屬權限。 
+
+
+| 選擇控制閥備用 | 提供備份vSphere物件（虛擬機器和資料存放區）所需的所有原生vCenter Server和SnapCenter專屬權限。使用者也可以存取設定權限。使用者無法從備份還原。 
+
+
+| 選擇控制閥客體檔案還原 | 提供還原來賓檔案和資料夾所需的所有原生vCenter Server和SnapCenter專屬權限。使用者無法還原VM或VMDK。 
+
+
+| 選擇控制閥恢復 | 提供所有原生vCenter Server和SnapCenter專屬權限、以還原使用SnapCenter VMware插件備份的vSphere物件、以及還原來賓檔案和資料夾。使用者也可以存取設定權限。使用者無法備份vSphere物件。 
+
+
+| 選擇控制閥視圖 | 提供對SnapCenter 所有VMware插件備份、資源群組和原則的唯讀存取權。 
+|===

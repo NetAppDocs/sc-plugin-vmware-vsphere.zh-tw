@@ -1,0 +1,18 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_get_started_overview.html 
+keywords:  
+summary: 若要在SnapCenter 虛擬化機器上使用支援VMware vSphere的功能來保護VM、資料存放區和應用程式一致的資料庫、您必須部署SnapCenter 適用於VMware vSphere的VMware外掛程式。 
+---
+= 部署總覽
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+若要在SnapCenter 虛擬化機器上使用支援VMware vSphere的功能來保護VM、資料存放區和應用程式一致的資料庫、您必須部署SnapCenter 適用於VMware vSphere的VMware外掛程式。
+
+現有SnapCenter 的無需更新SnapCenter 的使用者必須使用不同於新版使用者的部署工作流程。

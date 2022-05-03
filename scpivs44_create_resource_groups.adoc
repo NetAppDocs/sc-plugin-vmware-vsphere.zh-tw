@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_create_resource_groups.html 
+keywords:  
+summary:  
+---
+= 建立資源群組
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+. 在VMware vSphere Web用戶端的左側導覽器窗格中、按一下*資源群組*、然後按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *建立*。
+. 在「建立資源群組」精靈的每個頁面上輸入必要資訊、選取要納入資源群組的VM和資料存放區、然後選取要套用至資源群組的備份原則、並指定備份排程。
+
+
+備份會依照為資源群組設定的備份原則中所指定的方式執行。
+
+您可以按一下「*資源群組*」頁面、視需要執行備份 image:scpivs44_image38.png["錯誤：缺少圖形影像"] *立即執行*。

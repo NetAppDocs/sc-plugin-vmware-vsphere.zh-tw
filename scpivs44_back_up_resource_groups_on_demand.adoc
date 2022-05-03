@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_back_up_resource_groups_on_demand.html 
+keywords:  
+summary: 備份作業會對資源群組中定義的所有資源執行。如果資源群組已附加原則並設定排程、則會根據排程自動進行備份。 
+---
+= 隨需備份資源群組
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+備份作業會對資源群組中定義的所有資源執行。如果資源群組已附加原則並設定排程、則會根據排程自動進行備份。
+
+您必須已建立附加原則的資源群組。
+
+
+IMPORTANT: 當備份SnapCenter VMware插件MySQL資料庫的工作已經在執行時、請勿啟動隨需備份工作。使用維護主控台查看MySQL資料庫的已設定備份排程。
+
+在早期版本的虛擬儲存主控台（VSC）中、您可以執行隨需備份、而無需設定VM或資料存放區的備份工作。不過SnapCenter 、對於VMware的VMware vCenter外掛程式、虛擬機器和資料存放區必須位於資源群組中、才能執行備份。
+
+.步驟
+. 在VMware vSphere Web用戶端的左側導覽器窗格中、按一下*資源群組*、然後選取資源群組、再按一下 image:scpivs44_image38.png["錯誤：缺少圖形影像"] *立即執行*開始備份。
++
+image:scpivs44_image20.png["錯誤：缺少圖形影像"]
+
+. 如果資源群組已設定多個原則、請在*立即備份*對話方塊中、選取您要用於此備份作業的原則。
+. 按一下「*確定*」開始備份。
+. 選用：按一下視窗底部的*近期工作*或儀表板*工作監控*、即可監控作業進度。.result
+
+
+如果備份中任何VM的靜止作業失敗、則備份會以警告完成、並標示為不一致的VM、即使選取的原則已選取VM一致性。在這種情況下、有些VM可能會成功靜止。在工作監控中、故障的VM詳細資料會顯示靜止失敗。

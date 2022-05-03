@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_unmount_a_backup.html 
+keywords:  
+summary: 當您不再需要存取資料存放區中的檔案時、可以卸載備份。 
+---
+= 卸載備份
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+當您不再需要存取資料存放區中的檔案時、可以卸載備份。
+
+如果備份在VMware vSphere Web用戶端GUI中列為已掛載、但未列在卸載備份畫面中、則您需要使用REST API「/backup/{backup-ID}/cleanup」來清理未受限的資料存放區、然後再次嘗試卸載程序。
+
+如果您嘗試在儲存VM（SVM）上掛載NFS資料存放區的備份複本、並使根磁碟區處於負載共用鏡射關係中、您可能會遇到「您可能已達到vCenter中設定的NFS磁碟區數目上限」錯誤。檢查vSphere Client是否有任何錯誤訊息 若要避免此問題、請瀏覽至* ESS*>*管理*>*設定*>*進階系統設定*、然後變更NFS.MaxVolumes值、以變更「最大磁碟區」設定。最大值為256。
+
+.步驟
+. 在VMware vSphere Web用戶端中、按一下工具列中的*功能表*、然後從下拉式清單中選取*儲存設備*。
+. 在左側導覽器窗格中、以滑鼠右鍵按一下資料存放區、然後在下SnapCenter 拉式清單中選取* NetApp Sori*、再選取次要下拉式清單中的「Unmount（卸載）」。
++
+
+IMPORTANT: 請確定您選取要卸載的正確資料存放區。否則、您可能會對正式作業工作造成影響。
+
+. 在「*卸載複製的資料存放區*」對話方塊中、選取資料存放區、選取「*卸載複製的資料存放區*」核取方塊、然後按一下「*卸載*」。
+

@@ -1,0 +1,136 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_prescripts_and_postscripts.html 
+keywords:  
+summary: 您可以使用自訂規範和後製指令碼、作為資料保護作業的一部分。這些指令碼可在資料保護工作之前或之後進行自動化。 
+---
+= 簡報與指令碼
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用自訂規範和後製指令碼、作為資料保護作業的一部分。這些指令碼可在資料保護工作之前或之後進行自動化。例如、您可以加入指令碼、自動通知您資料保護工作失敗或警告。在您設定預先編寫和後製指令碼之前、您應該先瞭解建立這些指令碼的部分需求。
+
+
+
+== 支援的指令碼類型
+
+支援Perl和Shell指令碼。Shell指令碼必須以`/bin/bash'開頭。（不支援「！/賓/ sh」。）
+
+
+
+== 指令碼路徑位置
+
+簡報和指令碼是由SnapCenter VMware vSphere的VMware vSphere的VMware vCenter外掛程式執行。因此、指令碼必須位於SnapCenter VMware vSphere OVA的VMware vSphere插件中、並具有執行檔權限。
+
+例如：* Perl指令碼路徑可能是「/support/support/script.pl」* Shell指令碼路徑可能是「/support/support/script.sh」
+
+指令碼路徑會在指令碼執行時驗證。
+
+
+
+== 指令碼的指定位置
+
+指令碼是在備份原則中指定。當備份工作開始時、原則會自動將指令碼與要備份的資源建立關聯。
+
+若要指定多個指令碼、請在每個指令碼路徑後按* Enter *、以單獨一行列出每個指令碼。不允許使用分號（；）。您可以指定多個預先編寫和多個後製指令碼。單一指令碼可編碼為預先記錄和附有附註的指令碼、並可呼叫其他指令碼。
+
+
+
+== 執行指令碼時
+
+指令碼會根據為備份階段設定的值來執行。
+
+* 備份階段= pre_backup
++
+在作業的pre_backup階段執行簡報。
+
+
+
+
+NOTE: 如果預先記錄失敗、備份便會成功完成、並傳送警告訊息。
+
+* Backup階段= POST備份或備份階段=失敗的備份
++
+POST指令碼會在備份成功完成後、在作業的POST備份階段中執行、如果備份未成功完成、則會在失敗的備份階段中執行。
+
+
+
+
+NOTE: 如果某個PostScript失敗、備份便會成功完成、並傳送警告訊息。
+
+請檢查下列項目、確認是否已填入指令碼值：* for Perl指令碼：「/support/support/log_env.log」* for Shell指令碼：「/support/support/log_file.log」
+
+
+
+== 傳遞給指令碼的環境變數
+
+您可以在指令碼中使用下表所示的環境變數。
+
+|===
+| 環境變數 | 說明 
+
+
+| "備份名稱" | 備份名稱。僅在後檔中傳遞的變數。 
+
+
+| 備份日期 | 備份日期、格式為僅在後檔中傳遞的「yymmdd」變數。 
+
+
+| 備份時間 | 備份時間、格式為「hhmmsss」變數、僅在後檔中傳送。 
+
+
+| 備份階段 | 您要執行指令碼的備份階段。有效值為：「pre_backup、post備份及fion_Backup」。以預先編寫和後稿形式傳遞的變數。 
+
+
+| 快照 | 備份中的儲存快照數量。僅在後檔中傳遞的變數。 
+
+
+| 《torage_snapshot》（快照） | 定義的儲存快照之一、格式如下：「<filer>:/vol/<volvol>:<ONTAP-snapshot-name>' varable passed in postscripts only（僅在後指令碼中傳遞）。 
+
+
+| 虛擬機器 | 備份中的VM數。以預先編寫和後稿形式傳遞的變數。 
+
+
+| "virtual_machine.#" | 定義的虛擬機器之一、格式如下：「<VM name>[直立列]<VM UUUUUID>[垂直列]<電源狀態>[垂直列]<VM snapshot >[垂直列]<IP位址><電源狀態>的值為Power_On、Power_Off或Suspended`<VM snapshot >'、其值為「真」或「假性」。 
+|===
+
+
+== 指令碼逾時
+
+備份指令碼的逾時時間為15分鐘、無法修改。
+
+
+
+== Perl指令碼#1範例
+
+下列Perl指令碼範例會在執行備份時列印環境變數。
+
+'#'!/rin/perl''use warnations;' use strict；' many $argnum;' many $logfile ='/support/log_env.log'；' OPEN（fh、'>>）、$logfile或die $!' foreach（sorts key %ENV）' fh列印= fh$｛fh = fh n v = fh = fh v = fh = fh v = fh = fh v "n"；"Close（fh）；"
+
+
+
+== Perl指令碼#2範例
+
+下列範例會列印有關備份的資訊。
+
+"#"usr/bin/perl"（使用警告）；"Use strict；（使用嚴格；）"
+
+'My $argnum;'年$logfile ='/support/log_env.log'；'開啟（fh、'>'、$logfile）或停止$！；'
+
+「print fh "back_pageis $ENV{''備份階段'}\n";'列印fh "Backup name $ENV{'備份名稱$ENV{'備份名稱'backup_name'}\n";'列印fh "$ENV{'virtual_fh_machine'$fn'快照是$ENV\print fh_fh'備份時間$'；'｛fhfh_print fh_print fh_fh_print fh'是$'*備份時間$'｛備份fhfh_print fh_fh_flight_fh_flight_flight_fn'｛'｛'｛'｛'｝$n｝$n *備份fh_print fhn *快照*快照*備份時間$n *快照*｛fhfhfhfhfhfhn｝*快照
+
+「print fh "PWD is $ENV{'PWD'}\n";' print fh "publication_ID is $ENV{'publication_ID'}\n";'
+
+「print fh」="===== "n"；"Close（fh）；"
+
+
+
+== Shell指令碼範例
+
+="=="="="="="="="="="="="="="="="="="="="="== `#!/bin/bash'「ECAE回寫$backup_name >>/support/log_file.log」「env >>/support/log_file.log」h=="="="="="=="== 」

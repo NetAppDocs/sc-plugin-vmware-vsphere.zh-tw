@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_quick_start_overview.html 
+keywords:  
+summary: 快速入門文件提供一組精簡的指示、說明如何部署SnapCenter 適用於VMware vSphere虛擬應用裝置的VMware vSphere插件、以及如何啟用SnapCenter 適用於VMware vSphere的《支援VMware vSphere的VMware外掛程式》。這些指示適用於尚未SnapCenter 安裝支援功能的客戶、以及只想保護VM和資料存放區的客戶。 
+---
+= 總覽
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+快速入門文件提供一組精簡的指示、說明如何部署SnapCenter 適用於VMware vSphere虛擬應用裝置的VMware vSphere插件、以及如何啟用SnapCenter 適用於VMware vSphere的《支援VMware vSphere的VMware外掛程式》。這些指示適用於尚未SnapCenter 安裝支援功能的客戶、以及只想保護VM和資料存放區的客戶。
+
+開始之前、請參閱 link:scpivs44_deployment_planning_and_requirements.html["部署規劃與需求"]。

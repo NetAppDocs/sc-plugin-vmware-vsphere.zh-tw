@@ -1,0 +1,78 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_manage_policies.html 
+keywords:  
+summary: 您可以針對SnapCenter VMware vSphere建立、修改、檢視、分離及刪除VMware vSphere的VMware Plug-in備份原則。執行資料保護作業時、必須使用原則。 
+---
+= 管理原則
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以針對SnapCenter VMware vSphere建立、修改、檢視、分離及刪除VMware vSphere的VMware Plug-in備份原則。執行資料保護作業時、必須使用原則。
+
+
+
+=== 分離原則
+
+當您不再希望這些原則管理資源的資料保護時、可以將原則從SnapCenter VMware的支援資源群組中分離出來。您必須先中斷原則、才能將其移除、或是修改排程頻率。
+
+將原則從SnapCenter VMware的VMware插件資源群組中分離的準則、與SnapCenter 適用於各個資源群組的準則有所不同。對於VMware vSphere Web用戶端資源群組、可以分離所有原則、使資源群組不含原則。不過、若要在該資源群組上執行任何資料保護作業、您必須附加至少一個原則。
+
+.步驟
+. 在VMware vSphere Web用戶端的左側導覽器窗格中、按一下*資源群組*、然後選取資源群組、再按一下*編輯*。
+. 在*編輯資源群組*精靈的*原則*頁面上、清除您要分離的原則旁的核取標記。
++
+您也可以檢查原則、將原則新增至資源群組。
+
+. 在精靈的其餘部分中對資源群組進行任何其他修改、然後按一下「*完成*」。
+
+
+
+
+=== 修改原則
+
+您可以修改SnapCenter VMware vSphere資源群組適用的VMware vSphere外掛程式原則。當原則附加至資源群組時、您可以修改頻率、複寫選項、Snapshot複本保留設定或指令碼資訊。
+
+修改SnapCenter VMware的VMware外掛程式備份原則、不同SnapCenter 於修改以應用程式為基礎的外掛程式備份原則。修改外掛程式原則時、您不需要將原則從資源群組分離。
+
+在您修改複寫或保留設定之前、應先考量可能的後果。
+
+* 增加複寫或保留設定
++
+備份會持續累積、直到達到新的設定為止。
+
+* 減少複寫或保留設定
++
+執行下一次備份時、會刪除超過新設定的備份。
+
+
+
+
+NOTE: 若要修改SnapCenter VMware vCenter外掛程式原則排程、您必須修改外掛程式資源群組中的排程。
+
+.步驟
+. 在VMware vSphere Web用戶端的左側導覽器窗格中、按一下*原則*、然後選取原則、再按一下*編輯*。
+. 修改原則欄位。
+. 完成後、按一下*更新*。
+
+
+變更會在下次執行排程備份時生效。
+
+
+
+=== 刪除原則
+
+如果您不再需要針對SnapCenter VMware vSphere的VMware vSphere進行設定的備份原則、您可能會想要將其刪除。
+
+您必須先將原則從虛擬應用裝置中的所有資源群組中移除SnapCenter 以供參考、才能將其刪除。
+
+.步驟
+. 在VMware vSphere Web用戶端的左側導覽器窗格中、按一下*原則*、然後選取原則、再按一下*移除*。
+. 在確認對話方塊中、按一下*確定*。
+

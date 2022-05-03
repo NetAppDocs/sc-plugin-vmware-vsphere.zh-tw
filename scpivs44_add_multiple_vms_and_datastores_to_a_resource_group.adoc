@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_add_multiple_vms_and_datastores_to_a_resource_group.html 
+keywords:  
+summary: 您可以使用SnapCenter 「VMware vSphere Web用戶端編輯資源群組」精靈、將多個VM和資料存放區新增至任何現有的資源群組。 
+---
+= 將多個VM和資料存放區新增至資源群組
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用SnapCenter 「VMware vSphere Web用戶端編輯資源群組」精靈、將多個資源新增至現有的資源群組。
+
+資源群組可包含下列其中一項：
+
+* 傳統VM與SAN及NAS資料存放區的任何組合（不支援vVol資料存放區）。
+* 一個FlexGroup 資料存放區（不支援跨距VM）。
+* 一FlexVol 或多個資料存放區（支援跨虛擬機器）。
+* 一或多個VVol VM。
+* 所有VVol VM都具有指定的vCenter標記。
+* 指定資料夾中的所有VVol VM。
+
+
+.步驟
+. 在VMware vSphere Web用戶端的左側導覽器窗格中、按一下*資源群組*、然後選取資源群組、再按一下 image:scpivs44_image39.png["錯誤：缺少圖形影像"] *編輯資源群組*以啟動精靈。
+. 在*資源*頁面上、執行下列動作：
++
+.. 在「資料存放區」欄位中、瀏覽至您要新增的VM或資料存放區。
+.. 在「可用實體」清單中、選取您要新增至資源群組的一或多個VM或資料存放區、然後按一下*>*將選取範圍移至「選取的實體」清單。您可以按一下*>*來移動所有可用的圖元。
++
+根據預設、可用實體清單會顯示Datacenter物件。您可以按一下資料存放區來檢視資料存放區內的VM、然後將其新增至資源群組。
+
++
+當您按一下*下一步*時、系統會先檢查SnapCenter 哪些項目可加以管理、並與所選VM或資料存放區所在的儲存區相容。如果SnapCenter 顯示訊息「某些實體不相容」、則表示所選的VM或資料存放區與SnapCenter 無法與此功能相容。請參閱 link:scpivs44_create_resource_groups_for_vms_and_datastores.html#manage-compatibility-check-failures["管理相容性檢查失敗"] 以取得更多資訊。
+
+
+
+. 針對您要新增的每個VM或資料存放區、重複步驟2。
+. 單擊* Next*（下一步）直到顯示* Summary（摘要）*頁面，然後查看摘要並單擊* Finish（完成）*。
+

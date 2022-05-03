@@ -1,0 +1,269 @@
+---
+settings:
+  name: SnapCenter Plug-in for VMware vSphere
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: zh-tw,us-en,ja-jp,zh-cn,ko-kr
+sidebar:
+  entries:
+  - title: VMware vSphere的插件SnapCenter
+    url: "/index.html"
+  - title: 版本資訊
+    url: "/scpivs44_release_notes.html"
+  - title: 概念
+    entries:
+    - title: 產品總覽
+      url: "/scpivs44_concepts_overview.html"
+    - title: 不同SnapCenter 的圖形介面總覽
+      url: "/scpivs44_overview_of_different_snapcenter_guis.html"
+    - title: 授權
+      url: "/scpivs44_licensing.html"
+    - title: 角色型存取控制（RBAC）
+      url: "/scpivs44_role_based_access_control.html"
+    - title: VMware vSphere使用者適用的RBAC外掛程式類型SnapCenter
+      url: "/scpivs44_types_of_rbac_for_snapcenter_users.html"
+    - title: VMware vSphere的VMware vSphere的VMware外掛程式中包含的RBAC功能ONTAP SnapCenter
+      url: "/scpivs44_ontap_rbac_features_in_snapcenter.html"
+    - title: VMware SnapCenter vSphere隨附於VMware vSphere的VMware vCenter外掛程式的預先定義角色
+      url: "/scpivs44_predefined_roles_packaged_with_snapcenter.html"
+    - title: 如何為ONTAP VMware vSphere設定適用於VMware vSphere的VMware RBAC SnapCenter 外掛程式
+      url: "/scpivs44_how_to_configure_ontap_rbac_for_snapcenter_plug-in_for_vmware_vsphere.html"
+  - title: 開始使用
+    entries:
+    - title: 部署總覽
+      url: "/scpivs44_get_started_overview.html"
+    - title: 新使用者的部署工作流程
+      url: scpivs44_deployment_workflow_for_new_users.html
+    - title: 現有使用者的部署工作流程
+      url: "/scpivs44_deployment_workflow_for_existing_users.html"
+    - title: 部署選擇控制閥的要求
+      entries:
+      - title: 部署規劃與需求
+        url: "/scpivs44_deployment_planning_and_requirements.html"
+      - title: 需要最低ONTAP 的權限
+        url: "/scpivs44_minimum_ontap_privileges_required.html"
+      - title: 所需的vCenter權限下限
+        url: "/scpivs44_minimum_vcenter_privileges_required.html"
+    - title: 下載SnapCenter VMware vSphere OVA的功能更新外掛程式（開放式虛擬應用裝置）
+      url: "/scpivs44_download_the_snapcenter_plug-in_for_vmware_vsphere_ova_open_virtual_appliance.html"
+    - title: 部署SnapCenter VMware vSphere的VMware vCenter外掛程式
+      url: "/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html"
+    - title: 部署後所需的作業與問題
+      url: "/scpivs44_post_deployment_required_operations_and_issues.html"
+    - title: 登入SnapCenter VMware vSphere Web用戶端
+      url: "/scpivs44_log_in_to_the_snapcenter_vmware_vsphere_web_client.html"
+  - title: 快速入門
+    entries:
+    - title: 總覽
+      url: "/scpivs44_quick_start_overview.html"
+    - title: 下載OVA（開放式虛擬應用裝置）
+      url: "/scpivs44_download_the_ova_open_virtual_appliance.html"
+    - title: 部署SnapCenter VMware vSphere的VMware vCenter外掛程式
+      url: "/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere_01.html"
+    - title: 新增儲存設備
+      url: "/scpivs44_add_storage.html"
+    - title: 建立備份原則
+      url: "/scpivs44_create_backup_policies.html"
+    - title: 建立資源群組
+      url: "/scpivs44_create_resource_groups.html"
+  - title: 監控與報告
+    entries:
+    - title: 檢視狀態資訊
+      url: "/scpivs44_view_status_information.html"
+    - title: 監控工作
+      url: "/scpivs44_monitor_jobs.html"
+    - title: 下載工作記錄
+      url: "/scpivs44_download_job_logs.html"
+    - title: 存取報告
+      url: "/scpivs44_access_reports.html"
+    - title: 從SnapCenter VMware vSphere GUI的VMware vSphere GUI的VMware支援外掛程式產生支援套裝組合
+      url: "/scpivs44_generate_a_support_bundle_from_the_snapcenter_plug-in_for_vmware_vsphere_gui.html"
+    - title: 從維護主控台產生支援套裝組合
+      url: "/scpivs44_generate_a_support_bundle_from_the_maintenance_console.html"
+  - title: 管理儲存設備
+    entries:
+    - title: 新增儲存設備
+      url: "/scpivs44_add_storage_01.html"
+    - title: 管理儲存VM：修改、重新命名、移除
+      url: "/scpivs44_manage_storage_systems.html"
+    - title: 修改設定的儲存逾時
+      url: "/scpivs44_modify_storage_timeout.html"
+  - title: 保護資料
+    entries:
+    - title: 資料保護工作流程
+      url: "/scpivs44_protect_data_overview.html"
+    - title: 檢視備份
+      url: "/scpivs44_view_vm_and_datastore_backups.html"
+    - title: 建立備份原則
+      url: "/scpivs44_create_backup_policies_for_vms_and_datastores.html"
+    - title: 建立資源群組
+      url: "/scpivs44_create_resource_groups_for_vms_and_datastores.html"
+    - title: 簡報與指令碼
+      url: "/scpivs44_prescripts_and_postscripts.html"
+    - title: 將單一VM或資料存放區新增至資源群組
+      url: "/scpivs44_add_a_single_vm_or_datastore_to_a_resource_group.html"
+    - title: 將多個VM和資料存放區新增至資源群組
+      url: "/scpivs44_add_multiple_vms_and_datastores_to_a_resource_group.html"
+    - title: 隨需備份資源群組
+      url: "/scpivs44_back_up_resource_groups_on_demand.html"
+    - title: 備份MySQL資料庫
+      url: "/scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html"
+    - title: 管理資源群組：暫停、恢復、修改、刪除
+      url: "/scpivs44_manage_resource_groups.html"
+    - title: 管理原則：分離、修改、刪除
+      url: "/scpivs44_manage_policies.html"
+    - title: 管理備份-重新命名、刪除
+      url: "/scpivs44_manage_backups.html"
+  - title: 掛載及卸載資料存放區
+    entries:
+    - title: 掛載備份
+      url: "/scpivs44_mount_a_backup.html"
+    - title: 卸載備份
+      url: "/scpivs44_unmount_a_backup.html"
+  - title: 從備份還原
+    entries:
+    - title: 總覽
+      url: "/scpivs44_restore_from_backups_overview.html"
+    - title: 如何執行還原作業
+      url: "/scpivs44_how_restore_operations_are_performed.html"
+    - title: 搜尋備份
+      url: "/scpivs44_search_for_backups.html"
+    - title: 從備份還原VM
+      url: "/scpivs44_restore_vms_from_backups.html"
+    - title: 從備份還原刪除的VM
+      url: "/scpivs44_restore_deleted_vms_from_backups.html"
+    - title: 從備份還原VMDK
+      url: "/scpivs44_restore_vmdks_from_backups.html"
+    - title: 還原MySQL資料庫的最新備份
+      url: "/scpivs44_restore_the_most_recent_backup_of_the_mysql_database.html"
+    - title: 還原MySQL資料庫的特定備份
+      url: "/scpivs44_restore_a_specific_backup_of_the_mysql_database.html"
+    - title: 將VMDK附加至VM
+      url: "/scpivs44_attach_vmdks_to_a_vm.html"
+    - title: 分離虛擬磁碟
+      url: "/scpivs44_detach_a_virtual_disk.html"
+  - title: 還原來賓檔案和資料夾
+    entries:
+    - title: 工作流程、先決條件及限制
+      url: "/scpivs44_restore_guest_files_and_folders_overview.html"
+    - title: 從VMDK還原來賓檔案和資料夾
+      url: "/scpivs44_restore_guest_files_and_folders_from_vmdks.html"
+    - title: 設定Proxy VM以進行還原作業
+      url: "/scpivs44_set_up_proxy_vms_for_restore_operations.html"
+    - title: 設定VM客體檔案還原的認證資料
+      url: "/scpivs44_configure_credentials_for_vm_guest_file_restores.html"
+    - title: 延長客體檔案還原工作階段的時間
+      url: "/scpivs44_extend_the_time_of_a_guest_file_restore_session.html"
+    - title: 您可能會遇到的客體檔案還原案例
+      url: "/scpivs44_guest_file_restore_scenarios_you_might_encounter.html"
+  - title: 管理SnapCenter VMware vSphere應用裝置的VMware vCenter外掛程式
+    entries:
+    - title: 重新啟動VMware vSphere Web用戶端服務
+      url: "/scpivs44_restart_the_vmware_vsphere_web_client_service.html"
+    - title: 存取維護主控台
+      url: "/scpivs44_access_the_maintenance_console.html"
+    - title: 從SnapCenter 維護主控台修改VMware vCenter外掛程式密碼
+      url: "/scpivs44_modify_plugin_password.html"
+    - title: 建立及匯入憑證
+      url: "/scpivs44_create_and_import_certificates.html"
+    - title: 從SnapCenter vCenter取消登錄VMware vSphere的VMware vSphere外掛程式
+      url: "/scpivs44_unregister_plugin_from_vcenter.html"
+    - title: 停用SnapCenter 並啟用VMware vSphere的功能支援功能
+      url: "/scpivs44_disable_and_enable_plugin.html"
+    - title: 移除SnapCenter VMware vSphere的功能性外掛程式
+      url: "/scpivs44_remove_plugin.html"
+  - title: 管理您的組態
+    entries:
+    - title: 修改時區
+      url: "/scpivs44_modify_the_time_zones.html"
+    - title: 修改登入認證資料
+      url: "/scpivs44_modify_the_logon_credentials.html"
+    - title: 修改vCenter登入認證
+      url: "/scpivs44_modify_the_vcenter_logon_credentials.html"
+    - title: 修改網路設定
+      url: "/scpivs44_modify_the_network_settings.html"
+    - title: 修改組態預設值
+      url: "/scpivs44_modify_configuration_default_values.html"
+    - title: 建立scbr.override檔案
+      url: "/scpivs44_create_the_scbr_override_file.html"
+    - title: 您可以置換的組態內容
+      url: "/scpivs44_properties_you_can_override.html"
+    - title: 啟用SSH
+      url: "/scpivs44_enable_ssh.html"
+  - title: REST API
+    entries:
+    - title: 總覽
+      url: "/scpivs44_rest_apis_overview.html"
+    - title: 使用Swagger API網頁存取REST API
+      url: "/scpivs44_access_rest_apis_using_the_swagger_api_web_page.html"
+    - title: REST API工作流程、以新增及修改儲存VM
+      url: "/scpivs44_rest_api_workflows__add_and_modify_storage_vms.html"
+    - title: REST API工作流程、以建立及修改資源群組
+      url: "/scpivs44_rest_api_workflows__create_and_modify_resource_groups.html"
+    - title: REST API工作流程、可隨需備份
+      url: "/scpivs44_rest_api_workflow__back_up_on_demand.html"
+    - title: REST API工作流程來還原VM
+      url: "/scpivs44_rest_api_workflow__restore_vms.html"
+    - title: REST API工作流程可還原刪除的VM
+      url: "/scpivs44_rest_api_workflow__restore_deleted_vms.html"
+    - title: REST API工作流程可還原VMDK
+      url: "/scpivs44_rest_api_workflow__restore_vmdks.html"
+    - title: REST API工作流程以附加和分離VMDK
+      url: "/scpivs44_rest_api_workflows__attach_and_detach_vmdks.html"
+    - title: REST API工作流程以掛載及卸載資料存放區
+      url: "/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html"
+    - title: REST API可下載工作並產生報告
+      url: "/scpivs44_rest_apis__download_jobs_and_generate_reports.html"
+    - title: REST API工作流程可修改內建排程
+      url: "/scpivs44_rest_api_workflows__modify_built-in_schedules.html"
+    - title: REST API可將卡住的工作標示為失敗
+      url: "/scpivs44_rest_apis_fail_stuck_jobs.html"
+  - title: 升級
+    entries:
+    - title: 升級至SnapCenter 舊版VMware vSphere的VMware vSphere用版不整合式外掛程式
+      url: "/scpivs44_upgrade.html"
+    - title: 升級至同一版本的新修補程式
+      url: "/scpivs44_upgrade_to_a_new_patch.html"
+    - title: 升級至同一版本的新修補程式後、不會顯示相關資訊
+      url: "/scpivs44_information_not_displayed_after_upgrading_to_a_new_patch_of_the_same_release.html"
+  - title: 法律聲明
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: 開始使用
+    links:
+    - title: 版本資訊
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2881136
+    - title: 深入瞭解選擇控制閥
+      url: "/scpivs44_concepts_overview.html"
+    - title: 部署需求
+      url: "/scpivs44_deployment_planning_and_requirements.html"
+    - title: 快速入門
+      url: "/scpivs44_download_the_ova_open_virtual_appliance.html"
+  - title: 保護VM、VMDK和資料存放區
+    links:
+    - title: 保護您的資料
+      url: "/scpivs44_protect_data_overview.html"
+    - title: 從備份還原
+      url: "/scpivs44_restore_from_backups_overview.html"
+    - title: 使用REST API
+      url: "/scpivs44_rest_apis_overview.html"
+    - title: 從Windows型選擇控制器移轉
+      url: "/scpivs44_migrate.html"
+  - title: 部落格社群
+    links:
+    - title: NetApp部落格–選擇控制閥
+      url: https://blog.netapp.com/tag/snapcenter/
+    - title: NetApp社群–選擇控制閥
+      url: https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/backup-and-restore-discussions/label-name/snapcenter
+  - title: 更多資源
+    links:
+    - title: 軟件文檔SnapCenter
+      url: https://docs.netapp.com/us-en/snapcenter/index.html
+    - title: 早期版本的選擇控制閥文件
+      url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63240
+    - title: NetApp知識庫–選擇控制閥
+      url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter

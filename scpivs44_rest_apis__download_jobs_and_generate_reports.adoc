@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_apis__download_jobs_and_generate_reports.html 
+keywords:  
+summary: 若要使用SnapCenter 適用於VMware vSphere REST API的VMware vSphere外掛程式、為VMware vSphere Web用戶端工作產生報告和下載記錄、您必須使用VMware vSphere的REST API呼叫。 
+---
+= REST API可下載工作並產生報告
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+若要使用SnapCenter 適用於VMware vSphere REST API的VMware vSphere外掛程式、為VMware vSphere Web用戶端工作產生報告和下載記錄、您必須使用VMware vSphere的REST API呼叫。
+
+對於每個REST API、請在REST API前面新增「https://<server>:<port>`」、以形成完整的端點。
+
+
+
+=== 請使用「工作」區段中的下列REST API來取得工作的詳細資訊：
+
+|===
+| REST API | 註解 
+
+
+| 每個工作機會的「/4.1/jobs」 | 「Get all jobs」（取得所有工作）可取得多個工作的工作詳細資料。您可以指定「備份」、「備份」或「還原」等工作類型、以縮小申請範圍。 
+
+
+| /4.1/jobs/{id} | 「Get jobdetails」（取得工作詳細資料）可取得指定工作的詳細資訊。 
+|===
+
+
+=== 使用「工作」區段中的下列REST API來下載工作記錄：
+
+|===
+| REST API | 註解 
+
+
+| /4.1/jobs/{id}/logs | 「getJobLogsById」會下載指定工作的記錄。 
+|===
+
+
+=== 使用「報告」區段中的下列REST API來產生報告：
+
+|===
+| REST API | 註解 
+
+
+| 「4.1/reports/protectedVM」 | 「Get protected VM List（取得受保護的VM清單）」會列出過去七天內受保護的VM清單。 
+
+
+| /4.1/reports/ unProtectedVM | 「Get方式保護虛擬機器清單」會列出過去七天內未受保護的虛擬機器。 
+|===

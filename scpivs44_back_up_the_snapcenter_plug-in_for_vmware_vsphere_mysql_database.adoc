@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html 
+keywords:  
+summary: VMware的VMware版外掛程式包含MySQL資料庫（也稱為NSM資料庫）、其中包含外掛程式所執行之所有工作的中繼資料。SnapCenter您應該定期備份此儲存庫。 
+---
+= 備份SnapCenter VMware vSphere MySQL資料庫的VMware vCenter外掛程式
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+VMware的VMware版外掛程式包含MySQL資料庫（也稱為NSM資料庫）、其中包含外掛程式所執行之所有工作的中繼資料。SnapCenter您應該定期備份此儲存庫。
+
+您也應該在執行移轉或升級之前、先備份儲存庫。
+
+當隨需備份工作已經在執行時、請勿啟動工作來備份MySQL資料庫。
+
+.步驟
+. 從VMware vSphere Web用戶端選取SnapCenter VMware外掛程式所在的VM。
+. 在VM上按一下滑鼠右鍵、然後在虛擬應用裝置的* Summary（摘要）*索引標籤上、按一下* Launch Remote Console *（啟動遠端主控台*）或Launch Web Console（啟動Web主控台*）以開啟維護主控台視窗。
++
+下列是VMware vCenter外掛程式維護主控台的登入預設值SnapCenter ：
+
++
+使用者名稱：「Maint」密碼：「admin123」
+
++
+image:scpivs44_image21.png["錯誤：缺少圖形影像"]
+
+. 在主功能表中、輸入選項* 1）應用程式組態。*
+. 在「應用程式組態」功能表中、輸入選項* 6）MySQL備份與還原。*
+. 在MySQL備份與還原組態功能表中、輸入選項* 1）設定MySQL備份*。
+. 出現提示時、輸入儲存庫的備份位置、要保留的備份數目、以及備份應開始的時間。
++
+輸入時會儲存所有輸入。當達到備份保留號碼時、執行新備份時、會刪除舊備份。
+
++
+
+TIP: 儲存庫備份的名稱為「backup-<date>」。由於儲存庫還原功能會尋找「備份」字首、因此您不應加以變更。
+
+

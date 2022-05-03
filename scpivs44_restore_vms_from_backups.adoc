@@ -1,0 +1,122 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restore_vms_from_backups.html 
+keywords:  
+summary: 還原VM時、您可以使用所選的備份複本覆寫現有內容、也可以複製VM。 
+---
+= 從備份還原VM
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+還原VM時、您可以使用所選的備份複本覆寫現有內容、也可以複製VM。
+
+您可以將VM還原至下列位置：
+
+* 還原至原始位置
++
+** 安裝在原始ESXi主機上的原始資料存放區（這會覆寫原始VM）
+
+
+* 還原至替代位置
++
+** 安裝在原始ESXi主機上的不同資料存放區
+** 安裝在不同ESXi主機上、由同一個vCenter管理的原始資料存放區
+** 安裝在不同ESXi主機上、由同一個vCenter管理的不同資料存放區
+** 安裝在不同ESXi主機上的不同資料存放區、由不同vCenter以連結模式管理
+
+
+
+
+
+NOTE: 還原至不同位置時、SnapCenter VMware vSphere的VMware vSphere VMware Plug-in必須在連結的vCenter中執行、該vCenter是還原作業的目的地。目的地資料存放區必須有足夠的空間。
+
+
+NOTE: 不支援下列還原工作流程：新增儲存虛擬機器、然後執行該虛擬機器的備份、刪除儲存虛擬機器、並新增包含該儲存虛擬機器的叢集、然後嘗試還原原始備份。
+
+
+TIP: 若要改善NFS環境中的還原作業效能、請啟用VMware應用程式vStorage API for Array Integration（VAAI）。
+
+.開始之前
+* 備份必須存在。
++
+您必須先使用SnapCenter VMware vCenter外掛程式建立VM備份、才能還原VM。
+
++
+
+NOTE: 如果VM的Snapshot複本是由SnapCenter VMware vSphere的VMware vSphere以外的軟體執行、則還原作業無法成功完成。
+
+* VM不得在傳輸中。
++
+您要還原的VM不得處於VMotion或Storage VMotion狀態。
+
+* HA組態錯誤
++
+在將備份還原至不同位置之前、請先確認vCenter ESXi主機摘要畫面上沒有顯示HA組態錯誤。
+
+* 還原至不同位置
++
+還原至不同位置時、SnapCenter VMware vSphere的VMware vSphere VMware Plug-in必須在vCenter中執行、而vCenter是還原作業的目的地。目的地資料存放區必須有足夠的空間。
+
+
+
+.關於這項工作
+* VM已取消登錄、並重新登錄
++
+VM的還原作業會取消原始VM的登錄、從備份Snapshot複本還原VM、並在同一部ESXi伺服器上以相同名稱和組態登錄還原的VM。還原後、您必須手動將VM新增至資源群組。
+
+* 還原資料存放區
++
+您無法還原資料存放區、但可以還原資料存放區中的任何VM。
+
+* VM的VMware一致性快照失敗
++
+即使VM的VMware一致性快照失敗、VM仍會備份。您可以在還原精靈中檢視備份複本中包含的實體、並將其用於還原作業。
+
+* 如果FabricPool 無法使用虛擬機器所在的儲存層、還原作業可能會失敗。
+
+
+.步驟
+. 在VMware vSphere Web用戶端GUI中、按一下工具列中的*功能表*、然後從下拉式清單中選取* VM和範本*。
++
+
+NOTE: 如果您要還原刪除的VM、則新增至SnapCenter VMware插件的儲存VM認證資料必須是「vsadmin」、或是擁有與「vsadmin」相同權限的使用者帳戶。主機必須位於執行ONTAP 不支援的儲存系統上。
+
+. 在左側導覽器窗格中、以滑鼠右鍵按一下某個VM、然後在下SnapCenter 拉式清單中選取* NetApp S還原*、以啟動精靈。
+. 在*還原*精靈的*選取備份*頁面上、選取您要還原的備份Snapshot複本。
++
+您可以搜尋特定的備份名稱或部分備份名稱、也可以按一下篩選器圖示並選取日期和時間範圍來篩選備份清單、選取是否要包含VMware Snapshot的備份、是否要掛載備份以及位置。按一下「*確定*」以返回精靈。
+
+. 在「*選取範圍*」頁面上、在「*還原範圍*」欄位中選取*整個虛擬機器*、然後選取還原位置、再輸入要掛載備份的目的地資訊。
++
+在* VM name*欄位中、如果有相同的VM名稱、則新的VM名稱格式為「<VM_name>_<timestamp>'」。
+
++
+還原部分備份時、還原作業會跳過「*選取範圍*」頁面。
+
+. 在「*選取位置*」頁面上、選取還原資料存放區的位置。
++
+在VMware vSphere 4.5及更新版本的VMware vSphere外掛程式中SnapCenter 、您可以選取FlexGroup 適用於VMware vSphere 4.5及更新版本的次要儲存設備。
+
+. 檢閱「摘要」頁面、然後按一下「*完成*」。
+. 選用：按一下畫面底部的* Recent Tasks（最近的工作）*、即可監控作業進度。
++
+重新整理畫面以顯示更新的資訊。
+
+
+
+.完成後
+* 變更IP位址
++
+如果還原至不同位置、則必須變更新建立之VM的IP位址、以避免在設定靜態IP位址時發生IP位址衝突。
+
+* 將還原的VM新增至資源群組
++
+雖然虛擬機器已還原、但不會自動新增至先前的資源群組。因此、您必須手動將還原的VM新增至適當的資源群組。
+
+

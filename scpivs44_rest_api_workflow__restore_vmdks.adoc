@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_api_workflow__restore_vmdks.html 
+keywords:  
+summary: 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式來執行VMDK的還原作業、您必須遵循規定的REST API呼叫順序。 
+---
+= REST API工作流程可還原VMDK
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式來執行VMDK的還原作業、您必須遵循規定的REST API呼叫順序。
+
+對於每個REST API、請在REST API前面新增「https://<server>:<port>`」、以形成完整的端點。
+
+|===
+| 步驟 | REST API | 註解 
+
+
+| 1. | 請前往http://<vCenter-IP>/mob` | 從VMware託管物件URL尋找更多VM。記下VMDK所在虛擬機器的* morf*。 
+
+
+| 2. | //4.1/VM/｛moref｝/備份 | 「Get VM備份」可取得指定VM的備份清單。從步驟1通過* moref *。請記下您要還原之備份的*備份Id*。 
+
+
+| 3. | //4.1/VM/backups/{backupId}/ snapshotlocations' | 「Get Snapshot Locations」（取得快照位置）可取得指定備份的Snapshot複本位置。從步驟2傳遞*備份Id*。請注意*快照位置List*資訊。 
+
+
+| 4. | //4.1/VM/｛moref｝/備份/ vmdklocations | 「Get vmdk locations」（取得vmdk位置）會取得指定VM的VMDK清單。請注意* vmdkLocationsList*資訊。 
+
+
+| 5. | //4.1/VM/{morf}/backups/{backupId}/可用的資料存放區 | 「Get Available Datastores」（取得可用的資料存放區）會取得可供還原作業使用的資料存放區清單。從步驟1通過* moref *。從步驟2傳遞*備份Id*。請注意*資料存放區名稱清單*資訊。 
+
+
+| 6. | /`4.1/VM/{morf}/Backups/可用的esxhosts' | 「Get Available ESX hosts（取得可用的ESX主機）」會取得儲存備份之主機的資訊。從步驟1通過* moref *。請注意*可用的EssxHostsList*資訊。 
+
+
+| 7. | //4.1/VM/｛moref｝/備份/｛backupId｝/ restorevmdkss  a| 
+「從備份還原VMDK」會從指定的備份還原指定的VMDK。在* esxHost*屬性中、傳遞步驟6中*可用的EssxHostsList *的資訊。將步驟3到步驟5的資訊傳遞到* vmdkRestoreLocationation*屬性：
+
+* 在restoreFromLocation屬性中、傳遞步驟3中來自snapshotLocationsList的資訊。
+* 在vmdkToRestore屬性中、傳遞步驟4中vmdkLocationsList的資訊。
+* 在「restoreToDatastore」屬性中、傳遞步驟5中資料存放區名稱清單的資訊。
+
+
+|===

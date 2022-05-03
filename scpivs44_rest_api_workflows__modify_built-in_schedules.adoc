@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_api_workflows__modify_built-in_schedules.html 
+keywords:  
+summary: 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式修改VMware vSphere Web用戶端工作的內建排程、您必須依照規定的REST API呼叫順序進行。 
+---
+= REST API工作流程可修改內建排程
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式修改VMware vSphere Web用戶端工作的內建排程、您必須依照規定的REST API呼叫順序進行。
+
+內建排程是產品隨附的排程、例如MySQL資料庫傾印排程。您可以修改下列排程：「排程資料庫傾印」「排程-清除備份」「排程- AsupDataCollection」「排程-電腦儲存儲存儲存儲存」「排程-清除工作」
+
+對於每個REST API、請在REST API前面新增「https://<server>:<port>`」、以形成完整的端點。
+
+|===
+| 步驟 | REST API | 註解 
+
+
+| 1. | 每個排程4.1/' | 「Get all built in」排程會列出產品原本提供的工作時程清單。記下您要修改的排程名稱及相關的cron運算式。 
+
+
+| 2. | 每個排程4.1/' | 「修改任何內建排程」會變更命名排程。從步驟1傳遞排程名稱、然後為排程建立新的cron運算式。 
+|===

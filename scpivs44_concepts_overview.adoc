@@ -1,0 +1,74 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_concepts_overview.html 
+keywords:  
+summary: VMware vSphere的VMware vSphere外掛程式是一種獨立式虛擬應用裝置（開放式虛擬應用裝置格式）、可為VM和資料存放區提供資料保護服務、並支援以應用程式為基礎的插件資料保護服務。SnapCenter SnapCenter本文件說明如何部署及使用SnapCenter VMware vSphere的VMware vSphere適用的VMware vCenter外掛程式、並包含快速入門資訊。 
+---
+= 產品總覽
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+VMware vSphere的VMware vSphere外掛程式是一種獨立式虛擬應用裝置（開放式虛擬應用裝置格式）、可為VM和資料存放區提供資料保護服務、並支援以應用程式為基礎的插件資料保護服務。SnapCenter SnapCenter本文件說明如何部署及使用SnapCenter VMware vSphere的VMware vSphere適用的VMware vCenter外掛程式、並包含快速入門資訊。
+
+VMware vSphere的VMware vSphere外掛程式部署為Linux型虛擬應用裝置。SnapCenter
+
+VMware vCenter外掛程式可為您的環境增添下列功能：SnapCenter
+
+* 支援VM一致且損毀一致的資料保護作業。
++
+您可以在vCenter中使用VMware vSphere Web用戶端GUI、執行VMware虛擬機器（傳統VM和VVol VM）、VMDK和資料存放區的所有備份與還原作業。對於VVol VM（VVol資料存放區中的VM）、僅支援損毀一致的備份。您也可以還原VM和VMDK、以及還原位於客體作業系統上的檔案和資料夾。
+
++
+備份VM、VMDK和資料存放區時、外掛程式不支援RDM。VM的備份工作會忽略RDM。如果您需要備份RDM、則必須使用SnapCenter 以應用程式為基礎的外掛程式。
+
++
+VMware的VMware插件包括一個MySQL資料庫、其中包含VMware外掛程式中繼資料。SnapCenter SnapCenter為了提供VM一致且一致損毀的資料保護、您不需要安裝SnapCenter 任何故障伺服器。
+
+* 支援應用程式一致的（透過VMDK-RDM的應用程式）資料保護作業。
++
+您可以使用SnapCenter 支援功能的圖形化GUI和適當SnapCenter 的支援功能外掛程式、在VM的主要和次要儲存設備上執行資料庫和檔案系統的所有備份與還原作業。
+
++
+在VMDK、原始裝置對應（RDM）和NFS資料存放區上、由於VMware本身採用了VMware的功能、因此能夠執行所有資料保護作業。SnapCenter SnapCenter部署虛擬應用裝置之後、外掛程式會處理與vCenter的所有互動。支援所有以應用程式為基礎的外掛程式。SnapCenter SnapCenter
+
++
+不支援資料庫和VM的單一Snapshot複本。SnapCenterVM和資料庫的備份必須獨立排程和執行、如此一來便能建立獨立的Snapshot複本、即使資料庫和VM都裝載在同一個磁碟區中。資料庫應用程式備份必須使用SnapCenter 還原GUI排程；VM和資料存放區備份必須使用VMware vSphere Web用戶端GUI排程。
+
+* VM一致的Snapshot複本需要VMware工具
++
+如果VMware Tools尚未安裝並執行、則檔案系統不會靜止、而且會建立損毀一致的Snapshot。
+
+* 在SAN（VMFS）環境中進行還原作業時、必須使用VMware Storage VMotion
++
+VMware檔案系統（VMFS）的還原工作流程採用VMware Storage VMotion功能。Storage VMotion是vSphere Standard授權的一部分、但不適用於vSphere Essentials或Essentials Plus授權。
+
++
+NFS環境中的大多數還原作業都使用原生ONTAP 的還原功能（例如單一檔案SnapRestore 還原）、不需要VMware Storage VMotion。
+
+* VMware vSphere的支援工具是保護VMware VVol VM的必備工具。ONTAP
++
+您可以使用ONTAP 「VMware工具」在ONTAP VMware Web用戶端上、針對VMware中的vVols進行資源配置和設定儲存。
+
++
+如需詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["VMware vSphere適用的VMware工具ONTAP"^]
+
+* VMware的VMware插件是以虛擬應用裝置的形式部署在Linux VM中SnapCenter
++
+雖然虛擬應用裝置必須安裝為Linux VM、SnapCenter 但VMware插件同時支援Windows型和Linux型vCenter。支援以應用程式為基礎的外掛程式、可在Windows和Linux虛擬化應用程式上執行資料保護作業、無需使用者介入、即可原生使用此外掛程式與vCenter進行通訊。SnapCenter SnapCenter
+
+
+
+除了這些主要功能之外、SnapCenter VMware vSphere的《VMware vSphere支援VMware®的VMware®支援中心」也支援iSCSI、Fibre Channel、FCoE、VMDK over NFS 3.0和4.1、以及VMDK over VMFS 5.0和6.0。
+
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103284;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^] （僅限部分）IMT 。
+
+如需NFS傳輸協定和ESXi的相關資訊、請參閱VMware提供的vSphere儲存設備文件。
+
+如需SnapCenter 有關資料保護的資訊、請參閱SnapCenter 中有關您的功能的資料保護資訊 http://docs.netapp.com/us-en/snapcenter/index.html["資訊文件SnapCenter"^]。
+
+如需支援的升級與移轉路徑資訊、請參閱 link:scpivs44_release_notes.html["VMware vSphere的版次說明SnapCenter"^]。

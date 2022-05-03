@@ -1,0 +1,197 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html 
+keywords:  
+summary: 您需要使用SnapCenter VMware vSphere管理GUI的VMware vCenter外掛程式來停止、停用SnapCenter 或啟用VMware vSphere應用裝置的「VMware vSphere外掛程式」。 
+---
+= 管理SnapCenter VMware vSphere的VMware vCenter外掛程式
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您需要使用SnapCenter VMware vSphere管理GUI的VMware vCenter外掛程式來停止、停用SnapCenter 或啟用VMware vSphere應用裝置的「VMware vSphere外掛程式」。
+
+
+
+== 存取維護主控台
+
+您可以使用適用於SnapCenter VMware vSphere的維護主控台來管理應用程式、系統和網路組態。您可以變更系統管理員密碼、維護密碼、產生支援服務組合、以及啟動遠端診斷。
+
+在停止及重新啟動SnapCenter VMware vSphere的VMware vSphere服務時、您應暫停所有排程。
+
+.關於這項工作
+* 預設值為「maintt」作為使用者名稱、「admin123」作為登入VMware SnapCenter vSphere的維護主控台的密碼。
++
+
+TIP: 部署後、請修改預設登入認證資料。
+
+* 啟用遠端診斷時、您必須為「診斷」使用者設定密碼。
++
+若要取得root使用者執行命令的權限、請使用Sudo <command>。
+
+
+
+.步驟
+. 從VMware vSphere Web用戶端選取SnapCenter VMware外掛程式所在的VM。
+. 在VM上按一下滑鼠右鍵、然後在虛擬應用裝置的* Summary（摘要）*索引標籤上、按一下* Launch Remote Console（啟動遠端主控台）以開啟維護主控台視窗。
++
+下列是VMware vCenter外掛程式維護主控台的登入預設值SnapCenter ：
+
++
+使用者名稱：「Maint」密碼：「admin123」
+
++
+image:scpivs44_image11.png["錯誤：缺少圖形影像"]
+
+. 您可以執行下列作業：
++
+** 選項1：應用程式組態
++
+啟動或停止SnapCenter VMware插件服務變更登入使用者名稱或密碼變更MySQL密碼設定MySQL備份清單MySQL備份還原MySQL備份
+
+** 選項2：系統組態
++
+重新開機或關機虛擬機器變更「maint」使用者密碼變更時區變更NTP伺服器啟用/停用SSH存取增加磁碟大小（/監獄）升級安裝VMware Tools
+
+** 選項3：網路組態
++
+顯示或變更IP位址設定顯示或變更網域名稱搜尋設定顯示或變更靜態路由提交變更Ping主機
+
+** 選項4：支援與診斷
++
+產生支援套件存取診斷Shell啟用遠端診斷存取產生核心傾印套件組合
+
+
+
+
+
+
+
+== 從SnapCenter 維護主控台修改VMware vCenter外掛程式密碼
+
+如果您不知道SnapCenter VMware vSphere管理GUI適用的VMware vSphere Plug-in管理密碼、可以從維護主控台設定新密碼。
+
+在停止及重新啟動SnapCenter VMware vSphere的VMware vSphere服務時、您應暫停所有排程。
+
+您必須使用預設的「maintt」作為使用者名稱、「admin123」作為密碼、才能登入SnapCenter 到VMware插件的維護主控台。
+
+.步驟
+. 從VMware vSphere Web用戶端選取SnapCenter VMware外掛程式所在的VM。
+. 在VM上按一下滑鼠右鍵、然後在虛擬應用裝置的* Summary（摘要）*索引標籤上、按一下* Launch Remote Console（啟動遠端主控台）以開啟維護主控台視窗。
++
+下列是VMware vCenter外掛程式維護主控台的登入預設值SnapCenter ：
+
++
+使用者名稱：「Maint」密碼：「admin123」
+
++
+image:scpivs44_image29.jpg["錯誤：缺少圖形影像"]
+
+. 輸入「* 1*」作為「應用程式組態」。
+. 輸入「* 4*」以變更使用者名稱或密碼。
+. 輸入新密碼。
++
+停止並重新啟動VMware虛擬應用裝置服務。SnapCenter
+
+
+
+
+
+== 建立及匯入憑證
+
+VMware解決方法外掛程式採用SSL加密技術、可與用戶端瀏覽器進行安全通訊。SnapCenter雖然如此一來、便能跨線路啟用加密資料、建立新的自我簽署憑證、或是使用您自己的憑證授權單位（CA）基礎架構或協力廠商CA、確保憑證對您的環境而言是獨一無二的。請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_create_and_or_import_an_SSL_certificate_to_SnapCenter_Plug-in_for_VMware_vSphere_(SCV)["知識庫文章：如何建立SSL憑證及/或將其匯入VMware外掛SnapCenter 程式以供VMware使用"^]。
+
+
+
+== 從SnapCenter vCenter取消登錄VMware vSphere的VMware vSphere外掛程式
+
+如果您在SnapCenter 連結模式的vCenter中停止使用VMware vCenter外掛程式服務、則並非所有連結的vCenter都能使用資源群組、即使SnapCenter 其他連結的vCenter正在執行VMware插件服務也一樣。
+
+您必須SnapCenter 手動取消登錄VMware的更新程式。
+
+.步驟
+. 在連結的vCenter SnapCenter 上停止使用VMware插件服務、請瀏覽至「受管理物件參考（MOB）」管理程式。
+. 在「內容」選項中、選取「擴充管理程式」以顯示已登錄的副檔名清單。
+. 取消註冊副檔名「com.netapp.scvm.webclient`」和「com.netapp.aegis`」。
+
+
+
+
+== 停用SnapCenter 並啟用VMware vSphere的功能支援功能
+
+如果您不再需要SnapCenter 使用資料保護功能、則必須變更SnapCenter VMware插件的組態。例如、如果您在測試環境中部署外掛程式、可能需要停用SnapCenter 該環境中的功能、並在正式作業環境中啟用這些功能。
+
+.開始之前
+* 您必須擁有系統管理員權限。
+* 請確定沒有SnapCenter 執行任何不可用的功能。
+
+
+停用SnapCenter VMware vCenter外掛程式時、所有資源群組都會暫停、而且外掛程式會在vCenter中取消登錄為擴充。
+
+啟用SnapCenter VMware vCenter外掛程式時、外掛程式會在vCenter中登錄為擴充、所有資源群組都會處於正式作業模式、而且所有排程都會啟用。
+
+.步驟
+. 選用：備份SnapCenter VMware的VMware插件MySQL儲存庫、以備您將其還原至新的虛擬應用裝置時使用。
++
+link:scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html["備份SnapCenter VMware vSphere MySQL資料庫的VMware vCenter外掛程式"]。
+
+. 使用「https://<OVA-IP-address>:8080`」格式登入SnapCenter VMware的VMware插件管理GUI。
++
+部署外掛程式時、會顯示VMware的IP of the VMware外掛程式。SnapCenter
+
+. 按一下左導覽窗格中的*組態*、然後取消選取「*外掛程式詳細資料*」區段中的「服務」選項、以停用外掛程式。
+. 確認您的選擇。
++
+** 如果您只使用SnapCenter VMware的VMware vCenter外掛程式來執行VM一致的備份
++
+外掛程式已停用、不需要採取進一步行動。
+
+** 如果您使用SnapCenter VMware vCenter外掛程式來執行應用程式一致的備份
++
+外掛程式已停用、需要進一步清理。
+
++
+... 登入VMware vSphere。
+... 關閉VM電源、然後刪除VM。
+... 在左側瀏覽器畫面中、以滑鼠右鍵按一下SnapCenter VMware插件的執行個體（「.ova」檔案的名稱」「虛擬應用裝置部署時使用的檔案」）、然後選取*從磁碟刪除*。
+... 登入SnapCenter 以供使用、然後移除vSphere主機。
+
+
+
+
+
+
+
+
+== 移除SnapCenter VMware vSphere的功能性外掛程式
+
+如果您不再需要使用SnapCenter 「還原資料保護」功能、則必須停用SnapCenter 「VMware」外掛程式、從vCenter將其取消登錄、然後從SnapCenter vCenter移除「VMware」外掛程式、再手動刪除剩餘的檔案。
+
+.開始之前
+* 您必須擁有系統管理員權限。
+* 請確定沒有SnapCenter 執行任何不可用的功能。
+
+
+.步驟
+. 使用「https://<OVA-IP-address>:8080`」格式登入SnapCenter VMware的VMware插件管理GUI。
++
+部署外掛程式時、會顯示VMware的IP of the VMware外掛程式。SnapCenter
+
+. 按一下左導覽窗格中的*組態*、然後取消選取「*外掛程式詳細資料*」區段中的「服務」選項、以停用外掛程式。
+. 登入VMware vSphere。
+. 在左側瀏覽器畫面中、以滑鼠右鍵按一下SnapCenter VMware插件的執行個體（部署虛擬應用裝置時所用的「.ova」檔案名稱）、然後選取*從磁碟刪除*。
+. 手動刪除vCenter伺服器之/etc/vmware/vSphere-ui/vC-packages/vSphere-client-cronity/com.netapp.scvm.webclient-4.5.0.5942045/plugins`資料夾中的下列檔案：
++
+"VSC-httpclient3-SECure.jar""shcv-API-mode.jar""shcvm_Webui_service.jar""shcvm_Webui_ui.gar""gson-2.5.jar"
+
+. 如果您使用SnapCenter VMware支援其他SnapCenter 的VMware插件來進行應用程式一致的備份、請登入SnapCenter 到VMware、然後移除vSphere主機。
+
+
+虛擬應用裝置仍在部署中、SnapCenter 但已移除VMware的VMware插件。
+
+移除VMware SnapCenter vCenter外掛程式的主機VM之後、該外掛程式可能會一直列在vCenter中、直到重新整理本機vCenter快取為止。但是、由於外掛程式已移除、因此無法SnapCenter 在該主機上執行任何VMware vSphere功能。如果您要重新整理本機vCenter快取、請先確定應用裝置在SnapCenter 「VMware外掛程式組態」頁面上處於「已停用」狀態、然後重新啟動vCenter Web用戶端服務。

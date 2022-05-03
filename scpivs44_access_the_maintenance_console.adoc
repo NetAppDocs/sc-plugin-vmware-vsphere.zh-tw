@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_access_the_maintenance_console.html 
+keywords:  
+summary: 您可以使用適用於SnapCenter VMware vSphere的維護主控台來管理應用程式、系統和網路組態。您可以變更系統管理員密碼、維護密碼、產生支援服務組合、以及啟動遠端診斷。 
+---
+= 存取維護主控台
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用適用於SnapCenter VMware vSphere的維護主控台來管理應用程式、系統和網路組態。您可以變更系統管理員密碼、維護密碼、產生支援服務組合、以及啟動遠端診斷。
+
+在停止及重新啟動SnapCenter VMware vSphere的VMware vSphere服務時、您應暫停所有排程。
+
+.關於這項工作
+* 預設值為「maintt」作為使用者名稱、「admin123」作為登入VMware SnapCenter vSphere的維護主控台的密碼。
++
+
+TIP: 部署後、請修改預設登入認證資料。
+
+* 啟用遠端診斷時、您必須為「診斷」使用者設定密碼。
++
+若要取得root使用者執行命令的權限、請使用Sudo <command>。
+
+
+
+.步驟
+. 從VMware vSphere Web用戶端選取SnapCenter VMware外掛程式所在的VM。
+. 在VM上按一下滑鼠右鍵、然後在虛擬應用裝置的* Summary（摘要）*索引標籤上、按一下* Launch Remote Console（啟動遠端主控台）以開啟維護主控台視窗。
++
+下列是VMware vCenter外掛程式維護主控台的登入預設值SnapCenter ：
+
++
+使用者名稱：「Maint」密碼：「admin123」
+
++
+image:scpivs44_image11.png["錯誤：缺少圖形影像"]
+
+. 您可以執行下列作業：
++
+** 選項1：應用程式組態
++
+顯示SnapCenter VMware插件啟動或停止SnapCenter 功能VMware外掛程式服務的摘要變更SnapCenter VMware插件的登入使用者名稱或密碼變更MySQL密碼備份及還原MySQL
+
+** 選項2：系統組態
++
+重新開機或關機虛擬機器變更「maint」使用者密碼變更時區變更NTP伺服器啟用/停用SSH存取增加磁碟大小（/監獄）升級安裝VMware Tools
+
+** 選項3：網路組態
++
+顯示或變更IP位址設定顯示或變更網域名稱搜尋設定顯示或變更靜態路由提交變更Ping主機
+
+** 選項4：支援與診斷
++
+產生支援套件存取診斷Shell啟用遠端診斷存取產生核心傾印套件組合
+
+
+
+

@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_licensing.html 
+keywords:  
+summary: 本節提供SnapCenter 適用於VMware vSphere的VMware vSphere的VMware Plug-in授權資訊。 
+---
+= 授權
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+如果您使用下列儲存系統、則VMware vSphere的VMware vSphere外掛程式為免費產品：SnapCenter
+
+* FAS
+* AFF
+* Cloud Volumes ONTAP
+* ONTAP Select
+
+
+我們建議您將SnapCenter 不需要的「不二用」授權新增至次要目的地。如果SnapCenter 在二線系統上未啟用「支援功能」、SnapCenter 則在執行容錯移轉作業之後、將無法使用「支援功能」。不過、執行掛載和附加作業時、必須在二線儲存設備上取得FlexClone授權。執行還原作業需要使用此功能的不必要授權。SnapRestore

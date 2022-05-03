@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restore_from_backups_overview.html 
+keywords:  
+summary: 您可以從主要或次要備份還原VM、VMDK、檔案和資料夾。 
+---
+= 還原總覽
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以從主要或次要備份還原VM、VMDK、檔案和資料夾。
+
+* VM還原目的地
++
+您可以將傳統VM還原至原始主機、或還原至同一vCenter Server中的替代主機、或還原至由同一vCenter或任何vCenter以連結模式管理的替代ESXi主機。
+
++
+您可以將vVol VM還原至原始主機。
+
+* VMDK還原目的地
++
+您可以將傳統VM中的VMDK還原至原始資料存放區或替代資料存放區。
+
++
+您可以將vVol VM中的VMDK還原至原始資料存放區。
+
+
+
+您也可以還原來賓檔案還原工作階段中的個別檔案和資料夾、此工作階段會附加虛擬磁碟的備份複本、然後還原選取的檔案或資料夾。
+
+您無法還原下列項目：
+
+* 資料存放區
++
+您無法使用SnapCenter VMware vSphere的VMware vCenter插件來還原資料存放區、只能還原資料存放區中的個別VM。
+
+* 移除的VM備份
++
+您無法還原已移除的儲存VM備份。例如、如果您使用管理LIF新增儲存VM、然後建立備份、然後移除該儲存VM並新增包含該儲存VM的叢集、則備份的還原作業將會失敗。
+
+

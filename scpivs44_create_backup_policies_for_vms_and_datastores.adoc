@@ -1,0 +1,138 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_create_backup_policies_for_vms_and_datastores.html 
+keywords:  
+summary: 您必須先建立備份原則、才能使用SnapCenter VMware vSphere的VMware vCenter插件來備份VM和資料存放區。 
+---
+= 為VM和資料存放區建立備份原則
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您必須先建立備份原則、才能使用SnapCenter VMware vSphere的VMware vCenter插件來備份VM和資料存放區。
+
+.開始之前
+* 您必須閱讀必備條件。
+* 您必須設定次要儲存關係。
++
+** 如果您要將Snapshot複本複製到鏡射或保存庫的二線儲存設備、則必須設定關係、SnapCenter 且該管理員必須已將來源和目的地磁碟區的儲存VM指派給您。
+** 若要在NFS或VMFS資料存放區上成功將Snapshot複本傳輸至次要儲存設備、以建立Version FlexibleMirror關係、請確定SnapMirror原則類型為「Asynsynsorrror」、並已勾選「all_source_snapshots」選項。
+** 當二線儲存設備（鏡射保存庫）上的Snapshot複本數量達到上限時、在備份作業中登錄備份及套用保留的活動將失敗、並顯示下列錯誤：「此Snapshot複本目前被一或多個SnapMirror關係當成參考Snapshot複本使用。刪除Snapshot複本可能導致SnapMirror作業失敗
++
+若要修正此問題、請設定次要儲存設備的SnapMirror保留原則、以避免達到Snapshot複本的上限。
+
++
+如需系統管理員如何指派資源給使用者的相關資訊、請參閱 https://docs.netapp.com/us-en/snapcenter/concept/concept_types_of_role_based_access_control_in_snapcenter.html["關於使用角色型存取控制的資訊SnapCenter"^]。
+
+
+
+* 如果您想要VM一致的備份、則必須安裝並執行VMware Tools。需要VMware工具來停止虛擬機器。VVol VM不支援VM一致的備份。
+
+
+這些精靈頁面上的大部分欄位都是不言自明的。下列資訊說明您可能需要指引的部分欄位。
+
+.步驟
+. 在VMware vSphere Web用戶端的左側導覽器窗格中、按一下*原則*。
+. 在* Policies（政策）*頁面上、按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *建立*以啟動精靈。
++
+image:scpivs44_image15.png["錯誤：缺少圖形影像"]
+
+. 在「*新備份原則*」頁面上、選取將使用該原則的vCenter Server、然後輸入原則名稱和說明。
++
+** 連結模式
++
+在連結模式中、每個vCenter都有獨立的虛擬應用裝置。因此、您可以跨vCenter使用重複的名稱。不過、您必須在與資源群組相同的vCenter中建立原則。
+
+** 不支援的字元
++
+請勿在VM、資料存放區、叢集、原則、備份、 或資源群組名稱：%&*$#@！\/：*？"<>-|；'、。
+
++
+允許使用底線字元（_）。
+
+
+
+. 指定保留設定。
++
+
+IMPORTANT: 如果您打算啟用SnapVault 還原複寫、則應將保留計數設為2個或更高。如果您將保留計數設為1個備份以保留、則保留作業可能會失敗。這是因為第一個Snapshot複本是SnapVault 參考Snapshot複本、用於建立關聯、直到將較新的Snapshot複本複寫到目標為止。
+
++
+
+NOTE: 最大保留值為1018個備份ONTAP 、可備份到位於更新版本的資源、ONTAP 而備份到位在更新版本的資源中、則有254個備份用於位在更新版本的版本上。如果保留設定的值高於基礎ONTAP 版支援的值、則備份將會失敗。跨距資料存放區也是如此。如果跨越資料存放區同時包含ONTAP 有關支援的資源、請ONTAP 務必將保留值設為低於254。
+
+. 指定頻率設定。
++
+原則僅指定備份頻率。備份的特定保護排程是在資源群組中定義。因此、兩個或多個資源群組可以共用相同的原則和備份頻率、但備份排程不同。
+
+. 在* Replication *欄位中、指定複寫至次要儲存設備的類型、如下表所示：
++
+|===
+| 對於此欄位… | 執行此操作… 
+
+
+| 備份後更新SnapMirror  a| 
+選取此選項可在與主要備份磁碟區具有SnapMirror關係的另一個磁碟區上建立備份集的鏡射複本。如果磁碟區是以鏡射資料庫關係進行設定、SnapVault 則如果您想要將備份複製到鏡射資料庫目的地、則只能選取*更新待備份*選項。
+
+
+NOTE: 此選項支援FlexGroup VMware vSphere 4.5及更新版本的VMware vSphere 4.5版的更新版本中、適用於VMware的VMware Infrastructure SnapCenter 外掛程式中的資料存放區。
+
+
+
+| 備份後更新SnapVault  a| 
+選取此選項可在其他SnapVault 與主備份磁碟區有「深度」關係的磁碟對磁碟備份複寫。
+
+
+IMPORTANT: 如果磁碟區是以鏡射資料庫關聯進行設定、則只有當您想要將備份複製到鏡射資料庫目的地時、才必須選取此選項。
+
+
+NOTE: 此選項支援FlexGroup VMware vSphere 4.5及更新版本的VMware vSphere 4.5版的更新版本中、適用於VMware的VMware Infrastructure SnapCenter 外掛程式中的資料存放區。
+
+
+
+| Snapshot標籤  a| 
+輸入可選的自訂標籤以新增至SnapVault 使用此原則建立的SnapMirror Snapshot複本。Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系統上的其他Snapshot。
+
+
+NOTE: Snapshot複本標籤最多允許31個字元。
+
+|===
+. 選用：在*進階*欄位中、選取所需的欄位。下表列出進階欄位詳細資料。
++
+|===
+| 對於此欄位… | 執行此操作… 
+
+
+| VM一致性  a| 
+核取此方塊可在每次執行備份工作時、停止虛擬機器並建立VMware快照。
+
+vVols不支援此選項。對於VVol VM、只會執行損毀一致的備份。
+
+
+IMPORTANT: 您必須在VM上執行VMware Tools、才能執行VM一致的備份。如果VMware Tools未執行、則會改為執行損毀一致的備份。
+
+
+NOTE: 當您勾選VM一致性方塊時、備份作業可能需要更長時間、而且需要更多儲存空間。在此案例中、VM會先靜止、然後VMware執行VM一致的快照、SnapCenter 接著執行VMware的備份作業、然後恢復VM作業。VM客體記憶體不包含在VM一致性快照中。
+
+
+
+| 包括具有獨立磁碟的資料存放區 | 勾選此方塊、即可在備份中納入任何含有暫存資料的獨立磁碟資料存放區。 
+
+
+| 指令碼  a| 
+輸入您希望SnapCenter VMware外掛程式在備份作業之前或之後執行的預先記錄或PostScript完整路徑。例如、您可以執行指令碼來更新SNMP設陷、自動化警示及傳送記錄。指令碼路徑會在指令碼執行時驗證。
+
+
+NOTE: 指令碼和指令碼必須位於虛擬應用裝置VM上。若要輸入多個指令碼、請在每個指令碼路徑後按* Enter *、以單獨一行列出每個指令碼。不允許使用「；」字元。
+
+|===
+. 按一下「*新增*」
++
+您可以在「原則」頁面中選取原則、以驗證原則是否已建立並檢閱原則組態。
+
+

@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_api_workflows__mount_and_unmount_datastores.html 
+keywords:  
+summary: 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式執行資料存放區備份的掛載和卸載作業、您必須遵循規定的REST API呼叫順序。 
+---
+= REST API工作流程以掛載及卸載資料存放區
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式執行資料存放區備份的掛載和卸載作業、您必須遵循規定的REST API呼叫順序。
+
+對於每個REST API、請在REST API前面新增「https://<server>:<port>`」、以形成完整的端點。
+
+
+
+== 若要掛載資料存放區、請遵循下列工作流程：
+
+|===
+| 步驟 | REST API | 註解 
+
+
+| 1. | 請前往http://<vCenter-IP>/mob` | 從VMware託管物件URL尋找更多資料存放區。記下要掛載之資料存放區的* morf*。 
+
+
+| 2. | 「/4.1/datas/{morf}/備份」 | 「Get the list for a datastore」（取得資料存放區的備份清單）會取得指定資料存放區的備份清單。從步驟1通過* moref *。記下您要掛載的*備份Id*。 
+
+
+| 3. | /4.1/datas/backups/{backupId}/snapshotloces' | 「Get the list of Snapshot Locations」（取得Snapshot位置清單）可取得指定備份位置的詳細資料。從步驟2傳遞*備份Id*。請注意*資料存放區*和*快照位置清單*清單中的位置。 
+
+
+| 4. | //4.1/datas/{morf}/可用的EssxHoses' | 「Get the list of Available ESXi hosts（取得可用ESXi主機的清單）」會取得可用於掛載作業的ESXi主機清單。從步驟1通過* moref *。請注意*可用的EssxHostsList*資訊。 
+
+
+| 5. | /4.1/datas/backups/{backupId}/mount' | 「為備份安裝資料存放區」會裝載指定的資料存放區備份。從步驟2傳遞*備份Id*。在* datastoration*和* location*屬性中、傳遞步驟3中「快照位置清單」的資訊。在* esxHostName*屬性中、傳遞步驟4中*可用的EssxHostsList*的資訊。 
+|===
+
+
+== 若要卸載資料存放區、請遵循此工作流程：
+
+|===
+| 步驟 | REST API | 註解 
+
+
+| 1. | 「/4.1/datas/backups/{backupId}/mounted」 | 「取得掛載的資料存放區清單」。記下要卸載的資料存放區* moref *。 
+
+
+| 2. | 「/4.1/資料存放區/卸載」 | 「卸載資料存放區以進行備份」會卸載指定的資料存放區備份。從步驟1傳遞資料存放區* moref *。 
+|===

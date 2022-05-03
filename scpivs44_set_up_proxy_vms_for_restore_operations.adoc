@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_set_up_proxy_vms_for_restore_operations.html 
+keywords:  
+summary: 如果您想要使用Proxy VM來附加虛擬磁碟以進行客體檔案還原作業、則必須先設定Proxy VM、才能開始還原作業。雖然您可以隨時設定Proxy VM、但在外掛程式部署完成後、立即設定Proxy VM可能會更為方便。 
+---
+= 設定Proxy VM以進行還原作業
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您想要使用Proxy VM來附加虛擬磁碟以進行客體檔案還原作業、則必須先設定Proxy VM、才能開始還原作業。雖然您可以隨時設定Proxy VM、但在外掛程式部署完成後、立即設定Proxy VM可能會更為方便。
+
+.步驟
+. 在VMware vSphere Web用戶端中、按一下*客體檔案還原*。
+. 在「*以認證身分執行*」區段中、執行下列其中一項：
++
+|===
+| 若要這麼做… | 執行此操作… 
+
+
+| 使用現有認證資料 | 選取任何已設定的認證資料。 
+
+
+| 新增認證資料  a| 
+.. 按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *新增*。
+.. 在*以認證身分執行*對話方塊中、輸入認證資料。
+.. 按一下*選取VM*、然後在* Proxy VM*對話方塊中選取VM。按一下「*儲存*」以返回「*以認證身分執行*」對話方塊。
+.. 輸入認證資料。對於使用者名稱、您必須輸入「Administrator」（管理員）。
+
+
+|===
++
+VMware vCenter插件使用選定的憑證登錄到選定的代理VM。SnapCenter
+
++
+「執行身分」認證必須是Windows或內建本機系統管理員所提供的預設網域管理員。工作群組使用者可以使用內建的本機系統管理員帳戶。
+
+. 在* Proxy Credentials（*代理認證）*區段中、按一下* Add（新增*）以新增VM作為Proxy使用。
+. 在「* Proxy VM*」對話方塊中、完成資訊、然後按一下「*儲存*」。
+

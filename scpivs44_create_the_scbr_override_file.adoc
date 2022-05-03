@@ -1,0 +1,18 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_create_the_scbr_override_file.html 
+keywords:  
+summary: 在支援以應用程式為基礎之資料保護作業的環境中、適用於VMware vSphere的VMware vSphere的VMware外掛程式會使用「shCBR.override」組態檔SnapCenter 。SnapCenter 
+---
+= 建立scbr.override組態檔
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+. 請移至「/opt/netapp/scvservice/standone_aegi/etc/scbr/scbr.override-template」。
+. 將「shCBR.override-template」檔案複製到新檔案「\opt\netapp\scvservice\s獨立_aege\etc\scbr」目錄中的「shCBR.override」。
+

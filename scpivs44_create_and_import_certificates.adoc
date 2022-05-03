@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_create_and_import_certificates.html 
+keywords:  
+summary: VMware解決方法外掛程式採用SSL加密技術、可與用戶端瀏覽器進行安全通訊。SnapCenter雖然如此一來、便能跨線路啟用加密資料、建立新的自我簽署憑證、或是使用您自己的憑證授權單位（CA）基礎架構或協力廠商CA、確保該憑證對您的環境而言是獨一無二的。 
+---
+= 建立及匯入憑證
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+VMware解決方法外掛程式採用SSL加密技術、可與用戶端瀏覽器進行安全通訊。SnapCenter雖然如此一來、便能跨線路啟用加密資料、建立新的自我簽署憑證、或是使用您自己的憑證授權單位（CA）基礎架構或協力廠商CA、確保該憑證對您的環境而言是獨一無二的。
+
+請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_create_and_or_import_an_SSL_certificate_to_SnapCenter_Plug-in_for_VMware_vSphere_(SCV)["知識庫文章：如何建立及/或將SSL憑證匯入SnapCenter VMware vSphere的VMware外掛程式"]。

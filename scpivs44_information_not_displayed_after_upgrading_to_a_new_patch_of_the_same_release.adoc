@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_information_not_displayed_after_upgrading_to_a_new_patch_of_the_same_release.html 
+keywords:  
+summary: 將SnapCenter VMware vSphere的更新版的更新版更新為相同版本的新修補程式之後、儀表板和工作監控器可能不會顯示最近的工作或其他資訊。 
+---
+= 升級至同一版本的新修補程式後、不會顯示相關資訊
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+將SnapCenter VMware vSphere的更新版的更新版更新為相同版本的新修補程式之後、儀表板和工作監控器可能不會顯示最近的工作或其他資訊。
+
+如果您要升級至同一版本的新修補程式、則必須清除SnapCenter vCenter Web Server上的VMware vSphere快取的VMware vSphere外掛程式、並在升級或登錄之前重新啟動伺服器。
+
+如果外掛程式快取未清除、則在下列情況下、儀表板和工作監控器不會顯示最近的工作：
+
+* VMware vSphere的VMware vSphere外掛程式是使用vCenter部署、之後再升級至同一版本的修補程式。SnapCenter
+* VMware的VMware虛擬應用裝置已部署在vCenter 1中。SnapCenter稍後、此SnapCenter VMware vCenter外掛程式已註冊至新的vCenter2。使用修補程式建立一個全新的VMware版插件執行個體、SnapCenter 並將其登錄至vCenter1。不過、由於vCenter1仍有第一個SnapCenter 不含修補程式的VMware插件中的快取外掛程式、因此需要清除快取。
+
+
+根據伺服器作業系統的類型、快取位於下列位置：
+
+* vCenter Server for Windows
++
+「C：\ProgramData \VMware\vCenterServer\cfc\vSphere-client\vc-packages\vSphere-client-recreation\」
+
+* vCenter Server Linux應用裝置
++
+/etc/VMware/vSphere-client/vC-packages/vSphere-client-cronity/`
+
+* Windows作業系統
++
+「%PROGRAMFILES %/VMware/vSphere Web Client/vC-packages/vSphere-client-sortal/'」
+
+
+
+
+
+=== 如果您在清除快取之前已經升級、請採取因應措施
+
+. 登入SnapCenter VMware的VMware插件管理GUI。
++
+當您部署SnapCenter VMware vCenter外掛程式時、會顯示IP。
+
+. 按一下左導覽窗格中的*組態*、然後按一下「*外掛程式詳細資料*」區段中的「服務」選項、即可停用外掛程式。
++
+停用VMware的VMware外掛程式服務、並在vCenter中取消登錄擴充。SnapCenter
+
+. 找到「vSphere-client-vonity」資料夾、然後找到「com.netapp.scvm.webclient-4.2.0`」資料夾並將其刪除。
++
+每個版本的資料夾名稱都會變更。
+
+. 重新啟動vCenter Server。
+. 登入VMware vSphere Web用戶端。
+. 按一下左導覽窗格中的*組態*、然後按一下「*外掛程式詳細資料*」區段中的「服務」選項、以啟用外掛程式。
++
+啟用了VMware vCenter外掛程式服務、並在vCenter中登錄擴充程式。SnapCenter
+
+

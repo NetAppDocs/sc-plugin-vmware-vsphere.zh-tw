@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_monitor_jobs.html 
+keywords:  
+summary: 使用VMware vSphere Web用戶端執行任何資料保護作業之後、您可以從儀表板的「工作監控」索引標籤監控工作狀態、並檢視工作詳細資料。 
+---
+= 監控工作
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用VMware vSphere Web用戶端執行任何資料保護作業之後、您可以從儀表板的「工作監控」索引標籤監控工作狀態、並檢視工作詳細資料。
+
+.步驟
+. 在vSphere Web用戶端的左側導覽器窗格中、按一下*儀表板*、選取vCenter Server、然後按一下*工作監控*索引標籤。
++
+image:scpivs44_image8.png["錯誤：缺少圖形影像"]
+
++
+「工作監控」標籤會列出每個工作及其狀態、開始時間及結束時間。如果工作名稱很長、您可能需要向右捲動以檢視開始和結束時間。顯示器每30秒重新整理一次。
+
++
+** 按一下 image:scpivs44_image36.png["錯誤：缺少圖形影像"] 工具列中的重新整理圖示、可隨需重新整理顯示內容。
+** 按一下 image:scpivs44_image41.png["錯誤：缺少圖形影像"] 篩選圖示可選取您要顯示之工作的時間範圍、類型、標記及狀態。篩選器區分大小寫。
+** 按一下 image:scpivs44_image36.png["錯誤：缺少圖形影像"] 「工作詳細資料」視窗中的重新整理圖示、可在工作執行時重新整理顯示畫面。
+
+
+
+
+如果儀表板未顯示工作資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_vSphere_web_client_dashboard_does_not_display_jobs["知識庫文章：SnapCenter VMware vSphere Web用戶端儀表板無法顯示工作"^]。

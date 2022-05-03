@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_modify_the_network_settings.html 
+keywords:  
+summary: 您可以修改SnapCenter 在VMware vSphere的VMware vSphere的VMware Plug-in中設定的網路設定。外掛程式會使用這些設定來存取vCenter。 
+---
+= 修改網路設定
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+您可以修改SnapCenter 在VMware vSphere的VMware vSphere的VMware Plug-in中設定的網路設定。外掛程式會使用這些設定來存取vCenter。
+
+您必須知道SnapCenter VMware vSphere管理GUI適用的VMware vSphere Plug-in IP位址和登入認證。
+
+* 部署VMware插件時會顯示IP位址SnapCenter 。
+* 請使用SnapCenter 部署VMware vCenter外掛程式時提供的登入認證、或是稍後修改的認證。
+
+
+.步驟
+. 登入SnapCenter VMware的VMware插件管理GUI。
++
+請使用「https://<appliance-IP-address>:8080`」格式
+
+. 按一下頂端工具列中的「設定」圖示。
++
+image:scpivs44_image31.png["錯誤：缺少圖形影像"]
+
+. 在「*設定*」頁面的「*網路設定*」區段中、按一下「* IPV4 *」或「* IPV6 *」、然後按一下「*編輯*」。
++
+輸入新資訊、然後按一下「*儲存*」。
+
+. 如果您要移除網路設定、請執行下列動作：
++
+** IPV4：在「* IP位址*」欄位中、輸入「0.00.0.0」、然後按一下「*儲存*」。
+** IPv6：在「* IP位址*」欄位中：輸入「：0」、然後按一下「*儲存*」。
+
+
+
+
+
+NOTE: 如果同時使用IPv4和IPv6、則無法同時移除這兩個網路設定。其餘網路必須指定DNS伺服器和搜尋網域欄位。

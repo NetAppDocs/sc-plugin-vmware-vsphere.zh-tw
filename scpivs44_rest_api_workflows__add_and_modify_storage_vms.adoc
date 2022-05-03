@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_api_workflows__add_and_modify_storage_vms.html 
+keywords:  
+summary: 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式執行新增和修改儲存VM作業、您必須遵循規定的REST API呼叫順序。 
+---
+= REST API工作流程、以新增及修改儲存VM
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式執行新增和修改儲存VM作業、您必須遵循規定的REST API呼叫順序。
+
+對於每個REST API、請在REST API前面新增「https://<server>:<port>`」、以形成完整的端點。
+
+若要新增儲存VM作業、請遵循下列工作流程：
+
+|===
+| 步驟 | REST API | 註解 
+
+
+| 1. | 「/4.1/storage system」 | 「Add Storage System」（新增儲存系統）將指定的儲存VM新增SnapCenter 至VMware vSphere的VMware Plug-in。 
+|===
+若要修改儲存VM作業、請遵循下列工作流程：
+
+|===
+| 步驟 | REST API | 註解 
+
+
+| 1. | 「/4.1/storage system」 | 「getSvmAll」可取得所有可用儲存VM的清單。記下您要修改的儲存VM *名稱*。 
+
+
+| 2. | 「/4.1/storage system」 | 「修改儲存系統」會修改指定的儲存VM。除了所有其他必要的屬性之外、還要從步驟1傳遞*名稱*。 
+|===

@@ -1,0 +1,162 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html 
+keywords:  
+summary: 若要在SnapCenter 虛擬化機器上使用支援VMware vSphere的功能來保護VM、資料存放區和應用程式一致的資料庫、您必須部署SnapCenter 適用於VMware vSphere的VMware外掛程式。 
+---
+= 部署SnapCenter VMware vSphere的VMware vCenter外掛程式
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+若要在SnapCenter 虛擬化機器上使用支援VMware vSphere的功能來保護VM、資料存放區和應用程式一致的資料庫、您必須部署SnapCenter 適用於VMware vSphere的VMware外掛程式。
+
+.開始之前
+* 您必須閱讀部署需求。
++
+部署精靈不會驗證空間需求。如果資料存放區空間不足、則部署可能會成功、但虛擬應用裝置將無法開機。
+
+* 您必須執行受支援版本的vCenter Server。
+* 您必須已設定及設定vCenter Server環境。
+* 您必須設定ESXi主機、才能使用SnapCenter VMware的VMware內建VM。
+* 您必須下載SnapCenter VMware vSphere .ova的VMware vCenter外掛程式檔案。
+* 您必須擁有vCenter Server執行個體的登入認證。
+* 您必須登出並關閉vSphere Web Client的所有瀏覽器工作階段、並刪除瀏覽器快取、以避免部署SnapCenter VMware vCenter外掛程式時發生任何瀏覽器快取問題。
+* 您必須在vCenter中啟用傳輸層安全性（TLS）。請參閱VMware文件。
+* 您可以在SnapCenter VSC 7.x及更新版本的虛擬應用裝置所在的vCenter中部署VMware的VMware vCenter外掛程式。
+* 如果您打算在vCenter執行非SnapCenter 部署了VMware核心外掛程式的備份、則ESXi伺服器、SnapCenter VMware插件和每個vCenter必須同步至同一時間。
+* 若要保護VVol資料存放區上的VM、您必須先部署ONTAP VMware vSphere的VMware Infrastructure。《VMware工具》可在VMware Web用戶端上配置及配置儲存資源。ONTAP ONTAP
+
+
+將SnapCenter VMware vCenter外掛程式部署在vCenter所在的同一個時區。備份排程會在SnapCenter 部署VMware vCenter外掛程式的時區執行。vCenter會報告vCenter所在時區內的資料。因此、如果SnapCenter VMware vCenter外掛程式和vCenter位於不同的時區、SnapCenter 則VMware Plug-in儀表板中的資料可能與報告中的資料不同。
+
+.步驟
+. 在瀏覽器中、瀏覽至VMware vSphere vCenter。
++
+
+NOTE: 對於IPv6 HTML Web用戶端、您必須使用Chrome或Firefox。
+
+. 在VMware畫面上、按一下* vSphere Web Client（HTML5）*。
+. 登入「* VMware vCenter單一登入*」頁面。
+. 在導覽器窗格中、以滑鼠右鍵按一下任何虛擬機器的有效父物件（例如資料中心、叢集或主機）、然後選取*部署OVF範本*以啟動VMware部署精靈。
+. 在「*選取OVF範本*」頁面上、指定「.ova」檔案的位置（如下表所示）、然後按「*下一步*」。
++
+|===
+| 如果您將.ova檔案下載至… | 執行此操作… 
+
+
+| 網際網路位置 | 輸入URL。支援的URL來源為HTTP和HTTPS。 
+
+
+| 本機檔案 | 按一下*「Choose Files"（選擇檔案）*、然後瀏覽至.ova檔案。 
+|===
+. 在「*選取名稱與資料夾*」頁面上、輸入VM或vApp的唯一名稱、然後選取部署位置、再按「*下一步*」。
++
+此步驟指定將「.ova」檔案匯入vCenter的位置。VM的預設名稱與所選的「.ova」檔案名稱相同。如果您變更預設名稱、請在每個vCenter Server VM資料夾中選擇唯一的名稱。
+
++
+VM的預設部署位置是啟動精靈的詳細目錄物件。
+
+. 在「*選取資源*」頁面上、選取您要執行已部署VM範本的資源、然後按一下「*下一步*」。
+. 在「*檢閱詳細資料*」頁面上、確認「.ova」範本詳細資料、然後按「*下一步*」。
+. 在「*授權合約*」頁面上、勾選「*我接受所有授權合約*」核取方塊。
+. 在「*選取儲存設備*」頁面上、定義儲存已部署OVF範本檔案的位置和方式。
++
+.. 選取VMDK的磁碟格式。
+.. 選取VM儲存原則。
++
+只有在目的地資源上啟用儲存原則時、才能使用此選項。
+
+.. 選取要儲存已部署OVA範本的資料存放區。
++
+組態檔和虛擬磁碟檔案會儲存在資料存放區中。
+
++
+選取足以容納虛擬機器或vApp及所有相關虛擬磁碟檔案的資料存放區。
+
+
+
+. 在「*選取網路*」頁面上、執行下列動作：
++
+.. 選取來源網路並將其對應至目的地網路、
++
+來源網路欄會列出OVA範本中定義的所有網路。
+
+.. 在「* IP Allocate Settings...（* IP分配設定*）」區段中、選取所需的IP傳輸協定、然後按「*下一步*」。
++
+VMware vSphere的VMware vSphere外掛程式支援單一網路介面。SnapCenter如果您需要多個網路介面卡、則必須手動設定。請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_create_additional_network_adapters_in_NDB_and_SCV_4.3["KB文章：如何建立其他網路介面卡"^]。
+
+
+
+. 在*自訂範本*頁面上、執行下列動作：
++
+.. 在「*登錄至現有vCenter *」區段中、輸入虛擬應用裝置的vCenter名稱和vCenter認證。
++
+在* vCenter使用者名稱*欄位中、以「domain\username'格式輸入使用者名稱。
+
+.. 在「*建立選擇控制閥認證資料*」區段中、輸入本機認證資料。
++
+在*使用者名稱*欄位中、輸入本機使用者名稱；請勿包含網域詳細資料。
+
++
+
+IMPORTANT: 記下您指定的使用者名稱和密碼。如果SnapCenter 您想稍後修改VMware的插件組態、則需要使用這些認證資料。
+
+.. 在*設定網路內容*中、輸入主機名稱。
++
+... 在「*設定IPV4網路內容*」區段中、輸入網路資訊、例如：IPV4位址、IPV4網路遮罩、IPV4閘道、IPV4主要DNS、IPV4次要DNS、 和IPv4搜尋網域。
+... 在*設定IPv6網路內容*區段中、輸入網路資訊、例如IPv6位址、IPv6網路遮罩、IPv6閘道、IPv6主要DNS、IPv6次要DNS、 和IPv6搜尋網域。
++
+選取「IPV4」或「IPv6」欄位、或兩者（如果適用）。如果同時使用IPv6和IPv6、則只需為其中一項指定「主要DNS」。
+
++
+
+IMPORTANT: 如果您想繼續使用DHCP做為網路組態、您可以跳過這些步驟、並將「*設定網路內容*」區段中的項目保留空白。
+
+
+
+.. 在*設定日期與時間*中、選取vCenter所在的時區。
+
+
+. 在「*準備完成*」頁面上、檢閱頁面、然後按一下「*完成*」。
++
+所有主機都必須設定IP位址（不支援FQDN主機名稱）。部署作業不會在部署之前驗證您的輸入。
+
++
+您可以從「近期工作」視窗檢視部署進度、同時等待OVF匯入和部署工作完成。
+
++
+當成功部署VMware vCenter外掛程式時、該外掛程式會部署為Linux VM、並在vCenter中註冊、然後安裝VMware vSphere Web用戶端。SnapCenter
+
+. 瀏覽至SnapCenter 部署了VMware更新外掛程式的VM、然後按一下* Summary（摘要）*索引標籤、再按一下* Power On*（*開機）方塊以啟動虛擬應用裝置。
+. 當VMware插件正在開機時SnapCenter 、在已部署SnapCenter 的VMware版插件上按一下滑鼠右鍵、選取* Guest OS*、然後按一下*「Install VMware tools*（安裝VMware工具*）」。
++
+VMware Tools安裝在SnapCenter 部署了VMware vCenter外掛程式的VM上。如需安裝VMware Tools的詳細資訊、請參閱VMware文件。
+
++
+部署可能需要幾分鐘的時間才能完成。當啟用VMware vCenter外掛程式、安裝VMware工具、螢幕會提示您登入VMware的更新程式時、就會顯示部署成功的訊息SnapCenter 。SnapCenter您可以在第一次重新開機期間、將網路組態從DHCP切換為靜態。但是、不支援從靜態切換至DHCP。
+
++
+螢幕會顯示SnapCenter 部署VMware vCenter外掛程式的IP位址。記下IP位址。如果您想要變更VMware插件組態、則必須登入SnapCenter VMware的更新程式管理GUI SnapCenter 。
+
+. 使用部署畫面上顯示的IP位址、SnapCenter 並使用部署精靈中提供的認證登入VMware更新程式管理GUI、然後在儀表板上確認SnapCenter VMware更新程式已成功連線至vCenter並已啟用。
++
+請使用「https://<appliance-IP-address>:8080`」格式來存取管理GUI。
+
++
+根據預設、維護主控台使用者名稱設定為「maint"（維護）、密碼設定為「admin123」。
+
++
+如果SnapCenter 未啟用VMware vCenter外掛程式、請參閱 link:scpivs44_restart_the_vmware_vsphere_web_client_service.html["重新啟動VMware vSphere Web用戶端服務"]。
+
++
+如果主機名稱為「UnifiedVSC/選擇控制器」、請重新啟動應用裝置。如果重新啟動應用裝置並未將主機名稱變更為指定的主機名稱、則必須重新安裝應用裝置。
+
+
+
+您應該完成必要的 link:scpivs44_post_deployment_required_operations_and_issues.html["部署後作業"]。

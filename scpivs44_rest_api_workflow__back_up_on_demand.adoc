@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_api_workflow__back_up_on_demand.html 
+keywords:  
+summary: 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式執行隨需備份作業、您必須遵循規定的REST API呼叫順序。 
+---
+= REST API工作流程、可隨需備份
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式執行隨需備份作業、您必須遵循規定的REST API呼叫順序。
+
+對於每個REST API、請在REST API前面新增「https://<server>:<port>`」、以形成完整的端點。
+
+|===
+| 步驟 | REST API | 註解 
+
+
+| 1. | /4.1/resource-Groups（資源組） | 「Get List of Resource Groups」（取得資源群組清單）可取得VMware vSphere Web用戶端資源群組清單。請注意您要備份之資源群組的*資源群組Id*和*策略Id*。 
+
+
+| 2. | /4.1/resource-Groups/backupnow] | 「在資源群組上執行備份」會隨需備份資源群組。從步驟1傳遞*資源群組Id*和*策略Id*。 
+|===

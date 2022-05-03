@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_remove_plugin.html 
+keywords:  
+summary: 如果您不再需要使用SnapCenter 「還原資料保護」功能、則必須停用SnapCenter 「VMware」外掛程式、從vCenter將其取消登錄、然後從SnapCenter vCenter移除「VMware」外掛程式、再手動刪除剩餘的檔案。 
+---
+= 移除SnapCenter VMware vSphere的功能性外掛程式
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您不再需要使用SnapCenter 「還原資料保護」功能、則必須停用SnapCenter 「VMware」外掛程式、從vCenter將其取消登錄、然後從SnapCenter vCenter移除「VMware」外掛程式、再手動刪除剩餘的檔案。
+
+.開始之前
+* 您必須擁有系統管理員權限。
+* 請確定沒有SnapCenter 執行任何不可用的功能。
+
+
+.步驟
+. 使用「https://<OVA-IP-address>:8080`」格式登入SnapCenter VMware的VMware插件管理GUI。
++
+部署外掛程式時、會顯示VMware的IP of the VMware外掛程式。SnapCenter
+
+. 按一下左導覽窗格中的*組態*、然後取消選取「*外掛程式詳細資料*」區段中的「服務」選項、以停用外掛程式。
+. 登入VMware vSphere。
+. 在左側瀏覽器畫面中、以滑鼠右鍵按一下SnapCenter VMware插件的執行個體（部署虛擬應用裝置時所用的「.ova」檔案名稱）、然後選取*從磁碟刪除*。
+. 瀏覽至「/etc/VMware/vSphere-ui/vC-packages/vSphere-client-nility/com.netapp.scvm.webclient-4.5.0.5942045/plugins`」、然後手動刪除vCenter伺服器之「代答」資料夾中的下列檔案：
++
+"VSC-httpclient3-SECure.jar""shcv-API-mode.jar""shcvm_Webui_service.jar""shcvm_Webui_ui.gar""gson-2.5.jar"
+
+. 如果您使用SnapCenter VMware支援其他SnapCenter 的VMware插件來進行應用程式一致的備份、請登入SnapCenter 到VMware、然後移除vSphere主機。
+
+
+虛擬應用裝置仍在部署中、SnapCenter 但已移除VMware的VMware插件。
+
+移除VMware SnapCenter vCenter外掛程式的主機VM之後、該外掛程式可能會一直列在vCenter中、直到重新整理本機vCenter快取為止。但是、由於外掛程式已移除、因此無法SnapCenter 在該主機上執行任何VMware vSphere功能。如果您要重新整理本機vCenter快取、請先確定應用裝置在SnapCenter 「VMware外掛程式組態」頁面上處於「已停用」狀態、然後重新啟動vCenter Web用戶端服務。

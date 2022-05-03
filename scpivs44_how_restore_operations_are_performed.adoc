@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_how_restore_operations_are_performed.html 
+keywords:  
+summary: 在VMFS環境中、SnapCenter VMware vSphere的VMware vSphere的《Sesf2外掛程式》使用Storage vMotion來執行複製和掛載作業、以執行還原作業。對於NFS環境、外掛程式使用原生ONTAP 的「僅供參考的單一檔案SnapRestore 」（SFSR）、為大多數的還原作業提供更高的效率。對於VVol VM、外掛程式使用ONTAP 「還原單一檔案Snapshot還原」和「SnapMirror還原」來進行還原作業。 
+---
+= 如何執行還原作業
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+在VMFS環境中、SnapCenter VMware vSphere的VMware vSphere的《Sesf2外掛程式》使用Storage vMotion來執行複製和掛載作業、以執行還原作業。對於NFS環境、外掛程式使用原生ONTAP 的「僅供參考的單一檔案SnapRestore 」（SFSR）、為大多數的還原作業提供更高的效率。對於VVol VM、外掛程式使用ONTAP 「還原單一檔案Snapshot還原ONTAP 」（還原SFSR）和SnapMirror還原來還原作業。下表列出如何執行還原作業。
+
+|===
+| 還原作業 | 寄件者 | 使用執行 
+
+
+| VM和VMDK | 主要備份 | NFS環境：ONTAP 不含單一檔案SnapRestore 的VMFS環境：利用Storage VMotion複製及掛載 
+
+
+| VM和VMDK | 二線備份 | NFS環境：ONTAP 不含單一檔案SnapRestore 的VMFS環境：利用Storage VMotion複製及掛載 
+
+
+| 刪除VM和VMDK | 主要備份 | NFS環境：ONTAP 不含單一檔案SnapRestore 的VMFS環境：利用Storage VMotion複製及掛載 
+
+
+| 刪除VM和VMDK | 二線備份 | NFS環境：使用Storage VMotion VMFS環境進行複製與掛載：使用Storage VMotion進行複製與掛載 
+
+
+| VM和VMDK | VM一致的主要備份 | NFS環境：ONTAP 不含單一檔案SnapRestore 的VMFS環境：利用Storage VMotion複製及掛載 
+
+
+| VM和VMDK | VM一致的次要備份 | NFS環境：使用Storage VMotion VMFS環境進行複製與掛載：使用Storage VMotion進行複製與掛載 
+
+
+| VVOL VM | 損毀一致的主要備份 | 適用於所有傳輸協定的單一檔案ONTAP SnapRestore 
+
+
+| VVOL VM | 損毀一致的次要備份 | 適用於所有傳輸協定的SnapMirror還原ONTAP 
+
+
+| 支援虛擬機器FlexGroup | 主要備份  a| 
+NFS環境：* ONTAP 如果SnapRestore 您使用ONTAP 的是版本號為9.10.1或更新版本的「*僅供單一檔案使用」*在ONTAP 舊版上使用「利用Storage VMotion複製及掛載」
+
+VMFS環境：不支援FlexGroups
+
+
+
+| 支援虛擬機器FlexGroup | 二線備份  a| 
+NFS環境：
+
+* 如果您使用的是版本9.10.1及更新版本、則使用SnapMirror還原ONTAP ONTAP
+* 利用Storage VMotion複製及掛載舊ONTAP 版產品
+
+
+VMFS環境：不支援FlexGroups
+
+|===
+
+NOTE: VVOL容器重新平衡之後、您無法還原VVOL VM。
+
+在NFS和VMFS環境中使用複製和掛載作業（而非Storage vMotion）來執行客體檔案還原作業。
+
+
+IMPORTANT: 在還原作業期間、您可能會遇到「Host unresolved volume is null」（主機未解析磁碟區為null）或「調用選擇控制器上的預先還原時發生例外狀況...將複製的LUN掛載為資料存放區時發生錯誤...」 當VMware vCenter外掛程式嘗試重新簽署實體複本時、就會發生這種情況SnapCenter 。由於VMware的限制、SnapCenter 在進階ESXi組態中、VMware插件無法控制自動重新簽名值。
+
+如需錯誤的詳細資訊、請參閱｛link with底線｝[KB文章：選擇控制器實體複製或還原失敗、並顯示錯誤「主機未解析的磁碟區為null」。

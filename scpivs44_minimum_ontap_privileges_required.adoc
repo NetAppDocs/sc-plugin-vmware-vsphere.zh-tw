@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_minimum_ontap_privileges_required.html 
+keywords:  
+summary: 所需的最低限度驗證權限會因您使用的資料保護功能的各個方面而有所不同。ONTAP SnapCenter 
+---
+= 需要最低ONTAP 的權限
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+所需的最低限度驗證權限會因您使用的資料保護功能的各個方面而有所不同。ONTAP SnapCenter
+
+所有SnapCenter 的實體外掛程式都需要下列最低權限。
+
+|===
+| All Access命令：ONTAP 要求具備最低權限才能執行功能的版本 
+
+
+| 事件generate-autosup-log 
+
+
+| 工作記錄顯示工作停止 
+
+
+| LUN LUN LUN建立LUN刪除LUN igroup新增LUN igroup建立LUN igroup刪除LUN igroup重新命名LUN igroup顯示LUN對應新增報告節點LUN對應建立LUN對應刪除LUN對應移除報告節點LUN對應顯示LUN修改LUN移入Volume LUN離線LUN線LUN持續保留清除LUN重新調整LUN序列大小 LUN顯示 
+
+
+| SnapMirror清單目的地SnapMirror原則附加規則SnapMirror原則修改規則SnapMirror原則移除規則SnapMirror原則顯示SnapMirror還原SnapMirror顯示SnapMirror顯示SnapMirror顯示SnapMirror顯示歷史記錄SnapMirror更新SnapMirror更新ls-set 
+
+
+| 版本 
+
+
+| Volume Clone建立Volume Clone顯示Volume Clone分割開機Volume Clone分割停止Volume建立Volume銷毀Volume檔案實體複製建立Volume檔案show磁碟使用量Volume離線Volume線上Volume修改Volume qtree建立Volume qtree刪除Volume qtree修改Volume qtree顯示Volume限制Volume顯示建立Volume Snapshot快照 Volume Snapshot刪除Volume Snapshot修改Volume Snapshot重新命名Volume Snapshot還原Volume Snapshot還原檔案Volume Snapshot顯示Volume unmount 
+
+
+| Vserver CIFS Vserver CIFS共用建立Vserver CIFS共用刪除Vserver CIFS ShadowCopy顯示Vserver CIFS共用顯示Vserver CIFS顯示vserver顯示vserver輸出原則vserver輸出原則建立vserver匯出原則刪除vserver匯出原則規則建立vserver匯出原則規則顯示vserver匯出原則顯示vserver iSCSI Vserver iSCSI連線顯示vserver顯示網路介面 網路介面容錯移轉群組網路介面顯示 
+|===
+|===
+| 唯讀命令：ONTAP 要求具備最低權限才能執行更新版本的功能 
+
+
+| Vserver 
+|===
+
+
+=== 其他ONTAP 資訊
+
+* 如果您執行ONTAP 的是版本8.2.x：
++
+您必須在儲存虛擬機器上以「vsadmin」身分登入、才能擁有SnapCenter 適當的權限來執行VMware vSphere作業的VMware vSphere外掛程式。
+
+* 如果您執行ONTAP 的是版本不含更新版本的版本：
++
+您必須以「vsadmin」身分登入、或以具有上表所列最低權限的角色登入。
+
+

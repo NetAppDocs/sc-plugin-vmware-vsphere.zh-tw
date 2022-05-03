@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_generate_a_support_bundle_from_the_maintenance_console.html 
+keywords:  
+summary: 您可以從維護主控台產生支援服務組合。 
+---
+= 從維護主控台產生支援套裝組合
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+.步驟
+. 從VMware vSphere Web用戶端選取SnapCenter VMware外掛程式所在的VM。
+. 在VM上按一下滑鼠右鍵、然後在虛擬應用裝置的* Summary（摘要）*索引標籤上、按一下* Launch Remote Console（啟動遠端主控台）或Launch Web Console（啟動Web主控台）*以開啟維護主控台視窗。
++
+下列是VMware vCenter外掛程式維護主控台的登入預設值SnapCenter ：
+
++
+使用者名稱：「Maint」密碼：「admin123」
+
++
+image:scpivs44_image11.png["錯誤：缺少圖形影像"]
+
+. 在主功能表中、輸入選項* 4）Support and Diagnostics（支援與診斷）*。
+. 在Support and Diagnostics Menu（支援與診斷功能表）中、輸入選項* 1）Generate supportbundy*（產生支援套裝組合*）。
+
+
+若要存取支援服務包、請在Support and Diagnostics Menu（支援與診斷功能表）中輸入選項* 2）Access診斷Shell*。在主控台中、瀏覽至「/support/support/<bunder_name>.tar.gz」。

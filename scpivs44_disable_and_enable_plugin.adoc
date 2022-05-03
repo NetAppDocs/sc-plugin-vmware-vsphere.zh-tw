@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_disable_and_enable_plugin.html 
+keywords:  
+summary: 如果您不再需要SnapCenter 使用資料保護功能、則必須變更SnapCenter VMware插件的組態。例如、如果您在測試環境中部署外掛程式、可能需要停用SnapCenter 該環境中的功能、並在正式作業環境中啟用這些功能。 
+---
+= 停用SnapCenter 並啟用VMware vSphere的功能支援功能
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+如果您不再需要SnapCenter 使用資料保護功能、則必須變更SnapCenter VMware插件的組態。例如、如果您在測試環境中部署外掛程式、可能需要停用SnapCenter 該環境中的功能、並在正式作業環境中啟用這些功能。
+
+.開始之前
+* 您必須擁有系統管理員權限。
+* 請確定沒有SnapCenter 執行任何不可用的功能。
+
+
+停用SnapCenter VMware vCenter外掛程式時、所有資源群組都會暫停、而且外掛程式會在vCenter中取消登錄為擴充。
+
+啟用SnapCenter VMware vCenter外掛程式時、外掛程式會在vCenter中登錄為擴充、所有資源群組都會處於正式作業模式、而且所有排程都會啟用。
+
+.步驟
+. 選用：備份SnapCenter VMware的VMware插件MySQL儲存庫、以備您將其還原至新的虛擬應用裝置時使用。
++
+link:scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html["備份SnapCenter VMware vSphere MySQL資料庫的VMware vCenter外掛程式"]。
+
+. 使用「https://<OVA-IP-address>:8080`」格式登入SnapCenter VMware的VMware插件管理GUI。
++
+部署外掛程式時、會顯示VMware的IP of the VMware外掛程式。SnapCenter
+
+. 按一下左導覽窗格中的*組態*、然後取消選取「*外掛程式詳細資料*」區段中的「服務」選項、以停用外掛程式。
+. 確認您的選擇。
++
+** 如果您只使用SnapCenter VMware的VMware vCenter外掛程式來執行VM一致的備份
++
+外掛程式已停用、不需要採取進一步行動。
+
+** 如果您使用SnapCenter VMware vCenter外掛程式來執行應用程式一致的備份
++
+外掛程式已停用、需要進一步清理。
+
++
+... 登入VMware vSphere。
+... 關閉VM電源。
+... 在左側瀏覽器畫面中、以滑鼠右鍵按一下SnapCenter VMware插件的執行個體（部署虛擬應用裝置時所用的「.ova」檔案名稱）、然後選取*從磁碟刪除*。
+... 登入SnapCenter 以供使用、然後移除vSphere主機。
+
+
+
+
+

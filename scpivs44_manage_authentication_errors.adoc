@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_manage_authentication_errors.html 
+keywords:  
+summary: 如果您不使用管理認證、則在部署SnapCenter VMware vSphere的VMware vSphere的VMware vCenter外掛程式或移轉之後、可能會收到驗證錯誤。如果遇到驗證錯誤、您必須重新啟動服務。 
+---
+= 管理驗證錯誤
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您不使用管理認證、則在部署SnapCenter VMware vSphere的VMware vSphere的VMware vCenter外掛程式或移轉之後、可能會收到驗證錯誤。如果遇到驗證錯誤、您必須重新啟動服務。
+
+.步驟
+. 使用「https://<OVA-IP-address>:8080.`」格式登入SnapCenter VMware的VMware插件管理GUI
+. 重新啟動服務。
+

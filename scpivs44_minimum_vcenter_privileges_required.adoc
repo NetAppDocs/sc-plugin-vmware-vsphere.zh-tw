@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_minimum_vcenter_privileges_required.html 
+keywords:  
+summary: 在開始部署SnapCenter VMware vSphere的VMware vSphere版的VMware vCenter外掛程式之前、您應該先確定擁有最低所需的vCenter權限。 
+---
+= 所需的vCenter權限下限
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在開始部署SnapCenter VMware vSphere的VMware vSphere版的VMware vCenter外掛程式之前、您應該先確定擁有最低所需的vCenter權限。
+
+
+
+== vCenter管理員角色所需的權限
+
+System.Anonymous System.View System.Read Datastore.Rename Datastore.Move Datastore.Delete Datastore.Browse Datastore.FileManagement Datastore.AllocateSpace Network。assign Host.Config.Storage Host.Config.Advanced Config Host.Config.Resources Host.Config.Config.SettingHost.Settings.local.ReconomeVM Host.Recone.ReseVM Host虛擬機器資源移除虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器資源移轉/虛擬機器虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/移轉/虛擬機器資源移轉/虛擬機器/移轉/移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉
+
+
+
+== VMware vCenter適用的VMware vCenter的必要權限SnapCenter
+
+netappscore.Guest。恢復檔案netappsore.recovery.MountUnMount netappsor.Backup。刪除備份工作netappsor.Configure。設定儲存系統。刪除netappsor.View netappsor.Recovery。恢復。RecoverVM netappsor.Configure。設定儲存系統。新增更新netappsor.Backup。立即備份netapp.scor.guest虛擬機器、vap.guest虛擬機器、vapp.ap.ap.ap.guest虛擬機器、vap.ap.ap.ap.apore.guest虛擬機器、vapp

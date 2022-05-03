@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_apis_fail_stuck_jobs.html 
+keywords:  
+summary: 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式來尋找VMware vSphere Web用戶端工作的工作ID、您必須使用VMware vSphere的REST API呼叫。 
+---
+= REST API可將卡住的工作標示為失敗
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式來尋找VMware vSphere Web用戶端工作的工作ID、您必須使用VMware vSphere的REST API呼叫。這些REST API已新增至SnapCenter VMware vSphere 4.4的VMware vSphere 4.4外掛程式。
+
+對於每個REST API、請在REST API前面新增「https://<server>:<port>`」、以形成完整的端點。
+
+使用「工作」區段中的下列REST API、將處於執行中狀態的工作變更為失敗狀態：
+
+|===
+| REST API | 註解 
+
+
+| 「/4.1/jobs/{id}/failjobs」 | 當您傳遞處於執行中狀態的工作ID時、「故障工作」會將這些工作標示為失敗。若要識別處於執行中狀態的工作、請使用工作監視器GUI來查看每個工作的狀態和工作ID。 
+|===

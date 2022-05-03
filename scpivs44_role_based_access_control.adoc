@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_role_based_access_control.html 
+keywords:  
+summary: VMware vSphere的支援VMware vSphere外掛程式提供額外層級的RBAC、可用於管理虛擬化資源。SnapCenter外掛程式同時支援vCenter Server RBAC和Data ONTAP VMware RBAC。 
+---
+= 角色型存取控制（RBAC）
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+VMware vSphere的支援VMware vSphere外掛程式提供額外層級的RBAC、可用於管理虛擬化資源。SnapCenter外掛程式同時支援vCenter Server RBAC和Data ONTAP VMware RBAC。
+
+不只適用於不一致的VMware應用程式（應用程式透過VMDK）工作。SnapCenter ONTAP SnapCenter如果您使用SnapCenter VMware vCenter外掛程式來支援SnapCenter 與應用程式一致的工作、則必須指派SnapCenterAdmin角色；您無法變更SnapCenterAdmin角色的權限。
+
+VMware vCenter外掛程式隨附預先定義的vCenter角色。SnapCenter您必須使用vCenter GUI、將這些角色新增至vCenter Active Directory使用者、才能執行SnapCenter 各項功能。
+
+您可以隨時建立及修改角色、並新增資源存取權限給使用者。不過SnapCenter 、第一次設定VMware支援功能外掛程式時、您至少應該將Active Directory使用者或群組新增至角色、然後將資源存取權限新增至這些使用者或群組。

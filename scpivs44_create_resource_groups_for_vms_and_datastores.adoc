@@ -1,0 +1,257 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_create_resource_groups_for_vms_and_datastores.html 
+keywords:  
+summary: 資源群組是要保護的VM、資料存放區或vVols VM的容器。 
+---
+= 建立資源群組
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+資源群組是要保護的VM、資料存放區或vVols VM的容器。
+
+資源群組可包含下列其中一項：
+
+* 傳統VM和資料存放區
++
+傳統VM、傳統SAN資料存放區和傳統NAS資料存放區的任何組合。傳統VM無法與VVol VM結合使用。
+
+* 資料存放區FlexGroup
++
+單FlexGroup 一資料存放區。不FlexGroup 支援跨距資料存放區。無法將資料存放區與傳統VM或資料存放區結合使用。FlexGroup
+
+* 資料存放區FlexVol
++
+一FlexVol 或多個資料存放區。支援跨距資料存放區。
+
+* VVOL VM
++
+一或多個VVol VM。VVOL VM無法與傳統VM或資料存放區結合使用。
+
+* VVOL VM搭配標籤
++
+所有VVol VM都具有指定的vCenter標記。不支援其他具有標記的實體、例如資料存放區或傳統VM、在同一個vCenter或不同vCenter中具有相同標記。如果具有指定標記的VM清單包含vVol VM和傳統VM的混合組合、SnapCenter 則VMware vSphere的VMware Plug-in會備份vVol VM、並跳過傳統VM。
+
+* 資料夾中的VVOL VM
++
+所有vVols都位於單一指定的vVol資料夾中。如果資料夾包含VVol VM和傳統VM的混合組合、SnapCenter 則VMware vSphere的VMware Plug-in會備份VVol VM、並跳過傳統VM。
+
+
+
+對於所有資源群組：
+
+
+IMPORTANT: 如果您使用的是VMware vSphere叢集服務（VCL）、請勿在SnapCenter VMware插件資源群組中納入由VCL管理的VM。
+
+VMware vSphere 4.5及更新版本的支援VMware vSphere 4.5外掛程式、可在支援高達128 TB的大型LUN上支援資料存放區。SnapCenter ASA對於大型LUN SnapCenter 、為了避免延遲、僅使用完整配置的LUN。
+
+
+IMPORTANT: 請勿新增處於無法存取狀態的VM。雖然可以建立包含無法存取之VM的資源群組、但該資源群組的備份將會失敗。
+
+建立包含VVol VM的資源群組之前、必須先部署VMware適用的VMware工具。ONTAP
+
+如需詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["VMware vSphere適用的VMware工具ONTAP"^]。
+
+您可以隨時從資源群組新增或移除資源。
+
+* 備份單一資源
++
+若要備份單一資源（例如單一VM）、您必須建立一個包含該單一資源的資源群組。
+
+* 備份多個資源
++
+若要備份多個資源、您必須建立包含多個資源的資源群組。
+
+* 資源群組、包含FlexGroup 在各個環境中的各個功能區MetroCluster
++
+如果您執行ONTAP 的是VMware 9.8或ONTAP VMware 9.9、則在切換或切換後、您必須重新啟動SnapCenter VMware插件服務、並重新同步SnapMirror關係、才能在MetroCluster 還原環境中備份資源群組。
+
++
+在S還原9.8中ONTAP 、備份會在切換後掛起。此問題已在ONTAP 版本9.9中修正。
+
+* 最佳化Snapshot複本
++
+若要最佳化Snapshot複本、您應該將與同一個磁碟區相關聯的VM和資料存放區分組為一個資源群組。
+
+* 備份原則
++
+雖然不需要備份原則就能建立資源群組、但只有在資源群組附加至少一個原則時、才能執行排程的資料保護作業。您可以使用現有原則、也可以在建立資源群組時建立新原則。
+
+* 相容性檢查
++
+建立資源群組時、執行相容性檢查。SnapCenter
+
++
+<<Manage compatibility check failures>>
+
+
+
+.步驟
+. 在VMware vSphere Web用戶端的左側導覽器窗格中、按一下*資源群組*、然後按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *建立*以啟動精靈。
++
+image:scpivs44_image16.png["錯誤：缺少圖形影像"]
+
++
+這是建立資源群組最簡單的方法。不過、您也可以執行下列其中一項、以單一資源建立資源群組：
+
++
+** 若要建立一個VM的資源群組、請按一下「*功能表*」>「*主機與叢集*」、然後在VM上按一下滑鼠右鍵、再選取「NetApp SnapCenter 」、然後按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *建立資源群組*。
+** 若要建立一個資料存放區的資源群組、請按一下「*功能表*」>「*主機與叢集*」、然後在資料存放區上按一下滑鼠右鍵、再選取「* NetApp SnapCenter ori*」、然後按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *建立資源群組*。
+
+
+. 在精靈的「*一般資訊與通知*」頁面上、執行下列動作：
++
+|===
+| 對於此欄位… | 執行此操作… 
+
+
+| vCenter Server | 選取vCenter伺服器。 
+
+
+| 名稱 | 輸入資源群組的名稱。請勿在VM、資料存放區、原則、備份或資源群組名稱中使用下列特殊字元：%&*$#@！\/：*？"<>-[垂直列]；'、。允許使用底線字元（_）。含有特殊字元的VM或資料存放區名稱會被刪減、因此很難搜尋特定備份。在連結模式中、每個vCenter都有獨立SnapCenter 的VMware插件儲存庫。因此、您可以跨vCenter使用重複的名稱。 
+
+
+| 說明 | 輸入資源群組的說明。 
+
+
+| 通知 | 選取您要接收此資源群組作業通知的時間：錯誤或警告：僅針對錯誤和警告傳送通知錯誤：僅針對錯誤傳送通知永遠：針對所有訊息類型傳送通知永不：不傳送通知 
+
+
+| 電子郵件寄件者 | 輸入您要通知傳送來源的電子郵件地址。 
+
+
+| 電子郵件傳送至 | 輸入您要接收通知的人員電子郵件地址。對於多個收件者、請使用一個逗號分隔電子郵件地址。 
+
+
+| 電子郵件主旨 | 輸入您要用於通知電子郵件的主旨。 
+
+
+| 最新Snapshot名稱  a| 
+如果您想要將字尾「_Recent」新增至最新的Snapshot複本、請勾選此方塊。「_Recent」字尾會取代日期和時間戳記。
+
+
+NOTE: 針對附加到資源群組的每個原則、都會建立最近的備份。因此、具有多個原則的資源群組將會有多個最近的備份。
+
+
+
+| 自訂Snapshot格式  a| 
+如果您要使用自訂格式來命名Snapshot複本名稱、請勾選此方塊並輸入名稱格式。
+
+** 此功能預設為停用。
+** 預設的Snapshot複本名稱使用格式「<ResourcGroup>_<Date-timestamp>'」、不過您可以使用變數$ResourceDGroup、$Policy、$HostName、$DatapeType及$CustomText來指定自訂格式。使用自訂名稱欄位中的下拉式清單、選取您要使用的變數及其使用順序。如果選擇$CustomText、名稱格式為「<CustomName>_<Date-timestamp>'」。在所提供的其他方塊中輸入自訂文字。附註：如果您也選取「_Recent」字尾、則必須確定自訂Snapshot名稱在資料存放區中是唯一的、因此您應該將$ResourceDGroup和$Policy變數新增至名稱。
+** 名稱中特殊字元的特殊字元、請遵循名稱欄位的相同準則。
+
+
+|===
+. 在「*資源*」頁面上、執行下列動作：
++
+|===
+| 對於此欄位… | 執行此操作… 
+
+
+| 範圍 | 選取您要保護的資源類型：*資料存放區（一或多個指定資料存放區中的所有傳統VM）*虛擬機器（個別傳統VM或VVol VM； 在欄位中、您必須導覽至包含VM或vVol VM的資料存放區）*標記（所有vVol VM只需一個指定的VMware標記；在清單方塊中、您必須輸入標記）* VM資料夾（指定資料夾中的所有vVol VM； 在快顯欄位中、您必須瀏覽至資料夾所在的資料中心） 
+
+
+| 資料中心 | 瀏覽至您要新增的VM或資料存放區或資料夾。 
+
+
+| 可用的實體 | 選取您要保護的資源、然後按一下*>*、將您的選擇移至「選取的實體」清單。 
+|===
++
+當您按一下*下一步*時、系統會先檢查SnapCenter 哪些是由哪個系統管理、並與所選資源所在的儲存設備相容。
+
++
+如果SnapCenter 顯示訊息「民選<resource-name> is not s版本 相容」、表示所選的資源與SnapCenter 該資源不相容。請參閱 <<Manage compatibility check failures>> 以取得更多資訊。
+
+. 在「*擴充磁碟*」頁面上、針對多個資料存放區中具有多個VMDK的VM選取一個選項：
++
+** 永遠排除所有跨距資料存放區[這是資料存放區的預設值。]
+** 一律包含所有跨距資料存放區[這是VM的預設值。]
+** 手動選取要包含的跨距資料存放區
++
+不支援FlexGroup 將跨距VM用於不支援的資料存放區和vVol資料存放區。
+
+
+
+. 在「*原則*」頁面上、選取或建立一或多個備份原則、如下表所示：
++
+|===
+| 使用… | 執行此操作… 
+
+
+| 現有原則 | 從清單中選取一或多個原則。 
+
+
+| 新原則  a| 
+.. 按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *建立*。
+.. 完成「新增備份原則」精靈、返回「建立資源群組」精靈。
+
+
+|===
++
+在「連結模式」中、清單會包含所有連結vCenter的原則。您必須選取與資源群組位於同一個vCenter上的原則。
+
+. 在「*排程*」頁面上、為每個選取的原則設定備份排程。
++
+image:scpivs44_image18.png["錯誤：缺少圖形影像"]
+
++
+在「開始時間」欄位中、輸入零以外的日期和時間。日期格式必須為「日/月/年」。
+
++
+當您在*每*欄位中選取天數時、備份會在每月第1天執行、之後則會在指定的每個時間間隔執行。例如、如果您選取*每2天*選項、則會在整個月內於第1、3、5、7等時間執行備份、無論開始日期是偶數或odd。
+
++
+您必須填寫每個欄位。VMware vCenter外掛程式會在部署VMware外掛程式的時區建立排程。SnapCenter SnapCenter您可以使用SnapCenter VMware vSphere GUI的VMware vSphere GUI適用的VMware vCenter外掛程式來修改時區。
+
++
+link:scpivs44_modify_the_time_zones.html["修改備份的時區"]。
+
+. 檢閱摘要、然後按一下「*完成*」。
++
+按一下「*完成*」之前、您可以返回精靈中的任何頁面並變更資訊。
+
++
+按一下「*完成*」之後、新的資源群組就會新增到資源群組清單中。
+
++
+
+NOTE: 如果備份中任何VM的靜止作業失敗、則即使所選的原則已選取VM一致性、備份也會標示為不符合VM。在這種情況下、有些VM可能會成功靜止。
+
+
+
+
+
+=== 管理相容性檢查失敗
+
+當您嘗試建立資源群組時、會執行相容性檢查。SnapCenter
+
+不相容的原因可能是：
+
+* VMDK位於不受支援的儲存設備上、例如ONTAP 在7-Mode或非ONTAP裝置上執行的VMware系統上。
+* 資料存放區位於執行叢集Data ONTAP 式NetApp版本的NetApp儲存設備上。
++
+4.x版支援還原8.3.1及更新版本。SnapCenter ONTAP
+
++
+VMware vSphere的VMware vCenter外掛程式不會針對所有的VMware版本執行相容性檢查、僅適用於版本8.2.1及更早版本。SnapCenter ONTAP ONTAP因此、請務必查看 https://imt.netapp.com/matrix/imt.jsp?components=103284;&solution=1517&isHWU&src=IMT["NetApp互通性對照表工具IMT （不含）"^] 以取得SnapCenter 有關支援的最新資訊。
+
+* 共享的PCI設備已連接至VM。
+* 未在SnapCenter 不使用的情況下設定偏好的IP。
+* 您尚未將儲存虛擬機器（SVM）管理IP新增SnapCenter 至
+* 儲存VM已關閉。
+
+
+若要修正相容性錯誤、請執行下列步驟：
+
+. 確定儲存VM正在執行。
+. 請確定VM所在的儲存系統已新增至SnapCenter VMware vSphere的VMware vSphere資源清冊的VMware外掛程式。
+. 請確定儲存VM已新增SnapCenter 至Sure。使用VMware vSphere Web用戶端GUI上的「Add storage system（新增儲存系統）」選項。
+. 如果NetApp和非NetApp資料存放區上都有VM的跨距VM、請將VMDK移至NetApp資料存放區。
+

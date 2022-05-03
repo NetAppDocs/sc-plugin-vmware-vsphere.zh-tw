@@ -1,0 +1,18 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_deployment_workflow_for_new_users.html 
+keywords:  
+summary: 如果SnapCenter 您之前沒有使用過任何的不包含SnapCenter 任何的還原備份、您可以使用此工作流程。 
+---
+= 新使用者的部署工作流程
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+如果SnapCenter 您以前沒有使用過任何的還原功能、但沒有SnapCenter 任何的還原功能備份、請使用下列工作流程開始使用。
+
+image:scpivs44_image2.png["錯誤：缺少圖形影像"]

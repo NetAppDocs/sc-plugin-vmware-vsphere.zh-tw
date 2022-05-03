@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_search_for_backups.html 
+keywords:  
+summary: 您可以使用還原精靈來搜尋及尋找VM或資料存放區的特定備份。找到備份之後、即可還原。 
+---
+= 搜尋備份
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用還原精靈來搜尋及尋找VM或資料存放區的特定備份。找到備份之後、即可還原。
+
+.步驟
+. 在VMware vSphere Web用戶端GUI中、按一下工具列中的*功能表*、然後執行下列其中一項：
++
+|===
+| 若要檢視備份... | 執行下列動作… 
+
+
+| VM | 按一下「*主機與叢集*」功能表選項、然後選取虛擬機器、再按一下「*組態*」索引標籤、然後按一下「* SnapCenter VMware vSphere的*還原外掛程式」區段*中的「*備份*」。 
+
+
+| 資料存放區 | 按一下「*儲存設備*」功能表選項、然後選取資料存放區、再按一下「*組態*」索引標籤、然後按一下「* SnapCenter VMware vSphere的*套件*」區段中的「*備份*」。 
+|===
+. 在左側導覽器窗格中、展開包含VM或資料存放區的資料中心。
+. 選用：以滑鼠右鍵按一下VM或資料存放區、然後在下SnapCenter 拉式清單中選取* NetApp S還原*、再從次要下拉式清單中選取*還原*。
+. 在*還原*精靈中輸入搜尋名稱、然後按一下*搜尋*。
++
+您可以按一下來篩選備份清單 image:scpivs44_image41.png["錯誤：缺少圖形影像"] 篩選圖示並選取日期和時間範圍、選取是否要備份包含VMware Snapshot、是否要掛載備份、以及位置。按一下「*確定*」。
+
+

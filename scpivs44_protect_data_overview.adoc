@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_protect_data_overview.html 
+keywords:  
+summary: 所有備份作業都會在資源群組上執行、這些資源群組可以包含一個或多個VM和資料存放區的任何組合。您可以根據需求或根據定義的保護排程進行備份。 
+---
+= 資料保護工作流程
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用SnapCenter VMware vSphere Web用戶端來執行VM、VMDK和資料存放區的資料保護作業。所有備份作業都會在資源群組上執行、這些資源群組可以包含一個或多個VM和資料存放區的任何組合。您可以根據需求或根據定義的保護排程進行備份。
+
+備份資料存放區時、您要備份該資料存放區中的所有VM。
+
+無法在同一個資源群組上同時執行備份與還原作業。
+
+您應該檢閱SnapCenter 有關VMware插件功能及不支援項目的資訊。link:scpivs44_deployment_planning_and_requirements.html["部署規劃與需求"]
+
+在下列組態中MetroCluster ：
+
+* 在容錯移轉之後、VMware插件可能無法偵測到保護關係。SnapCenter請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["知識庫文章：SnapVault 無法偵測MetroCluster 到SnapMirror或在進行故障切換後的不二關係"^]。
+* 如果備份失敗並顯示錯誤「無法探索選擇控制器上的資源：<xxx >…」 對於切換/切換後的NFS和VMFS VM、請SnapCenter 從維護主控台重新啟動VMware服務。
+
+
+下圖顯示您必須執行備份作業的順序：
+
+image:scpivs44_image13.png["錯誤：缺少圖形影像"]

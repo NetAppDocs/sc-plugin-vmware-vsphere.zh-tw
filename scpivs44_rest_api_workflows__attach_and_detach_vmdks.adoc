@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_api_workflows__attach_and_detach_vmdks.html 
+keywords:  
+summary: 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式來執行VMDK的附加和分離作業、您必須遵循規定的REST API呼叫順序。 
+---
+= REST API工作流程以附加和分離VMDK
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式來執行VMDK的附加和分離作業、您必須遵循規定的REST API呼叫順序。
+
+對於每個REST API、請在REST API前面新增「https://<server>:<port>`」、以形成完整的端點。
+
+
+
+== 若要附加VMDK、請遵循下列工作流程：
+
+|===
+| 步驟 | REST API | 註解 
+
+
+| 1. | 請前往http://<vCenter-IP>/mob` | 從VMware託管物件URL尋找更多VM。記下要附加VMDK之VM的* morf*。 
+
+
+| 2. | //4.1/VM/｛moref｝/備份 | 「Get VM備份」可取得指定VM的備份清單。從步驟1通過* moref *。請記下您要還原之備份的*備份Id*。 
+
+
+| 3. | //4.1/vm/{morf}/backups/{backupId}/vmdklocations' | 「Get VMDK Locations」（取得VMDK位置）可取得指定VM的VMDK清單。從步驟2傳遞*備份Id*、並從步驟1傳遞* morf*。請注意* vmdkLocationsList*資訊。 
+
+
+| 4. | //4.1/VM/{morf}/attachvmdks  a| 
+「附加VMDK」可將指定的VMDK附加至原始VM。從步驟2傳遞*備份Id*、並從步驟1傳遞* morf*。將* vmdkLocationsList*從步驟3傳遞到* vmdkLocations*屬性。
+
+
+NOTE: 若要將VMDK附加至不同的VM、請在alternateVmMoref屬性中傳遞目標VM的moref。
+
+|===
+
+
+== 若要卸除VMDK、請遵循此工作流程：
+
+|===
+| 步驟 | REST API | 註解 
+
+
+| 1. | 請前往http://<vCenter-IP>/mob` | 從VMware託管物件URL尋找更多VM。記下要卸除VMDK的VM * morf*。 
+
+
+| 2. | //4.1/VM/｛moref｝/備份 | 「Get VM備份」可取得指定VM的備份清單。從步驟1通過* moref *。請記下您要還原之備份的*備份Id*。 
+
+
+| 3. | //4.1/vm/{morf}/backups/{backupId}/vmdklocations' | 「Get VMDK Locations」（取得VMDK位置）可取得指定VM的VMDK清單。從步驟2傳遞*備份Id*、並從步驟1傳遞* morf*。請注意* vmdkLocationsList*資訊。 
+
+
+| 4. | //4.1/VM/{morf}/detachvmdks | 「Detach VMDK」可分離指定的VMDK。從步驟1通過* moref *。將VMDK * vmdkLocationsList*詳細資料從步驟3傳遞至* vmdksToDetach*屬性。 
+|===

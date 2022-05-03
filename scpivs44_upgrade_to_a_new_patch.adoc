@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_upgrade_to_a_new_patch.html 
+keywords:  
+summary: 如果您要升級至同一版本的新修補程式、則必須清除SnapCenter vCenter Web Server上的VMware vSphere快取的VMware vSphere外掛程式、並在升級或登錄之前重新啟動伺服器。 
+---
+= 升級至SnapCenter 適用於VMware vSphere的同一版本的更新版更新版更新
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果您要升級至同一版本的新修補程式、則必須清除SnapCenter vCenter Web Server上的VMware vSphere快取的VMware vSphere外掛程式、並在升級或登錄之前重新啟動伺服器。
+
+如果外掛程式快取未清除、則在下列情況下、儀表板和工作監控器不會顯示最近的工作：
+
+* VMware vSphere的VMware vSphere外掛程式是使用vCenter部署、之後再升級至同一版本的修補程式。SnapCenter
+* VMware的VMware虛擬應用裝置已部署在vCenter 1中。SnapCenter稍後、此SnapCenter VMware vCenter外掛程式已註冊至新的vCenter2。使用修補程式建立一個全新的VMware版插件執行個體、SnapCenter 並將其登錄至vCenter1。不過、由於vCenter1仍有第一個SnapCenter 不含修補程式的VMware插件中的快取外掛程式、因此需要清除快取。
+
+
+
+
+=== 清除快取的步驟
+
+. 找到「vSphere-client-vonity」資料夾、然後找到「com.netapp.scvm.webclient-4.6.0`」資料夾並將其刪除。
++
+每個版本的資料夾名稱都會變更。
+
++
+請參閱VMware文件、瞭解您作業系統的「vSphere-client-sonvity」資料夾位置。
+
+. 重新啟動vCenter Server。
++
+然後您可以升級SnapCenter VMware的VMware插件。
+
+

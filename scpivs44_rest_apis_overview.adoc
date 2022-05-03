@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_apis_overview.html 
+keywords:  
+summary: 您可以使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式來執行一般的資料保護作業。外掛程式的Swagger網頁與Windows SnapCenter 介紹的Swagger網頁不同。 
+---
+= 總覽
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式來執行一般的資料保護作業。外掛程式的Swagger網頁與Windows SnapCenter 介紹的Swagger網頁不同。
+
+* REST API工作流程會使用VMware vSphere的REST API、記錄在VM和資料存放區上執行的下列作業：
++
+** 新增、修改及刪除儲存VM和叢集
+** 建立、修改及刪除資源群組
+** 備份虛擬機器、排程及隨需備份
+** 還原現有的VM和刪除的VM
+** 還原VMDK
+** 連接並卸除VMDK
+** 掛載及卸載資料存放區
+** 下載工作並產生報告
+** 修改內建排程
+
+
+* VMware vSphere的REST API不支援的作業
++
+** 客體檔案還原
+** 安裝及組態SnapCenter VMware插件
+** 指派RBAC角色或存取權給使用者
+
+
+* 參數
++
+「Uri」參數一律會傳回「null」值。
+
+* 登入逾時
++
+預設的逾時時間為120分鐘（2小時）。您可以在vCenter設定中設定不同的逾時值。
+
+* 權杖管理
++
+為了安全起見、REST API使用強制性權杖、會隨每個要求一起傳遞、並用於所有API呼叫中以進行用戶端驗證。VMware vSphere的REST API使用VMware驗證API來取得權杖。VMware提供權杖管理功能。
+
++
+若要取得權杖、請使用「/4.1/auth/login' REST API」並提供vCenter認證。
+
+* API版本指定
++
+每個REST API名稱都包含SnapCenter 最先發行REST API的版本編號。例如、REST API「/4.1/datastores/{morf}/Backups」是SnapCenter 在還原4.1中首次發行。
+
++
+REST API在未來版本中通常會向下相容、並會視需要修改以容納新功能。
+
+

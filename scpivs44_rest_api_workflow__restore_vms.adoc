@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_api_workflow__restore_vms.html 
+keywords:  
+summary: 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式執行VM備份還原作業、您必須遵循規定的REST API呼叫順序。 
+---
+= REST API工作流程來還原VM
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式執行VM備份還原作業、您必須遵循規定的REST API呼叫順序。
+
+對於每個REST API、請在REST API前面新增「https://<server>:<port>`」、以形成完整的端點。
+
+|===
+| 步驟 | REST API | 註解 
+
+
+| 1. | 請前往http://<vCenter-IP>/mob` | 從VMware託管物件URL尋找更多VM。記下要還原之VM的* morf*。 
+
+
+| 2. | //4.1/VM/｛moref｝/備份 | 「Get VM備份」可取得指定VM的備份清單。從步驟1通過* moref *。請記下您要還原之備份的*備份Id*。 
+
+
+| 3. | //4.1/VM/backups/{backupId}/ snapshotlocations' | 「Get Snapshot Locations」（取得快照位置）可取得指定備份的Snapshot複本位置。從步驟2傳遞*備份Id*。請注意*快照位置List*資訊。 
+
+
+| 4. | /`4.1/VM/{morf}/Backups/可用的esxhosts' | 「Get Available ESX hosts（取得可用的ESX主機）」會取得儲存備份之主機的資訊。請注意*可用的EssxHostsList*資訊。 
+
+
+| 5. | //4.1/VM/｛moref｝/備份/｛backupId｝/還原  a| 
+「從備份還原VM」會還原指定的備份。傳遞*重述位置*屬性中步驟3和步驟4的資訊。
+
+
+NOTE: 如果VM備份是部分備份、請將「REstartVM」參數設為「假」。
+
+
+NOTE: 您無法還原為範本的VM。
+
+|===

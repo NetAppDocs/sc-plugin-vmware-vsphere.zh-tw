@@ -1,0 +1,92 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restart_the_vmware_vsphere_web_client_service.html 
+keywords:  
+summary: 如果SnapCenter VMware vSphere Web用戶端的行為不正確、您可能需要清除瀏覽器快取。如果問題持續發生、請重新啟動Web用戶端服務。 
+---
+= 重新啟動VMware vSphere Web用戶端服務
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果SnapCenter VMware vSphere Web用戶端的行為不正確、您可能需要清除瀏覽器快取。如果問題持續發生、請重新啟動Web用戶端服務。
+
+
+
+=== 在Linux vCenter中重新啟動VMware vSphere Web用戶端服務
+
+如果vCenter位於Linux應用裝置上、則必須使用Linux命令重新啟動VMware vSphere Web用戶端服務。
+
+您必須執行vCenter 6.5或更新版本。
+
+.步驟
+. 使用SSH以root身分登入vCenter Server Appliance。
+. 使用下列命令存取應用裝置Shell或Bash Shell：
++
+"死了"
+
+. 使用下列HTML5命令停止Web用戶端服務：
++
+「服務控制-停止vSphere-UI」
+
+. 使用下列Shell命令刪除vCenter上所有過時的HTML5 scvm套件：
++
+「etc/VMware/vSphere-ui/ vC-packages/vSphere-client-cronity/」
+
++
+《Rm -RF com.netapp.scvm.webclient-<version_number>`》
+
++
+
+IMPORTANT: 請勿移除VASA或VSC7.x及更新版本套件。
+
+. 使用下列HTML5命令啟動Web用戶端服務：
++
+「服務控制-啟動vSphere-UI」
+
+
+
+
+
+=== 在Windows vCenter中重新啟動VMware vSphere Web用戶端服務
+
+如果vCenter位於Windows主機上、則您必須使用Windows命令重新啟動SnapCenter 支援的Web用戶端服務。
+
+您必須執行vCenter 6.5或更新版本。
+
+.步驟
+. 瀏覽至「C:\Program Files\VMware\vCenter Server\bin」、然後執行下列命令停止Web用戶端服務：
++
+「服務控制-停止vSphere-UI」
+
++
+等待訊息「已完成停止服務要求」。
+
+. 執行下列步驟、刪除vCenter上所有過時的HTML5 scvm套件：
++
+.. 瀏覽至vCenter vSphere-client-neclity /資料夾：
++
+「C：\ProgramData \VMware\vCenterServer\cfc\vSphere-ui\」
+
++
+「vC-packages\vSphere-client-sure\」
+
+.. 刪除所有具有下列名稱的外掛程式資料夾：
++
+com.netapp.scvm.webclient-<version_number>`
+
+
+
+. 使用下列HTML5命令重新啟動Web用戶端服務：
++
+「服務控制-啟動vSphere-UI」
+
++
+等待訊息「已完成啟動服務要求」
+
+
