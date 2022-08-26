@@ -61,7 +61,7 @@ VMFS環境：不支援FlexGroups
 
 |===
 
-NOTE: VVOL容器重新平衡之後、您無法還原VVOL VM。
+NOTE: vVol Container重新平衡後、您無法還原vVol VM。
 
 在NFS和VMFS環境中使用複製和掛載作業（而非Storage vMotion）來執行客體檔案還原作業。
 

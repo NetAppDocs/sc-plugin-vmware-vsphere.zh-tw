@@ -17,12 +17,9 @@ summary: 部署VMware vCenter外掛程式時SnapCenter 、SSH預設為停用。
 
 .步驟
 . 從VMware vSphere Web用戶端選取SnapCenter VMware外掛程式所在的VM。
-. 在VM上按一下滑鼠右鍵、然後在虛擬應用裝置的* Summary（摘要）*索引標籤上、按一下* Launch Remote Console（啟動遠端主控台）以開啟維護主控台視窗。
+. 在VM上按一下滑鼠右鍵、然後在虛擬應用裝置的* Summary（摘要）*索引標籤上、按一下* Launch Remote Console（啟動遠端主控台）以開啟維護主控台視窗、然後登入。
 +
-下列是VMware vCenter外掛程式維護主控台的登入預設值SnapCenter ：
-
-+
-使用者名稱：「Maint」密碼：「admin123」
+如需存取及登入維護主控台的相關資訊、請參閱 link:scpivs44_access_the_maintenance_console.html["存取維護主控台"^]。
 
 +
 image:scpivs44_image11.png["錯誤：缺少圖形影像"]

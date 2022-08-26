@@ -20,7 +20,7 @@ summary: 若要使用SnapCenter 適用於VMware vSphere REST API的VMware vSpher
 
 
 
-=== 請使用「工作」區段中的下列REST API來取得工作的詳細資訊：
+== 請使用「工作」區段中的下列REST API來取得工作的詳細資訊：
 
 |===
 | REST API | 註解 
@@ -33,7 +33,7 @@ summary: 若要使用SnapCenter 適用於VMware vSphere REST API的VMware vSpher
 |===
 
 
-=== 使用「工作」區段中的下列REST API來下載工作記錄：
+== 使用「工作」區段中的下列REST API來下載工作記錄：
 
 |===
 | REST API | 註解 
@@ -43,7 +43,7 @@ summary: 若要使用SnapCenter 適用於VMware vSphere REST API的VMware vSpher
 |===
 
 
-=== 使用「報告」區段中的下列REST API來產生報告：
+== 使用「報告」區段中的下列REST API來產生報告：
 
 |===
 | REST API | 註解 

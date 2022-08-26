@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_add_multiple_vms_and_datastores_to_a_resource_group.html 
 keywords:  
-summary: 您可以使用SnapCenter 「VMware vSphere Web用戶端編輯資源群組」精靈、將多個VM和資料存放區新增至任何現有的資源群組。 
+summary: 您可以使用SnapCenter 「VMware vSphere Web用戶端編輯資源群組」精靈、將多個資源新增至現有的資源群組。 
 ---
 = 將多個VM和資料存放區新增至資源群組
 :hardbreaks:
@@ -25,6 +25,9 @@ summary: 您可以使用SnapCenter 「VMware vSphere Web用戶端編輯資源群
 * 所有VVol VM都具有指定的vCenter標記。
 * 指定資料夾中的所有VVol VM。
 
+
+
+NOTE: 不支援橫跨多個VVol資料存放區的VVOL VM、因為SnapCenter 僅在主要的VVol資料存放區中備份VVOL。
 
 .步驟
 . 在VMware vSphere Web用戶端的左側導覽器窗格中、按一下*資源群組*、然後選取資源群組、再按一下 image:scpivs44_image39.png["錯誤：缺少圖形影像"] *編輯資源群組*以啟動精靈。

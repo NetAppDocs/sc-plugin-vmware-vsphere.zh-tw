@@ -20,7 +20,7 @@ summary: 若要改善作業效率、您可以修改scbr.override組態檔以變�
 
 
 
-=== 建立scbr.override組態檔
+== 建立scbr.override組態檔
 
 . 請移至「/opt/netapp/scvservice/standone_aegi/etc/scbr/scbr.override-template」。
 . 將「shCBR.override-template」檔案複製到新檔案「\opt\netapp\scvservice\s獨立_aege\etc\scbr」目錄中的「shCBR.override」。
@@ -28,7 +28,7 @@ summary: 若要改善作業效率、您可以修改scbr.override組態檔以變�
 
 
 
-=== 您可以置換的內容
+== 您可以置換的內容
 
 * 根據預設、範本會使用雜湊符號來註解組態內容。若要使用屬性來修改組態值、您必須移除「#」字元。
 * 您必須在SnapCenter VMware vSphere主機的VMware vSphere插件上重新啟動服務、變更才會生效。

@@ -37,6 +37,9 @@ summary: 您可以將刪除的VM從資料存放區的主要或次要備份還原
 NOTE: 還原至不同位置時、SnapCenter VMware vSphere的VMware vSphere VMware Plug-in必須在連結的vCenter中執行、該vCenter是還原作業的目的地。目的地資料存放區必須有足夠的空間。
 
 
+NOTE: 您無法將vVol VM還原至其他位置。
+
+
 NOTE: 還原刪除的VM時、所有原先指派給VM的標記或資料夾都不會還原。
 
 .開始之前

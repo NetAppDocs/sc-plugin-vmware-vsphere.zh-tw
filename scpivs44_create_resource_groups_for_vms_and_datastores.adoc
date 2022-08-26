@@ -14,9 +14,9 @@ summary: 資源群組是要保護的VM、資料存放區或vVols VM的容器。
 
 
 [role="lead"]
-資源群組是要保護的VM、資料存放區或vVols VM的容器。
+資源群組是您要保護的VM、資料存放區和VVol VM的容器。
 
-資源群組可包含下列其中一項：
+資源群組可包含下列項目：
 
 * 傳統VM和資料存放區
 +
@@ -24,7 +24,7 @@ summary: 資源群組是要保護的VM、資料存放區或vVols VM的容器。
 
 * 資料存放區FlexGroup
 +
-單FlexGroup 一資料存放區。不FlexGroup 支援跨距資料存放區。無法將資料存放區與傳統VM或資料存放區結合使用。FlexGroup
+單FlexGroup 一的資料存放區。不FlexGroup 支援跨距資料存放區。無法將此資料存放區與傳統VM或資料存放區結合使用。FlexGroup
 
 * 資料存放區FlexVol
 +
@@ -49,7 +49,8 @@ summary: 資源群組是要保護的VM、資料存放區或vVols VM的容器。
 
 IMPORTANT: 如果您使用的是VMware vSphere叢集服務（VCL）、請勿在SnapCenter VMware插件資源群組中納入由VCL管理的VM。
 
-VMware vSphere 4.5及更新版本的支援VMware vSphere 4.5外掛程式、可在支援高達128 TB的大型LUN上支援資料存放區。SnapCenter ASA對於大型LUN SnapCenter 、為了避免延遲、僅使用完整配置的LUN。
+
+TIP: VMware vSphere 4.5及更新版本的支援VMware vSphere 4.5外掛程式、可在支援高達128 TB的大型LUN上支援資料存放區。SnapCenter ASA如果您要保護大型LUN、請僅使用完整配置的LUN來避免延遲。
 
 
 IMPORTANT: 請勿新增處於無法存取狀態的VM。雖然可以建立包含無法存取之VM的資源群組、但該資源群組的備份將會失敗。
@@ -136,7 +137,7 @@ image:scpivs44_image16.png["錯誤：缺少圖形影像"]
 如果您想要將字尾「_Recent」新增至最新的Snapshot複本、請勾選此方塊。「_Recent」字尾會取代日期和時間戳記。
 
 
-NOTE: 針對附加到資源群組的每個原則、都會建立最近的備份。因此、具有多個原則的資源群組將會有多個最近的備份。
+NOTE: 系統會針對附加至資源群組的每個原則建立「_Recent」備份。因此、具有多個原則的資源群組將會有多個「_Recent」備份。請勿手動重新命名「_Recent」備份。
 
 
 
@@ -155,7 +156,7 @@ NOTE: 針對附加到資源群組的每個原則、都會建立最近的備份�
 | 對於此欄位… | 執行此操作… 
 
 
-| 範圍 | 選取您要保護的資源類型：*資料存放區（一或多個指定資料存放區中的所有傳統VM）*虛擬機器（個別傳統VM或VVol VM； 在欄位中、您必須導覽至包含VM或vVol VM的資料存放區）*標記（所有vVol VM只需一個指定的VMware標記；在清單方塊中、您必須輸入標記）* VM資料夾（指定資料夾中的所有vVol VM； 在快顯欄位中、您必須瀏覽至資料夾所在的資料中心） 
+| 範圍 | 選取您要保護的資源類型：*資料存放區（一或多個指定資料存放區中的所有傳統VM）。您無法選取VVol資料存放區。*虛擬機器（個別的傳統VM或VVol VM；在欄位中、您必須瀏覽至包含VM或VVol VM的資料存放區）。您無法在FlexGroup 不支援的資料存放區中選取個別VM。*標籤（所有vVol VM都具有單一指定的VMware標籤；在清單方塊中、您必須輸入標籤）* VM資料夾（所有vVol VM都位於指定的資料夾中；在快顯欄位中、您必須瀏覽至資料夾所在的資料中心） 
 
 
 | 資料中心 | 瀏覽至您要新增的VM或資料存放區或資料夾。 
@@ -168,6 +169,9 @@ NOTE: 針對附加到資源群組的每個原則、都會建立最近的備份�
 
 +
 如果SnapCenter 顯示訊息「民選<resource-name> is not s版本 相容」、表示所選的資源與SnapCenter 該資源不相容。請參閱 <<Manage compatibility check failures>> 以取得更多資訊。
+
++
+若要從備份中全域排除一或多個資料存放區、您必須在「shCBR.override」組態檔的「globe.ds.exclite.Pattern」內容中指定資料存放區名稱。請參閱 <<Properties you can override>>。
 
 . 在「*擴充磁碟*」頁面上、針對多個資料存放區中具有多個VMDK的VM選取一個選項：
 +
@@ -228,7 +232,7 @@ NOTE: 如果備份中任何VM的靜止作業失敗、則即使所選的原則已
 
 
 
-=== 管理相容性檢查失敗
+== 管理相容性檢查失敗
 
 當您嘗試建立資源群組時、會執行相容性檢查。SnapCenter
 

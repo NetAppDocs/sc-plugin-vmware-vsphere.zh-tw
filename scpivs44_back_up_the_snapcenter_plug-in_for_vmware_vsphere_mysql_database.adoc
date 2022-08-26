@@ -24,12 +24,6 @@ VMware的VMware版外掛程式包含MySQL資料庫（也稱為NSM資料庫）、
 . 從VMware vSphere Web用戶端選取SnapCenter VMware外掛程式所在的VM。
 . 在VM上按一下滑鼠右鍵、然後在虛擬應用裝置的* Summary（摘要）*索引標籤上、按一下* Launch Remote Console *（啟動遠端主控台*）或Launch Web Console（啟動Web主控台*）以開啟維護主控台視窗。
 +
-下列是VMware vCenter外掛程式維護主控台的登入預設值SnapCenter ：
-
-+
-使用者名稱：「Maint」密碼：「admin123」
-
-+
 image:scpivs44_image21.png["錯誤：缺少圖形影像"]
 
 . 在主功能表中、輸入選項* 1）應用程式組態。*

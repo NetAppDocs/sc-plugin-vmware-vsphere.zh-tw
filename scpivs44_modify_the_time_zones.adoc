@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_modify_the_time_zones.html 
 keywords:  
-summary: 當您為SnapCenter VMware vSphere資源群組的VMware vSphere資源群組設定備份排程時、排程會自動設定為SnapCenter 部署VMware外掛程式的時區。您可以使用SnapCenter VMware vSphere管理GUI的VMware vCenter外掛程式來修改該時區。 
+summary: 當您為SnapCenter VMware vSphere資源群組的VMware vSphere資源群組設定備份排程時、排程會自動設定為SnapCenter 部署VMware外掛程式的時區。您可以使用SnapCenter VMware vSphere管理GUI或維護主控台的VMware vSphere支援功能、來修改該時區。 
 ---
 = 修改備份的時區
 :hardbreaks:
@@ -13,7 +13,7 @@ summary: 當您為SnapCenter VMware vSphere資源群組的VMware vSphere資源�
 :imagesdir: ./media/
 
 
-當您為SnapCenter VMware vSphere資源群組的VMware vSphere資源群組設定備份排程時、排程會自動設定為SnapCenter 部署VMware外掛程式的時區。您可以使用SnapCenter VMware vSphere管理GUI的VMware vCenter外掛程式來修改該時區。
+當您為SnapCenter VMware vSphere資源群組的VMware vSphere資源群組設定備份排程時、排程會自動設定為SnapCenter 部署VMware外掛程式的時區。您可以使用SnapCenter VMware vSphere管理GUI或維護主控台的VMware vSphere支援功能、來修改該時區。
 
 您必須知道SnapCenter VMware vSphere管理GUI適用的VMware vSphere Plug-in IP位址和登入認證。
 

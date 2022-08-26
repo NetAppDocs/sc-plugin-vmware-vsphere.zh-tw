@@ -34,7 +34,7 @@ summary: 還原VM時、您可以使用所選的備份複本覆寫現有內容、
 
 
 
-NOTE: 還原至不同位置時、SnapCenter VMware vSphere的VMware vSphere VMware Plug-in必須在連結的vCenter中執行、該vCenter是還原作業的目的地。目的地資料存放區必須有足夠的空間。
+NOTE: 您無法將vVol VM還原至其他主機。
 
 
 NOTE: 不支援下列還原工作流程：新增儲存虛擬機器、然後執行該虛擬機器的備份、刪除儲存虛擬機器、並新增包含該儲存虛擬機器的叢集、然後嘗試還原原始備份。
@@ -51,6 +51,12 @@ TIP: 若要改善NFS環境中的還原作業效能、請啟用VMware應用程式
 
 NOTE: 如果VM的Snapshot複本是由SnapCenter VMware vSphere的VMware vSphere以外的軟體執行、則還原作業無法成功完成。
 
+* 目的地資料存放區必須就緒。
++
+** 還原作業的目的地資料存放區必須有足夠空間容納所有VM檔案的複本（例如：vmdk、vmx、vmsd）。
+** 目的地資料存放區不得包含先前還原作業失敗的過時VM檔案。過時檔案的名稱格式為「REstore_xxx _xxxxxx_<檔案名稱>」。
+
+
 * VM不得在傳輸中。
 +
 您要還原的VM不得處於VMotion或Storage VMotion狀態。
@@ -61,7 +67,9 @@ NOTE: 如果VM的Snapshot複本是由SnapCenter VMware vSphere的VMware vSphere�
 
 * 還原至不同位置
 +
-還原至不同位置時、SnapCenter VMware vSphere的VMware vSphere VMware Plug-in必須在vCenter中執行、而vCenter是還原作業的目的地。目的地資料存放區必須有足夠的空間。
+** 還原至不同位置時、SnapCenter VMware vSphere的VMware vSphere VMware Plug-in必須在vCenter中執行、而vCenter是還原作業的目的地。目的地資料存放區必須有足夠的空間。
+** 「還原至替代位置」欄位中的目的地vCenter必須可解析DNS。
+
 
 
 
@@ -73,6 +81,13 @@ VM的還原作業會取消原始VM的登錄、從備份Snapshot複本還原VM、
 * 還原資料存放區
 +
 您無法還原資料存放區、但可以還原資料存放區中的任何VM。
+
+* 還原VVol VM
++
+** 不支援橫跨VM的VVOL資料存放區。由於未備份虛擬機器跨距vVol資料存放區中附加的VMDK、因此還原的VM只會包含部分VMDK。
+** 您無法將VVol還原至其他主機。
+** 不支援VVOL自動重新平衡。
+
 
 * VM的VMware一致性快照失敗
 +

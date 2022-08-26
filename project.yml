@@ -1,15 +1,25 @@
 ---
 settings:
-  name: SnapCenter Plug-in for VMware vSphere
+  name: SnapCenter Plug-in for VMware vSphere 4.7
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: false
+  versions:
+  - name: VMware vSphere的插件SnapCenter
+    url: "/sc-plugin-vmware-vsphere"
+    version-number: '4.7'
+  - name: VMware vSphere的插件SnapCenter
+    url: "/sc-plugin-vmware-vsphere-46"
+    version-number: '4.6'
+  - name: VMware vSphere的插件SnapCenter
+    url: "/sc-plugin-vmware-vsphere-45"
+    version-number: '4.5'
   langs: zh-tw,us-en,ja-jp,zh-cn,ko-kr
 sidebar:
   entries:
-  - title: VMware vSphere的插件SnapCenter
+  - title: VMware vSphere 4.7文件的適用外掛程式SnapCenter
     url: "/index.html"
   - title: 版本資訊
     url: "/scpivs44_release_notes.html"
@@ -141,7 +151,7 @@ sidebar:
       url: "/scpivs44_restore_the_most_recent_backup_of_the_mysql_database.html"
     - title: 還原MySQL資料庫的特定備份
       url: "/scpivs44_restore_a_specific_backup_of_the_mysql_database.html"
-    - title: 將VMDK附加至VM
+    - title: 將VMDK附加至VM或VVol VM
       url: "/scpivs44_attach_vmdks_to_a_vm.html"
     - title: 分離虛擬磁碟
       url: "/scpivs44_detach_a_virtual_disk.html"

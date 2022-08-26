@@ -4,7 +4,7 @@ permalink: scpivs44_minimum_ontap_privileges_required.html
 keywords:  
 summary: 所需的最低限度驗證權限會因您使用的資料保護功能的各個方面而有所不同。ONTAP SnapCenter 
 ---
-= 需要最低ONTAP 的權限
+= 需要權限ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -15,6 +15,10 @@ summary: 所需的最低限度驗證權限會因您使用的資料保護功能�
 
 [role="lead"]
 所需的最低限度驗證權限會因您使用的資料保護功能的各個方面而有所不同。ONTAP SnapCenter
+
+
+
+== 需要最低ONTAP 的權限
 
 所有SnapCenter 的實體外掛程式都需要下列最低權限。
 
@@ -50,7 +54,7 @@ summary: 所需的最低限度驗證權限會因您使用的資料保護功能�
 |===
 
 
-=== 其他ONTAP 資訊
+== 其他ONTAP 資訊
 
 * 如果您執行ONTAP 的是版本8.2.x：
 +

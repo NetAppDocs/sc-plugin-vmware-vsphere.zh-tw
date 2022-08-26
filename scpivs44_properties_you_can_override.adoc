@@ -26,6 +26,20 @@ summary: 您可以使用「shCBR.override」組態檔中列出的內容來變更
 +
 預設值為「7」。
 
+* * disable.rakCiphers=true*
++
+停用下列弱式加密器、用於SnapCenter VMware vSphere和SnapCenter VMware vSphere的Rsorese-Plug-In和任何其他列於「include.runciphers'：TLS_RSA_with _AES-256_CBC_SHA256 TLS_DHE_RSA_with _AES-256_CB_SHA256_SHA256_TLs_RSA_CA_CA_CA_CAST_CA_AES的任何其他弱式加密通道、搭配AES-256_AA_CAST_CAST_CA_CA_CAST_CAST_CA_CA_256與A256_CA_CAST_CA_CA_CAST_CA_CA_CAST_256、搭配A_CAST_CA_CAST_CA_CA_CAST_CA_CAST_256、使用A_CAST_CAST_CAST_256與A_CAST_CAST_CAST_CAST_256、以A_256與A_256
+
+* * globe.ds.site.Pattern*
++
+指定一或多個要從備份作業中排除的傳統或vVol資料存放區。您可以使用任何有效的Java規則運算式來指定資料存放區。
+
++
+範例1：「globe.ds.exclude.Pattern=.*21」這個運算式不包括具有通用模式的資料存放區、例如「datastore21」和「dest21」。
+
++
+範例2：運算式「globe.ds.exitation.Pattern=DS-.*|^vol123」會排除所有包含「ds-」（例如「shCVDS-test」）或開頭為「vol123」的資料存放區。
+
 * * guestFileRestore.guest.operation.interval=5*
 +
 指定SnapCenter VMware vSphere的VMware vSphere的VMware vCenter插件完成來賓操作所需的時間間隔（秒）（線上磁碟和還原檔案）。總等待時間由「guestFileRestore、online、disk.timeout」和「guestFileRestore、estore.file.timeout」設定。
@@ -100,6 +114,10 @@ summary: 您可以使用「shCBR.override」組態檔中列出的內容來變更
 
 +
 預設值為「假」。
+
+* *包括.r弱 密碼*
++
+當「disables.weakCiphers」設定為「true」時、除了預設停用「disables.rakCiphers」的弱密碼之外、還會指定您要停用的弱密碼。
 
 * *最大並行.ds.storage。query.count=15*
 +

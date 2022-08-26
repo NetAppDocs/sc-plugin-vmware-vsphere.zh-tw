@@ -119,10 +119,10 @@ summary: 在部署虛擬應用裝置之前、您應該先瞭解部署需求。
 | IP位址 | IPV4、IPV6 
 
 
-| VMware TLS | 1.2 
+| VMware TLS | 1.2、1.3 
 
 
-| 支援TLS SnapCenter | TLSv1.1及更新版本SnapCenter 透過SnapCenter VMDK資料保護作業、使用此功能與應用程式的VMware插件進行通訊。 
+| 支援TLS SnapCenter | 1.2、1.3 SnapCenter 此功能可與SnapCenter VMware的VMware插件進行通訊、以便透過VMDK資料保護作業來執行應用程式。 
 
 
 | 適用於陣列整合的VMware應用程式vStorage API（VAAI） | VMware vSphere的VMware vSphere外掛程式使用此功能來改善還原作業的效能。SnapCenter它也能改善NFS環境的效能。 

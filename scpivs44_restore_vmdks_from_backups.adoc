@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_restore_vmdks_from_backups.html 
 keywords:  
-summary: 您可以從主要或次要備份還原現有的VMDK、或是刪除或分離的VMDK。 
+summary: 您可以從傳統VM或VVol VM的主要或次要備份還原現有的VMDK、或是刪除或分離的VMDK。 
 ---
 = 從備份還原VMDK
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 您可以從主要或次要備份還原現有的VMDK、或是刪除或�
 
 
 [role="lead"]
-您可以從主要或次要備份還原現有的VMDK、或是刪除或分離的VMDK。
+您可以從傳統VM或VVol VM的主要或次要備份還原現有的VMDK、或是刪除或分離的VMDK。
 
 您可以將虛擬機器上的一或多個虛擬機器磁碟（VMDK）還原至相同的資料存放區。
 

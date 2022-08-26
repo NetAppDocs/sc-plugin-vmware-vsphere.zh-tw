@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: scpivs44_attach_vmdks_to_a_vm.html 
 keywords:  
-summary: 您可以將一個或多個VMDK從備份附加至父VM、或附加至同一ESXi主機上的替代VM、或附加至由同一vCenter管理的替代ESXi主機上的替代VM、或以連結模式附加至不同vCenter。 
+summary: 您可以將一個或多個VMDK從備份附加至父VM、或附加至同一ESXi主機上的替代VM、或附加至由同一vCenter管理的替代ESXi主機上的替代VM、或以連結模式附加至不同vCenter。支援傳統資料存放區和VVol資料存放區中的VM。 
 ---
-= 將VMDK附加至VM
+= 將VMDK附加至VM或VVol VM
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,11 +14,9 @@ summary: 您可以將一個或多個VMDK從備份附加至父VM、或附加至�
 
 
 [role="lead"]
-您可以將一個或多個VMDK從備份附加至父VM、或附加至同一ESXi主機上的替代VM、或附加至由同一vCenter管理的替代ESXi主機上的替代VM、或以連結模式附加至不同vCenter。
+您可以將一個或多個VMDK從備份附加至父VM、或附加至同一ESXi主機上的替代VM、或附加至由同一vCenter管理的替代ESXi主機上的替代VM、或以連結模式附加至不同vCenter。支援傳統資料存放區和VVol資料存放區中的VM。
 
 這使得從磁碟機還原一或多個個別檔案變得更容易、而非還原整個磁碟機。您可以在還原或存取所需的檔案之後、將VMDK分離。
-
-您無法從vVol備份附加VMDK。
 
 您有下列附加選項：
 

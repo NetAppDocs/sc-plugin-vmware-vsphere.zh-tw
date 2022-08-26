@@ -18,7 +18,7 @@ summary: 如果SnapCenter VMware vSphere Web用戶端的行為不正確、您可
 
 
 
-=== 在Linux vCenter中重新啟動Web用戶端服務
+== 在Linux vCenter中重新啟動Web用戶端服務
 
 如果vCenter位於Linux應用裝置上、則必須使用Linux命令重新啟動SnapCenter VMware vSphere Web用戶端服務。
 
@@ -50,7 +50,7 @@ IMPORTANT: 請勿移除VASA或VSC7.x及更新版本套件。
 
 
 
-=== 在Windows vCenter中重新啟動Web用戶端服務
+== 在Windows vCenter中重新啟動Web用戶端服務
 
 如果vCenter位於Windows主機上、則您必須使用Windows命令重新啟動SnapCenter 支援的Web用戶端服務。
 
