@@ -408,7 +408,6 @@
   <block id="8ebed4cc71ebae0e8a4f0dcea24cd08f" category="paragraph">雖然虛擬應用裝置必須安裝為Linux VM、SnapCenter 但VMware插件同時支援Windows型和Linux型vCenter。支援以應用程式為基礎的外掛程式、可在Windows和Linux虛擬化應用程式上執行資料保護作業、無需使用者介入、即可原生使用此外掛程式與vCenter進行通訊。SnapCenter SnapCenter</block>
   <block id="b9c9e7f1948911f3919c87ac446095a1" category="paragraph">除了這些主要功能之外、SnapCenter VMware vSphere的《VMware vSphere支援VMware®的VMware®支援中心」也支援iSCSI、Fibre Channel、FCoE、VMDK over NFS 3.0和4.1、以及VMDK over VMFS 5.0和6.0。</block>
   <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">NetApp 互通性對照表工具</block>
-  <block id="9856ec9f087c5eba592abce3501cda06" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="25eb2128e948e2544fabd66492bfb7a4" category="inline-link-rx"></block> （僅限部分）IMT 。</block>
   <block id="b13a4247d22cd0a43d54ca7d80210144" category="paragraph">如需NFS傳輸協定和ESXi的相關資訊、請參閱VMware提供的vSphere儲存設備文件。</block>
   <block id="799fee4408785caa314299fa0125daec" category="inline-link">資訊文件SnapCenter</block>
   <block id="9e91a63458c500b0f59284f504d93fff" category="paragraph">如需SnapCenter 有關資料保護的資訊、請參閱SnapCenter 中有關您的功能的資料保護資訊<block ref="4be00348c5f700eec4bebc72bc1bc49c" category="inline-link-rx"></block>。</block>
@@ -927,7 +926,6 @@
   <block id="0584a4eafed573c2dc210c534594afdd" category="paragraph">使用VMware Tools的資訊建立與VMware來賓作業系統的連線。SnapCenter</block>
   <block id="1572f8be6f1646b62b5c0d4d4c380fe8" category="list-text">Windows來賓作業系統必須執行Windows Server 2008 R2或更新版本。</block>
   <block id="697ea025ecb303d4f40d1bf3a8b4bde0" category="inline-link">NetApp互通性對照表工具IMT （不含）</block>
-  <block id="9308bc3137849178f2a1d4b2f840f1f3" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="58191ff79dfed9aa80c7f0f097ed65be" category="inline-link-rx"></block>。</block>
   <block id="8eafca0087eab5ecb2870b27ade88f3c" category="list-text">目標VM的認證資料必須指定內建的網域系統管理員帳戶或內建的本機系統管理員帳戶。使用者名稱必須是「Administrator」（管理員）。 在開始還原作業之前、您必須為要附加虛擬磁碟的VM設定認證。附加作業和後續還原作業都需要認證資料。工作群組使用者可以使用內建的本機系統管理員帳戶。</block>
   <block id="ae010d54b0afb3a6e93783bbe5550d22" category="admonition">如果您必須使用非內建系統管理員帳戶、但在VM內具有系統管理權限的帳戶、則必須停用客體VM上的UAC.</block>
   <block id="37f8dfd8c74bc4597ec29e99bf89bf26" category="list-text">您必須知道要從中還原的備份Snapshot複本和VMDK。</block>
@@ -939,7 +937,6 @@
   <block id="7f395b83396bafcd5e1d1206370ba67d" category="list-text">對於非英文字母名稱的檔案、您必須將其還原至目錄、而非單一檔案。</block>
   <block id="ee1c70a48815e066082eefeebc34049f" category="paragraph">您可以還原檔案所在的目錄、還原非字母名稱的檔案、例如日文日文日文日文日文日文日文日文日文日文日文日文日文日文日文日文日文日文日文日文日文日文日文日文日文。</block>
   <block id="1ff1b21f136ea0663a63cc457f347949" category="list-text">不支援從Linux客體作業系統還原</block>
-  <block id="ba7d5ae17e05f117613f6c9d8ce94a33" category="paragraph">您無法從執行Linux客體作業系統的VM還原檔案和資料夾。不過、您可以附加VMDK、然後手動還原檔案和資料夾。如需受支援來賓作業系統的最新資訊、請參閱<block ref="58191ff79dfed9aa80c7f0f097ed65be" category="inline-link-rx"></block>。</block>
   <block id="9229096468701d10aab6b30f546310c1" category="section-title">客體檔案還原限制</block>
   <block id="f59c7bff803fde0d7ac5c2117ba8b07a" category="paragraph">在從客體作業系統還原檔案或資料夾之前、您應該瞭解此功能不支援的項目。</block>
   <block id="0938c50db6a8d08637c074ab0c183305" category="list-text">您無法在客體作業系統內還原動態磁碟類型。</block>
@@ -1227,7 +1224,6 @@
   <block id="7007a0750d953e128d4f70c36217f054" category="list-text">VMDK位於不受支援的儲存設備上、例如ONTAP 在7-Mode或非ONTAP裝置上執行的VMware系統上。</block>
   <block id="fcd86cc596f822c816f0c6770a216f38" category="list-text">資料存放區位於執行叢集Data ONTAP 式NetApp版本的NetApp儲存設備上。</block>
   <block id="62fc2c3502f537ee988c89c46b547a37" category="paragraph">4.x版支援還原8.3.1及更新版本。SnapCenter ONTAP</block>
-  <block id="f5568de9c9e0caa3283e8f2bcf00b4f9" category="paragraph">VMware vSphere的VMware vCenter外掛程式不會針對所有的VMware版本執行相容性檢查、僅適用於版本8.2.1及更早版本。SnapCenter ONTAP ONTAP因此、請務必查看<block ref="58191ff79dfed9aa80c7f0f097ed65be" category="inline-link-rx"></block> 以取得SnapCenter 有關支援的最新資訊。</block>
   <block id="4f11690e32499ec1417798db9cb86f8c" category="list-text">共享的PCI設備已連接至VM。</block>
   <block id="0706a3a0aad11229773c1704d2e28c53" category="list-text">未在SnapCenter 不使用的情況下設定偏好的IP。</block>
   <block id="6b2f6276dbeab613805dd6faa40c0b96" category="list-text">您尚未將儲存虛擬機器（SVM）管理IP新增SnapCenter 至</block>
@@ -1929,4 +1925,8 @@
   <block id="3517efb765e07026ad62bc8e70a5e01a" category="list-text">您無法將VVol還原至其他主機。</block>
   <block id="c06551216ac3dfe9b7ff1f728845efe6" category="list-text">不支援VVOL自動重新平衡。</block>
   <block id="40d9577d304cdcb387b725468407241e" category="sidebar">VMware vSphere 4.7文件的適用外掛程式SnapCenter</block>
+  <block id="2475c9dd54056833d6396fbed1f941d8" category="paragraph">VMware vSphere的VMware vCenter外掛程式不會針對所有的VMware版本執行相容性檢查、僅適用於版本8.2.1及更早版本。SnapCenter ONTAP ONTAP因此、請務必查看<block ref="a1b283c4671de73f5e64651c8e98491f" category="inline-link-rx"></block> 以取得SnapCenter 有關支援的最新資訊。</block>
+  <block id="ca3bf2cb39f62342194d0f6777ffe162" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="a1b283c4671de73f5e64651c8e98491f" category="inline-link-rx"></block>。</block>
+  <block id="fb80b6fccf5f1cdcfd342989b34962c7" category="paragraph">您無法從執行Linux客體作業系統的VM還原檔案和資料夾。不過、您可以附加VMDK、然後手動還原檔案和資料夾。如需受支援來賓作業系統的最新資訊、請參閱<block ref="a1b283c4671de73f5e64651c8e98491f" category="inline-link-rx"></block>。</block>
+  <block id="a888ab84707631c86f5006309e186d1d" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="56392423f5d438aef305a97c794e0835" category="inline-link-rx"></block> （僅限部分）IMT 。</block>
 </blocks>

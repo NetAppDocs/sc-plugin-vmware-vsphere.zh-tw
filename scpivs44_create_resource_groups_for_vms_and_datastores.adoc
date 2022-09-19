@@ -89,7 +89,7 @@ IMPORTANT: 請勿新增處於無法存取狀態的VM。雖然可以建立包含�
 建立資源群組時、執行相容性檢查。SnapCenter
 
 +
-<<Manage compatibility check failures>>
+ compatibility check failures
 
 
 
@@ -168,10 +168,10 @@ NOTE: 系統會針對附加至資源群組的每個原則建立「_Recent」備�
 當您按一下*下一步*時、系統會先檢查SnapCenter 哪些是由哪個系統管理、並與所選資源所在的儲存設備相容。
 
 +
-如果SnapCenter 顯示訊息「民選<resource-name> is not s版本 相容」、表示所選的資源與SnapCenter 該資源不相容。請參閱 <<Manage compatibility check failures>> 以取得更多資訊。
+如果SnapCenter 顯示訊息「民選<resource-name> is not s版本 相容」、表示所選的資源與SnapCenter 該資源不相容。請參閱  compatibility check failures 以取得更多資訊。
 
 +
-若要從備份中全域排除一或多個資料存放區、您必須在「shCBR.override」組態檔的「globe.ds.exclite.Pattern」內容中指定資料存放區名稱。請參閱 <<Properties you can override>>。
+若要從備份中全域排除一或多個資料存放區、您必須在「shCBR.override」組態檔的「globe.ds.exclite.Pattern」內容中指定資料存放區名稱。請參閱  you can override。
 
 . 在「*擴充磁碟*」頁面上、針對多個資料存放區中具有多個VMDK的VM選取一個選項：
 +
@@ -244,7 +244,7 @@ NOTE: 如果備份中任何VM的靜止作業失敗、則即使所選的原則已
 4.x版支援還原8.3.1及更新版本。SnapCenter ONTAP
 
 +
-VMware vSphere的VMware vCenter外掛程式不會針對所有的VMware版本執行相容性檢查、僅適用於版本8.2.1及更早版本。SnapCenter ONTAP ONTAP因此、請務必查看 https://imt.netapp.com/matrix/imt.jsp?components=103284;&solution=1517&isHWU&src=IMT["NetApp互通性對照表工具IMT （不含）"^] 以取得SnapCenter 有關支援的最新資訊。
+VMware vSphere的VMware vCenter外掛程式不會針對所有的VMware版本執行相容性檢查、僅適用於版本8.2.1及更早版本。SnapCenter ONTAP ONTAP因此、請務必查看 https://imt.netapp.com/matrix/imt.jsp?components=105164;&solution=1517&isHWU&src=IMT["NetApp互通性對照表工具IMT （不含）"^] 以取得SnapCenter 有關支援的最新資訊。
 
 * 共享的PCI設備已連接至VM。
 * 未在SnapCenter 不使用的情況下設定偏好的IP。

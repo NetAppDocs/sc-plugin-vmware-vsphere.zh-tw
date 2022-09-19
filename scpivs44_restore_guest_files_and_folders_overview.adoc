@@ -58,7 +58,7 @@ summary: 您可以從Windows來賓作業系統上的虛擬機器磁碟（VMDK）
 
 * Windows來賓作業系統必須執行Windows Server 2008 R2或更新版本。
 +
-如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103284;&solution=1517&isHWU&src=IMT["NetApp互通性對照表工具IMT （不含）"^]。
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=105164;&solution=1517&isHWU&src=IMT["NetApp互通性對照表工具IMT （不含）"^]。
 
 * 目標VM的認證資料必須指定內建的網域系統管理員帳戶或內建的本機系統管理員帳戶。使用者名稱必須是「Administrator」（管理員）。 在開始還原作業之前、您必須為要附加虛擬磁碟的VM設定認證。附加作業和後續還原作業都需要認證資料。工作群組使用者可以使用內建的本機系統管理員帳戶。
 +
@@ -83,7 +83,7 @@ VMware vSphere的支援還原外掛程式不支援搜尋要還原的檔案或資
 
 * 不支援從Linux客體作業系統還原
 +
-您無法從執行Linux客體作業系統的VM還原檔案和資料夾。不過、您可以附加VMDK、然後手動還原檔案和資料夾。如需受支援來賓作業系統的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103284;&solution=1517&isHWU&src=IMT["NetApp互通性對照表工具IMT （不含）"^]。
+您無法從執行Linux客體作業系統的VM還原檔案和資料夾。不過、您可以附加VMDK、然後手動還原檔案和資料夾。如需受支援來賓作業系統的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=105164;&solution=1517&isHWU&src=IMT["NetApp互通性對照表工具IMT （不含）"^]。
 
 
 
@@ -98,7 +98,7 @@ VMware vSphere的支援還原外掛程式不支援搜尋要還原的檔案或資
 * 「來賓檔案瀏覽」頁面會顯示您無法篩選的隱藏檔案和資料夾。
 * 您無法從Linux客體作業系統還原。
 +
-您無法從執行Linux客體作業系統的VM還原檔案和資料夾。不過、您可以附加VMDK、然後手動還原檔案和資料夾。如需受支援來賓作業系統的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103284;&solution=1517&isHWU&src=IMT["NetApp互通性對照表工具IMT （不含）"^]。
+您無法從執行Linux客體作業系統的VM還原檔案和資料夾。不過、您可以附加VMDK、然後手動還原檔案和資料夾。如需受支援來賓作業系統的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=105164;&solution=1517&isHWU&src=IMT["NetApp互通性對照表工具IMT （不含）"^]。
 
 * 您無法從NTFS檔案系統還原為FAT檔案系統。
 +
