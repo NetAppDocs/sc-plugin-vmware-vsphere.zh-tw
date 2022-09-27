@@ -1877,7 +1877,6 @@
   <block id="c8e385cc7a112ebc9131fa51b5a3767b" category="admonition">VMware vSphere 4.5及更新版本的支援VMware vSphere 4.5外掛程式、可在支援高達128 TB的大型LUN上支援資料存放區。SnapCenter ASA如果您要保護大型LUN、請僅使用完整配置的LUN來避免延遲。</block>
   <block id="d2df0b923abc21af57a4dd120ecd6e47" category="admonition">系統會針對附加至資源群組的每個原則建立「_Recent」備份。因此、具有多個原則的資源群組將會有多個「_Recent」備份。請勿手動重新命名「_Recent」備份。</block>
   <block id="d5d5b2c27cc217b5e686939e44c087e6" category="cell">選取您要保護的資源類型：*資料存放區（一或多個指定資料存放區中的所有傳統VM）。您無法選取VVol資料存放區。*虛擬機器（個別的傳統VM或VVol VM；在欄位中、您必須瀏覽至包含VM或VVol VM的資料存放區）。您無法在FlexGroup 不支援的資料存放區中選取個別VM。*標籤（所有vVol VM都具有單一指定的VMware標籤；在清單方塊中、您必須輸入標籤）* VM資料夾（所有vVol VM都位於指定的資料夾中；在快顯欄位中、您必須瀏覽至資料夾所在的資料中心）</block>
-  <block id="fff37cf15e02523a490f1c99dbc41b9f" category="paragraph">若要從備份中全域排除一或多個資料存放區、您必須在「shCBR.override」組態檔的「globe.ds.exclite.Pattern」內容中指定資料存放區名稱。請參閱 <block ref="a1a47e875db2e3d5549981ff4d3f5fd4" category="inline-xref-macro-rx"></block>。</block>
   <block id="9b0bd68baf74fb3ad293c166090c7bc3" category="admonition">保留工作記錄的預設值為30天、保留工作的預設值為90天。超過設定保留時間的工作記錄和工作、每六小時會清除一次。您可以使用組態「jobs/cleanup」REST API來修改保留工作和工作記錄的時間。您無法修改清除排程。</block>
   <block id="63c8a22424efc68577dafa3298893cc8" category="cell">針對SnapCenter 由VMware插件管理的VM和資料存放區、顯示設定天數內的保護狀態總覽資訊。預設值為7天。若要修改屬性檔案中的值、請參閱 <block ref="b16c4865f624e18083ce3581c0f938de" category="inline-link-macro-rx"></block>。按一下主要保護圖表上的區段/狀態、即可在「*報告*」索引標籤上查看具有該狀態的VM或資料存放區清單。受保護虛擬機器和資料存放區的VM或資料存放區保護狀態報告會顯示已在設定天數內備份的VM或資料存放區名稱、最新的Snapshot複本名稱、以及最新備份執行的開始和結束時間。未受保護VM或資料存放區的VM或資料存放區保護狀態報告會顯示在設定天數內沒有任何成功備份的VM或資料存放區名稱。您可以下載HTML或CSV格式的報告表格。您也可以下載所有工作的「工作監控」工作記錄（不只是報告中的工作）。此報告會在每小時重新整理外掛程式快取時重新整理。因此、報告可能不會顯示最近備份的VM或資料存放區。</block>
   <block id="6dd906abac50c0e38ec5790fd42b32f0" category="cell">1.2、1.3</block>
@@ -1929,4 +1928,5 @@
   <block id="ca3bf2cb39f62342194d0f6777ffe162" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="a1b283c4671de73f5e64651c8e98491f" category="inline-link-rx"></block>。</block>
   <block id="fb80b6fccf5f1cdcfd342989b34962c7" category="paragraph">您無法從執行Linux客體作業系統的VM還原檔案和資料夾。不過、您可以附加VMDK、然後手動還原檔案和資料夾。如需受支援來賓作業系統的最新資訊、請參閱<block ref="a1b283c4671de73f5e64651c8e98491f" category="inline-link-rx"></block>。</block>
   <block id="a888ab84707631c86f5006309e186d1d" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="56392423f5d438aef305a97c794e0835" category="inline-link-rx"></block> （僅限部分）IMT 。</block>
+  <block id="0f928371dde9bb28b5372e8e7729ebb0" category="paragraph">若要從備份中全域排除一或多個資料存放區、您必須在「shCBR.override」組態檔的「globe.ds.exclite.Pattern」內容中指定資料存放區名稱。請參閱 <block ref="37a0363725b373caf92b58503affefad" category="inline-xref-macro-rx"></block>。</block>
 </blocks>

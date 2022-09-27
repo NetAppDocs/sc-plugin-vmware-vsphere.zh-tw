@@ -171,7 +171,7 @@ NOTE: 系統會針對附加至資源群組的每個原則建立「_Recent」備�
 如果SnapCenter 顯示訊息「民選<resource-name> is not s版本 相容」、表示所選的資源與SnapCenter 該資源不相容。請參閱  compatibility check failures 以取得更多資訊。
 
 +
-若要從備份中全域排除一或多個資料存放區、您必須在「shCBR.override」組態檔的「globe.ds.exclite.Pattern」內容中指定資料存放區名稱。請參閱  you can override。
+若要從備份中全域排除一或多個資料存放區、您必須在「shCBR.override」組態檔的「globe.ds.exclite.Pattern」內容中指定資料存放區名稱。請參閱 #Properties you can override,您可以置換的內容。
 
 . 在「*擴充磁碟*」頁面上、針對多個資料存放區中具有多個VMDK的VM選取一個選項：
 +
