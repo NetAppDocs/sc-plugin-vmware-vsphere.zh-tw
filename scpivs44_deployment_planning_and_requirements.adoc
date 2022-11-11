@@ -159,6 +159,9 @@ summary: 在部署虛擬應用裝置之前、您應該先瞭解部署需求。
 | 連接埠類型 | 預先設定的連接埠 
 
 
+| VMware ESXi伺服器連接埠 | 443（HTTPS）、雙向來賓檔案還原功能使用此連接埠。 
+
+
 | VMware vSphere連接埠適用的外掛程式SnapCenter  a| 
 8144（HTTPS）、雙向連接埠用於從VMware vSphere Web用戶端和SnapCenter 從VMware Server進行通訊。8080雙向此連接埠用於管理虛擬應用裝置。
 
