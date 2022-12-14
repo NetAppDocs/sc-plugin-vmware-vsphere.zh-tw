@@ -20,6 +20,7 @@ summary: 如果您不再需要SnapCenter 使用資料保護功能、則必須變
 * 請確定沒有SnapCenter 執行任何不可用的功能。
 
 
+.關於這項工作
 停用SnapCenter VMware vCenter外掛程式時、所有資源群組都會暫停、而且外掛程式會在vCenter中取消登錄為擴充。
 
 啟用SnapCenter VMware vCenter外掛程式時、外掛程式會在vCenter中登錄為擴充、所有資源群組都會處於正式作業模式、而且所有排程都會啟用。

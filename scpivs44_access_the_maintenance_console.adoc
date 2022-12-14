@@ -16,6 +16,7 @@ summary: 您可以使用適用於SnapCenter VMware vSphere的維護主控台來�
 [role="lead"]
 您可以使用適用於SnapCenter VMware vSphere的維護主控台來管理應用程式、系統和網路組態。您可以變更系統管理員密碼、維護密碼、產生支援服務組合、以及啟動遠端診斷。
 
+.開始之前
 在停止及重新啟動SnapCenter VMware vSphere的VMware vSphere服務時、您應暫停所有排程。
 
 .關於這項工作

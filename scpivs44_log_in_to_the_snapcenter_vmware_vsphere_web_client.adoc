@@ -16,6 +16,7 @@ summary: 部署VMware vSphere的VMware vSphere外掛程式時、會在vCenter上
 [role="lead"]
 部署VMware vSphere的VMware vSphere外掛程式時、會在vCenter上安裝VMware vSphere Web用戶端、此用戶端會與其他vSphere Web用戶端一起顯示在vCenter畫面上。SnapCenter
 
+.開始之前
 傳輸層安全性（TLS）必須在vCenter中啟用。請參閱VMware文件。
 
 .步驟

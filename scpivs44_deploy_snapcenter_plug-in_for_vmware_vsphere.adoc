@@ -159,4 +159,5 @@ VMware Tools安裝在SnapCenter 部署了VMware vCenter外掛程式的VM上。�
 
 
 
+.完成後
 您應該完成必要的 link:scpivs44_post_deployment_required_operations_and_issues.html["部署後作業"]。

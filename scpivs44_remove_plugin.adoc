@@ -36,6 +36,7 @@ summary: 如果您不再需要使用SnapCenter 「還原資料保護」功能、
 . 如果您使用SnapCenter VMware支援其他SnapCenter 的VMware插件來進行應用程式一致的備份、請登入SnapCenter 到VMware、然後移除vSphere主機。
 
 
+.完成後
 虛擬應用裝置仍在部署中、SnapCenter 但已移除VMware的VMware插件。
 
 移除VMware SnapCenter vCenter外掛程式的主機VM之後、該外掛程式可能會一直列在vCenter中、直到重新整理本機vCenter快取為止。但是、由於外掛程式已移除、因此無法SnapCenter 在該主機上執行任何VMware vSphere功能。如果您要重新整理本機vCenter快取、請先確定應用裝置在SnapCenter 「VMware外掛程式組態」頁面上處於「已停用」狀態、然後重新啟動vCenter Web用戶端服務。

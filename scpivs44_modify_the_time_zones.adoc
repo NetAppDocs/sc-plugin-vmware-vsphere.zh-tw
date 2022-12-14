@@ -15,6 +15,7 @@ summary: 當您為SnapCenter VMware vSphere資源群組的VMware vSphere資源�
 
 當您為SnapCenter VMware vSphere資源群組的VMware vSphere資源群組設定備份排程時、排程會自動設定為SnapCenter 部署VMware外掛程式的時區。您可以使用SnapCenter VMware vSphere管理GUI或維護主控台的VMware vSphere支援功能、來修改該時區。
 
+.開始之前
 您必須知道SnapCenter VMware vSphere管理GUI適用的VMware vSphere Plug-in IP位址和登入認證。
 
 * 部署VMware插件時會顯示IP位址SnapCenter 。

@@ -1932,4 +1932,6 @@
   <block id="ec6b0c2e1fb8998a9149b0e870ce2442" category="list-text">您必須是叢集管理員、才能建立及管理使用者角色。您可以將使用者與叢集儲存VM或儲存VM建立關聯。</block>
   <block id="2cb2843b629d315325aac076907ec4b9" category="cell">VMware ESXi伺服器連接埠</block>
   <block id="ad676153bac7535311261fab671b77b9" category="cell">443（HTTPS）、雙向來賓檔案還原功能使用此連接埠。</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">結果</block>
+  <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="paragraph-title">範例</block>
 </blocks>

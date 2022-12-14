@@ -13,6 +13,7 @@ summary: 您可以從SnapCenter VMware vSphere GUI的VMware vSphere支援套件�
 :imagesdir: ./media/
 
 
+.開始之前
 [role="lead"]
 若要登入SnapCenter VMware vSphere管理GUI的VMware vCenter外掛程式、您必須知道IP位址和登入認證。
 

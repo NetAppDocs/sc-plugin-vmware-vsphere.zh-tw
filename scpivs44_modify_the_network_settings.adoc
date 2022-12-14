@@ -15,6 +15,7 @@ summary: 您可以修改SnapCenter 在VMware vSphere的VMware vSphere的VMware P
 
 您可以修改SnapCenter 在VMware vSphere的VMware vSphere的VMware Plug-in中設定的網路設定。外掛程式會使用這些設定來存取vCenter。
 
+.開始之前
 您必須知道SnapCenter VMware vSphere管理GUI適用的VMware vSphere Plug-in IP位址和登入認證。
 
 * 部署VMware插件時會顯示IP位址SnapCenter 。

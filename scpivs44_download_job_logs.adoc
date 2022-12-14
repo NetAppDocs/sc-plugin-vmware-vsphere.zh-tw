@@ -35,6 +35,7 @@ image:scpivs44_image9.png["錯誤：缺少圖形影像"]
 
 
 
+.結果
 工作記錄位於SnapCenter 部署VMware插件的Linux VM主機上。預設的工作記錄位置為「/var/log/NetApp'」。
 
 如果您嘗試下載工作記錄、但錯誤訊息中所命名的記錄檔已刪除、可能會遇到下列錯誤：「HTTP錯誤500存取/export/export/export/SCV記錄檔時發生問題」。若要修正此錯誤、請檢查錯誤訊息中所命名檔案的檔案存取狀態和權限、並修正存取問題。

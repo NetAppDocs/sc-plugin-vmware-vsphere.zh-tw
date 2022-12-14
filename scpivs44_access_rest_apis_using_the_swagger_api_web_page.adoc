@@ -18,6 +18,7 @@ REST API會透過Swagger網頁公開。您可以存取Swagger網頁、以顯示S
 
 外掛程式的Swagger網頁與SnapCenter 《伺服器Swagger網頁不同。
 
+.開始之前
 對於VMware vSphere REST API的VMware vCenter外掛程式、您必須知道VMware插件的IP位址或主機名稱。SnapCenter SnapCenter
 
 
@@ -33,6 +34,7 @@ https://<appliance_IP_address_or_host_name>:8144/api/swagger-ui.html`
 IMPORTANT: 請勿在REST API URL中使用下列字元：+、。、%和&。
 
 +
+.範例
 存取SnapCenter VMware插件REST API：
 
 +

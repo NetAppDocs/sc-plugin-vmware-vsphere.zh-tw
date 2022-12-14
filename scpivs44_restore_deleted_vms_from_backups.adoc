@@ -54,6 +54,7 @@ NOTE: 還原刪除的VM時、所有原先指派給VM的標記或資料夾都不�
 
 TIP: 若要改善NFS環境中的還原作業效能、請啟用VMware應用程式vStorage API for Array Integration（VAAI）。
 
+.關於這項工作
 您無法還原資料存放區、但可以還原資料存放區中的任何VM。
 
 如果FabricPool 無法使用虛擬機器所在的儲存層、還原作業可能會失敗。

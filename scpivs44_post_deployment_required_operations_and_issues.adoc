@@ -113,4 +113,5 @@ NOTE: 您必須在「驗證」欄位中選取「Linux」。
 
 
 
+.完成後
 如果SnapCenter 修改VMware vSphere的「VMware vSphere的更新外掛程式」認證、您必須SnapCenter 使用SnapCenter 「受管理的主機」頁面來更新「VMware Server」中的登錄。

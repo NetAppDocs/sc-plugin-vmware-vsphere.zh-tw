@@ -33,8 +33,10 @@ VMware vSphere 4.5及更新版本的支援VMware vSphere 4.5外掛程式、可�
 
 
 
+.開始之前
 ESXi伺服器SnapCenter 、VMware vCenter外掛程式和每個vCenter必須同步至相同時間。如果您嘗試新增儲存設備、但vCenter的時間設定並未同步、則作業可能會失敗、並顯示Java憑證錯誤。
 
+.關於這項工作
 VMware vCenter外掛程式可在直接連線的儲存VM和儲存叢集中的儲存VM上執行備份與還原作業。SnapCenter
 
 
