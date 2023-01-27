@@ -15,7 +15,7 @@ summary: 您可以從維護主控台產生支援服務組合。
 
 .步驟
 [role="lead"]
-. 從VMware vSphere Web用戶端選取SnapCenter VMware外掛程式所在的VM。
+. 從VMware vSphere用戶端選取SnapCenter VMware插件所在的VM。
 . 在虛擬機器上按一下滑鼠右鍵、然後在虛擬應用裝置的* Summary（摘要）*索引標籤上、按一下* Launch Remote Console（啟動遠端主控台）或Launch Web Console（啟動Web主控台）*以開啟維護主控台視窗、然後登入。
 +
 如需存取及登入維護主控台的相關資訊、請參閱 link:scpivs44_access_the_maintenance_console.html["存取維護主控台"^]。

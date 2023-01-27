@@ -22,10 +22,7 @@ summary: 在部署虛擬應用裝置之前、您應該先瞭解部署需求。
 
 開始部署SnapCenter VMware vSphere的VMware vSphere版的VMware vCenter外掛程式之前、您應該先熟悉主機需求。
 
-* 您必須將SnapCenter VMware的VMware插件部署為Linux VM。
-+
-無論您是使用外掛程式來保護Windows系統或Linux系統上的資料、VMware的VMware插件都會部署為Linux VM。SnapCenter
-
+* 無論您是使用外掛程式來保護Windows系統或Linux系統上的資料、VMware的VMware插件都會部署為Linux VM。SnapCenter
 * 您應該在SnapCenter vCenter Server上部署VMware vCenter外掛程式。
 +
 備份排程會在SnapCenter 部署VMware vCenter外掛程式的時區執行。vCenter會報告vCenter所在時區內的資料。因此、如果SnapCenter VMware vCenter外掛程式和vCenter位於不同的時區、SnapCenter 則VMware Plug-in儀表板中的資料可能與報告中的資料不同。
@@ -43,9 +40,9 @@ summary: 在部署虛擬應用裝置之前、您應該先瞭解部署需求。
 
 
 
-* 若要保護VVol VM（VMware vVol資料儲存區上的VM）、您必須先部署ONTAP VMware vSphere的VMware Infrastructure。《VMware工具》可在VMware Web用戶端上、針對VMware上的vVols進行配置及配置儲存。ONTAP ONTAP
+* 若要保護VVol VM（VMware vVol資料儲存區上的VM）、您必須先部署ONTAP VMware vSphere的功能介紹工具。支援VMware Web用戶端上的VMware工具、可在VMware Web用戶端上配置及配置vVols儲存設備ONTAP ONTAP 。
 +
-如需詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["VMware vSphere適用的VMware工具ONTAP"^]
+如需詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["VMware vSphere適用的工具ONTAP"^]
 
 +
 如需ONTAP 有關支援版本的更新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103284;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
@@ -110,10 +107,10 @@ summary: 在部署虛擬應用裝置之前、您應該先瞭解部署需求。
 | 項目 | 支援的版本 
 
 
-| vCenter vSphere | HTML5用戶端：6.5U2/U3、6.7x、7.0、7.0U1、7.0U2、 不支援7.0U3 Flex用戶端。 
+| vCenter vSphere | 7.0U1及更高版本 
 
 
-| ESXi | 6.5U2及更新版本 
+| ESXi | 7.0U1及更高版本 
 
 
 | IP位址 | IPV4、IPV6 
@@ -128,7 +125,7 @@ summary: 在部署虛擬應用裝置之前、您應該先瞭解部署需求。
 | 適用於陣列整合的VMware應用程式vStorage API（VAAI） | VMware vSphere的VMware vSphere外掛程式使用此功能來改善還原作業的效能。SnapCenter它也能改善NFS環境的效能。 
 
 
-| VMware適用的VMware工具ONTAP | VMware vSphere的VMware vSphere外掛程式使用此功能來管理VVol資料存放區（VMware虛擬磁碟區）SnapCenter 。如需支援的版本、請參閱NetApp互通性對照表工具。 
+| VMware的支援工具ONTAP | VMware vSphere的VMware vSphere外掛程式使用此功能來管理VVol資料存放區（VMware虛擬磁碟區）SnapCenter 。如需支援的版本、請參閱NetApp互通性對照表工具。 
 |===
 如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103284;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
@@ -163,7 +160,7 @@ summary: 在部署虛擬應用裝置之前、您應該先瞭解部署需求。
 
 
 | VMware vSphere連接埠適用的外掛程式SnapCenter  a| 
-8144（HTTPS）、雙向連接埠用於從VMware vSphere Web用戶端和SnapCenter 從VMware Server進行通訊。8080雙向此連接埠用於管理虛擬應用裝置。
+8144（HTTPS）、雙向連接埠用於從VMware vSphere用戶端和SnapCenter 從VMware Server進行通訊。8080雙向此連接埠用於管理虛擬應用裝置。
 
 附註：您無法修改連接埠組態。
 

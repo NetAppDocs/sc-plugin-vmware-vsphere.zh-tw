@@ -26,17 +26,13 @@ summary: 將SnapCenter VMware vSphere的更新版的更新版更新為相同版�
 
 根據伺服器作業系統的類型、快取位於下列位置：
 
-* vCenter Server for Windows
-+
-「C：\ProgramData \VMware\vCenterServer\cfc\vSphere-client\vc-packages\vSphere-client-recreation\」
-
 * vCenter Server Linux應用裝置
 +
 /etc/VMware/vSphere-client/vC-packages/vSphere-client-cronity/`
 
 * Windows作業系統
 +
-「%PROGRAMFILES %/VMware/vSphere Web Client/vC-packages/vSphere-client-sortal/'」
+`%PROGRAMFILES%/VMware/vSphere client/vc-packages/vsphere-client-serenity/`
 
 
 
@@ -52,12 +48,12 @@ summary: 將SnapCenter VMware vSphere的更新版的更新版更新為相同版�
 +
 停用VMware的VMware外掛程式服務、並在vCenter中取消登錄擴充。SnapCenter
 
-. 找到「vSphere-client-vonity」資料夾、然後找到「com.netapp.scvm.webclient-<release-number>`」資料夾並將其刪除。
+. 找到 `vsphere-client-serenity` 資料夾、然後找出 `com.netapp.scv.client-<release-number>` 資料夾並加以刪除。
 +
 每個版本的資料夾名稱都會變更。
 
 . 重新啟動vCenter Server。
-. 登入VMware vSphere Web用戶端。
+. 登入VMware vSphere用戶端。
 . 按一下左導覽窗格中的*組態*、然後按一下「*外掛程式詳細資料*」區段中的「服務」選項、以啟用外掛程式。
 +
 啟用了VMware vCenter外掛程式服務、並在vCenter中登錄擴充程式。SnapCenter

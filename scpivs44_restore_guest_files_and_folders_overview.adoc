@@ -52,9 +52,9 @@ summary: 您可以從Windows來賓作業系統上的虛擬機器磁碟（VMDK）
 
 在Windows來賓作業系統上從VMDK還原一或多個檔案或資料夾之前、您必須瞭解所有需求。
 
-* 必須安裝並執行VMware Tools。
+* 必須安裝並執行VMware工具。
 +
-使用VMware Tools的資訊建立與VMware來賓作業系統的連線。SnapCenter
+使用VMware工具提供的資訊建立與VMware來賓作業系統的連線SnapCenter 。
 
 * Windows來賓作業系統必須執行Windows Server 2008 R2或更新版本。
 +

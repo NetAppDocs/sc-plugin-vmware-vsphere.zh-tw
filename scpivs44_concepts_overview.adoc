@@ -21,7 +21,7 @@ VMware vCenter外掛程式可為您的環境增添下列功能：SnapCenter
 
 * 支援VM一致且損毀一致的資料保護作業。
 +
-您可以在vCenter中使用VMware vSphere Web用戶端GUI、執行VMware虛擬機器（傳統VM和VVol VM）、VMDK和資料存放區的所有備份與還原作業。對於VVol VM（VVol資料存放區中的VM）、僅支援損毀一致的備份。您也可以還原VM和VMDK、以及還原位於客體作業系統上的檔案和資料夾。
+您可以在vCenter中使用VMware vSphere用戶端GUI、執行VMware虛擬機器（傳統VM和vVol VM）、VMDK和資料存放區的所有備份與還原作業。對於VVol VM（VVol資料存放區中的VM）、僅支援損毀一致的備份。您也可以還原VM和VMDK、以及還原位於客體作業系統上的檔案和資料夾。
 
 +
 備份VM、VMDK和資料存放區時、外掛程式不支援RDM。VM的備份工作會忽略RDM。如果您需要備份RDM、則必須使用SnapCenter 以應用程式為基礎的外掛程式。
@@ -37,11 +37,11 @@ VMware的VMware插件包括一個MySQL資料庫、其中包含VMware外掛程式
 在VMDK、原始裝置對應（RDM）和NFS資料存放區上、由於VMware本身採用了VMware的功能、因此能夠執行所有資料保護作業。SnapCenter SnapCenter部署虛擬應用裝置之後、外掛程式會處理與vCenter的所有互動。支援所有以應用程式為基礎的外掛程式。SnapCenter SnapCenter
 
 +
-不支援資料庫和VM的單一Snapshot複本。SnapCenterVM和資料庫的備份必須獨立排程和執行、如此一來便能建立獨立的Snapshot複本、即使資料庫和VM都裝載在同一個磁碟區中。資料庫應用程式備份必須使用SnapCenter 還原GUI排程；VM和資料存放區備份必須使用VMware vSphere Web用戶端GUI排程。
+不支援資料庫和VM的單一Snapshot複本。SnapCenterVM和資料庫的備份必須獨立排程和執行、如此一來便能建立獨立的Snapshot複本、即使資料庫和VM都裝載在同一個磁碟區中。資料庫應用程式備份必須使用SnapCenter 還原GUI排程；VM和資料存放區備份必須使用VMware vSphere用戶端GUI排程。
 
 * VM一致的Snapshot複本需要VMware工具
 +
-如果VMware Tools尚未安裝並執行、則檔案系統不會靜止、而且會建立損毀一致的Snapshot。
+如果VMware工具尚未安裝並執行、則檔案系統不會靜止、而且會建立損毀一致的Snapshot。
 
 * 在SAN（VMFS）環境中進行還原作業時、必須使用VMware Storage VMotion
 +
@@ -50,12 +50,12 @@ VMware檔案系統（VMFS）的還原工作流程採用VMware Storage VMotion功
 +
 NFS環境中的大多數還原作業都使用原生ONTAP 的還原功能（例如單一檔案SnapRestore 還原）、不需要VMware Storage VMotion。
 
-* VMware vSphere的支援工具是保護VMware VVol VM的必備工具。ONTAP
+* VMware vSphere需要使用哪些工具來設定VMware VVol VM ONTAP 。
 +
-您可以使用ONTAP 「VMware工具」在ONTAP VMware Web用戶端上、針對VMware中的vVols進行資源配置和設定儲存。
+您可以使用ONTAP 支援功能來配置ONTAP 及配置VMware Web用戶端中vVols的儲存資源。
 
 +
-如需詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["VMware vSphere適用的VMware工具ONTAP"^]
+如需詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["VMware vSphere適用的工具ONTAP"^]
 
 * VMware的VMware插件是以虛擬應用裝置的形式部署在Linux VM中SnapCenter
 +

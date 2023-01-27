@@ -31,18 +31,15 @@ summary: 您必須先建立備份原則、才能使用SnapCenter VMware vSphere�
 
 
 
-* 如果您想要VM一致的備份、則必須安裝並執行VMware Tools。需要VMware工具來停止虛擬機器。VVol VM不支援VM一致的備份。
+* 如果您想要VM一致的備份、則必須安裝並執行VMware工具。需要VMware工具來停止虛擬機器。VVol VM不支援VM一致的備份。
 
 
 .關於這項工作
 這些精靈頁面上的大部分欄位都是不言自明的。下列資訊說明您可能需要指引的部分欄位。
 
 .步驟
-. 在VMware vSphere Web用戶端的左側導覽器窗格中、按一下*原則*。
+. 在選擇控制閥外掛程式的左側導覽器窗格中、按一下* Policies *。
 . 在* Policies（政策）*頁面上、按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *建立*以啟動精靈。
-+
-image:scpivs44_image15.png["錯誤：缺少圖形影像"]
-
 . 在「*新備份原則*」頁面上、選取將使用該原則的vCenter Server、然後輸入原則名稱和說明。
 +
 ** 連結模式
@@ -115,7 +112,7 @@ NOTE: Snapshot複本標籤最多允許31個字元。
 vVols不支援此選項。對於VVol VM、只會執行損毀一致的備份。
 
 
-IMPORTANT: 您必須在VM上執行VMware Tools、才能執行VM一致的備份。如果VMware Tools未執行、則會改為執行損毀一致的備份。
+IMPORTANT: 您必須在VM上執行VMware工具、才能執行VM一致的備份。如果VMware Tools未執行、則會改為執行損毀一致的備份。
 
 
 NOTE: 當您勾選VM一致性方塊時、備份作業可能需要更長時間、而且需要更多儲存空間。在此案例中、VM會先靜止、然後VMware執行VM一致的快照、SnapCenter 接著執行VMware的備份作業、然後恢復VM作業。VM客體記憶體不包含在VM一致性快照中。

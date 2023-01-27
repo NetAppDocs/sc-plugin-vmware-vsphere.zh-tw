@@ -13,8 +13,10 @@ summary: 如果您使用SnapCenter 適用於VMware vSphere虛擬應用裝置的V
 :imagesdir: ./media/
 
 
-[role="lead"]
-如果您使用SnapCenter 適用於VMware vSphere虛擬應用裝置的VMware vCenter外掛程式、則可以升級至較新的版本。
+
+NOTE: 升級至4號選擇控制閥僅支援VMware vCenter Server 7更新版本1及更新版本、若為版本7更新版本1之前的VMware vCenter伺服器、您應繼續使用4號選擇控制閥。不受支援版本的VMware vCenter伺服器會中斷升級。
+
+如果您使用SnapCenter 適用於VMware vSphere虛擬應用裝置的VMware vCenter外掛程式、則可以升級至較新的版本。升級程序會取消註冊現有的外掛程式、並部署僅與vSphere 7.0U1及更新版本相容的外掛程式。
 
 請參閱 link:scpivs44_release_notes.html["VMware vSphere的版次說明SnapCenter"] 以取得支援的升級途徑資訊。
 
@@ -41,7 +43,7 @@ NOTE: 不支援將網路組態從靜態切換為DHCP。
 . 安裝升級。
 +
 .. 在瀏覽器中、瀏覽至VMware vSphere vCenter。
-.. 在vCenter GUI上、按一下* vSphere Web Client（HTML）*。
+.. 在vCenter GUI上、按一下* vSphere用戶端（HTML）*。
 .. 登入「* VMware vCenter單一登入*」頁面。
 .. 在導覽器窗格中、按一下您要升級的VM、然後按一下*摘要*索引標籤。
 .. 在*相關物件*窗格中、按一下清單中的任何資料存放區、然後按一下*摘要*索引標籤。

@@ -18,7 +18,7 @@ summary:
 
 NOTE: 對於IPv6 HTML Web用戶端、您必須使用Chrome或Firefox。
 
-. 在VMware畫面上、按一下* vSphere Web Client（HTML5）*、然後登入* VMware vCenter單一登入頁面*。
+. 登入* VMware vCenter單一登入頁面*。
 . 以滑鼠右鍵按一下任何虛擬機器的有效父物件（例如資料中心、資料夾、叢集或主機）、然後選取*部署OVF範本*以啟動精靈。
 . 在「*選取OVF範本*」頁面上、指定「.ova」檔案的位置（如下表所列）、然後按「*下一步*」。
 +
@@ -73,7 +73,7 @@ NOTE: 所有主機都必須設定IP位址（不支援FQDN主機名稱）。部�
 請使用「https://<appliance-IP-address>:8080`」格式來存取管理GUI。
 
 +
-根據預設、維護主控台的使用者名稱會設為「maintt」、密碼會設為「admin123」。
+維護主控台使用者名稱設定為 `maint` 根據預設、您可以在安裝時設定密碼。
 
 . 登入vCenter HTML5用戶端、然後按一下工具列中的*功能表*、然後選取* SnapCenter 適用於VMware vSpher*的「*插件」
 

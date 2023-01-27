@@ -37,7 +37,7 @@ summary: 您可以將一個或多個VMDK從備份附加至父VM、或附加至�
 
 
 .步驟
-. 在VMware vSphere Web用戶端GUI中、按一下工具列中的*功能表*、然後從下拉式清單中選取*主機與叢集*。
+. 在VMware vSphere用戶端GUI中、按一下工具列中的*功能表*、然後從下拉式清單中選取*主機與叢集*。
 . 在左側導覽窗格中、以滑鼠右鍵按一下某個VM、然後在下SnapCenter 拉式清單中選取* NetApp Sorg*、然後在次要下拉式清單中選取*附加虛擬磁碟*。
 +
 image:scpivs44_image22.png["錯誤：缺少圖形影像"]

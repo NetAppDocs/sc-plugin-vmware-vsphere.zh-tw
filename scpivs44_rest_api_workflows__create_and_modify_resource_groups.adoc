@@ -24,7 +24,7 @@ summary: 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛�
 | 步驟 | REST API | 註解 
 
 
-| 1. | 「/4.1/policies」 | 「Get Policies」（取得原則）會取得VMware vSphere Web用戶端原則清單。請注意在建立資源群組和原則* frequency *時、您要使用的* policyId*。如果未列出任何原則、請使用「Create Policy（建立原則）」REST API來建立新原則。 
+| 1. | 「/4.1/policies」 | `Get Policies` 取得VMware vSphere用戶端原則清單。請注意在建立資源群組和原則* frequency *時、您要使用的* policyId*。如果未列出原則、請使用 `Create Policy` REST API以建立新原則。 
 
 
 | 2. | /4.1/resource-Groups（資源組） | 「Create a Resource Group」（建立資源群組）會建立具有指定原則的資源群組。從步驟1傳遞*原則Id*、並輸入原則*頻率*詳細資料、以及所有其他必要的屬性。 
@@ -35,10 +35,10 @@ summary: 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛�
 | 步驟 | REST API | 註解 
 
 
-| 1. | /4.1/resource-Groups（資源組） | 「Get List of Resource Groups」（取得資源群組清單）可取得VMware vSphere Web用戶端資源群組清單。請注意您要修改的*資源群組Id*。 
+| 1. | /4.1/resource-Groups（資源組） | `Get List of Resource Groups` 取得VMware vSphere用戶端資源群組清單。請注意您要修改的*資源群組Id*。 
 
 
-| 2. | 「/4.1/policies」 | 如果您想要修改指派的原則、「Get Policies」（取得原則）會取得VMware vSphere Web用戶端原則清單。請注意修改資源群組和原則* frequency *時所要使用的* policyId*。 
+| 2. | 「/4.1/policies」 | 如果您想要修改指派的原則、 `Get Policies` 取得VMware vSphere用戶端原則清單。請注意修改資源群組和原則* frequency *時所要使用的* policyId*。 
 
 
 | 3. | //4.1/resource-Groups/{resoceGroupId} | 「更新資源群組」會修改指定的資源群組。從步驟1傳遞*資源群組Id*。或者、您也可以從步驟2傳遞*原則Id*、並輸入*頻率*詳細資料、以及所有其他必要的屬性。 

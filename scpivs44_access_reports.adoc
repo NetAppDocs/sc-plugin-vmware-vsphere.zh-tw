@@ -19,7 +19,7 @@ summary: 您可以從儀表板要求一份或多份工作的報告。
 「報告」索引標籤包含儀表板「工作」頁面上所選工作的相關資訊。如果未選取任何工作、則「報告」索引標籤為空白。
 
 .步驟
-. 在vSphere Web用戶端的左側導覽器窗格中、按一下*儀表板*、選取vCenter Server、然後按一下*報告*索引標籤。
+. 在vSphere用戶端的左側導覽器窗格中、按一下*儀表板*、選取vCenter伺服器、然後按一下*報告*索引標籤。
 . 對於備份報告、您可以執行下列動作：
 +
 .. 修改報告
@@ -40,12 +40,12 @@ summary: 您可以從儀表板要求一份或多份工作的報告。
 
 
 
-== 來自VMware vSphere Web Client的報告類型
+== 來自VMware vSphere用戶端的報告類型
 
-VMware vSphere Web Client for SnapCenter VMware提供可自訂的報告選項、可為您提供資料保護工作和外掛程式資源狀態的詳細資料。您只能產生主要保護的報告。
+VMware vSphere Client for SnapCenter EView提供可自訂的報告選項、可為您提供資料保護工作和外掛程式資源狀態的詳細資料。您只能產生主要保護的報告。
 
 
-NOTE: 備份排程會在SnapCenter 部署VMware vCenter外掛程式的時區執行。vCenter會報告vCenter所在時區內的資料。因此、如果SnapCenter VMware vCenter外掛程式和vCenter位於不同的時區、則VMware vSphere Web用戶端儀表板中的資料可能與報告中的資料不同。
+NOTE: 備份排程會在SnapCenter 部署VMware vCenter外掛程式的時區執行。vCenter會報告vCenter所在時區內的資料。因此、如果SnapCenter VMware vCenter外掛程式和vCenter位於不同的時區、則VMware vSphere用戶端儀表板中的資料可能與報告中的資料不同。
 
 儀表板只會在執行移轉後的備份之後、才會顯示移轉備份的相關資訊。
 

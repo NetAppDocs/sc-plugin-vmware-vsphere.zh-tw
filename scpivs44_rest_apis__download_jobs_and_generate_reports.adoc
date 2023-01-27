@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_rest_apis__download_jobs_and_generate_reports.html 
 keywords:  
-summary: 若要使用SnapCenter 適用於VMware vSphere REST API的VMware vSphere外掛程式、為VMware vSphere Web用戶端工作產生報告和下載記錄、您必須使用VMware vSphere的REST API呼叫。 
+summary: 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式來產生VMware vSphere用戶端工作的報告和下載記錄、您必須使用VMware vSphere的REST API呼叫。 
 ---
 = REST API可下載工作並產生報告
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 若要使用SnapCenter 適用於VMware vSphere REST API的VMware vSpher
 
 
 [role="lead"]
-若要使用SnapCenter 適用於VMware vSphere REST API的VMware vSphere外掛程式、為VMware vSphere Web用戶端工作產生報告和下載記錄、您必須使用VMware vSphere的REST API呼叫。
+若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式來產生VMware vSphere用戶端工作的報告和下載記錄、您必須使用VMware vSphere的REST API呼叫。
 
 對於每個REST API、請在REST API前面新增「https://<server>:<port>`」、以形成完整的端點。
 

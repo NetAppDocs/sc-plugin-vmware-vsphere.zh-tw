@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_view_status_information.html 
 keywords:  
-summary: 您可以在vSphere Web用戶端儀表板上檢視狀態資訊。狀態資訊每小時更新一次。 
+summary: 您可以在vSphere用戶端儀表板上檢視狀態資訊。狀態資訊每小時更新一次。 
 ---
 = 檢視狀態資訊
 :hardbreaks:
@@ -13,13 +13,10 @@ summary: 您可以在vSphere Web用戶端儀表板上檢視狀態資訊。狀態
 :imagesdir: ./media/
 
 
-您可以在vSphere Web用戶端儀表板上檢視狀態資訊。狀態資訊每小時更新一次。
+您可以在vSphere用戶端儀表板上檢視狀態資訊。狀態資訊每小時更新一次。
 
 .步驟
-. 在vSphere Web用戶端的左側導覽器窗格中、按一下*儀表板*、選取vCenter Server、然後按一下*狀態*索引標籤。
-+
-image:scpivs44_image7.png["錯誤：缺少圖形影像"]
-
+. 在vSphere用戶端的左側導覽器窗格中、按一下*儀表板*、選取vCenter Server、然後按一下儀表板窗格中的*狀態*索引標籤。
 . 檢視總覽狀態資訊、或按一下連結以取得更多詳細資料、如下表所列。
 +
 |===

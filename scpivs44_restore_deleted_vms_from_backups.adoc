@@ -43,7 +43,7 @@ NOTE: 您無法將vVol VM還原至其他位置。
 NOTE: 還原刪除的VM時、所有原先指派給VM的標記或資料夾都不會還原。
 
 .開始之前
-* 在VMware vSphere Web用戶端的「Storage Systems」（儲存系統）頁面上、儲存系統的使用者帳戶必須具有 link:scpivs44_minimum_ontap_privileges_required.html["要求最低的不必要權限才能執行此功能ONTAP ONTAP"]。
+* 儲存系統的使用者帳戶（在VMware vSphere用戶端的「Storage Systems」（儲存系統）頁面上）必須具有 link:scpivs44_minimum_ontap_privileges_required.html["要求最低的不必要權限才能執行此功能ONTAP ONTAP"]。
 * vCenter中的使用者帳戶必須具有 link:scpivs44_minimum_vcenter_privileges_required.html["適用於VMware vSphere的VMware vSphere的VMware vCenter外掛程式所需的最低權限SnapCenter"]。
 * 備份必須存在。
 +

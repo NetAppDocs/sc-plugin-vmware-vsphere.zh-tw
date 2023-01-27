@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: scpivs44_download_the_ova_open_virtual_appliance.html 
+permalink: scv48_add_certificates_to_certificate_store.html 
 keywords:  
-summary: tar檔案包含OVA、這是一組用於VM和資料存放區資料保護及憑證檔案的微服務。 
+summary: 將憑證授權單位的根和中介憑證新增至VMware vCenter、以信任憑證及其簽署的成品。 
 ---
-= 下載開放式虛擬應用裝置（OVA）
+= 將憑證新增至VMware憑證存放區
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -19,13 +19,6 @@ summary: tar檔案包含OVA、這是一組用於VM和資料存放區資料保護
 在VMware vCenter 7.0.3及更新版本中、由Entrust憑證簽署的OVA不再信任。您需要執行下列程序來解決此問題。
 
 .步驟
-. 若要下載SnapCenter VMware版的VMware版更新程式：
-+
-** 登入NetApp支援網站（ https://mysupport.netapp.com/products/index.html["https://mysupport.netapp.com/products/index.html"^]）。
-** 從產品清單中、選取* SnapCenter 《VMware vSphere *適用的*》「VMware vSphere外掛程式」、然後按一下「*下載最新版本*」按鈕。
-** 下載SnapCenter VMware vSphere的《支援VMware vSphere的功能》外掛程式 `.tar` 檔案至任何位置。
-
-
 . 使用vSphere Client登入vCenter Server。
 . 瀏覽至*管理>憑證>憑證管理*。
 . 按一下「*信任的根存放區*」旁邊的「*新增*」

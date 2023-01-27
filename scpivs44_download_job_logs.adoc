@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_download_job_logs.html 
 keywords:  
-summary: 您可以從SnapCenter VMware vSphere Web用戶端儀表板的「工作監控」索引標籤下載工作記錄。 
+summary: 您可以從SnapCenter VMware vSphere用戶端儀表板的「工作監控」索引標籤下載工作記錄。 
 ---
 = 下載工作記錄
 :hardbreaks:
@@ -14,18 +14,15 @@ summary: 您可以從SnapCenter VMware vSphere Web用戶端儀表板的「工作
 
 
 [role="lead"]
-您可以從SnapCenter VMware vSphere Web用戶端儀表板的「工作監控」索引標籤下載工作記錄。
+您可以從SnapCenter VMware vSphere用戶端儀表板的「工作監控」索引標籤下載工作記錄。
 
-如果您在使用VMware vSphere Web用戶端時遇到非預期的行為、可以使用記錄檔來識別原因並解決問題。
+如果您在使用VMware vSphere用戶端時遇到非預期的行為、可以使用記錄檔來識別原因並解決問題。
 
 
 NOTE: 保留工作記錄的預設值為30天、保留工作的預設值為90天。超過設定保留時間的工作記錄和工作、每六小時會清除一次。您可以使用組態「jobs/cleanup」REST API來修改保留工作和工作記錄的時間。您無法修改清除排程。
 
 .步驟
-. 在vSphere Web用戶端的左側導覽器窗格中、按一下*儀表板*、選取vCenter Server、然後按一下*工作監控*索引標籤。
-+
-image:scpivs44_image9.png["錯誤：缺少圖形影像"]
-
+. 在vSphere用戶端的左側導覽器窗格中、按一下*儀表板*、選取vCenter伺服器、然後按一下儀表板窗格中的*工作監控*索引標籤。
 . 按一下 image:scpivs44_image37.png["錯誤：缺少圖形影像"] 「工作監控」標題列中的「下載」圖示。
 +
 您可能需要向右捲動才能看到圖示。

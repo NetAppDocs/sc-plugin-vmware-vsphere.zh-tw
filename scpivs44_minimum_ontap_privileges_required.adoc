@@ -50,8 +50,11 @@ summary: 所需的最低限度驗證權限會因您使用的資料保護功能�
 | 唯讀命令：ONTAP 要求具備最低權限才能執行更新版本的功能 
 
 
-| Vserver 
+| Vserver Vserver對等端點 
 |===
+
+NOTE: 您可以忽略有關不受支援的Vserver命令的警告訊息。
+
 
 
 == 其他ONTAP 資訊

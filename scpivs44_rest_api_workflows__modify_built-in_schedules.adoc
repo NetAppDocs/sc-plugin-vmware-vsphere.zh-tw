@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_rest_api_workflows__modify_built-in_schedules.html 
 keywords:  
-summary: 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式修改VMware vSphere Web用戶端工作的內建排程、您必須依照規定的REST API呼叫順序進行。 
+summary: 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式修改VMware vSphere用戶端工作的內建排程、您必須遵循規定的REST API呼叫順序。 
 ---
 = REST API工作流程可修改內建排程
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛�
 
 
 [role="lead"]
-若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式修改VMware vSphere Web用戶端工作的內建排程、您必須依照規定的REST API呼叫順序進行。
+若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式修改VMware vSphere用戶端工作的內建排程、您必須遵循規定的REST API呼叫順序。
 
 內建排程是產品隨附的排程、例如MySQL資料庫傾印排程。您可以修改下列排程：「排程資料庫傾印」「排程-清除備份」「排程- AsupDataCollection」「排程-電腦儲存儲存儲存儲存」「排程-清除工作」
 

@@ -42,10 +42,7 @@ summary: 部署SnapCenter 完VMware vSphere的VMware vSphere版的VMware vCenter
 
 . 清除瀏覽器快取、然後檢查GUI是否正常運作。
 +
-如果問題持續發生、請重新啟動VMware vSphere Web用戶端服務
-
-+
-image:scpivs44_image5.png["錯誤：缺少圖形影像"]
+如果問題持續發生、請重新啟動VMware vSphere用戶端服務
 
 . 登入vCenter、然後按一下工具列中的*功能表*、然後選取* SnapCenter 適用於VMware vSpher*的*「插件」。
 

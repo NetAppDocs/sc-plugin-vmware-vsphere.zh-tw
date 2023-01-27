@@ -97,7 +97,7 @@ VM的還原作業會取消原始VM的登錄、從備份Snapshot複本還原VM、
 
 
 .步驟
-. 在VMware vSphere Web用戶端GUI中、按一下工具列中的*功能表*、然後從下拉式清單中選取* VM和範本*。
+. 在VMware vSphere用戶端GUI中、按一下工具列中的*功能表*、然後從下拉式清單中選取* VM和範本*。
 +
 
 NOTE: 如果您要還原刪除的VM、則新增至SnapCenter VMware插件的儲存VM認證資料必須是「vsadmin」、或是擁有與「vsadmin」相同權限的使用者帳戶。主機必須位於執行ONTAP 不支援的儲存系統上。

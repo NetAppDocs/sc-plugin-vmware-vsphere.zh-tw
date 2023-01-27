@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: scpivs48_rest_apis_audit_logs.html 
+keywords:  
+summary: REST API以產生稽核記錄 
+---
+= REST API以產生稽核記錄
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以從交換器REST API及選擇控制閥外掛程式使用者介面收集稽核記錄詳細資料。
+
+以下是Swagger REST API：
+
+. 取得4.1/稽核/記錄：取得所有記錄的稽核資料
+. 取得4.1/稽 核/記錄/｛FileName｝：取得特定記錄檔的稽核資料
+. POST 4.1/稽核/驗證：觸發稽核記錄驗證。
+
+
+若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式來產生VMware vSphere用戶端工作的稽核記錄、您必須使用VMware vSphere的REST API呼叫。
+
+針對每個REST API、請新增 `https://<server>:<port>/api` 在REST API的前面、形成完整的端點。
+
+請使用「工作」區段中的下列REST API來取得工作的詳細資訊：
+
+|===
+| REST API | 註解 
+
+
+| `4.1/audit/logs` | 傳回含有完整性資料的稽核記錄檔 
+
+
+| `4.1/audit/logs/{filename}` | 取得含有完整性資料的特定稽核記錄檔 
+
+
+| `4.1/audit/verify` | 觸發稽核驗證 
+|===

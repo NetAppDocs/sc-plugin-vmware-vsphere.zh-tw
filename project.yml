@@ -1,6 +1,6 @@
 ---
 settings:
-  name: SnapCenter Plug-in for VMware vSphere 4.7
+  name: SnapCenter Plug-in for VMware vSphere 4.8
   internal:
     pdf_enabled: true
   prod:
@@ -9,6 +9,9 @@ settings:
   versions:
   - name: VMware vSphere的插件SnapCenter
     url: "/sc-plugin-vmware-vsphere"
+    version-number: '4.8'
+  - name: VMware vSphere的插件SnapCenter
+    url: "/sc-plugin-vmware-vsphere-47"
     version-number: '4.7'
   - name: VMware vSphere的插件SnapCenter
     url: "/sc-plugin-vmware-vsphere-46"
@@ -19,7 +22,7 @@ settings:
   langs: zh-tw,us-en,ja-jp,zh-cn,ko-kr,fr-fr,de-de
 sidebar:
   entries:
-  - title: VMware vSphere 4.7文件的適用外掛程式SnapCenter
+  - title: VMware vSphere 4.8文件的支援外掛程式SnapCenter
     url: "/index.html"
   - title: 版本資訊
     url: "/scpivs44_release_notes.html"
@@ -53,23 +56,23 @@ sidebar:
       entries:
       - title: 部署規劃與需求
         url: "/scpivs44_deployment_planning_and_requirements.html"
-      - title: 需要最低ONTAP 的權限
+      - title: 需要權限ONTAP
         url: "/scpivs44_minimum_ontap_privileges_required.html"
       - title: 所需的vCenter權限下限
         url: "/scpivs44_minimum_vcenter_privileges_required.html"
-    - title: 下載SnapCenter VMware vSphere OVA的功能更新外掛程式（開放式虛擬應用裝置）
-      url: "/scpivs44_download_the_snapcenter_plug-in_for_vmware_vsphere_ova_open_virtual_appliance.html"
+    - title: 下載開放式虛擬應用裝置（OVA）
+      url: "/scpivs44_download_the_ova_open_virtual_appliance.html"
     - title: 部署SnapCenter VMware vSphere的VMware vCenter外掛程式
       url: "/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html"
     - title: 部署後所需的作業與問題
       url: "/scpivs44_post_deployment_required_operations_and_issues.html"
-    - title: 登入SnapCenter VMware vSphere Web用戶端
+    - title: 登入SnapCenter VMware vSphere Client
       url: "/scpivs44_log_in_to_the_snapcenter_vmware_vsphere_web_client.html"
   - title: 快速入門
     entries:
     - title: 總覽
       url: "/scpivs44_quick_start_overview.html"
-    - title: 下載OVA（開放式虛擬應用裝置）
+    - title: 下載開放式虛擬應用裝置（OVA）
       url: "/scpivs44_download_the_ova_open_virtual_appliance.html"
     - title: 部署SnapCenter VMware vSphere的VMware vCenter外掛程式
       url: "/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere_01.html"
@@ -93,6 +96,8 @@ sidebar:
       url: "/scpivs44_generate_a_support_bundle_from_the_snapcenter_plug-in_for_vmware_vsphere_gui.html"
     - title: 從維護主控台產生支援套裝組合
       url: "/scpivs44_generate_a_support_bundle_from_the_maintenance_console.html"
+    - title: 稽核記錄
+      url: "/scv48_audit_logs.html"
   - title: 管理儲存設備
     entries:
     - title: 新增儲存設備
@@ -151,6 +156,8 @@ sidebar:
       url: "/scpivs44_restore_the_most_recent_backup_of_the_mysql_database.html"
     - title: 還原MySQL資料庫的特定備份
       url: "/scpivs44_restore_a_specific_backup_of_the_mysql_database.html"
+  - title: 連接並卸除VMDK
+    entries:
     - title: 將VMDK附加至VM或VVol VM
       url: "/scpivs44_attach_vmdks_to_a_vm.html"
     - title: 分離虛擬磁碟
@@ -171,7 +178,7 @@ sidebar:
       url: "/scpivs44_guest_file_restore_scenarios_you_might_encounter.html"
   - title: 管理SnapCenter VMware vSphere應用裝置的VMware vCenter外掛程式
     entries:
-    - title: 重新啟動VMware vSphere Web用戶端服務
+    - title: 重新啟動VMware vSphere用戶端服務
       url: "/scpivs44_restart_the_vmware_vsphere_web_client_service.html"
     - title: 存取維護主控台
       url: "/scpivs44_access_the_maintenance_console.html"
@@ -231,6 +238,8 @@ sidebar:
       url: "/scpivs44_rest_api_workflows__modify_built-in_schedules.html"
     - title: REST API可將卡住的工作標示為失敗
       url: "/scpivs44_rest_apis_fail_stuck_jobs.html"
+    - title: REST API以產生稽核記錄
+      url: "/scpivs48_rest_apis_audit_logs.html"
   - title: 升級
     entries:
     - title: 升級至SnapCenter 舊版VMware vSphere的VMware vSphere用版不整合式外掛程式
@@ -246,7 +255,7 @@ homepage:
   - title: 開始使用
     links:
     - title: 版本資訊
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883356
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885659
     - title: 深入瞭解選擇控制閥
       url: "/scpivs44_concepts_overview.html"
     - title: 部署需求

@@ -22,7 +22,7 @@ summary: 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛�
 | 步驟 | REST API | 註解 
 
 
-| 1. | /4.1/resource-Groups（資源組） | 「Get List of Resource Groups」（取得資源群組清單）可取得VMware vSphere Web用戶端資源群組清單。請注意您要備份之資源群組的*資源群組Id*和*策略Id*。 
+| 1. | /4.1/resource-Groups（資源組） | `Get List of Resource Groups` 取得VMware vSphere用戶端資源群組清單。請注意您要備份之資源群組的*資源群組Id*和*策略Id*。 
 
 
 | 2. | /4.1/resource-Groups/backupnow] | 「在資源群組上執行備份」會隨需備份資源群組。從步驟1傳遞*資源群組Id*和*策略Id*。 

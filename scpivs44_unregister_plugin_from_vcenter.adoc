@@ -20,5 +20,5 @@ summary: 如果您在SnapCenter 連結模式的vCenter中停止使用VMware vCen
 .步驟
 . 在連結的vCenter SnapCenter 上停止使用VMware插件服務、請瀏覽至「受管理物件參考（MOB）」管理程式。
 . 在「內容」選項的「值」欄中選取「*內容*」、然後在下一個畫面中選取「值」欄中的「*擴充管理程式*」、以顯示已登錄的副檔名清單。
-. 取消註冊副檔名「com.netapp.scvm.webclient`」和「com.netapp.aegis`」。
+. 取消登錄副檔名 `com.netapp.scv.client` 和 `com.netapp.aegis`。
 

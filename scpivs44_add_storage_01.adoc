@@ -18,7 +18,7 @@ summary: 新增儲存設備可讓SnapCenter VMware vSphere的VMware vCenter的VM
 
 * 要使用的GUI
 +
-使用VMware vSphere Web用戶端新增儲存設備。
+使用VMware vSphere用戶端新增儲存設備。
 
 * 大型LUN
 +
@@ -26,10 +26,10 @@ VMware vSphere 4.5及更新版本的支援VMware vSphere 4.5外掛程式、可�
 
 * VMware虛擬磁碟區（vVols）
 +
-您必須先將vVols儲存系統新增ONTAP 至VMware vSphere的VMware Infrastructure、然後再將vVols儲存系統新增SnapCenter 至VMware vSphere的VMware vSphere外掛程式。
+您必須先將vVols儲存系統新增ONTAP 至VMware vSphere的各種工具、然後將vVols儲存系統新增至SnapCenter VMware vSphere的「支援VMware vSphere的插件」。
 
 +
-如需詳細資訊、請參閱 https://docs.netapp.com/vapp-98/index.jsp["VMware vSphere適用的VMware工具ONTAP"^]
+如需詳細資訊、請參閱 https://docs.netapp.com/vapp-98/index.jsp["VMware vSphere適用的工具ONTAP"^]
 
 
 
@@ -40,7 +40,7 @@ ESXi伺服器SnapCenter 、VMware vCenter外掛程式和每個vCenter必須同�
 VMware vCenter外掛程式可在直接連線的儲存VM和儲存叢集中的儲存VM上執行備份與還原作業。SnapCenter
 
 
-NOTE: 如果您使用SnapCenter VMware的支援功能來支援VMDK上的應用程式型備份、則必須使用SnapCenter VMware GUI輸入儲存認證資料並登錄儲存系統。
+NOTE: 如果您使用SnapCenter VMware的VMware解決方案外掛程式來支援VMDK上的應用程式型備份、則必須使用SnapCenter 此支援GUI來輸入儲存驗證詳細資料、並登錄儲存系統。
 
 * 若為連結模式的vCenter、您必須分別將儲存系統新增至每個vCenter。
 * 儲存虛擬機器的名稱必須解析為管理生命期。
@@ -50,15 +50,12 @@ NOTE: 如果您使用SnapCenter VMware的支援功能來支援VMDK上的應用�
 +
 如果您新增名稱無法解析為管理LIF的儲存VM、則排程的備份工作將會失敗、因為外掛程式無法探索該儲存VM上的任何資料存放區或磁碟區。如果發生這種情況、請將儲存虛擬機器新增SnapCenter 至F地、並指定管理LIF、或新增包含儲存虛擬機器的叢集、然後指定叢集管理LIF。
 
-* 儲存認證資料不會在SnapCenter 多個VMware插件執行個體之間共享、也不會在vCenter上的Windows SnapCenter 支援服務器和SnapCenter VMware外掛程式之間共享。
+* 儲存驗證詳細資料不會在SnapCenter 多個VMware插件執行個體之間、或在vCenter上的Windows SnapCenter VMware支援與SnapCenter VMware外掛程式之間共享。
 
 
 .步驟
-. 在vSphere Web用戶端的左側導覽器窗格中、按一下*儲存系統*。
+. 在vSphere用戶端的左側導覽器窗格中、按一下「*儲存系統*」。
 . 在「Storage Systems（儲存系統）」頁面上、按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *新增*。
-+
-image:scpivs44_image12.png["錯誤：缺少圖形影像"]
-
 . 在「*新增儲存系統*」精靈中、輸入下表所列的基本儲存VM或叢集資訊：
 +
 |===
@@ -71,10 +68,19 @@ image:scpivs44_image12.png["錯誤：缺少圖形影像"]
 | 平台 | 選取平台。 
 
 
-| 使用者名稱 | 輸入ONTAP 用來登入儲存虛擬機器的別名。 
+| 驗證方法 | 選取「認證」或「認證」。支援兩種類型的憑證：- https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_a_CA_signed_certificate_for_storage_system_authentication_with_SCV["CA簽署的憑證"^]- https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_a_self-signed_certificate_for_storage_system_authentication_with_SCV["自我簽署的憑證"^] 
 
 
-| 密碼 | 輸入儲存VM登入密碼。 
+| 使用者名稱 | 當您選取「認證」作為驗證方法時、此欄位會顯示。輸入ONTAP 用來登入儲存虛擬機器的別名。 
+
+
+| 密碼 | 當您選取「認證」作為驗證方法時、此欄位會顯示。輸入儲存VM登入密碼。 
+
+
+| 憑證 | 當您選取「憑證」作為驗證方法時、此欄位會顯示。瀏覽以選取憑證檔案。 
+
+
+| 私密金鑰 | 當您選取「憑證」作為驗證方法時、此欄位會顯示。瀏覽以選取私密金鑰檔案。 
 
 
 | 傳輸協定 | 選取儲存傳輸協定。 
@@ -87,6 +93,9 @@ image:scpivs44_image12.png["錯誤：缺少圖形影像"]
 
 
 | 偏好的IP | 如果儲存虛擬機器有多個管理IP位址、請勾選此方塊、然後輸入SnapCenter 您要使用的IP位址。*附註：*輸入IP位址時、請勿使用方括弧（[]）。 
+
+
+| 事件管理系統（EMS）與AutoSupport 範圍設定 | 如果您想要傳送EMS訊息到儲存系統的系統記錄、或是想AutoSupport 要將還原訊息傳送到儲存系統以進行套用保護、完成還原作業或失敗作業、請選取適當的核取方塊。選取「*將AutoSupport 失敗的作業發送到儲存系統*」核取方塊和「*將SnapCenter 還原伺服器事件記錄到SysLog*」核取方塊、即可啟用AutoSupport 「還原通知」。 
 
 
 | 將SnapCenter 伺服器事件記錄到syslog | 勾選此方塊以記錄SnapCenter VMware vCenter外掛程式的事件。 

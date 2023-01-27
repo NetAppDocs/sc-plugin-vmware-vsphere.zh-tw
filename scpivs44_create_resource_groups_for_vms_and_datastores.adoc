@@ -56,9 +56,9 @@ TIP: VMware vSphere 4.5及更新版本的支援VMware vSphere 4.5外掛程式、
 IMPORTANT: 請勿新增處於無法存取狀態的VM。雖然可以建立包含無法存取之VM的資源群組、但該資源群組的備份將會失敗。
 
 .開始之前
-建立包含VVol VM的資源群組之前、必須先部署VMware適用的VMware工具。ONTAP
+建立包含VVol VM的資源群組之前、必須先部署VMware的支援工具ONTAP 。
 
-如需詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["VMware vSphere適用的VMware工具ONTAP"^]。
+如需詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["VMware vSphere適用的工具ONTAP"^]。
 
 .關於這項工作
 您可以隨時從資源群組新增或移除資源。
@@ -96,17 +96,12 @@ IMPORTANT: 請勿新增處於無法存取狀態的VM。雖然可以建立包含�
 
 
 .步驟
-. 在VMware vSphere Web用戶端的左側導覽器窗格中、按一下*資源群組*、然後按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *建立*以啟動精靈。
-+
-image:scpivs44_image16.png["錯誤：缺少圖形影像"]
+. 在選擇控制閥外掛程式的左導覽器窗格中、按一下*資源群組*、然後按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *建立*以啟動精靈。
 
-+
+
 這是建立資源群組最簡單的方法。不過、您也可以執行下列其中一項、以單一資源建立資源群組：
 
-+
-** 若要建立一個VM的資源群組、請按一下「*功能表*」>「*主機與叢集*」、然後在VM上按一下滑鼠右鍵、再選取「NetApp SnapCenter 」、然後按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *建立資源群組*。
-** 若要建立一個資料存放區的資源群組、請按一下「*功能表*」>「*主機與叢集*」、然後在資料存放區上按一下滑鼠右鍵、再選取「* NetApp SnapCenter ori*」、然後按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *建立資源群組*。
-
++**若要為一個VM建立資源群組、請按一下*功能表*>*主機與叢集*、然後在VM上按一下滑鼠右鍵、再選取NetApp SnapCenter Sfor、然後按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *建立資源群組*。*若要為一個資料存放區建立資源群組、請按一下「*功能表*」>「*主機與叢集*」、然後在資料存放區上按一下滑鼠右鍵、再選取「* NetApp SnapCenter Sori*」、然後按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *建立資源群組*。
 
 . 在精靈的「*一般資訊與通知*」頁面上、執行下列動作：
 +
@@ -258,6 +253,6 @@ VMware vSphere的VMware vCenter外掛程式不會針對所有的VMware版本執�
 
 . 確定儲存VM正在執行。
 . 請確定VM所在的儲存系統已新增至SnapCenter VMware vSphere的VMware vSphere資源清冊的VMware外掛程式。
-. 請確定儲存VM已新增SnapCenter 至Sure。使用VMware vSphere Web用戶端GUI上的「Add storage system（新增儲存系統）」選項。
+. 請確定儲存VM已新增SnapCenter 至Sure。使用VMware vSphere用戶端GUI上的「Add storage system（新增儲存系統）」選項。
 . 如果NetApp和非NetApp資料存放區上都有VM的跨距VM、請將VMDK移至NetApp資料存放區。
 
