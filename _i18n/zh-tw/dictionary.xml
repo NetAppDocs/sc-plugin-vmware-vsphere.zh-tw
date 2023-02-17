@@ -601,7 +601,6 @@
   <block id="eb50e8e0fa1f18ba5c02154a1ec12932" category="paragraph">若要取得root使用者執行命令的權限、請使用Sudo &lt;command&gt;。</block>
   <block id="b425cca2998cc4a7041a0baf7681e912" category="list-text">您可以執行下列作業：</block>
   <block id="81c4bc22149c6022288661540ed446d9" category="list-text">選項1：應用程式組態</block>
-  <block id="3ce2085da7aea56d35b0dea2cb14d259" category="paragraph">啟動或停止SnapCenter VMware插件服務變更登入使用者名稱或密碼變更MySQL密碼設定MySQL備份清單MySQL備份還原MySQL備份</block>
   <block id="29b39b2b805d36f8dc5499179622da3f" category="list-text">選項2：系統組態</block>
   <block id="6d8740a8088260176630ddbfab8cb21e" category="paragraph">重新開機或關機虛擬機器變更「maint」使用者密碼變更時區變更NTP伺服器啟用/停用SSH存取增加磁碟大小（/監獄）升級安裝VMware Tools</block>
   <block id="99227cc56eb10094b5911955997594bd" category="list-text">選項3：網路組態</block>
@@ -691,7 +690,6 @@
   <block id="89321ccbd89a9e660bc76b0f2974632d" category="summary">VMware解決方法外掛程式採用SSL加密技術、可與用戶端瀏覽器進行安全通訊。SnapCenter雖然如此一來、便能跨線路啟用加密資料、建立新的自我簽署憑證、或是使用您自己的憑證授權單位（CA）基礎架構或協力廠商CA、確保該憑證對您的環境而言是獨一無二的。</block>
   <block id="9668b00eae1748d51afb7f725a15301a" category="inline-link">知識庫文章：如何建立及/或將SSL憑證匯入SnapCenter VMware vSphere的VMware外掛程式</block>
   <block id="ba9184cb661fa8aa1f1e6f33c3d4f7b2" category="paragraph">請參閱<block ref="bf84a7958c466b4ea912f7e396459ac9" category="inline-link-rx"></block>。</block>
-  <block id="ad33bb392843901d73fa5033f45bc6fe" category="list-text">以滑鼠右鍵按一下任何虛擬機器的有效父物件（例如資料中心、資料夾、叢集或主機）、然後選取*部署OVF範本*以啟動精靈。</block>
   <block id="b1e9e42ee09ce6ea661a7c8aa97f209c" category="list-text">在「*選取OVF範本*」頁面上、指定「.ova」檔案的位置（如下表所列）、然後按「*下一步*」。</block>
   <block id="6033b46c80eba511ea24319b744fe51a" category="cell">在此精靈頁面上…</block>
   <block id="2de89f426cb40a40a73e0dc57ba1d0b0" category="cell">選取名稱和資料夾</block>
@@ -731,7 +729,6 @@
   <block id="8c5a46f2b9b85dd307d50498933fef6a" category="paragraph">現有SnapCenter 的無需更新SnapCenter 的使用者必須使用不同於新版使用者的部署工作流程。</block>
   <block id="f71bd0a1884e2547796a0669e5a44f10" category="summary">部署SnapCenter 完VMware vSphere的VMware vSphere版的VMware vCenter外掛程式之後、您必須完成安裝。</block>
   <block id="b3b58566d772ea091ad559ad7c722828" category="doc">部署後所需的作業與問題</block>
-  <block id="624b86ee772b09351048910fc4a730dc" category="section-title">部署後所需的作業</block>
   <block id="25d5b23dfd2418ca2f7bd81c33cc1638" category="paragraph">如果您是SnapCenter 全新的支援者、則必須先將儲存VM新增SnapCenter 至支援中心、才能執行任何資料保護作業。新增儲存VM時、請指定管理LIF。您也可以新增叢集並指定叢集管理LIF。如需新增儲存設備的相關資訊、請參閱 <block ref="a83c5384e42700c13fcc0778429c0b28" category="inline-link-macro-rx"></block>。</block>
   <block id="40e6eca2154c52c78e678989d72d7903" category="section-title">您可能會遇到的部署問題</block>
   <block id="b4f66c551198bcae0c148df6464649d2" category="list-text">部署虛擬應用裝置之後、儀表板上的*備份工作*索引標籤可能不會在下列情況下載入：</block>
@@ -1334,7 +1331,6 @@
   <block id="7aba14c1c36be3f0d38307007b2d6dab" category="list-text">在主功能表中、輸入選項* 1）應用程式組態*。</block>
   <block id="95e2baf17cf4a1bf632b4bd66673704a" category="list-text">在「應用程式組態」功能表中、輸入選項* 6）MySQL備份與還原*。</block>
   <block id="59b659ecfd6274b621dfc183e437f754" category="list-text">在MySQL備份與還原組態功能表中、輸入選項* 2）列出MySQL備份*、然後記下您要還原的備份。</block>
-  <block id="f364887b448d21019e9b625ba8ef09ab" category="list-text">在MySQL備份與還原組態功能表中、輸入選項* 3）還原MySQL備份*。</block>
   <block id="9624f059902349e417131a7af9d859b6" category="list-text">在「Restore Using the Recent Backup（使用最近的備份進行還原）」提示下、輸入* n*。</block>
   <block id="d5585121b7086982bf5258a55244fb60" category="list-text">出現「Backup to Restore from（備份以還原自）」提示時、輸入備份名稱、然後按* Enter *。</block>
   <block id="a984d8aae435a575727971f17ebc2b7f" category="paragraph">所選的備份MySQL資料庫會還原至其原始位置。</block>
@@ -1395,7 +1391,6 @@
   <block id="370cf061cf511b1663901c8a1fa77c6f" category="section-title">vCenter管理員角色所需的權限</block>
   <block id="98b6d2abbb9e53348f4ee8d871b00548" category="paragraph">System.Anonymous System.View System.Read Datastore.Rename Datastore.Move Datastore.Delete Datastore.Browse Datastore.FileManagement Datastore.AllocateSpace Network。assign Host.Config.Storage Host.Config.Advanced Config Host.Config.Resources Host.Config.Config.SettingHost.Settings.local.ReconomeVM Host.Recone.ReseVM Host虛擬機器資源移除虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器資源移轉/虛擬機器虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/移轉/虛擬機器資源移轉/虛擬機器/移轉/移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉</block>
   <block id="84ecd316e231a4baee8cc1858eaf3625" category="section-title">VMware vCenter適用的VMware vCenter的必要權限SnapCenter</block>
-  <block id="2777d3dbd2d8409457938c03042db88b" category="paragraph">netappscore.Guest。恢復檔案netappsore.recovery.MountUnMount netappsor.Backup。刪除備份工作netappsor.Configure。設定儲存系統。刪除netappsor.View netappsor.Recovery。恢復。RecoverVM netappsor.Configure。設定儲存系統。新增更新netappsor.Backup。立即備份netapp.scor.guest虛擬機器、vap.guest虛擬機器、vapp.ap.ap.ap.guest虛擬機器、vap.ap.ap.ap.apore.guest虛擬機器、vapp</block>
   <block id="73a58d0fa37326c35696eb0d6e13265a" category="summary">您可以使用「shCBR.override」組態檔中列出的內容來變更預設值。</block>
   <block id="24780439a11f70806e96ae85ff282a91" category="doc">您可以置換的內容</block>
   <block id="76b15e72b7c34ab8eb9070d81c568a5f" category="list-text">根據預設、範本會使用雜湊符號來註解組態內容。若要使用屬性來修改組態值、您必須移除「#」字元。</block>
@@ -1590,8 +1585,6 @@
   <block id="38ec29eae6d34ec9aee61eeb1750d41f" category="cell">支援TLS SnapCenter</block>
   <block id="91a33043fc7eebee30634cb063fa6e2c" category="cell">適用於陣列整合的VMware應用程式vStorage API（VAAI）</block>
   <block id="16e729ceefd4cd71e291d0800dd9e9c0" category="cell">VMware vSphere的VMware vSphere外掛程式使用此功能來改善還原作業的效能。SnapCenter它也能改善NFS環境的效能。</block>
-  <block id="47ff422f78a776fed1a1b024f1205717" category="cell">VMware vSphere的VMware vSphere外掛程式使用此功能來管理VVol資料存放區（VMware虛擬磁碟區）SnapCenter 。如需支援的版本、請參閱NetApp互通性對照表工具。</block>
-  <block id="272ac1abd82997e2442d32a79e6f5271" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="25eb2128e948e2544fabd66492bfb7a4" category="inline-link-rx"></block>。</block>
   <block id="18cd7192921dd5ac27a1a7c5ef795c20" category="section-title">空間與規模需求</block>
   <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="cell">需求</block>
   <block id="696c660ff8d9323e55146a6dbd4e4088" category="cell">作業系統</block>
@@ -1731,10 +1724,6 @@
   <block id="007b03bd2ae7b16d42b53ba8a2330186" category="list-text">不支援橫跨VM的VVOL資料存放區。由於未備份虛擬機器跨距vVol資料存放區中附加的VMDK、因此還原的VM只會包含部分VMDK。</block>
   <block id="3517efb765e07026ad62bc8e70a5e01a" category="list-text">您無法將VVol還原至其他主機。</block>
   <block id="c06551216ac3dfe9b7ff1f728845efe6" category="list-text">不支援VVOL自動重新平衡。</block>
-  <block id="2475c9dd54056833d6396fbed1f941d8" category="paragraph">VMware vSphere的VMware vCenter外掛程式不會針對所有的VMware版本執行相容性檢查、僅適用於版本8.2.1及更早版本。SnapCenter ONTAP ONTAP因此、請務必查看<block ref="a1b283c4671de73f5e64651c8e98491f" category="inline-link-rx"></block> 以取得SnapCenter 有關支援的最新資訊。</block>
-  <block id="ca3bf2cb39f62342194d0f6777ffe162" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="a1b283c4671de73f5e64651c8e98491f" category="inline-link-rx"></block>。</block>
-  <block id="fb80b6fccf5f1cdcfd342989b34962c7" category="paragraph">您無法從執行Linux客體作業系統的VM還原檔案和資料夾。不過、您可以附加VMDK、然後手動還原檔案和資料夾。如需受支援來賓作業系統的最新資訊、請參閱<block ref="a1b283c4671de73f5e64651c8e98491f" category="inline-link-rx"></block>。</block>
-  <block id="a888ab84707631c86f5006309e186d1d" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="56392423f5d438aef305a97c794e0835" category="inline-link-rx"></block> （僅限部分）IMT 。</block>
   <block id="0f928371dde9bb28b5372e8e7729ebb0" category="paragraph">若要從備份中全域排除一或多個資料存放區、您必須在「shCBR.override」組態檔的「globe.ds.exclite.Pattern」內容中指定資料存放區名稱。請參閱 <block ref="37a0363725b373caf92b58503affefad" category="inline-xref-macro-rx"></block>。</block>
   <block id="ec6b0c2e1fb8998a9149b0e870ce2442" category="list-text">您必須是叢集管理員、才能建立及管理使用者角色。您可以將使用者與叢集儲存VM或儲存VM建立關聯。</block>
   <block id="2cb2843b629d315325aac076907ec4b9" category="cell">VMware ESXi伺服器連接埠</block>
@@ -1834,7 +1823,6 @@
   <block id="6d47c5cf94534c631cda65b432ae3e1c" category="cell">如果您想要傳送EMS訊息到儲存系統的系統記錄、或是想AutoSupport 要將還原訊息傳送到儲存系統以進行套用保護、完成還原作業或失敗作業、請選取適當的核取方塊。選取「*將AutoSupport 失敗的作業發送到儲存系統*」核取方塊和「*將SnapCenter 還原伺服器事件記錄到SysLog*」核取方塊、即可啟用AutoSupport 「還原通知」。</block>
   <block id="f69439260ecee7ac85f815e8701071d9" category="list-text">若要保護VVol VM（VMware vVol資料儲存區上的VM）、您必須先部署ONTAP VMware vSphere的功能介紹工具。支援VMware Web用戶端上的VMware工具、可在VMware Web用戶端上配置及配置vVols儲存設備ONTAP ONTAP 。</block>
   <block id="4c95edce583c0b5a02939269f1db3951" category="paragraph">如需詳細資訊、請參閱<block ref="803b0580f102da00b07f33d2f17fdadb" category="inline-link-rx"></block></block>
-  <block id="6f50dc0b580db44cdc625526215696f4" category="paragraph">如需ONTAP 有關支援版本的更新資訊、請參閱<block ref="25eb2128e948e2544fabd66492bfb7a4" category="inline-link-rx"></block>。</block>
   <block id="7f48db72c7f9bf7951ba6e6012bf6991" category="cell">7.0U1及更高版本</block>
   <block id="652b6799454f23103801798b5880725b" category="cell">VMware的支援工具ONTAP</block>
   <block id="1c7a775c6faba262273ef5058ab0a74c" category="paragraph">8144（HTTPS）、雙向連接埠用於從VMware vSphere用戶端和SnapCenter 從VMware Server進行通訊。8080雙向此連接埠用於管理虛擬應用裝置。</block>
@@ -1989,4 +1977,46 @@
   <block id="7f52ae2d13fc881eab436a11ad6556a4" category="paragraph"><block ref="ca3710e05c94c666b5609593ee562322" prefix="" category="inline-code"></block></block>
   <block id="3c1f7e3cd1e718101b83fa846ebee738" category="sidebar">VMware vSphere 4.8文件的支援外掛程式SnapCenter</block>
   <block id="5b1407cb7656fff3e143180f583fb24f" category="sidebar">下載開放式虛擬應用裝置（OVA）</block>
+  <block id="cbbfd63b6b7acbdfdb4330c539532abc" category="paragraph">1）顯示SnapCenter VMware vSphere的支援功能更新摘要2）啟動SnapCenter VMware vSphere服務的支援功能更新外掛程式3）停止SnapCenter VMware vSphere服務的支援功能更新外掛程式4）變更使用者名稱與密碼以登入SnapCenter VMware vSphere UI的支援功能更新套件5）變更MySQL密碼6）MySQL備份與還原</block>
+  <block id="52e12dd3f28531c8e18fc3a23a8e52fb" category="paragraph">1）重新開機虛擬機器2）關機虛擬機器3）變更「maint」使用者密碼4）變更時區5）變更NTP伺服器6）停用SSH存取7）增加磁碟容量（/監獄）8）升級9）安裝VMware工具</block>
+  <block id="d41e7519495eb46654bcf9a2d9efe95f" category="paragraph">1）顯示IP位址設定2）變更IP位址設定3）顯示網域名稱搜尋設定4）變更網域名稱搜尋設定5）顯示靜態路由6）變更靜態路由7）提交變更8）Ping主機</block>
+  <block id="e37e18d5a4d5d72f5ad511446917425b" category="paragraph">1）產生支援套件2）存取診斷Shell 3）啟用遠端診斷存取4）產生核心傾印套件</block>
+  <block id="36e391315954a298b55333c0f1afcc71" category="paragraph">請依照下列步驟建立資源群組。</block>
+  <block id="6a03edb8ab46dff4278e3f5e0e5ebe46" category="list-text">若為VMware vCenter 7.0.3及更新版本、請依照中的步驟進行 <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"></block> 可將證書導入vCenter。</block>
+  <block id="28acc952a6abc3088dfdb90892152390" category="paragraph">如需ONTAP 有關支援版本的更新資訊、請參閱<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>。</block>
+  <block id="f6587f6fadc744b8cb45803b6c80ebdf" category="cell">VMware vSphere的VMware vSphere外掛程式使用此功能來管理VVol資料存放區（VMware虛擬磁碟區）SnapCenter 。如需支援的版本、請參閱<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>。</block>
+  <block id="9fb61c301e687d6e94404c0e36e5e7dd" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>。</block>
+  <block id="8775bf884912200ed43fd5a867b909a3" category="cell">*權限*</block>
+  <block id="5dcb8d6dcd6a728fca3f52275f7de381" category="cell">*標籤*</block>
+  <block id="63631c8f87166b2dd980c7dea2a958bf" category="cell">netappsorm.訪 客.RestoreFile</block>
+  <block id="18614d43e01f589b5cbab150b251a4e3" category="cell">客體檔案還原</block>
+  <block id="bcf772d5237a9b8a50c96506deaaea37" category="cell">NETappSCV。儲料。掛載</block>
+  <block id="143d9f21169e7e0e9bec461dd7e5d896" category="cell">掛載/卸載</block>
+  <block id="c513fabed2e2a966f6577f0c621c4740" category="cell">netappsorm.Backup。刪除備份工作</block>
+  <block id="d49ac5b82e9eab9de9400622f3cda50c" category="cell">刪除資源群組/備份</block>
+  <block id="1aaea446328aa82cfe305f90f00c901d" category="cell">netappsc.Configure。Configure儲存系統。刪除</block>
+  <block id="2f6f3ba466a8aacf6e06bf757bfe35f7" category="cell">移除儲存系統</block>
+  <block id="c388397b819aae63151a79d9f5ac2e9e" category="cell">NETappSCV檢視</block>
+  <block id="4351cfebe4b61d8aa5efa1d020710005" category="cell">檢視</block>
+  <block id="ca3f2ead17284710c1faf6e9db6ceb0b" category="cell">NETappSCV。RecoverVM恢復</block>
+  <block id="3c17630715891eac246fa72d60b6c223" category="cell">恢復VM</block>
+  <block id="c8583cbbd5054f6c0b4ebada8d954132" category="cell">Netappsc.Configure。Configure儲存系統。AddUpdate</block>
+  <block id="d18f05aa46baf7c8dd6ba80729699b10" category="cell">新增/修改儲存系統</block>
+  <block id="718a9acdd3797e80412934dd5c5ffbbf" category="cell">netappsorm.Backup、立即備份</block>
+  <block id="9a9852432e1a7055c64fef6ff8f6dd65" category="cell">立即備份</block>
+  <block id="720357e5c7abed8dd85206feb43672c6" category="cell">NETappSCV。Guest。設定</block>
+  <block id="49700bdfc1e3b3ad595f56cbffee281c" category="cell">客體組態</block>
+  <block id="f31010ab4c21afc391a4e14b85ae93ce" category="cell">netappsection.Config.ConfigureSnapCenterServer</block>
+  <block id="2cee59426cd90e54e996291d6569105e" category="cell">設定SnapCenter 伺服器</block>
+  <block id="8ae2a90b3537ffffdf47288b1d345ad8" category="cell">Netappsor.Backup備份排程</block>
+  <block id="8c6c52daf8bb0314493294539cb1fb1c" category="cell">建立資源群組</block>
+  <block id="7ce0ae0a4183f1b315340993a38afa59" category="list-text">在MySQL備份與還原組態功能表中、輸入選項* 4）還原MySQL備份*。</block>
+  <block id="a55d41893866118c93320ec3e7c63152" category="paragraph">VMware vSphere的VMware vCenter外掛程式不會針對所有的VMware版本執行相容性檢查、僅適用於版本8.2.1及更早版本。SnapCenter ONTAP ONTAP因此、請務必查看<block ref="642354ba07295cdff6111b1f7ed27dbd" category="inline-link-rx"></block> 以取得SnapCenter 有關支援的最新資訊。</block>
+  <block id="a70216f52adf1eb56f9c607820ec2859" category="paragraph">請依照下列指示建立備份原則</block>
+  <block id="288cb2d6166f322fa3f277facda664f9" category="paragraph">部署SnapCenter 完VMware vSphere的VMware vSphere版的VMware vCenter外掛程式之後、您必須完成安裝。=部署後所需的作業</block>
+  <block id="0a631d60b99e22182e8049161c23edfe" category="paragraph">請依照本節中的步驟新增儲存設備。</block>
+  <block id="6c8295efcbb45c1c61f419f14cc9f532" category="list-text">在導覽窗格中、以滑鼠右鍵按一下任何虛擬機器的有效父物件（例如資料中心、資料夾、叢集或主機）、然後選取*部署OVF範本*以啟動VMware部署精靈。</block>
+  <block id="516e6120468db109789fef9f29971da1" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block> （僅限部分）IMT 。</block>
+  <block id="d67e652c45da4feeb66ffd284d7138ac" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="642354ba07295cdff6111b1f7ed27dbd" category="inline-link-rx"></block>。</block>
+  <block id="8b79e6914192b4dd6ecea019ae3a7b61" category="paragraph">您無法從執行Linux客體作業系統的VM還原檔案和資料夾。不過、您可以附加VMDK、然後手動還原檔案和資料夾。如需受支援來賓作業系統的最新資訊、請參閱<block ref="642354ba07295cdff6111b1f7ed27dbd" category="inline-link-rx"></block>。</block>
 </blocks>

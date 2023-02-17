@@ -13,6 +13,7 @@ summary: 如果您在SnapCenter 連結模式的vCenter中停止使用VMware vCen
 :imagesdir: ./media/
 
 
+[role="lead"]
 如果您在SnapCenter 連結模式的vCenter中停止使用VMware vCenter外掛程式服務、則並非所有連結的vCenter都能使用資源群組、即使SnapCenter 其他連結的vCenter正在執行VMware插件服務也一樣。
 
 您必須SnapCenter 手動取消登錄VMware的更新程式。

@@ -13,6 +13,7 @@ summary: 本節提供SnapCenter 適用於VMware vSphere的VMware vSphere的VMwar
 :imagesdir: ./media/
 
 
+[role="lead"]
 如果您使用下列儲存系統、則VMware vSphere的VMware vSphere外掛程式為免費產品：SnapCenter
 
 * FAS

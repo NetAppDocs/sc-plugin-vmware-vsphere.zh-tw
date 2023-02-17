@@ -13,6 +13,7 @@ summary: 如果您不再需要SnapCenter 使用資料保護功能、則必須變
 :imagesdir: ./media/
 
 
+[role="lead"]
 如果您不再需要SnapCenter 使用資料保護功能、則必須變更SnapCenter VMware插件的組態。例如、如果您在測試環境中部署外掛程式、可能需要停用SnapCenter 該環境中的功能、並在正式作業環境中啟用這些功能。
 
 .開始之前

@@ -13,6 +13,9 @@ summary: 在支援以應用程式為基礎之資料保護作業的環境中、�
 :imagesdir: ./media/
 
 
+[role="lead"]
+在支援以應用程式為基礎之資料保護作業的環境中、適用於VMware vSphere的VMware vSphere的VMware外掛程式會使用「shCBR.override」組態檔SnapCenter 。SnapCenter
+
 . 請移至「/opt/netapp/scvservice/standone_aegi/etc/scbr/scbr.override-template」。
 . 將「shCBR.override-template」檔案複製到新檔案「\opt\netapp\scvservice\s獨立_aege\etc\scbr」目錄中的「shCBR.override」。
 

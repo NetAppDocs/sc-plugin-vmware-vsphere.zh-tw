@@ -23,7 +23,7 @@ link:scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html#access-the-maint
 
 . 在主功能表中、輸入選項* 1）應用程式組態*。
 . 在「應用程式組態」功能表中、輸入選項* 6）MySQL備份與還原*。
-. 在MySQL備份與還原組態功能表中、輸入選項* 3）還原MySQL備份*。
+. 在MySQL備份與還原組態功能表中、輸入選項* 4）還原MySQL備份*。
 . 在出現「Restore Using the Recent Backup（使用最近的備份進行還原）」的提示時、輸入* y*、然後按* Enter *。
 +
 備份MySQL資料庫會還原至其原始位置。

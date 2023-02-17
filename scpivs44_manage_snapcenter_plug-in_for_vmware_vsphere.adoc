@@ -50,19 +50,19 @@ image:scpivs44_image11.png["錯誤：缺少圖形影像"]
 +
 ** 選項1：應用程式組態
 +
-啟動或停止SnapCenter VMware插件服務變更登入使用者名稱或密碼變更MySQL密碼設定MySQL備份清單MySQL備份還原MySQL備份
+1）顯示SnapCenter VMware vSphere的支援功能更新摘要2）啟動SnapCenter VMware vSphere服務的支援功能更新外掛程式3）停止SnapCenter VMware vSphere服務的支援功能更新外掛程式4）變更使用者名稱與密碼以登入SnapCenter VMware vSphere UI的支援功能更新套件5）變更MySQL密碼6）MySQL備份與還原
 
 ** 選項2：系統組態
 +
-重新開機或關機虛擬機器變更「maint」使用者密碼變更時區變更NTP伺服器啟用/停用SSH存取增加磁碟大小（/監獄）升級安裝VMware Tools
+1）重新開機虛擬機器2）關機虛擬機器3）變更「maint」使用者密碼4）變更時區5）變更NTP伺服器6）停用SSH存取7）增加磁碟容量（/監獄）8）升級9）安裝VMware工具
 
 ** 選項3：網路組態
 +
-顯示或變更IP位址設定顯示或變更網域名稱搜尋設定顯示或變更靜態路由提交變更Ping主機
+1）顯示IP位址設定2）變更IP位址設定3）顯示網域名稱搜尋設定4）變更網域名稱搜尋設定5）顯示靜態路由6）變更靜態路由7）提交變更8）Ping主機
 
 ** 選項4：支援與診斷
 +
-產生支援套件存取診斷Shell啟用遠端診斷存取產生核心傾印套件組合
+1）產生支援套件2）存取診斷Shell 3）啟用遠端診斷存取4）產生核心傾印套件
 
 
 

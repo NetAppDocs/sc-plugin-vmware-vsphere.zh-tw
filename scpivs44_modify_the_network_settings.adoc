@@ -13,6 +13,7 @@ summary: 您可以修改SnapCenter 在VMware vSphere的VMware vSphere的VMware P
 :imagesdir: ./media/
 
 
+[role="lead"]
 您可以修改SnapCenter 在VMware vSphere的VMware vSphere的VMware Plug-in中設定的網路設定。外掛程式會使用這些設定來存取vCenter。
 
 .開始之前

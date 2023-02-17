@@ -13,6 +13,7 @@ summary: 部署VMware vCenter外掛程式時SnapCenter 、SSH預設為停用。
 :imagesdir: ./media/
 
 
+[role="lead"]
 部署VMware vCenter外掛程式時SnapCenter 、SSH預設為停用。
 
 .步驟

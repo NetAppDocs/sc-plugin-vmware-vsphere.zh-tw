@@ -13,6 +13,7 @@ summary: 在VMFS環境中、SnapCenter VMware vSphere的VMware vSphere的《Sesf
 :imagesdir: ./media/
 
 
+[role="lead"]
 在VMFS環境中、SnapCenter VMware vSphere的VMware vSphere的《Sesf2外掛程式》使用Storage vMotion來執行複製和掛載作業、以執行還原作業。對於NFS環境、外掛程式使用原生ONTAP 的「僅供參考的單一檔案SnapRestore 」（SFSR）、為大多數的還原作業提供更高的效率。對於VVol VM、外掛程式使用ONTAP 「還原單一檔案Snapshot還原ONTAP 」（還原SFSR）和SnapMirror還原來還原作業。下表列出如何執行還原作業。
 
 |===

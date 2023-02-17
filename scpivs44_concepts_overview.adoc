@@ -11,9 +11,13 @@ summary: VMware vSphere的VMware vSphere外掛程式是一種獨立式虛擬應�
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
+:firstname: [.lead]
+:author: [.lead]
+:authorinitials: [
+:authors: [.lead]
+:revnumber: 
+:revdate: and supports data protection services for SnapCenter application-based plug-ins. This document describes how to deploy and use SnapCenter Plug-in for VMware vSphere and includes quick start information.
 
-
-VMware vSphere的VMware vSphere外掛程式是一種獨立式虛擬應用裝置（開放式虛擬應用裝置格式）、可為VM和資料存放區提供資料保護服務、並支援以應用程式為基礎的插件資料保護服務。SnapCenter SnapCenter本文件說明如何部署及使用SnapCenter VMware vSphere的VMware vSphere適用的VMware vCenter外掛程式、並包含快速入門資訊。
 
 VMware vSphere的VMware vSphere外掛程式部署為Linux型虛擬應用裝置。SnapCenter
 
@@ -65,7 +69,7 @@ NFS環境中的大多數還原作業都使用原生ONTAP 的還原功能（例�
 
 除了這些主要功能之外、SnapCenter VMware vSphere的《VMware vSphere支援VMware®的VMware®支援中心」也支援iSCSI、Fibre Channel、FCoE、VMDK over NFS 3.0和4.1、以及VMDK over VMFS 5.0和6.0。
 
-如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=105164;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^] （僅限部分）IMT 。
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^] （僅限部分）IMT 。
 
 如需NFS傳輸協定和ESXi的相關資訊、請參閱VMware提供的vSphere儲存設備文件。
 

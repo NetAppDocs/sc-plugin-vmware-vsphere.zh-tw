@@ -13,6 +13,7 @@ summary: 您可以在vSphere用戶端儀表板上檢視狀態資訊。狀態資�
 :imagesdir: ./media/
 
 
+[role="lead"]
 您可以在vSphere用戶端儀表板上檢視狀態資訊。狀態資訊每小時更新一次。
 
 .步驟

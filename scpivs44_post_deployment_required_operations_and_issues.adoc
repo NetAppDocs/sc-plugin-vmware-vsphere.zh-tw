@@ -13,9 +13,8 @@ summary: 部署SnapCenter 完VMware vSphere的VMware vSphere版的VMware vCenter
 :imagesdir: ./media/
 
 
-
-
-== 部署後所需的作業
+[role="lead"]
+部署SnapCenter 完VMware vSphere的VMware vSphere版的VMware vCenter外掛程式之後、您必須完成安裝。=部署後所需的作業
 
 如果您是SnapCenter 全新的支援者、則必須先將儲存VM新增SnapCenter 至支援中心、才能執行任何資料保護作業。新增儲存VM時、請指定管理LIF。您也可以新增叢集並指定叢集管理LIF。如需新增儲存設備的相關資訊、請參閱 link:scpivs44_add_storage_01.html["新增儲存設備"^]。
 

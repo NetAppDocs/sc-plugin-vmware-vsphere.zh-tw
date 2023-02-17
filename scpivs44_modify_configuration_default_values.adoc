@@ -13,6 +13,7 @@ summary: 若要提升作業效率、您可以修改「shCBR.override」組態檔
 :imagesdir: ./media/
 
 
+[role="lead"]
 若要提升作業效率、您可以修改「shCBR.override」組態檔、以變更預設值。這些值可控制設定、例如在備份期間建立或刪除的VMware快照數量、或是備份指令碼停止執行之前的時間。
 
 在支援以應用程式為基礎之資料保護作業的環境中、適用於VMware vSphere的VMware vSphere的VMware外掛程式會使用「shCBR.override」組態檔SnapCenter 。SnapCenter如果此檔案不存在、則必須從範本檔案建立。

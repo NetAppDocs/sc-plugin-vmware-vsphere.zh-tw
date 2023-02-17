@@ -26,4 +26,41 @@ System.Anonymous System.View System.Read Datastore.Rename Datastore.Move Datasto
 
 == VMware vCenter適用的VMware vCenter的必要權限SnapCenter
 
-netappscore.Guest。恢復檔案netappsore.recovery.MountUnMount netappsor.Backup。刪除備份工作netappsor.Configure。設定儲存系統。刪除netappsor.View netappsor.Recovery。恢復。RecoverVM netappsor.Configure。設定儲存系統。新增更新netappsor.Backup。立即備份netapp.scor.guest虛擬機器、vap.guest虛擬機器、vapp.ap.ap.ap.guest虛擬機器、vap.ap.ap.ap.apore.guest虛擬機器、vapp
+|===
+
+
+| *權限* | *標籤* 
+
+
+| netappsorm.訪 客.RestoreFile | 客體檔案還原 
+
+
+| NETappSCV。儲料。掛載 | 掛載/卸載 
+
+
+| netappsorm.Backup。刪除備份工作 | 刪除資源群組/備份 
+
+
+| netappsc.Configure。Configure儲存系統。刪除 | 移除儲存系統 
+
+
+| NETappSCV檢視 | 檢視 
+
+
+| NETappSCV。RecoverVM恢復 | 恢復VM 
+
+
+| Netappsc.Configure。Configure儲存系統。AddUpdate | 新增/修改儲存系統 
+
+
+| netappsorm.Backup、立即備份 | 立即備份 
+
+
+| NETappSCV。Guest。設定 | 客體組態 
+
+
+| netappsection.Config.ConfigureSnapCenterServer | 設定SnapCenter 伺服器 
+
+
+| Netappsor.Backup備份排程 | 建立資源群組 
+|===

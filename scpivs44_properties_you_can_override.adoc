@@ -13,6 +13,9 @@ summary: 您可以使用「shCBR.override」組態檔中列出的內容來變更
 :imagesdir: ./media/
 
 
+[role="lead"]
+您可以使用「shCBR.override」組態檔中列出的內容來變更預設值。
+
 * 根據預設、範本會使用雜湊符號來註解組態內容。若要使用屬性來修改組態值、您必須移除「#」字元。
 * 您必須在SnapCenter VMware vSphere主機的VMware vSphere插件上重新啟動服務、變更才會生效。
 
