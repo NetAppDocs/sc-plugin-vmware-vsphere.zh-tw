@@ -1381,7 +1381,6 @@
   <block id="6d42a41dd23c8c525acb6572dc671ba2" category="list-text">指定資料夾中的所有VVol VM。</block>
   <block id="a055e53f0d72ccb2f68db894ad65a4cf" category="list-text">在*資源*頁面上、執行下列動作：</block>
   <block id="99f6fd129ebef0c9ba4fbbfc952c2d3f" category="list-text">在「資料存放區」欄位中、瀏覽至您要新增的VM或資料存放區。</block>
-  <block id="4a8f9398bba415fb5cf8ee667ec267c6" category="list-text">在「可用實體」清單中、選取您要新增至資源群組的一或多個VM或資料存放區、然後按一下*&gt;*將選取範圍移至「選取的實體」清單。您可以按一下*&gt;*來移動所有可用的圖元。</block>
   <block id="ccdaf65f600f0c505b15315d8df78297" category="paragraph">根據預設、可用實體清單會顯示Datacenter物件。您可以按一下資料存放區來檢視資料存放區內的VM、然後將其新增至資源群組。</block>
   <block id="cce509f2a27ba368f5c0ea58a65e78a5" category="paragraph">當您按一下*下一步*時、系統會先檢查SnapCenter 哪些項目可加以管理、並與所選VM或資料存放區所在的儲存區相容。如果SnapCenter 顯示訊息「某些實體不相容」、則表示所選的VM或資料存放區與SnapCenter 無法與此功能相容。請參閱 <block ref="83219d9586902f9891ecf56cd903fe4b" category="inline-link-macro-rx"></block> 以取得更多資訊。</block>
   <block id="bea0ca05b5e1fc971afeba63c277ff99" category="list-text">針對您要新增的每個VM或資料存放區、重複步驟2。</block>
@@ -1957,7 +1956,6 @@
   <block id="d8122cd0396c082eeeb744e2dedeb57d" category="list-text">在選擇控制閥外掛程式的左導覽器窗格中、按一下*資源群組*、然後選取資源群組、再按一下 <block ref="036181ab66aa3f104c432536af8d329d" category="inline-image-macro-rx" type="image"></block> *編輯資源群組*以啟動精靈。</block>
   <block id="fbfbbb98438908f6278b91f3e912dd4f" category="list-text">在VMware vSphere用戶端GUI中、按一下工具列中的*功能表*、然後從下拉式清單中選取*主機與叢集*。</block>
   <block id="3ec87b09fd664417b12e12d452b57325" category="paragraph">您可以在vCenter中使用VMware vSphere用戶端GUI、執行VMware虛擬機器（傳統VM和vVol VM）、VMDK和資料存放區的所有備份與還原作業。對於VVol VM（VVol資料存放區中的VM）、僅支援損毀一致的備份。您也可以還原VM和VMDK、以及還原位於客體作業系統上的檔案和資料夾。</block>
-  <block id="b7b9f2c05fa227e6a0477f2f50491fd1" category="paragraph">不支援資料庫和VM的單一Snapshot複本。SnapCenterVM和資料庫的備份必須獨立排程和執行、如此一來便能建立獨立的Snapshot複本、即使資料庫和VM都裝載在同一個磁碟區中。資料庫應用程式備份必須使用SnapCenter 還原GUI排程；VM和資料存放區備份必須使用VMware vSphere用戶端GUI排程。</block>
   <block id="07f168e3f6afdf6ced41507cdd505ae8" category="list-text">VM一致的Snapshot複本需要VMware工具</block>
   <block id="c8fc1db15ada67618adabf802e158c27" category="paragraph">如果VMware工具尚未安裝並執行、則檔案系統不會靜止、而且會建立損毀一致的Snapshot。</block>
   <block id="bc62c1a60fc6228e9d7c607c117b1caa" category="list-text">VMware vSphere需要使用哪些工具來設定VMware VVol VM ONTAP 。</block>
@@ -2019,4 +2017,14 @@
   <block id="516e6120468db109789fef9f29971da1" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block> （僅限部分）IMT 。</block>
   <block id="d67e652c45da4feeb66ffd284d7138ac" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="642354ba07295cdff6111b1f7ed27dbd" category="inline-link-rx"></block>。</block>
   <block id="8b79e6914192b4dd6ecea019ae3a7b61" category="paragraph">您無法從執行Linux客體作業系統的VM還原檔案和資料夾。不過、您可以附加VMDK、然後手動還原檔案和資料夾。如需受支援來賓作業系統的最新資訊、請參閱<block ref="642354ba07295cdff6111b1f7ed27dbd" category="inline-link-rx"></block>。</block>
+  <block id="f255f4f27e0913e5d5174c3d34b1d8f3" category="paragraph">使用SnapCenter 「VMware vSphere用戶端編輯資源群組」精靈、您可以將多個資源新增至現有的資源群組。</block>
+  <block id="d30ddc592feb0dde8f46df8a0df75b4e" category="list-text">在「可用實體」清單中、選取您要新增至資源群組的一或多個VM或資料存放區、然後按一下*&gt;*將選取範圍移至「選取的實體」清單。按一下「*&gt;*」以移動所有可用的實體。</block>
+  <block id="6941e242af2268a4c08ff856ba832393" category="paragraph">不支援資料庫和VM的單一Snapshot複本。SnapCenterVM和資料庫的備份必須獨立排程和執行、如此一來便能建立獨立的Snapshot複本、即使資料庫和VM都裝載在同一個磁碟區中。使用SnapCenter VMware vSphere用戶端GUI排程資料庫應用程式備份；使用VMware vSphere用戶端GUI排程VM和資料存放區備份。</block>
+  <block id="6efed6170121e24d6d2c5c3bb72aa2ab" category="paragraph">您可以使用SnapCenter 適用於VMware vSphere的維護主控台來管理應用程式、系統和網路組態。您可以變更系統管理員密碼、維護密碼、產生支援服務組合、以及啟動遠端診斷。</block>
+  <block id="f7fa43f6dd6c15d238137979bfafde96" category="list-text">擷取tar檔案的內容。tar檔案包含OVA和certs資料夾。「認證」資料夾包含「EntTrust根憑證」和「中介憑證」。</block>
+  <block id="b21ad1c65300475e78e89ff6b13d3bf5" category="list-text">按一下「*信任的根憑證*」旁的「*新增*」</block>
+  <block id="7a6d925c9840475f937eee242a023561" category="list-text">移至_certs_資料夾。</block>
+  <block id="d93a23c4b41c8a9962980d34d8ebb285" category="list-text">選取「Entrust根憑證」和「中介憑證」。</block>
+  <block id="28f971e28dfc95cd1f45e3f3e43cb5ae" category="list-text">一次安裝一個憑證。</block>
+  <block id="cf76c520da4a702698c81207090e0cc9" category="list-text">憑證會新增至「*信任的根憑證*」下的面板。安裝憑證後、即可驗證及部署OVA。</block>
 </blocks>
