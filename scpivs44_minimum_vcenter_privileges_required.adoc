@@ -20,7 +20,7 @@ summary: 在開始部署SnapCenter VMware vSphere的VMware vSphere版的VMware v
 
 == vCenter管理員角色所需的權限
 
-System.Anonymous System.View System.Read Datastore.Rename Datastore.Move Datastore.Delete Datastore.Browse Datastore.FileManagement Datastore.AllocateSpace Network。assign Host.Config.Storage Host.Config.Advanced Config Host.Config.Resources Host.Config.Config.SettingHost.Settings.local.ReconomeVM Host.Recone.ReseVM Host虛擬機器資源移除虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器資源移轉/虛擬機器虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/移轉/虛擬機器資源移轉/虛擬機器/移轉/移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉
+datastore.AllocateSpace Datastore.Browse Datastore.Delete Datastore.FileManagement Datastore.Move Datastore.Rename Extension.Register Extension.Unregister Extension.Update Host.Config.AdvancedConfig Host.Config.Config.Resources Host.Config.Config Host.ConfigVirtualMachine.Recome.Remote.RecomeVM Host.RemotenVirtualVirtualVirtualVirtualMachine.VirtualMachine.VirtualMachine.Remote.VirtualData.VirtualData.Remotate.Remotate.Remotate.言 虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器
 
 
 

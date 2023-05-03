@@ -1154,7 +1154,6 @@
   <block id="51a5d5da98cf5178b170023fee4cbe00" category="list-text">利用Storage VMotion複製及掛載舊ONTAP 版產品</block>
   <block id="764c22e450dbc5e74f71923d5157420e" category="paragraph">在NFS和VMFS環境中使用複製和掛載作業（而非Storage vMotion）來執行客體檔案還原作業。</block>
   <block id="d926b139950371ea24c296bdd377c68f" category="admonition">在還原作業期間、您可能會遇到「Host unresolved volume is null」（主機未解析磁碟區為null）或「調用選擇控制器上的預先還原時發生例外狀況...將複製的LUN掛載為資料存放區時發生錯誤...」 當VMware vCenter外掛程式嘗試重新簽署實體複本時、就會發生這種情況SnapCenter 。由於VMware的限制、SnapCenter 在進階ESXi組態中、VMware插件無法控制自動重新簽名值。</block>
-  <block id="749560c83bd9672bf5dd0ec151afa4bf" category="paragraph">如需錯誤的詳細資訊、請參閱｛link with底線｝[KB文章：選擇控制器實體複製或還原失敗、並顯示錯誤「主機未解析的磁碟區為null」。</block>
   <block id="aba5f0a683edf4f29d2940f278f2d102" category="doc">使用Swagger API網頁存取REST API</block>
   <block id="903b0122dfcf99af33f88dd6ebf526e7" category="paragraph">對於VMware vSphere REST API的VMware vCenter外掛程式、您必須知道VMware插件的IP位址或主機名稱。SnapCenter SnapCenter</block>
   <block id="061c36e9d3e7d9f981cf79561c7144ed" category="admonition">外掛程式僅支援REST API、以與協力廠商應用程式整合、不支援PowerShell Cmdlet或CLI。</block>
@@ -1388,7 +1387,6 @@
   <block id="b148e71859cffdb60779d0fd79307d95" category="summary">在開始部署SnapCenter VMware vSphere的VMware vSphere版的VMware vCenter外掛程式之前、您應該先確定擁有最低所需的vCenter權限。</block>
   <block id="e49b2704cb3fef8c492858dfc3f6dbce" category="doc">所需的vCenter權限下限</block>
   <block id="370cf061cf511b1663901c8a1fa77c6f" category="section-title">vCenter管理員角色所需的權限</block>
-  <block id="98b6d2abbb9e53348f4ee8d871b00548" category="paragraph">System.Anonymous System.View System.Read Datastore.Rename Datastore.Move Datastore.Delete Datastore.Browse Datastore.FileManagement Datastore.AllocateSpace Network。assign Host.Config.Storage Host.Config.Advanced Config Host.Config.Resources Host.Config.Config.SettingHost.Settings.local.ReconomeVM Host.Recone.ReseVM Host虛擬機器資源移除虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器資源移轉/虛擬機器虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/移轉/虛擬機器資源移轉/虛擬機器/移轉/移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉/虛擬機器資源移轉</block>
   <block id="84ecd316e231a4baee8cc1858eaf3625" category="section-title">VMware vCenter適用的VMware vCenter的必要權限SnapCenter</block>
   <block id="73a58d0fa37326c35696eb0d6e13265a" category="summary">您可以使用「shCBR.override」組態檔中列出的內容來變更預設值。</block>
   <block id="24780439a11f70806e96ae85ff282a91" category="doc">您可以置換的內容</block>
@@ -1668,7 +1666,6 @@
   <block id="f87889e78c8188fffcbd96ceaef56759" category="sidebar">保護VM、VMDK和資料存放區</block>
   <block id="222e11fb018a824c05f5fc6a922f5240" category="sidebar">保護您的資料</block>
   <block id="13f1397303dbc6596a7d0adff2836250" category="sidebar">使用REST API</block>
-  <block id="26ad26eacebffe3e8571ecf8c6cc3eaf" category="sidebar">從Windows型選擇控制器移轉</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">部落格社群</block>
   <block id="8a49edffe2e22d8746e8c1676b54b1e5" category="sidebar">NetApp部落格–選擇控制閥</block>
   <block id="f62203a113eda99708c4011593033d16" category="sidebar">NetApp社群–選擇控制閥</block>
@@ -2027,4 +2024,7 @@
   <block id="28f971e28dfc95cd1f45e3f3e43cb5ae" category="list-text">一次安裝一個憑證。</block>
   <block id="cf76c520da4a702698c81207090e0cc9" category="list-text">憑證會新增至「*信任的根憑證*」下的面板。安裝憑證後、即可驗證及部署OVA。</block>
   <block id="6c0ad8767c3f6938eed064d72ff1e8e3" category="cell">針對SnapCenter 由VMware插件管理的VM和資料存放區、顯示設定天數內的保護狀態總覽資訊。預設值為7天。若要修改屬性檔案中的值、請參閱 <block ref="716011655678aa6d92cdd15196f612ff" category="inline-link-macro-rx"></block>。按一下主要保護圖表上的區段/狀態、即可在「*報告*」索引標籤上查看具有該狀態的VM或資料存放區清單。受保護虛擬機器和資料存放區的VM或資料存放區保護狀態報告會顯示已在設定天數內備份的VM或資料存放區名稱、最新的Snapshot複本名稱、以及最新備份執行的開始和結束時間。未受保護VM或資料存放區的VM或資料存放區保護狀態報告會顯示在設定天數內沒有任何成功備份的VM或資料存放區名稱。您可以下載HTML或CSV格式的報告表格。您也可以下載所有工作的「工作監控」工作記錄（不只是報告中的工作）。此報告會在每小時重新整理外掛程式快取時重新整理。因此、報告可能不會顯示最近備份的VM或資料存放區。</block>
+  <block id="db5fdb9b050a01b11abea23e40b9585d" category="inline-link">知識庫文章：選擇控制閥複製或還原失敗、並顯示錯誤「主機未解析的磁碟區為 null</block>
+  <block id="ecb770a7a8cc6bd835e08ae2f656b56b" category="paragraph">請參閱<block ref="1077fe6ba26e5db8ea58ede2a1d4f949" category="inline-link-rx"></block> 以取得更多關於錯誤的資訊。</block>
+  <block id="02794ea4bb0d5fb663080c701c897f97" category="paragraph">datastore.AllocateSpace Datastore.Browse Datastore.Delete Datastore.FileManagement Datastore.Move Datastore.Rename Extension.Register Extension.Unregister Extension.Update Host.Config.AdvancedConfig Host.Config.Config.Resources Host.Config.Config Host.ConfigVirtualMachine.Recome.Remote.RecomeVM Host.RemotenVirtualVirtualVirtualVirtualMachine.VirtualMachine.VirtualMachine.Remote.VirtualData.VirtualData.Remotate.Remotate.Remotate.言 虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器虛擬機器</block>
 </blocks>

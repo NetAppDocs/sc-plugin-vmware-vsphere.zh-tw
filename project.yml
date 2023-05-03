@@ -270,8 +270,6 @@ homepage:
       url: "/scpivs44_restore_from_backups_overview.html"
     - title: 使用REST API
       url: "/scpivs44_rest_apis_overview.html"
-    - title: 從Windows型選擇控制器移轉
-      url: "/scpivs44_migrate.html"
   - title: 部落格社群
     links:
     - title: NetApp部落格–選擇控制閥
