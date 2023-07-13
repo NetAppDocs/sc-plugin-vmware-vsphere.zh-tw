@@ -30,4 +30,4 @@ summary: 所有備份作業都會在資源群組上執行、這些資源群組�
 
 下圖顯示您必須執行備份作業的順序：
 
-image:scpivs44_image13.png["錯誤：缺少圖形影像"]
+image:scpivs44_image13.png["備份作業工作流程"]

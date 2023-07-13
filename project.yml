@@ -1,6 +1,6 @@
 ---
 settings:
-  name: SnapCenter Plug-in for VMware vSphere 4.8
+  name: SnapCenter Plug-in for VMware vSphere 4.9
   internal:
     pdf_enabled: true
   prod:
@@ -9,6 +9,9 @@ settings:
   versions:
   - name: VMware vSphere的插件SnapCenter
     url: "/sc-plugin-vmware-vsphere"
+    version-number: '4.9'
+  - name: VMware vSphere的插件SnapCenter
+    url: "/sc-plugin-vmware-vsphere-48"
     version-number: '4.8'
   - name: VMware vSphere的插件SnapCenter
     url: "/sc-plugin-vmware-vsphere-47"
@@ -22,7 +25,7 @@ settings:
   langs: zh-tw,us-en,ja-jp,ko-kr,zh-cn,de-de,es-es,fr-fr,it-it
 sidebar:
   entries:
-  - title: VMware vSphere 4.8文件的支援外掛程式SnapCenter
+  - title: SnapCenter Plug-in for VMware vSphere 4.9 文件
     url: "/index.html"
   - title: 版本資訊
     url: "/scpivs44_release_notes.html"
@@ -255,7 +258,7 @@ homepage:
   - title: 開始使用
     links:
     - title: 版本資訊
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885659
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886207
     - title: 深入瞭解選擇控制閥
       url: "/scpivs44_concepts_overview.html"
     - title: 部署需求

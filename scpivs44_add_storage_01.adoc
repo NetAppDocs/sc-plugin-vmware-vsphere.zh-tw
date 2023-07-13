@@ -43,7 +43,7 @@ VMware vCenter外掛程式可在直接連線的儲存VM和儲存叢集中的儲�
 NOTE: 如果您使用SnapCenter VMware的VMware解決方案外掛程式來支援VMDK上的應用程式型備份、則必須使用SnapCenter 此支援GUI來輸入儲存驗證詳細資料、並登錄儲存系統。
 
 * 若為連結模式的vCenter、您必須分別將儲存系統新增至每個vCenter。
-* 儲存虛擬機器的名稱必須解析為管理生命期。
+* 如果您要新增 SVM 、則儲存 VM 的名稱必須解析為管理階層的生命。
 +
 如果您在SnapCenter 支援資源共享區中新增ETC主機項目來儲存VM名稱、您必須確認這些項目也可從虛擬應用裝置解析。
 
@@ -55,7 +55,7 @@ NOTE: 如果您使用SnapCenter VMware的VMware解決方案外掛程式來支援
 
 .步驟
 . 在vSphere用戶端的左側導覽器窗格中、按一下「*儲存系統*」。
-. 在「Storage Systems（儲存系統）」頁面上、按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *新增*。
+. 在「儲存系統」頁面上、選取 * 新增 * 選項。
 . 在「*新增儲存系統*」精靈中、輸入下表所列的基本儲存VM或叢集資訊：
 +
 |===
@@ -71,10 +71,10 @@ NOTE: 如果您使用SnapCenter VMware的VMware解決方案外掛程式來支援
 | 驗證方法 | 選取「認證」或「認證」。支援兩種類型的憑證：- https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_a_CA_signed_certificate_for_storage_system_authentication_with_SCV["CA簽署的憑證"^]- https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_a_self-signed_certificate_for_storage_system_authentication_with_SCV["自我簽署的憑證"^] 
 
 
-| 使用者名稱 | 當您選取「認證」作為驗證方法時、此欄位會顯示。輸入ONTAP 用來登入儲存虛擬機器的別名。 
+| 使用者名稱 | 當您選取「認證」作為驗證方法時、此欄位會顯示。輸入用於登入儲存 VM 或叢集的 ONTAP 使用者名稱。 
 
 
-| 密碼 | 當您選取「認證」作為驗證方法時、此欄位會顯示。輸入儲存VM登入密碼。 
+| 密碼 | 當您選取「認證」作為驗證方法時、此欄位會顯示。輸入儲存 VM 或叢集登入密碼。 
 
 
 | 憑證 | 當您選取「憑證」作為驗證方法時、此欄位會顯示。瀏覽以選取憑證檔案。 

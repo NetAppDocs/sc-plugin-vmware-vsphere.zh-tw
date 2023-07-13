@@ -16,10 +16,12 @@ summary: 若要在SnapCenter 虛擬化機器上使用支援VMware vSphere的功�
 [role="lead"]
 若要在SnapCenter 虛擬化機器上使用支援VMware vSphere的功能來保護VM、資料存放區和應用程式一致的資料庫、您必須部署SnapCenter 適用於VMware vSphere的VMware外掛程式。
 
-....
-[Note]
-The OVA deployment is supported in VMware vCenter 7u1 and above.
-....
+.開始之前
+本節列出開始部署之前應採取的所有必要行動。
+
+
+NOTE:  VMware vCenter 7u1及更新版本支援OVA部署。
+
 * 您必須閱讀部署需求。
 * 您必須執行受支援版本的vCenter Server。
 * 您必須已設定及設定vCenter Server環境。
@@ -141,7 +143,7 @@ VMware工具安裝在SnapCenter 部署了VMware vCenter外掛程式的VM上。�
 請使用「https://<appliance-IP-address>:8080`」格式來存取管理GUI。
 
 +
-使用預設的維護主控台使用者名稱登入 `maint` 以及您在安裝時設定的密碼。
+使用部署時設定的管理員使用者名稱和密碼、以及使用維護主控台產生的 MFA 權杖登入。
 
 +
 如果SnapCenter 未啟用VMware vCenter外掛程式、請參閱 link:scpivs44_restart_the_vmware_vsphere_web_client_service.html["重新啟動VMware vSphere用戶端服務"]。

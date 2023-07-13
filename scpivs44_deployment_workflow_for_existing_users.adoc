@@ -16,4 +16,4 @@ summary: 如果SnapCenter 您是一個不一樣的使用者、並且有SnapCente
 [role="lead"]
 如果SnapCenter 您是一個使用者、並且有SnapCenter 使用功能不均的備份、請使用下列工作流程開始使用。
 
-image:scpivs44_image3.png["錯誤：缺少圖形影像"]
+image:scpivs44_image3.png["部署工作流程"]

@@ -34,7 +34,7 @@ summary: 您可以使用適用於SnapCenter VMware vSphere的維護主控台來�
 使用預設的維護主控台使用者名稱登入 `maint` 以及您在安裝時設定的密碼。
 
 +
-image:scpivs44_image11.png["錯誤：缺少圖形影像"]
+image:scpivs44_image11.png["維護主控台視窗"]
 
 . 您可以執行下列作業：
 +
@@ -44,7 +44,20 @@ image:scpivs44_image11.png["錯誤：缺少圖形影像"]
 
 ** 選項2：系統組態
 +
-重新開機或關機虛擬機器變更「maint」使用者密碼變更時區變更NTP伺服器啟用/停用SSH存取增加磁碟大小（/監獄）升級安裝VMware Tools
+重新開機虛擬機器
+關閉虛擬機器
+變更「maint」使用者密碼
+變更時區
+變更NTP伺服器
+啟用 SSH 存取
+增加監獄磁碟大小（/監獄）
+升級
+安裝VMware Tools
+產生 MFA Token
+
++
+
+NOTE: MFA 一律啟用、您無法停用 MFA 。
 
 ** 選項3：網路組態
 +

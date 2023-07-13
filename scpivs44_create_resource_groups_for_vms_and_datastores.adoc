@@ -96,14 +96,15 @@ IMPORTANT: 請勿新增處於無法存取狀態的VM。雖然可以建立包含�
 
 
 .步驟
-. 在選擇控制閥外掛程式的左導覽器窗格中、按一下*資源群組*、然後按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *建立*以啟動精靈。
+. 在選擇控制閥外掛程式的左導覽器窗格中、按一下 * 資源群組 * 、然後選取 * 建立 * 以啟動精靈。
 
 
 這是建立資源群組最簡單的方法。不過、您也可以執行下列其中一項、以單一資源建立資源群組：
 
-+**若要為一個VM建立資源群組、請按一下*功能表*>*主機與叢集*、然後在VM上按一下滑鼠右鍵、再選取NetApp SnapCenter Sfor、然後按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *建立資源群組*。*若要為一個資料存放區建立資源群組、請按一下「*功能表*」>「*主機與叢集*」、然後在資料存放區上按一下滑鼠右鍵、再選取「* NetApp SnapCenter Sori*」、然後按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *建立資源群組*。
-
-. 在精靈的「*一般資訊與通知*」頁面上、執行下列動作：
+* 若要為一個 VM 建立資源群組、請按一下 * 功能表 * > * 主機與叢集 * 、然後在 VM 上按一下滑鼠右鍵、選取 NetApp SnapCenter 、然後選取 * 建立資源群組 * 。
+* 若要為一個資料存放區建立資源群組、請按一下 * 功能表 * > * 主機與叢集 * 、然後在資料存放區上按一下滑鼠右鍵、然後選取 * NetApp SnapCenter * 、然後選取 * 建立資源群組 * 。
++
+.. 在精靈的「*一般資訊與通知*」頁面上、執行下列動作：
 +
 |===
 | 對於此欄位… | 執行此操作… 
@@ -141,13 +142,13 @@ NOTE: 系統會針對附加至資源群組的每個原則建立「_Recent」備�
 | 自訂Snapshot格式  a| 
 如果您要使用自訂格式來命名Snapshot複本名稱、請勾選此方塊並輸入名稱格式。
 
-** 此功能預設為停用。
-** 預設的Snapshot複本名稱使用格式「<ResourcGroup>_<Date-timestamp>'」、不過您可以使用變數$ResourceDGroup、$Policy、$HostName、$DatapeType及$CustomText來指定自訂格式。使用自訂名稱欄位中的下拉式清單、選取您要使用的變數及其使用順序。如果選擇$CustomText、名稱格式為「<CustomName>_<Date-timestamp>'」。在所提供的其他方塊中輸入自訂文字。附註：如果您也選取「_Recent」字尾、則必須確定自訂Snapshot名稱在資料存放區中是唯一的、因此您應該將$ResourceDGroup和$Policy變數新增至名稱。
-** 名稱中特殊字元的特殊字元、請遵循名稱欄位的相同準則。
+*** 此功能預設為停用。
+*** 預設的Snapshot複本名稱使用格式「<ResourcGroup>_<Date-timestamp>'」、不過您可以使用變數$ResourceDGroup、$Policy、$HostName、$DatapeType及$CustomText來指定自訂格式。使用自訂名稱欄位中的下拉式清單、選取您要使用的變數及其使用順序。如果選擇$CustomText、名稱格式為「<CustomName>_<Date-timestamp>'」。在所提供的其他方塊中輸入自訂文字。附註：如果您也選取「_Recent」字尾、則必須確定自訂Snapshot名稱在資料存放區中是唯一的、因此您應該將$ResourceDGroup和$Policy變數新增至名稱。
+*** 名稱中特殊字元的特殊字元、請遵循名稱欄位的相同準則。
 
 
 |===
-. 在「*資源*」頁面上、執行下列動作：
+.. 在「*資源*」頁面上、執行下列動作：
 +
 |===
 | 對於此欄位… | 執行此操作… 
@@ -170,17 +171,17 @@ NOTE: 系統會針對附加至資源群組的每個原則建立「_Recent」備�
 +
 若要從備份中全域排除一或多個資料存放區、您必須在「shCBR.override」組態檔的「globe.ds.exclite.Pattern」內容中指定資料存放區名稱。請參閱 <<scpivs44_properties_you_can_override.adoc#Properties you can override,您可以置換的內容>>。
 
-. 在「*擴充磁碟*」頁面上、針對多個資料存放區中具有多個VMDK的VM選取一個選項：
+.. 在「*擴充磁碟*」頁面上、針對多個資料存放區中具有多個VMDK的VM選取一個選項：
 +
-** 永遠排除所有跨距資料存放區[這是資料存放區的預設值。]
-** 一律包含所有跨距資料存放區[這是VM的預設值。]
-** 手動選取要包含的跨距資料存放區
+*** 永遠排除所有跨距資料存放區[這是資料存放區的預設值。]
+*** 一律包含所有跨距資料存放區[這是VM的預設值。]
+*** 手動選取要包含的跨距資料存放區
 +
 不支援FlexGroup 將跨距VM用於不支援的資料存放區和vVol資料存放區。
 
 
 
-. 在「*原則*」頁面上、選取或建立一或多個備份原則、如下表所示：
+.. 在「*原則*」頁面上、選取或建立一或多個備份原則、如下表所示：
 +
 |===
 | 使用… | 執行此操作… 
@@ -190,17 +191,17 @@ NOTE: 系統會針對附加至資源群組的每個原則建立「_Recent」備�
 
 
 | 新原則  a| 
-.. 按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *建立*。
-.. 完成「新增備份原則」精靈、返回「建立資源群組」精靈。
+... 選擇* Create *（建立*）。
+... 完成「新增備份原則」精靈、返回「建立資源群組」精靈。
 
 
 |===
 +
 在「連結模式」中、清單會包含所有連結vCenter的原則。您必須選取與資源群組位於同一個vCenter上的原則。
 
-. 在「*排程*」頁面上、為每個選取的原則設定備份排程。
+.. 在「*排程*」頁面上、為每個選取的原則設定備份排程。
 +
-image:scpivs44_image18.png["錯誤：缺少圖形影像"]
+image:scpivs44_image18.png["建立資源群組視窗"]
 
 +
 在「開始時間」欄位中、輸入零以外的日期和時間。日期格式必須為「日/月/年」。
@@ -214,7 +215,7 @@ image:scpivs44_image18.png["錯誤：缺少圖形影像"]
 +
 link:scpivs44_modify_the_time_zones.html["修改備份的時區"]。
 
-. 檢閱摘要、然後按一下「*完成*」。
+.. 檢閱摘要、然後按一下「*完成*」。
 +
 按一下「*完成*」之前、您可以返回精靈中的任何頁面並變更資訊。
 
@@ -224,6 +225,8 @@ link:scpivs44_modify_the_time_zones.html["修改備份的時區"]。
 +
 
 NOTE: 如果備份中任何VM的靜止作業失敗、則即使所選的原則已選取VM一致性、備份也會標示為不符合VM。在這種情況下、有些VM可能會成功靜止。
+
+
 
 
 
@@ -241,7 +244,7 @@ NOTE: 如果備份中任何VM的靜止作業失敗、則即使所選的原則已
 4.x版支援還原8.3.1及更新版本。SnapCenter ONTAP
 
 +
-VMware vSphere的VMware vCenter外掛程式不會針對所有的VMware版本執行相容性檢查、僅適用於版本8.2.1及更早版本。SnapCenter ONTAP ONTAP因此、請務必查看 https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["NetApp互通性對照表工具IMT （不含）"^] 以取得SnapCenter 有關支援的最新資訊。
+VMware vSphere的VMware vCenter外掛程式不會針對所有的VMware版本執行相容性檢查、僅適用於版本8.2.1及更早版本。SnapCenter ONTAP ONTAP因此、請務必查看 https://imt.netapp.com/matrix/imt.jsp?components=112310;&solution=1517&isHWU&src=IMT["NetApp互通性對照表工具IMT （不含）"^] 以取得SnapCenter 有關支援的最新資訊。
 
 * 共享的PCI設備已連接至VM。
 * 未在SnapCenter 不使用的情況下設定偏好的IP。

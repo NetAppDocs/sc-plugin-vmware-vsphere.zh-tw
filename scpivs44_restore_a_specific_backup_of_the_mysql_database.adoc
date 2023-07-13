@@ -19,7 +19,7 @@ summary: 您可以使用維護主控台還原適用於SnapCenter VMware vSphere�
 .步驟
 . 開啟維護主控台視窗。
 +
-link:scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html#access-the-maintenance-console["存取維護主控台"]。
+link:scpivs44_access_the_maintenance_console.html["存取維護主控台"^]。
 
 . 在主功能表中、輸入選項* 1）應用程式組態*。
 . 在「應用程式組態」功能表中、輸入選項* 6）MySQL備份與還原*。

@@ -23,7 +23,7 @@ summary: 部署VMware vCenter外掛程式時SnapCenter 、SSH預設為停用。
 如需存取及登入維護主控台的相關資訊、請參閱 link:scpivs44_access_the_maintenance_console.html["存取維護主控台"^]。
 
 +
-image:scpivs44_image11.png["錯誤：缺少圖形影像"]
+image:scpivs44_image11.png["維護主控台視窗"]
 
 . 從主功能表中、選取功能表選項* 2）系統組態*。
 . 從System Configuration（系統組態）功能表中、選取功能表選項* 6）Enable SSH access*（啟用SSH存取*）、然後在確認提示字元中輸入「* y*」。

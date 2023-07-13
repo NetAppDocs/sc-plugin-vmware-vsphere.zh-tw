@@ -21,6 +21,8 @@ summary: REST API以產生稽核記錄
 . 取得4.1/稽核/記錄：取得所有記錄的稽核資料
 . 取得4.1/稽 核/記錄/｛FileName｝：取得特定記錄檔的稽核資料
 . POST 4.1/稽核/驗證：觸發稽核記錄驗證。
+. Get 4.1/稽 核 / 組態：取得稽核和 Syslog 伺服器組態
+. 輸入 4.1/稽 核 / 組態：更新稽核和 Syslog 伺服器組態
 
 
 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式來產生VMware vSphere用戶端工作的稽核記錄、您必須使用VMware vSphere的REST API呼叫。
@@ -40,4 +42,7 @@ summary: REST API以產生稽核記錄
 
 
 | `4.1/audit/verify` | 觸發稽核驗證 
+
+
+| `4.1/audit/syslogcert` | 更新 Syslog 伺服器憑證 
 |===

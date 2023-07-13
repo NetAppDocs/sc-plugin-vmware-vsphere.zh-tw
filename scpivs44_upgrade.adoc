@@ -14,7 +14,7 @@ summary: 如果您使用SnapCenter 適用於VMware vSphere虛擬應用裝置的V
 
 
 
-NOTE: 升級至4號選擇控制閥僅支援VMware vCenter Server 7更新版本1及更新版本、若為版本7更新版本1之前的VMware vCenter伺服器、您應繼續使用4號選擇控制閥。不受支援版本的VMware vCenter伺服器會中斷升級。
+NOTE: 只有 VMware vCenter Server 7 更新版本 1 和更新版本才支援升級至 4 ． 9 號選擇控制閥、對於版本 7 更新版本 1 之前的 VMware vCenter 伺服器、您應該繼續使用 4 ． 7 號選擇控制閥。不受支援版本的VMware vCenter伺服器會中斷升級。
 
 如果您使用SnapCenter 適用於VMware vSphere虛擬應用裝置的VMware vCenter外掛程式、則可以升級至較新的版本。升級程序會取消註冊現有的外掛程式、並部署僅與vSphere 7.0U1及更新版本相容的外掛程式。
 
@@ -52,7 +52,7 @@ NOTE: 不支援將網路組態從靜態切換為DHCP。
 .. 瀏覽回要升級的VM、然後按一下* Summary（摘要）*索引標籤。在「* VM Hardware *」（* VM硬體*）窗格的「CD / DVD」欄位中、此值應為「Disconnected」（中斷連線）。
 .. 按一下「CD/DVD」欄位中的連線圖示、然後選取「*連線至資料存放區*上的CD/DVD映像」。
 +
-image:scpivs44_image42.png["錯誤：缺少圖形影像"]
+image:scpivs44_image42.png["vCenter UI"]
 
 .. 在精靈中、執行下列動作：
 +

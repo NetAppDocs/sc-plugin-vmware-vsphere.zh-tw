@@ -14,7 +14,11 @@ summary: 部署SnapCenter 完VMware vSphere的VMware vSphere版的VMware vCenter
 
 
 [role="lead"]
-部署SnapCenter 完VMware vSphere的VMware vSphere版的VMware vCenter外掛程式之後、您必須完成安裝。=部署後所需的作業
+部署SnapCenter 完VMware vSphere的VMware vSphere版的VMware vCenter外掛程式之後、您必須完成安裝。
+
+
+
+== 部署後所需的作業
 
 如果您是SnapCenter 全新的支援者、則必須先將儲存VM新增SnapCenter 至支援中心、才能執行任何資料保護作業。新增儲存VM時、請指定管理LIF。您也可以新增叢集並指定叢集管理LIF。如需新增儲存設備的相關資訊、請參閱 link:scpivs44_add_storage_01.html["新增儲存設備"^]。
 
@@ -53,7 +57,7 @@ summary: 部署SnapCenter 完VMware vSphere的VMware vSphere版的VMware vCenter
 如果您不使用管理員認證、則在部署SnapCenter VMware vSphere的VMware vSphere版的VMware vCenter外掛程式或移轉之後、可能會收到驗證錯誤。如果遇到驗證錯誤、您必須重新啟動服務。
 
 .步驟
-. 使用「https://<appliance-IP-address>:8080`」格式登入SnapCenter VMware的VMware插件管理GUI。
+. 使用格式登入SnapCenter VMware的VMware插件管理GUI `https://<appliance-IP-address>:8080`。使用管理員使用者名稱、密碼和 MFA Token 詳細資料登入。MFA 權杖可從維護主控台產生。
 . 重新啟動服務。
 
 
@@ -101,7 +105,7 @@ summary: 部署SnapCenter 完VMware vSphere的VMware vSphere版的VMware vCenter
 +
 成功新增VM主機時、它會顯示在「受管理的主機」索引標籤上。
 
-. 在左導覽窗格中、按一下*設定*、然後按一下*認證*索引標籤、再按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *新增*以新增虛擬應用裝置的認證資料。
+. 在左側導覽窗格中、按一下 * 設定 * 、然後按一下 * 認證 * 索引標籤、然後選取 * 新增 * 以新增虛擬應用裝置的認證。
 . 提供部署SnapCenter VMware vSphere的VMware vSphere的VMware vCenter外掛程式時所指定的認證資訊。
 +
 

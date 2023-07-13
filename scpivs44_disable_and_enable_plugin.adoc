@@ -31,7 +31,7 @@ summary: 如果您不再需要SnapCenter 使用資料保護功能、則必須變
 +
 link:scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html["備份SnapCenter VMware vSphere MySQL資料庫的VMware vCenter外掛程式"]。
 
-. 使用「https://<OVA-IP-address>:8080`」格式登入SnapCenter VMware的VMware插件管理GUI。
+. 使用格式登入SnapCenter VMware的VMware插件管理GUI `https://<OVA-IP-address>:8080`。使用部署時設定的管理員使用者名稱和密碼、以及使用維護主控台產生的 MFA 權杖登入。
 +
 部署外掛程式時、會顯示VMware的IP of the VMware外掛程式。SnapCenter
 

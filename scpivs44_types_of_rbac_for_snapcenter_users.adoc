@@ -55,4 +55,4 @@ vSphere管理員可執行下列動作來設定vCenter Server RBAC：
 
 下圖概述RBAC權限（vCenter和ONTAP VMware）的驗證工作流程：
 
-image:scpivs44_image1.png["錯誤：缺少圖形影像"]
+image:scpivs44_image1.png["RBAC權限的驗證工作流程"]

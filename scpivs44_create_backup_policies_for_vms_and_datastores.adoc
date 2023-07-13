@@ -39,7 +39,7 @@ summary: 您必須先建立備份原則、才能使用SnapCenter VMware vSphere�
 
 .步驟
 . 在選擇控制閥外掛程式的左側導覽器窗格中、按一下* Policies *。
-. 在* Policies（政策）*頁面上、按一下 image:scpivs44_image6.png["錯誤：缺少圖形影像"] *建立*以啟動精靈。
+. 在 * 原則 * 頁面上、選取 * 建立 * 以啟動精靈。
 . 在「*新備份原則*」頁面上、選取將使用該原則的vCenter Server、然後輸入原則名稱和說明。
 +
 ** 連結模式

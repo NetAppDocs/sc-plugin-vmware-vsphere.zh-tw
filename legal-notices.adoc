@@ -47,4 +47,4 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 通知檔案提供有關 NetApp 軟體所使用之協力廠商版權與授權的資訊。
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2884815["VMware vSphere 4.8版的支援功能注意事項SnapCenter"^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2886210["適用於 VMware vSphere 4.9 的 SnapCenter 外掛程式注意事項"^]

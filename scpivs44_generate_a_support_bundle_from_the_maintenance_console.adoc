@@ -21,7 +21,7 @@ summary: 您可以從維護主控台產生支援服務組合。
 如需存取及登入維護主控台的相關資訊、請參閱 link:scpivs44_access_the_maintenance_console.html["存取維護主控台"^]。
 
 +
-image:scpivs44_image11.png["錯誤：缺少圖形影像"]
+image:scpivs44_image11.png["維護主控台視窗"]
 
 . 在主功能表中、輸入選項* 4）Support and Diagnostics（支援與診斷）*。
 . 在Support and Diagnostics Menu（支援與診斷功能表）中、輸入選項* 1）Generate supportbundy*（產生支援套裝組合*）。
