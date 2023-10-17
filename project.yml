@@ -7,21 +7,16 @@ settings:
     pdf_enabled: true
     harmony_enabled: false
   versions:
-  - name: VMware vSphere的插件SnapCenter
+  - version-number: '4.9'
     url: "/sc-plugin-vmware-vsphere"
-    version-number: '4.9'
-  - name: VMware vSphere的插件SnapCenter
+  - version-number: '4.8'
     url: "/sc-plugin-vmware-vsphere-48"
-    version-number: '4.8'
-  - name: VMware vSphere的插件SnapCenter
+  - version-number: '4.7'
     url: "/sc-plugin-vmware-vsphere-47"
-    version-number: '4.7'
-  - name: VMware vSphere的插件SnapCenter
+  - version-number: '4.6'
     url: "/sc-plugin-vmware-vsphere-46"
-    version-number: '4.6'
-  - name: VMware vSphere的插件SnapCenter
+  - version-number: '4.5'
     url: "/sc-plugin-vmware-vsphere-45"
-    version-number: '4.5'
   langs: zh-tw,us-en,ja-jp,ko-kr,zh-cn,de-de,es-es,fr-fr,it-it
 sidebar:
   entries:
