@@ -1233,23 +1233,16 @@
   <block id="6086125ba3b16c9db6f89397f48fc616" category="paragraph">ESXi伺服器SnapCenter 、VMware vCenter外掛程式和每個vCenter必須同步至相同時間。如果您嘗試新增儲存設備、但vCenter的時間設定並未同步、則作業可能會失敗、並顯示Java憑證錯誤。</block>
   <block id="9aac8d0b8942f0e2048e58de3b7be108" category="paragraph">VMware vCenter外掛程式可在直接連線的儲存VM和儲存叢集中的儲存VM上執行備份與還原作業。SnapCenter</block>
   <block id="b99edf353b52c5792e35401298cc1119" category="list-text">若為連結模式的vCenter、您必須分別將儲存系統新增至每個vCenter。</block>
-  <block id="9b0a1c41413ba0bd6082cc3e1b84f315" category="paragraph">如果您在SnapCenter 支援資源共享區中新增ETC主機項目來儲存VM名稱、您必須確認這些項目也可從虛擬應用裝置解析。</block>
   <block id="f6bf07ac5479cd87c5bc2e1e1e185478" category="paragraph">如果您新增名稱無法解析為管理LIF的儲存VM、則排程的備份工作將會失敗、因為外掛程式無法探索該儲存VM上的任何資料存放區或磁碟區。如果發生這種情況、請將儲存虛擬機器新增SnapCenter 至F地、並指定管理LIF、或新增包含儲存虛擬機器的叢集、然後指定叢集管理LIF。</block>
   <block id="913caa3ee179d1d56a0a5a1d647e72c2" category="list-text">在「*新增儲存系統*」精靈中、輸入下表所列的基本儲存VM或叢集資訊：</block>
   <block id="f31303ddb8ada38aed08c2bb8f9d8e6c" category="cell">儲存系統</block>
-  <block id="fad18723d417fce1e95c966edce6b387" category="cell">輸入儲存叢集或儲存VM的FQDN或IP位址。不支援在不同叢集上使用相同名稱的多個儲存系統。SnapCenter支援的每個儲存系統SnapCenter 都必須有唯一的資料LIF IP位址。</block>
-  <block id="419f3742e6de8e0ec4b22cce005e7630" category="cell">平台</block>
-  <block id="cd5a35c139a8f0beea540baf32ecc554" category="cell">選取平台。</block>
   <block id="f6039d44b29456b20f8f373155ae4973" category="cell">使用者名稱</block>
   <block id="dc647eb65e6711e155375218212b3964" category="cell">密碼</block>
   <block id="888a77f5ac0748b6c8001822417df8b6" category="cell">傳輸協定</block>
   <block id="cbb61ef47b30c9a254f01c17c56944ea" category="cell">選取儲存傳輸協定。</block>
   <block id="60aaf44d4b562252c04db7f98497e9aa" category="cell">連接埠</block>
-  <block id="62977e65c9be4b337db0dff68f2781a8" category="cell">選取連接埠443（預設值）或連接埠80以與vCenter通訊。連接埠443用於SnapCenter 在執行VM和資料存放區備份與還原作業時、用於VMware vSphere和vCenter的VMware VM主機之間進行通訊、以利執行VMware vSphere和vCenter的VMware Plug-in。如果您打算保護VVol VM、則必須選取預設連接埠443。</block>
   <block id="c85a251cc457840f1e032f1b733e9398" category="cell">逾時</block>
-  <block id="c123e7ec944a655ce6b0eb1994987cd7" category="cell">輸入vCenter在逾時作業之前應等待的秒數。預設值為60秒。</block>
   <block id="13772e079123f6cc3b0a65f5912e0ac4" category="cell">偏好的IP</block>
-  <block id="2870b54f4433265458cda5b06ab869ae" category="cell">如果儲存虛擬機器有多個管理IP位址、請勾選此方塊、然後輸入SnapCenter 您要使用的IP位址。*附註：*輸入IP位址時、請勿使用方括弧（[]）。</block>
   <block id="15cb2b9c090bdc4868f38d74b1626bca" category="cell">將SnapCenter 伺服器事件記錄到syslog</block>
   <block id="c5f67140b8ebc3ad63f626b837c93a28" category="cell">勾選此方塊以記錄SnapCenter VMware vCenter外掛程式的事件。</block>
   <block id="0adf9b7ec7bd1bc34fa619474f6709e0" category="cell">將AutoSupport 故障操作的部分通知傳送至儲存系統</block>
@@ -1731,7 +1724,6 @@
   <block id="aa4d783fee816f8d21f67950ef7dcc20" category="paragraph">如果SnapCenter 未啟用VMware vCenter外掛程式、請參閱 <block ref="6f48ea8f284b5f5f2ad46612a3e37eec" category="inline-link-macro-rx"></block>。</block>
   <block id="1421137324c618036c21fb84413b93fd" category="list-text">在VMware vSphere用戶端GUI中、按一下工具列中的*功能表*、然後瀏覽至您要新增的VM或資料存放區。</block>
   <block id="26dc1678973cf898baa325abda96cb6d" category="paragraph">使用VMware vSphere用戶端新增儲存設備。</block>
-  <block id="1931a868e4e40f746c1be3fe292582d4" category="paragraph">您必須先將vVols儲存系統新增ONTAP 至VMware vSphere的各種工具、然後將vVols儲存系統新增至SnapCenter VMware vSphere的「支援VMware vSphere的插件」。</block>
   <block id="ed9018b2e8611a3d2c03bb6a205b9715" category="inline-link">VMware vSphere適用的工具ONTAP</block>
   <block id="7598c46258085b3d4013c760f473771e" category="paragraph">如需詳細資訊、請參閱<block ref="fdd966f4de047f12034d4cf35b0cc9b2" category="inline-link-rx"></block></block>
   <block id="de9e931cdaba9ca16191e1a4327cc0e8" category="admonition">如果您使用SnapCenter VMware的VMware解決方案外掛程式來支援VMDK上的應用程式型備份、則必須使用SnapCenter 此支援GUI來輸入儲存驗證詳細資料、並登錄儲存系統。</block>
@@ -2073,4 +2065,15 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="d0ea0acf98adef65d75abe323fe90376" category="admonition">您必須先從 SnapCenter Plug-in for VMware vSphere UI 中刪除 Proxy VM 、才能從 ESXi 中刪除它。</block>
+  <block id="a06bb07ae4f38addfa216f1bf6d50271" category="paragraph">您必須先將 vVols 儲存系統新增至適用於 VMware vSphere 的 ONTAP 工具、然後將其新增至適用於 VMware vSphere 的 SnapCenter 外掛程式。</block>
+  <block id="0d4068754a5316289f4fe4cb2c9f06ab" category="paragraph">如果您已在 SnapCenter 中新增儲存 VM 名稱的項目至 /etc/hosts_ 檔案、則必須確保這些項目也可從虛擬應用裝置中解析。如果沒有、您應該在應用裝置內的 /etc/hosts_ 檔案中新增類似的項目。</block>
+  <block id="ec152cd63150806755f263280e145f0b" category="cell">輸入儲存叢集或儲存 VM 的 FQDN 或管理 LIF 的 IP 位址。
+SnapCenter VMware 外掛程式不支援在不同叢集上使用相同名稱的多個儲存 VM 。</block>
+  <block id="5c75867322c5948bda582697a669534b" category="cell">儲存系統接受的連接埠。
+-443 用於 HTTPS 連線
+80 代表 HTTP 連線</block>
+  <block id="1c5f9a41c5507d4adb0d486ee3d2b620" category="cell">輸入 SnapCenter VMware 外掛程式在逾時作業前應等待的秒數。預設值為 60 秒。</block>
+  <block id="2dc5e487794f729ff43e4206e76d5676" category="cell">如果儲存 VM 有多個管理 IP 位址、請勾選此方塊、然後輸入您要 SnapCenter VMware 外掛程式使用的 IP 位址。
+*附註：*輸入IP位址時、請勿使用方括弧（[]）。</block>
 </blocks>

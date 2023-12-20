@@ -44,3 +44,6 @@ VMware vCenter插件使用選定的憑證登錄到選定的代理VM。SnapCenter
 . 在* Proxy Credentials（*代理認證）*區段中、按一下* Add（新增*）以新增VM作為Proxy使用。
 . 在「* Proxy VM*」對話方塊中、完成資訊、然後按一下「*儲存*」。
 
+
+
+NOTE: 您必須先從 SnapCenter Plug-in for VMware vSphere UI 中刪除 Proxy VM 、才能從 ESXi 中刪除它。
