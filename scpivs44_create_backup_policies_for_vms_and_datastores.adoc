@@ -32,6 +32,19 @@ summary: 您必須先建立備份原則、才能使用SnapCenter VMware vSphere�
 
 
 * 如果您想要VM一致的備份、則必須安裝並執行VMware工具。需要VMware工具來停止虛擬機器。VVol VM不支援VM一致的備份。
+* SnapMirror Business Continuity （ SM-BC ）可讓業務服務持續運作、即使整個站台發生故障、也能支援應用程式使用次要複本進行透明容錯移轉。
++
+
+NOTE: SM-BC 僅支援 VMFS 資料存放區。
+
++
+若要保護 SMBC 部署上的 VMFS 資料存放區、身為 SnapCenter 管理員、您需要：
+
++
+** 依照技術報告中的說明設定叢集和中介： https://www.netapp.com/pdf.html?item=/media/21888-tr-4878.pdf["TR-4878 ： SnapMirror 業務連續性"]。
+** 將與 VMFS 資料存放區相關的磁碟區新增至一致性群組、並使用兩個 ONTAP 儲存系統之間的 _AutomatedFailove_ 保護原則建立資料保護關係。
+
+
 
 
 .關於這項工作
@@ -55,6 +68,11 @@ summary: 您必須先建立備份原則、才能使用SnapCenter VMware vSphere�
 
 
 
+. 指定頻率設定。
++
+原則僅指定備份頻率。備份的特定保護排程是在資源群組中定義。因此、兩個或多個資源群組可以共用相同的原則和備份頻率、但備份排程不同。
+
+. 選取 * 鎖定期間 * 核取方塊以啟用 Snapshot 鎖定。您可以選擇 Snapshot 鎖定期間作為天數 / 月 / 年。
 . 指定保留設定。
 +
 
@@ -63,10 +81,6 @@ IMPORTANT: 如果您打算啟用SnapVault 還原複寫、則應將保留計數�
 +
 
 NOTE: 最大保留值為1018個備份ONTAP 、可備份到位於更新版本的資源、ONTAP 而備份到位在更新版本的資源中、則有254個備份用於位在更新版本的版本上。如果保留設定的值高於基礎ONTAP 版支援的值、則備份將會失敗。跨距資料存放區也是如此。如果跨越資料存放區同時包含ONTAP 有關支援的資源、請ONTAP 務必將保留值設為低於254。
-
-. 指定頻率設定。
-+
-原則僅指定備份頻率。備份的特定保護排程是在資源群組中定義。因此、兩個或多個資源群組可以共用相同的原則和備份頻率、但備份排程不同。
 
 . 在* Replication *欄位中、指定複寫至次要儲存設備的類型、如下表所示：
 +
@@ -79,6 +93,9 @@ NOTE: 最大保留值為1018個備份ONTAP 、可備份到位於更新版本的�
 
 
 NOTE: 此選項支援FlexGroup VMware vSphere 4.5及更新版本的VMware vSphere 4.5版的更新版本中、適用於VMware的VMware Infrastructure SnapCenter 外掛程式中的資料存放區。
+
+
+NOTE: 若要在 SMBC 部署上保護 VMFS 資料存放區、您必須先完成 _ 開始之前 _ 一節所述的先決條件、並在備份後啟用 * 更新 SnapMirror * 。
 
 
 

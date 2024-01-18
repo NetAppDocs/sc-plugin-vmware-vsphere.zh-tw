@@ -22,7 +22,7 @@ summary: 當您準備備備備份或還原VM或資料存放區時、可能會想
 .步驟
 . 按一下「*功能表*」並選取「*主機與叢集*」功能表選項、然後選取虛擬機器、再選取「*組態*」索引標籤、然後按一下「* SnapCenter VMware vSphere的*還原外掛程式」區段*中的「*備份*」。
 +
-image:scpivs44_image14.png["vSphere Client UI"]
+image:scv50_image1.png["vSphere Client UI"]
 
 . 按一下您要檢視的備份。
 

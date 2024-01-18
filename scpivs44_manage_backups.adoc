@@ -25,7 +25,7 @@ summary: 您可以重新命名及刪除SnapCenter VMware vSphere的VMware vSpher
 .步驟
 . 按一下「*功能表*」並選取「*主機與叢集*」功能表選項、然後選取虛擬機器、再選取「*組態*」索引標籤、然後按一下「* SnapCenter VMware vSphere的*套件*」區段中的「*備份*」。
 +
-image:scpivs44_image14.png["vSphere 用戶端畫面"]
+image:scv50_image1.png["vSphere 用戶端畫面"]
 
 . 在「Configure（設定）」索引標籤上、選取備份、然後按一下「* Rename（*重新命名）」。
 . 在「*重新命名備份*」對話方塊中、輸入新名稱、然後按一下「*確定*」。
@@ -48,7 +48,7 @@ image:scpivs44_image14.png["vSphere 用戶端畫面"]
 
 . 按一下「*功能表*」並選取「*主機與叢集*」功能表選項、然後選取虛擬機器、再選取「*組態*」索引標籤、然後按一下「* SnapCenter VMware vSphere的*套件*」區段中的「*備份*」。
 +
-image:scpivs44_image14.png["vSphere 用戶端視窗"]
+image:scv50_image1.png["vSphere 用戶端視窗"]
 
 . 選取一或多個備份、然後按一下*刪除*。
 +

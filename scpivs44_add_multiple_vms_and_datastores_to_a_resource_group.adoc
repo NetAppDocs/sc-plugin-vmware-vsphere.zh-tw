@@ -22,7 +22,7 @@ summary: 您可以使用SnapCenter 「VMware vSphere用戶端編輯資源群組�
 * 一個FlexGroup 資料存放區（不支援跨距VM）。
 * 一FlexVol 或多個資料存放區（支援跨虛擬機器）。
 * 一或多個VVol VM。
-* 所有VVol VM都具有指定的vCenter標記。
+* 具有指定 vSphere 標記的所有 vVol VM 。
 * 指定資料夾中的所有VVol VM。
 
 

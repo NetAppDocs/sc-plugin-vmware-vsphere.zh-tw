@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: rename_storage.html 
+keywords:  
+summary: 您可以使用 REST API 重新命名儲存設備。 
+---
+= 還原重新命名儲存設備的備份
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+重新命名儲存設備時、使用重命名之前所做備份的工作流程會失敗。隨着重命名備份功能的推出（可通過 REST API 完全訪問），現在可以使用在重命名存儲之前所進行的備份。其餘 API 的工作流程和使用方法如下所述。
+
+.步驟
+. 新增或更新新的儲存連線、確保新的叢集或 SVM 名稱會反映在選擇控制閥中。
+. 重新啟動服務以重新整理快取、如 KB 文章所述： https://kb.netapp.com/mgmt/SnapCenter/SCV_backups_fail_after_SVM_rename["SVM 重新命名後、選擇控制閥備份失敗"]
+. 建立新備份。
+. 請使用備份詳細資料來尋找舊的和新的儲存名稱。
+. 在 vSphere 用戶端的 * 備份 * 畫面中、選取備份以查看其詳細資料。
+. 從 URL 存取 Swagger ： https://<SCV-IP>:8144/api/swagger-ui/index.html[]
++
+使用下列 API 重新命名儲存設備：
+
++
+修補程式
+/4.1/ 儲存系統
+
++
+範例：
+｛
+  "istingSVM" ： {
+    " 名稱 " ： " 字串 "
+  } 、
+  "newSVM" ： ｛
+    " 名稱 " ： " 字串 "
+  }
+}
+
++
+回應：
+
++
+｛
+  " 狀態訊息 " ： " 確定 " 、
+  " 狀態代碼 " ： 200 、
+  " 回應訊息 " ： [
+    " 儲存系統已成功重新命名。 "
+  ]
+}
+
++
+執行此 API 之後、您將能夠執行所有工作流程、包括舊備份的還原作業。
+
+

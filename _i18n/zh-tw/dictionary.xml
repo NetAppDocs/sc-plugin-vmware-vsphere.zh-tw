@@ -582,10 +582,6 @@
   <block id="b425cca2998cc4a7041a0baf7681e912" category="list-text">您可以執行下列作業：</block>
   <block id="81c4bc22149c6022288661540ed446d9" category="list-text">選項1：應用程式組態</block>
   <block id="29b39b2b805d36f8dc5499179622da3f" category="list-text">選項2：系統組態</block>
-  <block id="99227cc56eb10094b5911955997594bd" category="list-text">選項3：網路組態</block>
-  <block id="eb6403fe72c82873180af4e1fbe24094" category="paragraph">顯示或變更IP位址設定顯示或變更網域名稱搜尋設定顯示或變更靜態路由提交變更Ping主機</block>
-  <block id="85fe6d094a622a1eeb362f8dda82c97e" category="list-text">選項4：支援與診斷</block>
-  <block id="d34a5ffb5a21003f9819a1371ce31cc8" category="paragraph">產生支援套件存取診斷Shell啟用遠端診斷存取產生核心傾印套件組合</block>
   <block id="d5016d0bd467fba5c77e9ad2fb083138" category="section-title">從SnapCenter 維護主控台修改VMware vCenter外掛程式密碼</block>
   <block id="7a1b4c723db242b8b956bf9b625f088d" category="paragraph">如果您不知道SnapCenter VMware vSphere管理GUI適用的VMware vSphere Plug-in管理密碼、可以從維護主控台設定新密碼。</block>
   <block id="ef68a5edeaf02243985af66b982ffeeb" category="list-text">輸入「* 1*」作為「應用程式組態」。</block>
@@ -847,15 +843,12 @@
   <block id="7f8c1c53fd7e08fda5762c3337c0bce6" category="cell">「使用uuid從備份還原VM或還原刪除的VM」會還原指定的備份。通過步驟1中的* uid*。從步驟2傳遞*備份Id*。傳遞*重述位置*屬性中步驟3和步驟4的資訊。如果VM備份是部分備份、請將「REstartVM」參數設為「假」。*附註：*您無法還原為範本的VM。</block>
   <block id="883fd3a999b576424bc7a7ce53cc2e8a" category="doc">不同SnapCenter 的圖形介面總覽</block>
   <block id="568a0ca21263fa919f552d5a59509f7b" category="paragraph">在您的需求環境中、您必須使用適當的GUI來執行資料保護和管理作業。SnapCenter</block>
-  <block id="18499fdc69ec56cb82f996ca74ff9268" category="paragraph">此外、SnapCenter 也有一個管理GUI可在VMware插件上執行管理作業。</block>
-  <block id="923c190fb7e44419e6b6b699fddd3b7b" category="paragraph">下表顯示各個SnapCenter 方面的GUI所執行的作業。</block>
   <block id="62882ef8fe7d5fd42d42bffbc2997106" category="cell">使用此GUI…</block>
   <block id="04638ac63aa96ffa4b255a2a417c75ee" category="cell">若要執行這些作業...</block>
   <block id="9d084986783a6b781676e2cbf701b705" category="cell">若要存取這些備份...</block>
   <block id="dc54a2b97309df247da23aab805aa9c4" category="cell">VM和資料存放區備份VMDK附加及卸除資料存放區掛載、以及卸載VM和VMDK還原來賓檔案和資料夾還原</block>
   <block id="5e1e683454f68437c1ce8e307c704972" category="cell">圖形使用者介面SnapCenter</block>
   <block id="00e553df82c18a0afa37efd55ff7a964" category="cell">備份及還原VM上的資料庫和應用程式、包括保護Microsoft SQL Server、Microsoft Exchange和Oracle的資料庫。資料庫複製</block>
-  <block id="cca3a0f436c797645a4b0054999e0894" category="cell">使用SnapCenter 還原GUI執行備份。</block>
   <block id="0e7f37a8cfb79d079f359e951ceeb17f" category="cell">VMware vSphere管理GUI的VMware外掛程式SnapCenter</block>
   <block id="3ff093b512ab44265f3095a0b6acf714" category="cell">修改網路組態產生支援服務包修改NTP伺服器設定停用/啟用外掛程式</block>
   <block id="f8fd615467296836f3668919ea8e3b23" category="cell">不適用</block>
@@ -965,7 +958,6 @@
   <block id="b2830ac7ac8953a655c6f91092fd77d7" category="paragraph">由VMware vSphere的VMware vSphere的VMware vCenter外掛程式管理的每種物件類型總數SnapCenter 。</block>
   <block id="8c4aa541ee911e8d80451ef8cc304806" category="paragraph">儲存設備</block>
   <block id="5f5ba9130776790de2145fb2332ae6d9" category="paragraph">將游標停留在圖表上的一行上、即可查看詳細的每日結果。</block>
-  <block id="f9b89f50c3191d26a18cb9179d9c627c" category="summary">資源群組是要保護的VM、資料存放區或vVols VM的容器。</block>
   <block id="020a36deb114af1bb518c70d5975e940" category="doc">建立資源群組</block>
   <block id="4f5a02ab6b7e9a5ab38a6272a35f425c" category="paragraph">資源群組可包含下列其中一項：</block>
   <block id="b9131269a99d9c88ad3147cbcd58bf40" category="list-text">傳統VM和資料存放區</block>
@@ -975,8 +967,6 @@
   <block id="63ae32cca42b4e9f60d4e565abb500f0" category="paragraph">一FlexVol 或多個資料存放區。支援跨距資料存放區。</block>
   <block id="be4dabd9b423d95d1a6d3ae245c4674d" category="list-text">VVOL VM</block>
   <block id="609bc18d83c2eda9daa8745e802c0c91" category="paragraph">一或多個VVol VM。VVOL VM無法與傳統VM或資料存放區結合使用。</block>
-  <block id="b7061f14aa08078a733908eff9954071" category="list-text">VVOL VM搭配標籤</block>
-  <block id="35b94b72165429aeed0e237dffac6aca" category="paragraph">所有VVol VM都具有指定的vCenter標記。不支援其他具有標記的實體、例如資料存放區或傳統VM、在同一個vCenter或不同vCenter中具有相同標記。如果具有指定標記的VM清單包含vVol VM和傳統VM的混合組合、SnapCenter 則VMware vSphere的VMware Plug-in會備份vVol VM、並跳過傳統VM。</block>
   <block id="c4768b4c64b8fdd7c81cc095dffaa2b4" category="list-text">資料夾中的VVOL VM</block>
   <block id="dc9d5117fa27f9852d62a28174a9c1bf" category="paragraph">所有vVols都位於單一指定的vVol資料夾中。如果資料夾包含VVol VM和傳統VM的混合組合、SnapCenter 則VMware vSphere的VMware Plug-in會備份VVol VM、並跳過傳統VM。</block>
   <block id="c7fda16b0d034ce0f2afcab4d2064e02" category="paragraph">對於所有資源群組：</block>
@@ -993,7 +983,6 @@
   <block id="a5fc7fce0f281a94273520624de03c38" category="list-text">最佳化Snapshot複本</block>
   <block id="688d5b2babde9746f885c50b8809883a" category="paragraph">若要最佳化Snapshot複本、您應該將與同一個磁碟區相關聯的VM和資料存放區分組為一個資源群組。</block>
   <block id="9f02509e5496e861df4c341dba05386e" category="list-text">備份原則</block>
-  <block id="ab4c9d1e2eb92442c5b3ece6aa2c0278" category="paragraph">雖然不需要備份原則就能建立資源群組、但只有在資源群組附加至少一個原則時、才能執行排程的資料保護作業。您可以使用現有原則、也可以在建立資源群組時建立新原則。</block>
   <block id="4360fc5d869bf831be60cbb2a380170e" category="list-text">相容性檢查</block>
   <block id="830d37b05f2ce774b9a3bf6afe319d15" category="paragraph">建立資源群組時、執行相容性檢查。SnapCenter</block>
   <block id="f2674e0010597a541e3758cbd4368e87" category="paragraph"><block ref="6c9b49ac3dbdf01a593410d52afe429e" category="inline-xref-macro-rx"></block></block>
@@ -1028,8 +1017,6 @@
   <block id="749435efb6e9940bcadad406e3a36d76" category="paragraph">當您按一下*下一步*時、系統會先檢查SnapCenter 哪些是由哪個系統管理、並與所選資源所在的儲存設備相容。</block>
   <block id="985e4f2c2c2709eb57d50d5cec83e1dc" category="paragraph">如果SnapCenter 顯示訊息「民選&lt;resource-name&gt; is not s版本 相容」、表示所選的資源與SnapCenter 該資源不相容。請參閱 <block ref="6c9b49ac3dbdf01a593410d52afe429e" category="inline-xref-macro-rx"></block> 以取得更多資訊。</block>
   <block id="eaedab9c594e1aeb86de4b70aee0ef7b" category="list-text">在「*擴充磁碟*」頁面上、針對多個資料存放區中具有多個VMDK的VM選取一個選項：</block>
-  <block id="fe83ca3448603607d6f63f28881e4f36" category="list-text">永遠排除所有跨距資料存放區[這是資料存放區的預設值。]</block>
-  <block id="72e68a17ed1f6a20f08ce75c1fd9dfcb" category="list-text">一律包含所有跨距資料存放區[這是VM的預設值。]</block>
   <block id="132ea0655a055ab5c66e879c0cecfd43" category="list-text">手動選取要包含的跨距資料存放區</block>
   <block id="731942548689f6a5287491346edb98a1" category="paragraph">不支援FlexGroup 將跨距VM用於不支援的資料存放區和vVol資料存放區。</block>
   <block id="3210952a5fb8d5ccfeba07ae678f1775" category="list-text">在「*原則*」頁面上、選取或建立一或多個備份原則、如下表所示：</block>
@@ -1299,7 +1286,6 @@
   <block id="bfe57af1784e630138f3c0e735f228c4" category="admonition">您無法還原為範本的VM。</block>
   <block id="0a4a3719bc7519d1162060e0f0e08f8a" category="doc">建立備份原則</block>
   <block id="2043baf4baf43c498171aa6ce5844280" category="list-text">在「*新備份原則*」頁面上、輸入原則組態資訊、然後按一下「*新增*」。</block>
-  <block id="424c88c59d861cdd8137216193ffeb91" category="paragraph">如果原則將用於鏡射保存庫關係、則在「複寫」欄位中、SnapVault 如果您想要將備份複製到鏡射保存庫目的地、則只能選取「*更新備份後的更新*」選項。</block>
   <block id="08b700204b080921e158ac4569ab02b7" category="list-text">在「建立資源群組」精靈的每個頁面上輸入必要資訊、選取要納入資源群組的VM和資料存放區、然後選取要套用至資源群組的備份原則、並指定備份排程。</block>
   <block id="d4a6978acacfefd87687ddcaa390823d" category="paragraph">備份會依照為資源群組設定的備份原則中所指定的方式執行。</block>
   <block id="6650233af9749cab906d5d830dc495d5" category="summary">若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式執行新增和修改儲存VM作業、您必須遵循規定的REST API呼叫順序。</block>
@@ -1315,7 +1301,6 @@
   <block id="c47e142f2a6eb4b26405a39504c6d611" category="list-text">一個FlexGroup 資料存放區（不支援跨距VM）。</block>
   <block id="9000b760c9b436478de8d2f4d03d38b6" category="list-text">一FlexVol 或多個資料存放區（支援跨虛擬機器）。</block>
   <block id="0ffd2996227063c29608f9b9d955979f" category="list-text">一或多個VVol VM。</block>
-  <block id="833c06ea28f7615b91589a3019b9d916" category="list-text">所有VVol VM都具有指定的vCenter標記。</block>
   <block id="6d42a41dd23c8c525acb6572dc671ba2" category="list-text">指定資料夾中的所有VVol VM。</block>
   <block id="a055e53f0d72ccb2f68db894ad65a4cf" category="list-text">在*資源*頁面上、執行下列動作：</block>
   <block id="99f6fd129ebef0c9ba4fbbfc952c2d3f" category="list-text">在「資料存放區」欄位中、瀏覽至您要新增的VM或資料存放區。</block>
@@ -1471,7 +1456,6 @@
   <block id="46cf08631149e52c644be7e1d577785a" category="paragraph">如果SnapCenter 您是一個不完整的使用者、並且升級至SnapCenter VMware的版本為4、4.2、並將應用程式的over VMDK備份移轉至SnapCenter VMware的版本為2、則移轉命令會自動登錄外掛程式。</block>
   <block id="7af76100be5ace159efb0a1fb46267ce" category="paragraph">您可以在SnapCenter 同一個SnapCenter VMware vSphere上登錄多個適用於VMware vSphere的VMware vCenter Plug-in執行個體、以支援VM上的應用程式型資料保護作業。您無法在SnapCenter 多SnapCenter 個VMware伺服器上登錄相同的VMware vSphere效能支援外掛程式。</block>
   <block id="3a3bfcea804c014276e7672b06f18879" category="summary">在部署虛擬應用裝置之前、您應該先瞭解部署需求。</block>
-  <block id="c97f99f5f071a69947fdc7628d9a1083" category="paragraph">在部署虛擬應用裝置之前、您應該先瞭解部署需求。下列五個表格列出部署需求。</block>
   <block id="fc076765cbc4aef219c970ffdd93f443" category="section-title">主機需求</block>
   <block id="b2164e68f3b3365f8a7f629f2ded172a" category="paragraph">開始部署SnapCenter VMware vSphere的VMware vSphere版的VMware vCenter外掛程式之前、您應該先熟悉主機需求。</block>
   <block id="9f1f4f9f8512dfd3b467fdb2b0a3fcb9" category="paragraph">無論您是使用外掛程式來保護Windows系統或Linux系統上的資料、VMware的VMware插件都會部署為Linux VM。SnapCenter</block>
@@ -1531,7 +1515,6 @@
   <block id="3672cca688eb0474cd3fee2add1a2067" category="cell">連接埠類型</block>
   <block id="1af12a0ed126e7e6b194370c0c0be5eb" category="cell">預先設定的連接埠</block>
   <block id="926bafe6b6d4e07892751c7ca73ad20d" category="cell">VMware vSphere連接埠適用的外掛程式SnapCenter</block>
-  <block id="34fe6318217e13219322f9f481788cfa" category="paragraph">附註：您無法修改連接埠組態。</block>
   <block id="7c1239972879fe0b69b4bb6d5c9a743e" category="cell">VMware vSphere vCenter Server連接埠</block>
   <block id="1f5ccbd5c3e6d6be1c440296630a5678" category="cell">如果您要保護VVol VM、則必須使用連接埠443。</block>
   <block id="131b9f1c14d26ba7a0cce7389e7679a9" category="cell">儲存叢集或儲存VM連接埠</block>
@@ -1594,25 +1577,10 @@
   <block id="a3d53cfe9124531cb5f9bbfefe704326" category="sidebar">REST API工作流程可修改內建排程</block>
   <block id="f683581d3e75f05f9d9215f9b4696cef" category="sidebar">升級</block>
   <block id="3da6944b1baaec4beb70694ac307fd1f" category="sidebar">升級至同一版本的新修補程式</block>
-  <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">版本資訊</block>
-  <block id="e726fb41e1d7a22426e4a9637075810c" category="sidebar">深入瞭解選擇控制閥</block>
-  <block id="ff31982aef870d546d52f49bb30ef34b" category="sidebar">部署需求</block>
-  <block id="f87889e78c8188fffcbd96ceaef56759" category="sidebar">保護VM、VMDK和資料存放區</block>
-  <block id="222e11fb018a824c05f5fc6a922f5240" category="sidebar">保護您的資料</block>
-  <block id="13f1397303dbc6596a7d0adff2836250" category="sidebar">使用REST API</block>
-  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">部落格社群</block>
-  <block id="8a49edffe2e22d8746e8c1676b54b1e5" category="sidebar">NetApp部落格–選擇控制閥</block>
-  <block id="f62203a113eda99708c4011593033d16" category="sidebar">NetApp社群–選擇控制閥</block>
-  <block id="dfcc398099d6a64026e51ab282e16253" category="sidebar">更多資源</block>
-  <block id="7608e75619cff3eeb4e8bce40481b456" category="sidebar">軟件文檔SnapCenter</block>
-  <block id="11d88a82190664755120fc16494310df" category="sidebar">早期版本的選擇控制閥文件</block>
-  <block id="74fe1f888648848c4fd5f85ae847a16c" category="sidebar">NetApp知識庫–選擇控制閥</block>
-  <block id="56d692c399ce7a0cb595940da747b343" category="paragraph">資源群組是您要保護的VM、資料存放區和VVol VM的容器。</block>
   <block id="0834d3a187a3bdb67af7d3afee5ae7b7" category="paragraph">資源群組可包含下列項目：</block>
   <block id="a1376c0215e5d8cf70e012954979bc39" category="paragraph">單FlexGroup 一的資料存放區。不FlexGroup 支援跨距資料存放區。無法將此資料存放區與傳統VM或資料存放區結合使用。FlexGroup</block>
   <block id="c8e385cc7a112ebc9131fa51b5a3767b" category="admonition">VMware vSphere 4.5及更新版本的支援VMware vSphere 4.5外掛程式、可在支援高達128 TB的大型LUN上支援資料存放區。SnapCenter ASA如果您要保護大型LUN、請僅使用完整配置的LUN來避免延遲。</block>
   <block id="d2df0b923abc21af57a4dd120ecd6e47" category="admonition">系統會針對附加至資源群組的每個原則建立「_Recent」備份。因此、具有多個原則的資源群組將會有多個「_Recent」備份。請勿手動重新命名「_Recent」備份。</block>
-  <block id="d5d5b2c27cc217b5e686939e44c087e6" category="cell">選取您要保護的資源類型：*資料存放區（一或多個指定資料存放區中的所有傳統VM）。您無法選取VVol資料存放區。*虛擬機器（個別的傳統VM或VVol VM；在欄位中、您必須瀏覽至包含VM或VVol VM的資料存放區）。您無法在FlexGroup 不支援的資料存放區中選取個別VM。*標籤（所有vVol VM都具有單一指定的VMware標籤；在清單方塊中、您必須輸入標籤）* VM資料夾（所有vVol VM都位於指定的資料夾中；在快顯欄位中、您必須瀏覽至資料夾所在的資料中心）</block>
   <block id="9b0bd68baf74fb3ad293c166090c7bc3" category="admonition">保留工作記錄的預設值為30天、保留工作的預設值為90天。超過設定保留時間的工作記錄和工作、每六小時會清除一次。您可以使用組態「jobs/cleanup」REST API來修改保留工作和工作記錄的時間。您無法修改清除排程。</block>
   <block id="6dd906abac50c0e38ec5790fd42b32f0" category="cell">1.2、1.3</block>
   <block id="d133a3dbdb8489d51606602b87aa1fe0" category="cell">1.2、1.3 SnapCenter 此功能可與SnapCenter VMware的VMware插件進行通訊、以便透過VMDK資料保護作業來執行應用程式。</block>
@@ -1776,10 +1744,6 @@
   <block id="b16dace40c6d62a802d404e0931dba5b" category="paragraph">稽核檔案的預設組態為：</block>
   <block id="e85610b7230d1171a418cabfebe62026" category="list-text">使用中的稽核記錄檔最多可擴充至10 MB</block>
   <block id="12351971cf18f728e97d1d955a9fc3e0" category="list-text">最多可保留10個稽核記錄檔</block>
-  <block id="6c329fdfc0824014c9cea3e6b9930edc" category="paragraph">若要修改預設組態、請在/opt/netapp/scvservice/stand套 用的AEGIS /etc/scbr/scbr.properties中新增金鑰值配對、然後重新啟動scvservice。</block>
-  <block id="e7544f73b7793ed225e3168e78f3d567" category="paragraph">稽核記錄檔的組態包括：</block>
-  <block id="6ae00b124df26cdd26d631476459a849" category="list-text">auditMaxROFiles=forse,&lt;xx&gt; 其中xx是稽核記錄檔上的最大復原數、例如：auditMaxROFiles=15。</block>
-  <block id="5b50659763cfe92e9c9d36b391a7d71d" category="list-text">auditLogSize=feskit,&lt;XX&gt; 其中xx為檔案大小MB、例如：auditLogSize=15MB。</block>
   <block id="d49dc59b4bc8d6a7864b09f7bf8f0b14" category="paragraph">系統會定期檢查稽核記錄的上滾狀態、以確保完整性。選擇控制閥提供REST API來檢視記錄並確認其完整性。內建的排程會觸發並指派下列其中一種完整性狀態。</block>
   <block id="ec53a8c4f07baed5d8825072c89799be" category="cell">狀態</block>
   <block id="66aa2152dc025e437ba51ca832c788cc" category="cell">遭竄改</block>
@@ -1800,8 +1764,6 @@
   <block id="51359e8b51c63b87d50cb1bab73380e2" category="list-text">原則</block>
   <block id="3500ba09d0538297440ca620c9dd46bf" category="list-text">備份</block>
   <block id="a7de25fe8fdb01b494d7980fb7c1b706" category="paragraph">下表列出可在每個資源上執行的作業：</block>
-  <block id="ddcf50c29294d4414f3f7c1bbc892cb5" category="cell">資源</block>
-  <block id="456d0deba6a86c9585590550c797502d" category="cell">營運</block>
   <block id="a116989467521834f98dcea26166c227" category="cell">已建立、修改、刪除</block>
   <block id="b9d56b2a8331bc1f33fa57bea9030e2c" category="cell">已建立、修改、刪除、暫停、恢復</block>
   <block id="c1a0aa59345d12529d245828307944fd" category="cell">已建立、重新命名、刪除、掛載、卸載、還原VMDK、還原的VM、附加VMDK、Detach VMDK、Guest File Restore</block>
@@ -1837,14 +1799,11 @@
   <block id="bdbfb471a9264cde1fc7a4e0281096ab" category="list-text">在選擇控制閥外掛程式的左側導覽器窗格中、按一下* Policies *。</block>
   <block id="5fe139943a50a82fa435d79d3988038a" category="admonition">您必須在VM上執行VMware工具、才能執行VM一致的備份。如果VMware Tools未執行、則會改為執行損毀一致的備份。</block>
   <block id="ed6d74d4e8ee3f5585b77757cd04466e" category="cell">Vserver Vserver對等端點</block>
-  <block id="0e3d7abcb0c352bf59979416f80cd131" category="admonition">您可以忽略有關不受支援的Vserver命令的警告訊息。</block>
   <block id="637f9e5cc0956a7a76dc0a24cefff651" category="paragraph">如果您使用SnapCenter 適用於VMware vSphere虛擬應用裝置的VMware vCenter外掛程式、則可以升級至較新的版本。升級程序會取消註冊現有的外掛程式、並部署僅與vSphere 7.0U1及更新版本相容的外掛程式。</block>
   <block id="23281bdadc9c1bd0708c32ac888b35a9" category="list-text">在vCenter GUI上、按一下* vSphere用戶端（HTML）*。</block>
   <block id="2c88679616bb5d1045cb38dc2729806a" category="summary">VMware vSphere的VMware vCenter外掛程式是獨立外掛程式、與其他的VMware vSphere外掛程式不同。SnapCenter SnapCenter您必須在vCenter中使用VMware vSphere用戶端GUI、才能執行VM、VMDK及資料存放區的所有備份與還原作業。</block>
-  <block id="170b7970d2445acef575f2e6cdfa47d4" category="paragraph">VMware vSphere的VMware vCenter外掛程式是獨立外掛程式、與其他的VMware vSphere外掛程式不同。SnapCenter SnapCenter您必須在vCenter中使用VMware vSphere用戶端GUI、才能執行VM、VMDK及資料存放區的所有備份與還原作業。您也可以使用Web用戶端GUI儀表板來監控受保護和未受保護的VM清單。對於所有其他SnapCenter 的不支援程式外掛程式（應用程式型外掛程式）、您可以使用SnapCenter 支援還原的圖形使用者介面進行備份與還原作業及工作監控。</block>
   <block id="3c92486afff110ae393bc4f792674c00" category="paragraph">若要保護VM和資料存放區、請使用VMware vSphere用戶端介面。Web用戶端GUI與儲存系統上的NetApp Snapshot複製技術整合。這可讓您在數秒內備份VM和資料存放區、並還原VM、而無需讓ESXi主機離線。</block>
   <block id="b4739ccaeec10b1a2794ad9d017952c1" category="cell">vSphere用戶端GUI SnapCenter</block>
-  <block id="2f45b0f49c558030f71746b5e9f5d663" category="cell">使用VMware vSphere用戶端GUI執行的VM和資料存放區備份。</block>
   <block id="b6618107278d92d54e80b1f930a98a14" category="paragraph">若要執行VM一致的備份與還原作業、您必須使用VMware vSphere用戶端GUI。雖然可以使用VMware工具執行某些作業、例如掛載或重新命名資料存放區、但這些作業不會登錄SnapCenter 在該儲存庫中、也無法辨識。</block>
   <block id="c69e757881b667c28a2b414939fcaa07" category="paragraph">不支援資料庫和VM的單一Snapshot複本。SnapCenterVM和資料庫的備份必須獨立排程和執行、即使資料庫和VM位於同一個磁碟區、也會建立個別的Snapshot複本。應用程式型備份必須使用SnapCenter 還原GUI排程；VM一致的備份必須使用VMware vSphere用戶端GUI排程。</block>
   <block id="0732e8e379c23dc5fb5e0055374a7f1d" category="summary">如果SnapCenter VMware vSphere用戶端的行為不正確、您可能需要清除瀏覽器快取。如果問題持續發生、請重新啟動Web用戶端服務。</block>
@@ -1865,7 +1824,6 @@
   <block id="3ec87b09fd664417b12e12d452b57325" category="paragraph">您可以在vCenter中使用VMware vSphere用戶端GUI、執行VMware虛擬機器（傳統VM和vVol VM）、VMDK和資料存放區的所有備份與還原作業。對於VVol VM（VVol資料存放區中的VM）、僅支援損毀一致的備份。您也可以還原VM和VMDK、以及還原位於客體作業系統上的檔案和資料夾。</block>
   <block id="07f168e3f6afdf6ced41507cdd505ae8" category="list-text">VM一致的Snapshot複本需要VMware工具</block>
   <block id="c8fc1db15ada67618adabf802e158c27" category="paragraph">如果VMware工具尚未安裝並執行、則檔案系統不會靜止、而且會建立損毀一致的Snapshot。</block>
-  <block id="bc62c1a60fc6228e9d7c607c117b1caa" category="list-text">VMware vSphere需要使用哪些工具來設定VMware VVol VM ONTAP 。</block>
   <block id="ab9f567063d45a42b5368e31b1fa1ee5" category="paragraph">您可以使用ONTAP 支援功能來配置ONTAP 及配置VMware Web用戶端中vVols的儲存資源。</block>
   <block id="5f825df741acce88f72970b7ed758803" category="list-text">在VMware vSphere用戶端中、按一下*儲存系統*。</block>
   <block id="c9424bce718e9e3deaedf0943d2692ad" category="summary">若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式修改VMware vSphere用戶端工作的內建排程、您必須遵循規定的REST API呼叫順序。</block>
@@ -1938,7 +1896,6 @@
   <block id="44040e214e919d86d6a1f3f26db3d22c" category="inline-image-macro">編輯圖示</block>
   <block id="6df4c068972f223d7540167400204e37" category="list-text">在選擇控制閥外掛程式的左導覽器窗格中、按一下*資源群組*、然後選取資源群組、再按一下 <block ref="f4ee71cd89b2b235a395ca347e92f957" category="inline-image-macro-rx" type="image"></block> *編輯資源群組*以啟動精靈。</block>
   <block id="67b5e7cdb9f6fc8b9cf2e5acd6f703b8" category="inline-image-macro">vSphere Client UI</block>
-  <block id="0a816a6941032c4e5cad82dd2979717b" category="paragraph"><block ref="0a816a6941032c4e5cad82dd2979717b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5f6ae733d2ed961dcd2c41c04be8a70d" category="paragraph"><block ref="5f6ae733d2ed961dcd2c41c04be8a70d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d6d90000405f5209bdfcbf03157cf4e4" category="paragraph">若要登入SnapCenter VMware vSphere管理GUI的VMware vCenter外掛程式、您必須知道IP位址和登入認證。您也必須記下從維護主控台產生的 MFA 權杖。</block>
   <block id="0a94cca6404e40338ea941d1db3fab5e" category="list-text">使用維護主控台的系統組態選項、產生 6 位數的 MFA 權杖。</block>
@@ -2002,7 +1959,6 @@
   <block id="a2129fc13872e21499db7ac1478e260c" category="section-title">變更稽核記錄設定</block>
   <block id="3b7005e3de4bc668f924c18bad55b3b2" category="paragraph">您可以變更記錄設定的預設組態。</block>
   <block id="5a2083853297d8e177a0fe4d54c85aad" category="paragraph">此工作可協助您變更預設稽核記錄設定。</block>
-  <block id="e057b7b8bc0461146d95eee6633a5262" category="list-text">在 * 稽核記錄設定 * 窗格中、根據您的需求輸入 * 稽核項目數 * 和 * 稽核記錄大小限制 * 。</block>
   <block id="e7a77a9fce1ce4132f3da4c57d5095ca" category="list-text">選取工具列中的重新整理圖示、即可隨需重新整理顯示。</block>
   <block id="a83891cb74b7616b5c42d96a6d160157" category="list-text">選取篩選圖示以選擇您要顯示的工作時間範圍、類型、標記和狀態。篩選器區分大小寫。</block>
   <block id="394800e7b0c5ad79486fc6712be3f69a" category="list-text">選取「工作詳細資料」視窗中的重新整理圖示、以在工作執行時重新整理顯示。</block>
@@ -2016,10 +1972,7 @@
   <block id="5258377f2e9e8d3d391eece64e6c5025" category="paragraph"><block ref="8214327d71770f15589ad8ef083206a6" category="inline-link-macro-rx"></block>。</block>
   <block id="6b9b94c3711b201fe3a71623fa72ea24" category="paragraph"><block ref="e29e0f9a9d290a9acb44d7554c4c570a" prefix="" category="inline-code"></block></block>
   <block id="754c65b00cdb7c7d30219dba86a36692" category="paragraph"><block ref="e29e0f9a9d290a9acb44d7554c4c570a" prefix="" category="inline-code"></block><block ref="de3b0e6d5c5836f36dfb38e288be5e75" prefix=" " category="inline-code"></block></block>
-  <block id="ed6c7d8c98b4f237e43cf947b0c1c18e" category="inline-link">適用於 VMware vSphere 4.9 的 SnapCenter 外掛程式注意事項</block>
-  <block id="945cf0d9dc190747462a7c0ff9da44c3" category="paragraph"><block ref="945cf0d9dc190747462a7c0ff9da44c3" category="inline-link-rx"></block></block>
   <block id="6f30de27462e7513b2536a2c20f5b4f0" category="list-text">在 * 原則 * 頁面上、選取 * 建立 * 以啟動精靈。</block>
-  <block id="8e4d5f4d1ec38742346082b46ee1b133" category="admonition">只有 VMware vCenter Server 7 更新版本 1 和更新版本才支援升級至 4 ． 9 號選擇控制閥、對於版本 7 更新版本 1 之前的 VMware vCenter 伺服器、您應該繼續使用 4 ． 7 號選擇控制閥。不受支援版本的VMware vCenter伺服器會中斷升級。</block>
   <block id="88ae28e59dc3874fd82752642fcf546a" category="inline-image-macro">vCenter UI</block>
   <block id="f0a600cfbc8a81c89ee7f81d19d9ce25" category="paragraph"><block ref="f0a600cfbc8a81c89ee7f81d19d9ce25" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1514cb6512294e2b8f3ad18aa1515a0d" category="inline-image-macro">適用於 VMware vSphere 的 SnapCenter 外掛程式視窗</block>
@@ -2040,23 +1993,15 @@
   <block id="19dab1cfb0814635bf36a99edfdf3ee4" category="list-text">選取「工作監控」標題列中的下載圖示。</block>
   <block id="a1aef3bddb723272d9c0c9f26244dc22" category="paragraph">本節列出開始部署之前應採取的所有必要行動。</block>
   <block id="04f004a2cc237196858b57b47529d3e0" category="admonition"> VMware vCenter 7u1及更新版本支援OVA部署。</block>
-  <block id="c13f40226bb90b283576004b676cefbf" category="inline-image-macro">附加虛擬磁碟視窗</block>
-  <block id="bcc0e279a8b5799dc849deb8d892ccce" category="paragraph"><block ref="bcc0e279a8b5799dc849deb8d892ccce" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5487a2986e81211f1a1fa9093d29f9ed" category="paragraph">您可以選取篩選器圖示並選擇日期和時間範圍、選取是否要包含 VMware Snapshot 複本的備份、是否要掛載備份、以及位置、來篩選備份清單。按一下「*確定*」。</block>
   <block id="ff0454269d96dc924f9ed99a4b200ecc" category="inline-image-macro">編輯設定視窗</block>
   <block id="7a5a976df2571c947716b40adffda221" category="paragraph"><block ref="7a5a976df2571c947716b40adffda221" category="inline-image-macro-rx" type="image"></block></block>
   <block id="92e8ef430f5d51426882bb12bbf5e047" category="inline-image-macro">vSphere 用戶端畫面</block>
-  <block id="0b440f7132b6fe79c573c20ac70e3650" category="paragraph"><block ref="0b440f7132b6fe79c573c20ac70e3650" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f4b8d6321a2be1101bc17bbd298bd7a3" category="inline-image-macro">vSphere 用戶端視窗</block>
-  <block id="68899227b911c9eadf8827538ec7e0f0" category="paragraph"><block ref="68899227b911c9eadf8827538ec7e0f0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="57fa17d3a54ac76c2a1db3016be37151" category="list-text">如果您要新增 SVM 、則儲存 VM 的名稱必須解析為管理階層的生命。</block>
   <block id="d3ad548036fae3576533dbeebaee0ad7" category="list-text">在「儲存系統」頁面上、選取 * 新增 * 選項。</block>
   <block id="e8194860f1d30bbf1da68bba07dd575c" category="cell">當您選取「認證」作為驗證方法時、此欄位會顯示。輸入用於登入儲存 VM 或叢集的 ONTAP 使用者名稱。</block>
   <block id="f51ca07a9eb2ecf68d2fab0260ed78c8" category="cell">當您選取「認證」作為驗證方法時、此欄位會顯示。輸入儲存 VM 或叢集登入密碼。</block>
-  <block id="a195241d60eb121e7e01805d55269d39" category="inline-link">SnapCenter Plug-in for VMware vSphere 4.9 版本資訊</block>
-  <block id="7ee1587964b92bc56089d30239652e95" category="paragraph">版本說明提供本次發行SnapCenter VMware vSphere的VMware vSphere的相關重要資訊、包括授權要求、已知問題、注意事項、限制、 以及任何文件更新或修正。
-如需詳細資訊、請參閱<block ref="16263f44e6fc6cfd9b368310c2c86222" category="inline-link-rx"></block></block>
-  <block id="e68a4ca78cd8aabf7fb4164d16730342" category="sidebar">SnapCenter Plug-in for VMware vSphere 4.9 文件</block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
   <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
   <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
@@ -2076,4 +2021,104 @@ SnapCenter VMware 外掛程式不支援在不同叢集上使用相同名稱的�
   <block id="1c5f9a41c5507d4adb0d486ee3d2b620" category="cell">輸入 SnapCenter VMware 外掛程式在逾時作業前應等待的秒數。預設值為 60 秒。</block>
   <block id="2dc5e487794f729ff43e4206e76d5676" category="cell">如果儲存 VM 有多個管理 IP 位址、請勾選此方塊、然後輸入您要 SnapCenter VMware 外掛程式使用的 IP 位址。
 *附註：*輸入IP位址時、請勿使用方括弧（[]）。</block>
+  <block id="693aa7d3d6625c5c1386fa6c4c43bf30" category="summary">資源群組是您要保護的 VM 、資料存放區、 vSphere 標記和 vSphere VM 資料夾的容器。</block>
+  <block id="fe6c30a4fa66ded7dfa8e85bf0500684" category="list-text">vSphere 標記</block>
+  <block id="76114b07bad3bfc30596ae551a44e2a6" category="paragraph">具有指定 vSphere 標記的所有 VM 和資料存放區（ VVol 資料存放區除外）。</block>
+  <block id="69e6b23ed013e0011d69b00b06dfb367" category="paragraph">雖然您可以在不使用備份原則的情況下建立資源群組、但只有在至少有一個原則附加到資源群組時、才能執行資料保護作業。您可以選擇在資源群組建立程序中使用現有原則或建立新原則。</block>
+  <block id="492eb88027a90161462dae716848e606" category="admonition">如果您選擇的是具有 Snapshot 鎖定期間的備份原則、則需要選取 ONTAP 9.12.1 或更新版本。</block>
+  <block id="4ddaa4a24ea8e29ccbdc33077a2ff02e" category="cell">選取您要保護的資源類型：
+* 資料存放區（一或多個指定資料存放區中的所有傳統 VM ）。您無法選取VVol資料存放區。
+*虛擬機器（個別的傳統VM或VVol VM；在欄位中、您必須瀏覽至包含VM或VVol VM的資料存放區）。
+您無法在FlexGroup 不支援的資料存放區中選取個別VM。
+* 標記
+僅 NFS 和 VMFS 資料存放區、以及虛擬機器和 vVol 虛擬機器支援標籤型資料存放區保護。
+* VM 資料夾（指定資料夾中的所有 vVol VM ；在快顯欄位中、您必須瀏覽至資料夾所在的資料中心）</block>
+  <block id="1c7dd5a44eda92f1f4694f501f5c1dab" category="list-text">永遠排除所有跨距資料存放區（這是資料存放區的預設值）。</block>
+  <block id="97427a6a16ff8a922dafa9f5a4ad1f6c" category="list-text">一律包含所有跨距資料存放區（這是 VM 的預設值）。</block>
+  <block id="476b6d266916cd5dec75081b1ecfa32e" category="inline-link">適用於 VMware vSphere 5.0 的 SnapCenter 外掛程式注意事項</block>
+  <block id="0edba2cc868f00264b1f9ec9cfe17d30" category="paragraph"><block ref="0edba2cc868f00264b1f9ec9cfe17d30" category="inline-link-rx"></block></block>
+  <block id="3658e079605148c7ffe020b7c8da9b1a" category="admonition">您可以忽略有關不支援的 vserver 命令的警告訊息。</block>
+  <block id="e930a2e2dd790489ee113f4805f3869a" category="list-text">您需要 ONTAP 9.12.1 或更高版本才能使用 SnapMirror 業務連續性（ SM-BC ）功能。</block>
+  <block id="25ab5901983aa5a82a72f4d01731feda" category="list-text">若要使用防竄改快照（ TPS ）功能：</block>
+  <block id="a4866b08c203cfce4bb493afcc8b8295" category="list-text">您需要適用於 SAN 的 ONTAP 9.13.1 及更新版本</block>
+  <block id="d66052df70896b2def96ac137cf820f5" category="list-text">您需要適用於 NFS 的 ONTAP 9.12.1 及更新版本</block>
+  <block id="b49cf949bc4e3959497059a7bfdd0369" category="inline-link">如何使用 RestAPI 編輯選擇控制閥的組態參數</block>
+  <block id="0eacb039f2d0b3e7eca7b1ff70e53369" category="admonition">對於 ONTAP 9.11.1 版及更新版本、與 ONTAP 叢集的通訊是透過 REST API 進行。ONTAP 使用者應已啟用 http 應用程式。不過、如果 ONTAP REST API 發生問題、組態金鑰「 force_ZAPI 」可協助您轉換至傳統的 ZAPI 工作流程。您可能需要使用組態 API 新增或更新此金鑰、並將其設為 true 。請參閱知識庫文章、<block ref="1c569ff15e6174002858600fc974b74f" category="inline-link-rx"></block>。</block>
+  <block id="ec6b0202082dc6ee78a9636f86e0717d" category="list-text">具有指定 vSphere 標記的所有 vVol VM 。</block>
+  <block id="2260cf040531c2852db89dceca3fdeb9" category="list-text">設定 VMware vVol VM 需要 VMware vSphere 的 ONTAP 工具。</block>
+  <block id="9fa3adb07ccab8c66f18c216f4901022" category="paragraph"><block ref="9fa3adb07ccab8c66f18c216f4901022" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b5327e52d102943836a18ed5981ef72f" category="inline-link">SnapCenter Plug-in for VMware vSphere 5.0 版本資訊</block>
+  <block id="260988739c83128dcbc355bb1e029c8d" category="paragraph">版本說明提供本次發行SnapCenter VMware vSphere的VMware vSphere的相關重要資訊、包括授權要求、已知問題、注意事項、限制、 以及任何文件更新或修正。
+如需詳細資訊、請參閱<block ref="e821752a90092b24f0e98b12f016739f" category="inline-link-rx"></block></block>
+  <block id="d3f72758cf0a8156e66fa0d7b643122f" category="summary">您可以使用 REST API 重新命名儲存設備。</block>
+  <block id="16ceb93d669340dd2ab2325671f71daf" category="doc">還原重新命名儲存設備的備份</block>
+  <block id="a52fd082737b9604d73b0ea5362cc5bd" category="paragraph">重新命名儲存設備時、使用重命名之前所做備份的工作流程會失敗。隨着重命名備份功能的推出（可通過 REST API 完全訪問），現在可以使用在重命名存儲之前所進行的備份。其餘 API 的工作流程和使用方法如下所述。</block>
+  <block id="c886be9c6f9349123af1949e3b8746ff" category="list-text">新增或更新新的儲存連線、確保新的叢集或 SVM 名稱會反映在選擇控制閥中。</block>
+  <block id="96fa213e8fbb74cfd99aee91cdbe7198" category="inline-link">SVM 重新命名後、選擇控制閥備份失敗</block>
+  <block id="1f8746a6bf52f90c8e067fda20f61855" category="list-text">重新啟動服務以重新整理快取、如 KB 文章所述：<block ref="fcb9971c5fed55a080c1dbf655f53a38" category="inline-link-rx"></block></block>
+  <block id="ed8f510b8bb5e4130a769bc10f48fe38" category="list-text">建立新備份。</block>
+  <block id="2f6c87843187b726c495736065696a62" category="list-text">請使用備份詳細資料來尋找舊的和新的儲存名稱。</block>
+  <block id="2c860d8496b2dea32f71235aa9f1f217" category="list-text">在 vSphere 用戶端的 * 備份 * 畫面中、選取備份以查看其詳細資料。</block>
+  <block id="8ef3523827cb841facc966d2b7843327" category="list-text">從 URL 存取 Swagger ：<block ref="a118319f5c4f95d1bcdb533c2eedb180" category="inline-link-rx"></block></block>
+  <block id="7ea67a73f2bddd2183a1256c0cf5aa73" category="paragraph">使用下列 API 重新命名儲存設備：</block>
+  <block id="b03ee8cc9e95b190582237f408aa3a19" category="paragraph">修補程式
+/4.1/ 儲存系統</block>
+  <block id="3f525a23c8fa036ebd1f287cfd27efeb" category="paragraph">範例：
+｛
+  "istingSVM" ： {
+    " 名稱 " ： " 字串 "
+  } 、
+  "newSVM" ： ｛
+    " 名稱 " ： " 字串 "
+  }
+}</block>
+  <block id="54472d1da4b0c6eadf8684e846b25dcc" category="paragraph">回應：</block>
+  <block id="ee3dfb46b6f485317b7f8939f226175e" category="paragraph">｛
+  " 狀態訊息 " ： " 確定 " 、
+  " 狀態代碼 " ： 200 、
+  " 回應訊息 " ： [
+    " 儲存系統已成功重新命名。 "
+  ]
+}</block>
+  <block id="a9b3b424f2944c939b8560a60e9662c7" category="paragraph">執行此 API 之後、您將能夠執行所有工作流程、包括舊備份的還原作業。</block>
+  <block id="787ad0b7a17de4ad6b1711bbf8d79fcb" category="list-text">訂購</block>
+  <block id="08bd40c7543007ad06e4fce31618f6ec" category="list-text">帳戶</block>
+  <block id="f7c526081094fe672e5be23f02e38b76" category="cell">*資源*</block>
+  <block id="f85e08b125832fc8dae732e6790fa120" category="cell">*營運*</block>
+  <block id="bf59ac9161d0f4561a155103d8ea2d10" category="list-text">在 * 稽核記錄檔設定 * 窗格中、輸入稽核記錄檔的最大數量和稽核記錄檔大小限制。</block>
+  <block id="9efb008ae9d41241818075f39c83a8cc" category="list-text">SnapMirror Business Continuity （ SM-BC ）可讓業務服務持續運作、即使整個站台發生故障、也能支援應用程式使用次要複本進行透明容錯移轉。</block>
+  <block id="631c980b38583ab907b81e4073346753" category="admonition">SM-BC 僅支援 VMFS 資料存放區。</block>
+  <block id="79c8e8c5290c082e46060d05e7fea16b" category="paragraph">若要保護 SMBC 部署上的 VMFS 資料存放區、身為 SnapCenter 管理員、您需要：</block>
+  <block id="28a4a26ef783f63f8404cdb6851880fe" category="inline-link">TR-4878 ： SnapMirror 業務連續性</block>
+  <block id="4d7923afd42773a33837e67e99c859fd" category="list-text">依照技術報告中的說明設定叢集和中介：<block ref="23a5765233b997bf62fd493eba199514" category="inline-link-rx"></block>。</block>
+  <block id="e1e49cf1c53b0ef675f7bc0ccd34b87a" category="list-text">將與 VMFS 資料存放區相關的磁碟區新增至一致性群組、並使用兩個 ONTAP 儲存系統之間的 _AutomatedFailove_ 保護原則建立資料保護關係。</block>
+  <block id="beebc895773b56339a9e46c0233ba7cd" category="list-text">選取 * 鎖定期間 * 核取方塊以啟用 Snapshot 鎖定。您可以選擇 Snapshot 鎖定期間作為天數 / 月 / 年。</block>
+  <block id="0b41f633e71f75942b9c28fff2ca8ab4" category="admonition">若要在 SMBC 部署上保護 VMFS 資料存放區、您必須先完成 _ 開始之前 _ 一節所述的先決條件、並在備份後啟用 * 更新 SnapMirror * 。</block>
+  <block id="db2aeb24ed12922fe15bc09cfd1f528b" category="paragraph">在部署虛擬應用裝置之前、您應該先瞭解部署需求。下表列出部署需求。</block>
+  <block id="716306984040e1bf7dc3b8c1b0a05422" category="paragraph">注意：支援自訂連接埠、可將選擇控制閥主機新增至 SnapCenter 。</block>
+  <block id="a220255dec4043ffc9e62cccf510da25" category="admonition">只有 VMware vCenter Server 7 更新版本 1 和更新版本才支援升級至 5 ． 0 號選擇控制閥、對於版本 7 更新版本 1 之前的 VMware vCenter 伺服器、您應該繼續使用 4 ． 7 號選擇控制閥。不受支援版本的VMware vCenter伺服器會中斷升級。</block>
+  <block id="9e1c4d16fdab5e3b3ad6ca498246093b" category="paragraph">VMware vSphere的VMware vCenter外掛程式是獨立外掛程式、與其他的VMware vSphere外掛程式不同。SnapCenter SnapCenter您必須在vCenter中使用VMware vSphere用戶端GUI、才能執行VM、VMDK及資料存放區的所有備份與還原作業。您也可以使用Web用戶端GUI儀表板來監控受保護和未受保護的VM清單。對於所有其他 SnapCenter 外掛程式（以應用程式為基礎的外掛程式）作業、例如備份、還原和工作監控、您可以使用 SnapCenter GUI 。</block>
+  <block id="9ee6658ef61232ca6ea9402960a332a6" category="paragraph">此外、也有管理 GUI 可在 SnapCenter VMware 外掛程式上執行管理作業。</block>
+  <block id="06c615df2f8ec55473b26eed4f5eedbd" category="paragraph">下表顯示 SnapCenter GUI 執行的作業。</block>
+  <block id="ac3ea74e69b4d64c5b8bf99577a62f58" category="cell">使用 VMware vSphere 用戶端 GUI 備份 VM 和資料存放區。</block>
+  <block id="3fa2e8f88aacbc5e01f08deeabb35c7b" category="cell">使用 SnapCenter GUI 執行備份。</block>
+  <block id="05515bf0519f34381e6466f01c282678" category="paragraph">+
+* 選項 3 ：網路組態</block>
+  <block id="ff261448949c973f9f063cf77445b8d1" category="paragraph">+
+顯示或變更 IP 位址設定
+顯示或變更網域名稱搜尋設定
+顯示或變更靜態路由
+提交變更
+Ping主機</block>
+  <block id="cee76f4df6b5dbfa117c54383d070d0f" category="paragraph">+
+* 選項 4 ：支援與診斷</block>
+  <block id="0724cc6860049b7b304c5747fdff089a" category="paragraph">+
+產生支援服務組合
+存取診斷Shell
+啟用遠端診斷存取
+產生核心傾印套件</block>
+  <block id="e3c333b91de412cbe4acc72a0b293a5f" category="paragraph"><block ref="e3c333b91de412cbe4acc72a0b293a5f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8857a92c9dd7ad8b9a97a4565e945efb" category="paragraph"><block ref="8857a92c9dd7ad8b9a97a4565e945efb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d8c6c8a7a8f9e330585c15378277631e" category="sidebar">SnapCenter Plug-in for VMware vSphere 5.0 文件</block>
+  <block id="9f4e4670e68c9e84125d82202a3b5d12" category="sidebar">重新命名儲存設備</block>
 </blocks>

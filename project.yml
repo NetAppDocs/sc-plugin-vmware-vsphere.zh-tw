@@ -1,14 +1,16 @@
 ---
 settings:
-  name: SnapCenter Plug-in for VMware vSphere 4.9
+  name: SnapCenter Plug-in for VMware vSphere 5.0
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: false
   versions:
-  - version-number: '4.9'
+  - version-number: '5.0'
     url: "/sc-plugin-vmware-vsphere"
+  - version-number: '4.9'
+    url: "/sc-plugin-vmware-vsphere-49"
   - version-number: '4.8'
     url: "/sc-plugin-vmware-vsphere-48"
   - version-number: '4.7'
@@ -20,7 +22,7 @@ settings:
   langs: zh-tw,us-en,ja-jp,ko-kr,zh-cn,de-de,es-es,fr-fr,it-it
 sidebar:
   entries:
-  - title: SnapCenter Plug-in for VMware vSphere 4.9 文件
+  - title: SnapCenter Plug-in for VMware vSphere 5.0 文件
     url: "/index.html"
   - title: 版本資訊
     url: "/scpivs44_release_notes.html"
@@ -120,6 +122,8 @@ sidebar:
       url: "/scpivs44_add_a_single_vm_or_datastore_to_a_resource_group.html"
     - title: 將多個VM和資料存放區新增至資源群組
       url: "/scpivs44_add_multiple_vms_and_datastores_to_a_resource_group.html"
+    - title: 重新命名儲存設備
+      url: "/rename_storage.html"
     - title: 隨需備份資源群組
       url: "/scpivs44_back_up_resource_groups_on_demand.html"
     - title: 備份MySQL資料庫
@@ -248,37 +252,3 @@ sidebar:
       url: "/scpivs44_information_not_displayed_after_upgrading_to_a_new_patch_of_the_same_release.html"
   - title: 法律聲明
     url: "/legal-notices.html"
-homepage:
-  tiles:
-  - title: 開始使用
-    links:
-    - title: 版本資訊
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886207
-    - title: 深入瞭解選擇控制閥
-      url: "/scpivs44_concepts_overview.html"
-    - title: 部署需求
-      url: "/scpivs44_deployment_planning_and_requirements.html"
-    - title: 快速入門
-      url: "/scpivs44_download_the_ova_open_virtual_appliance.html"
-  - title: 保護VM、VMDK和資料存放區
-    links:
-    - title: 保護您的資料
-      url: "/scpivs44_protect_data_overview.html"
-    - title: 從備份還原
-      url: "/scpivs44_restore_from_backups_overview.html"
-    - title: 使用REST API
-      url: "/scpivs44_rest_apis_overview.html"
-  - title: 部落格社群
-    links:
-    - title: NetApp部落格–選擇控制閥
-      url: https://blog.netapp.com/tag/snapcenter/
-    - title: NetApp社群–選擇控制閥
-      url: https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/backup-and-restore-discussions/label-name/snapcenter
-  - title: 更多資源
-    links:
-    - title: 軟件文檔SnapCenter
-      url: https://docs.netapp.com/us-en/snapcenter/index.html
-    - title: 早期版本的選擇控制閥文件
-      url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63240
-    - title: NetApp知識庫–選擇控制閥
-      url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter

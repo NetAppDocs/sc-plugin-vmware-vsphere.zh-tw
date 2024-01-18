@@ -53,7 +53,7 @@ summary: 所需的最低限度驗證權限會因您使用的資料保護功能�
 | Vserver Vserver對等端點 
 |===
 
-NOTE: 您可以忽略有關不受支援的Vserver命令的警告訊息。
+NOTE: 您可以忽略有關不支援的 vserver 命令的警告訊息。
 
 
 
@@ -68,4 +68,14 @@ NOTE: 您可以忽略有關不受支援的Vserver命令的警告訊息。
 您必須以「vsadmin」身分登入、或以具有上表所列最低權限的角色登入。
 
 * 您必須是叢集管理員、才能建立及管理使用者角色。您可以將使用者與叢集儲存VM或儲存VM建立關聯。
+* 您需要 ONTAP 9.12.1 或更高版本才能使用 SnapMirror 業務連續性（ SM-BC ）功能。
+* 若要使用防竄改快照（ TPS ）功能：
++
+** 您需要適用於 SAN 的 ONTAP 9.13.1 及更新版本
+** 您需要適用於 NFS 的 ONTAP 9.12.1 及更新版本
 
+
+
+
+
+NOTE: 對於 ONTAP 9.11.1 版及更新版本、與 ONTAP 叢集的通訊是透過 REST API 進行。ONTAP 使用者應已啟用 http 應用程式。不過、如果 ONTAP REST API 發生問題、組態金鑰「 force_ZAPI 」可協助您轉換至傳統的 ZAPI 工作流程。您可能需要使用組態 API 新增或更新此金鑰、並將其設為 true 。請參閱知識庫文章、 https://kb.netapp.com/mgmt/SnapCenter/How_to_use_RestAPI_to_edit_configuration_parameters_in_SCV["如何使用 RestAPI 編輯選擇控制閥的組態參數"]。
