@@ -1006,12 +1006,10 @@
   <block id="db483b4b52b624fc9163590680bfec11" category="cell">自訂Snapshot格式</block>
   <block id="cdd24b9d1a277d3a5383ba07346b9f5a" category="paragraph">如果您要使用自訂格式來命名Snapshot複本名稱、請勾選此方塊並輸入名稱格式。</block>
   <block id="424f6337d74c16c2d02e5cb2e6d97f82" category="list-text">此功能預設為停用。</block>
-  <block id="b5fa0613e2fb44b25ee1739ace5e3746" category="list-text">預設的Snapshot複本名稱使用格式「&lt;ResourcGroup&gt;_&lt;Date-timestamp&gt;'」、不過您可以使用變數$ResourceDGroup、$Policy、$HostName、$DatapeType及$CustomText來指定自訂格式。使用自訂名稱欄位中的下拉式清單、選取您要使用的變數及其使用順序。如果選擇$CustomText、名稱格式為「&lt;CustomName&gt;_&lt;Date-timestamp&gt;'」。在所提供的其他方塊中輸入自訂文字。附註：如果您也選取「_Recent」字尾、則必須確定自訂Snapshot名稱在資料存放區中是唯一的、因此您應該將$ResourceDGroup和$Policy變數新增至名稱。</block>
   <block id="f6023484d4c2c1da1f8822ae43bc066a" category="list-text">名稱中特殊字元的特殊字元、請遵循名稱欄位的相同準則。</block>
   <block id="2b2620f1962d78eb23f6f754d96e6546" category="list-text">在「*資源*」頁面上、執行下列動作：</block>
   <block id="5d113f2038d289f391614c39043629e8" category="cell">範圍</block>
   <block id="615707baa418ce315e44ac2a5d6164af" category="cell">資料中心</block>
-  <block id="d1fce2857d6a7747bc3a9e485e2cf30f" category="cell">瀏覽至您要新增的VM或資料存放區或資料夾。</block>
   <block id="4c928d1c171b7d62d8f758ffa689710f" category="cell">可用的實體</block>
   <block id="0ae7bb79645eeb5721a499d2799dbf70" category="cell">選取您要保護的資源、然後按一下*&gt;*、將您的選擇移至「選取的實體」清單。</block>
   <block id="749435efb6e9940bcadad406e3a36d76" category="paragraph">當您按一下*下一步*時、系統會先檢查SnapCenter 哪些是由哪個系統管理、並與所選資源所在的儲存設備相容。</block>
@@ -1579,7 +1577,6 @@
   <block id="3da6944b1baaec4beb70694ac307fd1f" category="sidebar">升級至同一版本的新修補程式</block>
   <block id="0834d3a187a3bdb67af7d3afee5ae7b7" category="paragraph">資源群組可包含下列項目：</block>
   <block id="a1376c0215e5d8cf70e012954979bc39" category="paragraph">單FlexGroup 一的資料存放區。不FlexGroup 支援跨距資料存放區。無法將此資料存放區與傳統VM或資料存放區結合使用。FlexGroup</block>
-  <block id="c8e385cc7a112ebc9131fa51b5a3767b" category="admonition">VMware vSphere 4.5及更新版本的支援VMware vSphere 4.5外掛程式、可在支援高達128 TB的大型LUN上支援資料存放區。SnapCenter ASA如果您要保護大型LUN、請僅使用完整配置的LUN來避免延遲。</block>
   <block id="d2df0b923abc21af57a4dd120ecd6e47" category="admonition">系統會針對附加至資源群組的每個原則建立「_Recent」備份。因此、具有多個原則的資源群組將會有多個「_Recent」備份。請勿手動重新命名「_Recent」備份。</block>
   <block id="9b0bd68baf74fb3ad293c166090c7bc3" category="admonition">保留工作記錄的預設值為30天、保留工作的預設值為90天。超過設定保留時間的工作記錄和工作、每六小時會清除一次。您可以使用組態「jobs/cleanup」REST API來修改保留工作和工作記錄的時間。您無法修改清除排程。</block>
   <block id="6dd906abac50c0e38ec5790fd42b32f0" category="cell">1.2、1.3</block>
@@ -2121,4 +2118,12 @@ Ping主機</block>
   <block id="8857a92c9dd7ad8b9a97a4565e945efb" category="paragraph"><block ref="8857a92c9dd7ad8b9a97a4565e945efb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d8c6c8a7a8f9e330585c15378277631e" category="sidebar">SnapCenter Plug-in for VMware vSphere 5.0 文件</block>
   <block id="9f4e4670e68c9e84125d82202a3b5d12" category="sidebar">重新命名儲存設備</block>
+  <block id="8cf2f0f05d235c9fc28a55c8caf77bb9" category="admonition">SnapCenter Plug-in for VMware vSphere 4.5 及更新版本支援大型 LUN 上的資料存放區、以及最高 128TB 的檔案、磁碟區最高可達 300 TB 。如果您要保護大型LUN、請僅使用完整配置的LUN來避免延遲。</block>
+  <block id="ca70c61465600177453c8557e7c34dfb" category="list-text">預設的Snapshot複本名稱使用格式<block ref="ba8f4cc4ace4f3315ea21bd52fbde9d9" prefix=" " category="inline-code"></block>
+不過、您可以使用變數$Resource Group、$Policy、$HostName、$ScheduleType和$CustomText來指定自訂格式。使用自訂名稱欄位中的下拉式清單、選取您要使用的變數及其使用順序。
+如果您選取$CustomText、則名稱格式為<block ref="ad231838859064f0fe437a9669c0d36f" prefix=" " category="inline-code"></block>。在所提供的其他方塊中輸入自訂文字。
+[ 附註 ] ：
+如果您也選取「 _Recent 」尾碼、則必須確定自訂 Snapshot 名稱在資料存放區中是唯一的、因此您應該將 $ResourceGroup 和 $Policy 變數新增至名稱。</block>
+  <block id="d07079db3fe1ac66c315b010e4b99b35" category="cell">瀏覽至您要新增的VM或資料存放區或資料夾。
+資源群組中的虛擬機器和資料存放區名稱必須是唯一的。</block>
 </blocks>

@@ -50,7 +50,7 @@ summary: 資源群組是您要保護的 VM 、資料存放區、 vSphere 標記�
 IMPORTANT: 如果您使用的是VMware vSphere叢集服務（VCL）、請勿在SnapCenter VMware插件資源群組中納入由VCL管理的VM。
 
 
-TIP: VMware vSphere 4.5及更新版本的支援VMware vSphere 4.5外掛程式、可在支援高達128 TB的大型LUN上支援資料存放區。SnapCenter ASA如果您要保護大型LUN、請僅使用完整配置的LUN來避免延遲。
+TIP: SnapCenter Plug-in for VMware vSphere 4.5 及更新版本支援大型 LUN 上的資料存放區、以及最高 128TB 的檔案、磁碟區最高可達 300 TB 。如果您要保護大型LUN、請僅使用完整配置的LUN來避免延遲。
 
 
 IMPORTANT: 請勿新增處於無法存取狀態的VM。雖然可以建立包含無法存取之VM的資源群組、但該資源群組的備份將會失敗。
@@ -149,7 +149,11 @@ NOTE: 系統會針對附加至資源群組的每個原則建立「_Recent」備�
 如果您要使用自訂格式來命名Snapshot複本名稱、請勾選此方塊並輸入名稱格式。
 
 *** 此功能預設為停用。
-*** 預設的Snapshot複本名稱使用格式「<ResourcGroup>_<Date-timestamp>'」、不過您可以使用變數$ResourceDGroup、$Policy、$HostName、$DatapeType及$CustomText來指定自訂格式。使用自訂名稱欄位中的下拉式清單、選取您要使用的變數及其使用順序。如果選擇$CustomText、名稱格式為「<CustomName>_<Date-timestamp>'」。在所提供的其他方塊中輸入自訂文字。附註：如果您也選取「_Recent」字尾、則必須確定自訂Snapshot名稱在資料存放區中是唯一的、因此您應該將$ResourceDGroup和$Policy變數新增至名稱。
+*** 預設的Snapshot複本名稱使用格式 `<ResourceGroup>_<Date-TimeStamp>`
+不過、您可以使用變數$Resource Group、$Policy、$HostName、$ScheduleType和$CustomText來指定自訂格式。使用自訂名稱欄位中的下拉式清單、選取您要使用的變數及其使用順序。
+如果您選取$CustomText、則名稱格式為 `<CustomName>_<Date-TimeStamp>`。在所提供的其他方塊中輸入自訂文字。
+[ 附註 ] ：
+如果您也選取「 _Recent 」尾碼、則必須確定自訂 Snapshot 名稱在資料存放區中是唯一的、因此您應該將 $ResourceGroup 和 $Policy 變數新增至名稱。
 *** 名稱中特殊字元的特殊字元、請遵循名稱欄位的相同準則。
 
 
@@ -169,7 +173,8 @@ NOTE: 系統會針對附加至資源群組的每個原則建立「_Recent」備�
 * VM 資料夾（指定資料夾中的所有 vVol VM ；在快顯欄位中、您必須瀏覽至資料夾所在的資料中心） 
 
 
-| 資料中心 | 瀏覽至您要新增的VM或資料存放區或資料夾。 
+| 資料中心 | 瀏覽至您要新增的VM或資料存放區或資料夾。
+資源群組中的虛擬機器和資料存放區名稱必須是唯一的。 
 
 
 | 可用的實體 | 選取您要保護的資源、然後按一下*>*、將您的選擇移至「選取的實體」清單。 
