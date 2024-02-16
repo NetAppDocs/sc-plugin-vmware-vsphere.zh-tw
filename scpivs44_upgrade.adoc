@@ -18,8 +18,27 @@ NOTE: 只有 VMware vCenter Server 7 更新版本 1 和更新版本才支援升�
 
 如果您使用SnapCenter 適用於VMware vSphere虛擬應用裝置的VMware vCenter外掛程式、則可以升級至較新的版本。升級程序會取消註冊現有的外掛程式、並部署僅與vSphere 7.0U1及更新版本相容的外掛程式。
 
-請參閱 link:scpivs44_release_notes.html["VMware vSphere的版次說明SnapCenter"] 以取得支援的升級途徑資訊。
 
+
+== 升級途徑
+
+|===
+
+
+| 如果您使用適用於 VMware vSphere （ SCV ）的 SnapCenter 外掛程式版本 ... | 您可以直接將 SnapCenter Plugin for VMware vSphere 升級至 ... 
+
+
+| 4.9 號選擇控制閥 | 升級到 5 ． 0 號選擇控制閥 
+
+
+| 4 ． 8 號選擇控制閥 | 升級到 4 號和 5 號選擇控制閥 
+
+
+| 4 ． 7 號選擇控制閥 | 升級到 4 號選擇控制閥 4.8 和 4 號選擇控制閥 
+
+
+| 4 ． 6 號選擇控制閥 | 升級至 4 ． 7 號和 4 ． 8 號選擇控制閥 
+|===
 
 TIP: 在SnapCenter 開始升級之前、請先備份VMware vSphere OVA的VMware vCenter外掛程式。
 

@@ -26,7 +26,7 @@ VMware vSphere 4.5及更新版本的支援VMware vSphere 4.5外掛程式、可�
 
 * VMware虛擬磁碟區（vVols）
 +
-您必須先將 vVols 儲存系統新增至適用於 VMware vSphere 的 ONTAP 工具、然後將其新增至適用於 VMware vSphere 的 SnapCenter 外掛程式。
+您必須將儲存叢集新增至適用於 VMware vSphere 的 SnapCenter 外掛程式、以及適用於 VMware vSphere 的 ONTAP 工具、才能使用 vVol DataProtection 。
 
 +
 如需詳細資訊、請參閱 https://docs.netapp.com/vapp-98/index.jsp["VMware vSphere適用的工具ONTAP"^]
