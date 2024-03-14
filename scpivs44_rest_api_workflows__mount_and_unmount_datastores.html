@@ -1,0 +1,2610 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head class="at-element-marker">
+  <title>REST API工作流程以掛載及卸載資料存放區</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="REST API工作流程以掛載及卸載資料存放區" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-tw/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" />
+	<meta property="og:description" content="若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式執行資料存放區備份的掛載和卸載作業、您必須遵循規定的REST API呼叫順序。" />
+  <meta property="og:image" content="https://docs.netapp.com/zh-tw/sc-plugin-vmware-vsphere/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式執行資料存放區備份的掛載和卸載作業、您必須遵循規定的REST API呼叫順序。">
+  <meta name="keywords" content=" "><!-- Icons -->
+  <link rel="icon" href="/zh-tw/sc-plugin-vmware-vsphere/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/zh-tw/sc-plugin-vmware-vsphere/css/ie-netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/zh-tw/sc-plugin-vmware-vsphere/css/ie-landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/zh-tw/sc-plugin-vmware-vsphere/css/ie-tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/zh-tw/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" />
+  <!-- Top level site integrations -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js"></script>
+    <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="72570c5c-fe30-465f-b0e0-b77f7fb4ae34"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <script type="text/plain" class="optanon-category-C0002" src="https://assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js"></script>
+    <script class="optanon-category-C0001">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.setAttributeNode(d.createAttribute('data-ot-ignore'));j.setAttribute('class','optanon-category-C0001');j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MD73T9M');</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      const MASTHEAD_OFFSET = 65;
+      const SECTIONS = $("main h2, main h3");
+      // PAGE NAV - Init
+      if (SECTIONS.length == 0) {
+        // remove if there is no elements
+        /*
+        $("#ie-right-navbar").remove();
+        $("#ie-right-navbar-collapse").remove();
+        */
+      } else {
+        $(".page-nav-title").css('display', 'block');
+        for (var i = 0; i < SECTIONS.length; i++) {
+          var sectionId = $(SECTIONS[i]).attr('id');
+          var sectionName = $(SECTIONS[i]).text();
+          var subClass = $(SECTIONS[i]).is("h3") ? ' page-nav__sublink' : '';
+          $("#page-menu").append('<li class="page-nav-item"><a href="#' + sectionId + '" class="page-nav__link' + subClass + '">' + sectionName + '</a></li>');
+        }
+      }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-tw/sc-plugin-vmware-vsphere/js/na-search.js'></script><script src='/zh-tw/sc-plugin-vmware-vsphere/js/ie-clouddocs.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+    /*
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+      */
+  </script>
+  <script src='/zh-tw/sc-plugin-vmware-vsphere/js/custom-dropdown.js'></script>
+  <script src='/zh-tw/sc-plugin-vmware-vsphere/js/FileSaver.min.js'></script>
+  <script src='/zh-tw/sc-plugin-vmware-vsphere/js/jszip-utils.min.js'></script>
+  <script src='/zh-tw/sc-plugin-vmware-vsphere/js/jszip.min.js'></script><script src='/zh-tw/sc-plugin-vmware-vsphere/js/ie-pdf-ux.js'></script></head>
+
+
+  <body class role="document" data-flavor="">
+    <div class="skip-to-main">
+      <a href="#main" >Skip to main content</a>
+    </div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD73T9M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="page" class="">
+      <div id="ie-phone-menu" class=""></div>
+      <div id="ie-content-wrap" class="">
+        <nav id="ie-new-header">
+    <ul>
+        <li id="ie-phone-menu-button">
+            <a href="#">
+                <image id="" src="/zh-tw/sc-plugin-vmware-vsphere/images/hamburger.svg" alt="menu" />
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.netapp.com/tw">
+                <image id="ie-header-logo" src="/zh-tw/sc-plugin-vmware-vsphere/images/netapp_logo.svg" alt="netapp" />
+            </a>
+        </li>
+        <li id="ie-header-docs">
+            <a href="https://www.netapp.com/support-and-training/documentation/">文件</a>
+        </li>
+
+        <!-- Empty container to push header left with or without lang selector -->
+        <li id="empty-container" style="margin-left: auto">
+        </li>
+        <!-- Start Language Selector --><li id="ie-language-dropdown">
+            <div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+                <div class="custom-dropdown-select custom-dropdown-select-lang">
+                    <img src="/zh-tw/sc-plugin-vmware-vsphere/images/language_white_24dp.svg" class="n-globe__icon" />
+                    <span class="lang-name">繁體中文</span>
+                    <img src="/zh-tw/sc-plugin-vmware-vsphere/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/zh-tw/sc-plugin-vmware-vsphere/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu"><li>
+                        <a href="https://docs.netapp.com/zh-tw/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html"
+                            target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html"
+                            target="_self"><span translate="no" class="notranslate">English</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ja-jp/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html"
+                            target="_self"><span translate="no" class="notranslate">日本語</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ko-kr/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html"
+                            target="_self"><span translate="no" class="notranslate">한국어</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-cn/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html"
+                            target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/de-de/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html"
+                            target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/es-es/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html"
+                            target="_self"><span translate="no" class="notranslate">Español</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/fr-fr/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html"
+                            target="_self"><span translate="no" class="notranslate">Français</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/it-it/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html"
+                            target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+                    </li></ul>
+            </div>
+            </li>
+        <!-- End Language Selector -->
+
+
+        <li id="ie-allnetapp">
+            <div id="allnetapp-dropdown" class="custom-dropdown custom-dropdown-allnetapp">
+                <div class="custom-dropdown-select custom-dropdown-select-allnetapp">
+                    <img src="/zh-tw/sc-plugin-vmware-vsphere/images/apps_white_24dp.svg" alt="" class="allnetapp-icon" />
+                    <span class="allnetapp-name">所有 NetApp</span>
+                    <img src="/zh-tw/sc-plugin-vmware-vsphere/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/zh-tw/sc-plugin-vmware-vsphere/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu allnetapp-dropdown">
+                    <li>
+                        <a href="https://bluexp.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">BlueXP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://mysupport.netapp.com/site/"
+                            target="_self"><span translate="no" class="notranslate">支援</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kb.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">知識庫</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.netapp.com/support-and-training/netapp-learning-services/"
+                            target="_self"><span translate="no" class="notranslate">訓練</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+</nav>
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+
+<div id="ie-new-sidebar-collapse" style="display: none">
+    <img id="sidebar-expand" class="ie-searchbox-icon" src="/zh-tw/sc-plugin-vmware-vsphere/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-new-sidebar">
+    <div id="ie-product-identity-lockup">
+        <div id="sidebar-collapse" class="">
+            <img src="/zh-tw/sc-plugin-vmware-vsphere/images/double_arrow.svg" alt="" />
+        </div>
+        <div id="ie-breadcrumb" class="">
+  <ul class="ie-breadcrumb">
+    <li class="">
+      <a href="https://docs.netapp.com">所有文件</a>
+    </li>
+    
+    
+
+    
+  </ul>
+  
+  <div class="ie-product-name" >
+    <!--<a href="/zh-tw/sc-plugin-vmware-vsphere/">-->
+      SnapCenter Plug-in for VMware vSphere 5.0
+    <!--</a>-->
+  </div>
+</div>
+
+            
+<div id="ie-selectors"><div id="version-dropdown-new" class="custom-dropdown" >
+  <div class="custom-dropdown-select unselected" title=" 5.0">
+    <label>版本</label>
+    <span translate="no" class="notranslate">5.0</span>
+    <img src="/zh-tw/sc-plugin-vmware-vsphere/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown version invisible" />
+    <img src="/zh-tw/sc-plugin-vmware-vsphere/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup version" />
+  </div>
+
+  <ul class="custom-dropdown-menu"><li>
+      
+      <a href="https://docs.netapp.com/zh-tw/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 5.0</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/zh-tw/sc-plugin-vmware-vsphere-49/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 4.9</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/zh-tw/sc-plugin-vmware-vsphere-48/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 4.8</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/zh-tw/sc-plugin-vmware-vsphere-47/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 4.7</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/zh-tw/sc-plugin-vmware-vsphere-46/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 4.6</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/zh-tw/sc-plugin-vmware-vsphere-45/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 4.5</span></span>
+      </a>
+                     
+    </li>
+    
+  </ul>
+</div></div>
+        
+        
+
+<div id="ie-searchbox" class="ie-searchbox-sidebar ">
+    <img class="ie-searchbox-icon" src="/zh-tw/sc-plugin-vmware-vsphere/images/loupe.svg" alt=""/>
+    <div id="react-search" 
+        data-search-html="/zh-tw/sc-plugin-vmware-vsphere/search.html" 
+        data-type="widget"
+        data-placeholder="搜尋說明文件"
+        data-no-results-found="找不到 {query} 的結果"
+        data-did-you-mean="搜尋 {suggestion}。"
+        data-no-results-found-did-you-mean="找不到 {query} 的結果。您的意思是 {suggestion} 嗎？"
+        data-results-found="找到 {hitCount} 個結果"
+        data-error-message="發生錯誤。請再試一次。"
+        data-error-reset="重設搜尋"
+        data-sk-es-pf-indexes="" 
+        data-flavor="">
+    </div>
+</div>
+        
+    </div>
+    <div id="ie-new-toc"><script>
+  let sidebarAccordion = true;
+
+  /* specific css rules for Mac */
+  if(navigator.platform.match('Mac') !== null) {
+    document.body.setAttribute('class', 'OSX');
+  }
+
+</script>
+
+<div id="ie-sidebar-container">
+  <ul id="ie-sidebar-list" ><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SnapCenter Plug-in for VMware vSphere 5.0 文件"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-tw/sc-plugin-vmware-vsphere/index.html">
+        SnapCenter Plug-in for VMware vSphere 5.0 文件
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="版本資訊"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_release_notes.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_release_notes.html">
+        版本資訊
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="概念"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 概念</div>-->
+         概念
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="產品總覽"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_concepts_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_concepts_overview.html">
+        產品總覽
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="不同SnapCenter 的圖形介面總覽"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_overview_of_different_snapcenter_guis.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_overview_of_different_snapcenter_guis.html">
+        不同SnapCenter 的圖形介面總覽
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="授權"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_licensing.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_licensing.html">
+        授權
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="角色型存取控制（RBAC）"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_role_based_access_control.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_role_based_access_control.html">
+        角色型存取控制（RBAC）
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware vSphere使用者適用的RBAC外掛程式類型SnapCenter"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_types_of_rbac_for_snapcenter_users.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html">
+        VMware vSphere使用者適用的RBAC外掛程式類型SnapCenter
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware vSphere的VMware vSphere的VMware外掛程式中包含的RBAC功能ONTAP SnapCenter"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_ontap_rbac_features_in_snapcenter.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_ontap_rbac_features_in_snapcenter.html">
+        VMware vSphere的VMware vSphere的VMware外掛程式中包含的RBAC功能ONTAP SnapCenter
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware SnapCenter vSphere隨附於VMware vSphere的VMware vCenter外掛程式的預先定義角色"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_predefined_roles_packaged_with_snapcenter.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_predefined_roles_packaged_with_snapcenter.html">
+        VMware SnapCenter vSphere隨附於VMware vSphere的VMware vCenter外掛程式的預先定義角色
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="如何為ONTAP VMware vSphere設定適用於VMware vSphere的VMware RBAC SnapCenter 外掛程式"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_how_to_configure_ontap_rbac_for_snapcenter_plug-in_for_vmware_vsphere.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_how_to_configure_ontap_rbac_for_snapcenter_plug-in_for_vmware_vsphere.html">
+        如何為ONTAP VMware vSphere設定適用於VMware vSphere的VMware RBAC SnapCenter 外掛程式
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="開始使用"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 開始使用</div>-->
+         開始使用
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="部署總覽"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_get_started_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html">
+        部署總覽
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="新使用者的部署工作流程"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="scpivs44_deployment_workflow_for_new_users.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_deployment_workflow_for_new_users.html">
+        新使用者的部署工作流程
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="現有使用者的部署工作流程"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_deployment_workflow_for_existing_users.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_deployment_workflow_for_existing_users.html">
+        現有使用者的部署工作流程
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="部署選擇控制閥的要求"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 部署選擇控制閥的要求</div>-->
+         部署選擇控制閥的要求
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="部署規劃與需求"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_deployment_planning_and_requirements.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_deployment_planning_and_requirements.html">
+        部署規劃與需求
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="需要權限ONTAP"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_minimum_ontap_privileges_required.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_minimum_ontap_privileges_required.html">
+        需要權限ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="所需的vCenter權限下限"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_minimum_vcenter_privileges_required.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_minimum_vcenter_privileges_required.html">
+        所需的vCenter權限下限
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="下載開放式虛擬應用裝置（OVA）"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_download_the_ova_open_virtual_appliance.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_download_the_ova_open_virtual_appliance.html">
+        下載開放式虛擬應用裝置（OVA）
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="部署SnapCenter VMware vSphere的VMware vCenter外掛程式"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html">
+        部署SnapCenter VMware vSphere的VMware vCenter外掛程式
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="部署後所需的作業與問題"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_post_deployment_required_operations_and_issues.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_post_deployment_required_operations_and_issues.html">
+        部署後所需的作業與問題
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="登入SnapCenter VMware vSphere Client"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_log_in_to_the_snapcenter_vmware_vsphere_web_client.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_log_in_to_the_snapcenter_vmware_vsphere_web_client.html">
+        登入SnapCenter VMware vSphere Client
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="快速入門"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 快速入門</div>-->
+         快速入門
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="總覽"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_quick_start_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_quick_start_overview.html">
+        總覽
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="部署SnapCenter VMware vSphere的VMware vCenter外掛程式"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere_01.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere_01.html">
+        部署SnapCenter VMware vSphere的VMware vCenter外掛程式
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="新增儲存設備"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_add_storage.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_add_storage.html">
+        新增儲存設備
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="建立備份原則"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_create_backup_policies.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_create_backup_policies.html">
+        建立備份原則
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="建立資源群組"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_create_resource_groups.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_create_resource_groups.html">
+        建立資源群組
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="監控與報告"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 監控與報告</div>-->
+         監控與報告
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="檢視狀態資訊"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_view_status_information.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_view_status_information.html">
+        檢視狀態資訊
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="監控工作"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_monitor_jobs.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_monitor_jobs.html">
+        監控工作
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="下載工作記錄"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_download_job_logs.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_download_job_logs.html">
+        下載工作記錄
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="存取報告"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_access_reports.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_access_reports.html">
+        存取報告
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="從SnapCenter VMware vSphere GUI的VMware vSphere GUI的VMware支援外掛程式產生支援套裝組合"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_generate_a_support_bundle_from_the_snapcenter_plug-in_for_vmware_vsphere_gui.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_generate_a_support_bundle_from_the_snapcenter_plug-in_for_vmware_vsphere_gui.html">
+        從SnapCenter VMware vSphere GUI的VMware vSphere GUI的VMware支援外掛程式產生支援套裝組合
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="從維護主控台產生支援套裝組合"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_generate_a_support_bundle_from_the_maintenance_console.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_generate_a_support_bundle_from_the_maintenance_console.html">
+        從維護主控台產生支援套裝組合
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="稽核記錄"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scv48_audit_logs.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scv48_audit_logs.html">
+        稽核記錄
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理儲存設備"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 管理儲存設備</div>-->
+         管理儲存設備
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="新增儲存設備"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_add_storage_01.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_add_storage_01.html">
+        新增儲存設備
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理儲存VM：修改、重新命名、移除"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_manage_storage_systems.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_manage_storage_systems.html">
+        管理儲存VM：修改、重新命名、移除
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="修改設定的儲存逾時"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_modify_storage_timeout.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_modify_storage_timeout.html">
+        修改設定的儲存逾時
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="保護資料"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 保護資料</div>-->
+         保護資料
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="資料保護工作流程"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_protect_data_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_protect_data_overview.html">
+        資料保護工作流程
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="檢視備份"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_view_vm_and_datastore_backups.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_view_vm_and_datastore_backups.html">
+        檢視備份
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="建立備份原則"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_create_backup_policies_for_vms_and_datastores.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_create_backup_policies_for_vms_and_datastores.html">
+        建立備份原則
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="建立資源群組"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_create_resource_groups_for_vms_and_datastores.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_create_resource_groups_for_vms_and_datastores.html">
+        建立資源群組
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="簡報與指令碼"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_prescripts_and_postscripts.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_prescripts_and_postscripts.html">
+        簡報與指令碼
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="將單一VM或資料存放區新增至資源群組"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_add_a_single_vm_or_datastore_to_a_resource_group.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_add_a_single_vm_or_datastore_to_a_resource_group.html">
+        將單一VM或資料存放區新增至資源群組
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="將多個VM和資料存放區新增至資源群組"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_add_multiple_vms_and_datastores_to_a_resource_group.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_add_multiple_vms_and_datastores_to_a_resource_group.html">
+        將多個VM和資料存放區新增至資源群組
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="重新命名儲存設備"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/rename_storage.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/rename_storage.html">
+        重新命名儲存設備
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="隨需備份資源群組"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_back_up_resource_groups_on_demand.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_back_up_resource_groups_on_demand.html">
+        隨需備份資源群組
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="備份MySQL資料庫"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html">
+        備份MySQL資料庫
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理資源群組：暫停、恢復、修改、刪除"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_manage_resource_groups.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_manage_resource_groups.html">
+        管理資源群組：暫停、恢復、修改、刪除
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理原則：分離、修改、刪除"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_manage_policies.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_manage_policies.html">
+        管理原則：分離、修改、刪除
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理備份-重新命名、刪除"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_manage_backups.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_manage_backups.html">
+        管理備份-重新命名、刪除
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="掛載及卸載資料存放區"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 掛載及卸載資料存放區</div>-->
+         掛載及卸載資料存放區
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="掛載備份"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_mount_a_backup.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_mount_a_backup.html">
+        掛載備份
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="卸載備份"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_unmount_a_backup.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_unmount_a_backup.html">
+        卸載備份
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="從備份還原"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 從備份還原</div>-->
+         從備份還原
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="總覽"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_restore_from_backups_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_restore_from_backups_overview.html">
+        總覽
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="如何執行還原作業"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_how_restore_operations_are_performed.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_how_restore_operations_are_performed.html">
+        如何執行還原作業
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="搜尋備份"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_search_for_backups.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_search_for_backups.html">
+        搜尋備份
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="從備份還原VM"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_restore_vms_from_backups.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_restore_vms_from_backups.html">
+        從備份還原VM
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="從備份還原刪除的VM"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_restore_deleted_vms_from_backups.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_restore_deleted_vms_from_backups.html">
+        從備份還原刪除的VM
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="從備份還原VMDK"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_restore_vmdks_from_backups.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_restore_vmdks_from_backups.html">
+        從備份還原VMDK
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="還原MySQL資料庫的最新備份"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_restore_the_most_recent_backup_of_the_mysql_database.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_restore_the_most_recent_backup_of_the_mysql_database.html">
+        還原MySQL資料庫的最新備份
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="還原MySQL資料庫的特定備份"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_restore_a_specific_backup_of_the_mysql_database.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_restore_a_specific_backup_of_the_mysql_database.html">
+        還原MySQL資料庫的特定備份
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="連接並卸除VMDK"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 連接並卸除VMDK</div>-->
+         連接並卸除VMDK
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="將VMDK附加至VM或VVol VM"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_attach_vmdks_to_a_vm.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_attach_vmdks_to_a_vm.html">
+        將VMDK附加至VM或VVol VM
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="分離虛擬磁碟"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_detach_a_virtual_disk.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_detach_a_virtual_disk.html">
+        分離虛擬磁碟
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="還原來賓檔案和資料夾"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 還原來賓檔案和資料夾</div>-->
+         還原來賓檔案和資料夾
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="工作流程、先決條件及限制"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_restore_guest_files_and_folders_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_restore_guest_files_and_folders_overview.html">
+        工作流程、先決條件及限制
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="從VMDK還原來賓檔案和資料夾"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_restore_guest_files_and_folders_from_vmdks.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_restore_guest_files_and_folders_from_vmdks.html">
+        從VMDK還原來賓檔案和資料夾
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="設定Proxy VM以進行還原作業"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_set_up_proxy_vms_for_restore_operations.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_set_up_proxy_vms_for_restore_operations.html">
+        設定Proxy VM以進行還原作業
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="設定VM客體檔案還原的認證資料"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_configure_credentials_for_vm_guest_file_restores.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_configure_credentials_for_vm_guest_file_restores.html">
+        設定VM客體檔案還原的認證資料
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="延長客體檔案還原工作階段的時間"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_extend_the_time_of_a_guest_file_restore_session.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_extend_the_time_of_a_guest_file_restore_session.html">
+        延長客體檔案還原工作階段的時間
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="您可能會遇到的客體檔案還原案例"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_guest_file_restore_scenarios_you_might_encounter.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_guest_file_restore_scenarios_you_might_encounter.html">
+        您可能會遇到的客體檔案還原案例
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理SnapCenter VMware vSphere應用裝置的VMware vCenter外掛程式"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 管理SnapCenter VMware vSphere應用裝置的VMware vCenter外掛程式</div>-->
+         管理SnapCenter VMware vSphere應用裝置的VMware vCenter外掛程式
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="重新啟動VMware vSphere用戶端服務"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_restart_the_vmware_vsphere_web_client_service.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_restart_the_vmware_vsphere_web_client_service.html">
+        重新啟動VMware vSphere用戶端服務
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="存取維護主控台"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_access_the_maintenance_console.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_access_the_maintenance_console.html">
+        存取維護主控台
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="從SnapCenter 維護主控台修改VMware vCenter外掛程式密碼"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_modify_plugin_password.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_modify_plugin_password.html">
+        從SnapCenter 維護主控台修改VMware vCenter外掛程式密碼
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="建立及匯入憑證"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_create_and_import_certificates.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_create_and_import_certificates.html">
+        建立及匯入憑證
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="從SnapCenter vCenter取消登錄VMware vSphere的VMware vSphere外掛程式"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_unregister_plugin_from_vcenter.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_unregister_plugin_from_vcenter.html">
+        從SnapCenter vCenter取消登錄VMware vSphere的VMware vSphere外掛程式
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="停用SnapCenter 並啟用VMware vSphere的功能支援功能"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_disable_and_enable_plugin.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_disable_and_enable_plugin.html">
+        停用SnapCenter 並啟用VMware vSphere的功能支援功能
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="移除SnapCenter VMware vSphere的功能性外掛程式"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_remove_plugin.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_remove_plugin.html">
+        移除SnapCenter VMware vSphere的功能性外掛程式
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理您的組態"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 管理您的組態</div>-->
+         管理您的組態
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="修改時區"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_modify_the_time_zones.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_modify_the_time_zones.html">
+        修改時區
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="修改登入認證資料"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_modify_the_logon_credentials.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_modify_the_logon_credentials.html">
+        修改登入認證資料
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="修改vCenter登入認證"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_modify_the_vcenter_logon_credentials.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_modify_the_vcenter_logon_credentials.html">
+        修改vCenter登入認證
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="修改網路設定"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_modify_the_network_settings.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_modify_the_network_settings.html">
+        修改網路設定
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="修改組態預設值"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_modify_configuration_default_values.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_modify_configuration_default_values.html">
+        修改組態預設值
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="建立scbr.override檔案"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_create_the_scbr_override_file.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_create_the_scbr_override_file.html">
+        建立scbr.override檔案
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="您可以置換的組態內容"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_properties_you_can_override.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_properties_you_can_override.html">
+        您可以置換的組態內容
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="啟用SSH"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_enable_ssh.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_enable_ssh.html">
+        啟用SSH
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="REST API"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> REST API</div>-->
+         REST API
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="總覽"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_rest_apis_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_rest_apis_overview.html">
+        總覽
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用Swagger API網頁存取REST API"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_access_rest_apis_using_the_swagger_api_web_page.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_access_rest_apis_using_the_swagger_api_web_page.html">
+        使用Swagger API網頁存取REST API
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="REST API工作流程、以新增及修改儲存VM"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_rest_api_workflows__add_and_modify_storage_vms.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__add_and_modify_storage_vms.html">
+        REST API工作流程、以新增及修改儲存VM
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="REST API工作流程、以建立及修改資源群組"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_rest_api_workflows__create_and_modify_resource_groups.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__create_and_modify_resource_groups.html">
+        REST API工作流程、以建立及修改資源群組
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="REST API工作流程、可隨需備份"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_rest_api_workflow__back_up_on_demand.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflow__back_up_on_demand.html">
+        REST API工作流程、可隨需備份
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="REST API工作流程來還原VM"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_rest_api_workflow__restore_vms.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflow__restore_vms.html">
+        REST API工作流程來還原VM
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="REST API工作流程可還原刪除的VM"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_rest_api_workflow__restore_deleted_vms.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflow__restore_deleted_vms.html">
+        REST API工作流程可還原刪除的VM
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="REST API工作流程可還原VMDK"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_rest_api_workflow__restore_vmdks.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflow__restore_vmdks.html">
+        REST API工作流程可還原VMDK
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="REST API工作流程以附加和分離VMDK"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_rest_api_workflows__attach_and_detach_vmdks.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__attach_and_detach_vmdks.html">
+        REST API工作流程以附加和分離VMDK
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="REST API工作流程以掛載及卸載資料存放區"
+      data-li-level="2#" 
+      class="  ie-sidebar-selected    "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html">
+        REST API工作流程以掛載及卸載資料存放區
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="REST API可下載工作並產生報告"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_rest_apis__download_jobs_and_generate_reports.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_rest_apis__download_jobs_and_generate_reports.html">
+        REST API可下載工作並產生報告
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="REST API工作流程可修改內建排程"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_rest_api_workflows__modify_built-in_schedules.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__modify_built-in_schedules.html">
+        REST API工作流程可修改內建排程
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="REST API可將卡住的工作標示為失敗"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_rest_apis_fail_stuck_jobs.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_rest_apis_fail_stuck_jobs.html">
+        REST API可將卡住的工作標示為失敗
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="REST API以產生稽核記錄"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs48_rest_apis_audit_logs.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs48_rest_apis_audit_logs.html">
+        REST API以產生稽核記錄
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="升級"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-tw/sc-plugin-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 升級</div>-->
+         升級
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="升級至SnapCenter 舊版VMware vSphere的VMware vSphere用版不整合式外掛程式"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_upgrade.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_upgrade.html">
+        升級至SnapCenter 舊版VMware vSphere的VMware vSphere用版不整合式外掛程式
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="升級至同一版本的新修補程式"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_upgrade_to_a_new_patch.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_upgrade_to_a_new_patch.html">
+        升級至同一版本的新修補程式
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="升級至同一版本的新修補程式後、不會顯示相關資訊"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/scpivs44_information_not_displayed_after_upgrading_to_a_new_patch_of_the_same_release.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-tw/sc-plugin-vmware-vsphere/scpivs44_information_not_displayed_after_upgrading_to_a_new_patch_of_the_same_release.html">
+        升級至同一版本的新修補程式後、不會顯示相關資訊
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="法律聲明"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html" 
+      dale-entry-url="/legal-notices.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-tw/sc-plugin-vmware-vsphere/legal-notices.html">
+        法律聲明
+      </a></li></ul>
+</div>
+<script>
+
+  $(".ie-sidebar-button").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    expandedLI = $('li.ie-sidebar-expand')
+
+    const li = $(this).closest("li");
+
+    const parentsLI = $(li).parents('li');
+
+    expandedLI.map(element => {
+      if (sidebarAccordion && !li.hasClass('ie-sidebar-expand') && jQuery.inArray(expandedLI[element], parentsLI) == -1) {
+        $(expandedLI[element]).toggleClass('ie-sidebar-expand');
+        $(expandedLI[element]).children("ul").animate({ height: 'toggle' }, 400, function () {
+          $(li).children("ul").toggleClass('ie-sidebar-open');
+
+        })
+      }
+
+    })
+
+    $(li).toggleClass('ie-sidebar-expand');
+    $(li).children("ul").animate({ height: 'toggle' }, 400, function () {
+      $(li).children("ul").toggleClass('ie-sidebar-open');
+    })
+  });
+
+
+  
+    $("li.ie-sidebar-selected").parents('ul').toggleClass("ie-sidebar-open");
+    $("li.ie-sidebar-selected").toggleClass("ie-sidebar-expand")
+    $("ul.ie-sidebar-open").parent().toggleClass("ie-sidebar-expand");
+    $("li.ie-sidebar-selected").children('ul').toggleClass("ie-sidebar-open")
+  
+  
+</script>
+    </div>
+</div>
+<script>
+
+    
+    let sidebarScrollTopPosition = 0;
+    $("#ie-new-toc").on("scroll", function () {
+        if (sidebarScrollTopPosition == 0) {
+            $.cookie("sidebarScroll", $("#ie-new-toc").scrollTop(), {
+                path: "/zh-tw/sc-plugin-vmware-vsphere"
+            });
+        }
+
+        if ($("#ie-new-toc").scrollTop() > 0) {
+            $('#ie-product-identity-lockup').addClass('ie-addShadow');
+        } else {
+            $('#ie-product-identity-lockup').removeClass('ie-addShadow');
+        }
+    });
+
+    $(function () {
+        if ($.cookie("sidebarScroll")) {
+            $("#ie-new-toc").scrollTop($.cookie("sidebarScroll"));
+        }
+    });
+
+    function setSidebarBottom() {
+        const footerGap = PXinViewport($(".n-footer"));
+        document.getElementById("ie-new-sidebar").style.bottom = Math.max(0, footerGap) + "px";
+    }
+
+    window.onscroll = () => {
+        setSidebarBottom();
+    };
+
+    $("#sidebar-collapse").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        if ($.cookie("sidebarScroll")) {
+            sidebarScrollTopPosition = $.cookie("sidebarScroll");
+        }
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 350, function () {
+            $("#ie-new-sidebar-collapse").show();
+            $("#ie-new-sidebar").removeClass("open")
+            $("#ie-new-sidebar").addClass("close")
+            $("#ie-new-sidebar").removeAttr("style")
+        });
+        $(".ie-content-pane").animate({ width: (width + sidebarWidth), marginLeft: (marginLeft - sidebarWidth) }, 350, function () {
+            resizeContent()
+        })
+
+    });
+    $("#sidebar-expand").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 250, function () {
+            $('#ie-new-sidebar').css('display', 'flex');
+            $("#ie-new-sidebar-collapse").hide();
+            $("#ie-new-sidebar").removeClass("close")
+            $("#ie-new-sidebar").addClass("open")
+            setSidebarBottom();
+
+            if (sidebarScrollTopPosition != 0) {
+                $.cookie("sidebarScroll", sidebarScrollTopPosition, {
+                    path: "/zh-tw/sc-plugin-vmware-vsphere"
+                })
+                $("#ie-new-toc").scrollTop(sidebarScrollTopPosition);
+                sidebarScrollTopPosition = 0;
+            }
+        });
+        $(".ie-content-pane").animate({ width: (width - sidebarWidth), 'marginLeft': (marginLeft + sidebarWidth) }, 250, function () {
+            resizeContent()
+        })
+    });
+    function resizeContent() {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        const rightNavbarVisible =  $("#ie-right-navbar").css('display') && $("#ie-right-navbar").css('display') != 'none';
+        const sidebarVisible = $("#ie-new-sidebar").css('display') != 'none';
+        const rightNavbarWidth = $("#ie-right-navbar").width();
+        const rightNavbarCollapseWidth = $("#ie-right-navbar-collapse").width();
+        const rightNavbarCollapseVisible = $("#ie-right-navbar-collapse").css('display') && $("#ie-right-navbar-collapse").css('display') != 'none';
+        
+        if (rightNavbarVisible && sidebarVisible) {
+            $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarWidth}px)`)
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+        } else if (sidebarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarCollapseWidth}px)`)
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar").width()}px)`)
+            }
+
+        } else if (rightNavbarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            $(".ie-content-pane").width(`calc(100% - ${rightNavbarWidth}px)`)
+        } else {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${rightNavbarCollapseWidth}px)`);
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar-collapse").width()}px) `);
+            }
+            
+        }
+    }
+    $(window).on("resize load", function () {
+        setSidebarBottom();
+        resizeContent()
+    });
+
+
+</script>
+
+<div class="ie-content-pane ie-component-detail-content ie-component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <!-- include utility.html -->
+      <div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <img src="/zh-tw/sc-plugin-vmware-vsphere/images/notification-icons.svg" class="luci-icon" alt="" />
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> 本繁體中文版使用機器翻譯，譯文僅供參考，若與英文版本牴觸，應以英文版本為準。 </span>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </span>
+  </div><div class="ie-component-detail-heading-wrap">
+  <h1 class="ie-component-detail-heading">REST API工作流程以掛載及卸載資料存放區</h1>
+</div>
+
+<div id="ie-byline">
+  
+<div class="page-details">
+    
+        
+            <time datetime="2024-03-14 07:10:46 +0000">03/14/2024</time>
+        
+    
+    
+        <span>貢獻者
+        </span>
+    
+    
+</div>
+<div class="page-controls">
+    <div id="contribute-dropdown" class="custom-dropdown custom-dropdown-contrib" >
+        <div class="custom-dropdown-select custom-dropdown-select-contrib">
+        <span class="contrib-name"><img src="/zh-tw/sc-plugin-vmware-vsphere/images/discuss-sm.svg" alt="" class="github-icon" />建議變更</span>
+        <img src="/zh-tw/sc-plugin-vmware-vsphere/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown invisible" />
+        <img src="/zh-tw/sc-plugin-vmware-vsphere/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup" />
+        </div>
+        <ul class="custom-dropdown-menu suggested-changes-dropdown"><li>
+                <a target="_blank" href="https://github.com/NetAppDocs/sc-plugin-vmware-vsphere.zh-tw/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/zh-tw/sc-plugin-vmware-vsphere/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html&page-title=REST API工作流程以掛載及卸載資料存放區" class="page-nav-contribute-link" role="button">請求文件變更</a>
+            </li><li> 
+                <a target="_blank" href="https://github.com/NetAppDocs/sc-plugin-vmware-vsphere/blob/main/scpivs44_rest_api_workflows__mount_and_unmount_datastores.adoc" class="page-nav-contribute-link" role="button">編輯本頁</a>
+            </li><li><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >瞭解如何貢獻</a></li>
+        </ul>
+    </div>
+    <div id="pdf-control-container">
+        <div class="n-pdf-header">
+            <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+                <img class="adobe-icon" src="/zh-tw/sc-plugin-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>PDF<img src="/zh-tw/sc-plugin-vmware-vsphere/images/dropdown-arrow.svg" class="custom-icon" alt="" />
+            </a>
+        </div>
+        <div class="n-pdf-body-container">
+            <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+                    
+                    
+                    
+                    <a target="_blank" class="pdf-download-link" href="/zh-tw/sc-plugin-vmware-vsphere/pdfs/fullsite-sidebar/VMware_vSphere文件的VMware外掛程式SnapCenter.pdf" >
+                    <img src="/zh-tw/sc-plugin-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>此文件 PDF 的網站</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/sc-plugin-vmware-vsphere/pdfs/sidebar/概念.pdf" 
+            
+          >
+            <img src="/zh-tw/sc-plugin-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            概念
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/sc-plugin-vmware-vsphere/pdfs/sidebar/開始使用.pdf" 
+            
+          >
+            <img src="/zh-tw/sc-plugin-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            開始使用
+          </a>
+          
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/sc-plugin-vmware-vsphere/pdfs/sidebar/部署選擇控制閥的要求.pdf" 
+            
+          >
+            <img src="/zh-tw/sc-plugin-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            部署選擇控制閥的要求
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/sc-plugin-vmware-vsphere/pdfs/sidebar/快速入門.pdf" 
+            
+          >
+            <img src="/zh-tw/sc-plugin-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            快速入門
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/sc-plugin-vmware-vsphere/pdfs/sidebar/監控與報告.pdf" 
+            
+          >
+            <img src="/zh-tw/sc-plugin-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            監控與報告
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/sc-plugin-vmware-vsphere/pdfs/sidebar/管理儲存設備.pdf" 
+            
+          >
+            <img src="/zh-tw/sc-plugin-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            管理儲存設備
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/sc-plugin-vmware-vsphere/pdfs/sidebar/保護資料.pdf" 
+            
+          >
+            <img src="/zh-tw/sc-plugin-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            保護資料
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/sc-plugin-vmware-vsphere/pdfs/sidebar/掛載及卸載資料存放區.pdf" 
+            
+          >
+            <img src="/zh-tw/sc-plugin-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            掛載及卸載資料存放區
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/sc-plugin-vmware-vsphere/pdfs/sidebar/從備份還原.pdf" 
+            
+          >
+            <img src="/zh-tw/sc-plugin-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            從備份還原
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/sc-plugin-vmware-vsphere/pdfs/sidebar/連接並卸除VMDK.pdf" 
+            
+          >
+            <img src="/zh-tw/sc-plugin-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            連接並卸除VMDK
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/sc-plugin-vmware-vsphere/pdfs/sidebar/還原來賓檔案和資料夾.pdf" 
+            
+          >
+            <img src="/zh-tw/sc-plugin-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            還原來賓檔案和資料夾
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/sc-plugin-vmware-vsphere/pdfs/sidebar/管理SnapCenter_VMware_vSphere應用裝置的VMware_vCenter外掛程式.pdf" 
+            
+          >
+            <img src="/zh-tw/sc-plugin-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            管理SnapCenter VMware vSphere應用裝置的VMware vCenter外掛程式
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/sc-plugin-vmware-vsphere/pdfs/sidebar/管理您的組態.pdf" 
+            
+          >
+            <img src="/zh-tw/sc-plugin-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            管理您的組態
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/sc-plugin-vmware-vsphere/pdfs/sidebar/REST_API.pdf" 
+            
+          >
+            <img src="/zh-tw/sc-plugin-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            REST API
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-tw/sc-plugin-vmware-vsphere/pdfs/sidebar/升級.pdf" 
+            
+          >
+            <img src="/zh-tw/sc-plugin-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            升級
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+</li></ul>
+            <div class="zip-pdf-link-container" style="display: none;">   
+                <a href="#" id="zipPdf">
+                <img src="/zh-tw/sc-plugin-vmware-vsphere/images/pdf-zip.png" alt="" width="16" height="16"/>
+                <pre>個別的 PDF 文件集合<span class="zip-size"></span></pre>
+                </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+        </div>
+    </div>        
+<script>
+$("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+$("#toggleButtonPdf").on('click', function(e){ 
+    e.stopPropagation();
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+});
+
+//hide is by clicking outside pdfcontainer
+$(document).on('click', function (e) {
+    if ($('#toggleContainerPdf').is(':visible') && !$('.n-pdf-body-container').is(e.target) && !$('.n-pdf-body-container').has(e.target).length)  {
+        
+        $("#toggleContainerPdf").toggle('display');
+        $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+        $("#toggleButtonPdf").removeClass("active");
+    }
+});
+</script>
+<script>
+    function getPdfLocation() {
+        const pdfLocation = window.scrollX + document.querySelector('#pdf-control-container').getBoundingClientRect().left
+        if (pdfLocation < 450) {
+            $(".n-pdf-body-container").addClass("block")
+        } else {
+            $(".n-pdf-body-container").removeClass("block")
+        }
+    
+    }
+    $( window ).on( "resize", function() {
+        getPdfLocation()
+} );
+</script>
+<script>
+    const pdfButtonWidth =  $(".n-pdf-header").width();
+    const pdfMenuWidth = $(".n-pdf-body-container").width();
+    $(".n-pdf-body-container").css('margin-left', `calc(${pdfButtonWidth - pdfMenuWidth}px)`);
+</script>
+</div>
+
+    
+
+</div>
+
+
+
+
+<div class="content-to-index">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式執行資料存放區備份的掛載和卸載作業、您必須遵循規定的REST API呼叫順序。</p>
+</div>
+<div class="paragraph">
+<p>針對每個REST API、請新增 <code>https://&lt;server&gt;:&lt;port&gt;</code> 在REST API的前面、形成完整的端點。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="若要掛載資料存放區請遵循下列工作流程">若要掛載資料存放區、請遵循下列工作流程：</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">步驟</th>
+<th class="tableblock halign-left valign-top">REST API</th>
+<th class="tableblock halign-left valign-top">註解</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">前往 <code>http://&lt;vCenter-IP&gt;/mob</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">從VMware託管物件URL尋找更多資料存放區。記下要掛載之資料存放區的* morf*。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">「/4.1/datas/{morf}/備份」</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">「Get the list for a datastore」（取得資料存放區的備份清單）會取得指定資料存放區的備份清單。從步驟1通過* moref <strong>。記下您要掛載的*備份Id</strong>。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/4.1/datas/backups/{backupId}/snapshotloces'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">「Get the list of Snapshot Locations」（取得Snapshot位置清單）可取得指定備份位置的詳細資料。從步驟2傳遞*備份Id*。請注意*資料存放區*和*快照位置清單*清單中的位置。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">//4.1/datas/{morf}/可用的EssxHoses'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">「Get the list of Available ESXi hosts（取得可用ESXi主機的清單）」會取得可用於掛載作業的ESXi主機清單。從步驟1通過* moref *。請注意*可用的EssxHostsList*資訊。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/4.1/datas/backups/{backupId}/mount'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">「為備份安裝資料存放區」會裝載指定的資料存放區備份。從步驟2傳遞*備份Id*。在* datastoration*和* location*屬性中、傳遞步驟3中「快照位置清單」的資訊。在* esxHostName*屬性中、傳遞步驟4中*可用的EssxHostsList*的資訊。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="若要卸載資料存放區請遵循此工作流程">若要卸載資料存放區、請遵循此工作流程：</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">步驟</th>
+<th class="tableblock halign-left valign-top">REST API</th>
+<th class="tableblock halign-left valign-top">註解</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">「/4.1/datas/backups/{backupId}/mounted」</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">「取得掛載的資料存放區清單」。記下要卸載的資料存放區* moref *。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">「/4.1/資料存放區/卸載」</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">「卸載資料存放區以進行備份」會卸載指定的資料存放區備份。從步驟1傳遞資料存放區* moref *。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+<div id="ie-right-navbar-collapse" class="close">
+  <img id="navbar-expand" class="ie-searchbox-icon" src="/zh-tw/sc-plugin-vmware-vsphere/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-right-navbar" class="open">
+  <div id="right-navbar-collapse">
+    <img src="/zh-tw/sc-plugin-vmware-vsphere/images/double_arrow.svg" alt="" />
+  </div>
+  <div class="page-nav-container">
+    <nav class="page-nav-fixed">
+      <div class="page-nav-title">在本頁</div>
+      <div class="page-nav-links">
+        <ul class="page-nav-inner" id="page-menu"></ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  resizeContent();
+  function setRightBarHeight() {
+    var h = 0;
+
+    // header 1
+    h += PXinViewport($('.n-footer'));
+    h += PXinViewport($('#ie-new-header'));
+
+    if ($('#ie-right-navbar').length) {
+      $('#ie-right-navbar').css({ height: `calc(100vh - ${h}px)` });
+    }
+    if ($('.page-nav-links').length) {
+      h += 98;
+      $('.page-nav-links').css({ height: `calc(100vh - ${h}px)` });
+    }
+  }
+
+  $(document).ready(function () {
+    // PAGE NAV - Click
+    const MASTHEAD_OFFSET = 65;
+    const SECTIONS = $("main h2, main h3");
+    let calculateActiveSection = false;
+    setTimeout(() => {
+      calculateActiveSection = true;
+    }, 100)
+
+    $(".page-nav__link").click(function (event) {
+      calculateActiveSection = false;
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      var target = $(event.target);
+      target.addClass('page-nav__link--active');
+      location.hash = event.target.hash;
+      setTimeout(() => {
+        calculateActiveSection = true;
+      }, 100)
+
+    });
+
+    // PAGE NAV - Scroll
+    $(window).on('resize scroll', function () {
+      if (calculateActiveSection) {
+        var activeSection = getActiveSection(SECTIONS, MASTHEAD_OFFSET);
+        if (activeSection) {
+          var activeHref = $(activeSection).attr('id');
+          $(".page-nav__link").removeClass('page-nav__link--active');
+          $("#page-menu a[href=#" + activeHref + "]").addClass('page-nav__link--active');
+          if (location.hash != "#" + activeHref) {
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + activeHref);
+            }
+          }
+        }
+      }
+    });
+
+    $(".n-pdf-button").click(function () {
+      $(this).toggleClass("active");
+    });
+
+    $.fn.isVisibleAndInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom && $(this).is(":visible");
+    };
+
+
+    $(window).on('resize scroll', function () {
+      setRightBarHeight();
+    });
+
+    $(window).trigger('resize');
+
+
+  });
+
+  $("#right-navbar-collapse").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 350, function () {
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+    });
+    $(".ie-content-pane").animate({ width: (width + rightNavbarWidth) }, 350, function () {
+      resizeContent()
+      setSidebarBottom();
+    })
+
+  });
+  $("#navbar-expand").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 250, function () {
+      $("#ie-right-navbar-collapse").removeClass("open")
+      $("#ie-right-navbar-collapse").addClass("close")
+      $("#ie-right-navbar").removeClass("close")
+      $("#ie-right-navbar").addClass("open")
+      setRightBarHeight();
+      setSidebarBottom();
+    });
+    $(".ie-content-pane").animate({ width: (width - rightNavbarWidth) }, 250, function () {
+      resizeContent()
+    })
+  });
+
+  function navbarResize() {
+    const rightNavbarResized = $("#ie-right-navbar-collapse").hasClass('resized');
+    if (window.innerWidth < 1024) {
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+      $("#ie-right-navbar").removeAttr("style")
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar-collapse").addClass("resized")
+    } else {
+      if (rightNavbarResized) {
+        $('#ie-right-navbar').removeClass('close');
+        $('#ie-right-navbar').addClass('open');
+        $("#ie-right-navbar-collapse").removeClass("resized")
+        $("#ie-right-navbar-collapse").removeClass("open")
+        $("#ie-right-navbar-collapse").addClass("close")
+      }
+    }
+    resizeContent()
+  }
+  navbarResize();
+  $(window).on('resize load', function () {
+    navbarResize()
+  });
+
+  function getActiveSection(sections, offset) {
+    var scrollPosition = $(window).scrollTop() + offset + 5;
+    var activeSection;
+    for (var i = 0; i < sections.length; i++) {
+      var el = $(sections[i]);
+      var activePosition = el.offset().top;
+      if (activePosition > scrollPosition) {
+        break;
+      }
+
+      activeSection = sections[i];
+    }
+
+    return activeSection;
+  }
+
+  $("a[href*=#]:not([href=#])").click(function () {
+    setTimeout(() => {
+      $(window).trigger('scroll');
+    }, 105)
+  })
+
+  const hashOnLoad = location.href.split("#")[1];
+  setTimeout(function () {
+    if (hashOnLoad) {
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      $("#page-menu a[href=#" + hashOnLoad + "]").addClass('page-nav__link--active');
+    }
+  }, 100)
+
+</script>
+
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+        <div class="n-footer__left">
+          <li class="n-footer__copyright-link">
+                    <a href="https://www.netapp.com/company/legal/copyright/">© 2024 NetApp, Inc.</a>
+          </li>
+        </div>
+        <div class="n-footer__center">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">使用條款</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">隱私權政策</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Cookie 政策</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Cookie 設定</a>
+            </li>
+          </ul>
+       </div>
+        <div class="n-footer__right">
+              <li class="n-footer__copyright-link">
+                <a target="_self" href="javascript:netapp_mailto()">傳送有關本網頁的意見反應</a>
+              </li>
+        </div>
+     </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/zh-tw/sc-plugin-vmware-vsphere/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/zh-tw/sc-plugin-vmware-vsphere/js/prism.js'></script>
+      <script type="text/javascript" src='/zh-tw/sc-plugin-vmware-vsphere/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/zh-tw/sc-plugin-vmware-vsphere/js/ie-tabbed-blocks.js'></script>
+    <script src='/zh-tw/sc-plugin-vmware-vsphere/js/ie-sidebar.js'></script>
+  </body>
+
+</html>
