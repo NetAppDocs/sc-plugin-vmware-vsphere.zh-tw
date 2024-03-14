@@ -2128,8 +2128,6 @@ NetApp 互通性對照表工具 ^] （ IMT ）。</block>
   <block id="e4876fb0bd486e69e6d18f00ad595613" category="paragraph"><block ref="40ab977cb91f6614f74434651bca5a18" prefix="" category="inline-code"></block></block>
   <block id="5d4f06f4da45c0078547e4432bbcf0fa" category="paragraph"><block ref="40ab977cb91f6614f74434651bca5a18" prefix="" category="inline-code"></block><block ref="95e74a55a904a66f18be251d45fb5889" prefix=" " category="inline-code"></block></block>
   <block id="80f3158028945baa03dee7b07e5ba849" category="paragraph">對於每個 REST API 、請在 REST API 前面新增 \https ： &lt;server&gt; ： &lt;port&gt; 、以形成完整的端點。</block>
-  <block id="bee8a2c870d9f36561d79948bcc7f115" category="paragraph">若要在SnapCenter 虛擬化機器上使用支援VMware vSphere的功能來保護VM、資料存放區和應用程式一致的資料庫、您必須部署SnapCenter 適用於VMware vSphere的VMware外掛程式。
-請遵循中的指示 <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"></block> 下載 OVA 檔案的頁面。</block>
   <block id="89c7e4a6f50b68ec3ede15d1584a492e" category="paragraph">使用格式<block ref="cf854de4a942e42c016ef31d206a66c3" prefix=" " category="inline-code"></block> 存取管理GUI。</block>
   <block id="4dacb1d80a643a937acb6c45a683ec1b" category="admonition">從 SnapCenter Plug-in for VMware （ SCV ） 5.0 開始、您需要將 HTTP 和 ONTAPI 類型的應用程式新增為任何具有自訂角色型存取選擇控制閥的 ONTAP 使用者的使用者登入方法。如果無法存取這些應用程式、備份將會失敗。您需要重新啟動選擇控制閥服務、以識別 ONTAP 使用者登入方法的變更。</block>
   <block id="73bad5beeda4a2a6bd01d97def1d4e67" category="cell">叢集身分識別顯示</block>
@@ -2172,4 +2170,6 @@ Volume卸載</block>
   <block id="47d51cdb9bee4f5be50bff68bef7f005" category="paragraph">針對每個REST API、請新增<block ref="3a8f2c381c875eef37ad96b7d70fc1a1" prefix=" " category="inline-code"></block> 在REST API的前面、形成完整的端點。</block>
   <block id="cf924216c679ed55d0b692e5bd6f4b14" category="list-text">使用格式登入SnapCenter VMware的VMware插件管理GUI<block ref="3dfacd84c996ac983963942e2712a0bf" prefix=" " category="inline-code"></block>。使用部署時設定的管理員使用者名稱和密碼、以及使用維護主控台產生的 MFA 權杖登入。</block>
   <block id="5b845076b112586b7fff13b10d9f0612" category="cell">前往<block ref="7c61e9e4b133f96dbd184942bce35796" prefix=" " category="inline-code"></block></block>
+  <block id="e4a70196caccbfc6c6d2c0d9df5e3013" category="paragraph">若要在SnapCenter 虛擬化機器上使用支援VMware vSphere的功能來保護VM、資料存放區和應用程式一致的資料庫、您必須部署SnapCenter 適用於VMware vSphere的VMware外掛程式。
+。 <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"></block> 頁面提供下載 OVA 檔案的指示。</block>
 </blocks>
