@@ -18,7 +18,7 @@ summary: 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛�
 
 內建排程是產品隨附的排程、例如MySQL資料庫傾印排程。您可以修改下列排程：「排程資料庫傾印」「排程-清除備份」「排程- AsupDataCollection」「排程-電腦儲存儲存儲存儲存」「排程-清除工作」
 
-對於每個REST API、請在REST API前面新增「https://<server>:<port>`」、以形成完整的端點。
+針對每個REST API、請新增 `\https://<server>:<port>` 在REST API的前面、形成完整的端點。
 
 |===
 | 步驟 | REST API | 註解 

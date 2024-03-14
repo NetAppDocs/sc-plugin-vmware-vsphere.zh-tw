@@ -30,7 +30,7 @@ summary: 當您為SnapCenter VMware vSphere資源群組的VMware vSphere資源�
 .步驟
 . 登入SnapCenter VMware的VMware插件管理GUI。
 +
-請使用「https://<appliance-IP-address>:8080`」格式
+使用格式 `\https://<appliance-IP-address>:8080`
 
 . 按一下頂端工具列中的「設定」圖示。
 +

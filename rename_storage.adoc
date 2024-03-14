@@ -22,7 +22,7 @@ summary: 您可以使用 REST API 重新命名儲存設備。
 . 建立新備份。
 . 請使用備份詳細資料來尋找舊的和新的儲存名稱。
 . 在 vSphere 用戶端的 * 備份 * 畫面中、選取備份以查看其詳細資料。
-. 從 URL 存取 Swagger ： https://<SCV-IP>:8144/api/swagger-ui/index.html[]
+. 從 URL 存取 Swagger ： `\https://<SCV-IP>:8144/api/swagger-ui/index.html`
 +
 使用下列 API 重新命名儲存設備：
 

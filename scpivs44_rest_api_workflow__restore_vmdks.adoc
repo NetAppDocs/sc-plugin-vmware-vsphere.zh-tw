@@ -16,13 +16,13 @@ summary: 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛�
 [role="lead"]
 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式來執行VMDK的還原作業、您必須遵循規定的REST API呼叫順序。
 
-對於每個REST API、請在REST API前面新增「https://<server>:<port>`」、以形成完整的端點。
+針對每個REST API、請新增 `\https://<server>:<port>` 在REST API的前面、形成完整的端點。
 
 |===
 | 步驟 | REST API | 註解 
 
 
-| 1. | 請前往http://<vCenter-IP>/mob` | 從VMware託管物件URL尋找更多VM。記下VMDK所在虛擬機器的* morf*。 
+| 1. | 前往 `\http://<vCenter-IP>/mob` | 從VMware託管物件URL尋找更多VM。記下VMDK所在虛擬機器的* morf*。 
 
 
 | 2. | //4.1/VM/｛moref｝/備份 | 「Get VM備份」可取得指定VM的備份清單。從步驟1通過* moref *。請記下您要還原之備份的*備份Id*。 

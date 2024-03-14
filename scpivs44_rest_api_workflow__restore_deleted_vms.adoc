@@ -16,13 +16,14 @@ summary: 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛�
 [role="lead"]
 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式執行VM備份還原作業、您必須遵循規定的REST API呼叫順序。
 
-對於每個REST API、請在REST API前面新增「https://<server>:<port>`」、以形成完整的端點。
+針對每個REST API、請新增 `\https://<server>:<port>` 在REST API的前面、形成完整的端點。
 
 |===
 | 步驟 | REST API | 註解 
 
 
-| 1. | 請前往http://<vCenter-IP>/mob` | 從VMware託管物件URL尋找虛擬機器UUID。請注意您要還原的VM * uid*。 
+| 1. | 前往
+`\http://<vCenter-IP>/mob` | 從VMware託管物件URL尋找虛擬機器UUID。請注意您要還原的VM * uid*。 
 
 
 | 2. | //4.1/VM/｛uuid｝/備份 | 「Get VM備份」可取得指定VM的備份清單。通過步驟1中的* uid*。請記下您要還原之備份的*備份Id*。 

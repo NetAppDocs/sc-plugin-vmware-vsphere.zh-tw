@@ -25,7 +25,7 @@ summary: 您可以從SnapCenter VMware vSphere GUI的VMware vSphere支援套件�
 .步驟
 . 登入SnapCenter VMware vSphere GUI的VMware vCenter外掛程式。
 +
-請使用「https://<OVA-IP-address>:8080`」格式。
+使用格式 `\https://<OVA-IP-address>:8080`。
 
 . 按一下頂端工具列中的「設定」圖示。
 +

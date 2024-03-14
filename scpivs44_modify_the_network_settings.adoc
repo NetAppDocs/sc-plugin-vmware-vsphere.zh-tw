@@ -27,7 +27,7 @@ summary: 您可以修改SnapCenter 在VMware vSphere的VMware vSphere的VMware P
 .步驟
 . 登入SnapCenter VMware的VMware插件管理GUI。
 +
-請使用「https://<appliance-IP-address>:8080`」格式
+使用格式 `\https://<appliance-IP-address>:8080`
 
 . 按一下頂端工具列中的「設定」圖示。
 +

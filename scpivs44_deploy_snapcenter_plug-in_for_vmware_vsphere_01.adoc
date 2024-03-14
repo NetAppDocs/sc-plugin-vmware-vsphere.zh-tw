@@ -15,6 +15,7 @@ summary:
 
 [role="lead"]
 若要在SnapCenter 虛擬化機器上使用支援VMware vSphere的功能來保護VM、資料存放區和應用程式一致的資料庫、您必須部署SnapCenter 適用於VMware vSphere的VMware外掛程式。
+請遵循中的指示 link:scpivs44_download_the_ova_open_virtual_appliance.html["下載開放式虛擬應用裝置（OVA）"^] 下載 OVA 檔案的頁面。
 
 . 若為VMware vCenter 7.0.3及更新版本、請依照中的步驟進行 link:scpivs44_download_the_ova_open_virtual_appliance.html["下載開放式虛擬應用裝置（OVA）"^] 可將證書導入vCenter。
 . 在瀏覽器中、瀏覽至VMware vSphere vCenter。
@@ -74,7 +75,7 @@ NOTE: 所有主機都必須設定IP位址（不支援FQDN主機名稱）。部�
 
 . 使用部署畫面上顯示的IP位址、使用部署精靈中提供的認證登入SnapCenter VMware更新程式管理GUI、然後在儀表板上確認SnapCenter VMware更新程式已成功連線至vCenter並已啟用。
 +
-請使用「https://<appliance-IP-address>:8080`」格式來存取管理GUI。
+使用格式 `\https://<appliance-IP-address>:8080` 存取管理GUI。
 
 +
 使用部署時設定的管理員使用者名稱和密碼、以及使用維護主控台產生的 MFA 權杖登入。

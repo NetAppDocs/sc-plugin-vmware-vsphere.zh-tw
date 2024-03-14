@@ -27,7 +27,7 @@ NOTE: 外掛程式僅支援REST API、以與協力廠商應用程式整合、不
 .步驟
 . 從瀏覽器輸入URL、以存取外掛程式Swagger網頁：
 +
-`https://<SCV_IP>:8144/api/swagger-ui/index.html`
+`\https://<SCV_IP>:8144/api/swagger-ui/index.html`
 
 +
 
@@ -38,8 +38,8 @@ IMPORTANT: 請勿在REST API URL中使用下列字元：+、。、%和&。
 存取SnapCenter VMware插件REST API：
 
 +
-`https://<SCV_IP>:8144/api/swagger-ui/index.html`
-`https://OVAhost:8144/api/swagger-ui/index.html`
+`\https://<SCV_IP>:8144/api/swagger-ui/index.html`
+`\https://OVAhost:8144/api/swagger-ui/index.html`
 
 +
 登入使用vCenter驗證機制來產生權杖。

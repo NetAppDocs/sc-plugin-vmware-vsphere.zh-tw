@@ -140,7 +140,7 @@ VMware工具安裝在SnapCenter 部署了VMware vCenter外掛程式的VM上。�
 
 . 使用部署畫面上顯示的IP位址、SnapCenter 並使用部署精靈中提供的認證登入VMware更新程式管理GUI、然後在儀表板上確認SnapCenter VMware更新程式已成功連線至vCenter並已啟用。
 +
-請使用「https://<appliance-IP-address>:8080`」格式來存取管理GUI。
+使用格式 `\https://<appliance-IP-address>:8080` 存取管理GUI。
 
 +
 使用部署時設定的管理員使用者名稱和密碼、以及使用維護主控台產生的 MFA 權杖登入。

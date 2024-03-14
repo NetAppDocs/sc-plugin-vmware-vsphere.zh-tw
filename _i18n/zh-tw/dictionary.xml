@@ -93,7 +93,6 @@
   <block id="58ef7a8748b7df809e7e8e28b0aba2d0" category="list-text">部署VMware插件時會顯示IP位址SnapCenter 。</block>
   <block id="1d680b75afdbec83d44fea623009f6da" category="list-text">請使用SnapCenter 部署VMware vCenter外掛程式時提供的登入認證、或是稍後修改的認證。</block>
   <block id="616c8b8044b4007302220fbf5ab54f72" category="list-text">登入SnapCenter VMware的VMware插件管理GUI。</block>
-  <block id="680fdc24a485b4c264fe5ca2dc3fbe2f" category="paragraph">請使用「https://&lt;appliance-IP-address&gt;:8080`」格式</block>
   <block id="227bef74f33f1265145922d0fce4a983" category="list-text">在左側導覽窗格中、按一下*組態*。</block>
   <block id="c317117ae96d40cbc0da75810ffc4b64" category="list-text">在「*組態*」頁面的「* vCenter*」區段中、按一下「*編輯*」。</block>
   <block id="a2290148c6c2289984364a0caea11e70" category="list-text">輸入新密碼、然後按一下「*儲存*」。</block>
@@ -222,13 +221,11 @@
   <block id="f8fd86ff3cd572a88f814e0e5aeca137" category="list-text">從產品清單中、選取* SnapCenter 《VMware vSphere *適用的*》「VMware vSphere外掛程式」、然後按一下「*下載最新版本*」按鈕。</block>
   <block id="f92fc2cee2f14f7fa664e00d40fdade3" category="summary">若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式執行資料存放區備份的掛載和卸載作業、您必須遵循規定的REST API呼叫順序。</block>
   <block id="4266f89cea2ffb125829b9bf00b31a59" category="doc">REST API工作流程以掛載及卸載資料存放區</block>
-  <block id="3c82f7eb36bfab4289a34422763ec1df" category="paragraph">對於每個REST API、請在REST API前面新增「https://&lt;server&gt;:&lt;port&gt;`」、以形成完整的端點。</block>
   <block id="a52b815e3d2f2e4cb35f1f86b7bc7d40" category="section-title">若要掛載資料存放區、請遵循下列工作流程：</block>
   <block id="48c7c41b72e1d678923ce3571aa65b2d" category="cell">步驟</block>
   <block id="aba3d4b49c454e1974970e7b5514b001" category="cell">REST API</block>
   <block id="8413c683b4b27cc3f4dbd4c90329d8ba" category="cell">註解</block>
   <block id="c4ca4238a0b923820dcc509a6f75849b" category="cell">1.</block>
-  <block id="676f5667ad28e206d23dca58cd0d060e" category="cell">請前往http://&lt;vCenter-IP&gt;/mob`</block>
   <block id="5dc488a3a5aea59632783d70adf2d346" category="cell">從VMware託管物件URL尋找更多資料存放區。記下要掛載之資料存放區的* morf*。</block>
   <block id="c81e728d9d4c2f636f067f89cc14862c" category="cell">2.</block>
   <block id="1dcb3812d540c9234b4b5a424d42d261" category="cell">「/4.1/datas/{morf}/備份」</block>
@@ -337,7 +334,6 @@
   <block id="542b7a3fe0d6eeae44735b7148d67df6" category="paragraph">部署可能需要幾分鐘的時間才能完成。當啟用VMware vCenter外掛程式、安裝VMware工具、螢幕會提示您登入VMware的更新程式時、就會顯示部署成功的訊息SnapCenter 。SnapCenter您可以在第一次重新開機期間、將網路組態從DHCP切換為靜態。但是、不支援從靜態切換至DHCP。</block>
   <block id="98db5cc585db2a622c5cde96a9915206" category="paragraph">螢幕會顯示SnapCenter 部署VMware vCenter外掛程式的IP位址。記下IP位址。如果您想要變更VMware插件組態、則必須登入SnapCenter VMware的更新程式管理GUI SnapCenter 。</block>
   <block id="6456b054af6038de017aab562e0013fb" category="list-text">使用部署畫面上顯示的IP位址、SnapCenter 並使用部署精靈中提供的認證登入VMware更新程式管理GUI、然後在儀表板上確認SnapCenter VMware更新程式已成功連線至vCenter並已啟用。</block>
-  <block id="bd77cdae258e065bbc448c1d924f55f6" category="paragraph">請使用「https://&lt;appliance-IP-address&gt;:8080`」格式來存取管理GUI。</block>
   <block id="7c6544e77cfe7de3aa3b9fb500330658" category="paragraph">如果主機名稱為「UnifiedVSC/選擇控制器」、請重新啟動應用裝置。如果重新啟動應用裝置並未將主機名稱變更為指定的主機名稱、則必須重新安裝應用裝置。</block>
   <block id="75d694f5d88e1839480427fdb654b0d7" category="inline-link-macro">部署後作業</block>
   <block id="d8ef28d966db63c29755a7f6475ffc47" category="paragraph">您應該完成必要的 <block ref="d2e3a87e2ea63a3197055a8faedfb9b3" category="inline-link-macro-rx"></block>。</block>
@@ -378,7 +374,6 @@
   <block id="92d37724657724129ae0451584c728aa" category="doc">移除SnapCenter VMware vSphere的功能性外掛程式</block>
   <block id="159a080365af1cc94e243b73531b0b72" category="list-text">您必須擁有系統管理員權限。</block>
   <block id="502b0645b39e83a780af1d7a09c61d26" category="list-text">請確定沒有SnapCenter 執行任何不可用的功能。</block>
-  <block id="91cd73162cf76644af6b000797025355" category="list-text">使用「https://&lt;OVA-IP-address&gt;:8080`」格式登入SnapCenter VMware的VMware插件管理GUI。</block>
   <block id="35a1defb66a8f002b0221c73a80c50aa" category="paragraph">部署外掛程式時、會顯示VMware的IP of the VMware外掛程式。SnapCenter</block>
   <block id="d8e8dbc850d07dc581f77f4e5633db4e" category="list-text">按一下左導覽窗格中的*組態*、然後取消選取「*外掛程式詳細資料*」區段中的「服務」選項、以停用外掛程式。</block>
   <block id="c72da7e3fabb3a5670b26ae6fee4836f" category="list-text">登入VMware vSphere。</block>
@@ -439,11 +434,9 @@
   <block id="7b0ca130fab8e69f326a92b2555e1195" category="paragraph">所有SnapCenter 的實體外掛程式都需要下列最低權限。</block>
   <block id="8a6723c1c838cb49b40fda0fbd0ca554" category="cell">All Access命令：ONTAP 要求具備最低權限才能執行功能的版本</block>
   <block id="f29e68a537349e874e09abd00f21d020" category="cell">事件generate-autosup-log</block>
-  <block id="ab252449ab4621465d55bce831a738b5" category="cell">工作記錄顯示工作停止</block>
   <block id="510b17a83061d1709c7a07368d7f8b8f" category="cell">LUN LUN LUN建立LUN刪除LUN igroup新增LUN igroup建立LUN igroup刪除LUN igroup重新命名LUN igroup顯示LUN對應新增報告節點LUN對應建立LUN對應刪除LUN對應移除報告節點LUN對應顯示LUN修改LUN移入Volume LUN離線LUN線LUN持續保留清除LUN重新調整LUN序列大小 LUN顯示</block>
   <block id="847b8685554d07af7c2a25cc92eb932c" category="cell">SnapMirror清單目的地SnapMirror原則附加規則SnapMirror原則修改規則SnapMirror原則移除規則SnapMirror原則顯示SnapMirror還原SnapMirror顯示SnapMirror顯示SnapMirror顯示SnapMirror顯示歷史記錄SnapMirror更新SnapMirror更新ls-set</block>
   <block id="34b6cd75171affba6957e308dcbd92be" category="cell">版本</block>
-  <block id="1af3757b38fb56f918d35a0ce558ec62" category="cell">Volume Clone建立Volume Clone顯示Volume Clone分割開機Volume Clone分割停止Volume建立Volume銷毀Volume檔案實體複製建立Volume檔案show磁碟使用量Volume離線Volume線上Volume修改Volume qtree建立Volume qtree刪除Volume qtree修改Volume qtree顯示Volume限制Volume顯示建立Volume Snapshot快照 Volume Snapshot刪除Volume Snapshot修改Volume Snapshot重新命名Volume Snapshot還原Volume Snapshot還原檔案Volume Snapshot顯示Volume unmount</block>
   <block id="8b452f796fba8aa73b30854119031a54" category="cell">Vserver CIFS Vserver CIFS共用建立Vserver CIFS共用刪除Vserver CIFS ShadowCopy顯示Vserver CIFS共用顯示Vserver CIFS顯示vserver顯示vserver輸出原則vserver輸出原則建立vserver匯出原則刪除vserver匯出原則規則建立vserver匯出原則規則顯示vserver匯出原則顯示vserver iSCSI Vserver iSCSI連線顯示vserver顯示網路介面 網路介面容錯移轉群組網路介面顯示</block>
   <block id="c6752ce5f8c095ac974d2740edaf533c" category="cell">唯讀命令：ONTAP 要求具備最低權限才能執行更新版本的功能</block>
   <block id="7a69b919de28d081f80cd742609937a9" category="section-title">其他ONTAP 資訊</block>
@@ -610,8 +603,6 @@
   <block id="da80c1dd44bd93481d651dc5c342754c" category="doc">如何為ONTAP VMware vSphere設定適用於VMware vSphere的VMware RBAC SnapCenter 外掛程式</block>
   <block id="e97d9832e7ead909ed80c187b9688f4b" category="paragraph">如果您想搭配使用VMware的VMware插件、則必須在ONTAP 儲存系統上設定VMware RBAC。SnapCenter在這個範圍內ONTAP 、您必須執行下列工作：</block>
   <block id="c5a03c7c060427875c6895edf012449d" category="list-text">建立單一角色。</block>
-  <block id="9dc5053bca32e6394932747f3adab2c4" category="inline-link">《Administrator驗證與RBAC電源指南》（英文）ONTAP</block>
-  <block id="6ba5f8147a2ef474b32a9c0369a8913e" category="paragraph"><block ref="6ba5f8147a2ef474b32a9c0369a8913e" category="inline-link-rx"></block></block>
   <block id="149b50c248d73339ff7c20b3d9507dc8" category="list-text">建立ONTAP 角色的使用者名稱和密碼（儲存系統認證）。</block>
   <block id="a321e2f764dace63fde85e1bbc2f0047" category="paragraph">您需要此儲存系統認證資料、才能設定SnapCenter 適用於VMware插件的儲存系統。您可以在外掛程式中輸入認證資料來執行此動作。每次您使用這些認證登入儲存系統時、系統都會顯示SnapCenter 您在建立認證時、ONTAP 於各處設定的一組功能。</block>
   <block id="d394c3657cc0eec4d978cbe288c15eb9" category="paragraph">您可以使用系統管理員或root登入來存取SnapCenter 所有的功能；不過、最好使用ONTAP 由效益管理系統提供的RBAC功能來建立一個或多個存取權限有限的自訂帳戶。</block>
@@ -636,7 +627,6 @@
   <block id="75ea96b6d8c73a8d05259ac9f34d62ff" category="summary">您可以從SnapCenter VMware vSphere GUI的VMware vSphere支援套件中產生支援套件。</block>
   <block id="ecfc133fda25b37d408886c1a66ff36a" category="doc">從SnapCenter VMware vSphere GUI的VMware vSphere GUI的VMware支援外掛程式產生支援套裝組合</block>
   <block id="dd948d9992f365a6c0e9df64901d5d56" category="list-text">登入SnapCenter VMware vSphere GUI的VMware vCenter外掛程式。</block>
-  <block id="4a1bee1ea273c19270d8196f0ba4c17a" category="paragraph">請使用「https://&lt;OVA-IP-address&gt;:8080`」格式。</block>
   <block id="7d1ff6975af13868750539374a2b5f49" category="list-text">在「*設定*」頁面的「*支援*」區段中、按一下「*產生支援*產品組合」。</block>
   <block id="97e8ab47b38e9948063b3c2295f24205" category="list-text">在產生支援服務包之後、按一下提供的連結、將產品組合下載至NetApp。</block>
   <block id="92b71de50dbb5e5c743637d385819e45" category="summary">VMware vCenter外掛程式可搭配vCenter Server RBAC、支援以應用程式為基礎的作業所需的RBAC和VMware RBAC、以判斷特定使用者可在特定儲存系統上的物件上執行哪些支援工作。SnapCenter SnapCenter ONTAP SnapCenter</block>
@@ -831,7 +821,6 @@
   <block id="7f9834a181f8fd15bc168c47caf536e3" category="list-text">按一下您要檢視的備份。</block>
   <block id="f1abae2f40d33bbd71a1d0a29cc016cc" category="summary">若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式執行VM備份還原作業、您必須遵循規定的REST API呼叫順序。</block>
   <block id="c1634a907000ddd630d2959e055bed59" category="doc">REST API工作流程可還原刪除的VM</block>
-  <block id="cacb4dc1b7f4b7406d5cf41b927ea415" category="cell">請前往http://&lt;vCenter-IP&gt;/mob`</block>
   <block id="c40cc36b9154fdd4a91c01ccb09ce903" category="cell">從VMware託管物件URL尋找虛擬機器UUID。請注意您要還原的VM * uid*。</block>
   <block id="e59122dd4a3b9560e419d80fe5d7705c" category="cell">//4.1/VM/｛uuid｝/備份</block>
   <block id="e3d8a902b976f14935a74a07f0a8ff70" category="cell">「Get VM備份」可取得指定VM的備份清單。通過步驟1中的* uid*。請記下您要還原之備份的*備份Id*。</block>
@@ -1454,7 +1443,6 @@
   <block id="7af76100be5ace159efb0a1fb46267ce" category="paragraph">您可以在SnapCenter 同一個SnapCenter VMware vSphere上登錄多個適用於VMware vSphere的VMware vCenter Plug-in執行個體、以支援VM上的應用程式型資料保護作業。您無法在SnapCenter 多SnapCenter 個VMware伺服器上登錄相同的VMware vSphere效能支援外掛程式。</block>
   <block id="3a3bfcea804c014276e7672b06f18879" category="summary">在部署虛擬應用裝置之前、您應該先瞭解部署需求。</block>
   <block id="fc076765cbc4aef219c970ffdd93f443" category="section-title">主機需求</block>
-  <block id="b2164e68f3b3365f8a7f629f2ded172a" category="paragraph">開始部署SnapCenter VMware vSphere的VMware vSphere版的VMware vCenter外掛程式之前、您應該先熟悉主機需求。</block>
   <block id="9f1f4f9f8512dfd3b467fdb2b0a3fcb9" category="paragraph">無論您是使用外掛程式來保護Windows系統或Linux系統上的資料、VMware的VMware插件都會部署為Linux VM。SnapCenter</block>
   <block id="c5c443a8b0adaa910c6fcb40ec53c17c" category="list-text">您應該在SnapCenter vCenter Server上部署VMware vCenter外掛程式。</block>
   <block id="7653140fc4967f8758d5c27792645d97" category="paragraph">備份排程會在SnapCenter 部署VMware vCenter外掛程式的時區執行。vCenter會報告vCenter所在時區內的資料。因此、如果SnapCenter VMware vCenter外掛程式和vCenter位於不同的時區、SnapCenter 則VMware Plug-in儀表板中的資料可能與報告中的資料不同。</block>
@@ -1631,7 +1619,6 @@
   <block id="4bd9892ccf6ff8fef4c96e8c446de4c0" category="list-text">取得4.1/稽 核/記錄/｛FileName｝：取得特定記錄檔的稽核資料</block>
   <block id="913856446dc69bb38ecf267105e570c4" category="list-text">POST 4.1/稽核/驗證：觸發稽核記錄驗證。</block>
   <block id="4c417ff6dd370e5de9143efe00f1d891" category="paragraph">若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式來產生VMware vSphere用戶端工作的稽核記錄、您必須使用VMware vSphere的REST API呼叫。</block>
-  <block id="58fd328f70ead47df7ab4f688e21da17" category="paragraph">針對每個REST API、請新增<block ref="e38834fc82c56475507e4895f3f4506f" prefix=" " category="inline-code"></block> 在REST API的前面、形成完整的端點。</block>
   <block id="8a5afc077293d533cd722c15004994a3" category="cell"><block ref="7900113137e1416cdac7f3b0628343d5" prefix="" category="inline-code"></block></block>
   <block id="fc6eaf060959b0326fdd253722146292" category="cell">傳回含有完整性資料的稽核記錄檔</block>
   <block id="1c682acd4c0c6e03d9cf4464fc33a09a" category="cell"><block ref="16b082cfe4b3464f414ca245623319f6" prefix="" category="inline-code"></block></block>
@@ -1834,7 +1821,6 @@
   <block id="15522b8dcb225880b816b8456110deaf" category="summary">如果SnapCenter VMware vSphere用戶端的行為不正確、您可能需要清除瀏覽器快取。如果問題持續發生、請重新啟動VMware vSphere用戶端服務。</block>
   <block id="bbbb4a3d88d4a0dafc319898d6206ae7" category="paragraph">如果vCenter位於Linux應用裝置上、則必須使用Linux命令重新啟動SnapCenter VMware vSphere用戶端服務。</block>
   <block id="7f52ae2d13fc881eab436a11ad6556a4" category="paragraph"><block ref="ca3710e05c94c666b5609593ee562322" prefix="" category="inline-code"></block></block>
-  <block id="5b1407cb7656fff3e143180f583fb24f" category="sidebar">下載開放式虛擬應用裝置（OVA）</block>
   <block id="36e391315954a298b55333c0f1afcc71" category="paragraph">請依照下列步驟建立資源群組。</block>
   <block id="6a03edb8ab46dff4278e3f5e0e5ebe46" category="list-text">若為VMware vCenter 7.0.3及更新版本、請依照中的步驟進行 <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"></block> 可將證書導入vCenter。</block>
   <block id="8775bf884912200ed43fd5a867b909a3" category="cell">*權限*</block>
@@ -1914,9 +1900,7 @@
   <block id="b8d4db09e92c4240560d6aaddccf4b16" category="paragraph">您必須知道SnapCenter VMware vSphere管理GUI適用的VMware vSphere Plug-in IP位址和登入認證。您也必須記下從維護主控台產生的 MFA 權杖。</block>
   <block id="92919d9dc3f9b27c2eb0987012ea29b7" category="inline-image-macro">SnapCenter VMware 外掛程式管理 GUI</block>
   <block id="71b9e9b427ef87315824d884a461b958" category="paragraph"><block ref="71b9e9b427ef87315824d884a461b958" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d04d04b07b2f89257ea6a8a4cb4d4d69" category="list-text">使用格式登入SnapCenter VMware的VMware插件管理GUI<block ref="2f9a91925acb796742dba013e10d5086" prefix=" " category="inline-code"></block>。使用部署時設定的管理員使用者名稱和密碼、以及使用維護主控台產生的 MFA 權杖登入。</block>
   <block id="624b86ee772b09351048910fc4a730dc" category="section-title">部署後所需的作業</block>
-  <block id="acd08ccde611c62ddfb114db3ef86edd" category="list-text">使用格式登入SnapCenter VMware的VMware插件管理GUI<block ref="b877f9257be4a85fd458750536aaaf3b" prefix=" " category="inline-code"></block>。使用管理員使用者名稱、密碼和 MFA Token 詳細資料登入。MFA 權杖可從維護主控台產生。</block>
   <block id="0a64db99826a9ea7c2e6f2908b06dabd" category="list-text">在左側導覽窗格中、按一下 * 設定 * 、然後按一下 * 認證 * 索引標籤、然後選取 * 新增 * 以新增虛擬應用裝置的認證。</block>
   <block id="524697e11df05ccf97f0b0b414be0f9c" category="inline-image-macro">維護主控台視窗</block>
   <block id="830a296b46e858a56418113e07e9dfe7" category="paragraph"><block ref="830a296b46e858a56418113e07e9dfe7" category="inline-image-macro-rx" type="image"></block></block>
@@ -1961,8 +1945,6 @@
   <block id="7caafda1d6b7396b069aa01f2f730175" category="cell">更新 Syslog 伺服器憑證</block>
   <block id="b7b46ce5d1a547db89c0bc615ff272a5" category="list-text">ASA</block>
   <block id="5258377f2e9e8d3d391eece64e6c5025" category="paragraph"><block ref="8214327d71770f15589ad8ef083206a6" category="inline-link-macro-rx"></block>。</block>
-  <block id="6b9b94c3711b201fe3a71623fa72ea24" category="paragraph"><block ref="e29e0f9a9d290a9acb44d7554c4c570a" prefix="" category="inline-code"></block></block>
-  <block id="754c65b00cdb7c7d30219dba86a36692" category="paragraph"><block ref="e29e0f9a9d290a9acb44d7554c4c570a" prefix="" category="inline-code"></block><block ref="de3b0e6d5c5836f36dfb38e288be5e75" prefix=" " category="inline-code"></block></block>
   <block id="6f30de27462e7513b2536a2c20f5b4f0" category="list-text">在 * 原則 * 頁面上、選取 * 建立 * 以啟動精靈。</block>
   <block id="88ae28e59dc3874fd82752642fcf546a" category="inline-image-macro">vCenter UI</block>
   <block id="f0a600cfbc8a81c89ee7f81d19d9ce25" category="paragraph"><block ref="f0a600cfbc8a81c89ee7f81d19d9ce25" category="inline-image-macro-rx" type="image"></block></block>
@@ -2047,7 +2029,6 @@ SnapCenter VMware 外掛程式不支援在不同叢集上使用相同名稱的�
   <block id="ed8f510b8bb5e4130a769bc10f48fe38" category="list-text">建立新備份。</block>
   <block id="2f6c87843187b726c495736065696a62" category="list-text">請使用備份詳細資料來尋找舊的和新的儲存名稱。</block>
   <block id="2c860d8496b2dea32f71235aa9f1f217" category="list-text">在 vSphere 用戶端的 * 備份 * 畫面中、選取備份以查看其詳細資料。</block>
-  <block id="8ef3523827cb841facc966d2b7843327" category="list-text">從 URL 存取 Swagger ：<block ref="a118319f5c4f95d1bcdb533c2eedb180" category="inline-link-rx"></block></block>
   <block id="7ea67a73f2bddd2183a1256c0cf5aa73" category="paragraph">使用下列 API 重新命名儲存設備：</block>
   <block id="b03ee8cc9e95b190582237f408aa3a19" category="paragraph">修補程式
 /4.1/ 儲存系統</block>
@@ -2137,4 +2118,58 @@ NetApp 互通性對照表工具 ^] （ IMT ）。</block>
   <block id="be62a39629f9bf44c0b7764858df7180" category="paragraph">如需ONTAP 有關支援版本的更新資訊、請參閱<block ref="f480f082c29fcf628f934199402ad852" category="inline-link-rx"></block>。</block>
   <block id="574bca4b9d134d315e5eca84b213c9cf" category="cell">VMware vSphere的VMware vSphere外掛程式使用此功能來管理VVol資料存放區（VMware虛擬磁碟區）SnapCenter 。如需支援的版本、請參閱<block ref="f480f082c29fcf628f934199402ad852" category="inline-link-rx"></block>。</block>
   <block id="0c94c2c3fa58ffce83643eed644bb1ad" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="f480f082c29fcf628f934199402ad852" category="inline-link-rx"></block>。</block>
+  <block id="1f13b08bb7473773776626a71153cf60" category="list-text">從 URL 存取 Swagger ：<block ref="ada918b17d5ffcad54e90c4c6e3cd9f3" prefix=" " category="inline-code"></block></block>
+  <block id="07dd76ba56afccff26527907bd1df2ce" category="paragraph">針對每個REST API、請新增<block ref="180352d12b9d5ca0ba15c9cb2ad94212" prefix=" " category="inline-code"></block> 在REST API的前面、形成完整的端點。</block>
+  <block id="309de2a87bff7ae7c6fdf613c07456cd" category="cell">前往<block ref="7c61e9e4b133f96dbd184942bce35796" prefix=" " category="inline-code"></block></block>
+  <block id="59d59b410909e6449498dfd7dabe204b" category="paragraph">開始部署 SnapCenter Plug-in for VMware vSphere （ SCV ）之前、您應該先熟悉主機需求。</block>
+  <block id="733ad5cd9c0a5c80c268aa646f94120c" category="paragraph">使用格式<block ref="cf854de4a942e42c016ef31d206a66c3" prefix=" " category="inline-code"></block></block>
+  <block id="bbb6afd68a87e9a7640bf0db8ce41bae" category="paragraph">您可以修改SnapCenter 在VMware vSphere的VMware vCenter外掛程式中設定的vCenter登入認證。外掛程式會使用這些設定來存取vCenter。
+當您變更 vCenter 密碼時、您需要取消註冊 VMware vSphere 的 ONTAP 工具、並重新註冊新密碼、才能讓 vVol 備份順暢運作。</block>
+  <block id="e4876fb0bd486e69e6d18f00ad595613" category="paragraph"><block ref="40ab977cb91f6614f74434651bca5a18" prefix="" category="inline-code"></block></block>
+  <block id="5d4f06f4da45c0078547e4432bbcf0fa" category="paragraph"><block ref="40ab977cb91f6614f74434651bca5a18" prefix="" category="inline-code"></block><block ref="95e74a55a904a66f18be251d45fb5889" prefix=" " category="inline-code"></block></block>
+  <block id="80f3158028945baa03dee7b07e5ba849" category="paragraph">對於每個 REST API 、請在 REST API 前面新增 \https ： &lt;server&gt; ： &lt;port&gt; 、以形成完整的端點。</block>
+  <block id="bee8a2c870d9f36561d79948bcc7f115" category="paragraph">若要在SnapCenter 虛擬化機器上使用支援VMware vSphere的功能來保護VM、資料存放區和應用程式一致的資料庫、您必須部署SnapCenter 適用於VMware vSphere的VMware外掛程式。
+請遵循中的指示 <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"></block> 下載 OVA 檔案的頁面。</block>
+  <block id="89c7e4a6f50b68ec3ede15d1584a492e" category="paragraph">使用格式<block ref="cf854de4a942e42c016ef31d206a66c3" prefix=" " category="inline-code"></block> 存取管理GUI。</block>
+  <block id="4dacb1d80a643a937acb6c45a683ec1b" category="admonition">從 SnapCenter Plug-in for VMware （ SCV ） 5.0 開始、您需要將 HTTP 和 ONTAPI 類型的應用程式新增為任何具有自訂角色型存取選擇控制閥的 ONTAP 使用者的使用者登入方法。如果無法存取這些應用程式、備份將會失敗。您需要重新啟動選擇控制閥服務、以識別 ONTAP 使用者登入方法的變更。</block>
+  <block id="73bad5beeda4a2a6bd01d97def1d4e67" category="cell">叢集身分識別顯示</block>
+  <block id="eb329c5960128e617403445c31a29da6" category="cell">工作歷史記錄顯示
+工作展示
+工作停止</block>
+  <block id="f70ff09711c9d04b2cce7fac4814083d" category="cell">建立Volume Clone
+Volume Clone顯示
+磁碟區複製分割開始
+Volume Clone切割停止
+Volume建立
+Volume刪除
+Volume銷毀
+建立Volume檔案複製
+Volume檔案show-disk-usage
+Volume離線
+Volume線上
+Volume修改
+Volume qtree建立
+Volume qtree刪除
+Volume qtree修改
+Volume qtree顯示
+Volume限制
+Volume Show
+建立Volume Snapshot快照
+Volume Snapshot刪除
+Volume Snapshot修改
+Volume Snapshot重新命名
+Volume Snapshot還原
+Volume Snapshot還原檔
+Volume Snapshot顯示
+Volume卸載</block>
+  <block id="16b92fbbb10cb2f1d734ca41dcf581d0" category="paragraph">使用格式<block ref="3dfacd84c996ac983963942e2712a0bf" prefix=" " category="inline-code"></block>。</block>
+  <block id="aadf7df1c4f29cbf9325555b71ac60a6" category="inline-link">系統管理員驗證和RBAC組態工作表</block>
+  <block id="ba611b4e8842b58bb1c9bd97fd8cd917" category="admonition">從 SnapCenter Plug-in for VMware （ SCV ） 5.0 開始、您需要將 HTTP 和 ONTAPI 類型的應用程式新增為任何具有自訂角色型存取選擇控制閥的 ONTAP 使用者的使用者登入方法。如果無法存取這些應用程式、備份將會失敗。您需要重新啟動選擇控制閥服務、以識別 ONTAP 使用者登入方法的變更。如需建立或修改登入帳戶的相關資訊、請參閱<block ref="8bb9441e135c29f77dfdcf6a698db847" category="inline-link-rx"></block>。</block>
+  <block id="6ba7b5d818acb6cab3137d4c011e2db2" category="inline-link">系統管理員驗證與RBAC</block>
+  <block id="b6bdb3b25a95e999fb569567041f332e" category="paragraph"><block ref="b6bdb3b25a95e999fb569567041f332e" category="inline-link-rx"></block></block>
+  <block id="4d75144590fa945e7ddacf44eda3c07c" category="list-text">使用格式登入SnapCenter VMware的VMware插件管理GUI<block ref="cf854de4a942e42c016ef31d206a66c3" prefix=" " category="inline-code"></block>。使用管理員使用者名稱、密碼和 MFA Token 詳細資料登入。MFA 權杖可從維護主控台產生。</block>
+  <block id="429270d3e169fb4e7788d89d734fae5d" category="list-text">使用格式登入SnapCenter VMware的VMware插件管理GUI<block ref="3dfacd84c996ac983963942e2712a0bf" prefix=" " category="inline-code"></block>。</block>
+  <block id="47d51cdb9bee4f5be50bff68bef7f005" category="paragraph">針對每個REST API、請新增<block ref="3a8f2c381c875eef37ad96b7d70fc1a1" prefix=" " category="inline-code"></block> 在REST API的前面、形成完整的端點。</block>
+  <block id="cf924216c679ed55d0b692e5bd6f4b14" category="list-text">使用格式登入SnapCenter VMware的VMware插件管理GUI<block ref="3dfacd84c996ac983963942e2712a0bf" prefix=" " category="inline-code"></block>。使用部署時設定的管理員使用者名稱和密碼、以及使用維護主控台產生的 MFA 權杖登入。</block>
+  <block id="5b845076b112586b7fff13b10d9f0612" category="cell">前往<block ref="7c61e9e4b133f96dbd184942bce35796" prefix=" " category="inline-code"></block></block>
 </blocks>

@@ -16,11 +16,14 @@ summary: RBAC僅適用於不一致的VMware應用程式（透過VMDK的應用程
 [role="lead"]
 RBAC僅適用於不一致的VMware應用程式（透過VMDK的應用程式）工作。ONTAP SnapCenter
 
+
+NOTE: 從 SnapCenter Plug-in for VMware （ SCV ） 5.0 開始、您需要將 HTTP 和 ONTAPI 類型的應用程式新增為任何具有自訂角色型存取選擇控制閥的 ONTAP 使用者的使用者登入方法。如果無法存取這些應用程式、備份將會失敗。您需要重新啟動選擇控制閥服務、以識別 ONTAP 使用者登入方法的變更。如需建立或修改登入帳戶的相關資訊、請參閱 https://docs.netapp.com/us-en/ontap/authentication/config-worksheets-reference.html["系統管理員驗證和RBAC組態工作表"]。
+
 如果您想搭配使用VMware的VMware插件、則必須在ONTAP 儲存系統上設定VMware RBAC。SnapCenter在這個範圍內ONTAP 、您必須執行下列工作：
 
 * 建立單一角色。
 +
-http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.pow-adm-auth-rbac%2Fhome.html["《Administrator驗證與RBAC電源指南》（英文）ONTAP"^]
+https://docs.netapp.com/us-en/ontap/concepts/administrator-authentication-rbac-concept.html["系統管理員驗證與RBAC"]
 
 * 建立ONTAP 角色的使用者名稱和密碼（儲存系統認證）。
 +

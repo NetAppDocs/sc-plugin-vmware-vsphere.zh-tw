@@ -20,7 +20,7 @@ summary: 在部署虛擬應用裝置之前、您應該先瞭解部署需求。
 
 == 主機需求
 
-開始部署SnapCenter VMware vSphere的VMware vSphere版的VMware vCenter外掛程式之前、您應該先熟悉主機需求。
+開始部署 SnapCenter Plug-in for VMware vSphere （ SCV ）之前、您應該先熟悉主機需求。
 
 * 無論您是使用外掛程式來保護Windows系統或Linux系統上的資料、VMware的VMware插件都會部署為Linux VM。SnapCenter
 * 您應該在SnapCenter vCenter Server上部署VMware vCenter外掛程式。

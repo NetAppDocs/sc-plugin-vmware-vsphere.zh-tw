@@ -16,7 +16,7 @@ summary: 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛�
 [role="lead"]
 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式來尋找VMware vSphere用戶端工作的工作ID、您必須使用VMware vSphere的REST API呼叫。這些REST API已新增至SnapCenter VMware vSphere 4.4的VMware vSphere 4.4外掛程式。
 
-對於每個REST API、請在REST API前面新增「https://<server>:<port>`」、以形成完整的端點。
+對於每個 REST API 、請在 REST API 前面新增 \https ： <server> ： <port> 、以形成完整的端點。
 
 使用「工作」區段中的下列REST API、將處於執行中狀態的工作變更為失敗狀態：
 

@@ -22,7 +22,7 @@ summary: 如果您不再需要使用SnapCenter 「還原資料保護」功能、
 
 
 .步驟
-. 使用「https://<OVA-IP-address>:8080`」格式登入SnapCenter VMware的VMware插件管理GUI。
+. 使用格式登入SnapCenter VMware的VMware插件管理GUI `\https://<OVA-IP-address>:8080`。
 +
 部署外掛程式時、會顯示VMware的IP of the VMware外掛程式。SnapCenter
 

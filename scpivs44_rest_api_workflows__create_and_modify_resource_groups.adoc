@@ -16,7 +16,7 @@ summary: 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛�
 [role="lead"]
 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式來執行建立和修改資源群組作業、您必須遵循規定的REST API呼叫順序。
 
-對於每個REST API、請在REST API前面新增「https://<server>:<port>`」、以形成完整的端點。
+針對每個REST API、請新增 `\https://<server>:<port>` 在REST API的前面、形成完整的端點。
 
 若要建立資源群組、請遵循下列工作流程：
 

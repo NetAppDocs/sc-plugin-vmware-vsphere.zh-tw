@@ -27,7 +27,7 @@ summary: REST API以產生稽核記錄
 
 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式來產生VMware vSphere用戶端工作的稽核記錄、您必須使用VMware vSphere的REST API呼叫。
 
-針對每個REST API、請新增 `https://<server>:<port>/api` 在REST API的前面、形成完整的端點。
+針對每個REST API、請新增 `\https://<server>:<port>/api` 在REST API的前面、形成完整的端點。
 
 請使用「工作」區段中的下列REST API來取得工作的詳細資訊：
 
