@@ -20,11 +20,11 @@ summary: 您必須先建立備份原則、才能使用SnapCenter VMware vSphere�
 * 您必須閱讀必備條件。
 * 您必須設定次要儲存關係。
 +
-** 如果您要將Snapshot複本複製到鏡射或保存庫的二線儲存設備、則必須設定關係、SnapCenter 且該管理員必須已將來源和目的地磁碟區的儲存VM指派給您。
-** 若要在NFS或VMFS資料存放區上成功將Snapshot複本傳輸至次要儲存設備、以建立Version FlexibleMirror關係、請確定SnapMirror原則類型為「Asynsynsorrror」、並已勾選「all_source_snapshots」選項。
-** 當二線儲存設備（鏡射保存庫）上的Snapshot複本數量達到上限時、在備份作業中登錄備份及套用保留的活動將失敗、並顯示下列錯誤：「此Snapshot複本目前被一或多個SnapMirror關係當成參考Snapshot複本使用。刪除Snapshot複本可能導致SnapMirror作業失敗
+** 如果您要將 Snapshot 複製到鏡像或資料保險箱次要儲存設備、則必須設定關聯、且 SnapCenter 管理員必須為來源和目的地磁碟區指派儲存 VM 給您。
+** 若要成功將 Snapshot 傳輸到 NFS 或 VMFS 資料存放區上的 Verse-FlexibleMirror 關係次要儲存設備、請確定 SnapMirror 原則類型為「 AsynAsynAsynous Mirror 」、且已勾選「 all_source_snapshots 」選項。
+** 當次要儲存設備（鏡射資料保險箱）上的 Snapshot 數量達到上限時、在備份作業中登錄備份和套用保留的活動會失敗、並顯示下列錯誤： `This Snapshot is currently used as a reference Snapshot by one or more SnapMirror relationships. Deleting the Snapshot can cause future SnapMirror operations to fail.`
 +
-若要修正此問題、請設定次要儲存設備的SnapMirror保留原則、以避免達到Snapshot複本的上限。
+若要修正此問題、請設定次要儲存設備的 SnapMirror 保留原則、以避免達到快照的上限。
 
 +
 如需系統管理員如何指派資源給使用者的相關資訊、請參閱 https://docs.netapp.com/us-en/snapcenter/concept/concept_types_of_role_based_access_control_in_snapcenter.html["關於使用角色型存取控制的資訊SnapCenter"^]。
@@ -76,7 +76,7 @@ NOTE: SM-BC 僅支援 VMFS 資料存放區。
 . 指定保留設定。
 +
 
-IMPORTANT: 如果您打算啟用SnapVault 還原複寫、則應將保留計數設為2個或更高。如果您將保留計數設為1個備份以保留、則保留作業可能會失敗。這是因為第一個Snapshot複本是SnapVault 參考Snapshot複本、用於建立關聯、直到將較新的Snapshot複本複寫到目標為止。
+IMPORTANT: 如果您打算啟用SnapVault 還原複寫、則應將保留計數設為2個或更高。如果您將保留計數設為1個備份以保留、則保留作業可能會失敗。這是因為第一個 Snapshot 是 SnapVault 關係的參考 Snapshot 、直到較新的 Snapshot 複寫到目標為止。
 
 +
 
@@ -111,10 +111,11 @@ NOTE: 此選項支援FlexGroup VMware vSphere 4.5及更新版本的VMware vSpher
 
 
 | Snapshot標籤  a| 
-輸入可選的自訂標籤以新增至SnapVault 使用此原則建立的SnapMirror Snapshot複本。Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系統上的其他Snapshot。
+輸入可選的自定義標籤，以便添加到使用此策略創建的 SnapVault 和 SnapMirror 快照中。
+Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系統上的其他Snapshot。
 
 
-NOTE: Snapshot複本標籤最多允許31個字元。
+NOTE: Snapshot 標籤最多允許 31 個字元。
 
 |===
 . 選用：在*進階*欄位中、選取所需的欄位。下表列出進階欄位詳細資料。

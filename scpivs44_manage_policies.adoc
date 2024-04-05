@@ -38,7 +38,7 @@ summary: 您可以針對SnapCenter VMware vSphere建立、修改、檢視、分�
 
 == 修改原則
 
-您可以修改SnapCenter VMware vSphere資源群組適用的VMware vSphere外掛程式原則。當原則附加至資源群組時、您可以修改頻率、複寫選項、Snapshot複本保留設定或指令碼資訊。
+您可以修改SnapCenter VMware vSphere資源群組適用的VMware vSphere外掛程式原則。  當原則附加至資源群組時、您可以修改頻率、複寫選項、 Snapshot 保留設定或指令碼資訊。
 
 .關於這項工作
 修改SnapCenter VMware的VMware外掛程式備份原則、不同SnapCenter 於修改以應用程式為基礎的外掛程式備份原則。修改外掛程式原則時、您不需要將原則從資源群組分離。

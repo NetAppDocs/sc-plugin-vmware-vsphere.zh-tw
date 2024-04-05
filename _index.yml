@@ -1,0 +1,42 @@
+---
+indexpage:
+  title: VMware vSphere文件的VMware外掛程式SnapCenter
+  summary: VMware vSphere（選擇控制器）的VMware外掛程式是Linux型虛擬應用裝置。SnapCenter獨立式環境可為VM、資料存放區及VMDK提供快速、節省空間、損毀一致且VM一致的備份與還原作業。它也能搭配SnapCenter
+    使用支援應用程式型的VMware環境備份與還原作業、以利SnapCenter 執行應用程式專屬的外掛程式。
+  keywords: SnapCenter Plug-in for VMware vSphere, SCV
+  lead: VMware vSphere（選擇控制器）的VMware外掛程式是Linux型虛擬應用裝置。SnapCenter獨立式環境可為VM、資料存放區及VMDK提供快速、節省空間、損毀一致且VM一致的備份與還原作業。它也能搭配SnapCenter
+    使用支援應用程式型的VMware環境備份與還原作業、以利SnapCenter 執行應用程式專屬的外掛程式。本文件庫說明適用於 VMware vSphere
+    5.0 版的 SnapCenter 外掛程式。
+  tiles:
+  - title: 開始使用
+    links:
+    - title: 版本資訊
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886920
+    - title: 深入瞭解選擇控制閥
+      url: "/scpivs44_concepts_overview.html"
+    - title: 部署需求
+      url: "/scpivs44_deployment_planning_and_requirements.html"
+    - title: 快速入門
+      url: "/scpivs44_quick_start_overview.html"
+  - title: 保護VM、VMDK和資料存放區
+    links:
+    - title: 保護您的資料
+      url: "/scpivs44_protect_data_overview.html"
+    - title: 從備份還原
+      url: "/scpivs44_restore_from_backups_overview.html"
+    - title: 使用REST API
+      url: "/scpivs44_rest_apis_overview.html"
+  - title: 部落格與社群
+    links:
+    - title: NetApp部落格–選擇控制閥
+      url: https://blog.netapp.com/tag/snapcenter/
+    - title: NetApp社群–選擇控制閥
+      url: https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/backup-and-restore-discussions/label-name/snapcenter
+  - title: 更多資源
+    links:
+    - title: 軟件文檔SnapCenter
+      url: https://docs.netapp.com/us-en/snapcenter/index.html
+    - title: 早期版本的選擇控制閥文件
+      url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63240
+    - title: NetApp知識庫–選擇控制閥
+      url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter

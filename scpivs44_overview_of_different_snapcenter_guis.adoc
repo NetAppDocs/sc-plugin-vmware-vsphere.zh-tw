@@ -18,7 +18,7 @@ summary: VMware vSphere的VMware vCenter外掛程式是獨立外掛程式、與�
 
 VMware vSphere的VMware vCenter外掛程式是獨立外掛程式、與其他的VMware vSphere外掛程式不同。SnapCenter SnapCenter您必須在vCenter中使用VMware vSphere用戶端GUI、才能執行VM、VMDK及資料存放區的所有備份與還原作業。您也可以使用Web用戶端GUI儀表板來監控受保護和未受保護的VM清單。對於所有其他 SnapCenter 外掛程式（以應用程式為基礎的外掛程式）作業、例如備份、還原和工作監控、您可以使用 SnapCenter GUI 。
 
-若要保護VM和資料存放區、請使用VMware vSphere用戶端介面。Web用戶端GUI與儲存系統上的NetApp Snapshot複製技術整合。這可讓您在數秒內備份VM和資料存放區、並還原VM、而無需讓ESXi主機離線。
+若要保護VM和資料存放區、請使用VMware vSphere用戶端介面。Web 用戶端 GUI 與儲存系統上的 NetApp Snapshot 技術整合。這可讓您在數秒內備份VM和資料存放區、並還原VM、而無需讓ESXi主機離線。
 
 此外、也有管理 GUI 可在 SnapCenter VMware 外掛程式上執行管理作業。
 
@@ -41,4 +41,4 @@ VMware vSphere的VMware vCenter外掛程式是獨立外掛程式、與其他的V
 |===
 若要執行VM一致的備份與還原作業、您必須使用VMware vSphere用戶端GUI。雖然可以使用VMware工具執行某些作業、例如掛載或重新命名資料存放區、但這些作業不會登錄SnapCenter 在該儲存庫中、也無法辨識。
 
-不支援資料庫和VM的單一Snapshot複本。SnapCenterVM和資料庫的備份必須獨立排程和執行、即使資料庫和VM位於同一個磁碟區、也會建立個別的Snapshot複本。應用程式型備份必須使用SnapCenter 還原GUI排程；VM一致的備份必須使用VMware vSphere用戶端GUI排程。
+SnapCenter 不支援資料庫和 VM 的單一快照。虛擬機器和資料庫的備份必須排程並獨立執行、即使資料庫和虛擬機器位於同一個磁碟區中、也會建立個別的 Snapshot 。應用程式型備份必須使用SnapCenter 還原GUI排程；VM一致的備份必須使用VMware vSphere用戶端GUI排程。

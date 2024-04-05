@@ -49,7 +49,7 @@ TIP: 若要改善NFS環境中的還原作業效能、請啟用VMware應用程式
 
 +
 
-NOTE: 如果VM的Snapshot複本是由SnapCenter VMware vSphere的VMware vSphere以外的軟體執行、則還原作業無法成功完成。
+NOTE: 如果 VM 快照是由 SnapCenter Plug-in for VMware vSphere 以外的軟體所執行、則還原作業無法順利完成。
 
 * 目的地資料存放區必須就緒。
 +
@@ -76,7 +76,7 @@ NOTE: 如果VM的Snapshot複本是由SnapCenter VMware vSphere的VMware vSphere�
 .關於這項工作
 * VM已取消登錄、並重新登錄
 +
-VM的還原作業會取消原始VM的登錄、從備份Snapshot複本還原VM、並在同一部ESXi伺服器上以相同名稱和組態登錄還原的VM。還原後、您必須手動將VM新增至資源群組。
+VM 的還原作業會取消原始 VM 的登錄、從備份 Snapshot 還原 VM 、並在同一 ESXi 伺服器上以相同名稱和組態登錄還原的 VM 。還原後、您必須手動將VM新增至資源群組。
 
 * 還原資料存放區
 +
@@ -103,7 +103,7 @@ VM的還原作業會取消原始VM的登錄、從備份Snapshot複本還原VM、
 NOTE: 如果您要還原刪除的VM、則新增至SnapCenter VMware插件的儲存VM認證資料必須是「vsadmin」、或是擁有與「vsadmin」相同權限的使用者帳戶。主機必須位於執行ONTAP 不支援的儲存系統上。
 
 . 在左側導覽器窗格中、以滑鼠右鍵按一下某個VM、然後在下SnapCenter 拉式清單中選取* NetApp S還原*、以啟動精靈。
-. 在*還原*精靈的*選取備份*頁面上、選取您要還原的備份Snapshot複本。
+. 在 * 還原 * 精靈的 * 選取備份 * 頁面上、選取您要還原的備份快照。
 +
 您可以搜尋特定的備份名稱或部分備份名稱、也可以按一下篩選器圖示並選取日期和時間範圍來篩選備份清單、選取是否要包含VMware Snapshot的備份、是否要掛載備份以及位置。按一下「*確定*」以返回精靈。
 

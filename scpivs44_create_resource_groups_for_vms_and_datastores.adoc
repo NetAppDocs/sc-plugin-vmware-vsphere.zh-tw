@@ -78,9 +78,9 @@ IMPORTANT: 請勿新增處於無法存取狀態的VM。雖然可以建立包含�
 +
 在S還原9.8中ONTAP 、備份會在切換後掛起。此問題已在ONTAP 版本9.9中修正。
 
-* 最佳化Snapshot複本
+* 最佳化快照
 +
-若要最佳化Snapshot複本、您應該將與同一個磁碟區相關聯的VM和資料存放區分組為一個資源群組。
+若要最佳化快照、您應該將與同一個磁碟區相關聯的 VM 和資料存放區分組到一個資源群組中。
 
 * 備份原則
 +
@@ -138,7 +138,7 @@ NOTE: 如果您選擇的是具有 Snapshot 鎖定期間的備份原則、則需�
 
 
 | 最新Snapshot名稱  a| 
-如果您想要將字尾「_Recent」新增至最新的Snapshot複本、請勾選此方塊。「_Recent」字尾會取代日期和時間戳記。
+如果您想要將字尾「 _Recent 」新增至最新的 Snapshot 、請勾選此方塊。「_Recent」字尾會取代日期和時間戳記。
 
 
 NOTE: 系統會針對附加至資源群組的每個原則建立「_Recent」備份。因此、具有多個原則的資源群組將會有多個「_Recent」備份。請勿手動重新命名「_Recent」備份。
@@ -146,10 +146,10 @@ NOTE: 系統會針對附加至資源群組的每個原則建立「_Recent」備�
 
 
 | 自訂Snapshot格式  a| 
-如果您要使用自訂格式來命名Snapshot複本名稱、請勾選此方塊並輸入名稱格式。
+如果您想要使用自訂格式來命名 Snapshot 、請勾選此方塊、然後輸入名稱格式。
 
 *** 此功能預設為停用。
-*** 預設的Snapshot複本名稱使用格式 `<ResourceGroup>_<Date-TimeStamp>`
+*** 預設的 Snapshot 名稱使用格式 `<ResourceGroup>_<Date-TimeStamp>`
 不過、您可以使用變數$Resource Group、$Policy、$HostName、$ScheduleType和$CustomText來指定自訂格式。使用自訂名稱欄位中的下拉式清單、選取您要使用的變數及其使用順序。
 如果您選取$CustomText、則名稱格式為 `<CustomName>_<Date-TimeStamp>`。在所提供的其他方塊中輸入自訂文字。
 [ 附註 ] ：
