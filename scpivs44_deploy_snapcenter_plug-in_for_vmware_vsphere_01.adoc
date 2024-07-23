@@ -55,7 +55,7 @@ NOTE: 對於IPv6 HTML Web用戶端、您必須使用Chrome或Firefox。
 
 NOTE: 記下您指定的使用者名稱和密碼。如果SnapCenter 您想稍後修改VMware vSphere的VMware vSphere組態、則需要使用這些認證。
 
-在*設定網路內容*中、輸入網路資訊。在*設定日期與時間*中、選取vCenter所在的時區。
+在 * 設定網路內容 * 區段中、輸入網路資訊。在 * 設定日期和時間 * 區段中、選取 vCenter 所在的時區。
 
 
 
@@ -65,15 +65,15 @@ NOTE: 記下您指定的使用者名稱和密碼。如果SnapCenter 您想稍後
 
 NOTE: 所有主機都必須設定IP位址（不支援FQDN主機名稱）。部署作業不會在部署之前驗證您的輸入。
 
-. 瀏覽至SnapCenter 部署VMware vSphere的VMware vSphere的VMware vCenter外掛程式所在的VM、然後按一下* Summary（摘要）*索引標籤、再按一下* Power On*（開機）方塊以啟動SnapCenter VMware的VMware插件。
-. 當VMware插件正在開機時SnapCenter 、在已部署SnapCenter 的VMware版插件上按一下滑鼠右鍵、選取* Guest OS*、然後按一下*「Install VMware tools*（安裝VMware工具*）」。
+. 瀏覽至部署 SnapCenter Plug-in for VMware vSphere 的虛擬機器、然後按一下 * Summary （摘要） * 索引標籤、再按一下 * Power On* （ * 開機）方塊以啟動 SnapCenter Plug-in for VMware vSphere 。
+. 當 SnapCenter Plug-in for VMware vSphere 開機時、以滑鼠右鍵按一下部署的 SnapCenter Plug-in for VMware vSphere 、選取 * 來賓作業系統 * 、然後按一下 * 安裝 VMware 工具 * 。
 +
-部署可能需要幾分鐘的時間才能完成。當啟用VMware vCenter外掛程式、安裝VMware工具、螢幕會提示您登入VMware的更新程式時、就會顯示部署成功的訊息SnapCenter 。SnapCenter
+部署可能需要幾分鐘的時間才能完成。SnapCenter Plug-in for VMware vSphere 開機、 VMware 工具安裝完成、畫面會提示您登入適用於 VMware vSphere 的 SnapCenter 外掛程式、表示部署成功。
 
 +
-螢幕會顯示SnapCenter 部署VMware vCenter外掛程式的IP位址。記下IP位址。如果您想要變更VMware插件組態、則必須登入SnapCenter VMware的更新程式管理GUI SnapCenter 。
+畫面會顯示部署 SnapCenter Plug-in for VMware vSphere 的 IP 位址。記下IP位址。如果您想要變更 SnapCenter Plug-in for VMware vSphere 組態、則需要登入 SnapCenter Plug-in for VMware vSphere 管理 GUI 。
 
-. 使用部署畫面上顯示的IP位址、使用部署精靈中提供的認證登入SnapCenter VMware更新程式管理GUI、然後在儀表板上確認SnapCenter VMware更新程式已成功連線至vCenter並已啟用。
+. 使用部署精靈中提供的認證、使用部署畫面上顯示的 IP 位址登入 SnapCenter Plug-in for VMware vSphere 管理 GUI 、然後在儀表板上確認 SnapCenter Plug-in for VMware vSphere 已成功連線至 vCenter 並已啟用。
 +
 使用格式 `\https://<appliance-IP-address>:8080` 存取管理GUI。
 

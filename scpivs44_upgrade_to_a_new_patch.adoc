@@ -19,7 +19,7 @@ summary: 如果您要升級至同一版本的新修補程式、則必須清除Sn
 如果外掛程式快取未清除、則在下列情況下、儀表板和工作監控器不會顯示最近的工作：
 
 * VMware vSphere的VMware vSphere外掛程式是使用vCenter部署、之後再升級至同一版本的修補程式。SnapCenter
-* VMware的VMware虛擬應用裝置已部署在vCenter 1中。SnapCenter稍後、此SnapCenter VMware vCenter外掛程式已註冊至新的vCenter2。使用修補程式建立一個全新的VMware版插件執行個體、SnapCenter 並將其登錄至vCenter1。不過、由於vCenter1仍有第一個SnapCenter 不含修補程式的VMware插件中的快取外掛程式、因此需要清除快取。
+* VMware的VMware虛擬應用裝置已部署在vCenter 1中。SnapCenter之後、這款適用於 VMware vSphere 的 SnapCenter 外掛程式已註冊至新的 vCenter2 。SnapCenter Plug-in for VMware vSphere 的新執行個體是使用修補程式建立、並註冊至 vCenter1 。不過、由於 vCenter1 仍有第一個 SnapCenter Plug-in for VMware vSphere 的快取外掛程式、而沒有該修補程式、因此需要清除快取。
 
 
 
@@ -31,10 +31,10 @@ summary: 如果您要升級至同一版本的新修補程式、則必須清除Sn
 每個版本的資料夾名稱都會變更。
 
 +
-請參閱VMware文件、瞭解您作業系統的「vSphere-client-sonvity」資料夾位置。
+請參閱 VMware 說明文件、以瞭解作業系統的資料夾位置 `vsphere-client-serenity` 。
 
 . 重新啟動vCenter Server。
 +
-然後您可以升級SnapCenter VMware的VMware插件。
+接著即可升級適用於 VMware vSphere 的 SnapCenter 外掛程式。
 
 

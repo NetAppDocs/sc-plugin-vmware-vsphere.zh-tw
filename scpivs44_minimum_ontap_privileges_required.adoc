@@ -28,10 +28,7 @@ NOTE: 從 SnapCenter Plug-in for VMware （ SCV ） 5.0 開始、您需要將 HT
 |===
 
 
-| All Access命令：ONTAP 要求具備最低權限才能執行功能的版本 
-
-
-| 叢集身分識別顯示 
+| All Access 命令： ONTAP 8.3 及更新版本所需的最低權限。 
 
 
 | 事件generate-autosup-log 
@@ -79,13 +76,13 @@ Volume Snapshot顯示
 Volume卸載 
 
 
-| Vserver CIFS Vserver CIFS共用建立Vserver CIFS共用刪除Vserver CIFS ShadowCopy顯示Vserver CIFS共用顯示Vserver CIFS顯示vserver顯示vserver輸出原則vserver輸出原則建立vserver匯出原則刪除vserver匯出原則規則建立vserver匯出原則規則顯示vserver匯出原則顯示vserver iSCSI Vserver iSCSI連線顯示vserver顯示網路介面 網路介面容錯移轉群組網路介面顯示 
+| vserver CIFS vserver CIFS 共用建立 vserver CIFS 共用刪除 vserver CIFS ShadowCopy show vserver CIFS 共用 show vserver CIFS show vserver CIFS show vserver 輸出原則 vserver 輸出原則建立 vserver 輸出原則刪除 vserver 輸出原則規則建立 vserver 輸出原則規則 show vserver 輸出原則 show vserver iSCSI vserver iSCSI 連線 show vserver NVMe 控制器子系統 Vserver NVMe 子系統控制器 show vserver NVMe subsystem map vserver NVMe subsystem map show vserver NVMe subsystem map add vserver NVMe subsystem map remove vserver NVMe subsystem host show vserver NVMe subsystem host add vserver NVMe subsystem host remove vserver NVMe subsystem show vserver NVMe subsystem delete vserver NVMe namespace 顯示網路介面網路介面容錯移轉群組 
 |===
 |===
 | 唯讀命令：ONTAP 要求具備最低權限才能執行更新版本的功能 
 
 
-| Vserver Vserver對等端點 
+| 叢集識別顯示網路介面顯示 vserver vserver 對等 vserver show 
 |===
 
 NOTE: 您可以忽略有關不支援的 vserver 命令的警告訊息。
@@ -103,14 +100,15 @@ NOTE: 您可以忽略有關不支援的 vserver 命令的警告訊息。
 您必須以「vsadmin」身分登入、或以具有上表所列最低權限的角色登入。
 
 * 您必須是叢集管理員、才能建立及管理使用者角色。您可以將使用者與叢集儲存VM或儲存VM建立關聯。
-* 您需要 ONTAP 9.12.1 或更高版本才能使用 SnapMirror 業務連續性（ SM-BC ）功能。
+* 您需要 ONTAP 9.12.1 或更新版本才能使用 SnapMirror 主動式同步功能。
 * 若要使用防竄改快照（ TPS ）功能：
 +
 ** 您需要適用於 SAN 的 ONTAP 9.13.1 及更新版本
 ** 您需要適用於 NFS 的 ONTAP 9.12.1 及更新版本
 
 
+* 對於 NVMe over TCP 傳輸協定、您需要 ONTAP 9.10.1 及更新版本。
 
 
 
-NOTE: 對於 ONTAP 9.11.1 版及更新版本、與 ONTAP 叢集的通訊是透過 REST API 進行。ONTAP 使用者應已啟用 http 應用程式。不過、如果 ONTAP REST API 發生問題、組態金鑰「 force_ZAPI 」可協助您轉換至傳統的 ZAPI 工作流程。您可能需要使用組態 API 新增或更新此金鑰、並將其設為 true 。請參閱知識庫文章、 https://kb.netapp.com/mgmt/SnapCenter/How_to_use_RestAPI_to_edit_configuration_parameters_in_SCV["如何使用 RestAPI 編輯選擇控制閥的組態參數"]。
+NOTE: 從 ONTAP 9.11.1 版開始、與 ONTAP 叢集的通訊是透過 REST API 進行。ONTAP 使用者應已啟用 http 應用程式。不過、如果 ONTAP REST API 發生問題、組態金鑰「 force_ZAPI 」可協助您轉換至傳統的 ZAPI 工作流程。您可能需要使用組態 API 新增或更新此金鑰、並將其設為 true 。如需詳細資訊、請參閱知識庫文章 https://kb.netapp.com/mgmt/SnapCenter/How_to_use_RestAPI_to_edit_configuration_parameters_in_SCV["如何使用 RestAPI 編輯選擇控制閥的組態參數"] 。

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_overview_of_different_snapcenter_guis.html 
 keywords:  
-summary: VMware vSphere的VMware vCenter外掛程式是獨立外掛程式、與其他的VMware vSphere外掛程式不同。SnapCenter SnapCenter您必須在vCenter中使用VMware vSphere用戶端GUI、才能執行VM、VMDK及資料存放區的所有備份與還原作業。 
+summary: SnapCenter Plug-in for VMware vSphere 是獨立式外掛程式、與其他 SnapCenter 外掛程式不同。您必須在vCenter中使用VMware vSphere用戶端GUI、才能執行VM、VMDK及資料存放區的所有備份與還原作業。 
 ---
 = 不同SnapCenter 的圖形介面總覽
 :hardbreaks:
@@ -16,11 +16,11 @@ summary: VMware vSphere的VMware vCenter外掛程式是獨立外掛程式、與�
 [role="lead"]
 在您的需求環境中、您必須使用適當的GUI來執行資料保護和管理作業。SnapCenter
 
-VMware vSphere的VMware vCenter外掛程式是獨立外掛程式、與其他的VMware vSphere外掛程式不同。SnapCenter SnapCenter您必須在vCenter中使用VMware vSphere用戶端GUI、才能執行VM、VMDK及資料存放區的所有備份與還原作業。您也可以使用Web用戶端GUI儀表板來監控受保護和未受保護的VM清單。對於所有其他 SnapCenter 外掛程式（以應用程式為基礎的外掛程式）作業、例如備份、還原和工作監控、您可以使用 SnapCenter GUI 。
+SnapCenter Plug-in for VMware vSphere 是獨立式外掛程式、與其他 SnapCenter 外掛程式不同。您必須在vCenter中使用VMware vSphere用戶端GUI、才能執行VM、VMDK及資料存放區的所有備份與還原作業。您也可以使用Web用戶端GUI儀表板來監控受保護和未受保護的VM清單。對於所有其他 SnapCenter 外掛程式（以應用程式為基礎的外掛程式）作業、例如備份、還原和工作監控、您可以使用 SnapCenter GUI 。
 
 若要保護VM和資料存放區、請使用VMware vSphere用戶端介面。Web 用戶端 GUI 與儲存系統上的 NetApp Snapshot 技術整合。這可讓您在數秒內備份VM和資料存放區、並還原VM、而無需讓ESXi主機離線。
 
-此外、也有管理 GUI 可在 SnapCenter VMware 外掛程式上執行管理作業。
+此外、也有管理 GUI 可在 SnapCenter Plug-in for VMware vSphere 上執行管理作業。
 
 下表顯示 SnapCenter GUI 執行的作業。
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_ontap_rbac_features_in_snapcenter.html 
 keywords:  
-summary: VMware vCenter外掛程式可搭配vCenter Server RBAC、支援以應用程式為基礎的作業所需的RBAC和VMware RBAC、以判斷特定使用者可在特定儲存系統上的物件上執行哪些支援工作。SnapCenter SnapCenter ONTAP SnapCenter 
+summary: 適用於 VMware vSphere 的 SnapCenter 外掛程式可搭配 vCenter Server RBAC 、 SnapCenter RBAC （支援應用程式型作業所需時）和 ONTAP RBAC 使用、以判斷特定使用者可在特定儲存系統上的物件上執行哪些 SnapCenter 工作。 
 ---
 = VMware vSphere的VMware vSphere的VMware外掛程式中包含的RBAC功能ONTAP SnapCenter
 :hardbreaks:
@@ -17,9 +17,9 @@ summary: VMware vCenter外掛程式可搭配vCenter Server RBAC、支援以應�
 NOTE: RBAC僅適用於不一致的VMware應用程式（透過VMDK的應用程式）工作。ONTAP SnapCenter
 
 [role="lead"]
-以角色為基礎的存取控制（RBAC）可讓您控制對特定儲存系統的存取、以及使用者可在這些儲存系統上執行的動作。ONTAPVMware vCenter外掛程式可搭配vCenter Server RBAC、支援以應用程式為基礎的作業所需的RBAC和VMware RBAC、以判斷特定使用者可在特定儲存系統上的物件上執行哪些支援工作。SnapCenter SnapCenter ONTAP SnapCenter
+以角色為基礎的存取控制（RBAC）可讓您控制對特定儲存系統的存取、以及使用者可在這些儲存系統上執行的動作。ONTAP適用於 VMware vSphere 的 SnapCenter 外掛程式可搭配 vCenter Server RBAC 、 SnapCenter RBAC （支援應用程式型作業所需時）和 ONTAP RBAC 使用、以判斷特定使用者可在特定儲存系統上的物件上執行哪些 SnapCenter 工作。
 
-使用您設定的認證資料（使用者名稱和密碼）來驗證每個儲存系統、並判斷該儲存系統可以執行哪些作業。SnapCenterVMware vCenter插件針對每個儲存系統使用一組認證資料。SnapCenter這些認證資料可決定可在該儲存系統上執行的所有工作、換句話說、認證資料僅供SnapCenter 參考、而非個別SnapCenter 的使用者。
+使用您設定的認證資料（使用者名稱和密碼）來驗證每個儲存系統、並判斷該儲存系統可以執行哪些作業。SnapCenterSnapCenter Plug-in for VMware vSphere 會針對每個儲存系統使用一組認證。這些認證資料可決定可在該儲存系統上執行的所有工作、換句話說、認證資料僅供SnapCenter 參考、而非個別SnapCenter 的使用者。
 
 支援RBAC僅適用於存取儲存系統及執行與儲存相關的功能性工作、例如備份VM。ONTAP SnapCenter如果ONTAP 您沒有適用於特定儲存系統的適當RBAC權限、就無法在該儲存系統上裝載的vSphere物件上執行任何工作。
 

@@ -26,7 +26,7 @@ summary: 如果您想在SnapCenter VMware vSphere中執行應用程式over VMDK�
 .關於這項工作
 * 您可以SnapCenter 使用VMware GUI新增「vSphere」類型的主機、以SnapCenter 使用VMware vSphere with VMware Server登錄支援VMware vSphere的插件SnapCenter 。
 +
-連接埠8144已預先定義、可在SnapCenter VMware vCenter插件內進行通訊。
+連接埠 8144 已預先定義、可在適用於 VMware vSphere 的 SnapCenter 外掛程式內進行通訊。
 
 +
 您可以在SnapCenter 同一個SnapCenter VMware vSphere上登錄多個適用於VMware vSphere的VMware vCenter Plug-in執行個體、以支援VM上的應用程式型資料保護作業。您無法在SnapCenter 多SnapCenter 個VMware伺服器上登錄相同的VMware vSphere效能支援外掛程式。
@@ -50,7 +50,7 @@ summary: 如果您想在SnapCenter VMware vSphere中執行應用程式over VMDK�
 | 主機名稱 | 驗證虛擬應用裝置的IP位址。 
 
 
-| 認證資料 | 輸入SnapCenter 部署期間所提供之VMware插件的使用者名稱和密碼。 
+| 認證資料 | 輸入部署期間提供的 SnapCenter Plug-in for VMware vSphere 使用者名稱和密碼。 
 |===
 . 按一下*提交*。
 +

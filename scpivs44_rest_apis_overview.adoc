@@ -32,7 +32,7 @@ summary: 您可以使用SnapCenter VMware vSphere REST API的VMware vCenter外�
 * VMware vSphere的REST API不支援的作業
 +
 ** 客體檔案還原
-** 安裝及組態SnapCenter VMware插件
+** SnapCenter Plug-in for VMware vSphere 的安裝與組態
 ** 指派RBAC角色或存取權給使用者
 
 

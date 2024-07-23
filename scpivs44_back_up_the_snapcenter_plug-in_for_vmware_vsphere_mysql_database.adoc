@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html 
 keywords:  
-summary: VMware的VMware版外掛程式包含MySQL資料庫（也稱為NSM資料庫）、其中包含外掛程式所執行之所有工作的中繼資料。SnapCenter您應該定期備份此儲存庫。 
+summary: SnapCenter Plug-in for VMware vSphere 包含一個 MySQL 資料庫（也稱為 NSM 資料庫）、其中包含外掛程式所執行之所有工作的中繼資料。 您應該定期備份此儲存庫。 
 ---
 = 備份SnapCenter VMware vSphere MySQL資料庫的VMware vCenter外掛程式
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: VMware的VMware版外掛程式包含MySQL資料庫（也稱為NSM資料
 
 
 [role="lead"]
-VMware的VMware版外掛程式包含MySQL資料庫（也稱為NSM資料庫）、其中包含外掛程式所執行之所有工作的中繼資料。SnapCenter您應該定期備份此儲存庫。
+SnapCenter Plug-in for VMware vSphere 包含一個 MySQL 資料庫（也稱為 NSM 資料庫）、其中包含外掛程式所執行之所有工作的中繼資料。 您應該定期備份此儲存庫。
 
 您也應該在執行移轉或升級之前、先備份儲存庫。
 
@@ -22,8 +22,8 @@ VMware的VMware版外掛程式包含MySQL資料庫（也稱為NSM資料庫）、
 當隨需備份工作已經在執行時、請勿啟動工作來備份MySQL資料庫。
 
 .步驟
-. 從VMware vSphere用戶端選取SnapCenter VMware插件所在的VM。
-. 在VM上按一下滑鼠右鍵、然後在虛擬應用裝置的* Summary（摘要）*索引標籤上、按一下* Launch Remote Console *（啟動遠端主控台*）或Launch Web Console（啟動Web主控台*）以開啟維護主控台視窗。
+. 從 VMware vSphere 用戶端、選取 SnapCenter Plug-in for VMware vSphere 所在的 VM 。
+. 在虛擬應用裝置的 * 摘要 * 索引標籤中、按一下 * 啟動遠端主控台 * 或啟動 Web 主控台 * 以開啟維護主控台視窗。
 +
 image:scpivs44_image21.png["維護主控台視窗"]
 

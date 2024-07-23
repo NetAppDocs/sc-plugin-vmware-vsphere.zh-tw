@@ -20,9 +20,9 @@ summary: 如果您使用SnapCenter VMware vSphere的VMware vCenter外掛程式�
 
 == vCenter Server RBAC
 
-此安全機制適用於SnapCenter 由VMware vCenter插件執行的所有工作、包括VM一致、VM損毀一致、SnapCenter 以及不間斷的應用程式一致（透過VMDK的應用程式）工作。此層級的RBAC會限制vSphere使用者在SnapCenter vSphere物件（例如虛擬機器（VM）和資料存放區）上執行VMware插件工作的能力。
+此安全機制適用於 SnapCenter Plug-in for VMware vSphere 所執行的所有工作、包括 VM 一致、 VM 損毀一致、以及 SnapCenter Server 應用程式一致（ VMDK 上的應用程式）工作。此層級的 RBAC 可限制 vSphere 使用者在 vSphere 物件（例如虛擬機器（ VM ）和資料存放區）上執行 SnapCenter Plug-in for VMware vSphere 工作的能力。
 
-VMware的VMware插件部署可在vCenter上建立下列角色、以利執行各項作業：SnapCenter SnapCenter
+SnapCenter Plug-in for VMware vSphere 部署會針對 vCenter 上的 SnapCenter 作業建立下列角色：
 
 "CV管理員"的"CV備份"、"CV訪客檔案還原"、"CV還原"、"CV檢視"
 

@@ -17,7 +17,8 @@ summary: 如果您想要使用Proxy VM來附加虛擬磁碟以進行客體檔案
 如果您想要使用Proxy VM來附加虛擬磁碟以進行客體檔案還原作業、則必須先設定Proxy VM、才能開始還原作業。雖然您可以隨時設定Proxy VM、但在外掛程式部署完成後、立即設定Proxy VM可能會更為方便。
 
 .步驟
-. 在VMware vSphere用戶端中、按一下*客體檔案還原*。
+. 從 vSphere 用戶端捷徑視窗中、選取外掛程式下的 * SnapCenter Plug-in for VMware vSphere * 。
+. 在左側導航欄中，選擇 * 來賓文件還原 * 。
 . 在「*以認證身分執行*」區段中、執行下列其中一項：
 +
 |===
@@ -36,7 +37,7 @@ summary: 如果您想要使用Proxy VM來附加虛擬磁碟以進行客體檔案
 
 |===
 +
-VMware vCenter插件使用選定的憑證登錄到選定的代理VM。SnapCenter
+適用於 VMware vSphere 的 SnapCenter 外掛程式會使用選取的認證來登入選取的 Proxy VM 。
 
 +
 「執行身分」認證必須是Windows或內建本機系統管理員所提供的預設網域管理員。工作群組使用者可以使用內建的本機系統管理員帳戶。
@@ -46,4 +47,4 @@ VMware vCenter插件使用選定的憑證登錄到選定的代理VM。SnapCenter
 
 
 
-NOTE: 您必須先從 SnapCenter Plug-in for VMware vSphere UI 中刪除 Proxy VM 、才能從 ESXi 中刪除它。
+NOTE: 您必須先從 SnapCenter Plug-in for VMware vSphere UI 刪除 Proxy VM 、才能從 ESXi 主機刪除。

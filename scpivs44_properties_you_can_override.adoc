@@ -52,21 +52,21 @@ summary: 您可以使用「shCBR.override」組態檔中列出的內容來變更
 
 * * guestFileRestore.monitorInterval=30*
 +
-指定SnapCenter VMware vCenter外掛程式監控過期客體檔案還原工作階段的時間間隔（以分鐘為單位）。在設定的工作階段時間之後執行的任何工作階段都會中斷連線。
+指定 SnapCenter Plug-in for VMware vSphere 監控已過期來賓檔案還原工作階段的時間間隔（以分鐘為單位）。在設定的工作階段時間之後執行的任何工作階段都會中斷連線。
 
 +
 預設值為「30」。
 
 * * guestFileRestore.one.disk.timeout=100*
 +
-指定SnapCenter VMware程式在客體VM上等待線上磁碟作業完成的時間（以秒為單位）。請注意、在外掛程式輪詢以完成線上磁碟作業之前、還有30秒的等待時間。
+指定 SnapCenter Plug-in for VMware vSphere 等待來賓 VM 上的線上磁碟作業完成的時間（以秒為單位）。請注意、在外掛程式輪詢以完成線上磁碟作業之前、還有30秒的等待時間。
 
 +
 預設值為「100」。
 
 * * guestFileRestore.fest.file.timeout=3600*
 +
-指定SnapCenter VMware程式在客體VM上等待還原檔案作業完成的時間（以秒為單位）。如果超過時間、程序就會結束、工作就會標示為失敗。
+指定 SnapCenter Plug-in for VMware vSphere 等待來賓 VM 上還原檔案作業完成的時間（以秒為單位）。如果超過時間、程序就會結束、工作就會標示為失敗。
 
 +
 預設值為「3、600」（1小時）。
@@ -113,7 +113,7 @@ summary: 您可以使用「shCBR.override」組態檔中列出的內容來變更
 
 * * include.esx.initiator.id.from.cluster=true*
 +
-指定SnapCenter 從叢集內的所有ESXi主機透過VMDK工作流程、將iSCSI和FCP啟動器ID納入應用程式中。
+指定 VMware vSphere 的 SnapCenter 外掛程式應在 VMDK 工作流程中、包含叢集中所有 ESXi 主機的 iSCSI 和 FCP 啟動器 ID 。
 
 +
 預設值為「假」。
@@ -124,18 +124,18 @@ summary: 您可以使用「shCBR.override」組態檔中列出的內容來變更
 
 * *最大並行.ds.storage。query.count=15*
 +
-指定SnapCenter VMware vCenter插件可對SnapCenter VMware支援的最大並行通話數、以探索資料存放區的儲存佔用空間。外掛程式會在SnapCenter 您重新啟動VMware Plug-in VM主機上的Linux服務時發出這些呼叫。
+指定 SnapCenter Plug-in for VMware vSphere 可撥打 SnapCenter 伺服器以探索資料存放區的儲存佔用空間的最大並行通話數。當您重新啟動 SnapCenter Plug-in for VMware vSphere VM 主機上的 Linux 服務時、外掛程式會撥打這些電話。
 
 * * NFs.datastore.mount.retry。count=3*
 +
-指定SnapCenter 在vCenter中、將磁碟區作為NFS資料存放區掛載的VMware插件嘗試次數上限。
+指定 SnapCenter Plug-in for VMware vSphere 嘗試在 vCenter 中將 Volume 掛載為 NFS 資料存放區的最大次數。
 
 +
 預設值為「3」。
 
 * * nfs.datastore.mount.retry.delay=60000*
 +
-以毫秒為單位、指定SnapCenter 在嘗試將Volume掛載為vCenter中的NFS資料存放區時、VMware vCenter外掛程式等待的時間。
+指定 SnapCenter Plug-in for VMware vSphere 在 vCenter 中嘗試將磁碟區掛載為 NFS 資料存放區之間等待的時間（以毫秒為單位）。
 
 +
 預設值為「60000」（60秒）。
@@ -173,17 +173,17 @@ summary: 您可以使用「shCBR.override」組態檔中列出的內容來變更
 
 * * vmware.esx.ip.kernel.ip.map*
 +
-沒有預設值。您可以使用此值將ESXi IP位址對應至VMkernel IP位址。根據預設、SnapCenter VMware的VMware vCenter外掛程式會使用ESXi主機的管理VMkernel介面卡IP位址。如果您想SnapCenter 讓VMware vCenter外掛程式使用不同的VMkernel介面卡IP位址、則必須提供置換值。
+沒有預設值。您可以使用此值將 ESXi 主機 IP 位址對應至 VMkernel IP 位址。根據預設、 SnapCenter Plug-in for VMware vSphere 會使用 ESXi 主機的管理 VMkernel 介面卡 IP 位址。如果您希望 SnapCenter Plug-in for VMware vSphere 使用不同的 VMkernel 介面卡 IP 位址、則必須提供置換值。
 
 +
-在下列範例中、管理VMkernel介面卡IP位址為10.225.10.56；不過SnapCenter 、VMware外掛程式使用的指定位址為10.225.11.57和10.225.11.58。如果管理VMkernel介面卡IP位址為10.225.10.60、則外掛程式會使用位址10.225.11.61。
+在下列範例中、管理 VMkernel 介面卡 IP 位址為 10.225.10.56 ；不過、 SnapCenter Plug-in for VMware vSphere 使用指定的位址 10.225.11.57 和 10.225.11.58 。如果管理VMkernel介面卡IP位址為10.225.10.60、則外掛程式會使用位址10.225.11.61。
 
 +
 vmware.esx.ip.kernel.ip.map=10.225.10.56:10.225.11.57,10.225.11.58; 10.225.10.60：10.225.11.61
 
 * * VMware.max.並行.snapshots=30*
 +
-指定SnapCenter VMware vCenter插件在伺服器上執行的並行VMware快照數量上限。
+指定 SnapCenter Plug-in for VMware vSphere 在伺服器上執行的並行 VMware 快照數量上限。
 
 +
 此數字會根據每個資料存放區進行檢查、只有在原則選取「VM一致」時才會核取。如果您執行的是損毀一致的備份、則此設定不適用。
@@ -193,7 +193,7 @@ vmware.esx.ip.kernel.ip.map=10.225.10.56:10.225.11.57,10.225.11.58; 10.225.10.60
 
 * * vmware.max.concurrent.snapshots.delete=30*
 +
-指定SnapCenter VMware伺服器上執行的每個資料存放區並行VMware Snapshot刪除作業的最大數量。
+指定 SnapCenter Plug-in for VMware vSphere 在伺服器上執行的每個資料存放區並行 VMware Snapshot 刪除作業的最大數目。
 
 +
 此數字會根據每個資料存放區來檢查。
@@ -203,56 +203,56 @@ vmware.esx.ip.kernel.ip.map=10.225.10.56:10.225.11.57,10.225.11.58; 10.225.10.60
 
 * * VMware.query.unresolved.retry .count=10*
 +
-指定SnapCenter 由於發生「...保留I/O的時間限制」錯誤、導致VMware測試外掛程式重試傳送未解決磁碟區查詢的次數上限。
+指定 SnapCenter Plug-in for VMware vSphere 因「 ... 保留 I/O 的時間限制」而重試傳送未解析磁碟區查詢的次數上限。 錯誤。
 
 +
 預設值為「10」。
 
 * * VMware.quiesce.retry .count=0*
 +
-指定SnapCenter 由於備份期間發生「...保留I/O的時間限制」錯誤、導致VMware插件重試傳送VMware快照查詢的次數上限。
+指定 SnapCenter Plug-in for VMware vSphere 因「 ... 保留 I/O 的時間限制」而重試傳送有關 VMware 快照的查詢的次數上限。 備份期間發生錯誤。
 
 +
 預設值為「0」。
 
 * * vmware.quiesce.retry.interval=5*
 +
-指定SnapCenter 在備份期間、由VMware vCenter外掛程式在傳送有關VMware Snapshot的查詢「...用於保留I/O的時間限制」錯誤之間等待的時間（以秒為單位）。
+指定 SnapCenter Plug-in for VMware vSphere 在傳送有關 VMware 快照的查詢之間等待的時間（以秒為單位）「 ... 限制 I/O 的時間限制」。 備份期間發生錯誤。
 
 +
 預設值為「5」。
 
 * * vmware.query.unresolved.retry.delay= 60000*
 +
-指定SnapCenter 由於發生「...保留I/O的時間限制」錯誤、導致VMware vCenter外掛程式在傳送未解決磁碟區的查詢之間等待的時間（以毫秒為單位）。複製VMFS資料存放區時發生此錯誤。
+指定 SnapCenter Plug-in for VMware vSphere 在傳送有關未解析磁碟區的查詢之間等待的時間量（以毫秒為單位）、因為「 ... 限制 I/O 的時間限制」。 錯誤。複製VMFS資料存放區時發生此錯誤。
 
 +
 預設值為「60000」（60秒）。
 
 * * VMware.reconfig.vm.retry .count=10*
 +
-指定SnapCenter 由於發生「...保留I/O的時間限制」錯誤、而導致VMware插件重試傳送有關重新設定VM的查詢的次數上限。
+指定 SnapCenter Plug-in for VMware vSphere 重試傳送有關重新設定虛擬機器的查詢的最大次數、因為「 ... 限制 I/O 的時間限制」。 錯誤。
 
 +
 預設值為「10」。
 
 * * vmware.reconfig.vm.retry.delay=30000*
 +
-指定SnapCenter 由於發生「...保留I/O的時間限制」錯誤、導致VMware vCenter插件在傳送有關重新設定VM的查詢之間等待的最長時間（以毫秒為單位）。
+指定 SnapCenter Plug-in for VMware vSphere 在傳送有關重新設定 VM 的查詢之間等待的最長時間（以毫秒為單位）、因為「 ... 限制 I/O 的時間限制」。 錯誤。
 
 +
 預設值為「30000」（30秒）。
 
 * * VMware.rescable.HBA重試.count=3*
 +
-指定SnapCenter 由於發生「...保留I/O的時間限制」錯誤、導致VMware vCenter外掛程式在傳送有關重新掃描主機匯流排介面卡的查詢之間等待的時間（以毫秒為單位）。
+指定 SnapCenter Plug-in for VMware vSphere 在傳送有關重新掃描主機匯流排介面卡的查詢之間等待的時間量（以毫秒為單位）、因為「 ... 限制 I/O 的時間限制」。 錯誤。
 
 +
 預設值為「3」。
 
 * * vmware.rescan.hba.retry.delay=30000*
 +
-指定SnapCenter VMware插件重新掃描主機匯流排介面卡的重試次數上限。
+指定 SnapCenter Plug-in for VMware vSphere 重新掃描主機匯流排介面卡的重試要求次數上限。
 
 +
 預設值為「30000」。

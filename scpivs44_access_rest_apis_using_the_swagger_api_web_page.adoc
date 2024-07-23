@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_access_rest_apis_using_the_swagger_api_web_page.html 
 keywords:  
-summary: REST API會透過Swagger網頁公開。您可以存取Swagger網頁、顯示SnapCenter 適用於SnapCenter VMware vSphere REST API的VMware Server或VMware vCenter外掛程式、以及手動發出API呼叫。使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式、在VM和資料存放區上執行保護作業。 
+summary: REST API會透過Swagger網頁公開。您可以存取Swagger網頁、顯示SnapCenter 適用於SnapCenter VMware vSphere REST API的VMware Server或VMware vCenter外掛程式、以及手動發出API呼叫。使用適用於 VMware vSphere REST API 的 SnapCenter 外掛程式、在 VM 和資料存放區上執行保護作業。 
 ---
 = 使用Swagger API網頁存取REST API
 :hardbreaks:
@@ -14,12 +14,12 @@ summary: REST API會透過Swagger網頁公開。您可以存取Swagger網頁、�
 
 
 [role="lead"]
-REST API會透過Swagger網頁公開。您可以存取Swagger網頁、以顯示SnapCenter 適用於SnapCenter VMware vSphere REST API的VMware Server或VMware vSphere Plug-in、以及手動發出API呼叫。使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式、在VM和資料存放區上執行作業。
+REST API會透過Swagger網頁公開。您可以存取Swagger網頁、以顯示SnapCenter 適用於SnapCenter VMware vSphere REST API的VMware Server或VMware vSphere Plug-in、以及手動發出API呼叫。使用適用於 VMware vSphere REST API 的 SnapCenter 外掛程式、在 VM 和資料存放區上執行作業。
 
 外掛程式的Swagger網頁與SnapCenter 《伺服器Swagger網頁不同。
 
 .開始之前
-對於VMware vSphere REST API的VMware vCenter外掛程式、您必須知道VMware插件的IP位址或主機名稱。SnapCenter SnapCenter
+對於 SnapCenter Plug-in for VMware vSphere REST API 、您必須知道 SnapCenter Plug-in for VMware vSphere 的 IP 位址或主機名稱。
 
 
 NOTE: 外掛程式僅支援REST API、以與協力廠商應用程式整合、不支援PowerShell Cmdlet或CLI。
@@ -35,10 +35,12 @@ IMPORTANT: 請勿在REST API URL中使用下列字元：+、。、%和&。
 
 +
 .範例
-存取SnapCenter VMware插件REST API：
+存取適用於 VMware vSphere REST API 的 SnapCenter 外掛程式：
 
 +
 `\https://<SCV_IP>:8144/api/swagger-ui/index.html`
+
++
 `\https://OVAhost:8144/api/swagger-ui/index.html`
 
 +

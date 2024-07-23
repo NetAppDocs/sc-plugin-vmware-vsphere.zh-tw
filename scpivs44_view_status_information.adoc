@@ -17,7 +17,8 @@ summary: 您可以在vSphere用戶端儀表板上檢視狀態資訊。狀態資�
 您可以在vSphere用戶端儀表板上檢視狀態資訊。狀態資訊每小時更新一次。
 
 .步驟
-. 在vSphere用戶端的左側導覽器窗格中、按一下*儀表板*、選取vCenter Server、然後按一下儀表板窗格中的*狀態*索引標籤。
+. 從 vCenter 用戶端捷徑頁面、選取適用於 VMware vSphere （ SCV ）的 SnapCenter 外掛程式。
+. 在選擇控制閥左側導航窗格中，選擇 *Dashboard * > *Status* 。
 . 檢視總覽狀態資訊、或按一下連結以取得更多詳細資料、如下表所列。
 +
 |===
@@ -50,7 +51,7 @@ summary: 您可以在vSphere用戶端儀表板上檢視狀態資訊。狀態資�
 ** 按一下下拉式功能表以選取* VMS*或* Datastors*。
 ** 對於次儲存設備、請選取* SnapVault 《*》*《*》或*《SnapMirror》*。
 ** 將游標停留在圖表的某個區段上、即可查看該類別中的VM或資料存放區計數。在「Successful（成功）」類別中、會針對每個資源列出最新的備份。
-** 您可以編輯組態檔來變更時間範圍。預設值為7天。如需詳細資訊、請參閱 link:scpivs44_customize_your_configuration.html["自訂您的組態"]。
+** 您可以編輯組態檔來變更時間範圍。預設值為7天。如需詳細資訊、請 link:scpivs44_customize_your_configuration.html["自訂您的組態"]參閱。
 ** 內部計數器會在每個主要或次要備份之後更新。儀表板並排顯示每六小時重新整理一次。無法變更重新整理時間。附註：如果您使用鏡射保存原則、則保護摘要的計數器會顯示在SnapVault 「圖表」中、而非SnapMirror圖表中。
 
 

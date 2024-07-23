@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_modify_the_time_zones.html 
 keywords:  
-summary: 當您為SnapCenter VMware vSphere資源群組的VMware vSphere資源群組設定備份排程時、排程會自動設定為SnapCenter 部署VMware外掛程式的時區。您可以使用SnapCenter VMware vSphere管理GUI或維護主控台的VMware vSphere支援功能、來修改該時區。 
+summary: 當您為 SnapCenter Plug-in for VMware vSphere 資源群組設定備份排程時、會自動針對部署 SnapCenter Plug-in for VMware vSphere 的時區設定排程。您可以使用SnapCenter VMware vSphere管理GUI或維護主控台的VMware vSphere支援功能、來修改該時區。 
 ---
 = 修改備份的時區
 :hardbreaks:
@@ -16,19 +16,19 @@ summary: 當您為SnapCenter VMware vSphere資源群組的VMware vSphere資源�
 :authorinitials: [
 :authors: [.lead]
 :revnumber: 
-:revdate: the schedule is automatically set for the time zone in which SnapCenter VMware plug-in is deployed. You can modify that time zone by using the SnapCenter Plug-in for VMware vSphere management GUI or maintenance console.
+:revdate: the schedule is automatically set for the time zone in which SnapCenter Plug-in for VMware vSphere is deployed. You can modify that time zone by using the SnapCenter Plug-in for VMware vSphere management GUI or maintenance console.
 
 
 .開始之前
 您必須知道SnapCenter VMware vSphere管理GUI適用的VMware vSphere Plug-in IP位址和登入認證。您也必須記下從維護主控台產生的 MFA 權杖。
 
-* 部署VMware插件時會顯示IP位址SnapCenter 。
-* 請使用SnapCenter 部署VMware vCenter外掛程式時提供的登入認證、或是稍後修改的認證。
+* 部署 SnapCenter Plug-in for VMware vSphere 時會顯示 IP 位址。
+* 使用部署 SnapCenter Plug-in for VMware vSphere 期間提供的登入認證、或是稍後修改的認證。
 * 使用維護主控台的系統組態選項、產生 6 位數的 MFA 權杖。
 
 
 .步驟
-. 登入SnapCenter VMware的VMware插件管理GUI。
+. 登入SnapCenter VMware vSphere管理GUI的VMware vCenter外掛程式。
 +
 使用格式 `\https://<appliance-IP-address>:8080`
 
@@ -39,6 +39,6 @@ image:scpivs44_image28.jpg["VMware vSphere的插件SnapCenter"]
 . 在「*設定*」頁面的「*日期與時間*」區段中、按一下「*編輯*」。
 . 選取新的時區、然後按一下*「Save（儲存）」*。
 +
-新時區將用於SnapCenter 由VMware插件執行的所有備份。
+新時區將用於 SnapCenter Plug-in for VMware vSphere 執行的所有備份。
 
 

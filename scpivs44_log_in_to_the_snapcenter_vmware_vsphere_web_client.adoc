@@ -24,7 +24,7 @@ summary: 部署VMware vSphere的VMware vSphere外掛程式時、會在vCenter上
 . 登入「* VMware vCenter單一登入*」頁面。
 +
 
-IMPORTANT: 按一下*登入*按鈕。由於已知的VMware問題、請勿使用Enter鍵登入。如需詳細資料、請參閱VMware的ESXi內嵌主機用戶端問題文件。
+IMPORTANT: 按一下*登入*按鈕。由於已知的 VMware 問題、請勿使用 Enter 鍵登入。 如需詳細資訊、請參閱 VMware ESXi 內嵌主機用戶端問題文件。
 
 . 在「* VMware vSphere用戶端*」頁面上、按一下工具列上的「功能表」、然後選取「* SnapCenter 適用於VMware vSphere的*支援外掛程式*」。
 

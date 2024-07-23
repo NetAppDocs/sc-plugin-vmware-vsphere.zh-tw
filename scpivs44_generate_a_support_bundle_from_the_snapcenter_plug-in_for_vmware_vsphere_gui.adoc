@@ -17,8 +17,8 @@ summary: 您可以從SnapCenter VMware vSphere GUI的VMware vSphere支援套件�
 [role="lead"]
 若要登入SnapCenter VMware vSphere管理GUI的VMware vCenter外掛程式、您必須知道IP位址和登入認證。您也必須記下從維護主控台產生的 MFA 權杖。
 
-* 部署VMware插件時會顯示IP位址SnapCenter 。
-* 請使用SnapCenter 部署VMware vCenter外掛程式時提供的登入認證、或是稍後修改的認證。
+* 部署 SnapCenter Plug-in for VMware vSphere 時會顯示 IP 位址。
+* 使用部署 SnapCenter Plug-in for VMware vSphere 期間提供的登入認證、或是稍後修改的認證。
 * 使用維護主控台的系統組態選項、產生 6 位數的 MFA 權杖。
 
 

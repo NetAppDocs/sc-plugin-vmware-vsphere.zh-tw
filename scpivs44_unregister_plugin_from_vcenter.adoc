@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_unregister_plugin_from_vcenter.html 
 keywords:  
-summary: 如果您在SnapCenter 連結模式的vCenter中停止使用VMware vCenter外掛程式服務、則並非所有連結的vCenter都能使用資源群組、即使SnapCenter 其他連結的vCenter正在執行VMware插件服務也一樣。您必須SnapCenter 手動取消登錄VMware的更新程式。 
+summary: 如果您在處於連結模式的 vCenter 中停止 SnapCenter Plug-in for VMware vSphere 服務、則即使 SnapCenter Plug-in for VMware vSphere 服務是在其他連結的 vCenter 中執行、資源群組也無法在所有連結的 vCenter 中使用。您必須手動取消註冊 SnapCenter Plug-in for VMware vSphere 延伸模組。 
 ---
 = 從SnapCenter vCenter取消登錄VMware vSphere的VMware vSphere外掛程式
 :hardbreaks:
@@ -14,12 +14,12 @@ summary: 如果您在SnapCenter 連結模式的vCenter中停止使用VMware vCen
 
 
 [role="lead"]
-如果您在SnapCenter 連結模式的vCenter中停止使用VMware vCenter外掛程式服務、則並非所有連結的vCenter都能使用資源群組、即使SnapCenter 其他連結的vCenter正在執行VMware插件服務也一樣。
+如果您在處於連結模式的 vCenter 中停止 SnapCenter Plug-in for VMware vSphere 服務、則即使 SnapCenter Plug-in for VMware vSphere 服務是在其他連結的 vCenter 中執行、資源群組也無法在所有連結的 vCenter 中使用。
 
-您必須SnapCenter 手動取消登錄VMware的更新程式。
+您必須手動取消註冊 SnapCenter Plug-in for VMware vSphere 延伸模組。
 
 .步驟
-. 在連結的vCenter SnapCenter 上停止使用VMware插件服務、請瀏覽至「受管理物件參考（MOB）」管理程式。
+. 在已停止 SnapCenter Plug-in for VMware vSphere 服務的連結 vCenter 上、瀏覽至託管物件參考（ MOB ）管理程式。
 . 在「內容」選項的「值」欄中選取「*內容*」、然後在下一個畫面中選取「值」欄中的「*擴充管理程式*」、以顯示已登錄的副檔名清單。
 . 取消登錄副檔名 `com.netapp.scv.client` 和 `com.netapp.aegis`。
 

@@ -43,7 +43,7 @@ summary:
 
 * 移轉Cmdlet程序
 +
-您必須針對SnapCenter 以SnapCenter VMware登錄的每個VMware外掛程式執行個體、使用Windows PowerShell指令程式「Invoke（叫用）SCVOVAMigration（叫用SCVOVAMigration）」。
+您必須針對在 SnapCenter 註冊的 SnapCenter Plug-in for VMware vSphere 每個執行個體使用 Windows PowerShell Cmdlet `invoke-SCVOVAMigration` 。
 
 +
 Cmdlet會執行下列動作：
@@ -54,15 +54,15 @@ Cmdlet會執行下列動作：
 ** 建立移轉後備份的備份排程。
 ** 從SnapCenter Windows主機卸載現有的VMware vSphere版的VMware vCenter外掛程式。
 +
-如果SnapCenter 將VMware vCenter插件安裝在SnapCenter VMware vCenter伺服器主機上、且已針對SnapCenter 該系統資訊庫設定保護功能、則移轉程序也會卸載Windows型外掛套件、其中包含SnapCenter 適用於VMware vSphere的VMware vCenter外掛程式和SnapCenter 適用於Windows的VMware Infrastructure外掛程式、 然後重新安裝SnapCenter 最新版本的Windows版支援儲存庫保護。在VMware GUI中的主機類型SnapCenter 從「vSphere」變更為「Windows」。
+如果 SnapCenter Plug-in for VMware vSphere 安裝在 SnapCenter Server 主機上、且已針對 SnapCenter 儲存庫設定保護、則移轉程序也會解除安裝 Windows 外掛程式套件、其中包含適用於 VMware vSphere 的 SnapCenter 外掛程式和適用於 Windows 的 SnapCenter 外掛程式、 然後重新安裝適用於 Windows 的最新版 SnapCenter 外掛程式、以支援儲存庫保護。在VMware GUI中的主機類型SnapCenter 從「vSphere」變更為「Windows」。
 
 ** 從Windows SnapCenter 效能更新伺服器移除vSphere主機和資源群組。
-** 在Linux型SnapCenter 的VMware vCenter外掛程式上啟動備份工作。
-** 登錄vSphere主機以取得SnapCenter VMware的支援功能、以SnapCenter 支援以應用程式為基礎的虛擬化資料庫和檔案系統備份（透過VMDK備份的應用程式）。
+** 在適用於 VMware vSphere 的 Linux SnapCenter 外掛程式上啟動備份工作。
+** 向 SnapCenter 註冊 SnapCenter Plug-in for VMware vSphere 主機、以支援虛擬化資料庫和檔案系統（透過 VMDK 備份的應用程式）的應用程式型備份。
 
 
 * 中繼資料的儲存位置
 +
-應用程式型VMDK備份的中繼資料儲存在SnapCenter VMware Server儲存庫中。VM和資料存放區備份的中繼資料儲存在SnapCenter VMware的VMware插件MySQL儲存庫中。
+應用程式型VMDK備份的中繼資料儲存在SnapCenter VMware Server儲存庫中。VM 和資料存放區備份的中繼資料會儲存在適用於 VMware vSphere MySQL 儲存庫的 SnapCenter 外掛程式中。
 
 

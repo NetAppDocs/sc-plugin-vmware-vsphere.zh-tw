@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_enable_ssh.html 
 keywords:  
-summary: 部署VMware vCenter外掛程式時SnapCenter 、SSH預設為停用。 
+summary: 部署 SnapCenter Plug-in for VMware vSphere 時、預設會停用 SSH 。 
 ---
 = 啟用適用於SnapCenter VMware vSphere的SSH for VMware Plug-in
 :hardbreaks:
@@ -14,13 +14,13 @@ summary: 部署VMware vCenter外掛程式時SnapCenter 、SSH預設為停用。
 
 
 [role="lead"]
-部署VMware vCenter外掛程式時SnapCenter 、SSH預設為停用。
+部署 SnapCenter Plug-in for VMware vSphere 時、預設會停用 SSH 。
 
 .步驟
-. 從VMware vSphere用戶端選取SnapCenter VMware插件所在的VM。
-. 在VM上按一下滑鼠右鍵、然後在虛擬應用裝置的* Summary（摘要）*索引標籤上、按一下* Launch Remote Console（啟動遠端主控台）以開啟維護主控台視窗、然後登入。
+. 從 VMware vSphere 用戶端、選取 SnapCenter Plug-in for VMware vSphere 所在的 VM 。
+. 在虛擬應用裝置的 * 摘要 * 索引標籤中、按一下 * 啟動遠端主控台 * 以開啟維護主控台視窗、然後登入。
 +
-如需存取及登入維護主控台的相關資訊、請參閱 link:scpivs44_access_the_maintenance_console.html["存取維護主控台"^]。
+如需存取及登入維護主控台的相關資訊、請 link:scpivs44_access_the_maintenance_console.html["存取維護主控台"^]參閱。
 
 +
 image:scpivs44_image11.png["維護主控台視窗"]
