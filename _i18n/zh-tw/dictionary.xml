@@ -414,14 +414,11 @@
   <block id="ad9a47e46e4ad7c3e60285f394572957" category="section-title">刪除資源群組</block>
   <block id="16b1a35ba7401a13d918126c70a9b4e4" category="paragraph">如果不再需要保護資源群組中的資源、您可以在vCenter中刪除資源群組。從SnapCenter vCenter移除VMware vSphere的VMware vCenter外掛程式之前、您必須確保所有資源群組都已刪除。</block>
   <block id="689c8a8dce8d8ad4077d2a59cced9fda" category="list-text">在*刪除資源群組*確認方塊中、按一下*確定*以確認。</block>
-  <block id="fc5672573975422a722953bf5496e5ad" category="section-title">在Linux vCenter中重新啟動Web用戶端服務</block>
-  <block id="df005eed1212d84ddce99431a04fc779" category="paragraph">您必須執行vCenter 6.5或更新版本。</block>
   <block id="d9ac8e6076d4e4d7529e26c9238771a4" category="list-text">使用SSH以root身分登入vCenter Server Appliance。</block>
   <block id="263de88bd463a408f8eabe4c8a4ace37" category="list-text">使用下列命令存取應用裝置Shell或Bash Shell：</block>
   <block id="ad288d5d0843f98ebb574a6ae9d65a4e" category="paragraph">"死了"</block>
   <block id="76acab39397c08b9a6f90dc3612ad3b4" category="list-text">使用下列HTML5命令停止Web用戶端服務：</block>
   <block id="fe179a5e6c3cce08786099d7d4f4c814" category="paragraph">「服務控制-停止vSphere-UI」</block>
-  <block id="4c09019cb803ffc62d7d0666df0def34" category="list-text">使用下列HTML5命令、刪除vCenter上的所有過時scvm套件：</block>
   <block id="1ee241c7544c04de9f1ca46058beb4cb" category="list-text">使用下列HTML5命令啟動Web用戶端服務：</block>
   <block id="6b76a32b7668e5fed9b8e910943fdee7" category="paragraph">「服務控制-啟動vSphere-UI」</block>
   <block id="a64ef3b979aadef85700d66ece128c3c" category="summary">您可以修改SnapCenter VMware vSphere管理GUI適用的VMware vSphere Plug-in登入認證。</block>
@@ -1416,7 +1413,6 @@
   <block id="ca1e84c5fdfae2e245ce6dbdbd1c628f" category="paragraph">如果您修改的儲存VM是自動新增為叢集的一部分（有時稱為隱含式儲存VM）、則該儲存VM會變更為明確的儲存VM、而且可以在不變更該叢集中其餘儲存VM的情況下個別刪除。在「Storage Systems」（儲存系統）頁面上、當驗證方法透過憑證時、使用者名稱會顯示為N/A；使用者名稱只會顯示在叢集清單中的明確儲存VM、並將「ExploricitSVM」旗標設為true。所有儲存VM都會列在相關的叢集下方。</block>
   <block id="bebc6d6c31f801875b9e77f07bdb01e7" category="paragraph">您可以使用VMware vSphere用戶端、從vCenter的詳細目錄中移除儲存VM。</block>
   <block id="47407cf5b03fece3c5c171eab2b9b01a" category="inline-link-macro">重新啟動VMware vSphere用戶端服務</block>
-  <block id="d1bcb651c16c1e49822b4f7c61910214" category="paragraph"><block ref="882f890d3418627cf43cd6225ef7eb22" category="inline-link-macro-rx"></block>。</block>
   <block id="2d70acf0a1999b3558f2c043c08ac3b6" category="paragraph">至少所有使用者都必須能夠檢視vCenter物件。如果沒有此權限、使用者就無法存取VMware vSphere用戶端GUI。</block>
   <block id="57ece9f7f3b3d9621593aeee1cb35996" category="summary">將憑證授權單位的根和中介憑證新增至VMware vCenter、以信任憑證及其簽署的成品。</block>
   <block id="ee28a4160e701596abbbfdd58c421736" category="doc">將憑證新增至VMware憑證存放區</block>
@@ -1550,9 +1546,6 @@
   <block id="36139d788258b0f7f760e90a7e475cfb" category="list-text">必須安裝並執行VMware工具。</block>
   <block id="7a6f0192e4916d4a7238add9c2d4e982" category="paragraph">使用VMware工具提供的資訊建立與VMware來賓作業系統的連線SnapCenter 。</block>
   <block id="48e30f31b43c0ce0d7b2ae5cff7665bc" category="list-text">在VMware vSphere用戶端GUI中、按一下工具列中的*功能表*、然後執行下列其中一項：</block>
-  <block id="15522b8dcb225880b816b8456110deaf" category="summary">如果SnapCenter VMware vSphere用戶端的行為不正確、您可能需要清除瀏覽器快取。如果問題持續發生、請重新啟動VMware vSphere用戶端服務。</block>
-  <block id="bbbb4a3d88d4a0dafc319898d6206ae7" category="paragraph">如果vCenter位於Linux應用裝置上、則必須使用Linux命令重新啟動SnapCenter VMware vSphere用戶端服務。</block>
-  <block id="7f52ae2d13fc881eab436a11ad6556a4" category="paragraph"><block ref="ca3710e05c94c666b5609593ee562322" prefix="" category="inline-code"></block></block>
   <block id="36e391315954a298b55333c0f1afcc71" category="paragraph">請依照下列步驟建立資源群組。</block>
   <block id="6a03edb8ab46dff4278e3f5e0e5ebe46" category="list-text">若為VMware vCenter 7.0.3及更新版本、請依照中的步驟進行 <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"></block> 可將證書導入vCenter。</block>
   <block id="8775bf884912200ed43fd5a867b909a3" category="cell">*權限*</block>
@@ -2223,4 +2216,5 @@ Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系�
   <block id="c0407ba9e12515280efc0fea9f89e131" category="sidebar">還原備份</block>
   <block id="1fe3b3d815ea6fb48fb7d036907904e3" category="sidebar">VMware vSphere 6.0的插件SnapCenter</block>
   <block id="fd03aeb9f7de3aae10e07664eb1cd6c6" category="sidebar">從適用於 VMware vSphere GUI 的 SnapCenter 外掛程式產生支援套件</block>
+  <block id="b02541bab3f320c7517f41f638f6ef31" category="paragraph"><block ref="6f48ea8f284b5f5f2ad46612a3e37eec" category="inline-link-macro-rx"></block>。</block>
 </blocks>

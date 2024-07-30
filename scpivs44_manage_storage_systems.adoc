@@ -53,6 +53,6 @@ NOTE: 如果您使用SnapCenter 此功能、為應用程式型資料保護作業
 . 在「*儲存系統*」頁面上、選取要移除的儲存VM、然後按一下「*刪除*」。
 . 在「*移除儲存系統*」確認方塊中、勾選「*刪除儲存系統*」方塊、然後按一下「*是*」確認。* 注意： * 僅支援 ESXi 主機 7.0U1 及更新版本。
 +
-link:scpivs44_manage_the_vmware_vsphere_web_client_service.html["重新啟動VMware vSphere用戶端服務"]。
+link:scpivs44_restart_the_vmware_vsphere_web_client_service.html["重新啟動VMware vSphere用戶端服務"]。
 
 
