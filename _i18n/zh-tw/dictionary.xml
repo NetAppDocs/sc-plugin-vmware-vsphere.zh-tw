@@ -1959,7 +1959,6 @@ Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系�
   <block id="2170988af7c90eecfa54f101aa51fdea" category="list-text">SnapCenter Plug-in for VMware vSphere 是部署在 Linux VM 中的虛擬應用裝置</block>
   <block id="d43c8490fc8d00a5a9b8b5c9491f9d0c" category="paragraph">雖然虛擬應用裝置必須安裝為 Linux VM 、但適用於 VMware vSphere 的 SnapCenter 外掛程式支援 Windows 型和 Linux 型 vCenter 。支援以應用程式為基礎的外掛程式、可在Windows和Linux虛擬化應用程式上執行資料保護作業、無需使用者介入、即可原生使用此外掛程式與vCenter進行通訊。SnapCenter SnapCenter</block>
   <block id="2bb936cdd9c74df577504952ecadc5ae" category="paragraph">除了這些主要功能外、適用於 VMware vSphere 的 SnapCenter 外掛程式也支援 iSCSI 、 Fibre Channel 、 FCoE 、 NFS 3.0/4.1 、 VMFS 5.0/6.0 、 和 NVMe over TCP 。</block>
-  <block id="7ff9bb4b13e56cf051cc1303e64808b4" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="f480f082c29fcf628f934199402ad852" category="inline-link-rx"></block> （ IMT ）。</block>
   <block id="62c4e12eaf898bb7a4fa14f2be8f874b" category="paragraph">如需 NFS 通訊協定和 ESXi 主機的相關資訊、請參閱 VMware 提供的 vSphere 儲存設備文件。</block>
   <block id="a2509a0543299c76d33b0c54e8658789" category="paragraph">如需 SnapCenter 資料保護的相關資訊，請參閱中 SnapCenter 外掛程式的資料保護資訊<block ref="4be00348c5f700eec4bebc72bc1bc49c" category="inline-link-rx"></block>。</block>
   <block id="81303c47eb8370a9253bb073cb0edc5e" category="paragraph">如需有關支援的升級和移轉路徑的資訊、請參閱 <block ref="bdbfb8bb150c7bdb16e7ed7779280aad" category="inline-link-macro-rx"></block>。</block>
@@ -1993,7 +1992,6 @@ Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系�
   <block id="f1381c3464fcec41ea788ba3061a6adb" category="paragraph">若要從備份中全域排除一或多個資料存放區、您必須在組態檔的內容中指定資料存放區名稱<block ref="501d684ffe56268631cacb45d6a11474" prefix=" " category="inline-code"></block><block ref="c7d1d750bd6b50c426013a326fa505ba" prefix=" " category="inline-code"></block> 。請參閱 <block ref="85a3298a3ddc49d556dd2f507b17347f" category="inline-link-macro-rx"></block>。</block>
   <block id="5a0224c26b4097d544acbe092343725a" category="paragraph">當您在每個欄位中選取天數時、備份會在每月的第 1 天執行、之後則會在指定的每個間隔執行。例如、如果您選取*每2天*選項、則會在整個月內於第1、3、5、7等時間執行備份、無論開始日期是偶數或odd。</block>
   <block id="8d849bfecdb9ab23e919753ad2a6b109" category="paragraph">您必須填寫每個欄位。SnapCenter Plug-in for VMware vSphere 會在部署 SnapCenter Plug-in for VMware vSphere 的時區中建立排程。您可以使用SnapCenter VMware vSphere GUI的VMware vSphere GUI適用的VMware vCenter外掛程式來修改時區。</block>
-  <block id="632bb02e5d0a2f2350fb9272460b94e4" category="paragraph">適用於 VMware vSphere 的 SnapCenter 外掛程式不會針對所有 ONTAP 版本執行相容性檢查、僅適用於 ONTAP 8.2.1 版及更早版本。因此、請務必參閱<block ref="045f3ddde5c3413f11a91218d71b4b1a" category="inline-link-rx"></block> 以取得 SnapCenter 支援的最新資訊。</block>
   <block id="a5db6a98135361a01660f39f4e92797c" category="list-text">SnapCenter 中未設定偏好的 IP 位址。</block>
   <block id="eb8da80159410f82b0725426ca163dad" category="list-text">您尚未將儲存 VM （ SVM ）管理 IP 位址新增至 SnapCenter 。</block>
   <block id="ec9973f6952651f75a5f915fe16d937b" category="list-text">請確定 VM 所在的儲存系統已新增至 SnapCenter Plug-in for VMware vSphere 詳細目錄。</block>
@@ -2048,14 +2046,11 @@ Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系�
   <block id="18ddbf443f973a535ca1b5fb7410cf19" category="list-text">每個 vCenter Server 、無論是否處於連結模式、都必須與 SnapCenter Plug-in for VMware vSphere 的個別執行個體配對。</block>
   <block id="a893739e55ea1f12f5171b7f54a73977" category="list-text">SnapCenter Plug-in for VMware vSphere 的每個執行個體都必須部署為獨立的 Linux VM 。</block>
   <block id="6475183430549d8c41dcdf49b6e454d9" category="paragraph">例如、如果您想從 vCenter Server 的六個不同執行個體執行備份、則必須在六個主機上部署 SnapCenter Plug-in for VMware vSphere 、而且每個 vCenter Server 都必須與 SnapCenter Plug-in for VMware vSphere 的唯一執行個體配對。</block>
-  <block id="b53293dc1967c4f8a232c12e9b89bf9c" category="paragraph">如需支援版本的 ONTAP 工具的最新資訊、請<block ref="f480f082c29fcf628f934199402ad852" category="inline-link-rx"></block>參閱。</block>
   <block id="ce5825ca299ec1e545f124bbf257a2c7" category="list-text">SnapCenter Plug-in for VMware vSphere 由於虛擬機器在支援 Storage VMotion 方面的限制、因此對共用 PCI 或 PCIe 裝置（例如 NVIDIA Grid GPU ）的支援有限。如需詳細資訊、請參閱廠商的VMware部署指南文件。</block>
   <block id="9dda9990139fd29842c044b5c5471a76" category="list-text">如需 SnapCenter Plug-in for VMware vSphere 限制的詳細清單、請參閱 <block ref="bdbfb8bb150c7bdb16e7ed7779280aad" category="inline-link-macro-rx"></block>。</block>
   <block id="d20cc380823f43f0acf872e3020e3bd2" category="cell">7.0U1 及更高版本。</block>
   <block id="cd7d50c8df32692f671c1e63989f485a" category="cell">ESXi 伺服器</block>
   <block id="fe115ae8a7d04d4f6b25288b9c0d157b" category="cell">1.2 、 1.3 SnapCenter 伺服器會使用此功能與 SnapCenter Plug-in for VMware vSphere 進行通訊、以透過 VMDK 資料保護作業進行應用程式。</block>
-  <block id="a569487b43126a296801a18c63338706" category="cell">VMware vSphere的VMware vSphere外掛程式使用此功能來管理VVol資料存放區（VMware虛擬磁碟區）SnapCenter 。如需支援的版本、請<block ref="f480f082c29fcf628f934199402ad852" category="inline-link-rx"></block>參閱。</block>
-  <block id="ccb01c1fed73ae0745105a88f4f14dcd" category="paragraph">如需支援版本的最新資訊、請<block ref="f480f082c29fcf628f934199402ad852" category="inline-link-rx"></block>參閱。</block>
   <block id="608d0cc0a62b7ecff9cf09f3405773c5" category="section-title">NVMe over TCP 傳輸協定的需求</block>
   <block id="ec3a0c65dec1eee8127351ce116aa730" category="paragraph">NVMe over TCP 傳輸協定支援的最低軟體需求為：</block>
   <block id="128a673672e69a9c3a9a57cd50e753fd" category="list-text">vCenter vSphere 7.0U3</block>
@@ -2173,9 +2168,6 @@ Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系�
   <block id="39555852d385a77b40d2bcf7d790ab82" category="list-text">在虛擬機器上按一下滑鼠右鍵、然後選取 * 適用於 VMware vSphere 的 SnapCenter 外掛程式 * &gt; * 客體檔案還原 * 。</block>
   <block id="65895b7403885311119261f9146fcd0e" category="list-text">若要尋找您要從附加虛擬磁碟還原的檔案、請從 vSphere 用戶端捷徑視窗中選取 * SnapCenter Plug-in for VMware vSphere * 。</block>
   <block id="3384140e800c2f652b9cef13ac075fa2" category="list-text">在左側導航窗格中，選擇 * 來賓文件還原 * &gt; * 來賓配置 * 。</block>
-  <block id="44c6fb205ff700ce92d55729cd516c13" category="paragraph">如需支援版本的最新資訊、請<block ref="045f3ddde5c3413f11a91218d71b4b1a" category="inline-link-rx"></block>參閱。</block>
-  <block id="c30b54b2f0c6c2e9a103d286e7b23ce5" category="paragraph">您無法從執行Linux客體作業系統的VM還原檔案和資料夾。不過、您可以附加VMDK、然後手動還原檔案和資料夾。如需支援來賓作業系統的最新資訊、請<block ref="045f3ddde5c3413f11a91218d71b4b1a" category="inline-link-rx"></block>參閱。</block>
-  <block id="6ec40fd66ac6ea02299c4fabd83e8275" category="paragraph">您無法從執行Linux客體作業系統的VM還原檔案和資料夾。不過、您可以附加VMDK、然後手動還原檔案和資料夾。如需支援來賓作業系統的最新資訊、請<block ref="045f3ddde5c3413f11a91218d71b4b1a" category="inline-link-rx"></block>參閱。</block>
   <block id="b59c69b3461a70dfc0aa2e0732ab7524" category="list-text">連接與還原作業會使用預設的SCSI控制器來連接VMDK。不過、當備份連接至具有 NVMe 磁碟的 VM 的 VMDK 時、附加和還原作業會使用 NVMe 控制器（如果有）。</block>
   <block id="ebdc37577a43d781541f86f380fcfba9" category="list-text">在左側瀏覽器窗格中、以滑鼠右鍵按一下 VM 、然後在下拉式清單中選取 * SnapCenter Plug-in for VMware vSphere * 、然後在次要下拉式清單中選取 * 還原 * 。</block>
   <block id="0e75737369597ad96531f41e66789232" category="paragraph">您必須先使用 SnapCenter Plug-in for VMware vSphere 建立 VM 備份、才能還原 VM 。</block>
@@ -2217,4 +2209,13 @@ Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系�
   <block id="1fe3b3d815ea6fb48fb7d036907904e3" category="sidebar">VMware vSphere 6.0的插件SnapCenter</block>
   <block id="fd03aeb9f7de3aae10e07664eb1cd6c6" category="sidebar">從適用於 VMware vSphere GUI 的 SnapCenter 外掛程式產生支援套件</block>
   <block id="b02541bab3f320c7517f41f638f6ef31" category="paragraph"><block ref="6f48ea8f284b5f5f2ad46612a3e37eec" category="inline-link-macro-rx"></block>。</block>
+  <block id="a8873f8f7715ad49732b43f6bdd600b5" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="64fc8efacd4fa13b8c1907c1db527b3d" category="inline-link-rx"></block> （ IMT ）。</block>
+  <block id="20f6a12d4ccfce9e9c6f58459fac2777" category="admonition">在扇出組態中、第三站台不支援一致性群組。</block>
+  <block id="3458fc42f0b377624eb1de9c23c10655" category="paragraph">適用於 VMware vSphere 的 SnapCenter 外掛程式不會針對所有 ONTAP 版本執行相容性檢查、僅適用於 ONTAP 8.2.1 版及更早版本。因此、請務必參閱<block ref="860b18b04b199a7f740acbad2e027732" category="inline-link-rx"></block> 以取得 SnapCenter 支援的最新資訊。</block>
+  <block id="b1213a15d0ce0cefa635cb9a1238b7ad" category="paragraph">如需支援版本的 ONTAP 工具的最新資訊、請<block ref="64fc8efacd4fa13b8c1907c1db527b3d" category="inline-link-rx"></block>參閱。</block>
+  <block id="8c9e5a8991367cd2b398f6da00fcacea" category="cell">VMware vSphere的VMware vSphere外掛程式使用此功能來管理VVol資料存放區（VMware虛擬磁碟區）SnapCenter 。如需支援的版本、請<block ref="64fc8efacd4fa13b8c1907c1db527b3d" category="inline-link-rx"></block>參閱。</block>
+  <block id="14f6e09e94edb505729ffc8766177413" category="paragraph">如需支援版本的最新資訊、請<block ref="64fc8efacd4fa13b8c1907c1db527b3d" category="inline-link-rx"></block>參閱。</block>
+  <block id="9a8a39bfd809f914e270e3aa295af606" category="paragraph">如需支援版本的最新資訊、請<block ref="860b18b04b199a7f740acbad2e027732" category="inline-link-rx"></block>參閱。</block>
+  <block id="3759b6e9ee7be120a52636d5811b2cb5" category="paragraph">您無法從執行Linux客體作業系統的VM還原檔案和資料夾。不過、您可以附加VMDK、然後手動還原檔案和資料夾。如需支援來賓作業系統的最新資訊、請<block ref="860b18b04b199a7f740acbad2e027732" category="inline-link-rx"></block>參閱。</block>
+  <block id="6b98cc6c5d2c3be456270dd9cd0c49b3" category="paragraph">您無法從執行Linux客體作業系統的VM還原檔案和資料夾。不過、您可以附加VMDK、然後手動還原檔案和資料夾。如需支援來賓作業系統的最新資訊、請<block ref="860b18b04b199a7f740acbad2e027732" category="inline-link-rx"></block>參閱。</block>
 </blocks>

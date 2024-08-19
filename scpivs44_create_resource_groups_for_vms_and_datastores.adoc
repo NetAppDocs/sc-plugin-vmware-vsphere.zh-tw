@@ -261,7 +261,7 @@ NOTE: 如果備份中任何VM的靜止作業失敗、則即使所選的原則已
 4.x版支援還原8.3.1及更新版本。SnapCenter ONTAP
 
 +
-適用於 VMware vSphere 的 SnapCenter 外掛程式不會針對所有 ONTAP 版本執行相容性檢查、僅適用於 ONTAP 8.2.1 版及更早版本。因此、請務必參閱 https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["NetApp互通性對照表工具IMT （不含）"^] 以取得 SnapCenter 支援的最新資訊。
+適用於 VMware vSphere 的 SnapCenter 外掛程式不會針對所有 ONTAP 版本執行相容性檢查、僅適用於 ONTAP 8.2.1 版及更早版本。因此、請務必參閱 https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["NetApp互通性對照表工具IMT （不含）"^] 以取得 SnapCenter 支援的最新資訊。
 
 * 共享的PCI設備已連接至VM。
 * SnapCenter 中未設定偏好的 IP 位址。
