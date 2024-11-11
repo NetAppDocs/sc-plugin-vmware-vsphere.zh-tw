@@ -49,6 +49,8 @@ summary: 資源群組是您要保護的 VM 、資料存放區、 vSphere 標記�
 
 IMPORTANT: 如果您使用的是 VMware vSphere 叢集服務（ VCL ）、請勿在適用於 VMware vSphere 資源群組的 SnapCenter 外掛程式中納入由 VCL 管理的 VM 。
 
+如需詳細資訊、請參閱 https://kb.netapp.com/data-mgmt/SnapCenter/SC_KBs/SCV_unable_to_backup_vCLS_VMs_after_updating_vCenter_to_7.0.x["選擇控制閥在將 vCenter 更新至 7.1.x 後無法備份 VCL VM"]
+
 
 TIP: SnapCenter Plug-in for VMware vSphere 4.5 及更新版本支援大型 LUN 上的資料存放區、以及最高 128 TB 的檔案、磁碟區最高 300 TB 。如果您要保護大型LUN、請僅使用完整配置的LUN來避免延遲。
 
@@ -58,7 +60,7 @@ IMPORTANT: 請勿新增處於無法存取狀態的VM。雖然可以建立包含�
 .開始之前
 建立包含VVol VM的資源群組之前、必須先部署VMware的支援工具ONTAP 。
 
-如需詳細資訊、請 https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["VMware vSphere適用的工具ONTAP"^]參閱。
+如需詳細資訊，請參閱 ONTAP Tools for VMware vSphere 文件。此外，如需 ONTAP 工具支援版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 .關於這項工作
 您可以隨時從資源群組新增或移除資源。

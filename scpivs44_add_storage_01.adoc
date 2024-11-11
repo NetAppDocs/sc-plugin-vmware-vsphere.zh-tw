@@ -29,7 +29,7 @@ VMware vSphere 4.5及更新版本的支援VMware vSphere 4.5外掛程式、可�
 您必須將儲存叢集新增至適用於 VMware vSphere 的 SnapCenter 外掛程式、以及適用於 VMware vSphere 的 ONTAP 工具、才能使用 vVol DataProtection 。
 
 +
-如需詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["VMware vSphere適用的工具ONTAP"^]
+如需詳細資訊，請參閱 ONTAP Tools for VMware vSphere 文件。此外，如需 ONTAP 工具支援版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 
 

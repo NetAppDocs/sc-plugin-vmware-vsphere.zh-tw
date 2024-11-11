@@ -84,6 +84,8 @@ Volume卸載
 
 | 叢集識別顯示網路介面顯示 vserver vserver 對等 vserver show 
 |===
+建立與資料 Vserver 關聯的角色時，您可以忽略 _cluster identity show_ cluster level 命令。
+
 
 NOTE: 您可以忽略有關不支援的 vserver 命令的警告訊息。
 
