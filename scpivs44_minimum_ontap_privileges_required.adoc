@@ -109,7 +109,7 @@ NOTE: 您可以忽略有關不支援的 vserver 命令的警告訊息。
 ** 您需要適用於 NFS 的 ONTAP 9.12.1 及更新版本
 
 
-* 對於 NVMe over TCP 傳輸協定、您需要 ONTAP 9.10.1 及更新版本。
+* 對於透過 TCP 和 NVMe over FC 傳輸協定的 NVMe ，您需要有 ONTAP 9 。 10.1 及更新版本。
 
 
 

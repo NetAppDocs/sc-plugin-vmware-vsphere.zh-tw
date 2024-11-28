@@ -67,6 +67,6 @@ NOTE: vVol Container重新平衡後、您無法還原vVol VM。
 在NFS和VMFS環境中使用複製和掛載作業（而非Storage vMotion）來執行客體檔案還原作業。
 
 
-IMPORTANT: 在還原作業期間、您可能會遇到此錯誤、或 VMware vSphere 的 SnapCenter 外掛程式嘗試重新簽署複本時發生此錯誤 `Host unresolved volumes is null` `Exception while calling pre-restore on SCV….Error mounting cloned LUN as datastore…` 。由於 VMware 的限制、適用於 VMware vSphere 的 SnapCenter 外掛程式無法控制進階 ESXi 主機組態中的自動重新簽署值。對於透過 TCP 儲存的 NVMe 、選擇控制閥無法在新增子系統時動態新增控制器。您應該在掛載作業之前進行必要的對應。
+IMPORTANT: 在還原作業期間、您可能會遇到此錯誤、或 VMware vSphere 的 SnapCenter 外掛程式嘗試重新簽署複本時發生此錯誤 `Host unresolved volumes is null` `Exception while calling pre-restore on SCV….Error mounting cloned LUN as datastore…` 。由於 VMware 的限制、適用於 VMware vSphere 的 SnapCenter 外掛程式無法控制進階 ESXi 主機組態中的自動重新簽署值。對於透過 TCP 和 NVMe over FC 儲存設備的 NVMe ，選擇控制閥無法在新增子系統時動態新增控制器。您應該在掛載作業之前進行必要的對應。
 
 如需錯誤的詳細資訊、請參閱 https://kb.netapp.com/mgmt/SnapCenter/SCV_clone_or_restores_fail_with_error_'Host_Unresolved_volumes_is_null'#["知識庫文章：選擇控制閥複製或還原失敗、並顯示錯誤「主機未解析的磁碟區為 null"^] 。

@@ -128,9 +128,9 @@ summary: 在部署虛擬應用裝置之前、您應該先瞭解部署需求。
 
 
 
-==== NVMe over TCP 傳輸協定的需求
+==== 透過 TCP 和 NVMe over FC 通訊協定的 NVMe 需求
 
-NVMe over TCP 傳輸協定支援的最低軟體需求為：
+NVMe over TCP 和 NVMe over FC 傳輸協定支援的最低軟體需求為：
 
 * vCenter vSphere 7.0U3
 * ESXi 7.0U3

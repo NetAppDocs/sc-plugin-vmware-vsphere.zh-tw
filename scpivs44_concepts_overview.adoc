@@ -67,7 +67,7 @@ NFS環境中的大多數還原作業都使用原生ONTAP 的還原功能（例�
 
 
 
-除了這些主要功能外、適用於 VMware vSphere 的 SnapCenter 外掛程式也支援 iSCSI 、 Fibre Channel 、 FCoE 、 NFS 3.0/4.1 、 VMFS 5.0/6.0 、 和 NVMe over TCP 。
+除了這些主要功能外，適用於 VMware vSphere 的 SnapCenter 外掛程式也支援 iSCSI ，光纖通道， FCoE ， NFS 3.0/4.1 ， VMFS 5.0/6.0 ， NVMe over FC 和 NVMe over TCP 。
 
 如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^] （ IMT ）。
 

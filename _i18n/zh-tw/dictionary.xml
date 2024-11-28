@@ -1940,7 +1940,6 @@ Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系�
   <block id="8948a149db0e61e41cadfc936cde0889" category="paragraph">SnapCenter 原生利用適用於 VMware vSphere 的 SnapCenter 外掛程式、在 VMDK 、原始裝置對應（ RDM ）和 NFS 資料存放區上執行所有資料保護作業。部署虛擬應用裝置之後、外掛程式會處理與vCenter的所有互動。SnapCenter Plug-in for VMware vSphere 支援所有 SnapCenter 應用程式型外掛程式。</block>
   <block id="2170988af7c90eecfa54f101aa51fdea" category="list-text">SnapCenter Plug-in for VMware vSphere 是部署在 Linux VM 中的虛擬應用裝置</block>
   <block id="d43c8490fc8d00a5a9b8b5c9491f9d0c" category="paragraph">雖然虛擬應用裝置必須安裝為 Linux VM 、但適用於 VMware vSphere 的 SnapCenter 外掛程式支援 Windows 型和 Linux 型 vCenter 。支援以應用程式為基礎的外掛程式、可在Windows和Linux虛擬化應用程式上執行資料保護作業、無需使用者介入、即可原生使用此外掛程式與vCenter進行通訊。SnapCenter SnapCenter</block>
-  <block id="2bb936cdd9c74df577504952ecadc5ae" category="paragraph">除了這些主要功能外、適用於 VMware vSphere 的 SnapCenter 外掛程式也支援 iSCSI 、 Fibre Channel 、 FCoE 、 NFS 3.0/4.1 、 VMFS 5.0/6.0 、 和 NVMe over TCP 。</block>
   <block id="62c4e12eaf898bb7a4fa14f2be8f874b" category="paragraph">如需 NFS 通訊協定和 ESXi 主機的相關資訊、請參閱 VMware 提供的 vSphere 儲存設備文件。</block>
   <block id="a2509a0543299c76d33b0c54e8658789" category="paragraph">如需 SnapCenter 資料保護的相關資訊，請參閱中 SnapCenter 外掛程式的資料保護資訊<block ref="4be00348c5f700eec4bebc72bc1bc49c" category="inline-link-rx"></block>。</block>
   <block id="81303c47eb8370a9253bb073cb0edc5e" category="paragraph">如需有關支援的升級和移轉路徑的資訊、請參閱 <block ref="bdbfb8bb150c7bdb16e7ed7779280aad" category="inline-link-macro-rx"></block>。</block>
@@ -2032,8 +2031,6 @@ Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系�
   <block id="d20cc380823f43f0acf872e3020e3bd2" category="cell">7.0U1 及更高版本。</block>
   <block id="cd7d50c8df32692f671c1e63989f485a" category="cell">ESXi 伺服器</block>
   <block id="fe115ae8a7d04d4f6b25288b9c0d157b" category="cell">1.2 、 1.3 SnapCenter 伺服器會使用此功能與 SnapCenter Plug-in for VMware vSphere 進行通訊、以透過 VMDK 資料保護作業進行應用程式。</block>
-  <block id="608d0cc0a62b7ecff9cf09f3405773c5" category="section-title">NVMe over TCP 傳輸協定的需求</block>
-  <block id="ec3a0c65dec1eee8127351ce116aa730" category="paragraph">NVMe over TCP 傳輸協定支援的最低軟體需求為：</block>
   <block id="128a673672e69a9c3a9a57cd50e753fd" category="list-text">vCenter vSphere 7.0U3</block>
   <block id="83796d186e6e678e53d65b677d9068ca" category="list-text">ESXi 7.0U3</block>
   <block id="ab8296c5ef7a7b056b384680f89a9379" category="list-text">ONTAP 9.10.1.</block>
@@ -2059,7 +2056,6 @@ Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系�
   <block id="36f4df9728d59a871c1b51b43833d3b0" category="list-text">部署 SnapCenter Plug-in for VMware vSphere 時會顯示 IP 位址。</block>
   <block id="e32f94a152303c32638eabc51580f698" category="list-text">使用部署 SnapCenter Plug-in for VMware vSphere 期間提供的登入認證、或是稍後修改的認證。</block>
   <block id="9d9eeed31f8e7bbf7e9e30774035c2b8" category="paragraph">當您啟動來賓檔案還原作業時、會發生此問題、但即使 VMware 工具正在執行且來賓作業系統認證正確、附加磁碟作業仍會失敗。如果發生這種情況、會傳回下列錯誤：</block>
-  <block id="ce202327d684f714d79712b7e7d5ad13" category="admonition">在還原作業期間、您可能會遇到此錯誤、或 VMware vSphere 的 SnapCenter 外掛程式嘗試重新簽署複本時發生此錯誤<block ref="8bca5bf79dc6a0592d8b28b7fc9c19a9" prefix=" " category="inline-code"></block><block ref="9e17d1b629230b07cfa91237bf97bfc3" prefix=" " category="inline-code"></block> 。由於 VMware 的限制、適用於 VMware vSphere 的 SnapCenter 外掛程式無法控制進階 ESXi 主機組態中的自動重新簽署值。對於透過 TCP 儲存的 NVMe 、選擇控制閥無法在新增子系統時動態新增控制器。您應該在掛載作業之前進行必要的對應。</block>
   <block id="fd8f2fbe73fe09f5d08a36f7b4d3bcd1" category="paragraph">如需錯誤的詳細資訊、請參閱<block ref="1077fe6ba26e5db8ea58ede2a1d4f949" category="inline-link-rx"></block> 。</block>
   <block id="15c6e9116ba0203c55283a9a43cd1467" category="admonition">從 SnapCenter Plug-in for VMware （ SCV ） 5.0 開始、您需要將 HTTP 和 ONTAPI 類型的應用程式新增為任何具有自訂角色型存取選擇控制閥的 ONTAP 使用者的使用者登入方法。如果無法存取這些應用程式、備份將會失敗。您需要重新啟動選擇控制閥服務、以識別 ONTAP 使用者登入方法的變更。有關創建或修改登錄帳戶的信息，請參閱<block ref="8bb9441e135c29f77dfdcf6a698db847" category="inline-link-rx"></block>。</block>
   <block id="71dcfa5c5d50c9c8804dec50e025e539" category="paragraph">如果您想要搭配 SnapCenter Plug-in for VMware vSphere 使用、則必須在儲存系統上設定 ONTAP RBAC 。在這個範圍內ONTAP 、您必須執行下列工作：</block>
@@ -2092,7 +2088,6 @@ Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系�
   <block id="57442019ae8a4f358f6ca948df78b8a7" category="cell">vserver CIFS vserver CIFS 共用建立 vserver CIFS 共用刪除 vserver CIFS ShadowCopy show vserver CIFS 共用 show vserver CIFS show vserver CIFS show vserver 輸出原則 vserver 輸出原則建立 vserver 輸出原則刪除 vserver 輸出原則規則建立 vserver 輸出原則規則 show vserver 輸出原則 show vserver iSCSI vserver iSCSI 連線 show vserver NVMe 控制器子系統 Vserver NVMe 子系統控制器 show vserver NVMe subsystem map vserver NVMe subsystem map show vserver NVMe subsystem map add vserver NVMe subsystem map remove vserver NVMe subsystem host show vserver NVMe subsystem host add vserver NVMe subsystem host remove vserver NVMe subsystem show vserver NVMe subsystem delete vserver NVMe namespace 顯示網路介面網路介面容錯移轉群組</block>
   <block id="de92ae935b9e0d1f381bebce31b4ae2e" category="cell">叢集識別顯示網路介面顯示 vserver vserver 對等 vserver show</block>
   <block id="f492e93d9d3e86fc62690b1632797659" category="list-text">您需要 ONTAP 9.12.1 或更新版本才能使用 SnapMirror 主動式同步功能。</block>
-  <block id="7e5d063e76d4bd57ccc370986b9505e0" category="list-text">對於 NVMe over TCP 傳輸協定、您需要 ONTAP 9.10.1 及更新版本。</block>
   <block id="edf08e5a72e49a6f8e59f09ad7747a6b" category="admonition">從 ONTAP 9.11.1 版開始、與 ONTAP 叢集的通訊是透過 REST API 進行。ONTAP 使用者應已啟用 http 應用程式。不過、如果 ONTAP REST API 發生問題、組態金鑰「 force_ZAPI 」可協助您轉換至傳統的 ZAPI 工作流程。您可能需要使用組態 API 新增或更新此金鑰、並將其設為 true 。如需詳細資訊、請參閱知識庫文章<block ref="1c569ff15e6174002858600fc974b74f" category="inline-link-rx"></block> 。</block>
   <block id="e7ee44e196e376b7e77e5238b063c541" category="doc">從維護主控台修改 SnapCenter Plug-in for VMware vSphere 密碼</block>
   <block id="f9844e7c0ca698dc548bf5d5d3867fb2" category="summary">雖然備份在過去已成功執行、但在 SnapCenter Plug-in for VMware vSphere 必須等待儲存系統超過設定的逾時期間、備份可能會開始失敗。如果發生這種情況、您可以增加設定的逾時時間。</block>
@@ -2207,4 +2202,9 @@ Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系�
   <block id="8c2a5a560e2f4170197d66660fb8d4f9" category="paragraph">如需詳細資訊、請參閱<block ref="a5f674bd21d863d8804d3aaee35bd7df" category="inline-link-rx"></block></block>
   <block id="e6f2686f361e5123b41a78ec7cf82976" category="list-text">若要保護VVol資料存放區上的VM、您必須先部署ONTAP VMware vSphere的功能介紹工具。如需支援版本的 ONTAP 工具的最新資訊、請<block ref="64fc8efacd4fa13b8c1907c1db527b3d" category="inline-link-rx"></block>參閱。可在VMware Web用戶端上配置及配置VMware上的儲存設備ONTAP ONTAP 。</block>
   <block id="c162715bd54906edd2726c5a128225ec" category="paragraph">建立與資料 Vserver 關聯的角色時，您可以忽略 _cluster identity show_ cluster level 命令。</block>
+  <block id="ce979aca6aa053e43e8e7148e876185c" category="paragraph">除了這些主要功能外，適用於 VMware vSphere 的 SnapCenter 外掛程式也支援 iSCSI ，光纖通道， FCoE ， NFS 3.0/4.1 ， VMFS 5.0/6.0 ， NVMe over FC 和 NVMe over TCP 。</block>
+  <block id="18ba359970ff64681ed643864ce8bced" category="section-title">透過 TCP 和 NVMe over FC 通訊協定的 NVMe 需求</block>
+  <block id="00b932dfc365b7b36023fc7e5a151179" category="paragraph">NVMe over TCP 和 NVMe over FC 傳輸協定支援的最低軟體需求為：</block>
+  <block id="f6599049db87ec18cb4b8b124bbae9bb" category="admonition">在還原作業期間、您可能會遇到此錯誤、或 VMware vSphere 的 SnapCenter 外掛程式嘗試重新簽署複本時發生此錯誤<block ref="8bca5bf79dc6a0592d8b28b7fc9c19a9" prefix=" " category="inline-code"></block><block ref="9e17d1b629230b07cfa91237bf97bfc3" prefix=" " category="inline-code"></block> 。由於 VMware 的限制、適用於 VMware vSphere 的 SnapCenter 外掛程式無法控制進階 ESXi 主機組態中的自動重新簽署值。對於透過 TCP 和 NVMe over FC 儲存設備的 NVMe ，選擇控制閥無法在新增子系統時動態新增控制器。您應該在掛載作業之前進行必要的對應。</block>
+  <block id="c2ad807051aed38647dbaf48da9bc4e7" category="list-text">對於透過 TCP 和 NVMe over FC 傳輸協定的 NVMe ，您需要有 ONTAP 9 。 10.1 及更新版本。</block>
 </blocks>
