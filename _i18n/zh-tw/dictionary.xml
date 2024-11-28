@@ -2130,8 +2130,6 @@ Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系�
   <block id="2b9e23fd8fb5fef0620a58a6db51b728" category="paragraph">您應該檢閱 SnapCenter Plug-in for VMware vSphere 的功能和不支援內容的相關資訊。 <block ref="a00337a9991b14e4173adaeb83b5a3ec" category="inline-link-macro-rx"></block></block>
   <block id="79f1e63de506798ce60c620c8f028ee2" category="list-text">SnapCenter Plug-in for VMware vSphere 在容錯移轉之後、可能無法偵測到保護關係。如需詳細資訊、請參閱<block ref="99fba7c040a549996b92e8d8a4600af2" category="inline-link-rx"></block> 。</block>
   <block id="d452fe76f3c592ede8ce027419616d3a" category="paragraph">開始之前、請參閱 <block ref="a00337a9991b14e4173adaeb83b5a3ec" category="inline-link-macro-rx"></block>。</block>
-  <block id="0cb419de6360c724e26df691f8d52375" category="inline-link">SnapCenter Plug-in for VMware vSphere 6.0 版本資訊</block>
-  <block id="ef1a838b98177650f2583e0684bb4f04" category="paragraph">版本說明提供本次發行SnapCenter VMware vSphere的VMware vSphere的相關重要資訊、包括授權要求、已知問題、注意事項、限制、 以及任何文件更新或修正。如需詳細資訊、請參閱<block ref="8064e7a1b1bb715ac6ad5ebb68124ef0" category="inline-link-rx"></block></block>
   <block id="81825a917dcd9f5f496e5c2e475ea698" category="summary">如果您不再需要使用 SnapCenter 資料保護功能、則必須停用 SnapCenter Plug-in for VMware vSphere 、將其從 vCenter 解除登錄、然後從 vCenter 移除 SnapCenter Plug-in for VMware vSphere 、然後手動刪除剩餘檔案。</block>
   <block id="1c7d667e742402e56daf3c18150d0523" category="list-text">使用格式登入 SnapCenter Plug-in for VMware vSphere 管理 GUI<block ref="3dfacd84c996ac983963942e2712a0bf" prefix=" " category="inline-code"></block>。</block>
   <block id="6a491fe613035397cac20b9ae801f35f" category="list-text">在左側導覽器畫面中、以滑鼠右鍵按一下 SnapCenter Plug-in for VMware vSphere 執行個體（部署虛擬應用裝置時所使用的檔案名稱<block ref="58963a595c988dc6f693cb3238dc907a" prefix=" " category="inline-code"></block> ）、然後選取 * 從磁碟刪除 * 。</block>
@@ -2207,4 +2205,6 @@ Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系�
   <block id="00b932dfc365b7b36023fc7e5a151179" category="paragraph">NVMe over TCP 和 NVMe over FC 傳輸協定支援的最低軟體需求為：</block>
   <block id="f6599049db87ec18cb4b8b124bbae9bb" category="admonition">在還原作業期間、您可能會遇到此錯誤、或 VMware vSphere 的 SnapCenter 外掛程式嘗試重新簽署複本時發生此錯誤<block ref="8bca5bf79dc6a0592d8b28b7fc9c19a9" prefix=" " category="inline-code"></block><block ref="9e17d1b629230b07cfa91237bf97bfc3" prefix=" " category="inline-code"></block> 。由於 VMware 的限制、適用於 VMware vSphere 的 SnapCenter 外掛程式無法控制進階 ESXi 主機組態中的自動重新簽署值。對於透過 TCP 和 NVMe over FC 儲存設備的 NVMe ，選擇控制閥無法在新增子系統時動態新增控制器。您應該在掛載作業之前進行必要的對應。</block>
   <block id="c2ad807051aed38647dbaf48da9bc4e7" category="list-text">對於透過 TCP 和 NVMe over FC 傳輸協定的 NVMe ，您需要有 ONTAP 9 。 10.1 及更新版本。</block>
+  <block id="ec1055ea33266617a541d92dfa6e5b67" category="inline-link">SnapCenter Plug-in for VMware vSphere 6.0 和 6.0.1 版本資訊</block>
+  <block id="23ea4d7ccec896acdd587b616d6cc4ee" category="paragraph">版本說明提供本次發行SnapCenter VMware vSphere的VMware vSphere的相關重要資訊、包括授權要求、已知問題、注意事項、限制、 以及任何文件更新或修正。如需詳細資訊、請參閱<block ref="1433bf204e910686ea87dd6be31fd4c0" category="inline-link-rx"></block></block>
 </blocks>
