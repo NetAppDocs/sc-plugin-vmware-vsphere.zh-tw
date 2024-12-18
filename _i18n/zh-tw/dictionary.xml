@@ -2206,5 +2206,46 @@ Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系�
   <block id="f6599049db87ec18cb4b8b124bbae9bb" category="admonition">在還原作業期間、您可能會遇到此錯誤、或 VMware vSphere 的 SnapCenter 外掛程式嘗試重新簽署複本時發生此錯誤<block ref="8bca5bf79dc6a0592d8b28b7fc9c19a9" prefix=" " category="inline-code"></block><block ref="9e17d1b629230b07cfa91237bf97bfc3" prefix=" " category="inline-code"></block> 。由於 VMware 的限制、適用於 VMware vSphere 的 SnapCenter 外掛程式無法控制進階 ESXi 主機組態中的自動重新簽署值。對於透過 TCP 和 NVMe over FC 儲存設備的 NVMe ，選擇控制閥無法在新增子系統時動態新增控制器。您應該在掛載作業之前進行必要的對應。</block>
   <block id="c2ad807051aed38647dbaf48da9bc4e7" category="list-text">對於透過 TCP 和 NVMe over FC 傳輸協定的 NVMe ，您需要有 ONTAP 9 。 10.1 及更新版本。</block>
   <block id="ec1055ea33266617a541d92dfa6e5b67" category="inline-link">SnapCenter Plug-in for VMware vSphere 6.0 和 6.0.1 版本資訊</block>
-  <block id="23ea4d7ccec896acdd587b616d6cc4ee" category="paragraph">版本說明提供本次發行SnapCenter VMware vSphere的VMware vSphere的相關重要資訊、包括授權要求、已知問題、注意事項、限制、 以及任何文件更新或修正。如需詳細資訊、請參閱<block ref="1433bf204e910686ea87dd6be31fd4c0" category="inline-link-rx"></block></block>
+  <block id="2233cc73f35f4d66a36bbbeebab35281" category="doc">SnapCenter Plug-in for VMware vSphere 版本資訊</block>
+  <block id="297142e178601173053624e9ef12f108" category="paragraph">瞭解適用於 VMware vSphere 6.0.1 和 6.0 的 SnapCenter 外掛程式所提供的全新增強功能。</block>
+  <block id="3b3c714cc3d97185d38b7de5a06604eb" category="paragraph">如需已知問題，限制及修正問題的詳細資訊，請參閱<block ref="1433bf204e910686ea87dd6be31fd4c0" category="inline-link-rx"></block>。您必須使用 NetApp 帳戶登入、或建立帳戶才能存取版本資訊。</block>
+  <block id="c5dcd35af16918a17ee9c3a5c153f0af" category="inline-link">IMT</block>
+  <block id="2d15261526cfe20309636c59ec64f54e" category="paragraph">如需支援版本的最新資訊，請參閱互通性對照表工具<block ref="b3ca33d6c3d8c65c6db17cc2a6a779f0" category="inline-link-rx"></block>（ NetApp Interoperability Matrix Tool ）。</block>
+  <block id="ccbdf0b4f3977d9d972b8053561475b1" category="summary">瞭解適用於 VMware vSphere 6.0 的 SnapCenter 外掛程式所提供的新功能。</block>
+  <block id="4ab6fdda3b84dfae82088c2bc01040ec" category="doc">適用於 VMware vSphere 6.0.1 的 SnapCenter 外掛程式的新功能</block>
+  <block id="06933067aafd48425d67bcb01bba5cb6" category="cell">更新</block>
+  <block id="42740cd9317367a2589caeffd362cff0" category="inline-link">支援 NVMe over FC 傳輸協定</block>
+  <block id="50be082c76f5c49324bb5bd7608ae3b2" category="paragraph"><block ref="50be082c76f5c49324bb5bd7608ae3b2" category="inline-link-rx"></block></block>
+  <block id="5ba878c4a46b0a8571800aaa6e8445a7" category="paragraph">適用於 VMware vSphere 6.0.1 的 SnapCenter 外掛程式現在支援 VMFS 資料存放區的 NVMe over FC 傳輸協定，以最佳化效能，降低成本並確保持續效能。</block>
+  <block id="1c7703c1d060b65ce6fd3a75ba50400e" category="inline-link">將適用於 VMware vSphere 10.x 的 ONTAP 工具與 6.0.1 號選擇控制閥整合</block>
+  <block id="0d1fedc1c92b2bac1ad8d29266340940" category="paragraph"><block ref="0d1fedc1c92b2bac1ad8d29266340940" category="inline-link-rx"></block></block>
+  <block id="41d114a9720ad1ac299b2dffec2f7186" category="paragraph">適用於 VMware vSphere 10.x 的 ONTAP 工具可協助設定 VMware vSphere 虛擬 Volume 。使用此整合功能，您可以設定，備份及還原位於 NFS 型 vVols 資料存放區上的虛擬機器。</block>
+  <block id="704fc5c8ea6982e3179f495b7b832121" category="doc">適用於 VMware vSphere 6.0 的 SnapCenter 外掛程式的新功能</block>
+  <block id="05355694c1b9a07fdbe4cd953d66f950" category="inline-link">支援 NVMe over TCP 傳輸協定</block>
+  <block id="537b09dbac250171d06580c68b67b2f2" category="paragraph"><block ref="537b09dbac250171d06580c68b67b2f2" category="inline-link-rx"></block></block>
+  <block id="a629ec953583fe39117309ef9a508a81" category="paragraph">SnapCenter Plug-in for VMware vSphere 6.0 現在支援 VMFS 資料存放區的 NVMe over TCP 傳輸協定。</block>
+  <block id="ead1e4398d30de28a2a5ea2f82cb8d47" category="paragraph">您不需要任何額外的硬體來透過 TCP 傳輸協定部署 NVMe ，這讓它更簡單，更具成本效益。</block>
+  <block id="b154808e6bcc13034e613c359731ad79" category="paragraph">如同 iSCSI ，具有 NVMe over TCP 傳輸協定的 VMFS 資料存放區可以使用任何乙太網路 NIC 和交換器，並支援所有標準作業，例如備份，還原，裝載，附加和分離。</block>
+  <block id="4f53b479c6b47d73b1fdb28f399b1301" category="inline-link">支援 SnapMirror 主動式同步</block>
+  <block id="a3dde13a3e6b0437cbcc67d81b0b023f" category="paragraph"><block ref="a3dde13a3e6b0437cbcc67d81b0b023f" category="inline-link-rx"></block></block>
+  <block id="88ae2479bcea5ca16281e31626f2f8d8" category="paragraph">您現在可以使用 SnapCenter Plug-in for VMware vSphere 來設定 SnapMirror 主動式同步功能，例如零恢復點目標（ RPO ），恢復時間目標（ RTO ）和透明應用程式容錯移轉。</block>
+  <block id="6884e6f09d7d01f963a72f6d4b4dee73" category="paragraph">SnapMirror 作用中同步僅支援 VMFS 資料存放區。</block>
+  <block id="ee8f5755a6e1671a63e8da1209dc860f" category="paragraph">您可以升級至的 SnapCenter Plug-in for VMware vSphere （ SCV ）版本，取決於您目前執行的版本。</block>
+  <block id="4181b34482469dce169449ef3b643b27" category="paragraph">只有 VMware vCenter Server 7 更新版本 1 及更新版本支援升級至 SnapCenter Plug-in for VMware vSphere （ SCV ） 4.8 及更新版本。對於版本 7 更新 1 之前的 VMware vCenter 伺服器，您應該繼續使用 4.7 號選擇控制閥。</block>
+  <block id="e369a7ee41a72fa8a44419a1129cc575" category="cell">如果您使用的是選擇控制閥版本…</block>
+  <block id="189db0c09008fdcd0e2cc9be6b313231" category="cell">您可以直接將選擇控制閥升級到…</block>
+  <block id="1ad22725dc59b3f21bd032fe84861bc1" category="paragraph">SCV 6.0</block>
+  <block id="f4448feccabcefa77ecd89689a4f8422" category="paragraph">5 號選擇控制閥和 6 號選擇控制閥</block>
+  <block id="f7223e4d64308089fc60a4ed6aef55f1" category="paragraph">4.9 號選擇控制閥和 5.0 號選擇控制閥</block>
+  <block id="b29558d756ecb0469c1e18fb8ffb2428" category="paragraph">4.8 號和 4.9 號選擇控制閥</block>
+  <block id="36112713b4999c5619fad06e104ac585" category="paragraph">對於與 SnapCenter 整合的虛擬化資料庫和檔案系統，這是升級途徑：</block>
+  <block id="a8167c30d181002ec48569e2d6c3ceb1" category="cell">如果您使用</block>
+  <block id="204326f9ae1f832298654cd349f16dcc" category="cell">如果您的 VMware 外掛程式是…</block>
+  <block id="d63b9d0523105aa499fd355a5431da08" category="cell">您可以直接升級至…</block>
+  <block id="13c1ef900fc885a20b94324d41ba496e" category="paragraph">SnapCenter 6.0</block>
+  <block id="8e07dd0a7cef005f474929f3ccd8ab15" category="paragraph">SnapCenter 5.0</block>
+  <block id="07d190428eb856174f602dfb1555b388" category="paragraph">SnapCenter 4.9</block>
+  <block id="7e35de6c484fe702e7c4fe21538ac2a4" category="paragraph">SnapCenter 4.8</block>
+  <block id="9fb9e3e27a3792a16059036c9b877598" category="sidebar">適用於 VMware vSphere 6.0.1 的 SnapCenter 外掛程式的新功能</block>
+  <block id="43e9871fb2ac1e50ad02c9c15dce6a93" category="sidebar">適用於 VMware vSphere 6.0 的 SnapCenter 外掛程式的新功能</block>
 </blocks>

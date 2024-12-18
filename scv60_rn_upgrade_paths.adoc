@@ -1,0 +1,92 @@
+---
+permalink: scv60_rn_upgrade_paths.html 
+sidebar: sidebar 
+keywords: upgrade paths, scv, 6.0, 6.0.1 
+summary: 瞭解適用於 VMware vSphere 6.0 的 SnapCenter 外掛程式所提供的新功能。 
+---
+= 升級途徑
+:allow-uri-read: 
+
+
+[role="lead"]
+您可以升級至的 SnapCenter Plug-in for VMware vSphere （ SCV ）版本，取決於您目前執行的版本。
+
+[NOTE]
+====
+只有 VMware vCenter Server 7 更新版本 1 及更新版本支援升級至 SnapCenter Plug-in for VMware vSphere （ SCV ） 4.8 及更新版本。對於版本 7 更新 1 之前的 VMware vCenter 伺服器，您應該繼續使用 4.7 號選擇控制閥。
+
+====
+[cols="50%,50%"]
+|===
+| 如果您使用的是選擇控制閥版本… | 您可以直接將選擇控制閥升級到… 
+
+
+ a| 
+SCV 5.0
+ a| 
+SCV 6.0
+
+
+
+ a| 
+4.9 號選擇控制閥
+ a| 
+5 號選擇控制閥和 6 號選擇控制閥
+
+
+
+ a| 
+4 ． 8 號選擇控制閥
+ a| 
+4.9 號選擇控制閥和 5.0 號選擇控制閥
+
+
+
+ a| 
+4 ． 7 號選擇控制閥
+ a| 
+4.8 號和 4.9 號選擇控制閥
+
+|===
+對於與 SnapCenter 整合的虛擬化資料庫和檔案系統，這是升級途徑：
+
+[cols="30%,30%,40%"]
+|===
+| 如果您使用 | 如果您的 VMware 外掛程式是… | 您可以直接升級至… 
+
+
+ a| 
+SnapCenter 6.0
+ a| 
+SCV 5.0
+ a| 
+SCV 6.0
+
+
+
+ a| 
+SnapCenter 5.0
+ a| 
+4.9 號選擇控制閥
+ a| 
+SCV 5.0
+
+
+
+ a| 
+SnapCenter 4.9
+ a| 
+4 ． 8 號選擇控制閥
+ a| 
+4.9 號選擇控制閥
+
+
+
+ a| 
+SnapCenter 4.8
+ a| 
+4 ． 7 號選擇控制閥
+ a| 
+4 ． 8 號選擇控制閥
+
+|===
