@@ -23,6 +23,6 @@ https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_concepts_overvie
  a| 
 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_concepts_overview.html["將適用於 VMware vSphere 10.x 的 ONTAP 工具與 6.0.1 號選擇控制閥整合"]
  a| 
-適用於 VMware vSphere 10.x 的 ONTAP 工具可協助設定 VMware vSphere 虛擬 Volume 。使用此整合功能，您可以設定，備份及還原位於 NFS 型 vVols 資料存放區上的虛擬機器。
+適用於 VMware vSphere 10.x 的 ONTAP 工具可協助設定 VMware vSphere 虛擬 Volume 。透過這項整合，您可以設定，備份及還原位於 NFS 型 vVols 資料存放區上的虛擬機器。
 
 |===

@@ -27,7 +27,7 @@ SnapCenter Plug-in for VMware vSphere 6.0 現在支援 VMFS 資料存放區的 N
  a| 
 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_create_backup_policies_for_vms_and_datastores.html["支援 SnapMirror 主動式同步"]
  a| 
-您現在可以使用 SnapCenter Plug-in for VMware vSphere 來設定 SnapMirror 主動式同步功能，例如零恢復點目標（ RPO ），恢復時間目標（ RTO ）和透明應用程式容錯移轉。
+您現在可以使用 SnapCenter Plug-in for VMware vSphere 來設定 SnapMirror 主動式同步功能，例如零恢復點目標（ RPO ），恢復時間目標（ RTO ）和透明的應用程式容錯移轉。
 
 SnapMirror 作用中同步僅支援 VMFS 資料存放區。
 
