@@ -22,6 +22,9 @@ summary: 您可以重新命名及刪除SnapCenter VMware vSphere的VMware vSpher
 
 如果您想要提供更好的名稱來改善搜尋能力、可以重新命名SnapCenter VMware vSphere備份的Rename Plug-in。
 
+
+NOTE: ASA R2 儲存系統不支援重新命名備份。
+
 .步驟
 . 按一下「*功能表*」並選取「*主機與叢集*」功能表選項、然後選取虛擬機器、再選取「*組態*」索引標籤、然後按一下「* SnapCenter VMware vSphere的*套件*」區段中的「*備份*」。
 +

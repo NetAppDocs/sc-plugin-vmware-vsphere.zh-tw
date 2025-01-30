@@ -1,0 +1,25 @@
+---
+permalink: scv_releasenotes_whats_new.html 
+sidebar: sidebar 
+keywords: 'what"s new, release notes, scv, 6.1' 
+summary: 瞭解適用於 VMware vSphere 6.1 的 SnapCenter 外掛程式所提供的新功能。 
+---
+= 適用於 VMware vSphere 6.1 的 SnapCenter 外掛程式的新功能
+:allow-uri-read: 
+
+
+[role="lead"]
+* 支援 ASA R2 系統上的 VM 和 VMFS 資料存放區 *
+
+VMware vSphere 6.1 版的 SnapCenter 外掛程式現在支援在 ASA R2 系統上佈建虛擬機器（ VM ）和 VMFS 資料存放區。ASA R2 系統提供統一化的硬體與軟體解決方案，可針對僅限 SAN 的客戶需求，提供簡化的體驗。適用於 VMware vSphere 6.1 的 SnapCenter 外掛程式支援 ASA R2 系統上的虛擬機器，資料存放區和虛擬機器磁碟格式（ VMDK ）功能包括：
+
+* 一致性群組資源配置，提供主要保護
+* 一致性群組型備份
+* 複製工作流程
+* 還原工作流程
+* 建立或修改資源群組時的次要保護資源配置。
++
+
+NOTE: 次要保護僅支援 ONTAP 9.16.1 及更新版本
+
+

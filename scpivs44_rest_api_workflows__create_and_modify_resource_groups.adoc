@@ -27,7 +27,7 @@ summary: 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛�
 | 1. | 「/4.1/policies」 | `Get Policies` 取得VMware vSphere用戶端原則清單。請注意在建立資源群組和原則* frequency *時、您要使用的* policyId*。如果未列出原則、請使用 `Create Policy` REST API以建立新原則。 
 
 
-| 2. | /4.1/resource-Groups（資源組） | 「Create a Resource Group」（建立資源群組）會建立具有指定原則的資源群組。從步驟1傳遞*原則Id*、並輸入原則*頻率*詳細資料、以及所有其他必要的屬性。 
+| 2. | /4.1/resource-Groups（資源組） | `Create a Resource Group` 建立具有指定原則的資源群組。從步驟1傳遞*原則Id*、並輸入原則*頻率*詳細資料、以及所有其他必要的屬性。您可以使用此 REST API 啟用次要保護。 
 |===
 若要修改資源群組、請遵循此工作流程：
 

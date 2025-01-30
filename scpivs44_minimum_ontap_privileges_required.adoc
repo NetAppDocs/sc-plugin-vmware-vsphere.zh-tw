@@ -48,41 +48,22 @@ NOTE: 從 SnapCenter Plug-in for VMware （ SCV ） 5.0 開始、您需要將 HT
 | 版本 
 
 
-| 建立Volume Clone
-Volume Clone顯示
-磁碟區複製分割開始
-Volume Clone切割停止
-Volume建立
-Volume刪除
-Volume銷毀
-建立Volume檔案複製
-Volume檔案show-disk-usage
-Volume離線
-Volume線上
-Volume修改
-Volume qtree建立
-Volume qtree刪除
-Volume qtree修改
-Volume qtree顯示
-Volume限制
-Volume Show
-建立Volume Snapshot快照
-Volume Snapshot刪除
-Volume Snapshot修改
-Volume Snapshot重新命名
-Volume Snapshot還原
-Volume Snapshot還原檔
-Volume Snapshot顯示
-Volume卸載 
+| Volume clone create volume clone show volume clone 分割 start volume clone 分割狀態 volume clone 分割 stop volume create volume destroy volume file clone create volume file show-disk-usage SnapLock volume offline volume clase-feature volume 修改 volume qtree create volume qtree delete volume qtree 修改 volume qtree show volume 限制 Volume 顯示 Volume 快照建立 Volume 快照刪除 Volume 快照修改 Volume snapshot mode-time-cluse-time-cluse-time-cluse-cluse-命令 重命名 Volume 
 
 
-| vserver CIFS vserver CIFS 共用建立 vserver CIFS 共用刪除 vserver CIFS ShadowCopy show vserver CIFS 共用 show vserver CIFS show vserver CIFS show vserver 輸出原則 vserver 輸出原則建立 vserver 輸出原則刪除 vserver 輸出原則規則建立 vserver 輸出原則規則 show vserver 輸出原則 show vserver iSCSI vserver iSCSI 連線 show vserver NVMe 控制器子系統 Vserver NVMe 子系統控制器 show vserver NVMe subsystem map vserver NVMe subsystem map show vserver NVMe subsystem map add vserver NVMe subsystem map remove vserver NVMe subsystem host show vserver NVMe subsystem host add vserver NVMe subsystem host remove vserver NVMe subsystem show vserver NVMe subsystem delete vserver NVMe namespace 顯示網路介面網路介面容錯移轉群組 
+| vserver CIFS vserver CIFS 共享區 create vserver CIFS 共享刪除 vserver CIFS ShadowCopy show vserver CIFS 共享 show vserver CIFS show vserver show vserver 輸出原則 vserver 輸出原則 create vserver 輸出原則刪除 vserver 輸出原則規則 create vserver 輸出原則規則 show vserver 
 |===
 |===
 | 唯讀命令：ONTAP 要求具備最低權限才能執行更新版本的功能 
 
 
 | 叢集識別顯示網路介面顯示 vserver vserver 對等 vserver show 
+|===
+|===
+| All Access 命令： ONTAP 9 及更新版本所需的最低權限。 
+
+
+| 一致性群組儲存單元展示 
 |===
 建立與資料 Vserver 關聯的角色時，您可以忽略 _cluster identity show_ cluster level 命令。
 

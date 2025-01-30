@@ -28,10 +28,10 @@ SnapCenter Plug-in for VMware vSphere 會在您每次重新啟動 vCenter Web �
 | 角色 | 說明 
 
 
-| 選擇控制閥管理員 | 提供執行SnapCenter 所有VMware vSphere工作所需的所有原生vCenter Server和SnapCenter專屬權限。 
+| 選擇控制閥管理員 | 提供執行SnapCenter 所有VMware vSphere工作所需的所有原生vCenter Server和SnapCenter專屬權限。從 6.1 號選擇控制閥開始，此角色會加入新的權限來建立次要保護。 
 
 
-| 選擇控制閥備用 | 提供備份vSphere物件（虛擬機器和資料存放區）所需的所有原生vCenter Server和SnapCenter專屬權限。使用者也可以存取設定權限。使用者無法還原備份。 
+| 選擇控制閥備用 | 提供備份vSphere物件（虛擬機器和資料存放區）所需的所有原生vCenter Server和SnapCenter專屬權限。使用者也可以存取設定權限。使用者無法還原備份。從 6.1 號選擇控制閥開始，此角色會加入新的權限來建立次要保護。 
 
 
 | 選擇控制閥客體檔案還原 | 提供還原來賓檔案和資料夾所需的所有原生vCenter Server和SnapCenter專屬權限。使用者無法還原VM或VMDK。 

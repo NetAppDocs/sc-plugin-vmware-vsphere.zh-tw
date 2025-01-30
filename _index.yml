@@ -6,12 +6,12 @@ indexpage:
   keywords: SnapCenter Plug-in for VMware vSphere, SCV
   lead: VMware vSphere（選擇控制器）的VMware外掛程式是Linux型虛擬應用裝置。SnapCenter獨立式環境可為VM、資料存放區及VMDK提供快速、節省空間、損毀一致且VM一致的備份與還原作業。它也能搭配SnapCenter
     使用支援應用程式型的VMware環境備份與還原作業、以利SnapCenter 執行應用程式專屬的外掛程式。本文件庫說明適用於 VMware vSphere
-    6.0 版的 SnapCenter 外掛程式。
+    6.1 版的 SnapCenter 外掛程式。
   tiles:
   - title: 開始使用
     links:
     - title: 版本資訊
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3322664
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337464
     - title: 深入瞭解選擇控制閥
       url: "/scpivs44_concepts_overview.html"
     - title: 部署需求

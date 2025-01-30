@@ -139,7 +139,7 @@ NVMe over TCP 和 NVMe over FC 傳輸協定支援的最低軟體需求為：
 
 
 
-== 空間與規模需求
+== 空間，規模和擴充需求
 
 |===
 | 項目 | 需求 
@@ -148,13 +148,16 @@ NVMe over TCP 和 NVMe over FC 傳輸協定支援的最低軟體需求為：
 | 作業系統 | Linux 
 
 
-| 最小CPU數 | 4核心 
+| 建議的 CPU 數 | 8個核心 
 
 
-| 最低RAM | 最低：建議使用12 GB：16 GB 
+| 建議的 RAM | 24GB 
 
 
 | 適用於VMware vSphere、記錄檔和MySQL資料庫的VMware vCenter外掛程式最小硬碟空間SnapCenter | 100 GB 
+
+
+| 應用裝置中 vmcontrol 服務的最大堆積大小 | 8GB 
 |===
 
 

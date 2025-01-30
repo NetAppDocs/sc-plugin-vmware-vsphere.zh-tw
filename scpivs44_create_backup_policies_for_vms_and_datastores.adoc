@@ -43,13 +43,12 @@ NOTE: SnapMirror 主動同步僅支援 VMFS 資料存放區。
 +
 ** 按照技術報告中的說明配置羣集和調解器： https://www.netapp.com/pdf.html?item=/media/21888-tr-4878.pdf["TR-4878 ： SnapMirror 主動同步（以前稱爲 SMBC ）"]。
 ** 將與 VMFS 資料存放區相關的磁碟區新增至一致性群組、並在兩個 ONTAP 儲存系統之間使用 _AutomatedFailovert_ 或 _AutomatedFailOverDuplex_ 保護原則建立資料保護關係。自 ONTAP 9.15.1 版起支援 _AutomatedFailOverDuplex_ 原則。
-+
+
+
+
+
 
 NOTE: 在扇出組態中、第三站台不支援一致性群組。
-
-
-
-
 
 .關於這項工作
 這些精靈頁面上的大部分欄位都是不言自明的。下列資訊說明您可能需要指引的部分欄位。

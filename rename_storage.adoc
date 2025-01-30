@@ -16,6 +16,9 @@ summary: 您可以使用 REST API 重新命名儲存設備。
 [role="lead"]
 重新命名儲存設備時、使用重命名之前所做備份的工作流程會失敗。隨着重命名備份功能的推出（可通過 REST API 完全訪問），現在可以使用在重命名存儲之前所進行的備份。其餘 API 的工作流程和使用方法如下所述。
 
+
+NOTE: ASA R2 儲存系統不支援最近的 Snapshot 命名功能。
+
 .步驟
 . 新增或更新新的儲存連線、確保新的叢集或 SVM 名稱會反映在選擇控制閥中。
 . 重新啟動服務以重新整理快取、如 KB 文章所述： https://kb.netapp.com/mgmt/SnapCenter/SCV_backups_fail_after_SVM_rename["SVM 重新命名後、選擇控制閥備份失敗"]

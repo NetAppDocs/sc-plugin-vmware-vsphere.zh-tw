@@ -28,7 +28,7 @@ summary: 部署SnapCenter 完VMware vSphere的VMware vSphere版的VMware vCenter
 
 * 部署虛擬應用裝置之後、儀表板上的*備份工作*索引標籤可能不會在下列情況下載入：
 +
-** 您執行的是IPV4、SnapCenter 其中有兩個IP位址可用於VMware vSphere主機。因此、工作要求會傳送到SnapCenter 無法被該伺服器辨識的IP位址。若要避免此問題、請新增您要使用的IP位址、如下所示：
+** 您執行的是 IPv4 位址， SnapCenter VMware vSphere 主機有兩個 IP 位址。因此、工作要求會傳送到SnapCenter 無法被該伺服器辨識的IP位址。若要避免此問題、請新增您要使用的IP位址、如下所示：
 +
 ... 瀏覽至部署 SnapCenter Plug-in for VMware vSphere 的位置： `/opt/netapp/scvservice/standalone_aegis/etc`
 ... 開啟檔案network- interface.properties。

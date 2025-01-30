@@ -1,14 +1,16 @@
 ---
 settings:
-  name: SnapCenter Plug-in for VMware vSphere 6.0
+  name: SnapCenter Plug-in for VMware vSphere 6.1
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: false
   versions:
-  - version-number: '6.0'
+  - version-number: '6.1'
     url: "/sc-plugin-vmware-vsphere"
+  - version-number: '6.0'
+    url: "/sc-plugin-vmware-vsphere-60"
   - version-number: '5.0'
     url: "/sc-plugin-vmware-vsphere-50"
   - version-number: '4.9'
@@ -24,18 +26,16 @@ settings:
   langs: zh-tw,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-cn
 sidebar:
   entries:
-  - title: VMware vSphere 6.0的插件SnapCenter
+  - title: VMware vSphere 6.1的插件SnapCenter
     url: "/index.html"
   - title: 版本資訊
     entries:
     - title: SnapCenter Plug-in for VMware vSphere 版本資訊
       url: "/scpivs44_release_notes.html"
-    - title: 適用於 VMware vSphere 6.0.1 的 SnapCenter 外掛程式的新功能
-      url: "/scv60_releasenotes_601_whats_new.html"
-    - title: 適用於 VMware vSphere 6.0 的 SnapCenter 外掛程式的新功能
-      url: "/scv60_releasenotes_60_whats_new.html"
+    - title: 適用於 VMware vSphere 6.1 的 SnapCenter 外掛程式的新功能
+      url: "/scv_releasenotes_whats_new.html"
     - title: 升級途徑
-      url: "/scv60_rn_upgrade_paths.html"
+      url: "/scv_rn_upgrade_paths.html"
   - title: 概念
     entries:
     - title: 產品總覽

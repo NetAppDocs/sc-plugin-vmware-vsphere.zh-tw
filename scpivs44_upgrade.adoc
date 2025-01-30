@@ -14,7 +14,7 @@ summary: 如果您使用SnapCenter 適用於VMware vSphere虛擬應用裝置的V
 
 
 
-NOTE: 只有 VMware vCenter Server 7 更新版本 1 和更新版本才支援升級至 6 ． 0 號選擇控制閥、對於版本 7 更新版本 1 之前的 VMware vCenter 伺服器、您應該繼續使用 4 ． 7 號選擇控制閥。不受支援版本的VMware vCenter伺服器會中斷升級。
+NOTE: 只有 VMware vCenter Server 7 更新版本 1 和更新版本才支援升級至 6 號選擇控制閥，而在版本 7 更新 1 之前的 VMware vCenter 伺服器則應繼續使用 4 號選擇控制閥。不受支援版本的VMware vCenter伺服器會中斷升級。
 
 如果您使用SnapCenter 適用於VMware vSphere虛擬應用裝置的VMware vCenter外掛程式、則可以升級至較新的版本。升級程序會取消註冊現有的外掛程式、並部署僅與vSphere 7.0U1及更新版本相容的外掛程式。
 
@@ -28,7 +28,10 @@ NOTE: 只有 VMware vCenter Server 7 更新版本 1 和更新版本才支援升�
 | 如果您使用的是 SnapCenter Plug-in for VMware vSphere （ SCV ）版本 ... | 您可以直接將 VMware vSphere 的 SnapCenter 外掛程式升級至 ... 
 
 
-| SCV 5.0 | 升級到 6 ． 0 號選擇控制閥 
+| SCV 6.0 | 升級到 6 ． 1 號選擇控制閥 
+
+
+| SCV 5.0 | 升級到 6 號和 6 號選擇控制閥 
 
 
 | 4.9 號選擇控制閥 | 升級到 5 號和 6 號選擇控制閥 
@@ -47,6 +50,8 @@ TIP: 在SnapCenter 開始升級之前、請先備份VMware vSphere OVA的VMware 
 
 
 NOTE: 不支援將網路組態從靜態切換為DHCP。
+
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^] （ IMT ）。
 
 .步驟
 . 停用SnapCenter VMware vSphere的VMware vCenter外掛程式、做好升級準備。

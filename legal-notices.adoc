@@ -47,4 +47,4 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 
 通知檔案提供有關 NetApp 軟體所使用之協力廠商版權與授權的資訊。
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP3322665["適用於 VMware vSphere 6.0 的 SnapCenter 外掛程式注意事項"^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP3337670["適用於 VMware vSphere 6.1 的 SnapCenter 外掛程式注意事項"^]

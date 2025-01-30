@@ -42,7 +42,7 @@ NOTE:  VMware vCenter 7u1及更新版本支援OVA部署。
 . 在瀏覽器中、瀏覽至VMware vSphere vCenter。
 +
 
-NOTE: 對於IPv6 HTML Web用戶端、您必須使用Chrome或Firefox。
+NOTE: 對於 IPv6 位址 HTML Web 用戶端，您必須使用 Chrome 或 Firefox 。
 
 . 登入「* VMware vCenter單一登入*」頁面。
 . 在導覽器窗格中、以滑鼠右鍵按一下虛擬機器的有效父物件（例如資料中心、叢集或主機）、然後選取 * 部署 OVF Template* 以啟動 VMware 部署精靈。
@@ -106,7 +106,7 @@ IMPORTANT: 記下您指定的使用者名稱和密碼。如果您稍後想要修
 ... 在 * 設定 IPv4 網路內容 * 區段中、輸入網路資訊、例如 IPv4 位址、 IPv4 網路遮罩、 IPv4 閘道、 IPv4 主要 DNS 、 IPv4 次要 DNS 、 和 IPv4 搜尋網域。
 ... 在 * 設定 IPv6 網路內容 * 區段中、輸入網路資訊、例如 IPv6 位址、 IPv6 網路遮罩、 IPv6 閘道、 IPv6 主要 DNS 、 IPv6 次要 DNS 、 和 IPv6 搜尋網域。
 +
-選取「IPV4」或「IPv6」欄位、或兩者（如果適用）。如果同時使用IPv6和IPv6、則只需為其中一項指定「主要DNS」。
+如果適用，請選取 IPv4 或 IPv6 位址欄位，或兩者都選取。如果同時使用 IPv4 和 IPv6 位址，則只需指定其中一個位址的主要 DNS 。
 
 +
 

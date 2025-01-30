@@ -27,6 +27,7 @@ summary: 您可以使用SnapCenter VMware vSphere REST API的VMware vCenter外�
 ** 掛載及卸載資料存放區
 ** 下載工作並產生報告
 ** 修改內建排程
+** 設定 ASA R2 的次要保護
 
 
 * VMware vSphere的REST API不支援的作業

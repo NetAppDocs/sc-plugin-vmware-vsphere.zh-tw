@@ -14,9 +14,9 @@ summary: 版本說明提供本次發行SnapCenter VMware vSphere的VMware vSpher
 
 
 [role="lead"]
-瞭解適用於 VMware vSphere 6.0.1 和 6.0 的 SnapCenter 外掛程式所提供的全新增強功能。
+瞭解適用於 VMware vSphere 6.1 的 SnapCenter 外掛程式所提供的全新增強功能。
 
-如需已知問題，限制及修正問題的詳細資訊，請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP3322664["SnapCenter Plug-in for VMware vSphere 6.0 和 6.0.1 版本資訊"^]。您必須使用 NetApp 帳戶登入、或建立帳戶才能存取版本資訊。
+如需已知問題，限制及修正問題的詳細資訊，請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP3337464["SnapCenter Plug-in for VMware vSphere 6.1 版本資訊"^]。您必須使用 NetApp 帳戶登入、或建立帳戶才能存取版本資訊。
 
 [NOTE]
 ====
