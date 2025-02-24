@@ -1243,7 +1243,6 @@
   <block id="253b40ae359ba25b56231803430c4873" category="cell">ONTAP</block>
   <block id="3560c7ef415d0e13191c33fa995b7005" category="cell">其中一項：SnapMirror或SnapVault SnapMirror（無論關係類型為何、均可提供二線資料保護）</block>
   <block id="2b5932460c4f1e726c2fe5eb4c84cf64" category="cell">其他產品</block>
-  <block id="9f7e37bd05b30c134ff1660c6d52c186" category="cell">vSphere Standard、Enterprise或Enterprise Plus需要vSphere授權、才能執行使用Storage VMotion的還原作業。vSphere Essentials或Essentials Plus授權不含Storage VMotion。</block>
   <block id="6c1ccb0198e251b6df82fd2d169fdcf0" category="cell">主要目的地</block>
   <block id="9c864fe971ea9ba615c7a517d7552160" category="cell">VMware vCenter Standard：執行以應用程式為基礎的VMware支援所需：僅適用於FlexClone的VMware VM和資料存放區執行還原作業所需：僅用於在VMware VM和資料存放區上掛載和附加作業SnapCenter SnapRestore</block>
   <block id="5be74f1e9c3cdce99e50c0e439ec19b3" category="cell">次要目的地</block>
@@ -1259,22 +1258,16 @@
   <block id="91a33043fc7eebee30634cb063fa6e2c" category="cell">適用於陣列整合的VMware應用程式vStorage API（VAAI）</block>
   <block id="16e729ceefd4cd71e291d0800dd9e9c0" category="cell">VMware vSphere的VMware vSphere外掛程式使用此功能來改善還原作業的效能。SnapCenter它也能改善NFS環境的效能。</block>
   <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="cell">需求</block>
-  <block id="696c660ff8d9323e55146a6dbd4e4088" category="cell">作業系統</block>
-  <block id="edc9f0a5a5d57797bf68e37364743831" category="cell">Linux</block>
   <block id="3cb874290f06f3c2d44ce2e858bb041f" category="cell">適用於VMware vSphere、記錄檔和MySQL資料庫的VMware vCenter外掛程式最小硬碟空間SnapCenter</block>
   <block id="dcfebc6fbca2c5316f55c914e6593d2d" category="cell">100 GB</block>
   <block id="9a0980e2d2a75eb076f41f7a4d439162" category="section-title">連線與連接埠需求</block>
   <block id="3672cca688eb0474cd3fee2add1a2067" category="cell">連接埠類型</block>
-  <block id="1af12a0ed126e7e6b194370c0c0be5eb" category="cell">預先設定的連接埠</block>
   <block id="926bafe6b6d4e07892751c7ca73ad20d" category="cell">VMware vSphere連接埠適用的外掛程式SnapCenter</block>
   <block id="7c1239972879fe0b69b4bb6d5c9a743e" category="cell">VMware vSphere vCenter Server連接埠</block>
   <block id="1f5ccbd5c3e6d6be1c440296630a5678" category="cell">如果您要保護VVol VM、則必須使用連接埠443。</block>
   <block id="131b9f1c14d26ba7a0cce7389e7679a9" category="cell">儲存叢集或儲存VM連接埠</block>
-  <block id="4ebb46027adb5b26fc62dffc3aab358e" category="cell">443（HTTPS）、雙向80（HTTP）、雙向連接埠用於虛擬應用裝置與儲存VM或包含儲存VM的叢集之間的通訊。</block>
   <block id="bd6873be6e44dbd5504531679d8ca1ef" category="section-title">支援的組態</block>
-  <block id="f377fb769eb12fc39f5abb7af2a27054" category="paragraph">每個外掛程式執行個體僅支援一個vCenter Server。支援處於連結模式的vCenter。多個外掛程式執行個體可支援下SnapCenter 圖所示的同一個Same Server。</block>
   <block id="44245d918ad9aae8ea6514501fcfa0e8" category="section-title">需要RBAC權限</block>
-  <block id="59e5a4ee48160cd7955828dd0c4db401" category="paragraph">vCenter系統管理員帳戶必須具備所需的vCenter權限、如下表所列。</block>
   <block id="3226b4d551073b03b6999f2db6d26c26" category="cell">若要執行此作業…</block>
   <block id="ebbed56187bf88c2773b58885cb13924" category="cell">您必須擁有這些vCenter權限…</block>
   <block id="246180f43b6fb5d5b8945e640f176b32" category="cell">在SnapCenter vCenter中部署並註冊VMware vSphere的VMware vCenter外掛程式</block>
@@ -1729,7 +1722,6 @@
   <block id="f85e08b125832fc8dae732e6790fa120" category="cell">*營運*</block>
   <block id="bf59ac9161d0f4561a155103d8ea2d10" category="list-text">在 * 稽核記錄檔設定 * 窗格中、輸入稽核記錄檔的最大數量和稽核記錄檔大小限制。</block>
   <block id="beebc895773b56339a9e46c0233ba7cd" category="list-text">選取 * 鎖定期間 * 核取方塊以啟用 Snapshot 鎖定。您可以選擇 Snapshot 鎖定期間作為天數 / 月 / 年。</block>
-  <block id="db2aeb24ed12922fe15bc09cfd1f528b" category="paragraph">在部署虛擬應用裝置之前、您應該先瞭解部署需求。下表列出部署需求。</block>
   <block id="716306984040e1bf7dc3b8c1b0a05422" category="paragraph">注意：支援自訂連接埠、可將選擇控制閥主機新增至 SnapCenter 。</block>
   <block id="06c615df2f8ec55473b26eed4f5eedbd" category="paragraph">下表顯示 SnapCenter GUI 執行的作業。</block>
   <block id="ac3ea74e69b4d64c5b8bf99577a62f58" category="cell">使用 VMware vSphere 用戶端 GUI 備份 VM 和資料存放區。</block>
@@ -1970,14 +1962,9 @@ Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系�
   <block id="c8cdfbb3a52561000ef7cad338743cef" category="list-text">瀏覽至部署 SnapCenter Plug-in for VMware vSphere 的虛擬機器、然後按一下 * Summary （摘要） * 索引標籤、再按一下 * Power On* （ * 開機）方塊以啟動 SnapCenter Plug-in for VMware vSphere 。</block>
   <block id="0e1333d2629e7e53b7c0c41245a5c98c" category="paragraph">部署可能需要幾分鐘的時間才能完成。SnapCenter Plug-in for VMware vSphere 開機、 VMware 工具安裝完成、畫面會提示您登入適用於 VMware vSphere 的 SnapCenter 外掛程式、表示部署成功。</block>
   <block id="145fd808d1976421d581e3373669426b" category="list-text">使用部署精靈中提供的認證、使用部署畫面上顯示的 IP 位址登入 SnapCenter Plug-in for VMware vSphere 管理 GUI 、然後在儀表板上確認 SnapCenter Plug-in for VMware vSphere 已成功連線至 vCenter 並已啟用。</block>
-  <block id="d4ff2a4ba3e5af06f352373f50430bce" category="list-text">SnapCenter Plug-in for VMware vSphere 會部署為 Linux VM 、無論您是使用外掛程式來保護 Windows 系統或 Linux 系統上的資料。</block>
   <block id="5897423e9fe4df49061445b3104d9dbb" category="list-text">您應該在 vCenter Server 上部署 SnapCenter Plug-in for VMware vSphere 。</block>
-  <block id="77e6a5095dbf7f9171bcc524ed6e1476" category="paragraph">備份排程會在部署 SnapCenter Plug-in for VMware vSphere 的時區執行。 vCenter 會在 vCenter 所在的時區中報告資料。因此、如果 SnapCenter Plug-in for VMware vSphere 和 vCenter 位於不同的時區、 SnapCenter Plug-in for VMware vSphere 儀表板中的資料可能與報告中的資料不同。</block>
-  <block id="5d7c1f071b8bebdb7a96ab764852bb32" category="list-text">您不得在具有特殊字元名稱的資料夾中部署 SnapCenter Plug-in for VMware vSphere 。</block>
   <block id="43685458a1d84184e89d6917bc3f3a30" category="list-text">您必須為每個 vCenter Server 部署及登錄個別、獨特的 SnapCenter Plug-in for VMware vSphere 執行個體。</block>
-  <block id="18ddbf443f973a535ca1b5fb7410cf19" category="list-text">每個 vCenter Server 、無論是否處於連結模式、都必須與 SnapCenter Plug-in for VMware vSphere 的個別執行個體配對。</block>
   <block id="a893739e55ea1f12f5171b7f54a73977" category="list-text">SnapCenter Plug-in for VMware vSphere 的每個執行個體都必須部署為獨立的 Linux VM 。</block>
-  <block id="6475183430549d8c41dcdf49b6e454d9" category="paragraph">例如、如果您想從 vCenter Server 的六個不同執行個體執行備份、則必須在六個主機上部署 SnapCenter Plug-in for VMware vSphere 、而且每個 vCenter Server 都必須與 SnapCenter Plug-in for VMware vSphere 的唯一執行個體配對。</block>
   <block id="ce5825ca299ec1e545f124bbf257a2c7" category="list-text">SnapCenter Plug-in for VMware vSphere 由於虛擬機器在支援 Storage VMotion 方面的限制、因此對共用 PCI 或 PCIe 裝置（例如 NVIDIA Grid GPU ）的支援有限。如需詳細資訊、請參閱廠商的VMware部署指南文件。</block>
   <block id="9dda9990139fd29842c044b5c5471a76" category="list-text">如需 SnapCenter Plug-in for VMware vSphere 限制的詳細清單、請參閱 <block ref="bdbfb8bb150c7bdb16e7ed7779280aad" category="inline-link-macro-rx"></block>。</block>
   <block id="d20cc380823f43f0acf872e3020e3bd2" category="cell">7.0U1 及更高版本。</block>
@@ -1986,7 +1973,6 @@ Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系�
   <block id="128a673672e69a9c3a9a57cd50e753fd" category="list-text">vCenter vSphere 7.0U3</block>
   <block id="83796d186e6e678e53d65b677d9068ca" category="list-text">ESXi 7.0U3</block>
   <block id="ab8296c5ef7a7b056b384680f89a9379" category="list-text">ONTAP 9.10.1.</block>
-  <block id="ea35a5ceed1579f5b902ce081cd9eba5" category="paragraph">8144（HTTPS）、雙向連接埠用於從VMware vSphere用戶端和SnapCenter 從VMware Server進行通訊。8080 雙向此連接埠用於管理虛擬應用裝置。</block>
   <block id="ddc2e0749914d96ecd066bc2875c2383" category="paragraph">SnapCenter Plug-in for VMware vSphere 提供追蹤其使用情況的最低資訊、包括外掛程式 URL 。包含由畫面顯示的已安裝外掛程式表格。AutoSupport AutoSupport</block>
   <block id="5ca88d87d091c40a67888db17ab09200" category="list-text">在左側導覽器窗格中、選取 VM 。</block>
   <block id="21ee10f4cd70125e8dd3b917d6c4dec7" category="list-text">在左側導覽窗格中、以滑鼠右鍵按一下虛擬機器、然後在下拉式清單中選取 * SnapCenter Plug-in for VMware vSphere * 、然後在次要下拉式清單中選取 * 分離虛擬磁碟 * 。</block>
@@ -2244,4 +2230,16 @@ Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系�
   <block id="06f856f616715d0e20b174cd2c7fb47a" category="sidebar">VMware vSphere（選擇控制器）的VMware外掛程式是Linux型虛擬應用裝置。SnapCenter獨立式環境可為VM、資料存放區及VMDK提供快速、節省空間、損毀一致且VM一致的備份與還原作業。它也能搭配SnapCenter 使用支援應用程式型的VMware環境備份與還原作業、以利SnapCenter 執行應用程式專屬的外掛程式。本文件庫說明適用於 VMware vSphere 6.1 版的 SnapCenter 外掛程式。</block>
   <block id="94e8421982a2fb673cf72156837a22d4" category="sidebar">VMware vSphere 6.1的插件SnapCenter</block>
   <block id="a90ceefdbe215fb84520872833bfb5a2" category="sidebar">適用於 VMware vSphere 6.1 的 SnapCenter 外掛程式的新功能</block>
+  <block id="7ba297bc556c4bd891e83b1943e116d5" category="paragraph">在開始部署 SnapCenter Plug-in for VMware vSphere （ SCV ）之前，您應該先熟悉下列需求。</block>
+  <block id="ca7b78e6e086f02d5ea9e3c5f9719822" category="list-text">SnapCenter Plug-in for VMware vSphere 是以 Linux VM 部署，無論是用於保護 Windows 或 Linux 系統上的資料。</block>
+  <block id="ea84ccf1b1b24d5d18322d9bcac320d5" category="paragraph">備份排程會在部署 SnapCenter Plug-in for VMware vSphere 的時區執行， vCenter 會在部署時區報告資料。因此、如果 SnapCenter Plug-in for VMware vSphere 和 vCenter 位於不同的時區、 SnapCenter Plug-in for VMware vSphere 儀表板中的資料可能與報告中的資料不同。</block>
+  <block id="c8ab109ee626a90547277ef790b2ecc5" category="list-text">您不得將 SnapCenter Plug-in for VMware vSphere 部署在名稱包含特殊字元的資料夾中。</block>
+  <block id="b8d538e51a79520b3157b17c50b7394d" category="list-text">每個 vCenter Server ，無論是否處於連結模式，都必須與 SnapCenter Plug-in for VMware vSphere 的個別執行個體配對。</block>
+  <block id="bfd5317e73c9442ee1915a6588c0366c" category="paragraph">例如，假設您要從 vCenter Server 的六個不同執行個體執行備份。在這種情況下，您必須在六部主機上部署 SnapCenter Plug-in for VMware vSphere ，而且每部 vCenter Server 都必須與 SnapCenter Plug-in for VMware vSphere 的唯一執行個體配對。</block>
+  <block id="94065d09aa28da13308f15b08c2c3e89" category="cell">vSphere Standard ， Enterprise 或 Enterprise Plus 需要 vSphere 授權，才能使用 Storage VMotion 執行還原作業。 vSphere Essentials 或 Essentials Plus 授權不包含 Storage VMotion 。</block>
+  <block id="99ddf0e823c1be51589f68696f62cf56" category="cell">預先設定的連接埠</block>
+  <block id="f96e5ffe0e86002fbdb3cab444ac57b9" category="paragraph">8144 （ HTTPS ），雙向連接埠用於從 VMware vSphere 用戶端和 SnapCenter 伺服器進行通訊。8080 雙向此連接埠用於管理虛擬應用裝置。</block>
+  <block id="ffa5dd2af4873dbfd89f9ae07a815104" category="cell">443 （ HTTPS ），雙向 80 （ HTTP ），雙向連接埠用於在虛擬應用裝置和儲存 VM 之間或儲存 VM 所在的叢集之間進行通訊。</block>
+  <block id="822926837c6e218e71716b72e1a7017f" category="paragraph">每個外掛程式執行個體僅支援一個 vCenter Server ，其處於連結模式。不過，多個外掛程式執行個體可以支援相同的 SnapCenter 伺服器，如下圖所示。</block>
+  <block id="1c0894625a89e433ba87d14aebdc6088" category="paragraph">vCenter 管理員帳戶必須在下表中列出所需的 vCenter Privileges 。</block>
 </blocks>

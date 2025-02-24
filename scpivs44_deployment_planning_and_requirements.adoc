@@ -14,7 +14,7 @@ summary: 在部署虛擬應用裝置之前、您應該先瞭解部署需求。
 
 
 [role="lead"]
-在部署虛擬應用裝置之前、您應該先瞭解部署需求。下表列出部署需求。
+在開始部署 SnapCenter Plug-in for VMware vSphere （ SCV ）之前，您應該先熟悉下列需求。
 
 
 
@@ -22,21 +22,21 @@ summary: 在部署虛擬應用裝置之前、您應該先瞭解部署需求。
 
 開始部署 SnapCenter Plug-in for VMware vSphere （ SCV ）之前、您應該先熟悉主機需求。
 
-* SnapCenter Plug-in for VMware vSphere 會部署為 Linux VM 、無論您是使用外掛程式來保護 Windows 系統或 Linux 系統上的資料。
+* SnapCenter Plug-in for VMware vSphere 是以 Linux VM 部署，無論是用於保護 Windows 或 Linux 系統上的資料。
 * 您應該在 vCenter Server 上部署 SnapCenter Plug-in for VMware vSphere 。
 +
-備份排程會在部署 SnapCenter Plug-in for VMware vSphere 的時區執行。 vCenter 會在 vCenter 所在的時區中報告資料。因此、如果 SnapCenter Plug-in for VMware vSphere 和 vCenter 位於不同的時區、 SnapCenter Plug-in for VMware vSphere 儀表板中的資料可能與報告中的資料不同。
+備份排程會在部署 SnapCenter Plug-in for VMware vSphere 的時區執行， vCenter 會在部署時區報告資料。因此、如果 SnapCenter Plug-in for VMware vSphere 和 vCenter 位於不同的時區、 SnapCenter Plug-in for VMware vSphere 儀表板中的資料可能與報告中的資料不同。
 
-* 您不得在具有特殊字元名稱的資料夾中部署 SnapCenter Plug-in for VMware vSphere 。
+* 您不得將 SnapCenter Plug-in for VMware vSphere 部署在名稱包含特殊字元的資料夾中。
 +
 資料夾名稱不應包含下列特殊字元：$!@#%^&()_+{}';.,*?<>|
 
 * 您必須為每個 vCenter Server 部署及登錄個別、獨特的 SnapCenter Plug-in for VMware vSphere 執行個體。
 +
-** 每個 vCenter Server 、無論是否處於連結模式、都必須與 SnapCenter Plug-in for VMware vSphere 的個別執行個體配對。
+** 每個 vCenter Server ，無論是否處於連結模式，都必須與 SnapCenter Plug-in for VMware vSphere 的個別執行個體配對。
 ** SnapCenter Plug-in for VMware vSphere 的每個執行個體都必須部署為獨立的 Linux VM 。
 +
-例如、如果您想從 vCenter Server 的六個不同執行個體執行備份、則必須在六個主機上部署 SnapCenter Plug-in for VMware vSphere 、而且每個 vCenter Server 都必須與 SnapCenter Plug-in for VMware vSphere 的唯一執行個體配對。
+例如，假設您要從 vCenter Server 的六個不同執行個體執行備份。在這種情況下，您必須在六部主機上部署 SnapCenter Plug-in for VMware vSphere ，而且每部 vCenter Server 都必須與 SnapCenter Plug-in for VMware vSphere 的唯一執行個體配對。
 
 
 
@@ -88,7 +88,7 @@ summary: 在部署虛擬應用裝置之前、您應該先瞭解部署需求。
 | ONTAP | 其中一項：SnapMirror或SnapVault SnapMirror（無論關係類型為何、均可提供二線資料保護） 
 
 
-| 其他產品 | vSphere Standard、Enterprise或Enterprise Plus需要vSphere授權、才能執行使用Storage VMotion的還原作業。vSphere Essentials或Essentials Plus授權不含Storage VMotion。 
+| 其他產品 | vSphere Standard ， Enterprise 或 Enterprise Plus 需要 vSphere 授權，才能使用 Storage VMotion 執行還原作業。 vSphere Essentials 或 Essentials Plus 授權不包含 Storage VMotion 。 
 
 
 | 主要目的地 | VMware vCenter Standard：執行以應用程式為基礎的VMware支援所需：僅適用於FlexClone的VMware VM和資料存放區執行還原作業所需：僅用於在VMware VM和資料存放區上掛載和附加作業SnapCenter SnapRestore 
@@ -145,9 +145,6 @@ NVMe over TCP 和 NVMe over FC 傳輸協定支援的最低軟體需求為：
 | 項目 | 需求 
 
 
-| 作業系統 | Linux 
-
-
 | 建議的 CPU 數 | 8個核心 
 
 
@@ -171,7 +168,7 @@ NVMe over TCP 和 NVMe over FC 傳輸協定支援的最低軟體需求為：
 
 
 | VMware vSphere連接埠適用的外掛程式SnapCenter  a| 
-8144（HTTPS）、雙向連接埠用於從VMware vSphere用戶端和SnapCenter 從VMware Server進行通訊。8080 雙向此連接埠用於管理虛擬應用裝置。
+8144 （ HTTPS ），雙向連接埠用於從 VMware vSphere 用戶端和 SnapCenter 伺服器進行通訊。8080 雙向此連接埠用於管理虛擬應用裝置。
 
 注意：支援自訂連接埠、可將選擇控制閥主機新增至 SnapCenter 。
 
@@ -180,13 +177,13 @@ NVMe over TCP 和 NVMe over FC 傳輸協定支援的最低軟體需求為：
 | VMware vSphere vCenter Server連接埠 | 如果您要保護VVol VM、則必須使用連接埠443。 
 
 
-| 儲存叢集或儲存VM連接埠 | 443（HTTPS）、雙向80（HTTP）、雙向連接埠用於虛擬應用裝置與儲存VM或包含儲存VM的叢集之間的通訊。 
+| 儲存叢集或儲存VM連接埠 | 443 （ HTTPS ），雙向 80 （ HTTP ），雙向連接埠用於在虛擬應用裝置和儲存 VM 之間或儲存 VM 所在的叢集之間進行通訊。 
 |===
 
 
 == 支援的組態
 
-每個外掛程式執行個體僅支援一個vCenter Server。支援處於連結模式的vCenter。多個外掛程式執行個體可支援下SnapCenter 圖所示的同一個Same Server。
+每個外掛程式執行個體僅支援一個 vCenter Server ，其處於連結模式。不過，多個外掛程式執行個體可以支援相同的 SnapCenter 伺服器，如下圖所示。
 
 image:scpivs44_image4.png["支援的組態圖形呈現"]
 
@@ -194,7 +191,7 @@ image:scpivs44_image4.png["支援的組態圖形呈現"]
 
 == 需要RBAC權限
 
-vCenter系統管理員帳戶必須具備所需的vCenter權限、如下表所列。
+vCenter 管理員帳戶必須在下表中列出所需的 vCenter Privileges 。
 
 |===
 | 若要執行此作業… | 您必須擁有這些vCenter權限… 
