@@ -47,7 +47,7 @@ image:scv50_image1.png["vSphere 用戶端畫面"]
 您無法刪除已掛載的備份。您必須先卸載備份、才能刪除備份。
 
 .關於這項工作
-次要儲存設備上的快照是由您的 ONTAP 保留設定所管理、而非由適用於 VMware vSphere 的 SnapCenter 外掛程式所管理。因此、當您使用 SnapCenter Plug-in for VMware vSphere 刪除備份時、會刪除主要儲存設備上的快照、但不會刪除次要儲存設備上的快照。如果次要儲存設備上仍有 Snapshot 、則適用於 VMware vSphere 的 SnapCenter 外掛程式會保留與備份相關的中繼資料、以支援還原要求。當 ONTAP 保留程序刪除次要快照時、 SnapCenter Plug-in for VMware vSphere 會使用定期執行的清除工作來刪除中繼資料。
+次要儲存設備上的快照是由您的 ONTAP 保留設定所管理，而非由適用於 VMware vSphere 的 SnapCenter 外掛程式所管理。因此，當您使用 SnapCenter Plug-in for VMware vSphere 刪除備份時，會刪除主要儲存設備上的快照，但不會刪除次要儲存設備上的快照。如果次要儲存設備上仍有快照，則適用於 VMware vSphere 的 SnapCenter 外掛程式會保留與備份相關的中繼資料，以支援還原要求。當 ONTAP 保留程序刪除次要快照時， SnapCenter Plug-in for VMware vSphere 會使用定期執行的清除工作來刪除中繼資料。
 
 . 按一下「*功能表*」並選取「*主機與叢集*」功能表選項、然後選取虛擬機器、再選取「*組態*」索引標籤、然後按一下「* SnapCenter VMware vSphere的*套件*」區段中的「*備份*」。
 +

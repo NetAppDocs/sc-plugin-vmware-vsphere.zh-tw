@@ -64,10 +64,10 @@ NOTE: 資源群組在虛擬儲存主控台（VSC）中稱為備份工作。
 如果不再需要保護資源群組中的資源、您可以在vCenter中刪除資源群組。從SnapCenter vCenter移除VMware vSphere的VMware vCenter外掛程式之前、您必須確保所有資源群組都已刪除。
 
 .關於這項工作
-所有資源群組刪除作業都會在強制刪除時執行。刪除作業會將所有原則從 vCenter 資源群組中分離、從 SnapCenter Plug-in for VMware vSphere 移除資源群組、並刪除資源群組的所有備份和快照。
+所有資源群組刪除作業都會在強制刪除時執行。刪除作業會將所有原則從 vCenter 資源群組中分離，從 SnapCenter Plug-in for VMware vSphere 移除資源群組，並刪除資源群組的所有備份和快照。
 
 
-NOTE: 在 SnapVault 關係中、無法刪除上次的 Snapshot 、因此無法刪除資源群組。刪除屬於 SnapVault 關係一部分的資源群組之前、您必須使用 OnCommand 系統管理員或 ONTAP CLI 移除 SnapVault 關係、然後必須刪除最後一個快照。
+NOTE: 在 SnapVault 關係中，無法刪除最後一個快照，因此無法刪除資源群組。刪除屬於 SnapVault 關係一部分的資源群組之前，您必須使用 OnCommand System Manager 或 ONTAP CLI 移除 SnapVault 關係，然後必須刪除最後一個快照。
 
 .步驟
 . 在選擇控制閥外掛程式的左導覽窗格中、按一下 * 資源群組 * 、然後選取資源群組、再按一下 * 刪除 * 。

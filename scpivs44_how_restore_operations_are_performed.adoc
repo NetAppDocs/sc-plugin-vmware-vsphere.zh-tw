@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_how_restore_operations_are_performed.html 
 keywords:  
-summary: 在VMFS環境中、SnapCenter VMware vSphere的VMware vSphere的《Sesf2外掛程式》使用Storage vMotion來執行複製和掛載作業、以執行還原作業。對於NFS環境、外掛程式使用原生ONTAP 的「僅供參考的單一檔案SnapRestore 」（SFSR）、為大多數的還原作業提供更高的效率。對於VVol VM、外掛程式使用ONTAP 「還原單一檔案Snapshot還原」和「SnapMirror還原」來進行還原作業。 
+summary: 在VMFS環境中、SnapCenter VMware vSphere的VMware vSphere的《Sesf2外掛程式》使用Storage vMotion來執行複製和掛載作業、以執行還原作業。對於NFS環境、外掛程式使用原生ONTAP 的「僅供參考的單一檔案SnapRestore 」（SFSR）、為大多數的還原作業提供更高的效率。對於 vVol VM ，外掛程式會使用 ONTAP 單一檔案快照還原和 SnapMirror 還原來進行還原作業。 
 ---
 = 如何執行還原作業
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 在VMFS環境中、SnapCenter VMware vSphere的VMware vSphere的《Sesf
 
 
 [role="lead"]
-在VMFS環境中、SnapCenter VMware vSphere的VMware vSphere的《Sesf2外掛程式》使用Storage vMotion來執行複製和掛載作業、以執行還原作業。對於NFS環境、外掛程式使用原生ONTAP 的「僅供參考的單一檔案SnapRestore 」（SFSR）、為大多數的還原作業提供更高的效率。對於VVol VM、外掛程式使用ONTAP 「還原單一檔案Snapshot還原ONTAP 」（還原SFSR）和SnapMirror還原來還原作業。下表列出如何執行還原作業。
+在VMFS環境中、SnapCenter VMware vSphere的VMware vSphere的《Sesf2外掛程式》使用Storage vMotion來執行複製和掛載作業、以執行還原作業。對於NFS環境、外掛程式使用原生ONTAP 的「僅供參考的單一檔案SnapRestore 」（SFSR）、為大多數的還原作業提供更高的效率。對於 vVol VM ，外掛程式會使用 ONTAP 單一檔案快照還原（ ONTAP SFSR ）和 SnapMirror 還原來進行還原作業。下表列出如何執行還原作業。
 
 |===
 | 還原作業 | 寄件者 | 使用執行 

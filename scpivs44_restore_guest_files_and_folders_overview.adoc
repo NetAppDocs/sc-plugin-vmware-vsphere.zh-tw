@@ -65,9 +65,9 @@ summary: 您可以從Windows來賓作業系統上的虛擬機器磁碟（VMDK）
 
 IMPORTANT: 如果您必須使用非內建系統管理員帳戶、但在VM內具有系統管理權限的帳戶、則必須停用客體VM上的UAC.
 
-* 您必須知道要從其還原的備份 Snapshot 和 VMDK 。
+* 您必須知道要從還原的備份快照和 VMDK 。
 +
-VMware vSphere的支援還原外掛程式不支援搜尋要還原的檔案或資料夾。SnapCenter因此、在您開始之前、您必須知道檔案或資料夾相對於 Snapshot 和對應 VMDK 的位置。
+VMware vSphere的支援還原外掛程式不支援搜尋要還原的檔案或資料夾。SnapCenter因此，在開始之前，您必須知道快照和對應 VMDK 的檔案或資料夾位置。
 
 * 要附加的虛擬磁碟必須位於SnapCenter 不可靠的備份中。
 +

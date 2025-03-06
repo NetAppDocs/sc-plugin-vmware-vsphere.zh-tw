@@ -86,7 +86,7 @@ IMPORTANT: 請勿新增處於無法存取狀態的VM。雖然可以建立包含�
 
 * 最佳化快照
 +
-若要最佳化快照、您應該將與同一個磁碟區相關聯的 VM 和資料存放區分組到一個資源群組中。
+若要最佳化快照，您應該將與同一個磁碟區相關聯的 VM 和資料存放區分組到一個資源群組中。
 
 * 備份原則
 +
@@ -94,7 +94,7 @@ IMPORTANT: 請勿新增處於無法存取狀態的VM。雖然可以建立包含�
 
 +
 
-NOTE: 如果您選擇的是具有 Snapshot 鎖定期間的備份原則、則需要選取 ONTAP 9.12.1 或更新版本。
+NOTE: 如果您選擇的是具有快照鎖定期間的備份原則，則需要選取 ONTAP 9.12.1 或更新版本。
 
 * 相容性檢查
 +
@@ -147,26 +147,22 @@ NOTE: 如果您選擇的是具有 Snapshot 鎖定期間的備份原則、則需�
 | 電子郵件主旨 | 輸入您要用於通知電子郵件的主旨。 
 
 
-| 最新Snapshot名稱  a| 
-如果您想要將字尾「 _Recent 」新增至最新的 Snapshot 、請勾選此方塊。「_Recent」字尾會取代日期和時間戳記。
+| 最新快照名稱  a| 
+如果您想要將字尾「 _Recent 」新增至最新的快照，請勾選此方塊。「_Recent」字尾會取代日期和時間戳記。
 
 
 NOTE: 系統會針對附加至資源群組的每個原則建立「_Recent」備份。因此、具有多個原則的資源群組將會有多個「_Recent」備份。請勿手動重新命名「_Recent」備份。
 
 
-NOTE: ASA R2 儲存系統不支援重新命名快照，因此不支援選擇控制閥重新命名備份和最近的 Snapshot 命名功能。
+NOTE: ASA R2 儲存系統不支援重新命名快照，因此不支援選擇控制閥重新命名備份和最近的快照命名功能。
 
 
 
-| 自訂Snapshot格式  a| 
-如果您想要使用自訂格式來命名 Snapshot 、請勾選此方塊、然後輸入名稱格式。
+| 自訂快照格式  a| 
+如果您想要使用自訂格式來命名快照，請勾選此方塊，然後輸入名稱格式。
 
 *** 此功能預設為停用。
-*** 預設的 Snapshot 名稱使用格式 `<ResourceGroup>_<Date-TimeStamp>`
-不過、您可以使用變數$Resource Group、$Policy、$HostName、$ScheduleType和$CustomText來指定自訂格式。使用自訂名稱欄位中的下拉式清單、選取您要使用的變數及其使用順序。
-如果您選取$CustomText、則名稱格式為 `<CustomName>_<Date-TimeStamp>`。在所提供的其他方塊中輸入自訂文字。
-[ 附註 ] ：
-如果您也選取「 _Recent 」尾碼、則必須確定自訂 Snapshot 名稱在資料存放區中是唯一的、因此您應該將 $ResourceGroup 和 $Policy 變數新增至名稱。
+*** 預設的快照名稱使用格式 `<ResourceGroup>_<Date-TimeStamp>`。不過，您可以使用變數 $ResourceGroup ， $Policy ， $HostName ， $ScheduleType 和 $CustomText 來指定自訂格式。使用自訂名稱欄位中的下拉式清單、選取您要使用的變數及其使用順序。如果選擇 $CustomText 、則名稱格式為 `<CustomName>_<Date-TimeStamp>`。在所提供的其他方塊中輸入自訂文字。[ 附註 ] ：如果您也選取「 _Recent 」尾碼，則必須確定自訂快照名稱在資料存放區中是唯一的，因此您應該將 $ResourceGroup 和 $Policy 變數新增至名稱。
 *** 名稱中特殊字元的特殊字元、請遵循名稱欄位的相同準則。
 
 

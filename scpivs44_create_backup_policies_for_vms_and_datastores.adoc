@@ -20,11 +20,11 @@ summary: 您必須先建立備份原則、才能使用SnapCenter VMware vSphere�
 * 您必須閱讀必備條件。
 * 您必須設定次要儲存關係。
 +
-** 如果您要將 Snapshot 複製到鏡像或資料保險箱次要儲存設備、則必須設定關聯、且 SnapCenter 管理員必須為來源和目的地磁碟區指派儲存 VM 給您。
-** 若要成功將 Snapshot 傳輸到 NFS 或 VMFS 資料存放區上的 Verse-FlexibleMirror 關係次要儲存設備、請確定 SnapMirror 原則類型為「 AsynAsynAsynous Mirror 」、且已勾選「 all_source_snapshots 」選項。
-** 當次要儲存設備（鏡射資料保險箱）上的 Snapshot 數量達到上限時、在備份作業中登錄備份和套用保留的活動會失敗、並顯示下列錯誤： `This Snapshot is currently used as a reference Snapshot by one or more SnapMirror relationships. Deleting the Snapshot can cause future SnapMirror operations to fail.`
+** 如果您要將快照複製到鏡像或資料保險箱次要儲存設備，則必須設定關係，且 SnapCenter 管理員必須為來源和目的地磁碟區指派儲存 VM 給您。
+** 若要成功將快照傳輸至 NFS 或 VMFS 資料存放區上的 VidibleMirror 關係次要儲存區，請確定 SnapMirror 原則類型為「非同步鏡射」，且已勾選「 all_source_snapshots 」選項。
+** 當次要儲存設備（鏡射資料保險箱）上的快照數量達到上限時，在備份作業中登錄備份和套用保留的活動會失敗，並顯示下列錯誤： `This snapshot is currently used as a reference snapshot by one or more SnapMirror relationships. Deleting the snapshot can cause future SnapMirror operations to fail.`
 +
-若要修正此問題、請針對次要儲存設備設定 SnapMirror 保留原則、以避免達到快照的上限。
+若要修正此問題，請設定次要儲存設備的 SnapMirror 保留原則，以避免達到快照的上限。
 
 +
 如需系統管理員如何將資源指派給使用者的相關資訊，請參閱 https://docs.netapp.com/us-en/snapcenter/concept/concept_types_of_role_based_access_control_in_snapcenter.html["關於使用角色型存取控制的資訊SnapCenter"^]。
@@ -56,7 +56,7 @@ NOTE: 在扇出組態中、第三站台不支援一致性群組。
 .步驟
 . 在選擇控制閥外掛程式的左導覽窗格中、按一下 * 原則 * 。
 . 在 * 原則 * 頁面上、選取 * 建立 * 以啟動精靈。
-. 在「*新備份原則*」頁面上、選取將使用該原則的vCenter Server、然後輸入原則名稱和說明。
+. 在 * 新備份原則 * 頁面上，輸入原則名稱和說明。
 +
 ** 連結模式
 +
@@ -75,11 +75,15 @@ NOTE: 在扇出組態中、第三站台不支援一致性群組。
 +
 原則僅指定備份頻率。備份的特定保護排程是在資源群組中定義。因此、兩個或多個資源群組可以共用相同的原則和備份頻率、但備份排程不同。
 
-. 選取 * 鎖定期間 * 核取方塊以啟用 Snapshot 鎖定。您可以選擇 Snapshot 鎖定期間作為天數 / 月 / 年。
+. 選取 * 鎖定期間 * 核取方塊以啟用快照鎖定。您可以選擇主要和次要快照鎖定期間，例如天 / 月 / 年。
++
+
+NOTE: 無論在 ONTAP SnapMirror 原則中設定的保留值為何，在指定的次要快照鎖定期間之前，不會刪除次要快照複本。
+
 . 指定保留設定。
 +
 
-IMPORTANT: 如果您打算啟用SnapVault 還原複寫、則應將保留計數設為2個或更高。如果您將保留計數設為1個備份以保留、則保留作業可能會失敗。這是因為第一個 Snapshot 是 SnapVault 關係的參考 Snapshot 、直到較新的 Snapshot 複寫到目標為止。
+IMPORTANT: 如果您打算啟用SnapVault 還原複寫、則應將保留計數設為2個或更高。如果您將保留計數設為1個備份以保留、則保留作業可能會失敗。這是因為第一個快照是 SnapVault 關係的參考快照，直到較新的快照複寫到目標為止。
 
 +
 
@@ -114,11 +118,10 @@ NOTE: 此選項支援FlexGroup VMware vSphere 4.5及更新版本的VMware vSpher
 
 
 | Snapshot標籤  a| 
-輸入可選的自定義標籤，以便添加到使用此策略創建的 SnapVault 和 SnapMirror 快照中。
-Snapshot標籤有助於區分使用此原則建立的Snapshot與次要儲存系統上的其他Snapshot。
+輸入選用的自訂標籤，以新增至使用此原則建立的 SnapVault 和 SnapMirror 快照。Snapshot 標籤有助於區分以此原則建立的快照與次要儲存系統上的其他快照。
 
 
-NOTE: Snapshot 標籤最多允許 31 個字元。
+NOTE: 快照標籤最多可包含 31 個字元。
 
 |===
 . 選用：在*進階*欄位中、選取所需的欄位。下表列出進階欄位詳細資料。
@@ -136,7 +139,7 @@ vVols不支援此選項。對於VVol VM、只會執行損毀一致的備份。
 IMPORTANT: 您必須在VM上執行VMware工具、才能執行VM一致的備份。如果 VMware 工具未執行、則會執行損毀一致的備份。
 
 
-NOTE: 當您勾選VM一致性方塊時、備份作業可能需要更長時間、而且需要更多儲存空間。在此案例中、VM會先靜止、然後VMware執行VM一致的快照、SnapCenter 接著執行VMware的備份作業、然後恢復VM作業。VM客體記憶體不包含在VM一致性快照中。
+NOTE: 當您勾選VM一致性方塊時、備份作業可能需要更長時間、而且需要更多儲存空間。在此案例中、VM會先靜止、然後VMware執行VM一致的快照、SnapCenter 接著執行VMware的備份作業、然後恢復VM作業。VM 來賓記憶體不包含在 VM 一致性快照中。
 
 
 

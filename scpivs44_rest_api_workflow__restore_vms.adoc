@@ -28,9 +28,7 @@ summary: 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛�
 | 2. | //4.1/VM/｛moref｝/備份 | 「Get VM備份」可取得指定VM的備份清單。從步驟1通過* moref *。請記下您要還原之備份的*備份Id*。 
 
 
-| 3. | //4.1/VM/backups/{backupId}/ snapshotlocations' | `Get snapshot locations` 獲得指定備份的 Snapshot 位置。
-從步驟2傳遞*備份Id*。
-請注意*快照位置List*資訊。 
+| 3. | //4.1/VM/backups/{backupId}/ snapshotlocations' | `Get snapshot locations`獲得指定備份的快照位置。從步驟2傳遞*備份Id*。請注意*快照位置List*資訊。 
 
 
 | 4. | /`4.1/VM/{morf}/Backups/可用的esxhosts' | 「Get Available ESX hosts（取得可用的ESX主機）」會取得儲存備份之主機的資訊。請注意*可用的EssxHostsList*資訊。 

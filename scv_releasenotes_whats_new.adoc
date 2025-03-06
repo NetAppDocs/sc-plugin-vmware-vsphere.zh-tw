@@ -23,3 +23,7 @@ VMware vSphere 6.1 版的 SnapCenter 外掛程式現在支援在 ASA R2 系統�
 NOTE: 次要保護僅支援 ONTAP 9.16.1 及更新版本
 
 
+
+* 支援次要防竄改快照（ TPS ） *
+
+SnapCenter Plug-in for VMware vSphere 引進對次要 TPS 的支援，確保次要快照複本不受勒索軟體攻擊者或惡意系統管理員的刪除或修改，即使在攻擊之後也能使用。
