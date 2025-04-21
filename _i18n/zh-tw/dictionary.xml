@@ -23,7 +23,6 @@
   <block id="32db052b8c292805cf874ce498dbc022" category="paragraph">「執行身分」認證必須是Windows或內建本機系統管理員所提供的預設網域管理員。工作群組使用者可以使用內建的本機系統管理員帳戶。</block>
   <block id="3b94205bc2616f2bf8416a810bbba1b8" category="doc">VMware SnapCenter vSphere隨附於VMware vSphere的VMware vCenter外掛程式的預先定義角色</block>
   <block id="2f6888b85318bb632604e471f8b46b60" category="paragraph">身為管理員、您可以將這些角色指派給適當的使用者。</block>
-  <block id="5a8be763f7b47c14c6c0fca91e41acc6" category="paragraph">您可以按一下「*功能表&gt;管理&gt;角色*」、在vCenter GUI中查看預先定義的角色、如下表所示。</block>
   <block id="bbbabdbe1b262f75d99d62880b953be1" category="cell">角色</block>
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">說明</block>
   <block id="3d0f61a1174e21cbdd43433a0cdd1587" category="cell">選擇控制閥管理員</block>
@@ -41,7 +40,6 @@
   <block id="811a38ca6a4a37270419c2834515cf5c" category="paragraph">如果您不再需要備份來執行其他資料保護作業、可以刪除SnapCenter VMware vSphere備份的VMware vCenter外掛程式。您可以同時刪除一個備份或刪除多個備份。</block>
   <block id="4b3cb5948249f5d59292e97ced52522d" category="paragraph">您無法刪除已掛載的備份。您必須先卸載備份、才能刪除備份。</block>
   <block id="e8f28d5b9bdfd45d62e73866daa7c7c7" category="paragraph">您最多可以選取40個要刪除的備份。</block>
-  <block id="8dd89a625f95fb62c70506be2c26dc97" category="list-text">按一下左側vSphere功能表列上的重新整理圖示、即可重新整理備份清單。</block>
   <block id="35b654fd14f12a33551c1993b5321fcb" category="summary">VMware vSphere（選擇控制器）的VMware外掛程式是Linux型虛擬應用裝置。SnapCenter獨立式環境可為VM、資料存放區及VMDK提供快速、節省空間、損毀一致且VM一致的備份與還原作業。它也能搭配SnapCenter 使用支援應用程式型的VMware環境備份與還原作業、以利SnapCenter 執行應用程式專屬的外掛程式。</block>
   <block id="8c3d0c00ea667e3e0723e5cdc6473a09" category="doc">VMware vSphere文件的VMware外掛程式SnapCenter</block>
   <block id="b6bb7bbf9c57892b88c536fe12569417" category="summary">如果您要升級至同一版本的新修補程式、則必須清除SnapCenter vCenter Web Server上的VMware vSphere快取的VMware vSphere外掛程式、並在升級或登錄之前重新啟動伺服器。</block>
@@ -131,7 +129,6 @@
   <block id="5872155c9c9b4c108bc6482b00bcc9e8" category="admonition">啟用此選項、因為客體檔案還原是非同步作業、而且可能會有時間延遲、無法為您建立來賓工作階段。</block>
   <block id="4e856ba2cd7aacbcf8bc7b973f8553cf" category="list-text">等待附加作業完成。</block>
   <block id="fa4def48e95c558805a7c02c07472bfb" category="paragraph">您可以在儀表板工作監控器中檢視作業進度、也可以等待電子郵件通知。</block>
-  <block id="25e78af0a6469670457f3d69f3af2d24" category="paragraph">在「Guest工作階段監視器」表格中、您可以按一下「*」來顯示工作階段的其他資訊。 *在右欄。</block>
   <block id="c6b1cccb1d41d1779899104b727ed6e0" category="list-text">選取通知電子郵件中所列虛擬磁碟的客體檔案還原工作階段。</block>
   <block id="0af578ae1d8a85026f8bc49091baff88" category="paragraph">所有分割區都會指派磁碟機代號、包括系統保留的分割區。如果VMDK有多個分割區、您可以在「來賓檔案瀏覽」頁面頂端磁碟機欄位的下拉式清單中選取磁碟機、以選取特定磁碟機。</block>
   <block id="f4ff83956db6d6134a1d1743238a844b" category="paragraph">若要更輕鬆地瀏覽、您可以在搜尋字串中使用篩選條件。篩選器是區分大小寫的Perl運算式、不含空格。預設的搜尋字串是「.`*」。下表顯示一些Perl搜尋運算式範例。</block>
@@ -281,7 +278,6 @@
   <block id="78d2a696f9b9f71eb637f30f0020bdbf" category="doc">隨需備份資源群組</block>
   <block id="92ae04a417b2b1bf95cb914953f21cce" category="paragraph">您必須已建立附加原則的資源群組。</block>
   <block id="c7cf19dde0a4f0c65a5e383de57d33c1" category="list-text">如果資源群組已設定多個原則、請在*立即備份*對話方塊中、選取您要用於此備份作業的原則。</block>
-  <block id="8bf5cf5dea41cc14b69ffe6c6732b880" category="list-text">選用：按一下視窗底部的*近期工作*或儀表板*工作監控*、即可監控作業進度。.result</block>
   <block id="c9f88dac59bd7db8545fafc230d3c135" category="paragraph">如果備份中任何VM的靜止作業失敗、則備份會以警告完成、並標示為不一致的VM、即使選取的原則已選取VM一致性。在這種情況下、有些VM可能會成功靜止。在工作監控中、故障的VM詳細資料會顯示靜止失敗。</block>
   <block id="92d37724657724129ae0451584c728aa" category="doc">移除SnapCenter VMware vSphere的功能性外掛程式</block>
   <block id="159a080365af1cc94e243b73531b0b72" category="list-text">您必須擁有系統管理員權限。</block>
@@ -319,7 +315,6 @@
   <block id="9d7f2f9bd72cb1eb66d906abadf682b1" category="paragraph">還原部分備份時、還原作業會跳過「*選取範圍*」頁面。</block>
   <block id="de179e769f37bceb37b99454fcd0fc9f" category="list-text">在「*選取位置*」頁面上、選取還原資料存放區的位置。</block>
   <block id="8ab41059c6558bb0b136b7d351871ee6" category="paragraph">在VMware vSphere 4.5及更新版本的VMware vSphere外掛程式中SnapCenter 、您可以選取FlexGroup 適用於VMware vSphere 4.5及更新版本的次要儲存設備。</block>
-  <block id="92ebc27a2cd9d1ab4039f811c8ddafc4" category="list-text">選用：按一下畫面底部的* Recent Tasks（最近的工作）*、即可監控作業進度。</block>
   <block id="14dae1427bcb2f84e900779dbbccd66f" category="paragraph">重新整理畫面以顯示更新的資訊。</block>
   <block id="bd965e38a0c9cf27aa1bde099308e23f" category="list-title">完成後</block>
   <block id="020bc46cafa6b13df2b7ee3c234b5988" category="list-text">變更IP位址</block>
@@ -2183,9 +2178,7 @@
   <block id="ee3e8b5ce13430356556fee5021d9317" category="list-text">選取 * 新增 * 以啟動精靈。</block>
   <block id="b623e6ded9a852f4e7cd9765578d0c08" category="list-text">選擇*提交*。</block>
   <block id="8fbd6a3eab66d75eb22802cd7bdab5ee" category="list-text">在左側導覽窗格中，選取 * 設定 * ，然後選取 * 認證 * 索引標籤，然後選取 * 新增 * 以新增虛擬應用裝置的認證。</block>
-  <block id="e556309e3738293954426d97ff80e5be" category="list-text">選取 * 功能表 * 並選取 * 儲存 * 功能表選項，然後選取資料存放區，然後選取 * 設定 * 索引標籤，然後在 * SnapCenter Plug-in for VMware vSphere * 區段中選取 * 備份 * 。</block>
   <block id="340644a6feb53a4c0cf17d7dc95e37bb" category="list-text">從備份清單中選取刪除的 VM ，然後選取 * 還原 * 。</block>
-  <block id="216106f9c289ff5c0e156f155d915eb2" category="paragraph">您可以搜尋特定的備份名稱或部分備份名稱，或是按一下篩選器圖示並選取日期和時間範圍，選取是否要包含 VMware 快照的備份，是否要掛載備份，以及位置，以篩選備份清單。選取 * 確定 * 以返回精靈。</block>
   <block id="496e324a452b0d9825c96401dab61646" category="list-text">檢閱「摘要」頁面，然後選取 * 「完成」 * 。</block>
   <block id="ce90ba667f9b72c9d09d9562f81efad6" category="list-text">檢閱摘要，然後選取 * 完成 * 。</block>
   <block id="b89dbb3a27a140b56ee4c00016ec02b6" category="list-text">選取 * 瀏覽檔案 * 圖示，以檢視虛擬磁碟上的檔案和資料夾清單。</block>
@@ -2195,10 +2188,8 @@
   <block id="903d29a0523ca22e4dcbac24e33ef3f4" category="paragraph">如需支援版本的最新資訊、請<block ref="361fee5724018df312396e88d348d8b5" category="inline-link-rx"></block>參閱。</block>
   <block id="e48b6aae8f268fb1220ec073d110a1ec" category="paragraph">您無法從執行Linux客體作業系統的VM還原檔案和資料夾。不過、您可以附加VMDK、然後手動還原檔案和資料夾。如需支援來賓作業系統的最新資訊、請<block ref="361fee5724018df312396e88d348d8b5" category="inline-link-rx"></block>參閱。</block>
   <block id="1ebf62949d055407b1151236c6390c01" category="paragraph">您無法從執行Linux客體作業系統的VM還原檔案和資料夾。不過、您可以附加VMDK、然後手動還原檔案和資料夾。如需支援來賓作業系統的最新資訊、請<block ref="361fee5724018df312396e88d348d8b5" category="inline-link-rx"></block>參閱。</block>
-  <block id="c8a6eba78508876c1b9a258628d9ab40" category="paragraph">您可以搜尋特定的備份名稱或部分備份名稱，或是按一下篩選器圖示並選取日期和時間範圍，選取是否要包含 VMware 快照的備份，是否要掛載備份，以及主要或次要位置，以篩選備份清單。選取 * 確定 * 以返回精靈。</block>
   <block id="78e939bd5a7e9753b83a4aa950117e52" category="cell">從下拉式清單中選取 * 特定磁碟 * ，然後選取 * 下一步 * 。在資料存放區選擇表中、您可以選取或取消選取任何VMDK。</block>
   <block id="99b54fcdde08e8f03e3d080dede7ffaf" category="cell">選取目的地資料存放區，然後從清單中選取不同的資料存放區。</block>
-  <block id="d7a906f85d31c95c7ab0435b6e7cdc0f" category="paragraph">您可以搜尋特定的備份名稱或部分備份名稱，或是按一下篩選器圖示並選取日期和時間範圍，選取是否要包含 VMware 快照的備份，是否要掛載備份，以及位置，以篩選備份清單。選取 * 確定 * 以返回精靈。</block>
   <block id="98767e400dba33bddecdcdc37263012a" category="list-text">在 VMware vSphere 用戶端 GUI 中，選取工具列中的 * 功能表 * ，然後執行下列其中一項：</block>
   <block id="c6e0d914d3ce8312422c0f87cce38dec" category="cell">選取 * 主機與叢集 * 功能表選項，然後選取 VM ，然後選取 * 組態 * 索引標籤，然後在 * SnapCenter Plug-in for VMware vSphere 區段 * 中選取 * 備份 * 。</block>
   <block id="fb3dfed215ac2d206151a0e8d833297e" category="cell">選取 * 儲存 * 功能表選項，然後選取資料存放區，然後選取 * 設定 * 索引標籤，然後在 * SnapCenter Plug-in for VMware vSphere * 區段中選取 * 備份 * 。</block>
@@ -2224,4 +2215,14 @@
   <block id="3ffdb973715173d60486ae13bf2ee05d" category="list-text">選取 * 查看全部 * 以移至「工作監控」標籤，以取得所有工作的詳細資料。</block>
   <block id="ef93b45ade97012d47885d846fcd6b08" category="list-text">選取下拉式功能表以選取 * VMS* 或 * 資料存放區 * 。</block>
   <block id="463e735b6ee05559608eaafd56818816" category="list-text">選取 * 儲存 * 以儲存 Syslog 伺服器設定。</block>
+  <block id="13d524209ba94b0873b6255f4494fe81" category="list-text">選用：選取視窗底部的 * 最近工作 * 或儀表板 * 工作監控 * 以監控作業進度，以取得更多詳細資料。.result</block>
+  <block id="899accda8c7d730753ee12fb9b4342b1" category="list-text">選取 vSphere 功能表列左側的重新整理圖示，以重新整理備份清單。</block>
+  <block id="643e3f4c7463111dfd9afa193aa2e09c" category="paragraph">您可以選取下表所示的 * 功能表 &gt; 管理 &gt; 角色 * ，在 vCenter GUI 中查看預先定義的角色。</block>
+  <block id="c772934c065697aae46df88ed53eab3f" category="list-text">在 vCenter Server 中，瀏覽至 * Inventory * &gt; * Datastors* ，然後選取資料存放區。</block>
+  <block id="ef3c1d17a8f973bdf23643b64b38658f" category="list-text">在 SnapCenter Plug-in for VMware vSphere 區段中，選取 * 組態 * &gt; * 備份 * 。</block>
+  <block id="666970fb5d9dc8c5bae1257323fafeb9" category="paragraph">您可以搜尋特定的備份名稱或部分備份名稱，或是選取篩選器圖示並選取日期和時間範圍，選取是否要包含 VMware 快照的備份，是否要掛載備份，以及位置，以篩選備份清單。選取 * 確定 * 以返回精靈。</block>
+  <block id="1988ceb51e4af4b5dedd4e824e247a32" category="paragraph">在來賓工作階段監視器表格中，您可以選取 * 來顯示工作階段的其他資訊 ...* 在右欄中。</block>
+  <block id="2ce4687225c7becae3c948e55ccdcc4d" category="paragraph">您可以搜尋特定的備份名稱或部分備份名稱，或是選取篩選器圖示並選取日期和時間範圍，選取是否要包含 VMware 快照的備份，是否要掛載備份，以及主要或次要位置，以篩選備份清單。選取 * 確定 * 以返回精靈。</block>
+  <block id="f427270dda7af9bd5bacffe7bda1edcf" category="list-text">選用：選取畫面底部的 * 最近工作 * 來監控作業進度。</block>
+  <block id="6210995c19095fd21a24c3cd89967878" category="paragraph">您可以搜尋特定的備份名稱或部分備份名稱，或是選取篩選器圖示並選取日期和時間範圍，選取是否要包含 VMware 快照的備份，是否要掛載備份，以及位置，以篩選備份清單。選取 * 確定 * 以返回精靈。</block>
 </blocks>
