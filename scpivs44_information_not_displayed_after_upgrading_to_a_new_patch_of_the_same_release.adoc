@@ -44,7 +44,7 @@ summary: 將SnapCenter VMware vSphere的更新版的更新版更新為相同版�
 +
 當您部署適用於 VMware vSphere 的 SnapCenter 外掛程式時、會顯示 IP 位址。
 
-. 按一下左導覽窗格中的*組態*、然後按一下「*外掛程式詳細資料*」區段中的「服務」選項、即可停用外掛程式。
+. 在左側導航窗格中選擇 * 組態 * ，然後在 * 外掛詳細資料 * 區段中選取服務選項，以停用外掛程式。
 +
 SnapCenter Plug-in for VMware vSphere 服務已停用、且擴充功能已在 vCenter 中取消註冊。
 
@@ -54,7 +54,7 @@ SnapCenter Plug-in for VMware vSphere 服務已停用、且擴充功能已在 vC
 
 . 重新啟動vCenter Server。
 . 登入VMware vSphere用戶端。
-. 按一下左導覽窗格中的*組態*、然後按一下「*外掛程式詳細資料*」區段中的「服務」選項、以啟用外掛程式。
+. 在左側導航窗格中選擇 * 組態 * ，然後在 * 外掛詳細資料 * 區段中選取服務選項，以啟用外掛程式。
 +
 SnapCenter Plug-in for VMware vSphere 服務已啟用、且擴充功能已在 vCenter 中登錄。
 

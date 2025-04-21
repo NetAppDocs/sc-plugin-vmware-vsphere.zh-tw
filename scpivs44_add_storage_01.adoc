@@ -29,7 +29,7 @@ VMware vSphere 4.5及更新版本的支援VMware vSphere 4.5外掛程式、可�
 您必須將儲存叢集新增至適用於 VMware vSphere 的 SnapCenter 外掛程式、以及適用於 VMware vSphere 的 ONTAP 工具、才能使用 vVol DataProtection 。
 
 +
-如需詳細資訊，請參閱 ONTAP Tools for VMware vSphere 文件。此外，如需 ONTAP 工具支援版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+如需詳細資訊，請參閱 ONTAP Tools for VMware vSphere 文件。此外，如需 ONTAP 工具支援版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 
 
@@ -103,7 +103,7 @@ NOTE: 如果您使用 SnapCenter Plug-in for VMware vSphere 來支援 VMDK 上�
 
 | 將AutoSupport 故障操作的部分通知傳送至儲存系統 | 如果您想AutoSupport 要針對失敗的資料保護工作發出資訊提示、請勾選此方塊。您也必須在AutoSupport 儲存VM上啟用「支援功能」、並設定AutoSupport 「支援功能」電子郵件設定。 
 |===
-. 按一下「 * 新增 * 」。
+. 選取*「Add*」。
 +
 如果您新增儲存叢集、則會自動新增該叢集中的所有儲存VM。自動新增的儲存VM（有時稱為「內含」儲存VM）會以連字號（-）取代使用者名稱顯示在叢集摘要頁面上。使用者名稱只會針對明確的儲存實體顯示。
 

@@ -64,7 +64,7 @@ IMPORTANT: 請勿新增處於無法存取狀態的VM。雖然可以建立包含�
 .開始之前
 建立包含VVol VM的資源群組之前、必須先部署VMware的支援工具ONTAP 。
 
-如需詳細資訊，請參閱 ONTAP Tools for VMware vSphere 文件。此外，如需 ONTAP 工具支援版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+如需詳細資訊，請參閱 ONTAP Tools for VMware vSphere 文件。此外，如需 ONTAP 工具支援版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 .關於這項工作
 您可以隨時從資源群組新增或移除資源。
@@ -112,7 +112,7 @@ NOTE: 如果您選擇的是具有快照鎖定期間的備份原則，則需要�
 次要保護負責為資源群組中新增的資源建立複寫關係。
 
 .步驟
-. 在選擇控制閥外掛程式的左導覽窗格中、按一下 * 資源群組 * 、然後選取 * 建立 * 以啟動精靈。
+. 在選擇控制閥外掛程式的左導覽窗格中，選擇 * 資源群組 * ，然後選擇 * 建立 * 來啟動精靈。
 
 
 這是建立資源群組最簡單的方法。不過、您也可以執行下列其中一項、以單一資源建立資源群組：
@@ -186,10 +186,10 @@ NOTE: ASA R2 儲存系統不支援重新命名快照，因此不支援選擇控�
 資源群組中的虛擬機器和資料存放區名稱必須是唯一的。 
 
 
-| 可用的實體 | 選取您要保護的資源、然後按一下*>*、將您的選擇移至「選取的實體」清單。 
+| 可用的實體 | 選取您要保護的資源，然後選取 *>* ，將您的選擇移至選取的實體清單。 
 |===
 +
-當您按一下*下一步*時、系統會先檢查SnapCenter 哪些是由哪個系統管理、並與所選資源所在的儲存設備相容。
+當您選取 * 下一步 * 時，系統會先檢查 SnapCenter 是否管理，並與所選資源所在的儲存設備相容。
 
 +
 如果顯示此訊息 `Selected <resource-name> is not SnapCenter compatible` 、則所選資源與 SnapCenter 不相容。
@@ -263,12 +263,12 @@ image:secondary_protection.png["建立資源群組視窗"]
 +
 link:scpivs44_modify_the_time_zones.html["修改備份的時區"]。
 
-. 檢閱摘要，然後按一下 * 完成 * 。從 ASA R2 系統的 6.1 號選擇控制閥輔助保護開始，資源會顯示在摘要頁面中。
+. 檢閱摘要，然後選取 * 完成 * 。從 ASA R2 系統的 6.1 號選擇控制閥輔助保護開始，資源會顯示在摘要頁面中。
 +
-按一下「*完成*」之前、您可以返回精靈中的任何頁面並變更資訊。
+在選擇 *Finish （完成） * 之前，您可以返回嚮導中的任何頁面並更改信息。
 
 +
-按一下「*完成*」之後、新的資源群組就會新增到資源群組清單中。
+選取 * 完成 * 之後，新的資源群組就會新增到資源群組清單中。
 
 +
 
@@ -290,7 +290,7 @@ NOTE: 如果備份中任何VM的靜止作業失敗、則即使所選的原則已
 4.x版支援還原8.3.1及更新版本。SnapCenter ONTAP
 
 +
-適用於 VMware vSphere 的 SnapCenter 外掛程式不會針對所有 ONTAP 版本執行相容性檢查、僅適用於 ONTAP 8.2.1 版及更早版本。因此、請務必參閱 https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["NetApp互通性對照表工具IMT （不含）"^] 以取得 SnapCenter 支援的最新資訊。
+適用於 VMware vSphere 的 SnapCenter 外掛程式不會針對所有 ONTAP 版本執行相容性檢查、僅適用於 ONTAP 8.2.1 版及更早版本。因此、請務必參閱 https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["NetApp互通性對照表工具IMT （不含）"^] 以取得 SnapCenter 支援的最新資訊。
 
 * 共享的PCI設備已連接至VM。
 * SnapCenter 中未設定偏好的 IP 位址。

@@ -27,10 +27,10 @@ summary: 您可以從SnapCenter VMware vSphere GUI的VMware vSphere支援套件�
 +
 使用格式 `\https://<OVA-IP-address>:8080`。
 
-. 按一下頂端工具列中的「設定」圖示。
+. 選取頂端工具列中的「設定」圖示。
 +
 image:scpivs44_image10.png["適用於 VMware vSphere 介面的 SnapCenter 外掛程式"]
 
-. 在「*設定*」頁面的「*支援*」區段中、按一下「*產生支援*產品組合」。
-. 在產生支援服務包之後、按一下提供的連結、將產品組合下載至NetApp。
+. 在「 * 設定 * 」頁面的 * 支援 * 區段中，選取 * 產生支援 * 套件組合。
+. 產生支援套件後，請選取提供的連結，將套件下載至 NetApp 。
 

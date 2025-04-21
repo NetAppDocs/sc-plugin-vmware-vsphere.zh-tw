@@ -42,7 +42,7 @@ summary: 在部署虛擬應用裝置之前、您應該先瞭解部署需求。
 
 * 若要保護VVol VM（VMware vVol資料儲存區上的VM）、您必須先部署ONTAP VMware vSphere的功能介紹工具。支援VMware Web用戶端上的VMware工具、可在VMware Web用戶端上配置及配置vVols儲存設備ONTAP ONTAP 。
 +
-如需詳細資訊，請參閱 ONTAP Tools for VMware vSphere 文件。此外，如需 ONTAP 工具支援版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+如需詳細資訊，請參閱 ONTAP Tools for VMware vSphere 文件。此外，如需 ONTAP 工具支援版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 * SnapCenter Plug-in for VMware vSphere 由於虛擬機器在支援 Storage VMotion 方面的限制、因此對共用 PCI 或 PCIe 裝置（例如 NVIDIA Grid GPU ）的支援有限。如需詳細資訊、請參閱廠商的VMware部署指南文件。
 +
@@ -122,9 +122,9 @@ summary: 在部署虛擬應用裝置之前、您應該先瞭解部署需求。
 | 適用於陣列整合的VMware應用程式vStorage API（VAAI） | VMware vSphere的VMware vSphere外掛程式使用此功能來改善還原作業的效能。SnapCenter它也能改善NFS環境的效能。 
 
 
-| VMware的支援工具ONTAP | VMware vSphere的VMware vSphere外掛程式使用此功能來管理VVol資料存放區（VMware虛擬磁碟區）SnapCenter 。如需支援的版本、請 https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]參閱。 
+| VMware的支援工具ONTAP | VMware vSphere的VMware vSphere外掛程式使用此功能來管理VVol資料存放區（VMware虛擬磁碟區）SnapCenter 。如需支援的版本、請 https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]參閱。 
 |===
-如需支援版本的最新資訊、請 https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]參閱。
+如需支援版本的最新資訊、請 https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]參閱。
 
 
 

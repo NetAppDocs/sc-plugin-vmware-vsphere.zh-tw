@@ -20,14 +20,14 @@ summary: 您可以將單一 VM 或資料存放區快速新增至由 SnapCenter P
 您可以新增SAN和NAS資料存放區、但不能新增VSAN或VVOL資料存放區。
 
 .步驟
-. 在 vSphere 用戶端 GUI 中、按一下工具列中的 * 功能表 * 、然後瀏覽至您要新增的 VM 或資料存放區。
+. 在 vSphere 用戶端 GUI 中，選取工具列中的 * 功能表 * ，然後瀏覽至您要新增的 VM 或資料存放區。
 . 在左側瀏覽器窗格中、在 VM 或資料存放區上按一下滑鼠右鍵、從次要下拉式清單中選取 * SnapCenter Plug-in for VMware vSphere * > * 新增至資源群組 * 。
 +
 系統會先檢查SnapCenter 哪些是由元件管理、並與所選VM所在的儲存系統相容、然後顯示「*新增至資源群組*」頁面。如果SnapCenter 顯示「不兼容錯誤」訊息、表示所選的VM與SnapCenter 不兼容、您必須先將適當的儲存VM新增SnapCenter 至
 
-. 在「*新增至資源群組*」頁面中、選取資源群組、然後按一下「*確定*」。
+. 在 * 新增至資源群組 * 頁面中，選取資源群組，然後選取 * 確定 * 。
 +
-當您按一下「*確定*」時、系統會先檢查SnapCenter 哪些項目可加以管理、並與所選VM或資料存放區所在的儲存區相容。
+當您選取 * 確定 * 時，系統會先檢查 SnapCenter 是否管理，並與所選虛擬機器或資料存放區所在的儲存設備相容。
 
 +
 如果顯示此訊息 `Selected <resource-name> is not SnapCenter compatible` 、則所選的 VM 或資料存放區與 SnapCenter 不相容。如需詳細資訊、請參閱 link:scpivs44_create_resource_groups_for_vms_and_datastores.html#manage-compatibility-check-failures["管理相容性檢查失敗"] 。

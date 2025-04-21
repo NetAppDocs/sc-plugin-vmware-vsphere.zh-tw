@@ -25,7 +25,7 @@ NOTE: 對於 IPv6 位址 HTML Web 用戶端，您必須使用 Chrome 或 Firefox
 
 . 登入* VMware vCenter單一登入頁面*。
 . 在導覽窗格中、以滑鼠右鍵按一下任何虛擬機器的有效父物件（例如資料中心、資料夾、叢集或主機）、然後選取*部署OVF範本*以啟動VMware部署精靈。
-. 在「*選取OVF範本*」頁面上、指定「.ova」檔案的位置（如下表所列）、然後按「*下一步*」。
+. 在 * 選取 OVF 範本 * 頁面上，指定檔案的位置 `.ova`（如下表所列），然後選取 * 下一步 * 。
 +
 |===
 | 在此精靈頁面上… | 執行此操作… 
@@ -59,14 +59,14 @@ NOTE: 記下您指定的使用者名稱和密碼。如果SnapCenter 您想稍後
 
 
 
-| 準備好完成 | 檢閱頁面並按一下*「Finish」（完成）*。 
+| 準備好完成 | 查看頁面並選擇 * 完成 * 。 
 |===
 +
 
 NOTE: 所有主機都必須設定IP位址（不支援FQDN主機名稱）。部署作業不會在部署之前驗證您的輸入。
 
-. 瀏覽至部署 SnapCenter Plug-in for VMware vSphere 的虛擬機器、然後按一下 * Summary （摘要） * 索引標籤、再按一下 * Power On* （ * 開機）方塊以啟動 SnapCenter Plug-in for VMware vSphere 。
-. 當 SnapCenter Plug-in for VMware vSphere 開機時、以滑鼠右鍵按一下部署的 SnapCenter Plug-in for VMware vSphere 、選取 * 來賓作業系統 * 、然後按一下 * 安裝 VMware 工具 * 。
+. 瀏覽至部署 SnapCenter Plug-in for VMware vSphere 的虛擬機器，然後選取 * Summary （摘要） * 索引標籤，然後選取 * Power On* 方塊以啟動 SnapCenter Plug-in for VMware vSphere 。
+. 當 SnapCenter Plug-in for VMware vSphere 開機時，以滑鼠右鍵按一下部署的 SnapCenter Plug-in for VMware vSphere ，選取 * 來賓作業系統 * ，然後選取 * 安裝 VMware 工具 * 。
 +
 部署可能需要幾分鐘的時間才能完成。SnapCenter Plug-in for VMware vSphere 開機、 VMware 工具安裝完成、畫面會提示您登入適用於 VMware vSphere 的 SnapCenter 外掛程式、表示部署成功。
 
@@ -80,5 +80,5 @@ NOTE: 所有主機都必須設定IP位址（不支援FQDN主機名稱）。部�
 +
 使用部署時設定的管理員使用者名稱和密碼、以及使用維護主控台產生的 MFA 權杖登入。
 
-. 登入vCenter HTML5用戶端、然後按一下工具列中的*功能表*、然後選取* SnapCenter 適用於VMware vSpher*的「*插件」
+. 登入 vCenter HTML5 用戶端，然後選取工具列中的 * 功能表 * ，然後選取 * SnapCenter Plug-in for VMware vSphere *
 

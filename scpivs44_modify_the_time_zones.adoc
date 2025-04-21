@@ -32,12 +32,12 @@ summary: 當您為 SnapCenter Plug-in for VMware vSphere 資源群組設定備�
 +
 使用格式 `\https://<appliance-IP-address>:8080`
 
-. 按一下頂端工具列中的「設定」圖示。
+. 選取頂端工具列中的「設定」圖示。
 +
 image:scpivs44_image28.jpg["VMware vSphere的插件SnapCenter"]
 
-. 在「*設定*」頁面的「*日期與時間*」區段中、按一下「*編輯*」。
-. 選取新的時區、然後按一下*「Save（儲存）」*。
+. 在 * 設定 * 頁面上的 * 日期與時間 * 區段中，選取 * 編輯 * 。
+. 選取新的時區，然後選取 * 儲存 * 。
 +
 新時區將用於 SnapCenter Plug-in for VMware vSphere 執行的所有備份。
 

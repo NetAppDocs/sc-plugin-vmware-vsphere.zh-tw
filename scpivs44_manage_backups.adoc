@@ -26,12 +26,12 @@ summary: 您可以重新命名及刪除SnapCenter VMware vSphere的VMware vSpher
 NOTE: ASA R2 儲存系統不支援重新命名備份。
 
 .步驟
-. 按一下「*功能表*」並選取「*主機與叢集*」功能表選項、然後選取虛擬機器、再選取「*組態*」索引標籤、然後按一下「* SnapCenter VMware vSphere的*套件*」區段中的「*備份*」。
+. 選取 * 功能表 * 並選取 * 主機和叢集 * 功能表選項，然後選取 VM ，然後選取 * 組態 * 索引標籤，然後在 * SnapCenter Plug-in for VMware vSphere * 區段中選取 * 備份 * 。
 +
 image:scv50_image1.png["vSphere 用戶端畫面"]
 
-. 在「Configure（設定）」索引標籤上、選取備份、然後按一下「* Rename（*重新命名）」。
-. 在「*重新命名備份*」對話方塊中、輸入新名稱、然後按一下「*確定*」。
+. 在 Configure （配置）選項卡上，選擇備份，然後選擇 *Rename （重命名） * 。
+. 在 * 重新命名備份 * 對話方塊中，輸入新名稱，然後選取 * 確定 * 。
 +
 請勿在VM、資料存放區、原則、備份或資源群組名稱中使用下列特殊字元：&*$#@！\/：*？"<>-|；'、。允許使用底線字元（_）。
 
@@ -49,14 +49,14 @@ image:scv50_image1.png["vSphere 用戶端畫面"]
 .關於這項工作
 次要儲存設備上的快照是由您的 ONTAP 保留設定所管理，而非由適用於 VMware vSphere 的 SnapCenter 外掛程式所管理。因此，當您使用 SnapCenter Plug-in for VMware vSphere 刪除備份時，會刪除主要儲存設備上的快照，但不會刪除次要儲存設備上的快照。如果次要儲存設備上仍有快照，則適用於 VMware vSphere 的 SnapCenter 外掛程式會保留與備份相關的中繼資料，以支援還原要求。當 ONTAP 保留程序刪除次要快照時， SnapCenter Plug-in for VMware vSphere 會使用定期執行的清除工作來刪除中繼資料。
 
-. 按一下「*功能表*」並選取「*主機與叢集*」功能表選項、然後選取虛擬機器、再選取「*組態*」索引標籤、然後按一下「* SnapCenter VMware vSphere的*套件*」區段中的「*備份*」。
+. 選取 * 功能表 * 並選取 * 主機和叢集 * 功能表選項，然後選取 VM ，然後選取 * 組態 * 索引標籤，然後在 * SnapCenter Plug-in for VMware vSphere * 區段中選取 * 備份 * 。
 +
 image:scv50_image1.png["vSphere 用戶端視窗"]
 
-. 選取一或多個備份、然後按一下*刪除*。
+. 選取一或多個備份，然後選取 * 刪除 * 。
 +
 您最多可以選取40個要刪除的備份。
 
-. 單擊*確定*確認刪除操作。
+. 選取 * 確定 * 以確認刪除作業。
 . 按一下左側vSphere功能表列上的重新整理圖示、即可重新整理備份清單。
 

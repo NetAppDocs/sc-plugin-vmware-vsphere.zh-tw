@@ -23,7 +23,7 @@ SnapCenter Plug-in for VMware vSphere 包含一個 MySQL 資料庫（也稱為 N
 
 .步驟
 . 從 VMware vSphere 用戶端、選取 SnapCenter Plug-in for VMware vSphere 所在的 VM 。
-. 在虛擬應用裝置的 * 摘要 * 索引標籤中、按一下 * 啟動遠端主控台 * 或啟動 Web 主控台 * 以開啟維護主控台視窗。
+. 在虛擬應用裝置的 * 摘要 * 索引標籤中，選取 * 啟動遠端主控台 * 或啟動 Web 主控台 * 以開啟維護主控台視窗。
 +
 image:scpivs44_image21.png["維護主控台視窗"]
 

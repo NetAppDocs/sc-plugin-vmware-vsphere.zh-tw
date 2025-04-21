@@ -46,5 +46,5 @@ IMPORTANT: 請勿在REST API URL中使用下列字元：+、。、%和&。
 +
 登入使用vCenter驗證機制來產生權杖。
 
-. 按一下API資源類型、以該資源類型顯示API。
+. 選取 API 資源類型，以該資源類型顯示 API 。
 

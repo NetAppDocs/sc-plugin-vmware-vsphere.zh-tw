@@ -32,7 +32,7 @@ NOTE:  VMware vCenter 7u1及更新版本支援OVA部署。
 * 您必須登出並關閉 vSphere 用戶端的所有瀏覽器工作階段、並刪除瀏覽器快取、以避免在部署 SnapCenter Plug-in for VMware vSphere 期間發生瀏覽器快取問題。
 * 您必須在vCenter中啟用傳輸層安全性（TLS）。請參閱VMware文件。
 * 如果您計畫在 vCenter 中執行備份、但部署 SnapCenter Plug-in for VMware vSphere 的 vCenter 除外、那麼 ESXi 伺服器、 SnapCenter Plug-in for VMware vSphere 、以及每個 vCenter 都必須同步到同一時間。
-* 若要保護VVol資料存放區上的VM、您必須先部署ONTAP VMware vSphere的功能介紹工具。如需支援版本的 ONTAP 工具的最新資訊、請 https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]參閱。可在VMware Web用戶端上配置及配置VMware上的儲存設備ONTAP ONTAP 。
+* 若要保護VVol資料存放區上的VM、您必須先部署ONTAP VMware vSphere的功能介紹工具。如需支援版本的 ONTAP 工具的最新資訊、請 https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]參閱。可在VMware Web用戶端上配置及配置VMware上的儲存設備ONTAP ONTAP 。
 
 
 將 SnapCenter Plug-in for VMware vSphere 部署在與 vCenter 相同的時區。備份排程會在部署 SnapCenter Plug-in for VMware vSphere 的時區執行。 vCenter 會在 vCenter 所在的時區中報告資料。因此、如果 SnapCenter Plug-in for VMware vSphere 和 vCenter 位於不同的時區、 SnapCenter Plug-in for VMware vSphere 儀表板中的資料可能與報告中的資料不同。
@@ -47,16 +47,16 @@ NOTE: 對於 IPv6 位址 HTML Web 用戶端，您必須使用 Chrome 或 Firefox
 . 登入「* VMware vCenter單一登入*」頁面。
 . 在導覽器窗格中、以滑鼠右鍵按一下虛擬機器的有效父物件（例如資料中心、叢集或主機）、然後選取 * 部署 OVF Template* 以啟動 VMware 部署精靈。
 . 將包含.ova檔案的.tar檔案擷取至本機系統。在「*選取OVF範本*」頁面上、指定的位置 `.ova` 檔案位於.tar解壓縮資料夾內。
-. 單擊 * 下一步 * 。
-. 在「*選取名稱與資料夾*」頁面上、輸入VM或vApp的唯一名稱、然後選取部署位置、再按「*下一步*」。
+. 選擇*下一步*。
+. 在 * 選取名稱和資料夾 * 頁面上，輸入 VM 或 vApp 的唯一名稱，然後選取部署位置，然後選取 * 下一步 * 。
 +
 此步驟會指定匯入的位置 `.tar` 歸檔至vCenter。VM的預設名稱與所選的名稱相同 `.ova` 檔案：如果您變更預設名稱、請在每個vCenter Server VM資料夾中選擇唯一的名稱。
 
 +
 VM的預設部署位置是啟動精靈的詳細目錄物件。
 
-. 在「*選取資源*」頁面上、選取您要執行已部署VM範本的資源、然後按一下「*下一步*」。
-. 在*檢閱詳細資料*頁面上、確認 `.tar` 範本詳細資料、然後按一下*下一步*。
+. 在 * 選取資源 * 頁面上，選取要執行已部署 VM 範本的資源，然後選取 * 下一步 * 。
+. 在 * 檢閱詳細資料 * 頁面上，確認 `.tar`範本詳細資料，然後選取 * 下一步 * 。
 . 在「*授權合約*」頁面上、勾選「*我接受所有授權合約*」核取方塊。
 . 在「*選取儲存設備*」頁面上、定義儲存已部署OVF範本檔案的位置和方式。
 +
@@ -80,7 +80,7 @@ VM的預設部署位置是啟動精靈的詳細目錄物件。
 +
 來源網路欄會列出OVA範本中定義的所有網路。
 
-.. 在 *IP Allocation Settings* 部分中，選擇所需的 IP 地址協議，然後單擊 *Next* 。
+.. 在 *IP Allocation Settings* 部分中，選擇所需的 IP 地址協議，然後選擇 *Next* 。
 +
 VMware vSphere的VMware vSphere外掛程式支援單一網路介面。SnapCenter如果您需要多個網路介面卡、則必須手動設定。請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_create_additional_network_adapters_in_NDB_and_SCV_4.3["KB文章：如何建立其他網路介面卡"^]。
 
@@ -117,7 +117,7 @@ IMPORTANT: 如果您想繼續使用DHCP做為網路組態、您可以跳過這�
 .. 在*設定日期與時間*中、選取vCenter所在的時區。
 
 
-. 在「*準備完成*」頁面上、檢閱頁面、然後按一下「*完成*」。
+. 在 * 準備完成 * 頁面上，檢閱該頁面，然後選取 * 完成 * 。
 +
 所有主機都必須設定IP位址（不支援FQDN主機名稱）。部署作業不會在部署之前驗證您的輸入。
 
@@ -127,8 +127,8 @@ IMPORTANT: 如果您想繼續使用DHCP做為網路組態、您可以跳過這�
 +
 SnapCenter Plug-in for VMware vSphere 成功部署後、即會部署為 Linux VM 、並向 vCenter 註冊、並安裝 VMware vSphere 用戶端。
 
-. 瀏覽至部署 SnapCenter Plug-in for VMware vSphere 的虛擬機器、然後按一下 * Summary （摘要） * 索引標籤、再按一下 * Power On* （ * 開機）方塊以啟動虛擬應用裝置。
-. 當 SnapCenter Plug-in for VMware vSphere 開機時、以滑鼠右鍵按一下部署的 SnapCenter Plug-in for VMware vSphere 、選取 * 來賓作業系統 * 、然後按一下 * 安裝 VMware 工具 * 。
+. 瀏覽至部署 SnapCenter Plug-in for VMware vSphere 的虛擬機器，然後選取 * Summary （摘要） * 索引標籤，然後選取 * Power On* （開啟電源）方塊以啟動虛擬應用裝置。
+. 當 SnapCenter Plug-in for VMware vSphere 開機時，以滑鼠右鍵按一下部署的 SnapCenter Plug-in for VMware vSphere ，選取 * 來賓作業系統 * ，然後選取 * 安裝 VMware 工具 * 。
 +
 VMware 工具安裝在部署 SnapCenter Plug-in for VMware vSphere 的 VM 上。如需安裝VMware工具的詳細資訊、請參閱VMware文件。
 

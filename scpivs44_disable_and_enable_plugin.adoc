@@ -35,7 +35,7 @@ link:scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.h
 +
 部署外掛程式時、會顯示 SnapCenter Plug-in for VMware vSphere 的 IP 位址。
 
-. 按一下左導覽窗格中的*組態*、然後取消選取「*外掛程式詳細資料*」區段中的「服務」選項、以停用外掛程式。
+. 在左側導航窗格中選擇 *Configuration* ，然後取消選擇 *Plug-In Details* 部分中的 Service 選項以禁用插件。
 . 確認您的選擇。
 +
 ** 如果您只使用 SnapCenter Plug-in for VMware vSphere 來執行 VM 一致的備份
