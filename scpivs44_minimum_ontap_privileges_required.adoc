@@ -28,7 +28,7 @@ NOTE: 從 SnapCenter Plug-in for VMware （ SCV ） 5.0 開始、您需要將 HT
 |===
 
 
-| All Access 命令： ONTAP 8.3 及更新版本所需的最低權限。 
+| All Access 命令：最低 ONTAP Privileges 。 
 
 
 | 事件generate-autosup-log 
@@ -54,13 +54,13 @@ NOTE: 從 SnapCenter Plug-in for VMware （ SCV ） 5.0 開始、您需要將 HT
 | vserver CIFS vserver CIFS 共享區 create vserver CIFS 共享刪除 vserver CIFS ShadowCopy show vserver CIFS 共享 show vserver CIFS show vserver show vserver 輸出原則 vserver 輸出原則 create vserver 輸出原則刪除 vserver 輸出原則規則 create vserver 輸出原則規則 show vserver 
 |===
 |===
-| 唯讀命令：ONTAP 要求具備最低權限才能執行更新版本的功能 
+| 唯讀命令：最低 ONTAP Privileges 
 
 
 | 叢集識別顯示網路介面顯示 vserver vserver 對等 vserver show 
 |===
 |===
-| All Access 命令： ONTAP 9 及更新版本所需的最低權限。 
+| All Access 命令：最低 ONTAP Privileges 
 
 
 | 一致性群組儲存單元展示 
@@ -74,15 +74,6 @@ NOTE: 您可以忽略有關不支援的 vserver 命令的警告訊息。
 
 == 其他ONTAP 資訊
 
-* 如果您執行ONTAP 的是版本8.2.x：
-+
-您必須在儲存虛擬機器上以「vsadmin」身分登入、才能擁有SnapCenter 適當的權限來執行VMware vSphere作業的VMware vSphere外掛程式。
-
-* 如果您執行ONTAP 的是版本不含更新版本的版本：
-+
-您必須以「vsadmin」身分登入、或以具有上表所列最低權限的角色登入。
-
-* 您必須是叢集管理員、才能建立及管理使用者角色。您可以將使用者與叢集儲存VM或儲存VM建立關聯。
 * 您需要 ONTAP 9.12.1 或更新版本才能使用 SnapMirror 主動式同步功能。
 * 若要使用防竄改快照（ TPS ）功能：
 +

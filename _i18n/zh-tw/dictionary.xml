@@ -3,8 +3,6 @@
   <block id="ad9f0ab39477422bbfaba6b4d195bb7d" category="summary">本節提供SnapCenter 適用於VMware vSphere的VMware vSphere的VMware Plug-in授權資訊。</block>
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="doc">授權</block>
   <block id="37a5d1dae75f5af8c4ce47ae7e6714b0" category="paragraph">如果您使用下列儲存系統、則VMware vSphere的VMware vSphere外掛程式為免費產品：SnapCenter</block>
-  <block id="149f0ea389848f479bd80af6375b383b" category="list-text">FAS</block>
-  <block id="c8984126713ed072b9cb0a44a162be4d" category="list-text">AFF</block>
   <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="list-text">Cloud Volumes ONTAP</block>
   <block id="3a3a5cd068731551120f43f37950768b" category="list-text">ONTAP Select</block>
   <block id="4ecac70efff8d20a57fcdc88eed604e5" category="paragraph">我們建議您將SnapCenter 不需要的「不二用」授權新增至次要目的地。如果SnapCenter 在二線系統上未啟用「支援功能」、SnapCenter 則在執行容錯移轉作業之後、將無法使用「支援功能」。不過、執行掛載和附加作業時、必須在二線儲存設備上取得FlexClone授權。執行還原作業需要使用此功能的不必要授權。SnapRestore</block>
@@ -329,17 +327,11 @@
   <block id="510b17a83061d1709c7a07368d7f8b8f" category="cell">LUN LUN LUN建立LUN刪除LUN igroup新增LUN igroup建立LUN igroup刪除LUN igroup重新命名LUN igroup顯示LUN對應新增報告節點LUN對應建立LUN對應刪除LUN對應移除報告節點LUN對應顯示LUN修改LUN移入Volume LUN離線LUN線LUN持續保留清除LUN重新調整LUN序列大小 LUN顯示</block>
   <block id="847b8685554d07af7c2a25cc92eb932c" category="cell">SnapMirror清單目的地SnapMirror原則附加規則SnapMirror原則修改規則SnapMirror原則移除規則SnapMirror原則顯示SnapMirror還原SnapMirror顯示SnapMirror顯示SnapMirror顯示SnapMirror顯示歷史記錄SnapMirror更新SnapMirror更新ls-set</block>
   <block id="34b6cd75171affba6957e308dcbd92be" category="cell">版本</block>
-  <block id="c6752ce5f8c095ac974d2740edaf533c" category="cell">唯讀命令：ONTAP 要求具備最低權限才能執行更新版本的功能</block>
   <block id="7a69b919de28d081f80cd742609937a9" category="section-title">其他ONTAP 資訊</block>
-  <block id="e1b5d32e8fe1a59649c2037bad33b68d" category="list-text">如果您執行ONTAP 的是版本8.2.x：</block>
-  <block id="6735a8ae7975c90de27a83556fa63791" category="paragraph">您必須在儲存虛擬機器上以「vsadmin」身分登入、才能擁有SnapCenter 適當的權限來執行VMware vSphere作業的VMware vSphere外掛程式。</block>
-  <block id="c1baf46f8c1f04fa3cc96df859f88fe2" category="list-text">如果您執行ONTAP 的是版本不含更新版本的版本：</block>
-  <block id="8134cf1fb1cf193c0ab9fa188232e858" category="paragraph">您必須以「vsadmin」身分登入、或以具有上表所列最低權限的角色登入。</block>
   <block id="e7683ab9f61fe80a16f3111a33febbda" category="summary">您可以修改SnapCenter 在VMware vSphere的VMware vSphere的VMware Plug-in中設定的網路設定。外掛程式會使用這些設定來存取vCenter。</block>
   <block id="d120dfcded58a5506ff23bf511e0f19f" category="doc">修改網路設定</block>
   <block id="3c1620dc3cd833488e7cde6109b6d1bb" category="list-text">如果您要移除網路設定、請執行下列動作：</block>
   <block id="6888e60d18ef291e7b86bc7e530fe2a8" category="doc">新增儲存設備</block>
-  <block id="870f0ed51d3e289298f9a13baa95d1fe" category="summary">VMware vSphere的支援VMware vSphere外掛程式提供額外層級的RBAC、可用於管理虛擬化資源。SnapCenter外掛程式同時支援vCenter Server RBAC和Data ONTAP VMware RBAC。</block>
   <block id="721796b1cb3468f0daf819180184d460" category="doc">角色型存取控制（RBAC）</block>
   <block id="6fc948db6bfb5ca3b3b32b543334051c" category="summary">附加虛擬磁碟以還原個別檔案之後、即可將虛擬磁碟與父VM分離。</block>
   <block id="656b1941061949fe21d495b2d2fa4764" category="doc">分離虛擬磁碟</block>
@@ -582,7 +574,6 @@
   <block id="a24b5bfa95a0c9efe3023cae447296e6" category="list-text">您無法從NTFS檔案系統還原為FAT檔案系統。</block>
   <block id="b4d6235f9c53c6f6c0666f45953094dc" category="paragraph">當您嘗試從NTFS格式還原為FAT-format時、不會複製NTFS安全性描述元、因為該檔案系統不支援Windows安全性屬性。</block>
   <block id="a23a5720d2a1cff6970cbb72b31dc86c" category="list-text">您無法從複製的VMDK或未初始化的VMDK還原來賓檔案。</block>
-  <block id="87fa4d49105a1527bc0047c786529a68" category="list-text">如果備份是在執行ONTAP VMware 9.2或更新版本的系統上執行、而且VMware一致性選項已開啟、則無法從次要備份還原。</block>
   <block id="fb0007811dddc85c888a6d43364c9f0e" category="list-text">您無法還原檔案的目錄結構。</block>
   <block id="e085ff08a4d4a15ca5651b7170581786" category="paragraph">如果選取要還原巢狀目錄中的檔案、則不會使用相同的目錄結構來還原檔案。目錄樹狀結構不會還原、只會還原檔案。如果您想要還原目錄樹狀結構、可以複製結構頂端的目錄本身。</block>
   <block id="629ec47b81132f329d4136880bd3bbde" category="list-text">您無法還原加密的來賓檔案。</block>
@@ -787,11 +778,6 @@
   <block id="67b9c02e71508024192e407aa7425aa2" category="inline-link-macro">修改備份的時區</block>
   <block id="381ccd52bbe70b77caebf5b7721bc854" category="paragraph"><block ref="a1b611f7f1d7d8197cb1d43fb49ccfda" category="inline-link-macro-rx"></block>。</block>
   <block id="2ff2dc58f2ec2635705f09ff662f69ce" category="admonition">如果備份中任何VM的靜止作業失敗、則即使所選的原則已選取VM一致性、備份也會標示為不符合VM。在這種情況下、有些VM可能會成功靜止。</block>
-  <block id="cf1527bd9ad516f4468aa9b7475269a6" category="paragraph">當您嘗試建立資源群組時、會執行相容性檢查。SnapCenter</block>
-  <block id="89998c90c88ae3437d33fb3de7d2214a" category="paragraph">不相容的原因可能是：</block>
-  <block id="7007a0750d953e128d4f70c36217f054" category="list-text">VMDK位於不受支援的儲存設備上、例如ONTAP 在7-Mode或非ONTAP裝置上執行的VMware系統上。</block>
-  <block id="fcd86cc596f822c816f0c6770a216f38" category="list-text">資料存放區位於執行叢集Data ONTAP 式NetApp版本的NetApp儲存設備上。</block>
-  <block id="62fc2c3502f537ee988c89c46b547a37" category="paragraph">4.x版支援還原8.3.1及更新版本。SnapCenter ONTAP</block>
   <block id="4f11690e32499ec1417798db9cb86f8c" category="list-text">共享的PCI設備已連接至VM。</block>
   <block id="0fedd6a15e25fa11397167b4d416ea5d" category="list-text">儲存VM已關閉。</block>
   <block id="36ad1dce650c053e9a51c798abf9f8ec" category="paragraph">若要修正相容性錯誤、請執行下列步驟：</block>
@@ -868,7 +854,6 @@
   <block id="9efc9e0c08da510b5195bb9dc4b1b7c2" category="list-text">不支援的字元</block>
   <block id="69a02b2d668a0ebee1d9ac100a00074c" category="paragraph">請勿在VM、資料存放區、叢集、原則、備份、 或資源群組名稱：%&amp;*$#@！\/：*？"&lt;&gt;-|；'、。</block>
   <block id="a923c6bf503ee78e9fc4b4479248cff6" category="list-text">指定保留設定。</block>
-  <block id="427e05e41441693fe3177478aa3c69eb" category="admonition">最大保留值為1018個備份ONTAP 、可備份到位於更新版本的資源、ONTAP 而備份到位在更新版本的資源中、則有254個備份用於位在更新版本的版本上。如果保留設定的值高於基礎ONTAP 版支援的值、則備份將會失敗。跨距資料存放區也是如此。如果跨越資料存放區同時包含ONTAP 有關支援的資源、請ONTAP 務必將保留值設為低於254。</block>
   <block id="6e0b19728555d1c2b7bc98ce7895aced" category="list-text">指定頻率設定。</block>
   <block id="52b19e85e6a29b6fe5690f47944f859f" category="paragraph">原則僅指定備份頻率。備份的特定保護排程是在資源群組中定義。因此、兩個或多個資源群組可以共用相同的原則和備份頻率、但備份排程不同。</block>
   <block id="cf8572abaca84a096c3646473a75b21b" category="list-text">在* Replication *欄位中、指定複寫至次要儲存設備的類型、如下表所示：</block>
@@ -1243,7 +1228,6 @@
   <block id="007b03bd2ae7b16d42b53ba8a2330186" category="list-text">不支援橫跨VM的VVOL資料存放區。由於未備份虛擬機器跨距vVol資料存放區中附加的VMDK、因此還原的VM只會包含部分VMDK。</block>
   <block id="3517efb765e07026ad62bc8e70a5e01a" category="list-text">您無法將VVol還原至其他主機。</block>
   <block id="c06551216ac3dfe9b7ff1f728845efe6" category="list-text">不支援VVOL自動重新平衡。</block>
-  <block id="ec6b0c2e1fb8998a9149b0e870ce2442" category="list-text">您必須是叢集管理員、才能建立及管理使用者角色。您可以將使用者與叢集儲存VM或儲存VM建立關聯。</block>
   <block id="2cb2843b629d315325aac076907ec4b9" category="cell">VMware ESXi伺服器連接埠</block>
   <block id="ad676153bac7535311261fab671b77b9" category="cell">443（HTTPS）、雙向來賓檔案還原功能使用此連接埠。</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">結果</block>
@@ -1497,7 +1481,6 @@
   <block id="e4a12f0fbb9826ac14f77b5900667702" category="list-text">輸入 4.1/稽 核 / 組態：更新稽核和 Syslog 伺服器組態</block>
   <block id="5a45aec0c204e47b4e71ecbc5dcadda3" category="cell"><block ref="75371f10a46d4139703f34445143f3ea" prefix="" category="inline-code"></block></block>
   <block id="7caafda1d6b7396b069aa01f2f730175" category="cell">更新 Syslog 伺服器憑證</block>
-  <block id="b7b46ce5d1a547db89c0bc615ff272a5" category="list-text">ASA</block>
   <block id="5258377f2e9e8d3d391eece64e6c5025" category="paragraph"><block ref="8214327d71770f15589ad8ef083206a6" category="inline-link-macro-rx"></block>。</block>
   <block id="6f30de27462e7513b2536a2c20f5b4f0" category="list-text">在 * 原則 * 頁面上、選取 * 建立 * 以啟動精靈。</block>
   <block id="88ae28e59dc3874fd82752642fcf546a" category="inline-image-macro">vCenter UI</block>
@@ -1701,8 +1684,6 @@
   <block id="e90ae72a4d203cde9c1d660d983bec13" category="list-text">SnapMirror 主動式同步可讓業務服務持續運作、即使整個站台故障也沒問題、支援應用程式使用次要複本以透明方式容錯移轉。</block>
   <block id="c2bc8f54778a0e6f72a8fa3f9c96aae7" category="admonition">SnapMirror 主動同步僅支援 VMFS 資料存放區。</block>
   <block id="cae2d1284a0f6ccabe57939c8b8ad176" category="paragraph">若要在 SnapMirror 主動式同步部署上保護 VMFS 資料存放區、身為 SnapCenter 管理員、您需要：</block>
-  <block id="e43b6d42c084ea82997a88a9d026236a" category="inline-link">TR-4878 ： SnapMirror 主動同步（以前稱爲 SMBC ）</block>
-  <block id="5cefaf60738eca04f3a2c8ae491cff01" category="list-text">按照技術報告中的說明配置羣集和調解器：<block ref="dbd8dacf801f7f0689c0fe2812237b08" category="inline-link-rx"></block>。</block>
   <block id="a873006631aa7f356ec5a7fc41e0133d" category="list-text">將與 VMFS 資料存放區相關的磁碟區新增至一致性群組、並在兩個 ONTAP 儲存系統之間使用 _AutomatedFailovert_ 或 _AutomatedFailOverDuplex_ 保護原則建立資料保護關係。自 ONTAP 9.15.1 版起支援 _AutomatedFailOverDuplex_ 原則。</block>
   <block id="e2d3fabbf465949e2cc7e077aa8dcf1f" category="admonition">若要在 SnapMirror 主動式同步部署上保護 VMFS 資料存放區、您必須先完成 _ 開始之前 _ 一節所述的先決條件、並在備份後啟用 * 更新 SnapMirror * 。</block>
   <block id="c852f476fffd15ea31d953d2cd0be4cd" category="admonition">您必須在VM上執行VMware工具、才能執行VM一致的備份。如果 VMware 工具未執行、則會執行損毀一致的備份。</block>
@@ -1807,7 +1788,6 @@
   <block id="fd809cf0fe9ef13998aa1e0323960d5d" category="list-text">在適用於 VMware vSphere 的 Linux SnapCenter 外掛程式上啟動備份工作。</block>
   <block id="aee31424ca1b9b281c02d03f7ac377e8" category="list-text">向 SnapCenter 註冊 SnapCenter Plug-in for VMware vSphere 主機、以支援虛擬化資料庫和檔案系統（透過 VMDK 備份的應用程式）的應用程式型備份。</block>
   <block id="25d3d5cc2932319d2a5ac63ec6d3af42" category="paragraph">應用程式型VMDK備份的中繼資料儲存在SnapCenter VMware Server儲存庫中。VM 和資料存放區備份的中繼資料會儲存在適用於 VMware vSphere MySQL 儲存庫的 SnapCenter 外掛程式中。</block>
-  <block id="86c9bcf1bbcb7b1ccccb458aa66555aa" category="cell">All Access 命令： ONTAP 8.3 及更新版本所需的最低權限。</block>
   <block id="de92ae935b9e0d1f381bebce31b4ae2e" category="cell">叢集識別顯示網路介面顯示 vserver vserver 對等 vserver show</block>
   <block id="f492e93d9d3e86fc62690b1632797659" category="list-text">您需要 ONTAP 9.12.1 或更新版本才能使用 SnapMirror 主動式同步功能。</block>
   <block id="edf08e5a72e49a6f8e59f09ad7747a6b" category="admonition">從 ONTAP 9.11.1 版開始、與 ONTAP 叢集的通訊是透過 REST API 進行。ONTAP 使用者應已啟用 http 應用程式。不過、如果 ONTAP REST API 發生問題、組態金鑰「 force_ZAPI 」可協助您轉換至傳統的 ZAPI 工作流程。您可能需要使用組態 API 新增或更新此金鑰、並將其設為 true 。如需詳細資訊、請參閱知識庫文章<block ref="1c569ff15e6174002858600fc974b74f" category="inline-link-rx"></block> 。</block>
@@ -1866,7 +1846,6 @@
   <block id="b59c69b3461a70dfc0aa2e0732ab7524" category="list-text">連接與還原作業會使用預設的SCSI控制器來連接VMDK。不過、當備份連接至具有 NVMe 磁碟的 VM 的 VMDK 時、附加和還原作業會使用 NVMe 控制器（如果有）。</block>
   <block id="ebdc37577a43d781541f86f380fcfba9" category="list-text">在左側瀏覽器窗格中、以滑鼠右鍵按一下 VM 、然後在下拉式清單中選取 * SnapCenter Plug-in for VMware vSphere * 、然後在次要下拉式清單中選取 * 還原 * 。</block>
   <block id="0e75737369597ad96531f41e66789232" category="paragraph">您必須先使用 SnapCenter Plug-in for VMware vSphere 建立 VM 備份、才能還原 VM 。</block>
-  <block id="8afc1242eb1afb36331fc8a76c44f4f3" category="admonition">如果您要還原刪除的 VM 、則新增至 SnapCenter Plug-in for VMware vSphere 的儲存 VM 認證必須是<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 或具有與相同權限的使用者帳戶<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block>。主機必須位於執行ONTAP 不支援的儲存系統上。</block>
   <block id="b2c2581a4bff93f5e7e86553f208ea7a" category="list-text">在左側瀏覽器窗格中、以滑鼠右鍵按一下 VM 、然後在下拉式清單中選取 * SnapCenter Plug-in for VMware vSphere * 、然後在次要下拉式清單中選取 * 還原 * 以啟動精靈。</block>
   <block id="4429326cdd44b49170875918b6c87c61" category="paragraph">不只適用於不一致的VMware應用程式（應用程式透過VMDK）工作。SnapCenter ONTAP SnapCenter如果您使用 SnapCenter Plug-in for VMware vSphere 來支援 SnapCenter 應用程式一致的工作、則必須指派 SnapCenterAdmin 角色；您無法變更 SnapCenterAdmin 角色的權限。</block>
   <block id="daddcdb6f4e222f66428fc58f93d51ca" category="paragraph">SnapCenter Plug-in for VMware vSphere 隨附預先定義的 vCenter 角色。您必須使用vCenter GUI、將這些角色新增至vCenter Active Directory使用者、才能執行SnapCenter 各項功能。</block>
@@ -1967,7 +1946,6 @@
   <block id="d106abcc28b08528e977427482cfc257" category="paragraph">您可以在多個類別中進行變更。您也可以在此選項中編輯次要受保護的資源。</block>
   <block id="875b0302744a0f026125fde0002031ee" category="cell">Volume clone create volume clone show volume clone 分割 start volume clone 分割狀態 volume clone 分割 stop volume create volume destroy volume file clone create volume file show-disk-usage SnapLock volume offline volume clase-feature volume 修改 volume qtree create volume qtree delete volume qtree 修改 volume qtree show volume 限制 Volume 顯示 Volume 快照建立 Volume 快照刪除 Volume 快照修改 Volume snapshot mode-time-cluse-time-cluse-time-cluse-cluse-命令 重命名 Volume</block>
   <block id="8f63ee5bc3100343496937f88eb71b0f" category="cell">vserver CIFS vserver CIFS 共享區 create vserver CIFS 共享刪除 vserver CIFS ShadowCopy show vserver CIFS 共享 show vserver CIFS show vserver show vserver 輸出原則 vserver 輸出原則 create vserver 輸出原則刪除 vserver 輸出原則規則 create vserver 輸出原則規則 show vserver</block>
-  <block id="5e7e64c339a65a35f9dd642d25809870" category="cell">All Access 命令： ONTAP 9 及更新版本所需的最低權限。</block>
   <block id="4e822e8bd084f0d55645c04096f9f2e8" category="cell">一致性群組儲存單元展示</block>
   <block id="73bf8d0963d0fce608d5706a43357517" category="admonition">如果同時使用 IPv4 和 IPv6 位址，則無法同時移除兩個網路設定。其餘網路必須指定DNS伺服器和搜尋網域欄位。</block>
   <block id="82483f0ce94e070521dde3173ea8f007" category="list-text">您執行的是 IPv4 位址， SnapCenter VMware vSphere 主機有兩個 IP 位址。因此、工作要求會傳送到SnapCenter 無法被該伺服器辨識的IP位址。若要避免此問題、請新增您要使用的IP位址、如下所示：</block>
@@ -1986,7 +1964,6 @@
   <block id="2fd5adf936b993ca4d80eea4c1f5d1e5" category="summary">瞭解適用於 VMware vSphere 6.1 的 SnapCenter 外掛程式所提供的新功能。</block>
   <block id="6ac456c08060bbfaa97a7dd6e787b943" category="doc">適用於 VMware vSphere 6.1 的 SnapCenter 外掛程式的新功能</block>
   <block id="21d5f6e174bd644ffb485588eaf88aa1" category="paragraph">* 支援 ASA R2 系統上的 VM 和 VMFS 資料存放區 *</block>
-  <block id="4ff1c74f59c8af7628ad4bba73e7a214" category="paragraph">VMware vSphere 6.1 版的 SnapCenter 外掛程式現在支援在 ASA R2 系統上佈建虛擬機器（ VM ）和 VMFS 資料存放區。ASA R2 系統提供統一化的硬體與軟體解決方案，可針對僅限 SAN 的客戶需求，提供簡化的體驗。適用於 VMware vSphere 6.1 的 SnapCenter 外掛程式支援 ASA R2 系統上的虛擬機器，資料存放區和虛擬機器磁碟格式（ VMDK ）功能包括：</block>
   <block id="58750fe248e0ff18b9fc2f1aef5f3790" category="list-text">一致性群組資源配置，提供主要保護</block>
   <block id="9a1901c6fb175880508a4835b0898446" category="list-text">複製工作流程</block>
   <block id="d4fc87c71eab8d183e02273ad78a7c04" category="list-text">還原工作流程</block>
@@ -2039,8 +2016,6 @@
   <block id="b2ca7b7f9ce9a9907bcc75c5514315e5" category="paragraph">次要儲存設備上的快照是由您的 ONTAP 保留設定所管理，而非由適用於 VMware vSphere 的 SnapCenter 外掛程式所管理。因此，當您使用 SnapCenter Plug-in for VMware vSphere 刪除備份時，會刪除主要儲存設備上的快照，但不會刪除次要儲存設備上的快照。如果次要儲存設備上仍有快照，則適用於 VMware vSphere 的 SnapCenter 外掛程式會保留與備份相關的中繼資料，以支援還原要求。當 ONTAP 保留程序刪除次要快照時， SnapCenter Plug-in for VMware vSphere 會使用定期執行的清除工作來刪除中繼資料。</block>
   <block id="73de513c4d9b5d1aede9f09e6412115d" category="paragraph">您可以修改SnapCenter VMware vSphere資源群組適用的VMware vSphere外掛程式原則。當原則附加至資源群組時，您可以修改頻率，複寫選項，快照保留設定或指令碼資訊。</block>
   <block id="ae969b2c3623f7b712e8dc90ea64bc7e" category="paragraph">所有資源群組刪除作業都會在強制刪除時執行。刪除作業會將所有原則從 vCenter 資源群組中分離，從 SnapCenter Plug-in for VMware vSphere 移除資源群組，並刪除資源群組的所有備份和快照。</block>
-  <block id="9211a296b4cd2f3f54ffbe3156475a01" category="admonition">在 SnapVault 關係中，無法刪除最後一個快照，因此無法刪除資源群組。刪除屬於 SnapVault 關係一部分的資源群組之前，您必須使用 OnCommand System Manager 或 ONTAP CLI 移除 SnapVault 關係，然後必須刪除最後一個快照。</block>
-  <block id="ce2c264a7f2ac0d42d9d859e550d04e7" category="paragraph">如果您在受 SnapVault 排程保護且執行 ONTAP 8.3 的 SnapVault 目的地磁碟區上執行附加或掛載作業，您可能會在「附加」或「掛載」對話方塊畫面中看到額外的快照。這是因為附加或裝載作業會複製 SnapVault 目的地 Volume ，而 ONTAP 則會建立新的快照來更新磁碟區。</block>
   <block id="84ade123b589aaaa8cb58a5dc5af2c14" category="paragraph">若要防止在複製磁碟區時建立新的快照，請關閉 SnapVault 磁碟區的 ONTAP 排程。先前存在的快照不會刪除。</block>
   <block id="7aa7ae49984d77593e48b6fd70844775" category="paragraph">若要保護VM和資料存放區、請使用VMware vSphere用戶端介面。網路用戶端 GUI 與儲存系統上的 NetApp Snapshot 技術整合。這可讓您在數秒內備份VM和資料存放區、並還原VM、而無需讓ESXi主機離線。</block>
   <block id="b68c25841ace1ebf87dee9af54aa2e69" category="paragraph">SnapCenter 不支援資料庫和 VM 的單一快照。虛擬機器和資料庫的備份必須獨立排程和執行，即使資料庫和 VM 位於同一個磁碟區中，也會建立個別的快照。應用程式型備份必須使用SnapCenter 還原GUI排程；VM一致的備份必須使用VMware vSphere用戶端GUI排程。</block>
@@ -2104,7 +2079,6 @@
   <block id="7cc71960cea46e213c1949b750d31109" category="list-text">檢閱摘要，然後選取 * 完成 * 。從 ASA R2 系統的 6.1 號選擇控制閥輔助保護開始，資源會顯示在摘要頁面中。</block>
   <block id="7937cf5781449e9d5aa3c9810ffc00f8" category="paragraph">在選擇 *Finish （完成） * 之前，您可以返回嚮導中的任何頁面並更改信息。</block>
   <block id="4cafeb5e41329bb061975eb29cec476a" category="paragraph">選取 * 完成 * 之後，新的資源群組就會新增到資源群組清單中。</block>
-  <block id="3bb7a556e32d2c1180cba7a8fcc1d50a" category="paragraph">適用於 VMware vSphere 的 SnapCenter 外掛程式不會針對所有 ONTAP 版本執行相容性檢查、僅適用於 ONTAP 8.2.1 版及更早版本。因此、請務必參閱<block ref="361fee5724018df312396e88d348d8b5" category="inline-link-rx"></block> 以取得 SnapCenter 支援的最新資訊。</block>
   <block id="1a4e3fc91214e69b300aa63fcb1a886f" category="list-text">若要保護VVol資料存放區上的VM、您必須先部署ONTAP VMware vSphere的功能介紹工具。如需支援版本的 ONTAP 工具的最新資訊、請<block ref="3a209fb27f7f233fd0ce1196af83183f" category="inline-link-rx"></block>參閱。可在VMware Web用戶端上配置及配置VMware上的儲存設備ONTAP ONTAP 。</block>
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">選擇*下一步*。</block>
   <block id="c692636646dadf4eb31c9fbae7cc8df4" category="list-text">在 * 選取名稱和資料夾 * 頁面上，輸入 VM 或 vApp 的唯一名稱，然後選取部署位置，然後選取 * 下一步 * 。</block>
@@ -2225,4 +2199,16 @@
   <block id="2ce4687225c7becae3c948e55ccdcc4d" category="paragraph">您可以搜尋特定的備份名稱或部分備份名稱，或是選取篩選器圖示並選取日期和時間範圍，選取是否要包含 VMware 快照的備份，是否要掛載備份，以及主要或次要位置，以篩選備份清單。選取 * 確定 * 以返回精靈。</block>
   <block id="f427270dda7af9bd5bacffe7bda1edcf" category="list-text">選用：選取畫面底部的 * 最近工作 * 來監控作業進度。</block>
   <block id="6210995c19095fd21a24c3cd89967878" category="paragraph">您可以搜尋特定的備份名稱或部分備份名稱，或是選取篩選器圖示並選取日期和時間範圍，選取是否要包含 VMware 快照的備份，是否要掛載備份，以及位置，以篩選備份清單。選取 * 確定 * 以返回精靈。</block>
+  <block id="cf26c37864b6057757bc11f14c25d631" category="inline-link">設定 ONTAP Mediator 和叢集以進行 SnapMirror 主動式同步</block>
+  <block id="7bf83651187bd5c60252c236bb21bf9c" category="list-text">按照技術報告中的說明配置羣集和調解器：<block ref="dee2443effe2653b7b7862728c1a701c" category="inline-link-rx"></block>。</block>
+  <block id="0b9c25bd5b5eaced6be5a08c296638a2" category="admonition">最大保留值為 1018 個備份。如果保留設定的值高於基礎ONTAP 版支援的值、則備份將會失敗。跨距資料存放區也是如此。</block>
+  <block id="1f7a12a98590c88658034c05ec2de1fb" category="paragraph">當您嘗試建立資源群組時、會執行相容性檢查。SnapCenter如需 SnapCenter 支援的最新資訊，請務必參閱<block ref="361fee5724018df312396e88d348d8b5" category="inline-link-rx"></block>。不相容的原因可能是：</block>
+  <block id="cb7cb42890ccd7035c776387ce9c759c" category="list-text">內部部署 ONTAP 叢集（ FAS ， AFF 和 ASA 系統）</block>
+  <block id="3983966d99470bda01fa784730d7b27b" category="admonition">在 SnapVault 關係中，無法刪除最後一個快照，因此無法刪除資源群組。刪除屬於 SnapVault 關係一部分的資源群組之前，您必須使用系統管理員或 ONTAP CLI 移除 SnapVault 關係，然後必須刪除最後一個快照。</block>
+  <block id="d1a5389ce9c0d52e7ee4639d806d7008" category="cell">All Access 命令：最低 ONTAP Privileges 。</block>
+  <block id="54eadeca2b2bd492eb03529cf49b5ade" category="cell">唯讀命令：最低 ONTAP Privileges</block>
+  <block id="9b11ed140003f7b638aa731cd4c1b580" category="cell">All Access 命令：最低 ONTAP Privileges</block>
+  <block id="4058334ba125181f863f2828e9159ff3" category="admonition">如果您要還原刪除的 VM 、則新增至 SnapCenter Plug-in for VMware vSphere 的儲存 VM 認證必須是<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 或具有與相同權限的使用者帳戶<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block>。</block>
+  <block id="f1ff6215662f12b3f0d4d8fe8c57e63e" category="summary">VMware vSphere的支援VMware vSphere外掛程式提供額外層級的RBAC、可用於管理虛擬化資源。SnapCenter外掛程式同時支援vCenter Server RBAC和ONTAP VMware RBAC。</block>
+  <block id="ea4dc37a86a15ab44286e88df44656ea" category="paragraph">適用於 VMware vSphere 6.1 版本的 SnapCenter 外掛程式支援在 ASA R2 系統上佈建虛擬機器（ VM ）和 VMFS 資料存放區。ASA R2 系統提供統一化的硬體與軟體解決方案，可針對僅限 SAN 的客戶需求，提供簡化的體驗。適用於 VMware vSphere 6.1 的 SnapCenter 外掛程式支援 ASA R2 系統上的虛擬機器，資料存放區和虛擬機器磁碟格式（ VMDK ）功能包括：</block>
 </blocks>

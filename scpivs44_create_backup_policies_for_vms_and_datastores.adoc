@@ -41,7 +41,7 @@ NOTE: SnapMirror 主動同步僅支援 VMFS 資料存放區。
 若要在 SnapMirror 主動式同步部署上保護 VMFS 資料存放區、身為 SnapCenter 管理員、您需要：
 
 +
-** 按照技術報告中的說明配置羣集和調解器： https://www.netapp.com/pdf.html?item=/media/21888-tr-4878.pdf["TR-4878 ： SnapMirror 主動同步（以前稱爲 SMBC ）"]。
+** 按照技術報告中的說明配置羣集和調解器： https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/mediator-install-task.html["設定 ONTAP Mediator 和叢集以進行 SnapMirror 主動式同步"]。
 ** 將與 VMFS 資料存放區相關的磁碟區新增至一致性群組、並在兩個 ONTAP 儲存系統之間使用 _AutomatedFailovert_ 或 _AutomatedFailOverDuplex_ 保護原則建立資料保護關係。自 ONTAP 9.15.1 版起支援 _AutomatedFailOverDuplex_ 原則。
 
 
@@ -87,7 +87,9 @@ IMPORTANT: 如果您打算啟用SnapVault 還原複寫、則應將保留計數�
 
 +
 
-NOTE: 最大保留值為1018個備份ONTAP 、可備份到位於更新版本的資源、ONTAP 而備份到位在更新版本的資源中、則有254個備份用於位在更新版本的版本上。如果保留設定的值高於基礎ONTAP 版支援的值、則備份將會失敗。跨距資料存放區也是如此。如果跨越資料存放區同時包含ONTAP 有關支援的資源、請ONTAP 務必將保留值設為低於254。
+NOTE: 最大保留值為 1018 個備份。如果保留設定的值高於基礎ONTAP 版支援的值、則備份將會失敗。跨距資料存放區也是如此。
+
+
 
 . 在* Replication *欄位中、指定複寫至次要儲存設備的類型、如下表所示：
 +
