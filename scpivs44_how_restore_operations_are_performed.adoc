@@ -35,7 +35,7 @@ summary: 在VMFS環境中、SnapCenter VMware vSphere的VMware vSphere的《Sesf
 | VM和VMDK | VM一致的主要備份 | NFS環境：ONTAP 不含單一檔案SnapRestore 的VMFS環境：利用Storage VMotion複製及掛載 
 
 
-| VM和VMDK | VM一致的次要備份 | NFS環境：使用Storage VMotion VMFS環境進行複製與掛載：使用Storage VMotion進行複製與掛載 
+| VM和VMDK | VM一致的次要備份 | NFS 環境：ONTAP SnapMirror 恢復 VMFS 環境：使用 Storage VMotion 克隆和掛載 
 
 
 | VVOL VM | 損毀一致的主要備份 | 適用於所有傳輸協定的單一檔案ONTAP SnapRestore 

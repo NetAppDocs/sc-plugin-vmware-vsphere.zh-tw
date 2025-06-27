@@ -33,7 +33,6 @@
   <block id="65d964d49665477bbec39032d9f3ca8a" category="doc">管理備份</block>
   <block id="b6821d00a7bc4a6fcfe3d073cec911ab" category="section-title">重新命名備份</block>
   <block id="b069e722ad8d29f7eec823ae5a4a95a6" category="paragraph">如果您想要提供更好的名稱來改善搜尋能力、可以重新命名SnapCenter VMware vSphere備份的Rename Plug-in。</block>
-  <block id="f8ffb952d62ac560c6adb8ac7e15a58e" category="paragraph">請勿在VM、資料存放區、原則、備份或資源群組名稱中使用下列特殊字元：&amp;*$#@！\/：*？"&lt;&gt;-|；'、。允許使用底線字元（_）。</block>
   <block id="de00c1e27be1485dd099e4cd2aaa554d" category="section-title">刪除備份</block>
   <block id="811a38ca6a4a37270419c2834515cf5c" category="paragraph">如果您不再需要備份來執行其他資料保護作業、可以刪除SnapCenter VMware vSphere備份的VMware vCenter外掛程式。您可以同時刪除一個備份或刪除多個備份。</block>
   <block id="4b3cb5948249f5d59292e97ced52522d" category="paragraph">您無法刪除已掛載的備份。您必須先卸載備份、才能刪除備份。</block>
@@ -350,7 +349,6 @@
   <block id="86f5d700774abd1b4b1161e6afcd312e" category="section-title">修改資源群組</block>
   <block id="1850764f60496630a671ed4a4ca36a90" category="paragraph">您可以在vCenter的資源群組中移除或新增資源、分離或附加原則、修改排程、或修改任何其他資源群組選項。</block>
   <block id="683a572529e7ee01c3f3b2f6e84ee453" category="paragraph">如果要修改資源群組名稱、請勿在VM、資料存放區、原則、備份或資源群組名稱中使用下列特殊字元：</block>
-  <block id="bf6bb853aafb837a490acb97d9acbf87" category="paragraph">%&amp;*$#@！\/：*？"&lt;&gt;-|；'、。</block>
   <block id="a051f3eeac4a83ec1f5d55c7aeba6f06" category="paragraph">允許使用底線字元（_）。</block>
   <block id="ad9a47e46e4ad7c3e60285f394572957" category="section-title">刪除資源群組</block>
   <block id="16b1a35ba7401a13d918126c70a9b4e4" category="paragraph">如果不再需要保護資源群組中的資源、您可以在vCenter中刪除資源群組。從SnapCenter vCenter移除VMware vSphere的VMware vCenter外掛程式之前、您必須確保所有資源群組都已刪除。</block>
@@ -852,7 +850,6 @@
   <block id="1d92d0cbfdf6166c05997268d3378fe0" category="list-text">連結模式</block>
   <block id="35f1c688325b0062756b2d7b0d00be28" category="paragraph">在連結模式中、每個vCenter都有獨立的虛擬應用裝置。因此、您可以跨vCenter使用重複的名稱。不過、您必須在與資源群組相同的vCenter中建立原則。</block>
   <block id="9efc9e0c08da510b5195bb9dc4b1b7c2" category="list-text">不支援的字元</block>
-  <block id="69a02b2d668a0ebee1d9ac100a00074c" category="paragraph">請勿在VM、資料存放區、叢集、原則、備份、 或資源群組名稱：%&amp;*$#@！\/：*？"&lt;&gt;-|；'、。</block>
   <block id="a923c6bf503ee78e9fc4b4479248cff6" category="list-text">指定保留設定。</block>
   <block id="6e0b19728555d1c2b7bc98ce7895aced" category="list-text">指定頻率設定。</block>
   <block id="52b19e85e6a29b6fe5690f47944f859f" category="paragraph">原則僅指定備份頻率。備份的特定保護排程是在資源群組中定義。因此、兩個或多個資源群組可以共用相同的原則和備份頻率、但備份排程不同。</block>
@@ -1692,7 +1689,6 @@
   <block id="55bc441bdeb0f43c60379f5dc78f6abf" category="paragraph">如果您是在 ONTAP 9.8 或 ONTAP 9.9 上執行、則在切換或切換後、您必須重新啟動 SnapCenter Plug-in for VMware vSphere 服務、並重新同步 SnapMirror 關係、才能在 MetroCluster 環境中備份資源群組。</block>
   <block id="3a45015313a1faf386696ea8ef299b04" category="list-text">若要為一個 VM 建立資源群組、請在捷徑頁面上選取 * 主機和叢集 * 、然後在 VM 上按一下滑鼠右鍵、選取 * SnapCenter Plug-in for VMware vSphere * &gt; * 建立資源群組 * 。</block>
   <block id="e55c3cdc89e781170175d407fcc99d3e" category="list-text">若要為一個資料存放區建立資源群組、請在捷徑頁面上選取 * 主機和叢集 * 、然後在資料存放區上按一下滑鼠右鍵、選取 * SnapCenter Plug-in for VMware vSphere * &gt; * Create Resource Group* 。</block>
-  <block id="b6f45f1c26b5dc8cfcdcf884b55437e0" category="cell">輸入資源群組的名稱。請勿在VM、資料存放區、原則、備份或資源群組名稱中使用下列特殊字元：%&amp;*$#@！\/：*？"&lt;&gt;-[垂直列]；'、。允許使用底線字元（_）。含有特殊字元的VM或資料存放區名稱會被刪減、因此很難搜尋特定備份。在連結模式中、每個 vCenter 都有個別的 SnapCenter 外掛程式、可用於 VMware vSphere 儲存庫。因此、您可以跨vCenter使用重複的名稱。</block>
   <block id="31a7acb0f4773b26008800d71953f900" category="paragraph">如果顯示此訊息<block ref="9e5971575d4ff5fdbab34f545fb3c4f7" prefix=" " category="inline-code"></block> 、則所選資源與 SnapCenter 不相容。</block>
   <block id="f1381c3464fcec41ea788ba3061a6adb" category="paragraph">若要從備份中全域排除一或多個資料存放區、您必須在組態檔的內容中指定資料存放區名稱<block ref="501d684ffe56268631cacb45d6a11474" prefix=" " category="inline-code"></block><block ref="c7d1d750bd6b50c426013a326fa505ba" prefix=" " category="inline-code"></block> 。請參閱 <block ref="85a3298a3ddc49d556dd2f507b17347f" category="inline-link-macro-rx"></block>。</block>
   <block id="5a0224c26b4097d544acbe092343725a" category="paragraph">當您在每個欄位中選取天數時、備份會在每月的第 1 天執行、之後則會在指定的每個間隔執行。例如、如果您選取*每2天*選項、則會在整個月內於第1、3、5、7等時間執行備份、無論開始日期是偶數或odd。</block>
@@ -2211,4 +2207,9 @@
   <block id="4058334ba125181f863f2828e9159ff3" category="admonition">如果您要還原刪除的 VM 、則新增至 SnapCenter Plug-in for VMware vSphere 的儲存 VM 認證必須是<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 或具有與相同權限的使用者帳戶<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block>。</block>
   <block id="f1ff6215662f12b3f0d4d8fe8c57e63e" category="summary">VMware vSphere的支援VMware vSphere外掛程式提供額外層級的RBAC、可用於管理虛擬化資源。SnapCenter外掛程式同時支援vCenter Server RBAC和ONTAP VMware RBAC。</block>
   <block id="ea4dc37a86a15ab44286e88df44656ea" category="paragraph">適用於 VMware vSphere 6.1 版本的 SnapCenter 外掛程式支援在 ASA R2 系統上佈建虛擬機器（ VM ）和 VMFS 資料存放區。ASA R2 系統提供統一化的硬體與軟體解決方案，可針對僅限 SAN 的客戶需求，提供簡化的體驗。適用於 VMware vSphere 6.1 的 SnapCenter 外掛程式支援 ASA R2 系統上的虛擬機器，資料存放區和虛擬機器磁碟格式（ VMDK ）功能包括：</block>
+  <block id="2c6c18c9ea36047e0562b8c63f8cdc3b" category="paragraph">請勿在VM、資料存放區、叢集、原則、備份、 或資源群組名稱：%&amp;*$#@！\/：*？“ &lt; &gt; - | ; ' ，以及空格。</block>
+  <block id="f064264a00ed4e40241d8bc78838f677" category="cell">輸入資源群組的名稱。請勿在VM、資料存放區、原則、備份或資源群組名稱中使用下列特殊字元：%&amp;*$#@！\/：*？“ &lt; &gt; - [豎線]；'，和空格。允許使用底線字元（_）。含有特殊字元的VM或資料存放區名稱會被刪減、因此很難搜尋特定備份。在連結模式中、每個 vCenter 都有個別的 SnapCenter 外掛程式、可用於 VMware vSphere 儲存庫。因此、您可以跨vCenter使用重複的名稱。</block>
+  <block id="88464b0f22e28142bc76c51bba424a64" category="cell">NFS 環境：ONTAP SnapMirror 恢復 VMFS 環境：使用 Storage VMotion 克隆和掛載</block>
+  <block id="12b816ebabce7bea08d953072a6f5d5b" category="paragraph">請勿在VM、資料存放區、原則、備份或資源群組名稱中使用下列特殊字元：&amp;*$#@！\/：*？“ &lt; &gt; - | ; ' ，以及空格。允許使用底線字元（_）。</block>
+  <block id="8651a2d0c6ade87f04ae0bca90386289" category="paragraph">%&amp;*$#@！\/：*？“ &lt; &gt; - | ; ' ，以及空格。允許使用底線字元（_）。</block>
 </blocks>
