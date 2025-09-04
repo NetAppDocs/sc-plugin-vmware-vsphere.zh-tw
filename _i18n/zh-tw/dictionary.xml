@@ -1677,7 +1677,6 @@
   <block id="14287ce8c2228d3505c31799833a864f" category="paragraph">適用於 VMware vSphere 的 SnapCenter 外掛程式會使用選取的認證來登入所選的 VM 。</block>
   <block id="110328d238985c18e0a7947b09b1ff0f" category="summary">SnapCenter Plug-in for VMware vSphere 採用 SSL 加密技術、可與用戶端瀏覽器進行安全通訊。雖然如此一來、便能跨線路啟用加密資料、建立新的自我簽署憑證、或是使用您自己的憑證授權單位（CA）基礎架構或協力廠商CA、確保該憑證對您的環境而言是獨一無二的。</block>
   <block id="6886be2ac69a368a307204ccfa1e00d9" category="paragraph">如需詳細資訊、請參閱<block ref="bf84a7958c466b4ea912f7e396459ac9" category="inline-link-rx"></block> 。</block>
-  <block id="6371946f7a59bb407f5608582531db43" category="paragraph">如需系統管理員如何將資源指派給使用者的相關資訊，請參閱<block ref="3c6a9a14d0d13aed475a45101fc3cc00" category="inline-link-rx"></block>。</block>
   <block id="e90ae72a4d203cde9c1d660d983bec13" category="list-text">SnapMirror 主動式同步可讓業務服務持續運作、即使整個站台故障也沒問題、支援應用程式使用次要複本以透明方式容錯移轉。</block>
   <block id="c2bc8f54778a0e6f72a8fa3f9c96aae7" category="admonition">SnapMirror 主動同步僅支援 VMFS 資料存放區。</block>
   <block id="cae2d1284a0f6ccabe57939c8b8ad176" category="paragraph">若要在 SnapMirror 主動式同步部署上保護 VMFS 資料存放區、身為 SnapCenter 管理員、您需要：</block>
@@ -2212,4 +2211,5 @@
   <block id="88464b0f22e28142bc76c51bba424a64" category="cell">NFS 環境：ONTAP SnapMirror 恢復 VMFS 環境：使用 Storage VMotion 克隆和掛載</block>
   <block id="12b816ebabce7bea08d953072a6f5d5b" category="paragraph">請勿在VM、資料存放區、原則、備份或資源群組名稱中使用下列特殊字元：&amp;*$#@！\/：*？“ &lt; &gt; - | ; ' ，以及空格。允許使用底線字元（_）。</block>
   <block id="8651a2d0c6ade87f04ae0bca90386289" category="paragraph">%&amp;*$#@！\/：*？“ &lt; &gt; - | ; ' ，以及空格。允許使用底線字元（_）。</block>
+  <block id="32ac8d4494e62d5a13c33b3927b542bb" category="paragraph">有關管理員如何向使用者指派資源的信息，請參閱<block ref="d818f211a7449f29082596280ad483fa" category="inline-link-rx"></block>。</block>
 </blocks>

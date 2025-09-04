@@ -27,7 +27,7 @@ summary: 您必須先建立備份原則、才能使用SnapCenter VMware vSphere�
 若要修正此問題，請設定次要儲存設備的 SnapMirror 保留原則，以避免達到快照的上限。
 
 +
-如需系統管理員如何將資源指派給使用者的相關資訊，請參閱 https://docs.netapp.com/us-en/snapcenter/concept/concept_types_of_role_based_access_control_in_snapcenter.html["關於使用角色型存取控制的資訊SnapCenter"^]。
+有關管理員如何向使用者指派資源的信息，請參閱 https://docs.netapp.com/us-en/snapcenter/get-started/rbac-snapcenter.html["關於使用角色型存取控制的資訊SnapCenter"^]。
 
 
 
