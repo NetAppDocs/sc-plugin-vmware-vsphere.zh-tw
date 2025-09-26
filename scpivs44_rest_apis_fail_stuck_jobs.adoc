@@ -24,5 +24,5 @@ summary: 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛�
 | REST API | 註解 
 
 
-| 「/4.1/jobs/{id}/failjobs」 | 當您傳遞處於執行中狀態的工作ID時、「故障工作」會將這些工作標示為失敗。若要識別處於執行中狀態的工作、請使用工作監視器GUI來查看每個工作的狀態和工作ID。 
+| 「/4.1/jobs/{id}/failjobs」 | 當你傳遞處於運作狀態的作業的 ID 時， `failJobs`將這些作業標記為失敗。若要識別處於運作狀態的作業，請使用作業監視器使用者介面查看每個作業的狀態和作業 ID。 
 |===

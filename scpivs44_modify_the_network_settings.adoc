@@ -17,7 +17,7 @@ summary: 您可以修改SnapCenter 在VMware vSphere的VMware vSphere的VMware P
 您可以修改SnapCenter 在VMware vSphere的VMware vSphere的VMware Plug-in中設定的網路設定。外掛程式會使用這些設定來存取vCenter。
 
 .開始之前
-您必須知道SnapCenter VMware vSphere管理GUI適用的VMware vSphere Plug-in IP位址和登入認證。您也必須記下從維護主控台產生的 MFA 權杖。
+您必須知道SnapCenter Plug-in for VMware vSphere的 IP 位址和登入憑證。您還必須記下從維護控制台產生的 MFA 令牌。
 
 * 部署 SnapCenter Plug-in for VMware vSphere 時會顯示 IP 位址。
 * 使用部署 SnapCenter Plug-in for VMware vSphere 期間提供的登入認證、或是稍後修改的認證。
@@ -25,13 +25,13 @@ summary: 您可以修改SnapCenter 在VMware vSphere的VMware vSphere的VMware P
 
 
 .步驟
-. 登入SnapCenter VMware vSphere管理GUI的VMware vCenter外掛程式。
+. 登入SnapCenter Plug-in for VMware vSphere管理使用者介面。
 +
 使用格式 `\https://<appliance-IP-address>:8080`
 
 . 選取頂端工具列中的「設定」圖示。
 +
-image:scpivs44_image31.png["VMware vSphere管理GUI的VMware外掛程式SnapCenter"]
+image:scpivs44_image31.png["SnapCenter Plug-in for VMware vSphere"]
 
 . 在「 * 設定 * 」頁面的「 * 網路設定 * 」區段中，選取 *IPV* 或 *IPV6* 位址，然後選取 * 編輯 * 。
 +

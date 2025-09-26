@@ -46,7 +46,7 @@ summary: 您可以將一個或多個VMDK從備份附加至父VM、或附加至�
 
 
 .步驟
-. 在 VMware vSphere 用戶端 GUI 中，選取工具列中的 * 功能表 * ，然後從下拉式清單中選取 * 主機和叢集 * 。
+. 在 VMware vSphere 用戶端使用者介面中，選擇工具列中的“*選單*”，然後從下拉清單中選擇“*主機和叢集*”。
 . 在左側導覽窗格中、以滑鼠右鍵按一下 VM 、然後選取 * SnapCenter Plug-in for VMware vSphere * > * Attach virtual disk(s) * 。
 . 在*附加虛擬磁碟*視窗的*備份*區段中、選取備份。
 +

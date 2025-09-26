@@ -22,17 +22,17 @@ summary: 若要在SnapCenter 虛擬化機器上使用支援VMware vSphere的功�
 
 NOTE:  VMware vCenter 7u1及更新版本支援OVA部署。
 
-* 您必須閱讀部署需求。
-* 您必須執行受支援版本的vCenter Server。
-* 您必須已設定及設定vCenter Server環境。
-* 您必須為 VMware vSphere VM 的 SnapCenter 外掛程式設定 ESXi 主機。
-* 您必須已下載SnapCenter VMware vSphere .tar的VMware解決方案。
-* 您必須擁有vCenter Server執行個體的登入驗證詳細資料。
-* 您必須擁有具有有效公開金鑰和私密金鑰檔案的憑證。如需詳細資訊、請參閱第節中的文章 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_Certificate_Resolution_Guide["儲存憑證管理"] 。
-* 您必須登出並關閉 vSphere 用戶端的所有瀏覽器工作階段、並刪除瀏覽器快取、以避免在部署 SnapCenter Plug-in for VMware vSphere 期間發生瀏覽器快取問題。
-* 您必須在vCenter中啟用傳輸層安全性（TLS）。請參閱VMware文件。
-* 如果您計畫在 vCenter 中執行備份、但部署 SnapCenter Plug-in for VMware vSphere 的 vCenter 除外、那麼 ESXi 伺服器、 SnapCenter Plug-in for VMware vSphere 、以及每個 vCenter 都必須同步到同一時間。
-* 若要保護VVol資料存放區上的VM、您必須先部署ONTAP VMware vSphere的功能介紹工具。如需支援版本的 ONTAP 工具的最新資訊、請 https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]參閱。可在VMware Web用戶端上配置及配置VMware上的儲存設備ONTAP ONTAP 。
+* 確保您已查看部署要求。
+* 驗證您正在執行受支援的 vCenter Server 版本。
+* 確認您的 vCenter Server 環境已配置並設定。
+* SnapCenter Plug-in for VMware vSphere準備 ESXi 主機。
+* 下載SnapCenter Plug-in for VMware vSphere。
+* 取得 vCenter Server 執行個體的登入憑證。
+* 取得具有有效公鑰和私鑰檔案的憑證。有關詳細信息，請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_Certificate_Resolution_Guide["儲存憑證管理"]部分。
+* 登出並關閉所有 vSphere 用戶端瀏覽器會話，並清除瀏覽器快取以防止部署期間出現問題。
+* 在 vCenter 中啟用傳輸層安全性 (TLS)。請參閱 VMware 文件。
+* 如果您打算在部署了適用於SnapCenter Plug-in for VMware vSphere的vCenter 以外的 vCenter 中執行備份，請確保 ESXi 伺服器、SnapCenter Plug-in for VMware vSphere和每個 vCenter 都同步到相同時間。
+* 若要保護 vVol 資料儲存體上的虛擬機，請先ONTAP tools for VMware vSphere。有關支援的ONTAP工具版本，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]。  ONTAP工具在ONTAP和 VMware Web 用戶端上設定和設定儲存。
 
 
 將 SnapCenter Plug-in for VMware vSphere 部署在與 vCenter 相同的時區。備份排程會在部署 SnapCenter Plug-in for VMware vSphere 的時區執行。 vCenter 會在 vCenter 所在的時區中報告資料。因此、如果 SnapCenter Plug-in for VMware vSphere 和 vCenter 位於不同的時區、 SnapCenter Plug-in for VMware vSphere 儀表板中的資料可能與報告中的資料不同。
@@ -136,11 +136,11 @@ VMware 工具安裝在部署 SnapCenter Plug-in for VMware vSphere 的 VM 上。
 部署可能需要幾分鐘的時間才能完成。SnapCenter Plug-in for VMware vSphere 開機、 VMware 工具安裝完成、畫面會提示您登入適用於 VMware vSphere 的 SnapCenter 外掛程式、表示部署成功。您可以在第一次重新開機期間、將網路組態從DHCP切換為靜態。但是、不支援從靜態切換至DHCP。
 
 +
-畫面會顯示部署 SnapCenter Plug-in for VMware vSphere 的 IP 位址。記下IP位址。如果您想要變更 SnapCenter Plug-in for VMware vSphere 組態、則需要登入 SnapCenter Plug-in for VMware vSphere 管理 GUI 。
+螢幕顯示部署SnapCenter Plug-in for VMware vSphere的IP 位址。記下 IP 位址。如果要變更適用於SnapCenter Plug-in for VMware vSphere配置，則需要登入適用SnapCenter Plug-in for VMware vSphere管理使用者介面。
 
-. 使用部署畫面上顯示的 IP 位址、以及您在部署精靈中提供的認證、登入 SnapCenter Plug-in for VMware vSphere 管理 GUI 、 然後在儀表板上確認 SnapCenter Plug-in for VMware vSphere 已成功連線至 vCenter 並已啟用。
+. 使用部署畫面上顯示的 IP 位址和部署精靈中提供的憑證登入適用SnapCenter Plug-in for VMware vSphere管理使用者介面，然後在儀表板上驗證適用SnapCenter Plug-in for VMware vSphere是否已成功連線至 vCenter 並已啟用。
 +
-使用格式 `\https://<appliance-IP-address>:8080` 存取管理GUI。
+使用格式 `\https://<appliance-IP-address>:8080`存取管理使用者介面。
 
 +
 使用部署時設定的管理員使用者名稱和密碼、以及使用維護主控台產生的 MFA 權杖登入。

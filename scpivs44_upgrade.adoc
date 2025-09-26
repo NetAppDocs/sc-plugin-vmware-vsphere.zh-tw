@@ -14,7 +14,7 @@ summary: 如果您使用SnapCenter 適用於VMware vSphere虛擬應用裝置的V
 
 
 
-NOTE: 只有 VMware vCenter Server 7 更新版本 1 和更新版本才支援升級至 6 號選擇控制閥，而在版本 7 更新 1 之前的 VMware vCenter 伺服器則應繼續使用 4 號選擇控制閥。不受支援版本的VMware vCenter伺服器會中斷升級。
+NOTE: 僅 VMware vCenter Server 7 Update 1 及更高版本支援升級至 SCV 6.2，對於版本 7 Update 1 之前的 VMware vCenter Server，您應該繼續使用 SCV 4.7。對於不支援的 VMware vCenter 伺服器版本，升級會造成中斷。
 
 如果您使用SnapCenter 適用於VMware vSphere虛擬應用裝置的VMware vCenter外掛程式、則可以升級至較新的版本。升級程序會取消註冊現有的外掛程式、並部署僅與vSphere 7.0U1及更新版本相容的外掛程式。
 
@@ -28,7 +28,10 @@ NOTE: 只有 VMware vCenter Server 7 更新版本 1 和更新版本才支援升�
 | 如果您使用的是 SnapCenter Plug-in for VMware vSphere （ SCV ）版本 ... | 您可以直接將 VMware vSphere 的 SnapCenter 外掛程式升級至 ... 
 
 
-| SCV 6.0 | 升級到 6 ． 1 號選擇控制閥 
+| SCV 6.1 | 升級到 SCV 6.2 
+
+
+| SCV 6.0 | 升級到 SCV 6.1 和 SCV 6.2 
 
 
 | SCV 5.0 | 升級到 6 號和 6 號選擇控制閥 
@@ -56,7 +59,7 @@ NOTE: 不支援將網路組態從靜態切換為DHCP。
 .步驟
 . 停用SnapCenter VMware vSphere的VMware vCenter外掛程式、做好升級準備。
 +
-.. 登入SnapCenter VMware vSphere管理GUI的VMware vCenter外掛程式。當您部署適用於 VMware vSphere 的 SnapCenter 外掛程式時、會顯示 IP 位址。
+.. 登入SnapCenter Plug-in for VMware vSphere管理使用者介面。部署SnapCenter Plug-in for VMware vSphere時會顯示 IP 位址。
 .. 在左側導覽窗格中選取 * 組態 * ，然後選取外掛程式詳細資料區段中的 * 服務 * 選項以停用外掛程式。
 
 
@@ -70,7 +73,7 @@ NOTE: 不支援將網路組態從靜態切換為DHCP。
 . 安裝升級。
 +
 .. 在瀏覽器中、瀏覽至VMware vSphere vCenter。
-.. 在 vCenter GUI 上，選取 * vSphere 用戶端（ HTML ） * 。
+.. 在 vCenter 使用者介面上，選擇 *vSphere 用戶端 (HTML)*。
 .. 登入「* VMware vCenter單一登入*」頁面。
 .. 在導覽器窗格中，選取您要升級的 VM ，然後選取 * Summary （摘要） * 標籤。
 .. 在 * 相關物件 * 窗格中，選取清單中的任何資料存放區，然後選取 * 摘要 * 索引標籤。

@@ -54,7 +54,7 @@ Cmdlet會執行下列動作：
 ** 建立移轉後備份的備份排程。
 ** 從SnapCenter Windows主機卸載現有的VMware vSphere版的VMware vCenter外掛程式。
 +
-如果 SnapCenter Plug-in for VMware vSphere 安裝在 SnapCenter Server 主機上、且已針對 SnapCenter 儲存庫設定保護、則移轉程序也會解除安裝 Windows 外掛程式套件、其中包含適用於 VMware vSphere 的 SnapCenter 外掛程式和適用於 Windows 的 SnapCenter 外掛程式、 然後重新安裝適用於 Windows 的最新版 SnapCenter 外掛程式、以支援儲存庫保護。在VMware GUI中的主機類型SnapCenter 從「vSphere」變更為「Windows」。
+如果SnapCenter Server 主機上安裝了SnapCenter Plug-in for VMware vSphere，並且為SnapCenter儲存庫配置了保護，則遷移程序也會卸載包含適用於 VMware vSphere的SnapCenter Plug-in for VMware vSphere和適用於 Windows 的SnapCenter插件的基於 Windows 的插件包，然後重新安裝的最新版適用於 Windowsenter 裝置的裝置。  SnapCenter使用者介面中的主機類型從「vsphere」變更為「Windows」。
 
 ** 從Windows SnapCenter 效能更新伺服器移除vSphere主機和資源群組。
 ** 在適用於 VMware vSphere 的 Linux SnapCenter 外掛程式上啟動備份工作。

@@ -28,7 +28,11 @@ summary: 您可以使用自訂規範和後製指令碼、作為資料保護作�
 
 簡報和指令碼是由SnapCenter VMware vSphere的VMware vSphere的VMware vCenter外掛程式執行。因此、指令碼必須位於SnapCenter VMware vSphere OVA的VMware vSphere插件中、並具有執行檔權限。
 
-例如：* Perl指令碼路徑可能是「/support/support/script.pl」* Shell指令碼路徑可能是「/support/support/script.sh」
+例如：
+
+* PERL 腳本路徑可能是 `/support/support/script.pl`
+* shell 腳本路徑可能是 `/support/support/script.sh`
+
 
 指令碼路徑會在指令碼執行時驗證。
 
@@ -64,7 +68,11 @@ POST指令碼會在備份成功完成後、在作業的POST備份階段中執行
 
 NOTE: 如果某個PostScript失敗、備份便會成功完成、並傳送警告訊息。
 
-請檢查下列項目、確認是否已填入指令碼值：* for Perl指令碼：「/support/support/log_env.log」* for Shell指令碼：「/support/support/log_file.log」
+檢查以下內容以驗證腳本值是否已填入：
+
+* 對於 PERL 腳本： `/support/support/log_env.log`
+* 對於 shell 腳本： `/support/support/log_file.log`
+
 
 
 

@@ -19,7 +19,7 @@ REST API會透過Swagger網頁公開。您可以存取Swagger網頁、以顯示S
 外掛程式的Swagger網頁與SnapCenter 《伺服器Swagger網頁不同。
 
 .開始之前
-對於 SnapCenter Plug-in for VMware vSphere REST API 、您必須知道 SnapCenter Plug-in for VMware vSphere 的 IP 位址或主機名稱。
+若要存取SnapCenter Plug-in for VMware vSphereREST API，請確保您擁有適用SnapCenter Plug-in for VMware vSphere的 IP 位址或主機名稱。
 
 
 NOTE: 外掛程式僅支援REST API、以與協力廠商應用程式整合、不支援PowerShell Cmdlet或CLI。

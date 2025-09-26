@@ -43,7 +43,7 @@ summary: 部署SnapCenter 完VMware vSphere的VMware vSphere版的VMware vCenter
 
 若要修正上述任一問題、請執行下列步驟：
 
-. 清除瀏覽器快取、然後檢查GUI是否正常運作。
+. 清除瀏覽器緩存，然後檢查使用者介面是否正常運作。
 +
 如果問題持續發生、請重新啟動VMware vSphere用戶端服務
 
@@ -57,7 +57,7 @@ summary: 部署SnapCenter 完VMware vSphere的VMware vSphere版的VMware vCenter
 如果您不使用管理認證、則在部署 SnapCenter Plug-in for VMware vSphere 或移轉之後、可能會收到驗證錯誤。如果遇到驗證錯誤、您必須重新啟動服務。
 
 .步驟
-. 使用格式登入 SnapCenter Plug-in for VMware vSphere 管理 GUI `\https://<appliance-IP-address>:8080`。使用管理員使用者名稱、密碼和 MFA Token 詳細資料登入。MFA 權杖可從維護主控台產生。
+. 使用以下格式登入適用於SnapCenter Plug-in for VMware vSphere管理使用者介面 `\https://<appliance-IP-address>:8080`。使用管理員使用者名稱、密碼和 MFA 令牌詳細資料登入。可以從維護控制台產生 MFA 令牌。
 . 重新啟動服務。
 
 
@@ -73,7 +73,7 @@ summary: 部署SnapCenter 完VMware vSphere的VMware vSphere版的VMware vCenter
 
 
 .關於這項工作
-* 您可以SnapCenter 使用VMware GUI新增「vSphere」類型的主機、以SnapCenter 使用VMware vSphere with VMware Server登錄支援VMware vSphere的插件SnapCenter 。
+* 您可以使用SnapCenter使用者介面新增「vsphere」類型主機，並向SnapCenter伺服器SnapCenter Plug-in for VMware vSphere。
 +
 連接埠 8144 已預先定義、可在適用於 VMware vSphere 的 SnapCenter 外掛程式內進行通訊。
 
@@ -84,7 +84,7 @@ summary: 部署SnapCenter 完VMware vSphere的VMware vSphere版的VMware vCenter
 
 
 .步驟
-. 在 SnapCenter GUI 左側導覽窗格中，選取 * 主機 * 。
+. 在SnapCenter使用者介面左側導覽窗格中，選擇「*主機*」。
 . 確認頂端已選取*託管主機*索引標籤、然後找出虛擬應用裝置主機名稱、並確認其可從SnapCenter 「支援伺服器」解析。
 . 選取 * 新增 * 以啟動精靈。
 . 在「*新增主機*」對話方塊中、指定您要新增至SnapCenter 下列表格中所列的支援伺服器主機：

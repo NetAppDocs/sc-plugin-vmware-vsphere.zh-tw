@@ -31,7 +31,7 @@ vSphere管理員可執行下列動作來設定vCenter Server RBAC：
 * 在根物件（也稱為根資料夾）上設定vCenter Server權限。然後您可以限制不需要這些權限的子實體、藉此精簡安全性。
 * 將選擇控制閥角色指派給Active Directory使用者。
 +
-至少所有使用者都必須能夠檢視vCenter物件。如果沒有此權限、使用者就無法存取VMware vSphere用戶端GUI。
+至少，所有使用者都必須能夠查看 vCenter 物件。如果沒有此權限，使用者將無法存取 VMware vSphere 用戶端使用者介面。
 
 
 

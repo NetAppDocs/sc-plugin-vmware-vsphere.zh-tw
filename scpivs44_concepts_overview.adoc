@@ -25,7 +25,7 @@ SnapCenter Plug-in for VMware vSphere 可為您的環境新增下列功能：
 
 * 支援VM一致且損毀一致的資料保護作業。
 +
-您可以在vCenter中使用VMware vSphere用戶端GUI、執行VMware虛擬機器（傳統VM和vVol VM）、VMDK和資料存放區的所有備份與還原作業。對於VVol VM（VVol資料存放區中的VM）、僅支援損毀一致的備份。您也可以還原VM和VMDK、以及還原位於客體作業系統上的檔案和資料夾。
+您可以使用 vCenter 中的 VMware vSphere 用戶端使用者介面執行 VMware 虛擬機器（傳統 VM 和 vVol VM）、VMDK 和資料儲存區的所有備份和還原作業。對於 vVol VM（vVol 資料儲存中的 VM），僅支援崩潰一致性備份。您也可以還原虛擬機器和 VMDK，以及還原駐留在來賓作業系統上的檔案和資料夾。
 
 +
 備份VM、VMDK和資料存放區時、外掛程式不支援RDM。VM的備份工作會忽略RDM。如果您需要備份RDM、則必須使用SnapCenter 以應用程式為基礎的外掛程式。
@@ -35,13 +35,13 @@ SnapCenter Plug-in for VMware vSphere 包含一個 MySQL 資料庫、其中包�
 
 * 支援應用程式一致的（透過VMDK-RDM的應用程式）資料保護作業。
 +
-您可以使用SnapCenter 支援功能的圖形化GUI和適當SnapCenter 的支援功能外掛程式、在VM的主要和次要儲存設備上執行資料庫和檔案系統的所有備份與還原作業。
+您可以使用SnapCenter使用者介面和適當的SnapCenter應用程式外掛程式對虛擬機器上主儲存和二級儲存上的資料庫和檔案系統執行所有備份和復原作業。
 
 +
 SnapCenter 原生利用適用於 VMware vSphere 的 SnapCenter 外掛程式、在 VMDK 、原始裝置對應（ RDM ）和 NFS 資料存放區上執行所有資料保護作業。部署虛擬應用裝置之後、外掛程式會處理與vCenter的所有互動。SnapCenter Plug-in for VMware vSphere 支援所有 SnapCenter 應用程式型外掛程式。
 
 +
-SnapCenter 不支援資料庫和 VM 的單一快照。虛擬機器和資料庫的備份必須排程並獨立執行，如此一來，即使資料庫和 VM 都位於同一個磁碟區中，也能建立個別的快照。使用SnapCenter VMware vSphere用戶端GUI排程資料庫應用程式備份；使用VMware vSphere用戶端GUI排程VM和資料存放區備份。
+SnapCenter不支援資料庫和虛擬機器的單一快照。必須獨立安排和執行虛擬機器和資料庫的備份，這會建立單獨的快照，即使資料庫和虛擬機器託管在同一磁碟區中。使用SnapCenter使用者介面安排資料庫應用程式備份；使用 VMware vSphere 用戶端使用者介面安排 VM 和資料儲存區備份。
 
 * VM 一致快照需要 VMware 工具
 +

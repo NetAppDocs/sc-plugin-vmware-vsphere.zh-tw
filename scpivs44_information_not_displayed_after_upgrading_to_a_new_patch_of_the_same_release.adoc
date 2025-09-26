@@ -40,7 +40,7 @@ summary: 將SnapCenter VMware vSphere的更新版的更新版更新為相同版�
 
 == 如果您在清除快取之前已經升級、請採取因應措施
 
-. 登入SnapCenter VMware vSphere管理GUI的VMware vCenter外掛程式。
+. 登入SnapCenter Plug-in for VMware vSphere管理使用者介面。
 +
 當您部署適用於 VMware vSphere 的 SnapCenter 外掛程式時、會顯示 IP 位址。
 

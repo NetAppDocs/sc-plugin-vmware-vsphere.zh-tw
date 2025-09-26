@@ -97,7 +97,7 @@ VM 的還原作業會取消原始 VM 的登錄，從備份快照還原 VM ，並
 
 
 .步驟
-. 在 VMware vSphere 用戶端 GUI 中，選取工具列中的 * 功能表 * ，然後從下拉式清單中選取 * 虛擬機器和範本 * 。
+. 在 VMware vSphere 用戶端使用者介面中，選擇工具列中的“*選單*”，然後從下拉清單中選擇“*虛擬機器和範本*”。
 +
 
 NOTE: 如果您要還原刪除的 VM 、則新增至 SnapCenter Plug-in for VMware vSphere 的儲存 VM 認證必須是 `vsadmin` 或具有與相同權限的使用者帳戶 `vsadmin`。

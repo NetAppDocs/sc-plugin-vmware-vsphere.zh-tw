@@ -85,4 +85,4 @@ NOTE: 您可以忽略有關不支援的 vserver 命令的警告訊息。
 
 
 
-NOTE: 從 ONTAP 9.11.1 版開始、與 ONTAP 叢集的通訊是透過 REST API 進行。ONTAP 使用者應已啟用 http 應用程式。不過、如果 ONTAP REST API 發生問題、組態金鑰「 force_ZAPI 」可協助您轉換至傳統的 ZAPI 工作流程。您可能需要使用組態 API 新增或更新此金鑰、並將其設為 true 。如需詳細資訊、請參閱知識庫文章 https://kb.netapp.com/mgmt/SnapCenter/How_to_use_RestAPI_to_edit_configuration_parameters_in_SCV["如何使用 RestAPI 編輯選擇控制閥的組態參數"] 。
+NOTE: 從ONTAP版本 9.11.1 開始，與ONTAP叢集的通訊是透過 REST API 進行的。 ONTAP使用者應該啟用 http 應用程式。但是，如果發現ONTAP REST API 有問題，設定鍵「FORCE_ZAPI」有助於切換到傳統的 ZAPI 工作流程。您可能需要使用組態 API 新增或更新此金鑰並將其設為 true。請參閱知識庫文章， https://kb.netapp.com/mgmt/SnapCenter/How_to_use_RestAPI_to_edit_configuration_parameters_in_SCV["如何使用 RestAPI 編輯選擇控制閥的組態參數"]了解更多。

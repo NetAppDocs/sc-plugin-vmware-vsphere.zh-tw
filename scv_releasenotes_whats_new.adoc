@@ -1,29 +1,22 @@
 ---
 permalink: scv_releasenotes_whats_new.html 
 sidebar: sidebar 
-keywords: 'what"s new, release notes, scv, 6.1' 
-summary: 瞭解適用於 VMware vSphere 6.1 的 SnapCenter 外掛程式所提供的新功能。 
+keywords: 'what"s new, release notes, scv, 6.2' 
+summary: 了解適用於SnapCenter Plug-in for VMware vSphere中提供的新功能。 
 ---
-= 適用於 VMware vSphere 6.1 的 SnapCenter 外掛程式的新功能
+= SnapCenter Plug-in for VMware vSphere新增功能
 :allow-uri-read: 
 
 
 [role="lead"]
-* 支援 ASA R2 系統上的 VM 和 VMFS 資料存放區 *
+了解適用於SnapCenter Plug-in for VMware vSphere中提供的新功能。
 
-適用於 VMware vSphere 6.1 版本的 SnapCenter 外掛程式支援在 ASA R2 系統上佈建虛擬機器（ VM ）和 VMFS 資料存放區。ASA R2 系統提供統一化的硬體與軟體解決方案，可針對僅限 SAN 的客戶需求，提供簡化的體驗。適用於 VMware vSphere 6.1 的 SnapCenter 外掛程式支援 ASA R2 系統上的虛擬機器，資料存放區和虛擬機器磁碟格式（ VMDK ）功能包括：
+SnapCenter Plug-in for VMware vSphere增加了對執行ONTAP 9.17.1 或更高版本的ASA r2 系統的 VMFS 資料儲存區上的虛擬機器 (VM) 的備份和復原支援。在此版本中，您可以對ASA r2 系統上的虛擬機器、資料儲存區和虛擬機器磁碟 (VMDK) 格式執行下列操作：
 
-* 一致性群組資源配置，提供主要保護
-* 一致性群組型備份
-* 複製工作流程
-* 還原工作流程
-* 建立或修改資源群組時的次要保護資源配置。
-+
+* 為主要保護提供一致性組
+* 執行基於一致性群組的備份
+* 使用分層一致性組（適用於ONTAP 9.17.1 及更高版本）
+* 運行克隆工作流程
+* 執行復原工作流程
+* 在建立或修改資源組時提供二級保護（適用於ONTAP 9.16.1 及更高版本）
 
-NOTE: 次要保護僅支援 ONTAP 9.16.1 及更新版本
-
-
-
-* 支援次要防竄改快照（ TPS ） *
-
-SnapCenter Plug-in for VMware vSphere 引進對次要 TPS 的支援，確保次要快照複本不受勒索軟體攻擊者或惡意系統管理員的刪除或修改，即使在攻擊之後也能使用。

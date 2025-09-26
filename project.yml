@@ -1,14 +1,16 @@
 ---
 settings:
-  name: SnapCenter Plug-in for VMware vSphere
+  name: SnapCenter Plug-in for VMware vSphere 6.2
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: false
   versions:
-  - version-number: '6.1'
+  - version-number: '6.2'
     url: "/sc-plugin-vmware-vsphere"
+  - version-number: '6.1'
+    url: "/sc-plugin-vmware-vsphere-61"
   - version-number: '6.0'
     url: "/sc-plugin-vmware-vsphere-60"
   - version-number: '5.0'
@@ -26,13 +28,13 @@ settings:
   langs: zh-tw,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-cn
 sidebar:
   entries:
-  - title: VMware vSphere 6.1的插件SnapCenter
+  - title: SnapCenter Plug-in for VMware vSphere
     url: "/index.html"
   - title: 版本資訊
     entries:
     - title: SnapCenter Plug-in for VMware vSphere 版本資訊
       url: "/scpivs44_release_notes.html"
-    - title: 適用於 VMware vSphere 6.1 的 SnapCenter 外掛程式的新功能
+    - title: SnapCenter Plug-in for VMware vSphere新增功能
       url: "/scv_releasenotes_whats_new.html"
     - title: 升級途徑
       url: "/scv_rn_upgrade_paths.html"
@@ -40,7 +42,7 @@ sidebar:
     entries:
     - title: 產品總覽
       url: "/scpivs44_concepts_overview.html"
-    - title: 不同SnapCenter 的圖形介面總覽
+    - title: 不同SnapCenter使用者介面概述
       url: "/scpivs44_overview_of_different_snapcenter_guis.html"
     - title: 授權
       url: "/scpivs44_licensing.html"
@@ -100,7 +102,7 @@ sidebar:
       url: "/scpivs44_download_job_logs.html"
     - title: 存取報告
       url: "/scpivs44_access_reports.html"
-    - title: 從適用於 VMware vSphere GUI 的 SnapCenter 外掛程式產生支援套件
+    - title: SnapCenter Plug-in for VMware vSphere使用者介面產生支援包
       url: "/scpivs44_generate_a_support_bundle_from_the_snapcenter_plug-in_for_vmware_vsphere_gui.html"
     - title: 從維護主控台產生支援套裝組合
       url: "/scpivs44_generate_a_support_bundle_from_the_maintenance_console.html"

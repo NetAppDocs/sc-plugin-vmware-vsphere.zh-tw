@@ -71,11 +71,11 @@ NOTE: 所有主機都必須設定IP位址（不支援FQDN主機名稱）。部�
 部署可能需要幾分鐘的時間才能完成。SnapCenter Plug-in for VMware vSphere 開機、 VMware 工具安裝完成、畫面會提示您登入適用於 VMware vSphere 的 SnapCenter 外掛程式、表示部署成功。
 
 +
-畫面會顯示部署 SnapCenter Plug-in for VMware vSphere 的 IP 位址。記下IP位址。如果您想要變更 SnapCenter Plug-in for VMware vSphere 組態、則需要登入 SnapCenter Plug-in for VMware vSphere 管理 GUI 。
+螢幕顯示部署SnapCenter Plug-in for VMware vSphere的IP 位址。記下 IP 位址。如果要變更適用於SnapCenter Plug-in for VMware vSphere配置，則需要登入適用SnapCenter Plug-in for VMware vSphere管理使用者介面。
 
-. 使用部署精靈中提供的認證、使用部署畫面上顯示的 IP 位址登入 SnapCenter Plug-in for VMware vSphere 管理 GUI 、然後在儀表板上確認 SnapCenter Plug-in for VMware vSphere 已成功連線至 vCenter 並已啟用。
+. 使用部署畫面上顯示的 IP 位址和部署精靈中提供的憑證登入適用SnapCenter Plug-in for VMware vSphere管理使用者介面，然後在儀表板上驗證適用SnapCenter Plug-in for VMware vSphere是否已成功連線至 vCenter 並已啟用。
 +
-使用格式 `\https://<appliance-IP-address>:8080` 存取管理GUI。
+使用格式 `\https://<appliance-IP-address>:8080`存取管理使用者介面。
 
 +
 使用部署時設定的管理員使用者名稱和密碼、以及使用維護主控台產生的 MFA 權杖登入。

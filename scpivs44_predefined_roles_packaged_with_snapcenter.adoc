@@ -22,7 +22,7 @@ summary: 為了簡化 vCenter Server RBAC 的使用、 SnapCenter Plug-in for VM
 
 SnapCenter Plug-in for VMware vSphere 會在您每次重新啟動 vCenter Web 用戶端服務或修改安裝時、將這些角色恢復為其預設值（初始權限集）。如果您升級 SnapCenter Plug-in for VMware vSphere 、則預先定義的角色會自動升級、以搭配該版本的外掛程式使用。
 
-您可以選取下表所示的 * 功能表 > 管理 > 角色 * ，在 vCenter GUI 中查看預先定義的角色。
+您可以在 vCenter 使用者介面中透過選擇「選單」>「管理」>「角色」來查看預先定義的角色，如下表所示。
 
 |===
 | 角色 | 說明 
