@@ -2202,4 +2202,6 @@
   <block id="90a8886635ee0da0c4b0c0f9f05014c9" category="sidebar">SnapCenter Plug-in for VMware vSphere</block>
   <block id="62889a042309a4c109020af336b64d80" category="sidebar">SnapCenter Plug-in for VMware vSphere新增功能</block>
   <block id="5f9632818cc0b2ae9e72f12df491a0d9" category="sidebar">SnapCenter Plug-in for VMware vSphere使用者介面產生支援包</block>
+  <block id="d6ede90a002c3b83d155e427efb5f090" category="admonition">從 SCV 6.2 版本開始，可以支援Amazon FSx for NetApp ONTAP儲存系統。</block>
+  <block id="7b373df72819a720b694167ed282840b" category="list-text">您可以將使用者與全域權限下的預先定義角色關聯。</block>
 </blocks>

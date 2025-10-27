@@ -28,6 +28,7 @@ SnapCenter Plug-in for VMware vSphere 部署會針對 vCenter 上的 SnapCenter 
 
 vSphere管理員可執行下列動作來設定vCenter Server RBAC：
 
+* 您可以將使用者與全域權限下的預先定義角色關聯。
 * 在根物件（也稱為根資料夾）上設定vCenter Server權限。然後您可以限制不需要這些權限的子實體、藉此精簡安全性。
 * 將選擇控制閥角色指派給Active Directory使用者。
 +
