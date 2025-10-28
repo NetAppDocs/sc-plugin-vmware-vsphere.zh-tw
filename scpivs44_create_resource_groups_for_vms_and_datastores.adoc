@@ -41,7 +41,7 @@ IMPORTANT: 請勿新增處於無法存取狀態的VM。雖然可以建立包含�
 .開始之前
 建立包含VVol VM的資源群組之前、必須先部署VMware的支援工具ONTAP 。
 
-如需更多信息，請參閱適用ONTAP tools for VMware vSphere文件。如需了解支援的版本，請訪問 https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+如需更多信息，請參閱適用ONTAP tools for VMware vSphere文件。如需了解支援的版本，請訪問 https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 .關於這項工作
 * 您可以隨時在資源組中新增或刪除資源。
@@ -229,7 +229,7 @@ NOTE: 如果備份中任何虛擬機器的靜默作業失敗，則即使您選�
 
 == 管理相容性檢查失敗
 
-當您嘗試建立資源群組時、會執行相容性檢查。SnapCenter如需 SnapCenter 支援的最新資訊，請務必參閱 https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["NetApp互通性對照表工具IMT （不含）"^]。不相容的原因可能是：
+當您嘗試建立資源組時， SnapCenter會執行相容性檢查。總是參考 https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["NetApp互通性對照表工具IMT （不含）"^]有關SnapCenter支援的最新資訊。不相容的原因可能包括：
 
 * 共享的PCI設備已連接至VM。
 * SnapCenter 中未設定偏好的 IP 位址。

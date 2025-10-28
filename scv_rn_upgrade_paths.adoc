@@ -108,4 +108,4 @@ SnapCenter 4.8
 4 ． 8 號選擇控制閥
 
 |===
-如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^] （ IMT ）。
+有關受支援版本的最新信息，請參閱 https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]（IMT）。

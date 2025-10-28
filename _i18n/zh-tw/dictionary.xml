@@ -1797,8 +1797,6 @@
   <block id="f6599049db87ec18cb4b8b124bbae9bb" category="admonition">在還原作業期間、您可能會遇到此錯誤、或 VMware vSphere 的 SnapCenter 外掛程式嘗試重新簽署複本時發生此錯誤<block ref="8bca5bf79dc6a0592d8b28b7fc9c19a9" prefix=" " category="inline-code"></block><block ref="9e17d1b629230b07cfa91237bf97bfc3" prefix=" " category="inline-code"></block> 。由於 VMware 的限制、適用於 VMware vSphere 的 SnapCenter 外掛程式無法控制進階 ESXi 主機組態中的自動重新簽署值。對於透過 TCP 和 NVMe over FC 儲存設備的 NVMe ，選擇控制閥無法在新增子系統時動態新增控制器。您應該在掛載作業之前進行必要的對應。</block>
   <block id="c2ad807051aed38647dbaf48da9bc4e7" category="list-text">對於透過 TCP 和 NVMe over FC 傳輸協定的 NVMe ，您需要有 ONTAP 9 。 10.1 及更新版本。</block>
   <block id="2233cc73f35f4d66a36bbbeebab35281" category="doc">SnapCenter Plug-in for VMware vSphere 版本資訊</block>
-  <block id="c5dcd35af16918a17ee9c3a5c153f0af" category="inline-link">IMT</block>
-  <block id="2d15261526cfe20309636c59ec64f54e" category="paragraph">如需支援版本的最新資訊，請參閱互通性對照表工具<block ref="b3ca33d6c3d8c65c6db17cc2a6a779f0" category="inline-link-rx"></block>（ NetApp Interoperability Matrix Tool ）。</block>
   <block id="ee8f5755a6e1671a63e8da1209dc860f" category="paragraph">您可以升級至的 SnapCenter Plug-in for VMware vSphere （ SCV ）版本，取決於您目前執行的版本。</block>
   <block id="4181b34482469dce169449ef3b643b27" category="paragraph">只有 VMware vCenter Server 7 更新版本 1 及更新版本支援升級至 SnapCenter Plug-in for VMware vSphere （ SCV ） 4.8 及更新版本。對於版本 7 更新 1 之前的 VMware vCenter 伺服器，您應該繼續使用 4.7 號選擇控制閥。</block>
   <block id="e369a7ee41a72fa8a44419a1129cc575" category="cell">如果您使用的是選擇控制閥版本…</block>
@@ -1923,14 +1921,12 @@
   <block id="3401faaaca2b403aa3e354193cdbe7a1" category="paragraph">當您選取 * 下一步 * 時，系統會先檢查 SnapCenter 是否管理，並與所選虛擬機器或資料存放區所在的儲存設備相容。如果顯示此訊息<block ref="c238c6c4153d32597097e3ae5ddc6f78" prefix=" " category="inline-code"></block> 、則所選的 VM 或資料存放區與 SnapCenter 不相容。如需詳細資訊、請參閱 <block ref="83219d9586902f9891ecf56cd903fe4b" category="inline-link-macro-rx"></block> 。</block>
   <block id="fd656c0bdef7b84ded620741d1ebb376" category="list-text">選擇 * 下一步 * ，直到到達 * 摘要 * 頁面，然後查看摘要並選擇 * 完成 * 。</block>
   <block id="9908ac5f8e797129562c3b75eb5fb433" category="list-text">在選擇控制閥外掛程式的左導覽窗格中，選擇 * 儲存系統 * ，然後選擇 * 新增 * 選項。</block>
-  <block id="5340605920c74d43338f5c58ec29e22c" category="paragraph">如需詳細資訊，請參閱 ONTAP Tools for VMware vSphere 文件。此外，如需 ONTAP 工具支援版本的最新資訊，請參閱<block ref="3a209fb27f7f233fd0ce1196af83183f" category="inline-link-rx"></block>。</block>
   <block id="dd5a6f2f3b2995c6412ee7fc5c68ae87" category="paragraph">您可以選取篩選器圖示並選擇日期和時間範圍，選取是否要包含 VMware 快照的備份，是否要掛載備份，以及位置，來篩選備份清單。選取 * OK* 。</block>
   <block id="05a059f12f4b8c90596d54cd9440e965" category="list-text">選取 * 附加 * 。</block>
   <block id="6eec9b5b83edb792f92ed90fcf16c67b" category="list-text">選取工具列中的 * 功能表 * ，然後從下拉式清單中選取 * 虛擬機器和範本 * 。</block>
   <block id="5024f06eaeb6343b1d2db413894a44c8" category="list-text">在選擇控制閥外掛程式的左導覽窗格中，選取 * 資源群組 * ，然後選取資源群組，然後選取 <block ref="aeba2b9f883565da26d0265e5ca2ca10" category="inline-image-macro-rx" type="image"></block> * 立即執行 * 以開始備份。</block>
   <block id="100c073728a93280afb75a57112c2bf8" category="list-text">選擇 * 確定 * 開始備份。</block>
   <block id="cc5ac12b41743b16bd07f0041afa5ef1" category="list-text">在虛擬應用裝置的 * 摘要 * 索引標籤中，選取 * 啟動遠端主控台 * 或啟動 Web 主控台 * 以開啟維護主控台視窗。</block>
-  <block id="18eb3325cee0222ae3e641b5398c3ad1" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="3a209fb27f7f233fd0ce1196af83183f" category="inline-link-rx"></block> （ IMT ）。</block>
   <block id="58cfdd22a1545e36ea707ea6bf21028f" category="list-text">選取 * 選取 VM* ，然後在 * Proxy VM* 對話方塊中選取 VM 。選取 * 儲存 * 以返回 * 以認證身分執行 * 對話方塊。選取應用於驗證認證的VM。</block>
   <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">選擇*保存*。</block>
   <block id="bbe1604d17d5228e6cf954f520fbcea1" category="list-text">在選擇控制閥外掛程式的左導覽窗格中，選取 * 原則 * ，然後選取 * 新原則 * 。</block>
@@ -1955,8 +1951,6 @@
   <block id="16d41e5fa51f9cba7e28f18a6e0fc481" category="cell">查看頁面並選擇 * 完成 * 。</block>
   <block id="3edcaaa1fd86e6f2a40157811ebb01e1" category="list-text">瀏覽至部署 SnapCenter Plug-in for VMware vSphere 的虛擬機器，然後選取 * Summary （摘要） * 索引標籤，然後選取 * Power On* 方塊以啟動 SnapCenter Plug-in for VMware vSphere 。</block>
   <block id="4c42aedb90b93c454e82cb69bd919064" category="list-text">登入 vCenter HTML5 用戶端，然後選取工具列中的 * 功能表 * ，然後選取 * SnapCenter Plug-in for VMware vSphere *</block>
-  <block id="6ead0b569222ee8512a314e45dd85a21" category="cell">VMware vSphere的VMware vSphere外掛程式使用此功能來管理VVol資料存放區（VMware虛擬磁碟區）SnapCenter 。如需支援的版本、請<block ref="3a209fb27f7f233fd0ce1196af83183f" category="inline-link-rx"></block>參閱。</block>
-  <block id="b87a35e8b1ff0c734dec37c43fc7ba6e" category="paragraph">如需支援版本的最新資訊、請<block ref="3a209fb27f7f233fd0ce1196af83183f" category="inline-link-rx"></block>參閱。</block>
   <block id="d0f9811f0da480925e8c3f5e76409f54" category="list-text">在 * 分離虛擬磁碟 * 畫面上，選取您要分離的一或多個磁碟，然後選取 * 分離選取的磁碟 * 核取方塊，然後選取 * 分離 * 。</block>
   <block id="786a1456c6dc1153a986286442b671dc" category="list-text">在左側導航窗格中選擇 *Configuration* ，然後取消選擇 *Plug-In Details* 部分中的 Service 選項以禁用插件。</block>
   <block id="6dfcb68f8429554bd841be76d633bbd1" category="paragraph">您也可以按兩下工作以存取「工作詳細資料」視窗，然後選取 * 下載工作記錄 * 。</block>
@@ -2019,9 +2013,6 @@
   <block id="ecaa5b9363bd3e23ada741ccc7512473" category="paragraph">當您連選兩個資料夾來瀏覽並選取個別檔案時，擷取檔案清單時可能會有時間延遲，因為擷取作業是在執行時間執行。</block>
   <block id="642918e808461b51c37c9e8d7909ffdb" category="list-text">選取您要還原的一或多個檔案或資料夾，然後選取 * 選取還原位置 * 。</block>
   <block id="f77361b272ce81d8275727f7b1a756a8" category="list-text">選擇*還原*。</block>
-  <block id="903d29a0523ca22e4dcbac24e33ef3f4" category="paragraph">如需支援版本的最新資訊、請<block ref="361fee5724018df312396e88d348d8b5" category="inline-link-rx"></block>參閱。</block>
-  <block id="e48b6aae8f268fb1220ec073d110a1ec" category="paragraph">您無法從執行Linux客體作業系統的VM還原檔案和資料夾。不過、您可以附加VMDK、然後手動還原檔案和資料夾。如需支援來賓作業系統的最新資訊、請<block ref="361fee5724018df312396e88d348d8b5" category="inline-link-rx"></block>參閱。</block>
-  <block id="1ebf62949d055407b1151236c6390c01" category="paragraph">您無法從執行Linux客體作業系統的VM還原檔案和資料夾。不過、您可以附加VMDK、然後手動還原檔案和資料夾。如需支援來賓作業系統的最新資訊、請<block ref="361fee5724018df312396e88d348d8b5" category="inline-link-rx"></block>參閱。</block>
   <block id="78e939bd5a7e9753b83a4aa950117e52" category="cell">從下拉式清單中選取 * 特定磁碟 * ，然後選取 * 下一步 * 。在資料存放區選擇表中、您可以選取或取消選取任何VMDK。</block>
   <block id="99b54fcdde08e8f03e3d080dede7ffaf" category="cell">選取目的地資料存放區，然後從清單中選取不同的資料存放區。</block>
   <block id="c6e0d914d3ce8312422c0f87cce38dec" category="cell">選取 * 主機與叢集 * 功能表選項，然後選取 VM ，然後選取 * 組態 * 索引標籤，然後在 * SnapCenter Plug-in for VMware vSphere 區段 * 中選取 * 備份 * 。</block>
@@ -2059,7 +2050,6 @@
   <block id="cf26c37864b6057757bc11f14c25d631" category="inline-link">設定 ONTAP Mediator 和叢集以進行 SnapMirror 主動式同步</block>
   <block id="7bf83651187bd5c60252c236bb21bf9c" category="list-text">按照技術報告中的說明配置羣集和調解器：<block ref="dee2443effe2653b7b7862728c1a701c" category="inline-link-rx"></block>。</block>
   <block id="0b9c25bd5b5eaced6be5a08c296638a2" category="admonition">最大保留值為 1018 個備份。如果保留設定的值高於基礎ONTAP 版支援的值、則備份將會失敗。跨距資料存放區也是如此。</block>
-  <block id="1f7a12a98590c88658034c05ec2de1fb" category="paragraph">當您嘗試建立資源群組時、會執行相容性檢查。SnapCenter如需 SnapCenter 支援的最新資訊，請務必參閱<block ref="361fee5724018df312396e88d348d8b5" category="inline-link-rx"></block>。不相容的原因可能是：</block>
   <block id="cb7cb42890ccd7035c776387ce9c759c" category="list-text">內部部署 ONTAP 叢集（ FAS ， AFF 和 ASA 系統）</block>
   <block id="d1a5389ce9c0d52e7ee4639d806d7008" category="cell">All Access 命令：最低 ONTAP Privileges 。</block>
   <block id="54eadeca2b2bd492eb03529cf49b5ade" category="cell">唯讀命令：最低 ONTAP Privileges</block>
@@ -2085,7 +2075,6 @@
   <block id="75a9afdca6c89eec0ab219e5bdeac793" category="list-text">單一FlexGroup資料儲存。  SCV 不支援跨越FlexGroup資料儲存。  FlexGroup資料儲存不能與傳統虛擬機器或資料儲存結合使用。</block>
   <block id="e863be193793af4172263065990cb61e" category="list-text">ASA r2 儲存系統上的虛擬機器和資料儲存。您不能將ASA r2 VM 和資料儲存區與其他 VM 和資料儲存區組合。</block>
   <block id="e8b07d018037f28da5152141e242af4d" category="admonition">如果您正在使用 VMware vSphere 叢集服務 (vCLS)，請勿將 vCLS 管理的虛擬機器新增至SnapCenter Plug-in for VMware vSphere。</block>
-  <block id="b53f2580cfbfaccc767005acaf236e4b" category="paragraph">如需更多信息，請參閱適用ONTAP tools for VMware vSphere文件。如需了解支援的版本，請訪問<block ref="3a209fb27f7f233fd0ce1196af83183f" category="inline-link-rx"></block>。</block>
   <block id="ac84b1a7e72a9605445240fa9a3b3d29" category="list-text">您可以隨時在資源組中新增或刪除資源。</block>
   <block id="9cda0af381aa1b4f8bea1f399ea0d7fa" category="list-text">若要備份單一資源（例如虛擬機器），請建立僅包含該資源的資源群組。</block>
   <block id="ee4aa19a5d187373cae36a8063c1a4fa" category="list-text">若要備份多個資源，請建立一個包含所有要保護的資源的資源群組。</block>
@@ -2116,7 +2105,6 @@
   <block id="6df2f9689a6255e2c498bc4bfb1abbf2" category="list-text">登出並關閉所有 vSphere 用戶端瀏覽器會話，並清除瀏覽器快取以防止部署期間出現問題。</block>
   <block id="f6c9b4635b5425929b1d75520484e3a1" category="list-text">在 vCenter 中啟用傳輸層安全性 (TLS)。請參閱 VMware 文件。</block>
   <block id="228276fa8cafcca2276f7b3f56cc1c22" category="list-text">如果您打算在部署了適用於SnapCenter Plug-in for VMware vSphere的vCenter 以外的 vCenter 中執行備份，請確保 ESXi 伺服器、SnapCenter Plug-in for VMware vSphere和每個 vCenter 都同步到相同時間。</block>
-  <block id="587c9ed3c0a9b0bbee1033a084dbb713" category="list-text">若要保護 vVol 資料儲存體上的虛擬機，請先ONTAP tools for VMware vSphere。有關支援的ONTAP工具版本，請參閱<block ref="3a209fb27f7f233fd0ce1196af83183f" category="inline-link-rx"></block>。  ONTAP工具在ONTAP和 VMware Web 用戶端上設定和設定儲存。</block>
   <block id="b1226251f40950720f8b0d1c0db0107e" category="paragraph">螢幕顯示部署SnapCenter Plug-in for VMware vSphere的IP 位址。記下 IP 位址。如果要變更適用於SnapCenter Plug-in for VMware vSphere配置，則需要登入適用SnapCenter Plug-in for VMware vSphere管理使用者介面。</block>
   <block id="5d950bf8c254fb969efdbfc4db96e1b1" category="list-text">使用部署畫面上顯示的 IP 位址和部署精靈中提供的憑證登入適用SnapCenter Plug-in for VMware vSphere管理使用者介面，然後在儀表板上驗證適用SnapCenter Plug-in for VMware vSphere是否已成功連線至 vCenter 並已啟用。</block>
   <block id="e7a5ee24eea46c33667413c3e3f1e89f" category="paragraph">使用格式<block ref="cf854de4a942e42c016ef31d206a66c3" prefix=" " category="inline-code"></block>存取管理使用者介面。</block>
@@ -2204,4 +2192,14 @@
   <block id="5f9632818cc0b2ae9e72f12df491a0d9" category="sidebar">SnapCenter Plug-in for VMware vSphere使用者介面產生支援包</block>
   <block id="d6ede90a002c3b83d155e427efb5f090" category="admonition">從 SCV 6.2 版本開始，可以支援Amazon FSx for NetApp ONTAP儲存系統。</block>
   <block id="7b373df72819a720b694167ed282840b" category="list-text">您可以將使用者與全域權限下的預先定義角色關聯。</block>
+  <block id="65d85f7b30631ef25b698588ad1c6d70" category="paragraph">如需更多信息，請參閱適用ONTAP tools for VMware vSphere文件。此外，請參閱<block ref="3a652b73dae301a6be8009ba1c8bc98c" category="inline-link-rx"></block>有關ONTAP工具支援的版本的最新資訊。</block>
+  <block id="b0a08790fc072a9142432d7a767cb288" category="paragraph">有關受支援版本的最新信息，請參閱<block ref="3a652b73dae301a6be8009ba1c8bc98c" category="inline-link-rx"></block>（IMT）。</block>
+  <block id="5d47851b653e8af8cb032e72d0258b2b" category="paragraph">如需更多信息，請參閱適用ONTAP tools for VMware vSphere文件。如需了解支援的版本，請訪問<block ref="3a652b73dae301a6be8009ba1c8bc98c" category="inline-link-rx"></block>。</block>
+  <block id="6994de96d1aec646ddcf3fc872669a22" category="paragraph">當您嘗試建立資源組時， SnapCenter會執行相容性檢查。總是參考<block ref="dd731ea0dfaa7ba4b5325a39b353b5a2" category="inline-link-rx"></block>有關SnapCenter支援的最新資訊。不相容的原因可能包括：</block>
+  <block id="c1ae70ea35887b6844fa48639efbda0d" category="list-text">若要保護 vVol 資料儲存體上的虛擬機，請先ONTAP tools for VMware vSphere。有關支援的ONTAP工具版本，請參閱<block ref="3a652b73dae301a6be8009ba1c8bc98c" category="inline-link-rx"></block>。ONTAP工具在ONTAP和 VMware Web 用戶端上設定和設定儲存。</block>
+  <block id="ee3365d72219428ca65e587d89bdfcc7" category="cell">SnapCenter Plug-in for VMware vSphere使用它來管理 vVol 資料儲存（VMware 虛擬磁碟區）。有關支援的版本，請參閱<block ref="3a652b73dae301a6be8009ba1c8bc98c" category="inline-link-rx"></block>。</block>
+  <block id="8ac9572d9a2e6569c451b7e81c7b6662" category="paragraph">有關受支援版本的最新信息，請參閱<block ref="3a652b73dae301a6be8009ba1c8bc98c" category="inline-link-rx"></block>。</block>
+  <block id="95477275bd206a7fb98bf4a8ec799a0b" category="paragraph">有關受支援版本的最新信息，請參閱<block ref="dd731ea0dfaa7ba4b5325a39b353b5a2" category="inline-link-rx"></block>。</block>
+  <block id="65d35124c2bde72fba0fccdd4037d284" category="paragraph">您無法從執行 Linux 客戶作業系統的 VM 還原檔案和資料夾。但是，您可以附加 VMDK，然後手動恢復檔案和資料夾。有關受支援的客戶作業系統的最新信息，請參閱<block ref="dd731ea0dfaa7ba4b5325a39b353b5a2" category="inline-link-rx"></block>。</block>
+  <block id="eccd74f81ec87affcad9c90ed7e1c714" category="paragraph">您無法從執行 Linux 客戶作業系統的 VM 還原檔案和資料夾。但是，您可以附加 VMDK，然後手動恢復檔案和資料夾。有關受支援的客戶作業系統的最新信息，請參閱<block ref="dd731ea0dfaa7ba4b5325a39b353b5a2" category="inline-link-rx"></block>。</block>
 </blocks>

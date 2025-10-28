@@ -59,7 +59,7 @@ NFS環境中的大多數還原作業都使用原生ONTAP 的還原功能（例�
 您可以使用ONTAP 支援功能來配置ONTAP 及配置VMware Web用戶端中vVols的儲存資源。
 
 +
-如需詳細資訊，請參閱 ONTAP Tools for VMware vSphere 文件。此外，如需 ONTAP 工具支援版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+如需更多信息，請參閱適用ONTAP tools for VMware vSphere文件。此外，請參閱 https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]有關ONTAP工具支援的版本的最新資訊。
 
 * SnapCenter Plug-in for VMware vSphere 是部署在 Linux VM 中的虛擬應用裝置
 +
@@ -69,7 +69,7 @@ NFS環境中的大多數還原作業都使用原生ONTAP 的還原功能（例�
 
 除了這些主要功能外，適用於 VMware vSphere 的 SnapCenter 外掛程式也支援 iSCSI ，光纖通道， FCoE ， NFS 3.0/4.1 ， VMFS 5.0/6.0 ， NVMe over FC 和 NVMe over TCP 。
 
-如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^] （ IMT ）。
+有關受支援版本的最新信息，請參閱 https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]（IMT）。
 
 如需 NFS 通訊協定和 ESXi 主機的相關資訊、請參閱 VMware 提供的 vSphere 儲存設備文件。
 

@@ -32,7 +32,7 @@ NOTE:  VMware vCenter 7u1及更新版本支援OVA部署。
 * 登出並關閉所有 vSphere 用戶端瀏覽器會話，並清除瀏覽器快取以防止部署期間出現問題。
 * 在 vCenter 中啟用傳輸層安全性 (TLS)。請參閱 VMware 文件。
 * 如果您打算在部署了適用於SnapCenter Plug-in for VMware vSphere的vCenter 以外的 vCenter 中執行備份，請確保 ESXi 伺服器、SnapCenter Plug-in for VMware vSphere和每個 vCenter 都同步到相同時間。
-* 若要保護 vVol 資料儲存體上的虛擬機，請先ONTAP tools for VMware vSphere。有關支援的ONTAP工具版本，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]。  ONTAP工具在ONTAP和 VMware Web 用戶端上設定和設定儲存。
+* 若要保護 vVol 資料儲存體上的虛擬機，請先ONTAP tools for VMware vSphere。有關支援的ONTAP工具版本，請參閱 https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]。ONTAP工具在ONTAP和 VMware Web 用戶端上設定和設定儲存。
 
 
 將 SnapCenter Plug-in for VMware vSphere 部署在與 vCenter 相同的時區。備份排程會在部署 SnapCenter Plug-in for VMware vSphere 的時區執行。 vCenter 會在 vCenter 所在的時區中報告資料。因此、如果 SnapCenter Plug-in for VMware vSphere 和 vCenter 位於不同的時區、 SnapCenter Plug-in for VMware vSphere 儀表板中的資料可能與報告中的資料不同。
