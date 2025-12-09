@@ -123,6 +123,9 @@ summary: 在部署虛擬應用裝置之前、您應該先瞭解部署需求。
 
 
 | VMware的支援工具ONTAP | SnapCenter Plug-in for VMware vSphere使用它來管理 vVol 資料儲存（VMware 虛擬磁碟區）。有關支援的版本，請參閱 https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]。 
+
+
+| Amazon FSxN for NetApp ONTAP存儲 | 9.10 以上 
 |===
 有關受支援版本的最新信息，請參閱 https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
@@ -152,9 +155,6 @@ NVMe over TCP 和 NVMe over FC 傳輸協定支援的最低軟體需求為：
 
 
 | 適用於VMware vSphere、記錄檔和MySQL資料庫的VMware vCenter外掛程式最小硬碟空間SnapCenter | 100 GB 
-
-
-| 應用裝置中 vmcontrol 服務的最大堆積大小 | 8GB 
 |===
 
 

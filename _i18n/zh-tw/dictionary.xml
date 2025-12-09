@@ -1831,8 +1831,6 @@
   <block id="856e1714b1d49f0d567463f553ef9120" category="cell">8個核心</block>
   <block id="2a9f9ccc193010032b655ecfc76e40c8" category="cell">建議的 RAM</block>
   <block id="dde8b54fa4a91beedb7b736869c08569" category="cell">24GB</block>
-  <block id="f8bce6aa95f5621d608c29e258b620d2" category="cell">應用裝置中 vmcontrol 服務的最大堆積大小</block>
-  <block id="af5700014f646d2567efa6288d85ab2b" category="cell">8GB</block>
   <block id="4fa7e925220267d7b768f4b3a78c6148" category="admonition">ASA R2 儲存系統不支援重新命名備份。</block>
   <block id="d106abcc28b08528e977427482cfc257" category="paragraph">您可以在多個類別中進行變更。您也可以在此選項中編輯次要受保護的資源。</block>
   <block id="875b0302744a0f026125fde0002031ee" category="cell">Volume clone create volume clone show volume clone 分割 start volume clone 分割狀態 volume clone 分割 stop volume create volume destroy volume file clone create volume file show-disk-usage SnapLock volume offline volume clase-feature volume 修改 volume qtree create volume qtree delete volume qtree 修改 volume qtree show volume 限制 Volume 顯示 Volume 快照建立 Volume 快照刪除 Volume 快照修改 Volume snapshot mode-time-cluse-time-cluse-time-cluse-cluse-命令 重命名 Volume</block>
@@ -2202,4 +2200,7 @@
   <block id="95477275bd206a7fb98bf4a8ec799a0b" category="paragraph">有關受支援版本的最新信息，請參閱<block ref="dd731ea0dfaa7ba4b5325a39b353b5a2" category="inline-link-rx"></block>。</block>
   <block id="65d35124c2bde72fba0fccdd4037d284" category="paragraph">您無法從執行 Linux 客戶作業系統的 VM 還原檔案和資料夾。但是，您可以附加 VMDK，然後手動恢復檔案和資料夾。有關受支援的客戶作業系統的最新信息，請參閱<block ref="dd731ea0dfaa7ba4b5325a39b353b5a2" category="inline-link-rx"></block>。</block>
   <block id="eccd74f81ec87affcad9c90ed7e1c714" category="paragraph">您無法從執行 Linux 客戶作業系統的 VM 還原檔案和資料夾。但是，您可以附加 VMDK，然後手動恢復檔案和資料夾。有關受支援的客戶作業系統的最新信息，請參閱<block ref="dd731ea0dfaa7ba4b5325a39b353b5a2" category="inline-link-rx"></block>。</block>
+  <block id="dcd97a739116b3e37a21b24d1b1d508d" category="cell">Amazon FSxN for NetApp ONTAP存儲</block>
+  <block id="b6e6ac3bc87c50849332d71bd687f2ee" category="cell">9.10 以上</block>
+  <block id="af6ccd5ef578462110c3f8bfdb7d3622" category="paragraph">從本版本開始，適用SnapCenter Plug-in for VMware vSphere支援執行 9.10 或更高版本的 Amazon FSxN for NetApp ONTAP儲存系統。</block>
 </blocks>
