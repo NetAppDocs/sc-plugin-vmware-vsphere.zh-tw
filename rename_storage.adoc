@@ -4,7 +4,7 @@ permalink: rename_storage.html
 keywords:  
 summary: 您可以使用 REST API 重新命名儲存設備。 
 ---
-= 還原重新命名儲存設備的備份
+= 使用 SCV 從重新命名的儲存設備還原備份
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

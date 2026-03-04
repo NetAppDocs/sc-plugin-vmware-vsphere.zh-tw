@@ -4,7 +4,7 @@ permalink: scpivs44_manage_storage_systems.html
 keywords:  
 summary: 在使用VMware vSphere用戶端備份或還原VM或資料存放區之前、您必須先新增儲存設備。 
 ---
-= 管理儲存系統
+= 在 SnapCenter Plug-in for VMware vSphere 中管理儲存系統
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

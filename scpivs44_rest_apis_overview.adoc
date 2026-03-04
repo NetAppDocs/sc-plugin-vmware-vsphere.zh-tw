@@ -4,7 +4,7 @@ permalink: scpivs44_rest_apis_overview.html
 keywords:  
 summary: 您可以使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式來執行一般的資料保護作業。外掛程式的Swagger網頁與Windows SnapCenter 介紹的Swagger網頁不同。 
 ---
-= 總覽
+= 瞭解 SnapCenter Plug-in for VMware vSphere 中的 REST API
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_create_resource_groups_for_vms_and_datastores.html
 keywords:  
 summary: 資源群組是您要保護的 VM 、資料存放區、 vSphere 標記和 vSphere VM 資料夾的容器。 
 ---
-= 建立資源群組
+= 在 SCV 中為虛擬機器和資料存放區建立資源群組
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_monitor_jobs.html
 keywords:  
 summary: 使用VMware vSphere用戶端執行任何資料保護作業之後、您可以從儀表板的「工作監控」索引標籤監控工作狀態、並檢視工作詳細資料。 
 ---
-= 監控工作
+= 在 SnapCenter Plug-in for VMware vSphere 中監控作業
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

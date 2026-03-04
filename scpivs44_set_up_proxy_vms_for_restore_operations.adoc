@@ -4,7 +4,7 @@ permalink: scpivs44_set_up_proxy_vms_for_restore_operations.html
 keywords:  
 summary: 如果您想要使用Proxy VM來附加虛擬磁碟以進行客體檔案還原作業、則必須先設定Proxy VM、才能開始還原作業。雖然您可以隨時設定Proxy VM、但在外掛程式部署完成後、立即設定Proxy VM可能會更為方便。 
 ---
-= 設定Proxy VM以進行還原作業
+= 在 SCV 中設定用於還原作業的 Proxy VM
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

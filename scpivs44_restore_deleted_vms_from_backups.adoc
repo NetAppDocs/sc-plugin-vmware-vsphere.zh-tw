@@ -4,7 +4,7 @@ permalink: scpivs44_restore_deleted_vms_from_backups.html
 keywords:  
 summary: 您可以將刪除的VM從資料存放區的主要或次要備份還原至所選的ESXi主機。 
 ---
-= 從備份還原刪除的VM
+= 使用 SCV 從備份還原已刪除的 VM
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_rest_api_workflow__restore_vmdks.html
 keywords:  
 summary: 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式來執行VMDK的還原作業、您必須遵循規定的REST API呼叫順序。 
 ---
-= REST API工作流程可還原VMDK
+= 使用 SCV 還原 VMDK 的 REST API 工作流程
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

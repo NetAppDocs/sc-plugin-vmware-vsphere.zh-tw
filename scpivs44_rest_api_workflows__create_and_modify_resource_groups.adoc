@@ -4,7 +4,7 @@ permalink: scpivs44_rest_api_workflows__create_and_modify_resource_groups.html
 keywords:  
 summary: 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式來執行建立和修改資源群組作業、您必須遵循規定的REST API呼叫順序。 
 ---
-= REST API工作流程、以建立及修改資源群組
+= 使用 REST API 工作流程在 SCV 中建立和修改資源群組
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_modify_storage_timeout.html
 keywords:  
 summary: 雖然備份在過去已成功執行、但在 SnapCenter Plug-in for VMware vSphere 必須等待儲存系統超過設定的逾時期間、備份可能會開始失敗。如果發生這種情況、您可以增加設定的逾時時間。 
 ---
-= 修改設定的儲存逾時
+= 修改 SCV 中的儲存逾時
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

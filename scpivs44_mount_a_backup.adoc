@@ -4,7 +4,7 @@ permalink: scpivs44_mount_a_backup.html
 keywords:  
 summary: 若要存取備份中的檔案、您可以從備份掛載傳統資料存放區。您可以將備份掛載到建立備份的同一個ESXi主機、或掛載到具有相同類型VM和主機組態的替代ESXi主機。您可以在主機上多次掛載資料存放區。 
 ---
-= 掛載備份
+= 使用 SnapCenter Plug-in for VMware vSphere 掛載備份
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

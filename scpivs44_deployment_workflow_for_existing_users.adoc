@@ -4,7 +4,7 @@ permalink: scpivs44_deployment_workflow_for_existing_users.html
 keywords:  
 summary: 如果SnapCenter 您是一個不一樣的使用者、並且有SnapCenter 使用者進行還原備份、您可以使用此工作流程。 
 ---
-= 現有使用者的部署工作流程
+= 現有 SnapCenter 使用者的部署工作流程
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

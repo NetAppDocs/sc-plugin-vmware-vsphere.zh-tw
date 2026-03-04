@@ -4,7 +4,7 @@ permalink: scpivs44_manage_backups.html
 keywords:  
 summary: 您可以重新命名及刪除SnapCenter VMware vSphere的VMware vSphere的VMware vCenter外掛程式所執行的備份。您也可以同時刪除多個備份。 
 ---
-= 管理備份
+= 在 SnapCenter Plug-in for VMware vSphere 中管理備份
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

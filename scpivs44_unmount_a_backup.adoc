@@ -4,7 +4,7 @@ permalink: scpivs44_unmount_a_backup.html
 keywords:  
 summary: 當您不再需要存取資料存放區中的檔案時、可以卸載備份。 
 ---
-= 卸載備份
+= 使用 SnapCenter Plug-in for VMware vSphere 卸載備份
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

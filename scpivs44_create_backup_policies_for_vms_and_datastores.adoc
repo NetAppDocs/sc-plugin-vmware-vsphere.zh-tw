@@ -4,7 +4,7 @@ permalink: scpivs44_create_backup_policies_for_vms_and_datastores.html
 keywords:  
 summary: 您必須先建立備份原則、才能使用SnapCenter VMware vSphere的VMware vCenter插件來備份VM和資料存放區。 
 ---
-= 為VM和資料存放區建立備份原則
+= 在 SCV 中為 VM 和資料存放區建立備份原則
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_prescripts_and_postscripts.html
 keywords:  
 summary: 您可以使用自訂規範和後製指令碼、作為資料保護作業的一部分。這些指令碼可在資料保護工作之前或之後進行自動化。 
 ---
-= 簡報與指令碼
+= SCV 的前置指令碼與後置指令碼
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

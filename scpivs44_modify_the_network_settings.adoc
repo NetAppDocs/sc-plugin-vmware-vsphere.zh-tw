@@ -4,7 +4,7 @@ permalink: scpivs44_modify_the_network_settings.html
 keywords:  
 summary: 您可以修改SnapCenter 在VMware vSphere的VMware vSphere的VMware Plug-in中設定的網路設定。外掛程式會使用這些設定來存取vCenter。 
 ---
-= 修改網路設定
+= 修改 SCV 的網路設置
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

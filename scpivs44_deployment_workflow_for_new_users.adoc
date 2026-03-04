@@ -4,7 +4,7 @@ permalink: scpivs44_deployment_workflow_for_new_users.html
 keywords:  
 summary: 如果SnapCenter 您之前沒有使用過任何的不包含SnapCenter 任何的還原備份、您可以使用此工作流程。 
 ---
-= 新使用者的部署工作流程
+= 新 SnapCenter 使用者的部署工作流程
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

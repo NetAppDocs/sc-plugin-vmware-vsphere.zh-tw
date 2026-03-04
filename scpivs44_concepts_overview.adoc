@@ -4,7 +4,7 @@ permalink: scpivs44_concepts_overview.html
 keywords:  
 summary: VMware vSphere的VMware vSphere外掛程式是一種獨立式虛擬應用裝置（開放式虛擬應用裝置格式）、可為VM和資料存放區提供資料保護服務、並支援以應用程式為基礎的插件資料保護服務。SnapCenter SnapCenter本文件說明如何部署及使用SnapCenter VMware vSphere的VMware vSphere適用的VMware vCenter外掛程式、並包含快速入門資訊。 
 ---
-= 產品總覽
+= 瞭解 SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

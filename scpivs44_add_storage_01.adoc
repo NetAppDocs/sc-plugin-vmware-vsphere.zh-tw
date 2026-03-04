@@ -4,7 +4,7 @@ permalink: scpivs44_add_storage_01.html
 keywords:  
 summary: 新增儲存設備可讓SnapCenter VMware vSphere的VMware vCenter的VMware vCenter外掛程式辨識及管理vCenter中的備份與還原作業。 
 ---
-= 新增儲存設備
+= 將儲存系統新增至 SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_access_reports.html
 keywords:  
 summary: 您可以從儀表板要求一份或多份工作的報告。 
 ---
-= 存取報告
+= 在 SnapCenter Plug-in for VMware vSphere 中存取報告
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

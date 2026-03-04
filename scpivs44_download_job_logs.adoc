@@ -4,7 +4,7 @@ permalink: scpivs44_download_job_logs.html
 keywords:  
 summary: 您可以從SnapCenter VMware vSphere用戶端儀表板的「工作監控」索引標籤下載工作記錄。 
 ---
-= 下載工作記錄
+= 從 SnapCenter Plug-in for VMware vSphere 下載作業日誌
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

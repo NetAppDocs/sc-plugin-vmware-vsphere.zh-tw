@@ -4,7 +4,7 @@ permalink: scpivs44_guest_file_restore_scenarios_you_might_encounter.html
 keywords:  
 summary: 嘗試還原來賓檔案時、可能會遇到以下情況：來賓檔案還原工作階段為空白、來賓檔案還原附加磁碟作業失敗、或是來賓檔案還原工作階段中斷後、備份未分離。 
 ---
-= 您可能會遇到的客體檔案還原案例
+= SCV 中的客體檔案還原案例
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

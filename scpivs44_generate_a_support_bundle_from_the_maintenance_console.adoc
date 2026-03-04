@@ -4,7 +4,7 @@ permalink: scpivs44_generate_a_support_bundle_from_the_maintenance_console.html
 keywords:  
 summary: 您可以從維護主控台產生支援服務組合。 
 ---
-= 從維護主控台產生支援套裝組合
+= 從 SCV 維護主控台產生支援服務組合
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_restore_vmdks_from_backups.html
 keywords:  
 summary: 您可以從傳統VM或VVol VM的主要或次要備份還原現有的VMDK、或是刪除或分離的VMDK。 
 ---
-= 從備份還原VMDK
+= 使用 SCV 從備份還原 VMDK
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

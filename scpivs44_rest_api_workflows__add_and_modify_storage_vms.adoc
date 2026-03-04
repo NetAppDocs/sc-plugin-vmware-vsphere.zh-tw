@@ -4,7 +4,7 @@ permalink: scpivs44_rest_api_workflows__add_and_modify_storage_vms.html
 keywords:  
 summary: 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛程式執行新增和修改儲存VM作業、您必須遵循規定的REST API呼叫順序。 
 ---
-= REST API工作流程、以新增及修改儲存VM
+= 在 SCV 中新增和修改儲存 VM 的 REST API 工作流程
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

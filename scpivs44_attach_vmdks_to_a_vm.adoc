@@ -4,7 +4,7 @@ permalink: scpivs44_attach_vmdks_to_a_vm.html
 keywords:  
 summary: 您可以將一個或多個VMDK從備份附加至父VM、或附加至同一ESXi主機上的替代VM、或附加至由同一vCenter管理的替代ESXi主機上的替代VM、或以連結模式附加至不同vCenter。支援傳統資料存放區和VVol資料存放區中的VM。 
 ---
-= 將VMDK附加至VM或VVol VM
+= 使用 SnapCenter Plug-in for VMware vSphere 將 VMDK 附加到 VM
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

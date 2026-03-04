@@ -4,7 +4,7 @@ permalink: scpivs44_restore_a_specific_backup_of_the_mysql_database.html
 keywords:  
 summary: 您可以使用維護主控台還原適用於SnapCenter VMware vSphere虛擬應用裝置的MySQL資料庫（也稱為NSM資料庫）的特定備份。 
 ---
-= 還原MySQL資料庫的特定備份
+= 還原 SCV MySQL 資料庫的特定備份
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

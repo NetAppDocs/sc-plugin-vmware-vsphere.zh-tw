@@ -4,7 +4,7 @@ permalink: scpivs44_extend_the_time_of_a_guest_file_restore_session.html
 keywords:  
 summary: 根據預設、附加的來賓檔案還原VMDK可在24小時內使用、然後會自動分離。您可以在「Guest組態」頁面中延長時間。 
 ---
-= 延長客體檔案還原工作階段的時間
+= 延長 SCV 中訪客檔案還原工作階段的時間
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

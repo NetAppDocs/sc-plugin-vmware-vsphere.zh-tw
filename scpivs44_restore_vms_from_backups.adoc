@@ -4,7 +4,7 @@ permalink: scpivs44_restore_vms_from_backups.html
 keywords:  
 summary: 還原VM時、您可以使用所選的備份複本覆寫現有內容、也可以複製VM。 
 ---
-= 從備份還原VM
+= 使用 SCV 從備份還原 VM
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

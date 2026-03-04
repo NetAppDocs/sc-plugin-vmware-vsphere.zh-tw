@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: 'what"s new, release notes, scv, 6.2' 
 summary: 了解適用於SnapCenter Plug-in for VMware vSphere中提供的新功能。 
 ---
-= SnapCenter Plug-in for VMware vSphere新增功能
+= SnapCenter Plug-in for VMware vSphere 6.2 的新增功能
 :allow-uri-read: 
 
 

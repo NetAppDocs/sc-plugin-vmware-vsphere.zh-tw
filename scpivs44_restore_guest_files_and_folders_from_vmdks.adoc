@@ -4,7 +4,7 @@ permalink: scpivs44_restore_guest_files_and_folders_from_vmdks.html
 keywords:  
 summary: 您可以在Windows來賓作業系統上、從VMDK還原一或多個檔案或資料夾。 
 ---
-= 從VMDK還原來賓檔案和資料夾
+= 使用 SCV 從 VMDK 還原客體檔案和資料夾
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

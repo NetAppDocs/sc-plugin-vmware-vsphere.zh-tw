@@ -4,7 +4,7 @@ permalink: scpivs44_properties_you_can_override.html
 keywords:  
 summary: 您可以使用「shCBR.override」組態檔中列出的內容來變更預設值。 
 ---
-= 您可以置換的內容
+= 您可以在 SCV 中覆寫的內容
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

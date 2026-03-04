@@ -4,7 +4,7 @@ permalink: scpivs44_licensing.html
 keywords:  
 summary: 本節提供SnapCenter 適用於VMware vSphere的VMware vSphere的VMware Plug-in授權資訊。 
 ---
-= 授權
+= SnapCenter Plug-in for VMware vSphere 的授權
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

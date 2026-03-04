@@ -4,7 +4,7 @@ permalink: scpivs44_search_for_backups.html
 keywords:  
 summary: 您可以使用還原精靈來搜尋及尋找VM或資料存放區的特定備份。找到備份之後、即可還原。 
 ---
-= 搜尋備份
+= 在 SnapCenter Plug-in for VMware vSphere 中搜尋備份
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

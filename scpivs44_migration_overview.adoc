@@ -4,7 +4,7 @@ permalink: scpivs44_migration_overview.html
 keywords:  
 summary:  
 ---
-= 移轉總覽
+= 將中繼資料從以 Windows 為基礎的 SnapCenter for VMware vSphere 移轉
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

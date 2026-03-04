@@ -4,7 +4,7 @@ permalink: scv48_add_certificates_to_certificate_store.html
 keywords:  
 summary: 將憑證授權單位的根和中介憑證新增至VMware vCenter、以信任憑證及其簽署的成品。 
 ---
-= 將憑證新增至VMware憑證存放區
+= 將憑證新增至 SCV 的 VMware 憑證儲存區
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

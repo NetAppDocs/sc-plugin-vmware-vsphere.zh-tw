@@ -4,7 +4,7 @@ permalink: scpivs44_view_vm_and_datastore_backups.html
 keywords:  
 summary: 當您準備備備備份或還原VM或資料存放區時、可能會想要查看該資源可用的所有備份、並檢視這些備份的詳細資料。 
 ---
-= 檢視VM和資料存放區備份
+= 在 SCV 中檢視 VM 和資料存放區備份
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_access_rest_apis_using_the_swagger_api_web_page.html
 keywords:  
 summary: REST API會透過Swagger網頁公開。您可以存取Swagger網頁、顯示SnapCenter 適用於SnapCenter VMware vSphere REST API的VMware Server或VMware vCenter外掛程式、以及手動發出API呼叫。使用適用於 VMware vSphere REST API 的 SnapCenter 外掛程式、在 VM 和資料存放區上執行保護作業。 
 ---
-= 使用Swagger API網頁存取REST API
+= 使用 Swagger API 網頁存取 SnapCenter Plug-in for VMware vSphere 的 REST API
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

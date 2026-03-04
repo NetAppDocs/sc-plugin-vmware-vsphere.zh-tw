@@ -4,7 +4,7 @@ permalink: scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere_01.html
 keywords:  
 summary:  
 ---
-= 部署SnapCenter VMware vSphere的VMware vCenter外掛程式
+= 部署 SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

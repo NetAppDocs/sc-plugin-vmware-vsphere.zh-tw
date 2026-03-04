@@ -4,7 +4,7 @@ permalink: scpivs44_rest_api_workflows__attach_and_detach_vmdks.html
 keywords:  
 summary: 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式來執行VMDK的附加和分離作業、您必須遵循規定的REST API呼叫順序。 
 ---
-= REST API工作流程以附加和分離VMDK
+= 用於在 SCV 中附加和分離 VMDK 的 REST API 工作流程
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

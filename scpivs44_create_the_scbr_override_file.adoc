@@ -4,7 +4,7 @@ permalink: scpivs44_create_the_scbr_override_file.html
 keywords:  
 summary: 在支援以應用程式為基礎之資料保護作業的環境中、適用於VMware vSphere的VMware vSphere的VMware外掛程式會使用「shCBR.override」組態檔SnapCenter 。SnapCenter 
 ---
-= 建立scbr.override組態檔
+= 為 SCV 建立 scbr.override 組態檔
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

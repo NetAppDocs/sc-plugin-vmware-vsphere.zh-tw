@@ -4,7 +4,7 @@ permalink: scpivs44_customize_your_configuration.html
 keywords:  
 summary: 若要改善作業效率、您可以修改scbr.override組態檔以變更預設值。這些值可控制設定、例如在備份期間建立或刪除的VMware快照數量、或是備份指令碼停止執行之前的時間。 
 ---
-= 自訂您的組態
+= 自訂 SnapCenter Plug-in for VMware vSphere 設定
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

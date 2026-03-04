@@ -4,7 +4,7 @@ permalink: scpivs44_unregister_plugin_from_vcenter.html
 keywords:  
 summary: 如果您在處於連結模式的 vCenter 中停止 SnapCenter Plug-in for VMware vSphere 服務、則即使 SnapCenter Plug-in for VMware vSphere 服務是在其他連結的 vCenter 中執行、資源群組也無法在所有連結的 vCenter 中使用。您必須手動取消註冊 SnapCenter Plug-in for VMware vSphere 延伸模組。 
 ---
-= 從SnapCenter vCenter取消登錄VMware vSphere的VMware vSphere外掛程式
+= 從 vCenter 取消註冊 SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

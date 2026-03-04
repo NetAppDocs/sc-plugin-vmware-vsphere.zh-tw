@@ -4,7 +4,7 @@ permalink: scpivs44_manage_resource_groups.html
 keywords:  
 summary: 您可以建立、修改及刪除備份資源群組、並在資源群組上執行備份作業。 
 ---
-= 管理資源群組
+= 在 SnapCenter Plug-in for VMware vSphere 中管理資源群組
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

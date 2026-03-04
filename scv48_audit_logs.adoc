@@ -4,7 +4,7 @@ permalink: scv48_audit_logs.html
 keywords:  
 summary: 稽核日誌可追蹤誰做了什麼、何時做什麼。稽核記錄是依時間順序排列的事件集合、會寫入應用裝置中的檔案。 
 ---
-= 稽核記錄
+= SnapCenter Plug-in for VMware vSphere 的稽核日誌
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

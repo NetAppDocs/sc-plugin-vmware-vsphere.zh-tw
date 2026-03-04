@@ -4,7 +4,7 @@ permalink: scpivs48_rest_apis_audit_logs.html
 keywords:  
 summary: REST API以產生稽核記錄 
 ---
-= REST API以產生稽核記錄
+= 用於產生 SCV 稽核日誌的 REST API
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

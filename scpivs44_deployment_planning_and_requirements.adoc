@@ -4,7 +4,7 @@ permalink: scpivs44_deployment_planning_and_requirements.html
 keywords:  
 summary: 在部署虛擬應用裝置之前、您應該先瞭解部署需求。 
 ---
-= 部署規劃與需求
+= SCV 的部署規劃和需求
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

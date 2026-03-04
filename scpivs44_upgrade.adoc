@@ -4,7 +4,7 @@ permalink: scpivs44_upgrade.html
 keywords:  
 summary: 如果您使用SnapCenter 適用於VMware vSphere虛擬應用裝置的VMware vCenter外掛程式、則可以升級至較新的版本。 
 ---
-= 升級至SnapCenter 舊版VMware vSphere的VMware vSphere用版不整合式外掛程式
+= 從舊版 SCV 升級
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

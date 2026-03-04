@@ -4,7 +4,7 @@ permalink: scpivs44_rest_api_workflows__modify_built-in_schedules.html
 keywords:  
 summary: 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式修改VMware vSphere用戶端工作的內建排程、您必須遵循規定的REST API呼叫順序。 
 ---
-= REST API工作流程可修改內建排程
+= 在 SCV 中修改內建排程的 REST API 工作流程
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

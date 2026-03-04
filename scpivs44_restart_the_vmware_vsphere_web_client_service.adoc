@@ -4,7 +4,7 @@ permalink: scpivs44_restart_the_vmware_vsphere_web_client_service.html
 keywords:  
 summary: 如果SnapCenter VMware vSphere用戶端的行為不正確、您可能需要清除瀏覽器快取。如果問題持續發生、請重新啟動Web用戶端服務。 
 ---
-= 重新啟動VMware vSphere用戶端服務
+= 重新啟動 SCV 的 VMware vSphere 用戶端服務
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

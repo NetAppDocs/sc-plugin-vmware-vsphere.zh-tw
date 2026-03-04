@@ -4,7 +4,7 @@ permalink: scpivs44_register_snapcenter_plugin_vmware_vsphere_with_snapcenter_se
 keywords:  
 summary: 如果您想在SnapCenter VMware vSphere中執行應用程式over VMDK工作流程（適用於虛擬化資料庫和檔案系統的應用程式型保護工作流程）、則必須在SnapCenter 使用VMware vSphere的VMware vSphere中註冊此外掛SnapCenter 程式。 
 ---
-= 註冊SnapCenter VMware vSphere的VMware vCenter SnapCenter with VMware Server外掛程式
+= 向 SnapCenter 伺服器註冊 SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

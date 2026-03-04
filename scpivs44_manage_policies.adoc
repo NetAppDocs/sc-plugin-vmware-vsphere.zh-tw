@@ -4,7 +4,7 @@ permalink: scpivs44_manage_policies.html
 keywords:  
 summary: 您可以針對SnapCenter VMware vSphere建立、修改、檢視、分離及刪除VMware vSphere的VMware Plug-in備份原則。執行資料保護作業時、必須使用原則。 
 ---
-= 管理原則
+= 在 SnapCenter Plug-in for VMware vSphere 中管理原則
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

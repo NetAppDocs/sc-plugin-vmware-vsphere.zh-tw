@@ -4,7 +4,7 @@ permalink: scpivs44_add_multiple_vms_and_datastores_to_a_resource_group.html
 keywords:  
 summary: 您可以使用SnapCenter 「VMware vSphere用戶端編輯資源群組」精靈、將多個資源新增至現有的資源群組。 
 ---
-= 將多個VM和資料存放區新增至資源群組
+= 在 SCV 中向資源群組新增多個 VM 和資料存放區
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_detach_a_virtual_disk.html
 keywords:  
 summary: 附加虛擬磁碟以還原個別檔案之後、即可將虛擬磁碟與父VM分離。 
 ---
-= 分離虛擬磁碟
+= 在 SnapCenter Plug-in for VMware vSphere 中卸除虛擬磁碟
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

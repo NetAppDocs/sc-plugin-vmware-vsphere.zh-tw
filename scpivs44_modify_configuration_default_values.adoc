@@ -4,7 +4,7 @@ permalink: scpivs44_modify_configuration_default_values.html
 keywords:  
 summary: 若要提升作業效率、您可以修改「shCBR.override」組態檔、以變更預設值。 
 ---
-= 修改組態預設值
+= 修改 SCV 的組態預設值
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_post_deployment_required_operations_and_issues.html
 keywords:  
 summary: 部署SnapCenter 完VMware vSphere的VMware vSphere版的VMware vCenter外掛程式之後、您必須完成安裝。 
 ---
-= 部署後所需的作業與問題
+= SCV 部署後所需操作與問題
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

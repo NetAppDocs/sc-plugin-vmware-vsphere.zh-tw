@@ -4,7 +4,7 @@ permalink: scpivs44_minimum_ontap_privileges_required.html
 keywords:  
 summary: 所需的最低限度驗證權限會因您使用的資料保護功能的各個方面而有所不同。ONTAP SnapCenter 
 ---
-= 需要權限ONTAP
+= SCV 所需的最低 ONTAP 權限
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

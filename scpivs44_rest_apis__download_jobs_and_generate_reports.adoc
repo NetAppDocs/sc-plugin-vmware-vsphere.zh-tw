@@ -4,7 +4,7 @@ permalink: scpivs44_rest_apis__download_jobs_and_generate_reports.html
 keywords:  
 summary: 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式來產生VMware vSphere用戶端工作的報告和下載記錄、您必須使用VMware vSphere的REST API呼叫。 
 ---
-= REST API可下載工作並產生報告
+= 用於在 SCV 中下載作業和產生報表的 REST API
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
