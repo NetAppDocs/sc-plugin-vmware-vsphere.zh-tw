@@ -1595,7 +1595,6 @@
   <block id="b35ffcf16c6223a1d7e9f879b2315a05" category="list-text">在左側導航欄中，選擇 * 來賓文件還原 * 。</block>
   <block id="14287ce8c2228d3505c31799833a864f" category="paragraph">適用於 VMware vSphere 的 SnapCenter 外掛程式會使用選取的認證來登入所選的 VM 。</block>
   <block id="110328d238985c18e0a7947b09b1ff0f" category="summary">SnapCenter Plug-in for VMware vSphere 採用 SSL 加密技術、可與用戶端瀏覽器進行安全通訊。雖然如此一來、便能跨線路啟用加密資料、建立新的自我簽署憑證、或是使用您自己的憑證授權單位（CA）基礎架構或協力廠商CA、確保該憑證對您的環境而言是獨一無二的。</block>
-  <block id="6886be2ac69a368a307204ccfa1e00d9" category="paragraph">如需詳細資訊、請參閱<block ref="bf84a7958c466b4ea912f7e396459ac9" category="inline-link-rx"></block> 。</block>
   <block id="e90ae72a4d203cde9c1d660d983bec13" category="list-text">SnapMirror 主動式同步可讓業務服務持續運作、即使整個站台故障也沒問題、支援應用程式使用次要複本以透明方式容錯移轉。</block>
   <block id="c2bc8f54778a0e6f72a8fa3f9c96aae7" category="admonition">SnapMirror 主動同步僅支援 VMFS 資料存放區。</block>
   <block id="cae2d1284a0f6ccabe57939c8b8ad176" category="paragraph">若要在 SnapMirror 主動式同步部署上保護 VMFS 資料存放區、身為 SnapCenter 管理員、您需要：</block>
@@ -2304,4 +2303,5 @@
   <block id="6aa30740f7e61daa6dbeb98d1762ef2e" category="inline-link">存取 NetApp Backup and Recovery 服務</block>
   <block id="938c2a8ffc581d610f5a993251309046" category="list-text"><block ref="938c2a8ffc581d610f5a993251309046" category="inline-link-rx"></block></block>
   <block id="36fabaf7f4604c508ea56a9df930fef3" category="section-title">使用 NetApp Backup and Recovery 保護您的 VMware 環境</block>
+  <block id="04bc8505634cea728bd42022dbbe2763" category="paragraph">如需詳細資訊，請參閱<block ref="3cc65228ae073aa630520717edc687a9" category="inline-link-rx"></block>。</block>
 </blocks>
