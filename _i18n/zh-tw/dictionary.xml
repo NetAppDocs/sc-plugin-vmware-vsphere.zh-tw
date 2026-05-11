@@ -1122,7 +1122,6 @@
   <block id="f04e1cf825b6adbdd02179d720a3d56e" category="sidebar">管理您的組態</block>
   <block id="d175eac72dbff1925f585004c7748333" category="sidebar">修改時區</block>
   <block id="39431018d345c4625ee6755997cbf0d6" category="sidebar">修改登入認證資料</block>
-  <block id="6a92d475ead3e7f8d1055d94b7ec26fa" category="sidebar">修改vCenter登入認證</block>
   <block id="4d82de788a9432bc467645d5849b54d6" category="sidebar">修改網路設定</block>
   <block id="e8c19d50a62ef0c84239952feb395afa" category="sidebar">建立scbr.override檔案</block>
   <block id="e83ed49b67b001041250970bfbe7efab" category="sidebar">您可以置換的組態內容</block>
@@ -2227,7 +2226,6 @@
   <block id="e285884386e2062ad98e8deecfd04560" category="doc">修改 SnapCenter Plug-in for VMware vSphere 登入認證</block>
   <block id="4dc305a364ab194377cea35093fafc91" category="doc">修改 SCV 的網路設置</block>
   <block id="5db02314d963fe8a8fa75d43311a04f3" category="doc">修改 SCV 中備份的時區</block>
-  <block id="3cefaebf21784290ec70bd0954b54ab9" category="doc">修改 SCV 的 vCenter 登入憑證</block>
   <block id="34895ac2b07a353b62fe3587b973f9aa" category="doc">在 SnapCenter Plug-in for VMware vSphere 中監控作業</block>
   <block id="b03c3bad2790d92ae4869f34a2b1b13c" category="doc">使用 SnapCenter Plug-in for VMware vSphere 掛載備份</block>
   <block id="cc66b31e4a27a920d55087e0b904f14e" category="doc">SnapCenter Plug-in for VMware vSphere 中的 ONTAP RBAC 功能</block>
@@ -2299,8 +2297,9 @@
   <block id="938c2a8ffc581d610f5a993251309046" category="list-text"><block ref="938c2a8ffc581d610f5a993251309046" category="inline-link-rx"></block></block>
   <block id="36fabaf7f4604c508ea56a9df930fef3" category="section-title">使用 NetApp Backup and Recovery 保護您的 VMware 環境</block>
   <block id="04bc8505634cea728bd42022dbbe2763" category="paragraph">如需詳細資訊，請參閱<block ref="3cc65228ae073aa630520717edc687a9" category="inline-link-rx"></block>。</block>
-  <block id="b60052c3864c4fab5da0f6b383192ef3" category="summary">更新 SnapCenter Plug-in for VMware vSphere（SCV）所使用的 vCenter 登入認證。在 vCenter 認證變更後使用此作業，並且針對 vVol 備份，請重新註冊 ONTAP tools for VMware vSphere。</block>
   <block id="74650e169a790c0e2cab1222243cfea0" category="list-text">針對 MetroCluster 環境中的 FlexGroup 磁碟區，如果您使用的是 ONTAP 9.8 或 9.9，請在切換或切回後，於備份資源群組之前，重新啟動 SnapCenter Plug-in for VMware vSphere 服務並重新同步 SnapMirror 關係。在 ONTAP 9.8 中，切回後備份可能會卡住；此問題已在 ONTAP 9.9 中解決。</block>
-  <block id="00759daaffda87f838af0da06a84529c" category="paragraph">使用此作業來更新在 SnapCenter Plug-in for VMware vSphere 中設定的 vCenter 登入認證。這些認證用於存取 vCenter。如果 vCenter 密碼變更，請先取消註冊 ONTAP tools for VMware vSphere，然後使用新密碼重新註冊 ONTAP tools，以確保 vVol 備份能夠持續運作。</block>
   <block id="76752ff072d438537747c49941f2e4a9" category="paragraph">在 MetroCluster 組態中：</block>
+  <block id="0f6f81c54b2b5420fb1a6022ed399ea3" category="summary">更新 SCV 中已設定的 vCenter 登入憑證。當 vCenter 憑證變更時，請在 SCV 中更新，以確保 vCenter 仍在 SCV 中註冊。</block>
+  <block id="023b1b7df19ea2584c5a257d5d7a36fb" category="doc">更新 SCV 中已設定的 vCenter 認證資料</block>
+  <block id="2b4de7524492b82672c6bb6e1f6c142a" category="paragraph">使用此任務來更新在 SnapCenter Plug-in for VMware vSphere 中設定的 vCenter 登入認證。SCV 使用這些認證來存取 vCenter。當 vCenter 認證變更時，請在 SCV 中更新，以便 vCenter 能夠持續註冊於 SCV。針對 vVol 備份，請先取消註冊 ONTAP tools for VMware vSphere，然後使用新密碼重新註冊 ONTAP tools，以確保備份能夠繼續運作。</block>
 </blocks>
