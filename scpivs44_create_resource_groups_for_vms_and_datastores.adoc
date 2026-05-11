@@ -47,7 +47,7 @@ IMPORTANT: 請勿新增處於無法存取狀態的VM。雖然可以建立包含�
 * 您可以隨時在資源組中新增或刪除資源。
 * 若要備份單一資源（例如虛擬機器），請建立僅包含該資源的資源群組。
 * 若要備份多個資源，請建立一個包含所有要保護的資源的資源群組。
-* 針對 NetApp MetroCluster 環境中的 FlexGroup 磁碟區，如果您使用的是 ONTAP 9.8 或 9.9，請在切換或切回後，於備份資源群組之前，重新啟動 SnapCenter Plug-in for VMware vSphere 服務並重新同步 SnapMirror 關係。在 ONTAP 9.8 中，切回後備份可能會停滯；此問題已在 ONTAP 9.9 中解決。
+* 針對 MetroCluster 環境中的 FlexGroup 磁碟區，如果您使用的是 ONTAP 9.8 或 9.9，請在切換或切回後，於備份資源群組之前，重新啟動 SnapCenter Plug-in for VMware vSphere 服務並重新同步 SnapMirror 關係。在 ONTAP 9.8 中，切回後備份可能會卡住；此問題已在 ONTAP 9.9 中解決。
 * 為了獲得最佳快照效能，將同一磁碟區上的虛擬機器和資料儲存分組到單一資源組中。
 * 您可以建立沒有備份策略的資源組，但資料保護至少需要一個策略。在建立資源組期間選擇現有策略或建立新策略。
 +
