@@ -27,7 +27,7 @@ NOTE: 使用 NetApp Backup and Recovery 增強 VMware 保護，該功能提供 3
 
 您應該檢閱 SnapCenter Plug-in for VMware vSphere 的功能和不支援內容的相關資訊。 link:scpivs44_deployment_planning_and_requirements.html["部署規劃與需求"]
 
-在下列組態中MetroCluster ：
+在 NetApp MetroCluster 組態中：
 
 * SnapCenter Plug-in for VMware vSphere 在容錯移轉之後、可能無法偵測到保護關係。如需詳細資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["知識庫文章：SnapVault 無法偵測MetroCluster 到SnapMirror或在進行故障切換後的不二關係"^] 。
 * 如果備份失敗並顯示錯誤「無法探索選擇控制器上的資源：<xxx >…」 對於切換/切換後的NFS和VMFS VM、請SnapCenter 從維護主控台重新啟動VMware服務。

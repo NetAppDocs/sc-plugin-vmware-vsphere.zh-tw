@@ -60,7 +60,6 @@
   <block id="e2b253374500e2e93f1c334a2bb7ddd4" category="section-title">停用客體檔案還原工作階段之後、不會分離備份</block>
   <block id="898c4d9cd797d45ca2066478fd269974" category="paragraph">當您從VM一致的備份執行客體檔案還原作業時、就會發生此問題。當客體檔案還原工作階段處於作用中狀態時、會針對同一個VM執行另一個VM一致的備份。當來賓檔案還原工作階段中斷連線時、無論是手動或24小時後自動中斷連線、工作階段的備份都不會中斷連線。</block>
   <block id="5857a2699c75798b2ae21bc0b06aff95" category="paragraph">若要修正此問題、請手動將附加於作用中客體檔案還原工作階段的VMDK分離。</block>
-  <block id="58a095d28f14349299e54bd7a6d4ee7f" category="summary">您可以修改SnapCenter 在VMware vSphere的VMware vCenter外掛程式中設定的vCenter登入認證。外掛程式會使用這些設定來存取vCenter。</block>
   <block id="d9a651242a5b8ae831d8957f135ebd64" category="paragraph">請勿修改連接埠號碼。</block>
   <block id="8a4139ea0786f41cc68aee2d93ca450a" category="paragraph">移轉命令只會移轉#fes4.0 SnapCenter 及更新版本#的中繼資料。如果您使用SnapCenter 的是舊版的不實功能、則必須先升級、才能進行移轉。</block>
   <block id="ec3d3431008e42a4c37055a78db7f12e" category="list-text">移轉內容包括</block>
@@ -834,7 +833,6 @@
   <block id="8c091f6bdef9cd93efbf1fea5b02c21e" category="paragraph">備份資料存放區時、您要備份該資料存放區中的所有VM。</block>
   <block id="6d6ff2a577fe3009d934f68d92350fca" category="paragraph">無法在同一個資源群組上同時執行備份與還原作業。</block>
   <block id="d3520107017d5a966a91cb89b0a1057f" category="inline-link-macro">部署規劃與需求</block>
-  <block id="76752ff072d438537747c49941f2e4a9" category="paragraph">在下列組態中MetroCluster ：</block>
   <block id="b210fa5b49a526e6abc94c6017d696a5" category="inline-link">知識庫文章：SnapVault 無法偵測MetroCluster 到SnapMirror或在進行故障切換後的不二關係</block>
   <block id="70cb87c6754343f91541c5c34271ad1a" category="list-text">如果備份失敗並顯示錯誤「無法探索選擇控制器上的資源：&lt;xxx &gt;…」 對於切換/切換後的NFS和VMFS VM、請SnapCenter 從維護主控台重新啟動VMware服務。</block>
   <block id="49faef39fd8cc416975b581514fff5a9" category="paragraph">下圖顯示您必須執行備份作業的順序：</block>
@@ -1518,8 +1516,6 @@
   <block id="309de2a87bff7ae7c6fdf613c07456cd" category="cell">前往<block ref="7c61e9e4b133f96dbd184942bce35796" prefix=" " category="inline-code"></block></block>
   <block id="59d59b410909e6449498dfd7dabe204b" category="paragraph">開始部署 SnapCenter Plug-in for VMware vSphere （ SCV ）之前、您應該先熟悉主機需求。</block>
   <block id="733ad5cd9c0a5c80c268aa646f94120c" category="paragraph">使用格式<block ref="cf854de4a942e42c016ef31d206a66c3" prefix=" " category="inline-code"></block></block>
-  <block id="bbb6afd68a87e9a7640bf0db8ce41bae" category="paragraph">您可以修改SnapCenter 在VMware vSphere的VMware vCenter外掛程式中設定的vCenter登入認證。外掛程式會使用這些設定來存取vCenter。
-當您變更 vCenter 密碼時、您需要取消註冊 VMware vSphere 的 ONTAP 工具、並重新註冊新密碼、才能讓 vVol 備份順暢運作。</block>
   <block id="e4876fb0bd486e69e6d18f00ad595613" category="paragraph"><block ref="40ab977cb91f6614f74434651bca5a18" prefix="" category="inline-code"></block></block>
   <block id="80f3158028945baa03dee7b07e5ba849" category="paragraph">對於每個 REST API 、請在 REST API 前面新增 \https ： &lt;server&gt; ： &lt;port&gt; 、以形成完整的端點。</block>
   <block id="4dacb1d80a643a937acb6c45a683ec1b" category="admonition">從 SnapCenter Plug-in for VMware （ SCV ） 5.0 開始、您需要將 HTTP 和 ONTAPI 類型的應用程式新增為任何具有自訂角色型存取選擇控制閥的 ONTAP 使用者的使用者登入方法。如果無法存取這些應用程式、備份將會失敗。您需要重新啟動選擇控制閥服務、以識別 ONTAP 使用者登入方法的變更。</block>
@@ -2058,7 +2054,6 @@
   <block id="ac84b1a7e72a9605445240fa9a3b3d29" category="list-text">您可以隨時在資源組中新增或刪除資源。</block>
   <block id="9cda0af381aa1b4f8bea1f399ea0d7fa" category="list-text">若要備份單一資源（例如虛擬機器），請建立僅包含該資源的資源群組。</block>
   <block id="ee4aa19a5d187373cae36a8063c1a4fa" category="list-text">若要備份多個資源，請建立一個包含所有要保護的資源的資源群組。</block>
-  <block id="74650e169a790c0e2cab1222243cfea0" category="list-text">對於MetroCluster環境中的FlexGroup卷，如果您使用的是ONTAP 9.8 或 9.9，請在切換或切回後重新啟動SnapCenter Plug-in for VMware vSphere，並重新同步SnapMirror關係，然後再備份資源組。在ONTAP 9.8 中，備份可能會在切換後掛起；此問題在ONTAP 9.9 中已解決。</block>
   <block id="9c008267bc61cd2c0b1de1c4a468b4eb" category="list-text">為了獲得最佳快照效能，將同一磁碟區上的虛擬機器和資料儲存分組到單一資源組中。</block>
   <block id="dbac0bf54cf1e476080b620dc08a5c10" category="list-text">您可以建立沒有備份策略的資源組，但資料保護至少需要一個策略。在建立資源組期間選擇現有策略或建立新策略。</block>
   <block id="b42a61ea00ba84dca34c7fa2791cc6d2" category="paragraph">二級保護可實現資源組中資源的複製。若要使用二級保護，請使用指定的策略從主叢集到首選叢集和 SVM 建立基於一致性群組的SnapMirror關係。此功能僅支援基於ASA r2 系統的資料儲存區和虛擬機器。確保提前配置叢集和 SVM 對等連線。僅支援異步SnapMirror策略。配置二級保護時，必須指定一致性組後綴。</block>
@@ -2304,4 +2299,8 @@
   <block id="938c2a8ffc581d610f5a993251309046" category="list-text"><block ref="938c2a8ffc581d610f5a993251309046" category="inline-link-rx"></block></block>
   <block id="36fabaf7f4604c508ea56a9df930fef3" category="section-title">使用 NetApp Backup and Recovery 保護您的 VMware 環境</block>
   <block id="04bc8505634cea728bd42022dbbe2763" category="paragraph">如需詳細資訊，請參閱<block ref="3cc65228ae073aa630520717edc687a9" category="inline-link-rx"></block>。</block>
+  <block id="7132edc8383e0e83b6f687d75f421aa2" category="list-text">針對 NetApp MetroCluster 環境中的 FlexGroup 磁碟區，如果您使用的是 ONTAP 9.8 或 9.9，請在切換或切回後，於備份資源群組之前，重新啟動 SnapCenter Plug-in for VMware vSphere 服務並重新同步 SnapMirror 關係。在 ONTAP 9.8 中，切回後備份可能會停滯；此問題已在 ONTAP 9.9 中解決。</block>
+  <block id="b60052c3864c4fab5da0f6b383192ef3" category="summary">更新 SnapCenter Plug-in for VMware vSphere（SCV）所使用的 vCenter 登入認證。在 vCenter 認證變更後使用此作業，並且針對 vVol 備份，請重新註冊 ONTAP tools for VMware vSphere。</block>
+  <block id="e1960404cde13a4aedb9ab257401c3c6" category="paragraph">使用此作業來更新在 SnapCenter Plug-in for VMware vSphere 中設定的 vCenter 登入認證。這些認證用於存取 vCenter。如果在認證變更後需要註冊或重新註冊 SCV 至 vCenter，請完成此作業。如果 vCenter 密碼變更，請先取消註冊 ONTAP tools for VMware vSphere，然後使用新密碼重新註冊 ONTAP tools，以確保 vVol 備份能夠持續運作。</block>
+  <block id="370783e751b9f81d87d5e4b05672a702" category="paragraph">在 NetApp MetroCluster 組態中：</block>
 </blocks>
