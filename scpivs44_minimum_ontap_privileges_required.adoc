@@ -51,19 +51,19 @@ NOTE: 從 SnapCenter Plug-in for VMware （ SCV ） 5.0 開始、您需要將 HT
 | Volume clone create volume clone show volume clone 分割 start volume clone 分割狀態 volume clone 分割 stop volume create volume destroy volume file clone create volume file show-disk-usage SnapLock volume offline volume clase-feature volume 修改 volume qtree create volume qtree delete volume qtree 修改 volume qtree show volume 限制 Volume 顯示 Volume 快照建立 Volume 快照刪除 Volume 快照修改 Volume snapshot mode-time-cluse-time-cluse-time-cluse-cluse-命令 重命名 Volume 
 
 
-| vserver CIFS vserver CIFS 共享區 create vserver CIFS 共享刪除 vserver CIFS ShadowCopy show vserver CIFS 共享 show vserver CIFS show vserver show vserver 輸出原則 vserver 輸出原則 create vserver 輸出原則刪除 vserver 輸出原則規則 create vserver 輸出原則規則 show vserver 
+| vserver cifs vserver export-policy vserver export-policy create vserver export-policy delete vserver export-policy rule create vserver export-policy rule show vserver export-policy show vserver iscsi vserver nvme subsystem controller vserver nvme subsystem controller show vserver nvme subsystem create vserver nvme subsystem delete vserver nvme subsystem host vserver nvme subsystem host show vserver nvme subsystem host add vserver nvme subsystem host remove vserver nvme subsystem map vserver nvme subsystem map show vserver nvme subsystem map add vserver nvme subsystem map remove vserver nvme subsystem modify vserver nvme subsystem show vserver nvme namespace create vserver nvme namespace delete vserver nvme namespace modify vserver nvme namespace show network interface 
 |===
 |===
 | 唯讀命令：最低 ONTAP Privileges 
 
 
-| 叢集識別顯示網路介面顯示 vserver vserver 對等 vserver show 
+| cluster identity show network interface show vserver 
 |===
 |===
 | All Access 命令：最低 ONTAP Privileges 
 
 
-| 一致性群組儲存單元展示 
+| vserver 一致性群組 
 |===
 建立與資料 Vserver 關聯的角色時，您可以忽略 _cluster identity show_ cluster level 命令。
 

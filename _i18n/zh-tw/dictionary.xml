@@ -694,7 +694,6 @@
   <block id="f2674e0010597a541e3758cbd4368e87" category="paragraph"><block ref="6c9b49ac3dbdf01a593410d52afe429e" category="inline-xref-macro-rx"></block></block>
   <block id="80a40ff5b64afb4b2371d7fc0660350f" category="list-text">在精靈的「*一般資訊與通知*」頁面上、執行下列動作：</block>
   <block id="c4436d4a190778b7ec1e9461f6454bdd" category="cell">vCenter Server</block>
-  <block id="df86b612dee850ddbf3bd636d14cd09e" category="cell">選取vCenter伺服器。</block>
   <block id="49ee3087348e8d44e1feda1917443987" category="cell">名稱</block>
   <block id="b1358d1843f648e7ea781a21a690cdd0" category="cell">輸入資源群組的說明。</block>
   <block id="96d008db67fc0b5551a926842bbb6a71" category="cell">通知</block>
@@ -1682,7 +1681,6 @@
   <block id="fd809cf0fe9ef13998aa1e0323960d5d" category="list-text">在適用於 VMware vSphere 的 Linux SnapCenter 外掛程式上啟動備份工作。</block>
   <block id="aee31424ca1b9b281c02d03f7ac377e8" category="list-text">向 SnapCenter 註冊 SnapCenter Plug-in for VMware vSphere 主機、以支援虛擬化資料庫和檔案系統（透過 VMDK 備份的應用程式）的應用程式型備份。</block>
   <block id="25d3d5cc2932319d2a5ac63ec6d3af42" category="paragraph">應用程式型VMDK備份的中繼資料儲存在SnapCenter VMware Server儲存庫中。VM 和資料存放區備份的中繼資料會儲存在適用於 VMware vSphere MySQL 儲存庫的 SnapCenter 外掛程式中。</block>
-  <block id="de92ae935b9e0d1f381bebce31b4ae2e" category="cell">叢集識別顯示網路介面顯示 vserver vserver 對等 vserver show</block>
   <block id="f492e93d9d3e86fc62690b1632797659" category="list-text">您需要 ONTAP 9.12.1 或更新版本才能使用 SnapMirror 主動式同步功能。</block>
   <block id="e7ee44e196e376b7e77e5238b063c541" category="doc">從維護主控台修改 SnapCenter Plug-in for VMware vSphere 密碼</block>
   <block id="f9844e7c0ca698dc548bf5d5d3867fb2" category="summary">雖然備份在過去已成功執行、但在 SnapCenter Plug-in for VMware vSphere 必須等待儲存系統超過設定的逾時期間、備份可能會開始失敗。如果發生這種情況、您可以增加設定的逾時時間。</block>
@@ -1775,7 +1773,6 @@
   <block id="c2ad807051aed38647dbaf48da9bc4e7" category="list-text">對於透過 TCP 和 NVMe over FC 傳輸協定的 NVMe ，您需要有 ONTAP 9 。 10.1 及更新版本。</block>
   <block id="2233cc73f35f4d66a36bbbeebab35281" category="doc">SnapCenter Plug-in for VMware vSphere 版本資訊</block>
   <block id="ee8f5755a6e1671a63e8da1209dc860f" category="paragraph">您可以升級至的 SnapCenter Plug-in for VMware vSphere （ SCV ）版本，取決於您目前執行的版本。</block>
-  <block id="4181b34482469dce169449ef3b643b27" category="paragraph">只有 VMware vCenter Server 7 更新版本 1 及更新版本支援升級至 SnapCenter Plug-in for VMware vSphere （ SCV ） 4.8 及更新版本。對於版本 7 更新 1 之前的 VMware vCenter 伺服器，您應該繼續使用 4.7 號選擇控制閥。</block>
   <block id="e369a7ee41a72fa8a44419a1129cc575" category="cell">如果您使用的是選擇控制閥版本…</block>
   <block id="189db0c09008fdcd0e2cc9be6b313231" category="cell">您可以直接將選擇控制閥升級到…</block>
   <block id="1ad22725dc59b3f21bd032fe84861bc1" category="paragraph">SCV 6.0</block>
@@ -1811,8 +1808,6 @@
   <block id="4fa7e925220267d7b768f4b3a78c6148" category="admonition">ASA R2 儲存系統不支援重新命名備份。</block>
   <block id="d106abcc28b08528e977427482cfc257" category="paragraph">您可以在多個類別中進行變更。您也可以在此選項中編輯次要受保護的資源。</block>
   <block id="875b0302744a0f026125fde0002031ee" category="cell">Volume clone create volume clone show volume clone 分割 start volume clone 分割狀態 volume clone 分割 stop volume create volume destroy volume file clone create volume file show-disk-usage SnapLock volume offline volume clase-feature volume 修改 volume qtree create volume qtree delete volume qtree 修改 volume qtree show volume 限制 Volume 顯示 Volume 快照建立 Volume 快照刪除 Volume 快照修改 Volume snapshot mode-time-cluse-time-cluse-time-cluse-cluse-命令 重命名 Volume</block>
-  <block id="8f63ee5bc3100343496937f88eb71b0f" category="cell">vserver CIFS vserver CIFS 共享區 create vserver CIFS 共享刪除 vserver CIFS ShadowCopy show vserver CIFS 共享 show vserver CIFS show vserver show vserver 輸出原則 vserver 輸出原則 create vserver 輸出原則刪除 vserver 輸出原則規則 create vserver 輸出原則規則 show vserver</block>
-  <block id="4e822e8bd084f0d55645c04096f9f2e8" category="cell">一致性群組儲存單元展示</block>
   <block id="73bf8d0963d0fce608d5706a43357517" category="admonition">如果同時使用 IPv4 和 IPv6 位址，則無法同時移除兩個網路設定。其餘網路必須指定DNS伺服器和搜尋網域欄位。</block>
   <block id="82483f0ce94e070521dde3173ea8f007" category="list-text">您執行的是 IPv4 位址， SnapCenter VMware vSphere 主機有兩個 IP 位址。因此、工作要求會傳送到SnapCenter 無法被該伺服器辨識的IP位址。若要避免此問題、請新增您要使用的IP位址、如下所示：</block>
   <block id="cab2abd3782f0d1cb3afdd1d41344792" category="cell">提供執行SnapCenter 所有VMware vSphere工作所需的所有原生vCenter Server和SnapCenter專屬權限。從 6.1 號選擇控制閥開始，此角色會加入新的權限來建立次要保護。</block>
@@ -2142,7 +2137,6 @@
   <block id="1b0aac0d178a998b03e863394b3e7950" category="paragraph">至少，所有使用者都必須能夠查看 vCenter 物件。如果沒有此權限，使用者將無法存取 VMware vSphere 用戶端使用者介面。</block>
   <block id="7a454073261572d07d840fe38e19ccc6" category="paragraph">如果備份在 VMware vSphere 用戶端使用者介面中列為已安裝，但未在解除安裝備份畫面中列出，則需要使用 REST API<block ref="2e3469d072cd789ddb510e2b63330047" prefix=" " category="inline-code"></block>清理超出範圍的資料存儲，然後再次嘗試卸載程序。</block>
   <block id="c2ac51352318f6eb34d2d1b5ed80c9c4" category="paragraph">如果您嘗試在具有負載共享鏡像關係的根磁碟區的儲存虛擬機器 (SVM) 上掛載 NFS 資料儲存區的備份副本，則可能會遇到錯誤<block ref="83833b8e4bd60dcfc6d03ae3f87763a8" prefix=" " category="inline-code"></block>為防止此問題，請透過導覽至 *ESX* &gt; *管理* &gt; *設定* &gt; *進階系統設定* 並變更 NFS.MaxVolumes 值來變更最大磁碟區設定。最大值為 256。</block>
-  <block id="cc5fab4c3664faa9c9ca004a97e1b105" category="admonition">僅 VMware vCenter Server 7 Update 1 及更高版本支援升級至 SCV 6.2，對於版本 7 Update 1 之前的 VMware vCenter Server，您應該繼續使用 SCV 4.7。對於不支援的 VMware vCenter 伺服器版本，升級會造成中斷。</block>
   <block id="62f7c78d5c0a5936b8cfb0c8ebc643ee" category="cell">升級到 SCV 6.2</block>
   <block id="cd3f9b67c376119780d19a21bcf00550" category="cell">升級到 SCV 6.1 和 SCV 6.2</block>
   <block id="8be9482100b17d6c7657ad094600bdb4" category="list-text">登入SnapCenter Plug-in for VMware vSphere管理使用者介面。部署SnapCenter Plug-in for VMware vSphere時會顯示 IP 位址。</block>
@@ -2299,7 +2293,68 @@
   <block id="04bc8505634cea728bd42022dbbe2763" category="paragraph">如需詳細資訊，請參閱<block ref="3cc65228ae073aa630520717edc687a9" category="inline-link-rx"></block>。</block>
   <block id="74650e169a790c0e2cab1222243cfea0" category="list-text">針對 MetroCluster 環境中的 FlexGroup 磁碟區，如果您使用的是 ONTAP 9.8 或 9.9，請在切換或切回後，於備份資源群組之前，重新啟動 SnapCenter Plug-in for VMware vSphere 服務並重新同步 SnapMirror 關係。在 ONTAP 9.8 中，切回後備份可能會卡住；此問題已在 ONTAP 9.9 中解決。</block>
   <block id="76752ff072d438537747c49941f2e4a9" category="paragraph">在 MetroCluster 組態中：</block>
-  <block id="0f6f81c54b2b5420fb1a6022ed399ea3" category="summary">更新 SCV 中已設定的 vCenter 登入憑證。當 vCenter 憑證變更時，請在 SCV 中更新，以確保 vCenter 仍在 SCV 中註冊。</block>
   <block id="023b1b7df19ea2584c5a257d5d7a36fb" category="doc">更新 SCV 中已設定的 vCenter 認證資料</block>
   <block id="2b4de7524492b82672c6bb6e1f6c142a" category="paragraph">使用此任務來更新在 SnapCenter Plug-in for VMware vSphere 中設定的 vCenter 登入認證。SCV 使用這些認證來存取 vCenter。當 vCenter 認證變更時，請在 SCV 中更新，以便 vCenter 能夠持續註冊於 SCV。針對 vVol 備份，請先取消註冊 ONTAP tools for VMware vSphere，然後使用新密碼重新註冊 ONTAP tools，以確保備份能夠繼續運作。</block>
+  <block id="43c52d8f3d25db07d38b9871146a2da2" category="summary">使用此任務可在憑證、網路或應用裝置變更後，恢復 SCV 與 vCenter 的註冊。</block>
+  <block id="5a070f348389de9cff0a193b562d7b21" category="doc">恢復 SCV 連線並向 vCenter 註冊</block>
+  <block id="919a3a3d19319fe5014e205c33934d23" category="paragraph">SnapCenter Plug-in for VMware vSphere (SCV) 會在部署設備時自動向 vCenter 註冊。如果註冊失敗（例如，vCenter 密碼變更、SCV IP 位址或主機名稱變更、連線中斷或部署部分失敗後），請使用此任務恢復連線和註冊，並確認其運作狀況良好。</block>
+  <block id="5991a149088e8fe77731e475f3b785b6" category="paragraph">如果註冊未成功完成，請使用下列其中一項動作重試：</block>
+  <block id="ef427469780c21b942dad7d22b4246d5" category="list-text">VMware vSphere 客戶端服務 <block ref="b9bd73cd48507ef4110c9e03dc696012" prefix="(" category="inline-code"></block> 已重新啟動。</block>
+  <block id="4abd7894ecab8338c2db9e68d7a90070" category="list-text">SCV 應用裝置 IP 位址或主機名稱發生變更。</block>
+  <block id="8cb51049f35f92c8309522057424230d" category="list-text">vCenter 憑證已重新儲存到 SCV 中。</block>
+  <block id="1496ea61e8bb33de525b04fbe775876a" category="list-text">您必須知道 SCV 管理使用者介面 IP 位址和登入憑證。</block>
+  <block id="f5c8495f15b4c71d17cc00ff1c1f1f4f" category="list-text">如果啟用了多因素驗證 (MFA)，請從維護主控台產生新的 6 位數 MFA 權杖。</block>
+  <block id="6e5c4686c366608c244b57b0f4d069c4" category="list-text">確認 SCV 使用的 vCenter 帳戶已在 vCenter 根目錄指派所需的權限。</block>
+  <block id="6a166972b82d0eab4cb668dc791c63c6" category="paragraph">如需更多資訊，請參閱 <block ref="c9e6463b994872f5c325b738adbc5cd9" category="inline-link-macro-rx"></block>。</block>
+  <block id="182a24a443bd65bde9589f0241ce1fbe" category="section-title">恢復步驟</block>
+  <block id="ddea65b4f2838b9f5de7daab0cb9f9fd" category="list-text">重新啟動 VMware vSphere 客戶端服務。</block>
+  <block id="f42533ed4dcea74c28de2e6a45add359" category="paragraph">重新啟動後會自動重新執行擴充功能註冊。如需詳細資訊，請參閱 <block ref="a16731bdba744dbf60aba55ebd326640" category="inline-link-macro-rx"></block>。</block>
+  <block id="b54ea8d2396716d0d9a41a78ccda0f06" category="list-text">如果重新啟動無法解決問題，請完成以下步驟：</block>
+  <block id="cb1fd69f30b8a54a084a8631921fed6b" category="list-text">使用以下格式登入 SnapCenter Plug-in for VMware vSphere 管理使用者介面<block ref="cf854de4a942e42c016ef31d206a66c3" prefix=" " category="inline-code"></block>。</block>
+  <block id="20026c0b8b9fcb3f6b465db3ed9d98f5" category="list-text">選取 *Configuration* &gt; *vCenter* &gt; *Edit*。</block>
+  <block id="8cf0862c3708f53a590bc1acaca2601e" category="list-text">輸入目前密碼，然後選取 *Save*。</block>
+  <block id="1bdb304d45c45d760db874fe6c9fad0c" category="paragraph">如需更多資訊，請參閱 <block ref="14048bf28187e1083f8714a79e8ea796" category="inline-link-macro-rx"></block>。</block>
+  <block id="9d62fc990128d09df105233e7367a2b7" category="list-text">取消註冊並重新註冊外掛程式。</block>
+  <block id="932b34b60e4c002b7c1a281ada9973d8" category="paragraph">如果外掛程式仍未連線，請完成下列步驟：</block>
+  <block id="fe733b75b255a0cc9c1a059cd27340de" category="list-text">從 vCenter 註銷 SCV。</block>
+  <block id="638c3fa156ff7fb8413257f1e29b0df1" category="list-text">透過重新儲存 vCenter 憑證或重新啟動 VMware vSphere 用戶端服務來重新註冊 SCV。</block>
+  <block id="48b859f1035a311bf5d5dca8c444be84" category="paragraph">如果註冊的擴充功能指向舊的 SCV IP 位址，則取消註冊並重新註冊外掛程式會更新註冊資訊。</block>
+  <block id="8aba17441f2cb36426a8079a21174224" category="paragraph">如需更多資訊，請參閱 <block ref="5e29aaecbba6fa7e778be2d54737f47f" category="inline-link-macro-rx"></block>。</block>
+  <block id="054d14a3e1ea888b8a0aceaa5aaeb932" category="inline-link-macro">確認註冊成功</block>
+  <block id="2d8d53614f2a7258c741d72e25abc772" category="list-text"><block ref="73927d9f5734a6d56496ea1dc9aad0a3" category="inline-link-macro-rx"></block>。</block>
+  <block id="2341a650916af7661beea7eacf223138" category="paragraph">使用下列任一檢查來確認 SCV 已註冊並已連線。</block>
+  <block id="c43d62a94696b0504dbbf371dafbcd1e" category="list-text">*管理使用者介面*：在 *儀錶板* 上、確認 SCV 已連線至 vCenter 並已啟用。</block>
+  <block id="e40a04fabb7f9febc361754e6c56f12c" category="list-text">*vSphere Client*：驗證是否顯示 *SnapCenter Plug-in for VMware vSphere* 功能表，以及外掛程式頁面是否已載入。</block>
+  <block id="3e617e58af06c5f67ead57257935062a" category="list-text">*日誌（設備）*：在<block ref="9be40132e1a18d95517f496b87011326" prefix=" " category="inline-code"></block>中，尋找諸如<block ref="5236833c9e3b43c6b1c69d1a9861427c" prefix=" " category="inline-code"></block>和<block ref="6cbee1c212d96e17b497155f167d0ca7" prefix=" " category="inline-code"></block>之類的註冊訊息。憑證變更也記錄在<block ref="c1ace7a3d9378453ad7a99427543d23e" prefix=" " category="inline-code"></block>中。</block>
+  <block id="26de167c2f11fbc71083eaeaf4e62b91" category="paragraph">以下參考資料僅用於進階疑難排解。可用性和確切數值可能因版本和環境而異。</block>
+  <block id="6e33c492cba08f3c2dead5625b3ca224" category="list-text">在 vCenter Extension Manager 中，您可能會看到與 SCV 相關的擴充功能<block ref="e6d17d899e2a5d0700cc16120b733afb" prefix=" " category="inline-code"></block>和<block ref="6e551029da4d3fc2a0ec2eaaf6340fe3" prefix=" " category="inline-code"></block>。</block>
+  <block id="17e25b037261fac76c0a2f7053399fa1" category="list-text">在某些環境下，您可能還會看到舊版 HTML 用戶端擴充功能<block ref="044d220e5ce47ab71a56bfa88a3fe8d8" prefix=" " category="inline-code"></block>。</block>
+  <block id="0f0f99fcfb4ddc7485a8d743c13e5117" category="list-text">如果可以存取應用裝置記錄，您也可以查看本主題前面提到的註冊相關項目和 API 活動。</block>
+  <block id="ca05d25b67ed3de731ca63dd819edc20" category="section-title">常見註冊錯誤及補救措施</block>
+  <block id="4418fe9a3c32e8daa1f2bd504a070c20" category="list-text">*登入憑證無效*</block>
+  <block id="c4f5fdbaaad6d27bf95b0efa277de132" category="list-text">請重新輸入正確的 vCenter 使用者名稱<block ref="93dead10a7b3f8e9571207c1c5ecc9c9" prefix="(" category="inline-code"></block>和密碼。</block>
+  <block id="faa1be5d2914d87b8dcac52ccec7e639" category="list-text">從維護主控台產生全新的 6 位數 MFA 權杖。</block>
+  <block id="87c2757f6f84eaa094d2644d0cf59158" category="list-text">*權限不足（RBAC）*：確保 vCenter 帳戶具有 SCV 所需的權限，包括註冊擴充功能的權限，該權限在 vCenter 根目錄中已指派。</block>
+  <block id="9c575971ab1b2b1247ca8903a756ba9d" category="list-text">*無法連接至 vCenter 或連線遭拒*：請驗證 vCenter 主機和連接埠、網路和防火牆連線能力，以及 vCenter 是否正在執行。</block>
+  <block id="e8c13763d0e454ac37a03be4c6450f0e" category="list-text">*未知主機*：請驗證 vCenter FQDN 或 IP 位址，並確認裝置可以進行 DNS 解析。</block>
+  <block id="57ea16a1b1df2116d1af963e99026cf4" category="list-text">*不支援的 vCenter 版本*：SCV 支援 vCenter Server 7.0U1 及更高版本。</block>
+  <block id="27132d229f2cea60080795427649eae1" category="paragraph">如需更多資訊，請參閱 <block ref="6f3bd7747e3dcc75f2d93f69bee57be5" category="inline-link-macro-rx"></block>。</block>
+  <block id="817650ebcd081deb1c3da280c402a1e7" category="list-text">*服務未運作*：如果 VMware vSphere 用戶端服務已停止，則無法執行註冊。</block>
+  <block id="9d7e0542459b60f98e1d8529e2c87e4e" category="section-title">相關主題</block>
+  <block id="14048bf28187e1083f8714a79e8ea796" category="list-text"><block ref="14048bf28187e1083f8714a79e8ea796" category="inline-link-macro-rx"></block></block>
+  <block id="a16731bdba744dbf60aba55ebd326640" category="list-text"><block ref="a16731bdba744dbf60aba55ebd326640" category="inline-link-macro-rx"></block></block>
+  <block id="5e29aaecbba6fa7e778be2d54737f47f" category="list-text"><block ref="5e29aaecbba6fa7e778be2d54737f47f" category="inline-link-macro-rx"></block></block>
+  <block id="c9e6463b994872f5c325b738adbc5cd9" category="list-text"><block ref="c9e6463b994872f5c325b738adbc5cd9" category="inline-link-macro-rx"></block></block>
+  <block id="bf66889dc0e5fa58a9b7443b0851e8e7" category="cell">選擇 vCenter 伺服器。</block>
+  <block id="79b270058931826b792551f81ad31e75" category="cell">vserver cifs vserver export-policy vserver export-policy create vserver export-policy delete vserver export-policy rule create vserver export-policy rule show vserver export-policy show vserver iscsi vserver nvme subsystem controller vserver nvme subsystem controller show vserver nvme subsystem create vserver nvme subsystem delete vserver nvme subsystem host vserver nvme subsystem host show vserver nvme subsystem host add vserver nvme subsystem host remove vserver nvme subsystem map vserver nvme subsystem map show vserver nvme subsystem map add vserver nvme subsystem map remove vserver nvme subsystem modify vserver nvme subsystem show vserver nvme namespace create vserver nvme namespace delete vserver nvme namespace modify vserver nvme namespace show network interface</block>
+  <block id="17c15daeacf43c5df6651bee53929afe" category="cell">cluster identity show network interface show vserver</block>
+  <block id="211972e7ef3be37421ce3be715572865" category="cell">vserver 一致性群組</block>
+  <block id="6dd1a2af733d08e665056a19eb8ef3f6" category="summary">在 vCenter 憑證變更後，請使用此任務更新 SCV 中的憑證，並保留 SCV 已註冊 vCenter。</block>
+  <block id="31cce324bf8ce5126b85c7e725e273c0" category="paragraph">儲存新認證後，請驗證 SCV 是否仍連接至 vCenter。</block>
+  <block id="d9488458897e0fbe38829bb5c5bedc5b" category="list-text">在 SnapCenter Plug-in for VMware vSphere 管理使用者介面中，開啟 *Dashboard* 並確認 SCV 已連線至 vCenter 並已啟用。</block>
+  <block id="a1a47c5e382c52e2184cfe8377316234" category="list-text">在 vSphere 用戶端中，確認顯示 *SnapCenter Plug-in for VMware vSphere* 選單，且外掛程式頁面已載入。</block>
+  <block id="6898784428bbe5e5955903bef50af0a1" category="list-text">選用：開啟資源群組或執行隨需備份，以驗證 vCenter 作業是否正常運作。</block>
+  <block id="20ceb481fbc8f4970bcc1d340df1f4e3" category="paragraph">如果更改憑證後 SCV 仍未連接，請重新啟動 VMware vSphere 用戶端服務。如果 SCV 仍然未連接，請前往 <block ref="f2a6ad7f72b7a890165a515940ad8314" category="inline-link-macro-rx"></block>。</block>
+  <block id="570c179f2910eb222c034a71d4857354" category="admonition">僅 VMware vCenter Server 7 update 1 及更高版本支援升級至 SCV 6.2。對於 VMware vCenter Server 7 update 1 之前的版本、您應該繼續使用 SCV 4.7。在不支援的 VMware vCenter Server 版本上進行升級會造成服務中斷。</block>
+  <block id="430ae1961340ee0cb232fabeaa98e220" category="paragraph">僅支援在 VMware vCenter Server 7 update 1 及以上版本升級至 SnapCenter Plug-in for VMware vSphere（SCV）4.8 及更高版本。對於 VMware vCenter Server 7 update 1 之前的版本，您應繼續使用 SCV 4.7。</block>
 </blocks>

@@ -14,7 +14,7 @@ summary: 如果您使用SnapCenter 適用於VMware vSphere虛擬應用裝置的V
 
 
 
-NOTE: 僅 VMware vCenter Server 7 Update 1 及更高版本支援升級至 SCV 6.2，對於版本 7 Update 1 之前的 VMware vCenter Server，您應該繼續使用 SCV 4.7。對於不支援的 VMware vCenter 伺服器版本，升級會造成中斷。
+NOTE: 僅 VMware vCenter Server 7 update 1 及更高版本支援升級至 SCV 6.2。對於 VMware vCenter Server 7 update 1 之前的版本、您應該繼續使用 SCV 4.7。在不支援的 VMware vCenter Server 版本上進行升級會造成服務中斷。
 
 如果您使用SnapCenter 適用於VMware vSphere虛擬應用裝置的VMware vCenter外掛程式、則可以升級至較新的版本。升級程序會取消註冊現有的外掛程式、並部署僅與vSphere 7.0U1及更新版本相容的外掛程式。
 
