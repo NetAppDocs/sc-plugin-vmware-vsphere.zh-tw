@@ -20,6 +20,7 @@ summary: 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛�
 
 
 
+[[to-mount-datastores-follow-this-workflow]]
 == 若要掛載資料存放區、請遵循下列工作流程：
 
 |===
@@ -42,6 +43,7 @@ summary: 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛�
 |===
 
 
+[[to-unmount-datastores-follow-this-workflow]]
 == 若要卸載資料存放區、請遵循此工作流程：
 
 |===

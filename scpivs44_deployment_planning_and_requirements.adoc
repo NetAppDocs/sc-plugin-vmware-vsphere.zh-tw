@@ -18,6 +18,7 @@ summary: 在部署虛擬應用裝置之前、您應該先瞭解部署需求。
 
 
 
+[[host-requirements]]
 == 主機需求
 
 開始部署 SnapCenter Plug-in for VMware vSphere （ SCV ）之前、您應該先熟悉主機需求。
@@ -79,6 +80,7 @@ summary: 在部署虛擬應用裝置之前、您應該先瞭解部署需求。
 
 
 
+[[license-requirements]]
 == 授權需求
 
 |===
@@ -98,6 +100,7 @@ summary: 在部署虛擬應用裝置之前、您應該先瞭解部署需求。
 |===
 
 
+[[software-support]]
 == 軟體支援
 
 |===
@@ -142,6 +145,7 @@ NVMe over TCP 和 NVMe over FC 傳輸協定支援的最低軟體需求為：
 
 
 
+[[space-sizing-and-scaling-requirements]]
 == 空間，規模和擴充需求
 
 |===
@@ -158,6 +162,7 @@ NVMe over TCP 和 NVMe over FC 傳輸協定支援的最低軟體需求為：
 |===
 
 
+[[connection-and-port-requirements]]
 == 連線與連接埠需求
 
 |===
@@ -181,6 +186,7 @@ NVMe over TCP 和 NVMe over FC 傳輸協定支援的最低軟體需求為：
 |===
 
 
+[[configurations-supported]]
 == 支援的組態
 
 每個外掛程式執行個體僅支援一個 vCenter Server ，其處於連結模式。不過，多個外掛程式執行個體可以支援相同的 SnapCenter 伺服器，如下圖所示。
@@ -189,6 +195,7 @@ image:scpivs44_image4.png["支援的組態圖形呈現"]
 
 
 
+[[rbac-privileges-required]]
 == 需要RBAC權限
 
 vCenter 管理員帳戶必須在下表中列出所需的 vCenter Privileges 。
@@ -216,6 +223,7 @@ vCenter 管理員帳戶必須在下表中列出所需的 vCenter Privileges 。
 |===
 
 
+[[autosupport]]
 == AutoSupport
 
 SnapCenter Plug-in for VMware vSphere 提供追蹤其使用情況的最低資訊、包括外掛程式 URL 。包含由畫面顯示的已安裝外掛程式表格。AutoSupport AutoSupport

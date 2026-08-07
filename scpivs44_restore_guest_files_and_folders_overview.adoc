@@ -18,6 +18,7 @@ summary: 您可以從Windows來賓作業系統上的虛擬機器磁碟（VMDK）
 
 
 
+[[guest-restore-workflow]]
 == 來賓還原工作流程
 
 來賓作業系統還原作業包括下列步驟：
@@ -48,6 +49,7 @@ summary: 您可以從Windows來賓作業系統上的虛擬機器磁碟（VMDK）
 
 
 
+[[prerequisites-for-restoring-guest-files-and-folders]]
 == 還原來賓檔案和資料夾的必要條件
 
 在Windows來賓作業系統上從VMDK還原一或多個檔案或資料夾之前、您必須瞭解所有需求。
@@ -89,6 +91,7 @@ VMware vSphere的支援還原外掛程式不支援搜尋要還原的檔案或資
 
 
 
+[[guest-file-restore-limitations]]
 == 客體檔案還原限制
 
 在從客體作業系統還原檔案或資料夾之前、您應該瞭解此功能不支援的項目。

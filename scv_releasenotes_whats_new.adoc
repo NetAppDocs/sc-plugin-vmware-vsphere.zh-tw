@@ -48,6 +48,7 @@ SnapCenter Plug-in for VMware vSphere增加了對執行ONTAP 9.17.1 或更高版
 
 
 
+[[protect-your-vmware-estate-using-netapp-backup-and-recovery]]
 == 使用 NetApp Backup and Recovery 保護您的 VMware 環境
 
 video::UeT9yFssTug[youtube,width=848,height=480]

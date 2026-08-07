@@ -41,6 +41,7 @@ summary: 您可以從儀表板要求一份或多份工作的報告。
 
 
 
+[[types-of-reports-from-the-vmware-vsphere-client]]
 == 來自VMware vSphere用戶端的報告類型
 
 VMware vSphere Client for SnapCenter EView提供可自訂的報告選項、可為您提供資料保護工作和外掛程式資源狀態的詳細資料。您只能產生主要保護的報告。

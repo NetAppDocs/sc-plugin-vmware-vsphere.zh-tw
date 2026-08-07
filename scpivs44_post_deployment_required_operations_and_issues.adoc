@@ -18,12 +18,14 @@ summary: 部署SnapCenter 完VMware vSphere的VMware vSphere版的VMware vCenter
 
 
 
+[[required-operations-after-deployment]]
 == 部署後所需的作業
 
 如果您是SnapCenter 全新的支援者、則必須先將儲存VM新增SnapCenter 至支援中心、才能執行任何資料保護作業。新增儲存VM時、請指定管理LIF。您也可以新增叢集並指定叢集管理LIF。如需新增儲存設備的相關資訊、請參閱 link:scpivs44_add_storage_01.html["新增儲存設備"^]。
 
 
 
+[[deployment-issues-you-might-encounter]]
 == 您可能會遇到的部署問題
 
 * 部署虛擬應用裝置之後、儀表板上的*備份工作*索引標籤可能不會在下列情況下載入：
@@ -52,6 +54,7 @@ summary: 部署SnapCenter 完VMware vSphere的VMware vSphere版的VMware vCenter
 
 
 
+[[manage-authentication-errors]]
 == 管理驗證錯誤
 
 如果您不使用管理認證、則在部署 SnapCenter Plug-in for VMware vSphere 或移轉之後、可能會收到驗證錯誤。如果遇到驗證錯誤、您必須重新啟動服務。
@@ -63,6 +66,7 @@ summary: 部署SnapCenter 完VMware vSphere的VMware vSphere版的VMware vCenter
 
 
 
+[[register-snapcenter-plug-in-for-vmware-vsphere-with-snapcenter-server]]
 == 註冊SnapCenter VMware vSphere的VMware vCenter SnapCenter with VMware Server外掛程式
 
 如果您想在SnapCenter VMware vSphere中執行應用程式over VMDK工作流程（適用於虛擬化資料庫和檔案系統的應用程式型保護工作流程）、則必須在SnapCenter 使用VMware vSphere的VMware vSphere中註冊此外掛SnapCenter 程式。

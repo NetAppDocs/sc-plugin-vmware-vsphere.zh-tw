@@ -20,6 +20,7 @@ summary: 若要改善作業效率、您可以修改scbr.override組態檔以變�
 
 
 
+[[create-the-scbr-override-configuration-file]]
 == 建立scbr.override組態檔
 
 . 請移至「/opt/netapp/scvservice/standone_aegi/etc/scbr/scbr.override-template」。
@@ -28,6 +29,7 @@ summary: 若要改善作業效率、您可以修改scbr.override組態檔以變�
 
 
 
+[[properties-you-can-override]]
 == 您可以置換的內容
 
 * 根據預設、範本會使用雜湊符號來註解組態內容。若要使用屬性來修改組態值、您必須移除「#」字元。

@@ -18,6 +18,7 @@ summary: 您可以重新命名及刪除SnapCenter VMware vSphere的VMware vSpher
 
 
 
+[[rename-backups]]
 == 重新命名備份
 
 如果您想要提供更好的名稱來改善搜尋能力、可以重新命名SnapCenter VMware vSphere備份的Rename Plug-in。
@@ -39,6 +40,7 @@ image:scv50_image1.png["vSphere 用戶端畫面"]
 
 
 
+[[delete-backups]]
 == 刪除備份
 
 如果您不再需要備份來執行其他資料保護作業、可以刪除SnapCenter VMware vSphere備份的VMware vCenter外掛程式。您可以同時刪除一個備份或刪除多個備份。

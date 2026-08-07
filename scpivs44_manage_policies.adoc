@@ -18,6 +18,7 @@ summary: 您可以針對SnapCenter VMware vSphere建立、修改、檢視、分�
 
 
 
+[[detach-policies]]
 == 分離原則
 
 當您不再想讓 SnapCenter Plug-in for VMware vSphere 資源群組管理資源的資料保護時、您可以將原則從該資源群組中分離。您必須先中斷原則、才能將其移除、或是修改排程頻率。
@@ -36,6 +37,7 @@ SnapCenter Plug-in for VMware vSphere 資源群組的原則與 SnapCenter 資源
 
 
 
+[[modify-policies]]
 == 修改原則
 
 您可以修改SnapCenter VMware vSphere資源群組適用的VMware vSphere外掛程式原則。當原則附加至資源群組時，您可以修改頻率，複寫選項，快照保留設定或指令碼資訊。
@@ -68,6 +70,7 @@ NOTE: 若要修改 SnapCenter Plug-in for VMware vSphere 原則排程、您必�
 
 
 
+[[delete-policies]]
 == 刪除原則
 
 如果您不再需要針對SnapCenter VMware vSphere的VMware vSphere進行設定的備份原則、您可能會想要將其刪除。

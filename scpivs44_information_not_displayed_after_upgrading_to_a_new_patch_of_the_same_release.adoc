@@ -38,6 +38,7 @@ summary: 將SnapCenter VMware vSphere的更新版的更新版更新為相同版�
 
 
 
+[[workaround-if-you-already-upgraded-before-clearing-the-cache]]
 == 如果您在清除快取之前已經升級、請採取因應措施
 
 . 登入SnapCenter Plug-in for VMware vSphere管理使用者介面。

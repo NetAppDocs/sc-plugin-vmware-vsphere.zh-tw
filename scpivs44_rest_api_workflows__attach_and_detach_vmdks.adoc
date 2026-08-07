@@ -20,6 +20,7 @@ summary: 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛�
 
 
 
+[[to-attach-vmdks-follow-this-workflow]]
 == 若要附加VMDK、請遵循下列工作流程：
 
 |===
@@ -44,6 +45,7 @@ NOTE: 若要將VMDK附加至不同的VM、請在alternateVmMoref屬性中傳遞�
 |===
 
 
+[[to-detach-vmdks-follow-this-workflow]]
 == 若要卸除VMDK、請遵循此工作流程：
 
 |===

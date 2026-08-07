@@ -1021,7 +1021,6 @@
   <block id="ae40a6aa6dbafd02a1a6877c0cd95c90" category="admonition">不支援將網路組態從靜態切換為DHCP。</block>
   <block id="a115e2512005f81c492d368a9613ee58" category="list-text">停用SnapCenter VMware vSphere的VMware vCenter外掛程式、做好升級準備。</block>
   <block id="47ad474a6a92b78b6ce74b61fe8b6bbb" category="list-text">下載升級文件.iso'。</block>
-  <block id="b41450a0b1e390fd09941d73050688f9" category="list-text">登入NetApp支援網站 <block ref="5a6885c3943ab3435f9bf287b1025062" category="inline-link-rx"></block>。</block>
   <block id="7dfb2dcb3c7621537351eac0e0c6d1af" category="list-text">下載SnapCenter VMware vSphere的VMware vSphere升級版「.ISO」檔案至任何位置。</block>
   <block id="f5b0696bfd02863abb2d114ef575a203" category="list-text">安裝升級。</block>
   <block id="1ced0a64a9eacafaada35a9482d31c57" category="list-text">在瀏覽器中、瀏覽至VMware vSphere vCenter。</block>
@@ -2357,4 +2356,9 @@
   <block id="20ceb481fbc8f4970bcc1d340df1f4e3" category="paragraph">如果更改憑證後 SCV 仍未連接，請重新啟動 VMware vSphere 用戶端服務。如果 SCV 仍然未連接，請前往 <block ref="f2a6ad7f72b7a890165a515940ad8314" category="inline-link-macro-rx"></block>。</block>
   <block id="570c179f2910eb222c034a71d4857354" category="admonition">僅 VMware vCenter Server 7 update 1 及更高版本支援升級至 SCV 6.2。對於 VMware vCenter Server 7 update 1 之前的版本、您應該繼續使用 SCV 4.7。在不支援的 VMware vCenter Server 版本上進行升級會造成服務中斷。</block>
   <block id="430ae1961340ee0cb232fabeaa98e220" category="paragraph">僅支援在 VMware vCenter Server 7 update 1 及以上版本升級至 SnapCenter Plug-in for VMware vSphere（SCV）4.8 及更高版本。對於 VMware vCenter Server 7 update 1 之前的版本，您應繼續使用 SCV 4.7。</block>
+  <block id="e7cf50365f6cd8b8191b1582a763572f" category="inline-link-macro">SnapCenter Plug-in for VMware vSphere 部署規劃與需求</block>
+  <block id="e265dbaceed2be137ef9239c0c28ca81" category="admonition">升級前，請確認您的環境符合系統需求。詳情請參閱 <block ref="a0e1882159016587140942a1478a5aea" category="inline-link-macro-rx"></block>。</block>
+  <block id="be0cdd104110166e130ddd84d1c1fc51" category="paragraph">有關支援版本的最新資訊，請參閱<block ref="c4b2de34dedab2af97f29b6fccd6575c" category="inline-link-macro-rx"></block>。</block>
+  <block id="8c41baf1ca98e1184f48c4721d44d431" category="inline-link-macro">NetApp 支援網站</block>
+  <block id="9eeb0054bc82844b2782a42bddf7c681" category="list-text">登入 <block ref="fe673711457a0919d053a9db0146aa49" category="inline-link-macro-rx"></block>。</block>
 </blocks>

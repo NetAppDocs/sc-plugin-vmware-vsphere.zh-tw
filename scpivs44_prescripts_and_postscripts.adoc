@@ -18,12 +18,14 @@ summary: 您可以使用自訂規範和後製指令碼、作為資料保護作�
 
 
 
+[[supported-script-types]]
 == 支援的指令碼類型
 
 支援Perl和Shell指令碼。Shell指令碼必須以`/bin/bash'開頭。（不支援「！/賓/ sh」。）
 
 
 
+[[script-path-location]]
 == 指令碼路徑位置
 
 簡報和指令碼是由SnapCenter VMware vSphere的VMware vSphere的VMware vCenter外掛程式執行。因此、指令碼必須位於SnapCenter VMware vSphere OVA的VMware vSphere插件中、並具有執行檔權限。
@@ -38,6 +40,7 @@ summary: 您可以使用自訂規範和後製指令碼、作為資料保護作�
 
 
 
+[[where-to-specify-scripts]]
 == 指令碼的指定位置
 
 指令碼是在備份原則中指定。當備份工作開始時、原則會自動將指令碼與要備份的資源建立關聯。
@@ -46,6 +49,7 @@ summary: 您可以使用自訂規範和後製指令碼、作為資料保護作�
 
 
 
+[[when-scripts-are-executed]]
 == 執行指令碼時
 
 指令碼會根據為備份階段設定的值來執行。
@@ -76,6 +80,7 @@ NOTE: 如果某個PostScript失敗、備份便會成功完成、並傳送警告�
 
 
 
+[[environment-variables-passed-to-scripts]]
 == 傳遞給指令碼的環境變數
 
 您可以在指令碼中使用下表所示的環境變數。
@@ -109,12 +114,14 @@ NOTE: 如果某個PostScript失敗、備份便會成功完成、並傳送警告�
 |===
 
 
+[[script-timeouts]]
 == 指令碼逾時
 
 備份指令碼的逾時時間為15分鐘、無法修改。
 
 
 
+[[example-perl-script-1]]
 == Perl指令碼#1範例
 
 下列Perl指令碼範例會在執行備份時列印環境變數。
@@ -123,6 +130,7 @@ NOTE: 如果某個PostScript失敗、備份便會成功完成、並傳送警告�
 
 
 
+[[example-perl-script-2]]
 == Perl指令碼#2範例
 
 下列範例會列印有關備份的資訊。
@@ -139,6 +147,7 @@ NOTE: 如果某個PostScript失敗、備份便會成功完成、並傳送警告�
 
 
 
+[[example-shell-script]]
 == Shell指令碼範例
 
 ="=="="="="="="="="="="="="="="="="="="="="== `#!/bin/bash'「ECAE回寫$backup_name >>/support/log_file.log」「env >>/support/log_file.log」h=="="="="="=="== 」

@@ -20,6 +20,7 @@ summary: 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛�
 
 
 
+[[use-the-following-rest-apis-in-the-jobs-section-to-get-detailed-information-on-jobs]]
 == 請使用「工作」區段中的下列REST API來取得工作的詳細資訊：
 
 |===
@@ -33,6 +34,7 @@ summary: 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛�
 |===
 
 
+[[use-the-following-rest-api-in-the-jobs-section-to-download-job-logs]]
 == 使用「工作」區段中的下列REST API來下載工作記錄：
 
 |===
@@ -43,6 +45,7 @@ summary: 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛�
 |===
 
 
+[[use-the-following-rest-apis-in-the-reports-section-to-generate-reports]]
 == 使用「報告」區段中的下列REST API來產生報告：
 
 |===

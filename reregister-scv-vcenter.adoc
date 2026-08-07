@@ -34,6 +34,7 @@ SnapCenter Plug-in for VMware vSphere (SCV) 會在部署設備時自動向 vCent
 
 
 
+[[recovery-steps]]
 == 恢復步驟
 
 . 重新啟動 VMware vSphere 客戶端服務。
@@ -70,6 +71,8 @@ SnapCenter Plug-in for VMware vSphere (SCV) 會在部署設備時自動向 vCent
 
 
 
+[[verify-that-the-registration-succeeded]]
+[[verify-registration-succeeded]]
 == 確認註冊成功
 
 使用下列任一檢查來確認 SCV 已註冊並已連線。
@@ -91,6 +94,7 @@ SnapCenter Plug-in for VMware vSphere (SCV) 會在部署設備時自動向 vCent
 ====
 
 
+[[common-registration-errors-and-remediations]]
 == 常見註冊錯誤及補救措施
 
 * *登入憑證無效*
@@ -117,6 +121,7 @@ SnapCenter Plug-in for VMware vSphere (SCV) 會在部署設備時自動向 vCent
 
 
 
+[[related-topics]]
 == 相關主題
 
 * link:scpivs44_modify_the_vcenter_logon_credentials.html["更新 SCV 中已設定的 vCenter 認證資料"]

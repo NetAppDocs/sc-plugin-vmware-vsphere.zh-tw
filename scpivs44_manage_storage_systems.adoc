@@ -18,6 +18,7 @@ summary: 在使用VMware vSphere用戶端備份或還原VM或資料存放區之�
 
 
 
+[[modify-storage-vms]]
 == 修改儲存VM
 
 您可以使用VMware vSphere用戶端來修改叢集和儲存VM的組態、這些叢集和VM已登錄SnapCenter 於VMware vSphere的VMware Plug-in中、並用於VM資料保護作業。
@@ -35,6 +36,7 @@ IMPORTANT: 如果您使用SnapCenter使用者介面為基於應用程式的資�
 
 
 
+[[remove-storage-vms]]
 == 移除儲存VM
 
 您可以使用VMware vSphere用戶端、從vCenter的詳細目錄中移除儲存VM。
