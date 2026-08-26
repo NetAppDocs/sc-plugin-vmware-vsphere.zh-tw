@@ -2204,13 +2204,11 @@
   <block id="b7b8f6b1819db0f110d159a8db1ae50f" category="doc">SCV 中的客體檔案還原案例</block>
   <block id="a5b5bbaab0477105f54c80657a42858f" category="doc">SCV 如何執行還原作業</block>
   <block id="4b941a49c8c4f2361abf530aa6d23a53" category="doc">為 SnapCenter Plug-in for VMware vSphere 配置 ONTAP RBAC</block>
-  <block id="f09becdfd77a0c14076f6312e72a5fbe" category="doc">升級到 SCV 新修補程式後，資訊未顯示</block>
   <block id="12f70185f36225d9e785483fa5adec93" category="doc">SnapCenter Plug-in for VMware vSphere 的授權</block>
   <block id="c60c8305c7704e2a6b481202a87d34a4" category="doc">在 SnapCenter Plug-in for VMware vSphere 中管理備份</block>
   <block id="7806a0fcfddb17a7ef5ffbc6f69a5d84" category="doc">在 SnapCenter Plug-in for VMware vSphere 中管理原則</block>
   <block id="a9cf02408b537b32836b3b5e779b0f56" category="doc">在 SnapCenter Plug-in for VMware vSphere 中管理資源群組</block>
   <block id="8ec10186a814e49a8603f7758664c43b" category="doc">在 SnapCenter Plug-in for VMware vSphere 中管理儲存系統</block>
-  <block id="b3f0168240889017e1bf32ba930c88f9" category="doc">將中繼資料從以 Windows 為基礎的 SnapCenter for VMware vSphere 移轉</block>
   <block id="53e2ff616a1db867b9b0647caed4ea4e" category="doc">SCV 所需的最低 ONTAP 權限</block>
   <block id="c468fa820a55a1c100c86b2078a91c63" category="doc">SCV 所需的最低 vCenter 權限</block>
   <block id="c27d4740b5308a914185b9a6ec4534ba" category="doc">修改 SCV 的組態預設值</block>
@@ -2230,7 +2228,6 @@
   <block id="6803040d0deefc5c64d293411d2eae3c" category="doc">SnapCenter Plug-in for VMware vSphere 的資料保護工作流程</block>
   <block id="2c20cf3dbe62e059162072efca505843" category="doc">SnapCenter Plug-in for VMware vSphere 快速入門</block>
   <block id="706c1ecc5e0dfbf5d0b578709966a41b" category="doc">向 SnapCenter 伺服器註冊 SCV</block>
-  <block id="946449a09a5e8fe514190b45b1239172" category="doc">SnapCenter Plug-in for VMware vSphere 版本資訊</block>
   <block id="e6613d4a408bd1c5af7c93c35fd5c766" category="doc">移除 SnapCenter Plug-in for VMware vSphere</block>
   <block id="9dc439c0b26590060b9baae9a11cef15" category="doc">使用 SCV 按需備份的 REST API 工作流程</block>
   <block id="10a69d330fd1bd443bb763f537b74f8c" category="doc">使用 SCV 還原已刪除 VM 的 REST API 工作流程</block>
@@ -2242,14 +2239,12 @@
   <block id="a78e138b777bd9b17098fbb8bee31a72" category="doc">在 SCV 中修改內建排程的 REST API 工作流程</block>
   <block id="e01d2deaa3a9b8da7ed18a0423a240d2" category="doc">用於在 SCV 中掛載和卸載資料存放區的 REST API 工作流程</block>
   <block id="0ab92c1e3d210a1078c8bcb60c815cda" category="doc">用於在 SCV 中下載作業和產生報表的 REST API</block>
-  <block id="251106474aba3c73dfbbf781349c0420" category="doc">REST API 可將 SCV 中卡住的工作標記為失敗</block>
   <block id="a74666d3669e18922af35742c6e64a2a" category="doc">瞭解 SnapCenter Plug-in for VMware vSphere 中的 REST API</block>
   <block id="ea4aaf388f103ba4af0328e2438f506c" category="doc">重新啟動 SCV 的 VMware vSphere 用戶端服務</block>
   <block id="b97006b94b5abbef2e4cab535709f798" category="doc">還原 SCV MySQL 資料庫的特定備份</block>
   <block id="62bb165014392b3ca2d868cae754a575" category="doc">使用 SCV 從備份還原已刪除的 VM</block>
   <block id="1c1d699bb8ba3233d50c545bbd1fae6d" category="doc">SnapCenter Plug-in for VMware vSphere 的還原選項</block>
   <block id="d537acd00dd3c27290078e423c835ef5" category="doc">使用 SCV 從 VMDK 還原客體檔案和資料夾</block>
-  <block id="26c55d24b1e98dfc0abb17486fa64729" category="doc">SCV 中的客體檔案還原工作流程、先決條件和限制</block>
   <block id="9fd1425d563e70975dbff208034dfa99" category="doc">還原 SCV MySQL 資料庫的最新備份</block>
   <block id="8092cfbde9cd8cf3324b5adcbf7237e2" category="doc">使用 SCV 從備份還原 VMDK</block>
   <block id="5e711cf8e194d973e01259462c98c155" category="doc">使用 SCV 從備份還原 VM</block>
@@ -2361,4 +2356,11 @@
   <block id="be0cdd104110166e130ddd84d1c1fc51" category="paragraph">有關支援版本的最新資訊，請參閱<block ref="c4b2de34dedab2af97f29b6fccd6575c" category="inline-link-macro-rx"></block>。</block>
   <block id="8c41baf1ca98e1184f48c4721d44d431" category="inline-link-macro">NetApp 支援網站</block>
   <block id="9eeb0054bc82844b2782a42bddf7c681" category="list-text">登入 <block ref="fe673711457a0919d053a9db0146aa49" category="inline-link-macro-rx"></block>。</block>
+  <block id="6fe778bd4f381bc596c1ad2205bf7850" category="doc">SnapCenter Plug-in for VMware vSphere 的法律聲明</block>
+  <block id="96fb488c6d5d6ed5f3816ffc8e3f6397" category="doc">升級至 SCV 新修補程式後解決資訊遺失問題</block>
+  <block id="09f90d69ac8c406b9baae622de8de691" category="doc">登入 SnapCenter Plug-in for VMware vSphere 用戶端</block>
+  <block id="d1feecd02693b9e7b54bae1972ce21f7" category="doc">從 Windows 版 SnapCenter for VMware vSphere 移轉中繼資料</block>
+  <block id="14e70facdd7f1056b19624a65647f611" category="doc">SnapCenter Plug-in for VMware vSphere 6.2 版發行說明</block>
+  <block id="0e1c5e24c38bf97d9c3a9e07e8ea35ac" category="doc">使用 SCV 中的 REST API 將卡住的作業標記為失敗</block>
+  <block id="25dc68a1ecd07d4ec635e66b5aba9478" category="doc">了解 SCV 中的來賓檔案還原</block>
 </blocks>

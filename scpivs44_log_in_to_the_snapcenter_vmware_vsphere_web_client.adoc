@@ -4,7 +4,7 @@ permalink: scpivs44_log_in_to_the_snapcenter_vmware_vsphere_web_client.html
 keywords:  
 summary: 部署VMware vSphere的VMware vSphere外掛程式時、會在vCenter上安裝VMware vSphere用戶端、此用戶端會與其他vSphere用戶端一起顯示在vCenter畫面上SnapCenter 。 
 ---
-= 登入SnapCenter VMware vSphere Client
+= 登入 SnapCenter Plug-in for VMware vSphere 用戶端
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

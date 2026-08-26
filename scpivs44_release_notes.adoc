@@ -4,7 +4,7 @@ permalink: scpivs44_release_notes.html
 keywords:  
 summary: 版本說明提供本次發行SnapCenter VMware vSphere的VMware vSphere的相關重要資訊、包括授權要求、已知問題、注意事項、限制、 以及任何文件更新或修正。 
 ---
-= SnapCenter Plug-in for VMware vSphere 版本資訊
+= SnapCenter Plug-in for VMware vSphere 6.2 版發行說明
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

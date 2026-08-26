@@ -4,7 +4,7 @@ permalink: scpivs44_information_not_displayed_after_upgrading_to_a_new_patch_of_
 keywords:  
 summary: 將SnapCenter VMware vSphere的更新版的更新版更新為相同版本的新修補程式之後、儀表板和工作監控器可能不會顯示最近的工作或其他資訊。 
 ---
-= 升級到 SCV 新修補程式後，資訊未顯示
+= 升級至 SCV 新修補程式後解決資訊遺失問題
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

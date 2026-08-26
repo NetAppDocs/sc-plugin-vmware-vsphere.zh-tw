@@ -4,7 +4,7 @@ permalink: scpivs44_rest_apis_fail_stuck_jobs.html
 keywords:  
 summary: 若要使用SnapCenter VMware vSphere REST API的VMware vSphere外掛程式來尋找VMware vSphere用戶端工作的工作ID、您必須使用VMware vSphere的REST API呼叫。 
 ---
-= REST API 可將 SCV 中卡住的工作標記為失敗
+= 使用 SCV 中的 REST API 將卡住的作業標記為失敗
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

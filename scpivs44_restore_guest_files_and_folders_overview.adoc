@@ -4,7 +4,7 @@ permalink: scpivs44_restore_guest_files_and_folders_overview.html
 keywords:  
 summary: 您可以從Windows來賓作業系統上的虛擬機器磁碟（VMDK）還原檔案或資料夾。 
 ---
-= SCV 中的客體檔案還原工作流程、先決條件和限制
+= 了解 SCV 中的來賓檔案還原
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
