@@ -22,18 +22,20 @@ summary: 若要使用SnapCenter VMware vSphere REST API的VMware vCenter外掛�
 | 步驟 | REST API | 註解 
 
 
-| 1. | 前往
-`\http://<vCenter-IP>/mob` | 從VMware託管物件URL尋找虛擬機器UUID。請注意您要還原的VM * uid*。 
+| 1. | 前往 `\http://<vCenter-IP>/mob` | 從 VMware 管理物件 URL 中找到資料儲存 *moref*。記下已刪除 VM 所在的資料儲存的 moref。 
 
 
-| 2. | //4.1/VM/｛uuid｝/備份 | 「Get VM備份」可取得指定VM的備份清單。通過步驟1中的* uid*。請記下您要還原之備份的*備份Id*。 
+| 2. | `/4.1/datastores/{moref}/backups` | `Get Datastore Backups` 擷取指定資料儲存區的備份清單。傳遞步驟 1 中的 *moref*。記下您要還原之備份的 *backupId*。 
 
 
-| 3. | //4.1/VM/backups/{backupId}/ snapshotlocations' | `Get snapshot locations`獲得指定備份的快照位置。從步驟2傳遞*備份Id*。請注意*快照位置List*資訊。 
+| 3. | `/4.1/backups/{backupId}` | `Get Backup Details` 檢索指定備份的詳細資訊。傳遞步驟 2 中的 *backupId*。在實體清單中，找到與已刪除 VM 相符的 *entityName*，並附註 *UUID*。 
 
 
-| 4. | /`4.1/VM/{morf}/Backups/可用的esxhosts' | 「Get Available ESX hosts（取得可用的ESX主機）」會取得儲存備份之主機的資訊。請注意*可用的EssxHostsList*資訊。 
+| 4. | `/4.1/vm/backups/{backupId}/snapshotlocations` | `Get snapshot locations` 擷取指定備份的快照位置。傳遞步驟 2 中的 *backupId*。記下 *snapshotLocationsList* 資訊。 
 
 
-| 5. | //4.1/VM/｛uuid｝/備份/｛backupId｝/還原 | 「使用uuid從備份還原VM或還原刪除的VM」會還原指定的備份。通過步驟1中的* uid*。從步驟2傳遞*備份Id*。傳遞*重述位置*屬性中步驟3和步驟4的資訊。如果VM備份是部分備份、請將「REstartVM」參數設為「假」。*附註：*您無法還原為範本的VM。 
+| 5. | `/4.1/datastores/{moref}/availableEsxHosts` | `Get available ESX Hosts` 檢索儲存備份的主機資訊。傳遞步驟 1 中的 *moref*。附註 *availableEsxHostsList* 資訊。 
+
+
+| 6. | `/4.1/vm/{uuid}/backups/{backupId}/restoreVm` | `Restore a VM from a backup` 還原指定的備份。傳遞步驟 3 中的 *UUID*。傳遞步驟 2 中的 *backupId*。在 *restoreLocations* 屬性中，傳遞步驟 4 中 *snapshotLocationsList* 的資訊；在 *esxHost* 屬性中，傳遞步驟 5 中 *availableEsxHostsList* 的資訊。如果 VM 備份是部分備份，請將 `restartVM`參數設為 *false*。*附註：* 您無法還原做為範本的 VM。 
 |===
