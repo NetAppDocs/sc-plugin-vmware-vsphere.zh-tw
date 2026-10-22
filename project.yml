@@ -34,6 +34,8 @@ sidebar:
     entries:
     - title: SnapCenter Plug-in for VMware vSphere 版本資訊
       url: "/scpivs44_release_notes.html"
+    - title: SnapCenter Plug-in for VMware vSphere 6.2.1 的新增功能
+      url: "/scv_releasenotes_621_whats_new.html"
     - title: SnapCenter Plug-in for VMware vSphere新增功能
       url: "/scv_releasenotes_whats_new.html"
     - title: 升級途徑

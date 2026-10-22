@@ -2,7 +2,7 @@
 permalink: scv_rn_upgrade_paths.html 
 sidebar: sidebar 
 keywords: upgrade paths, scv, 6.1 
-summary: 瞭解適用於 VMware vSphere 6.1 的 SnapCenter 外掛程式所提供的新功能。 
+summary: 了解 SnapCenter Plug-in for VMware vSphere 6.2.1 和 6.2 中提供的新功能。 
 ---
 = SnapCenter Plug-in for VMware vSphere 的升級路徑
 :allow-uri-read: 
@@ -22,16 +22,23 @@ summary: 瞭解適用於 VMware vSphere 6.1 的 SnapCenter 外掛程式所提供
 
 
  a| 
+SCV 6.2
+ a| 
+SCV 6.2.1
+
+
+
+ a| 
 SCV 6.1
  a| 
-SCV 6.2
+SCV 6.2 和 SCV 6.2.1
 
 
 
  a| 
 SCV 6.0
  a| 
-SCV 6.1 和 SCV 6.2
+SCV6.1 和 SCV 6.2
 
 
 

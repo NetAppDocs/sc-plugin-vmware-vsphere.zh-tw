@@ -1810,7 +1810,6 @@
   <block id="511a61be3395b836dbaacf9a77e28d9c" category="cell">輸入要還原所選檔案之客體的UNC共用路徑。IPv4 位址範例：<block ref="c1efda00eba14c667cfd89393b2be583" prefix=" " category="inline-code"></block> IPv6 位址範例：<block ref="f7a108079a0dc952ef09921776f4796f" prefix=" " category="inline-code"></block></block>
   <block id="d86e4811939307b3183e2dfd4eb853b6" category="cell">升級到 6 號和 6 號選擇控制閥</block>
   <block id="b0ef2ccf9ac61cfaed33ce8cd24eae39" category="list-text">變更 IPv4/IPv6 位址設定</block>
-  <block id="2fd5adf936b993ca4d80eea4c1f5d1e5" category="summary">瞭解適用於 VMware vSphere 6.1 的 SnapCenter 外掛程式所提供的新功能。</block>
   <block id="5db6882763ebe6a093c82ca0da5652f2" category="paragraph">SCV 6.1</block>
   <block id="d61532c65e483bb3822f5a0a1ae885f5" category="paragraph">6.0 號和 6.1 號選擇控制閥</block>
   <block id="dd3471364a418c5d14272ff6d6881150" category="paragraph">SnapCenter 6.1</block>
@@ -2119,9 +2118,6 @@
   <block id="3486b2a1d30bd161fb36899f3376d2b5" category="paragraph">檢查以下內容以驗證腳本值是否已填入：</block>
   <block id="4d7e82b16d362076d5ab45e16c70089e" category="list-text">對於 PERL 腳本：<block ref="61d298a13a3f843732a864857b069bb5" prefix=" " category="inline-code"></block></block>
   <block id="a0da1c9995a65432072be2aeebd4e3ea" category="list-text">對於 shell 腳本：<block ref="77c2d1d96cf44632f8442af060d93cb0" prefix=" " category="inline-code"></block></block>
-  <block id="48ed95b473e7ef4e7788b1e1d9482edb" category="paragraph">了解適用於SnapCenter Plug-in for VMware vSphere中的新功能和增強功能。</block>
-  <block id="19abdf7b381f5ed7b0de0d79a7e0f03e" category="inline-link">SnapCenter Plug-in for VMware vSphere發行說明</block>
-  <block id="1afaab56cfbc3ce97a79993d50d9ef05" category="paragraph">有關已知問題、限制和已修復問題的詳細信息，請參閱<block ref="6492f9c91b814421d341fb9d834710b0" category="inline-link-rx"></block>。您必須使用您的NetApp帳戶登入或建立帳戶才能存取發行說明。</block>
   <block id="5156b934ff5b0cd83a8a7f129e1e0a31" category="list-text">使用以下格式登入SnapCenter Plug-in for VMware vSphere管理使用者介面<block ref="3dfacd84c996ac983963942e2712a0bf" prefix=" " category="inline-code"></block>。</block>
   <block id="d874ab609149d0dde843df2768514cc7" category="paragraph">若要使用適用於SnapCenter Plug-in for VMware vSphere還原 VM 備份，請依照下方概述的 REST API 呼叫所需順序進行操作。</block>
   <block id="e2706c19e437971cdf7231409e94e04f" category="cell">當你傳遞處於運作狀態的作業的 ID 時，<block ref="23f52a72a3b1eee5ab4fb121803fa5aa" prefix=" " category="inline-code"></block>將這些作業標記為失敗。若要識別處於運作狀態的作業，請使用作業監視器使用者介面查看每個作業的狀態和作業 ID。</block>
@@ -2143,7 +2139,6 @@
   <block id="53f6bfae40bec441093e8e4b966c2d25" category="list-text">執行復原工作流程</block>
   <block id="799a3904b328ccd6642506e9cffca3ac" category="list-text">在建立或修改資源組時提供二級保護（適用於ONTAP 9.16.1 及更高版本）</block>
   <block id="e27967a072bb757c29d755e31dce790a" category="paragraph">SCV 6.2</block>
-  <block id="2dc5aae4389611e60ed72aa096627203" category="paragraph">SCV 6.1 和 SCV 6.2</block>
   <block id="14ec6c84f15dc549038dd1b97273c7bc" category="paragraph">SnapCenter 6.2</block>
   <block id="d4d1d929fd42e59ee32c4b5906cf20be" category="sidebar">SnapCenter Plug-in for VMware vSphere是基於 Linux 的虛擬設備。作為獨立產品，它為虛擬機器、資料儲存和 VMDK 提供快速、節省空間、崩潰一致和虛擬機器一致的備份和復原作業。它還與SnapCenter Server 配合使用，支援 VMware 環境中針對SnapCenter應用程式特定插件的基於應用程式的備份和復原作業。此文件庫介紹了SnapCenter Plug-in for VMware vSphere。</block>
   <block id="90a8886635ee0da0c4b0c0f9f05014c9" category="sidebar">SnapCenter Plug-in for VMware vSphere</block>
@@ -2354,7 +2349,6 @@
   <block id="96fb488c6d5d6ed5f3816ffc8e3f6397" category="doc">升級至 SCV 新修補程式後解決資訊遺失問題</block>
   <block id="09f90d69ac8c406b9baae622de8de691" category="doc">登入 SnapCenter Plug-in for VMware vSphere 用戶端</block>
   <block id="d1feecd02693b9e7b54bae1972ce21f7" category="doc">從 Windows 版 SnapCenter for VMware vSphere 移轉中繼資料</block>
-  <block id="14e70facdd7f1056b19624a65647f611" category="doc">SnapCenter Plug-in for VMware vSphere 6.2 版發行說明</block>
   <block id="0e1c5e24c38bf97d9c3a9e07e8ea35ac" category="doc">使用 SCV 中的 REST API 將卡住的作業標記為失敗</block>
   <block id="25dc68a1ecd07d4ec635e66b5aba9478" category="doc">了解 SCV 中的來賓檔案還原</block>
   <block id="cecbb6d90c269c98fdac515b81e0d73b" category="cell">從 VMware 管理物件 URL 中找到資料儲存 *moref*。記下已刪除 VM 所在的資料儲存的 moref。</block>
@@ -2368,4 +2362,40 @@
   <block id="704566d14e7a9a5778c823d1b4ec8f66" category="cell"><block ref="cd167a8bf45e589a93aea03099990bf5" prefix="" category="inline-code"></block> 檢索儲存備份的主機資訊。傳遞步驟 1 中的 *moref*。附註 *availableEsxHostsList* 資訊。</block>
   <block id="d87a25d74744053d50de6457d00b0f8c" category="cell"><block ref="35fb52fb97add0bf107e8814314da67c" prefix="" category="inline-code"></block></block>
   <block id="31533fd2e85160fecb2398d5ece8c194" category="cell"><block ref="42deac4908a17efb438eb8235d8b5154" prefix="" category="inline-code"></block> 還原指定的備份。傳遞步驟 3 中的 *UUID*。傳遞步驟 2 中的 *backupId*。在 *restoreLocations* 屬性中，傳遞步驟 4 中 *snapshotLocationsList* 的資訊；在 *esxHost* 屬性中，傳遞步驟 5 中 *availableEsxHostsList* 的資訊。如果 VM 備份是部分備份，請將<block ref="0736c145ca7c004b573fcb3b6242d260" prefix=" " category="inline-code"></block>參數設為 *false*。*附註：* 您無法還原做為範本的 VM。</block>
+  <block id="5310a1036d007f5d44859f9192e84523" category="doc">SnapCenter Plug-in for VMware vSphere 6.2.1 和 6.2 版本說明</block>
+  <block id="b96b8459b23d226bfd02193a57ee311b" category="paragraph">了解 SnapCenter Plug-in for VMware vSphere 6.2.1 和 6.2 中提供的新增與增強功能。</block>
+  <block id="5e92b8619c82a6981789afae4f5999b6" category="inline-link">SnapCenter Plug-in for VMware vSphere 6.2.1 和 6.2 發行說明</block>
+  <block id="02f1cb81ad227f4a78ad0c8cf52f4fe8" category="paragraph">如需已知問題、限制與已修正問題的詳細資訊，請參閱<block ref="05832d382e92b0ddb1f2a03c01b50eff" category="inline-link-rx"></block>。您必須使用 NetApp 帳戶登入或建立帳戶，才能存取版本資訊。</block>
+  <block id="8fe5f5a3a8d993e9ba3445b11b8da445" category="summary">了解 SnapCenter Plug-in for VMware vSphere 6.2.1 中的新功能</block>
+  <block id="a94c00dc142552f5b2160709de2d8ca0" category="doc">SnapCenter Plug-in for VMware vSphere 6.2.1 新增功能</block>
+  <block id="fbdb29902420e2ebf4b5671a24980535" category="paragraph">SnapCenter Plug-in for VMware vSphere 6.2.1 是一個維護版本。它更新了應用裝置附帶的第三方軟體，並修復了自 SnapCenter Plug-in for VMware vSphere 6.2 版本以來發現的問題。</block>
+  <block id="7a1b53160a42fabcc2b19b67e77b7d3c" category="section-title">更新元件</block>
+  <block id="2cb05e4bb7830be982f0922fed86b4cd" category="cell">元件</block>
+  <block id="5c70fc47a114c0c742ecb76144743449" category="cell">SnapCenter Plug-in for VMware vSphere 6.2.1</block>
+  <block id="92dfecfa6869352e411b6c5dfd3cb166" category="cell">Java 執行時期環境</block>
+  <block id="a87a746330fcccafdd46ff35e52a072f" category="cell">OpenJDK 21.0.12</block>
+  <block id="7166232140203ef2966ddd8115d51a31" category="cell">.NET 執行階段</block>
+  <block id="814a517ee46c11069830333d9c37b5b9" category="cell">.NET 10.0.11</block>
+  <block id="7cb1d64978adc30091cfb3c7337cbba3" category="cell">應用裝置作業系統</block>
+  <block id="1061da8067873a5bbcf3b13a320008da" category="cell">Debian 13</block>
+  <block id="69464e68a5cdd0b54694ac92276fa1a3" category="section-title">已修復問題</block>
+  <block id="4bf7189ca42b78c35cf4f9f936645b31" category="paragraph">在升級到新版本之前，最好審查版本中修復的已知問題。</block>
+  <block id="f1b0557f30f515cd6d2e1aa2e60580b5" category="list-text">VMDP-7072：Oracle Cloud 上的雲端管理 ONTAP 可以加入為儲存系統。</block>
+  <block id="7e30746a2e14afbe290955d5099a0827" category="list-text">VMDP-7052：將 VM 還原到不同的位置會保留 VM 的儲存設備原則，因此對於使用非預設原則的 VM，還原不再被拒絕。</block>
+  <block id="ffbb81ba0942679379246214302064d0" category="list-text">VMDP-7027：支援日誌包包含已設定儲存系統的清單。</block>
+  <block id="54df73c8ac14d36d89e624c6bcb25c15" category="list-text">VMDP-6987：當 vCenter 短暫回報資料儲存區無法使用時，附加或還原虛擬磁碟不再失敗。</block>
+  <block id="a0d9c0a5825a0a479c3c1abf79736802" category="list-text">VMDP-6965：當一個排程記錄不完整時，排程頁面不再無法載入。</block>
+  <block id="ae1fe0096853dc264aef45e1af3a1c54" category="list-text">VMDP-6952：當使用者沒有刪除資源群組的權限時，會顯示權限訊息。</block>
+  <block id="807a094ef06af183d78e766a9312e93b" category="list-text">VMDP-6939：維護主控台不再報告 VMware Tools 遺失。</block>
+  <block id="d10b5064d7908d30ce794457a6f3a36d" category="list-text">VMDP-6935：瀏覽備份以還原單一檔案不再失敗。</block>
+  <block id="67edb748ed65475a815d4782acf1f80a" category="list-text">VMDP-6933：新的應用裝置部署在首次設定期間不再無法完成。</block>
+  <block id="447fa43309a40a78d5e193fd06081614" category="list-text">VMDP-6931：輔助備份清理不再因為無法存取某個 Volume 而等待數小時。其他 Volume 將繼續處理。</block>
+  <block id="1aa76d24b907dec4cb76b6d8a77fed05" category="list-text">VMDP-6817：重新命名來源 ONTAP Volume 後，次要備份不再停留在舊名稱，也不會顯示不再有效的項目。</block>
+  <block id="e5c7cede4b737581cd66c16346d917c5" category="section-title">支援的 SnapCenter 版本</block>
+  <block id="a8873f8f7715ad49732b43f6bdd600b5" category="paragraph">有關支援版本的最新資訊，請參閱<block ref="64fc8efacd4fa13b8c1907c1db527b3d" category="inline-link-rx"></block>（IMT）。</block>
+  <block id="fdc5680e65fa7898d151f608475ae69c" category="summary">了解 SnapCenter Plug-in for VMware vSphere 6.2.1 和 6.2 中提供的新功能。</block>
+  <block id="d9cd9f5434c65a05a69f215297988e99" category="paragraph">SCV 6.2.1</block>
+  <block id="184c7c0c678f365279a40216ed22fe8a" category="paragraph">SCV 6.2 和 SCV 6.2.1</block>
+  <block id="09e5cb2777291d8cdab464a3f4d035e6" category="paragraph">SCV6.1 和 SCV 6.2</block>
+  <block id="20afa33773b6c08681241027158bf0c6" category="sidebar">SnapCenter Plug-in for VMware vSphere 6.2.1 的新增功能</block>
 </blocks>
