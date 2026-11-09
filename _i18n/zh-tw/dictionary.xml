@@ -2380,17 +2380,6 @@
   <block id="1061da8067873a5bbcf3b13a320008da" category="cell">Debian 13</block>
   <block id="69464e68a5cdd0b54694ac92276fa1a3" category="section-title">已修復問題</block>
   <block id="4bf7189ca42b78c35cf4f9f936645b31" category="paragraph">在升級到新版本之前，最好審查版本中修復的已知問題。</block>
-  <block id="f1b0557f30f515cd6d2e1aa2e60580b5" category="list-text">VMDP-7072：Oracle Cloud 上的雲端管理 ONTAP 可以加入為儲存系統。</block>
-  <block id="7e30746a2e14afbe290955d5099a0827" category="list-text">VMDP-7052：將 VM 還原到不同的位置會保留 VM 的儲存設備原則，因此對於使用非預設原則的 VM，還原不再被拒絕。</block>
-  <block id="ffbb81ba0942679379246214302064d0" category="list-text">VMDP-7027：支援日誌包包含已設定儲存系統的清單。</block>
-  <block id="54df73c8ac14d36d89e624c6bcb25c15" category="list-text">VMDP-6987：當 vCenter 短暫回報資料儲存區無法使用時，附加或還原虛擬磁碟不再失敗。</block>
-  <block id="a0d9c0a5825a0a479c3c1abf79736802" category="list-text">VMDP-6965：當一個排程記錄不完整時，排程頁面不再無法載入。</block>
-  <block id="ae1fe0096853dc264aef45e1af3a1c54" category="list-text">VMDP-6952：當使用者沒有刪除資源群組的權限時，會顯示權限訊息。</block>
-  <block id="807a094ef06af183d78e766a9312e93b" category="list-text">VMDP-6939：維護主控台不再報告 VMware Tools 遺失。</block>
-  <block id="d10b5064d7908d30ce794457a6f3a36d" category="list-text">VMDP-6935：瀏覽備份以還原單一檔案不再失敗。</block>
-  <block id="67edb748ed65475a815d4782acf1f80a" category="list-text">VMDP-6933：新的應用裝置部署在首次設定期間不再無法完成。</block>
-  <block id="447fa43309a40a78d5e193fd06081614" category="list-text">VMDP-6931：輔助備份清理不再因為無法存取某個 Volume 而等待數小時。其他 Volume 將繼續處理。</block>
-  <block id="1aa76d24b907dec4cb76b6d8a77fed05" category="list-text">VMDP-6817：重新命名來源 ONTAP Volume 後，次要備份不再停留在舊名稱，也不會顯示不再有效的項目。</block>
   <block id="e5c7cede4b737581cd66c16346d917c5" category="section-title">支援的 SnapCenter 版本</block>
   <block id="a8873f8f7715ad49732b43f6bdd600b5" category="paragraph">有關支援版本的最新資訊，請參閱<block ref="64fc8efacd4fa13b8c1907c1db527b3d" category="inline-link-rx"></block>（IMT）。</block>
   <block id="fdc5680e65fa7898d151f608475ae69c" category="summary">了解 SnapCenter Plug-in for VMware vSphere 6.2.1 和 6.2 中提供的新功能。</block>
@@ -2398,4 +2387,27 @@
   <block id="184c7c0c678f365279a40216ed22fe8a" category="paragraph">SCV 6.2 和 SCV 6.2.1</block>
   <block id="09e5cb2777291d8cdab464a3f4d035e6" category="paragraph">SCV6.1 和 SCV 6.2</block>
   <block id="20afa33773b6c08681241027158bf0c6" category="sidebar">SnapCenter Plug-in for VMware vSphere 6.2.1 的新增功能</block>
+  <block id="b066ca6122c9857ad1ee3a44f18cc5e7" category="cell">錯誤 ID</block>
+  <block id="fbe32e5130ccbbb1ffa89d9f70c1b083" category="cell">VMDP-7072</block>
+  <block id="e53e7d9e47b290851f5322670e9ecb11" category="cell">可以將 Oracle Cloud 上的雲端管理 ONTAP 新增為儲存系統。</block>
+  <block id="db83ccd5ec2a7d5b47fcb16bff367994" category="cell">VMDP-7052</block>
+  <block id="978341053f0d4727fa2d3f60e89ef8d7" category="cell">將 VM 還原到不同的位置會保留 VM 的儲存設備原則，因此對於使用非預設原則的 VM，還原不再被拒絕。</block>
+  <block id="eebb3d78418add83056fa6e98ab314c6" category="cell">VMDP-7027</block>
+  <block id="16f06a0d6af2ec373955e5deebcf1c92" category="cell">支援日誌包包含已配置儲存系統的清單。</block>
+  <block id="1ad7bcd66dc23dcde3ce1b6d54e11fa5" category="cell">VMDP-6987</block>
+  <block id="bd60983e3cd2a710b8bf94a4d46be475" category="cell">附加或還原虛擬磁碟時，即使 vCenter 短暫報告資料儲存不可用，也不會再出現失敗的情況。</block>
+  <block id="085a21f40a096fe8d421f595412e35c8" category="cell">VMDP-6965</block>
+  <block id="3e8dc69bde1348a24d095a52a5213e68" category="cell">當某個排程記錄不完整時，排程頁面不再無法載入。</block>
+  <block id="8ca9bc2edece27e6a5ce2cd1d7869b10" category="cell">VMDP-6952</block>
+  <block id="889a2d10bb7e6f4de708d61ec611b0f2" category="cell">當使用者沒有刪除資源群組的權限時，就會顯示權限訊息。</block>
+  <block id="d0797b6e14dfa7980b21f2392e2356c8" category="cell">VMDP-6939</block>
+  <block id="47957ac25ad4c0107d64327b8b0ab515" category="cell">維護主控台不再報告缺少 VMware Tools。</block>
+  <block id="832101e6141ee84bf7cbb623bf72f8d0" category="cell">VMDP-6935</block>
+  <block id="af16420268fa26529065d82d47ad3490" category="cell">瀏覽備份以還原單一檔案的功能不再失效。</block>
+  <block id="616f6786eb6faab93d9b620f359160b5" category="cell">VMDP-6933</block>
+  <block id="31b56ee5316a09ec641a4086ba471fc7" category="cell">新應用裝置部署在首次設定期間不再無法完成。</block>
+  <block id="d50f3dfae3474354ad6a0a356d2dd751" category="cell">VMDP-6931</block>
+  <block id="cd02895ddd7c0fa8421749e568bf6763" category="cell">輔助備份的清理工作不再因為某個 Volume 無法存取而等待數小時。其他 Volume 的處理工作會繼續進行。</block>
+  <block id="0eff747ab0e939a98b87dc30a3d4959d" category="cell">VMDP-6817</block>
+  <block id="49443c787c9ae296da4caa1b641ab418" category="cell">重新命名來源 ONTAP Volume 後，輔助備份不再會停留在舊名稱，也不會顯示不再有效的項目。</block>
 </blocks>
